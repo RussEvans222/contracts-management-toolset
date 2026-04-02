@@ -1,0 +1,25 @@
+.instruction-card {
+    background-color: #f3f2f2;
+    border-radius: 8px;
+    border: 1px solid #dddbda;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.instruction-card:hover {
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transform: translateY(-2px);
+    border-color: #0070d2;
+}
+
+.icon-container {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 64px;
+    width: 64px;
+    background: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}

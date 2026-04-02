@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>65.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <description>Sets the value of the responseMessage variable to &quot;A case record was created.&quot;</description>
+        <name>SetCaseCreatedMessage</name>
+        <label>Set Case Created Message</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>responseMessage</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>A case record was created.</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Sets the value of the responseMessage variable to &quot;We couldn’t create the case.&quot;</description>
+        <name>SetCaseNotCreatedMessage</name>
+        <label>Set Case Not Created Message</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>responseMessage</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>We couldn’t create the case.</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Sets the value of the responseMessage variable to &quot;We couldn’t create the complaint case record. Create the record manually to link the public complaint and case records.&quot;</description>
+        <name>SetComplaintCaseNotCreatedMessage</name>
+        <label>Set Complaint Case Not Created Message</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>responseMessage</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>We couldn’t create the complaint case record. Create the record manually to link the public complaint and case records.</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Sets the responseMessage to “We couldn’t find a public complaint with the given ID.”</description>
+        <name>SetPublicComplaintNotFoundMessage</name>
+        <label>Set Public Complaint Not Found Message</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>responseMessage</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>We couldn’t find a public complaint with the given ID.</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <description>Creates a Case of record Type &quot;Court Case&quot; from a Public Complaint. This flow is a duplicate of the PSS OOTB flow that creates a Case in the wrong record type for GPS IDO use cases.</description>
+    <environments>Default</environments>
+    <interviewLabel>GPS Create Case from Public Complaint {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>GPS Create Case from Public Complaint</label>
+    <loops>
+        <description>Loops through Public Complaint Participants and creates a Case Participant for each.</description>
+        <name>Loop_Through_Participants</name>
+        <label>Loop Through Participants</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <collectionReference>Get_Public_Complaint_Participants</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Create_Case_Participants_from_PC_Participants</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>SetCaseCreatedMessage</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>Create_Case_Participants_from_PC_Participants</name>
+        <label>Create Case Participants from PC Participants</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Loop_Through_Participants</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>CaseId</field>
+            <value>
+                <elementReference>caseId.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>ParticipantId</field>
+            <value>
+                <elementReference>Loop_Through_Participants.ParticipantId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Role</field>
+            <value>
+                <elementReference>Loop_Through_Participants.Role</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <elementReference>Loop_Through_Participants.Status</elementReference>
+            </value>
+        </inputAssignments>
+        <object>CaseParticipant</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <description>Creates a case record using the values from the Public Complaint from GetPublicComplaint variable. Stores the ID of the new case record in the caseId variable.</description>
+        <name>CreateCase</name>
+        <label>Create Case</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignRecordIdToReference>caseId.Id</assignRecordIdToReference>
+        <connector>
+            <targetReference>CreateComplaintCase</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>SetCaseNotCreatedMessage</targetReference>
+        </faultConnector>
+        <inputAssignments>
+            <field>AccountId</field>
+            <value>
+                <elementReference>GetPublicComplaint.AccountId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Description</field>
+            <value>
+                <elementReference>GetPublicComplaint.Description</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>RecordTypeId</field>
+            <value>
+                <elementReference>Get_Court_Case_Record_Type.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>New</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Subject</field>
+            <value>
+                <elementReference>GetPublicComplaint.Subject</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Case</object>
+    </recordCreates>
+    <recordCreates>
+        <description>Creates a complaint case junction record to link the newly created case to the public complaint stored in the Public Complaint from GetPublicComplaint record variable.</description>
+        <name>CreateComplaintCase</name>
+        <label>Create Complaint Case</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Loop_Through_Participants</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>SetComplaintCaseNotCreatedMessage</targetReference>
+        </faultConnector>
+        <inputAssignments>
+            <field>CaseId</field>
+            <value>
+                <elementReference>caseId.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PublicComplaintId</field>
+            <value>
+                <elementReference>publicComplaintId</elementReference>
+            </value>
+        </inputAssignments>
+        <object>ComplaintCase</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordLookups>
+        <name>Get_Court_Case_Record_Type</name>
+        <label>Get Court Case Record Type</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>GetPublicComplaint</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>SobjectType</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Case</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Court_Case</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>RecordType</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Public_Complaint_Participants</name>
+        <label>Get Public Complaint Participants</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>CreateCase</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>PublicComplaintId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>GetPublicComplaint.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>ComplaintParticipant</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>Gets the public complaint record with an ID that matches the publicComplaintId passed into the flow. Stores the result in the Public Complaint from Get Public Complaint record variable.</description>
+        <name>GetPublicComplaint</name>
+        <label>Get Public Complaint</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Get_Public_Complaint_Participants</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>SetPublicComplaintNotFoundMessage</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>publicComplaintId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>PublicComplaint</object>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>Subject</queriedFields>
+        <queriedFields>AccountId</queriedFields>
+        <queriedFields>Description</queriedFields>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <runInMode>SystemModeWithoutSharing</runInMode>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Court_Case_Record_Type</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>Stores the ID of the case record created by the flow. This value is available as output from the flow.</description>
+        <name>caseId</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+        <objectType>Case</objectType>
+    </variables>
+    <variables>
+        <description>Stores the ID of the public complaint record passed into the flow.</description>
+        <name>publicComplaintId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>recordTypeId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Stores a message that indicates whether the case or complaint case record was created. This variable is available as output from the flow.</description>
+        <name>responseMessage</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+</Flow>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OmniDataTransform xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <assignmentRulesUsed>false</assignmentRulesUsed>
+    <deletedOnSuccess>false</deletedOnSuccess>
+    <errorIgnored>false</errorIgnored>
+    <expectedInputJson>{
+  &quot;DCSearchResults&quot; : null,
+  &quot;omniscriptId&quot; : &quot;0jNal000000erSDEAY&quot;,
+  &quot;language&quot; : &quot;English&quot;,
+  &quot;type&quot; : &quot;GPS&quot;,
+  &quot;runMode&quot; : &quot;preview&quot;,
+  &quot;sId&quot; : &quot;0jNal000000erSDEAY&quot;,
+  &quot;theme&quot; : &quot;lightning&quot;,
+  &quot;subType&quot; : &quot;ResumeSearch&quot;,
+  &quot;timeStamp&quot; : &quot;2024-10-02T16:40:40.936Z&quot;,
+  &quot;userProfile&quot; : &quot;System Administrator&quot;,
+  &quot;userTimeZoneName&quot; : &quot;America/Los_Angeles&quot;,
+  &quot;userTimeZone&quot; : &quot;-420&quot;,
+  &quot;userCurrencyCode&quot; : &quot;USD&quot;,
+  &quot;userName&quot; : &quot;jblankenship@jblankenship-240813-214.demo&quot;,
+  &quot;userId&quot; : &quot;005al000005P6FRAA0&quot;,
+  &quot;omniProcessId&quot; : &quot;0jNal000000erSDEAY&quot;,
+  &quot;localTimeZoneName&quot; : &quot;America/New_York&quot;,
+  &quot;AccountId&quot; : &quot;001al000019YXlUAAW&quot;,
+  &quot;UploadResume&quot; : {
+    &quot;ResumeContents&quot; : &quot;&lt;p&gt;2 &lt;/p&gt;&lt;p&gt;&lt;strong&gt;Leo Leopard &lt;/strong&gt;&lt;/p&gt;&lt;p&gt;555 La Verne Way, La Verne, CA  &lt;/p&gt;&lt;p&gt;lleopard@laverne.edu &lt;/p&gt;&lt;p&gt;(909) 555-5555 &lt;/p&gt;&lt;p&gt;&lt;strong&gt;OBJECTIVE &lt;/strong&gt;&lt;/p&gt;&lt;p&gt;To obtain an on-campus position serving my fellow students which utilizes my strong communication  skills. &lt;/p&gt;&lt;p&gt;&lt;strong&gt;EDUCATION &lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;University of La Verne, La Verne, CA                              &lt;/strong&gt;Expected Graduation: June 2016 Bachelor of Arts, Business Administration &lt;/p&gt;&lt;p&gt;GPA: 3.5 &lt;/p&gt;&lt;p&gt;&lt;strong&gt;HONORS/AWARDS &lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Dean’s List                                         &lt;/strong&gt;Fall 2013 – Spring 2014 &lt;/p&gt;&lt;p&gt;&lt;strong&gt;ON CAMPUS INVOLVEMENT &lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Enactus, University of La Verne                           &lt;/strong&gt;August 2013 – Present &lt;em&gt;Member &lt;/em&gt;&lt;/p&gt;&lt;p&gt;• Implement collective ideas to sponsor campus and community events which promote educational  and social change &lt;/p&gt;&lt;p&gt;• Led groups of 9 junior high students in discussion on success skills, business ethics, and personal  finances &lt;/p&gt;&lt;p&gt;• Co-designed 17 minute audio-visual presentation accurately and creatively describing project for  use in regional and national competition &lt;/p&gt;&lt;p&gt;&lt;strong&gt;VOLUNTEER EXPERIENCE &lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;LionLike MindState, Pomona, CA                             &lt;/strong&gt;June 2012 – Present  &lt;em&gt;Volunteer &lt;/em&gt;&lt;/p&gt;&lt;p&gt;• Plan two yearly outreach events to highlight community members’ creativity in spoken word,  poetry, music, and art &lt;/p&gt;&lt;p&gt;&lt;strong&gt;YMCA, Pomona, CA                &lt;/strong&gt;Summer 2013, 2014 &lt;em&gt;Volunteer Swim Coach &lt;/em&gt;&lt;/p&gt;&lt;p&gt;• Instructed classes of up to 15 children on basic swimming skills &lt;/p&gt;&lt;p&gt;• Communicated regularly with parents on children’s progress &lt;/p&gt;&lt;p&gt;&lt;strong&gt;SKILLS &lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Computer: &lt;/strong&gt;Proficient in Windows and Mac OS, Microsoft Word, PowerPoint, and Excel &lt;strong&gt;Language: &lt;/strong&gt;Fluent in Spanish &lt;/p&gt;&lt;p&gt;&lt;strong&gt;Social Media: &lt;/strong&gt;Facebook, Twitter, Instagram&lt;/p&gt;&quot;
+  },
+  &quot;DRId_Account&quot; : &quot;001al000019YXlUAAW&quot;,
+  &quot;SafetyScore&quot; : {
+    &quot;hateScore&quot; : 0,
+    &quot;physicalScore&quot; : 0,
+    &quot;profanityScore&quot; : 4.0E-5,
+    &quot;safetyScore&quot; : 0.999146,
+    &quot;sexualScore&quot; : 7.0E-5,
+    &quot;toxicityScore&quot; : 1.5E-4,
+    &quot;violenceScore&quot; : 1.0E-5
+  },
+  &quot;PromptResult&quot; : &quot;{\n  \&quot;Education\&quot;: [\n    {\n      \&quot;School Name\&quot;: \&quot;University of La Verne\&quot;,\n      \&quot;Degree\&quot;: \&quot;Bachelor of Arts, Business Administration\&quot;,\n      \&quot;GPA\&quot;: \&quot;3.5\&quot;,\n      \&quot;Graduation Date\&quot;: \&quot;06/01/2016\&quot;,\n      \&quot;StartDate\&quot;: \&quot;\&quot;\n    }\n  ],\n  \&quot;Experience\&quot;: [\n    {\n      \&quot;CompanyName\&quot;: \&quot;Enactus, University of La Verne\&quot;,\n      \&quot;StartDate\&quot;: \&quot;08/01/2013\&quot;,\n      \&quot;EndDate\&quot;: \&quot;\&quot;,\n      \&quot;JobTitle\&quot;: \&quot;Member\&quot;,\n      \&quot;Responsibilities\&quot;: \&quot;Implement collective ideas to sponsor campus and community events which promote educational and social change, Led groups of 9 junior high students in discussion on success skills, business ethics, and personal finances, Co-designed 17 minute audio-visual presentation accurately and creatively describing project for use in regional and national competition\&quot;\n    },\n    {\n      \&quot;CompanyName\&quot;: \&quot;LionLike MindState, Pomona, CA\&quot;,\n      \&quot;StartDate\&quot;: \&quot;06/01/2012\&quot;,\n      \&quot;EndDate\&quot;: \&quot;\&quot;,\n      \&quot;JobTitle\&quot;: \&quot;Volunteer\&quot;,\n      \&quot;Responsibilities\&quot;: \&quot;Plan two yearly outreach events to highlight community members’ creativity in spoken word, poetry, music, and art\&quot;\n    },\n    {\n      \&quot;CompanyName\&quot;: \&quot;YMCA, Pomona, CA\&quot;,\n      \&quot;StartDate\&quot;: \&quot;06/01/2013\&quot;,\n      \&quot;EndDate\&quot;: \&quot;08/01/2014\&quot;,\n      \&quot;JobTitle\&quot;: \&quot;Volunteer Swim Coach\&quot;,\n      \&quot;Responsibilities\&quot;: \&quot;Instructed classes of up to 15 children on basic swimming skills, Communicated regularly with parents on children’s progress\&quot;\n    }\n  ],\n  \&quot;JobTitles\&quot;: {\n    \&quot;JobTitle1\&quot;: \&quot;Event Coordinator\&quot;,\n    \&quot;JobTitle2\&quot;: \&quot;Youth Program Coordinator\&quot;,\n    \&quot;JobTitle3\&quot;: \&quot;Community Outreach Specialist\&quot;\n  }\n}&quot;
+}</expectedInputJson>
+    <fieldLevelSecurityEnabled>false</fieldLevelSecurityEnabled>
+    <inputType>JSON</inputType>
+    <isManagedUsingStdDesigner>false</isManagedUsingStdDesigner>
+    <name>GPSFormatPromptResults</name>
+    <nullInputsIncludedInOutput>false</nullInputsIncludedInOutput>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>GPSFormatPromptResultsCustom9216</globalKey>
+        <inputFieldName>DeserializedPromptResult</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>GPSFormatPromptResults</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>FormattedPromptResult</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>| var:PromptResult DESERIALIZE</formulaConverted>
+        <formulaExpression>DESERIALIZE(PromptResult)</formulaExpression>
+        <formulaResultPath>DeserializedPromptResult</formulaResultPath>
+        <formulaSequence>1.0</formulaSequence>
+        <globalKey>GPSFormatPromptResultsCustom5805</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>GPSFormatPromptResults</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <outputType>JSON</outputType>
+    <previewJsonData>{
+  &quot;DCSearchResults&quot; : null,
+  &quot;ContextId&quot; : &quot;001KX000003PWFOYA4&quot;,
+  &quot;omniscriptId&quot; : &quot;0jNKX000000TtNu2AK&quot;,
+  &quot;language&quot; : &quot;English&quot;,
+  &quot;type&quot; : &quot;GPS&quot;,
+  &quot;runMode&quot; : &quot;preview&quot;,
+  &quot;sId&quot; : &quot;0jNKX000000TtNu2AK&quot;,
+  &quot;theme&quot; : &quot;lightning&quot;,
+  &quot;subType&quot; : &quot;ResumeSearch&quot;,
+  &quot;timeStamp&quot; : &quot;2024-10-07T18:08:02.488Z&quot;,
+  &quot;userProfile&quot; : &quot;System Administrator&quot;,
+  &quot;userTimeZoneName&quot; : &quot;America/Los_Angeles&quot;,
+  &quot;userTimeZone&quot; : &quot;-420&quot;,
+  &quot;userCurrencyCode&quot; : &quot;USD&quot;,
+  &quot;userName&quot; : &quot;admin@252dev1.gpsido&quot;,
+  &quot;userId&quot; : &quot;005KX000001B2ueYAC&quot;,
+  &quot;omniProcessId&quot; : &quot;0jNKX000000TtNu2AK&quot;,
+  &quot;localTimeZoneName&quot; : &quot;America/New_York&quot;,
+  &quot;AccountId&quot; : &quot;001KX000003PWFOYA4&quot;,
+  &quot;UploadResume&quot; : {
+    &quot;ResumeContents&quot; : &quot;&lt;p&gt;&lt;strong&gt;John Doe &lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Software engineer obsessed with building exceptional products that people love hello@openresume.com 123-456-7890 NYC, NY linkedin.com/in/john-doe &lt;/p&gt;&lt;p&gt;&lt;strong&gt;WORK EXPERIENCE &lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;ABC Company &lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Software Engineer May 2023 - Present &lt;strong&gt;• &lt;/strong&gt;Lead a cross-functional team of 5 engineers in developing a search bar, which enables thousands  of daily active users to search content across the entire platform &lt;/p&gt;&lt;p&gt;&lt;strong&gt;• &lt;/strong&gt;Create stunning home page product demo animations that drives up sign up rate by 20% &lt;strong&gt;• &lt;/strong&gt;Write clean code that is modular and easy to maintain while ensuring 100% test coverage &lt;/p&gt;&lt;p&gt;&lt;strong&gt;DEF Organization &lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Software Engineer Intern Summer 2022 &lt;strong&gt;• &lt;/strong&gt;Re-architected the existing content editor to be mobile responsive that led to a 10% increase in  mobile user engagement &lt;/p&gt;&lt;p&gt;&lt;strong&gt;• &lt;/strong&gt;Created a progress bar to help users track progress that drove up user retention by 15% &lt;strong&gt;• &lt;/strong&gt;Discovered and fixed 5 bugs in the existing codebase to enhance user experience &lt;/p&gt;&lt;p&gt;&lt;strong&gt;XYZ University &lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Research Assistant Summer 2021 &lt;strong&gt;• &lt;/strong&gt;Devised a new NLP algorithm in text classification that results in 10% accuracy increase &lt;strong&gt;• &lt;/strong&gt;Compiled and presented research findings to a group of 20+ faculty and students &lt;/p&gt;&lt;p&gt;&lt;strong&gt;EDUCATION &lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;XYZ University &lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Bachelor of Science in Computer Science - 3.8 GPA Sep 2019 - May 2023 &lt;strong&gt;• &lt;/strong&gt;Won 1st place in 2022 Education Hackathon, 2nd place in 2023 Health Tech Competition &lt;strong&gt;• &lt;/strong&gt;Teaching Assistant for Programming for the Web (2022 - 2023) &lt;/p&gt;&lt;p&gt;&lt;strong&gt;• &lt;/strong&gt;Coursework: Object-Oriented Programming (A+), Programming for the Web (A+), Cloud Computing  (A), Introduction to Machine Learning (A-), Algorithms Analysis (A-) &lt;/p&gt;&lt;p&gt;&lt;strong&gt;PROJECT &lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;OpenResume &lt;/strong&gt;Spring 2023 &lt;strong&gt;• &lt;/strong&gt;Created and launched a free resume builder web app that allows thousands of users to create  professional resume easily and land their dream jobs &lt;/p&gt;&lt;p&gt;&lt;strong&gt;SKILLS &lt;/strong&gt;&lt;/p&gt;&lt;p&gt;HTML &lt;/p&gt;&lt;p&gt;TypeScript &lt;/p&gt;&lt;p&gt;CSS &lt;/p&gt;&lt;p&gt;React &lt;/p&gt;&lt;p&gt;Python C++ &lt;/p&gt;&lt;p&gt;&lt;strong&gt;• &lt;/strong&gt;Tech: React Hooks, GraphQL, Node.js, SQL, Postgres, NoSql, Redis, REST API, Git &lt;strong&gt;• &lt;/strong&gt;Soft: Teamwork, Creative Problem Solving, Communication, Learning Mindset, Agile&lt;/p&gt;&quot;
+  },
+  &quot;DRId_Account&quot; : &quot;001KX000003PWFOYA4&quot;,
+  &quot;SafetyScore&quot; : {
+    &quot;hateScore&quot; : 0,
+    &quot;physicalScore&quot; : 0,
+    &quot;profanityScore&quot; : 5.0E-5,
+    &quot;safetyScore&quot; : 0.9989427,
+    &quot;sexualScore&quot; : 1.1E-4,
+    &quot;toxicityScore&quot; : 1.5E-4,
+    &quot;violenceScore&quot; : 3.0E-5
+  },
+  &quot;PromptResult&quot; : &quot;```json\n{\n  \&quot;Education\&quot;: {\n    \&quot;SchoolName\&quot;: \&quot;XYZ University\&quot;,\n    \&quot;Degree\&quot;: \&quot;Bachelor of Science in Computer Science\&quot;,\n    \&quot;GPA\&quot;: \&quot;3.8\&quot;,\n    \&quot;GraduationDate\&quot;: \&quot;05-01-2023\&quot;,\n    \&quot;StartDate\&quot;: \&quot;09-01-2019\&quot;\n  },\n  \&quot;Experience\&quot;: [\n    {\n      \&quot;CompanyName\&quot;: \&quot;ABC Company\&quot;,\n      \&quot;ExpStartDate\&quot;: \&quot;05-01-2023\&quot;,\n      \&quot;EndDate\&quot;: \&quot;\&quot;,\n      \&quot;JobTitle\&quot;: \&quot;Software Engineer\&quot;,\n      \&quot;Responsibilities\&quot;: \&quot;Lead a cross-functional team of 5 engineers in developing a search bar, which enables thousands of daily active users to search content across the entire platform, Create stunning home page product demo animations that drives up sign up rate by 20%, Write clean code that is modular and easy to maintain while ensuring 100% test coverage\&quot;\n    },\n    {\n      \&quot;CompanyName\&quot;: \&quot;DEF Organization\&quot;,\n      \&quot;ExpStartDate\&quot;: \&quot;06-01-2022\&quot;,\n      \&quot;EndDate\&quot;: \&quot;08-31-2022\&quot;,\n      \&quot;JobTitle\&quot;: \&quot;Software Engineer Intern\&quot;,\n      \&quot;Responsibilities\&quot;: \&quot;Re-architected the existing content editor to be mobile responsive that led to a 10% increase in mobile user engagement, Created a progress bar to help users track progress that drove up user retention by 15%, Discovered and fixed 5 bugs in the existing codebase to enhance user experience\&quot;\n    },\n    {\n      \&quot;CompanyName\&quot;: \&quot;XYZ University\&quot;,\n      \&quot;ExpStartDate\&quot;: \&quot;06-01-2021\&quot;,\n      \&quot;EndDate\&quot;: \&quot;08-31-2021\&quot;,\n      \&quot;JobTitle\&quot;: \&quot;Research Assistant\&quot;,\n      \&quot;Responsibilities\&quot;: \&quot;Devised a new NLP algorithm in text classification that results in 10% accuracy increase, Compiled and presented research findings to a group of 20+ faculty and students\&quot;\n    }\n  ],\n  \&quot;JobTitles\&quot;: {\n    \&quot;JobTitle1\&quot;: \&quot;Senior Software Engineer\&quot;,\n    \&quot;JobTitle2\&quot;: \&quot;Front-End Developer\&quot;,\n    \&quot;JobTitle3\&quot;: \&quot;Product Manager\&quot;\n  }\n}\n```&quot;
+}</previewJsonData>
+    <processSuperBulk>false</processSuperBulk>
+    <responseCacheTtlMinutes>0.0</responseCacheTtlMinutes>
+    <rollbackOnError>false</rollbackOnError>
+    <sourceObject>json</sourceObject>
+    <sourceObjectDefault>false</sourceObjectDefault>
+    <synchronousProcessThreshold>0.0</synchronousProcessThreshold>
+    <type>Transform</type>
+    <uniqueName>GPSFormatPromptResults_1</uniqueName>
+    <versionNumber>1.0</versionNumber>
+    <xmlDeclarationRemoved>false</xmlDeclarationRemoved>
+</OmniDataTransform>

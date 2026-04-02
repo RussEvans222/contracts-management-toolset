@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Create a pre-populated vendor deliverable obligation for this contract.</description>
+    <fieldOverrides>
+        <field>Name</field>
+        <formula>&quot;Complete Services per Contract Scope&quot;</formula>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>Description</field>
+        <formula>&quot;Vendor must deliver agreed-upon services as defined in the contract scope of work. Program team to verify completion prior to approving payment.&quot;</formula>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>Status</field>
+        <formula>&quot;At Risk&quot;</formula>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>State</field>
+        <formula>&quot;OnHold&quot;</formula>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>StatusChangeReason</field>
+        <formula>&quot;Not Started&quot;</formula>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>Party</field>
+        <formula>&quot;OTHER_PARTY&quot;</formula>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>AssigneeUserId</field>
+        <formula>IF(BEGINS(Contract.OwnerId, &quot;005&quot;), Contract.OwnerId, $User.Id)</formula>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>ReferenceObjectId</field>
+        <formula>Contract.Id</formula>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>StartDate</field>
+        <formula>IF(ISBLANK(Contract.StartDate), TODAY(), Contract.StartDate)</formula>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>EndDate</field>
+        <formula>IF(ISBLANK(Contract.StartDate), TODAY() + 30, Contract.StartDate + 30)</formula>
+    </fieldOverrides>
+    <label>Create Vendor Deliverable</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <quickActionLayout>
+        <layoutSectionStyle>TwoColumnsLeftToRight</layoutSectionStyle>
+        <quickActionLayoutColumns>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>Name</field>
+                <uiBehavior>Edit</uiBehavior>
+            </quickActionLayoutItems>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>EndDate</field>
+                <uiBehavior>Edit</uiBehavior>
+            </quickActionLayoutItems>
+        </quickActionLayoutColumns>
+        <quickActionLayoutColumns/>
+    </quickActionLayout>
+    <successMessage>Vendor obligation created.</successMessage>
+    <targetObject>Obligation</targetObject>
+    <targetParentField>ReferenceObject</targetParentField>
+    <type>Create</type>
+</QuickAction>

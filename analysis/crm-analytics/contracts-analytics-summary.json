@@ -1,0 +1,210 @@
+{
+  "generatedAt": "2026-03-31T18:05:48Z",
+  "targetOrgAlias": "cm-prod-demo",
+  "instanceUrl": "https://storm-67f93fa3759a67.my.salesforce.com",
+  "contractsFolderName": "Salesforce_Contracts_Analytics",
+  "datasets": [
+    {
+      "id": "0FbHu000002PZ60KAG",
+      "name": "CLM_Contract",
+      "label": "CLM Contract",
+      "currentVersionId": "0FcHu00000KtPkWKAV",
+      "dataRefreshDate": "2026-03-31T18:02:39.000Z",
+      "lastModifiedDate": "2026-03-31T18:02:39.000Z",
+      "lastQueriedDate": "2026-03-31T18:02:41.000Z"
+    },
+    {
+      "id": "0FbHu000002PZ65KAG",
+      "name": "CLM_ContractHistory",
+      "label": "CLM Contract History",
+      "currentVersionId": "0FcHu00000KtPklKAF",
+      "dataRefreshDate": "2026-03-31T18:02:39.000Z",
+      "lastModifiedDate": "2026-03-31T18:02:39.000Z",
+      "lastQueriedDate": "2026-03-31T17:55:25.000Z"
+    },
+    {
+      "id": "0FbHu000002PZ66KAG",
+      "name": "CLM_Document_Clause",
+      "label": "CLM Document Clause",
+      "currentVersionId": "0FcHu00000KtPkgKAF",
+      "dataRefreshDate": "2026-03-31T18:02:39.000Z",
+      "lastModifiedDate": "2026-03-31T18:02:39.000Z",
+      "lastQueriedDate": null
+    },
+    {
+      "id": "0FbHu000002PZ61KAG",
+      "name": "CLM_Document_Template",
+      "label": "CLM Document Template",
+      "currentVersionId": "0FcHu00000KtPkbKAF",
+      "dataRefreshDate": "2026-03-31T18:02:39.000Z",
+      "lastModifiedDate": "2026-03-31T18:02:39.000Z",
+      "lastQueriedDate": null
+    },
+    {
+      "id": "0FbHu000002PZ67KAG",
+      "name": "CLM_Sales_Contract_Line",
+      "label": "CLM Sales Contract Line",
+      "currentVersionId": "0FcHu00000KtPkqKAF",
+      "dataRefreshDate": "2026-03-31T18:02:39.000Z",
+      "lastModifiedDate": "2026-03-31T18:02:39.000Z",
+      "lastQueriedDate": "2026-03-31T17:55:25.000Z"
+    }
+  ],
+  "dashboards": [
+    {
+      "id": "0FKHu000002GydmOAC",
+      "name": "Records_That_Need_My_Attention_Sales",
+      "label": "Records That Need My Attention Sales",
+      "refreshDate": null,
+      "lastModifiedDate": "2026-03-25T16:02:21.000Z"
+    },
+    {
+      "id": "0FKHu000002GydnOAC",
+      "name": "Sales_Operation",
+      "label": "Sales Operation",
+      "refreshDate": "2026-03-31T18:02:37.000Z",
+      "lastModifiedDate": "2026-03-25T16:02:21.000Z"
+    },
+    {
+      "id": "0FKHu000002GydgOAC",
+      "name": "Contract_Admin",
+      "label": "Contract Admin",
+      "refreshDate": "2026-03-31T18:02:37.000Z",
+      "lastModifiedDate": "2026-03-25T16:02:21.000Z"
+    },
+    {
+      "id": "0FKHu000002GydiOAC",
+      "name": "Contract_Stage_Insights",
+      "label": "Contract Stage Insights",
+      "refreshDate": "2026-03-31T18:02:25.000Z",
+      "lastModifiedDate": "2026-03-25T16:02:21.000Z"
+    },
+    {
+      "id": "0FKHu000002GydhOAC",
+      "name": "Contract_Line_Items_Embedded",
+      "label": "Contract Line Items Embedded",
+      "refreshDate": "2026-03-31T18:02:37.000Z",
+      "lastModifiedDate": "2026-03-25T16:02:21.000Z"
+    },
+    {
+      "id": "0FKHu000002GydlOAC",
+      "name": "Records_That_Need_My_Attention",
+      "label": "Records That Need My Attention",
+      "refreshDate": null,
+      "lastModifiedDate": "2026-03-25T16:02:21.000Z"
+    },
+    {
+      "id": "0FKHu000002GydfOAC",
+      "name": "B2B_Sales_Home_Embedded",
+      "label": "B2B Sales Home Embedded",
+      "refreshDate": null,
+      "lastModifiedDate": "2026-03-25T16:02:21.000Z"
+    },
+    {
+      "id": "0FKHu000002GydjOAC",
+      "name": "Contracts_Account_Embedded",
+      "label": "Contracts Account Embedded",
+      "refreshDate": "2026-03-31T18:02:37.000Z",
+      "lastModifiedDate": "2026-03-25T16:02:21.000Z"
+    },
+    {
+      "id": "0FKHu000002GydkOAC",
+      "name": "Contracts_Quote_Embedded",
+      "label": "Contracts Quote Embedded",
+      "refreshDate": "2026-03-31T18:02:37.000Z",
+      "lastModifiedDate": "2026-03-25T16:02:21.000Z"
+    }
+  ],
+  "recipes": [
+    {
+      "id": "05vHu000000Z4hpIAC",
+      "name": "Salesforce_Contracts_Analytics_Contract_Lifecycle_Management_Analytics",
+      "label": "Salesforce Contracts Analytics Salesforce Contracts Analytics",
+      "status": "Success",
+      "targetDataflowId": "02KHu000004d7zlMAA"
+    }
+  ],
+  "dataflows": [],
+  "latestJobs": [
+    {
+      "id": "0ePHu000003JJRSMA4",
+      "jobType": "recipe_v3",
+      "status": "Success",
+      "startDate": "2026-03-31T17:58:52.000Z",
+      "endDate": "2026-03-31T18:02:40.000Z",
+      "source": null
+    },
+    {
+      "id": "03CHu00000KEfJJMA1",
+      "jobType": "datasync",
+      "status": "Success",
+      "startDate": "2026-03-31T17:57:14.000Z",
+      "endDate": null,
+      "source": null
+    },
+    {
+      "id": "03CHu00000KEfJGMA1",
+      "jobType": "datasync",
+      "status": "Success",
+      "startDate": "2026-03-31T17:57:14.000Z",
+      "endDate": null,
+      "source": null
+    },
+    {
+      "id": "03CHu00000KEfJFMA1",
+      "jobType": "datasync",
+      "status": "Success",
+      "startDate": "2026-03-31T17:57:14.000Z",
+      "endDate": null,
+      "source": null
+    },
+    {
+      "id": "03CHu00000KEfJ9MAL",
+      "jobType": "datasync",
+      "status": "Success",
+      "startDate": "2026-03-31T17:57:13.000Z",
+      "endDate": null,
+      "source": null
+    },
+    {
+      "id": "03CHu00000KEfJEMA1",
+      "jobType": "datasync",
+      "status": "Success",
+      "startDate": "2026-03-31T17:57:13.000Z",
+      "endDate": null,
+      "source": null
+    },
+    {
+      "id": "03CHu00000KEfJ6MAL",
+      "jobType": "datasync",
+      "status": "Success",
+      "startDate": "2026-03-31T17:57:13.000Z",
+      "endDate": null,
+      "source": null
+    },
+    {
+      "id": "03CHu00000KEfJAMA1",
+      "jobType": "datasync",
+      "status": "Success",
+      "startDate": "2026-03-31T17:57:13.000Z",
+      "endDate": null,
+      "source": null
+    },
+    {
+      "id": "03CHu00000KEfJ5MAL",
+      "jobType": "datasync",
+      "status": "Success",
+      "startDate": "2026-03-31T17:57:12.000Z",
+      "endDate": null,
+      "source": null
+    },
+    {
+      "id": "03CHu00000KEfJ4MAL",
+      "jobType": "datasync",
+      "status": "Success",
+      "startDate": "2026-03-31T17:57:12.000Z",
+      "endDate": null,
+      "source": null
+    }
+  ]
+}

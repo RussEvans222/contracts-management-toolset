@@ -1,0 +1,14 @@
+# Salesforce local auth and caches
+.sf/
+.sfdx/
+.sfhome/
+.sfhome-generic/
+
+# Runtime output
+analysis/raw/
+analysis/tmp/
+analysis/crm-analytics/org-display.json
+analysis/org-display-live.json
+
+# OS artifacts
+.DS_Store

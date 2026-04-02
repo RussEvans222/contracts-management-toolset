@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OmniDataTransform xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <assignmentRulesUsed>false</assignmentRulesUsed>
+    <deletedOnSuccess>false</deletedOnSuccess>
+    <errorIgnored>false</errorIgnored>
+    <expectedInputJson>{
+  &quot;ContextId&quot; : &quot;&quot;,
+  &quot;timeStamp&quot; : &quot;2020-03-25T10:21:49.023Z&quot;,
+  &quot;userId&quot; : &quot;005B00000065DsSIAU&quot;,
+  &quot;userName&quot; : &quot;sazher_patch1@salesforce.com&quot;,
+  &quot;userProfile&quot; : &quot;System Administrator&quot;,
+  &quot;userTimeZone&quot; : -420,
+  &quot;userCurrencyCode&quot; : &quot;USD&quot;,
+  &quot;sfdcIFrameOrigin&quot; : &quot;https://vlocity-ins.na44.visual.stmfa.stm.force.com&quot;,
+  &quot;sfdcIFrameHost&quot; : &quot;web&quot;,
+  &quot;layout&quot; : &quot;lightning&quot;,
+  &quot;isdtp&quot; : &quot;p1&quot;,
+  &quot;id&quot; : &quot;a3KRM000000005X2AQ&quot;,
+  &quot;vlcPersistentComponent&quot; : { },
+  &quot;ApplicationInformation&quot; : {
+    &quot;isEditable&quot; : true,
+    &quot;AssociatedAccount&quot; : &quot;ACT - 1&quot;,
+    &quot;Industries&quot; : &quot;Healthcare&quot;,
+    &quot;isIndustriesFilled&quot; : true,
+    &quot;BusinessActivity&quot; : &quot;ACT 1 BT1&quot;,
+    &quot;isBusinessActivityFilled&quot; : true,
+    &quot;AuthorizationCategory&quot; : &quot;License&quot;,
+    &quot;AuthorizationType&quot; : &quot;RAT 1&quot;,
+    &quot;ApplicationCategory&quot; : &quot;Basic&quot;,
+    &quot;BusinessActivityId&quot; : &quot;2gFRM0000004C9S2AU&quot;,
+    &quot;AuthorizationTypeId&quot; : &quot;0ehRM0000004C9NYAU&quot;,
+    &quot;AssociatedAccountId&quot; : &quot;001RM000004eZGJYA2&quot;,
+    &quot;exprShowMinnesotaSalonLicenceApplication&quot; : true,
+    &quot;IsPARCreated&quot; : &quot;a67RM00000000AgYAI&quot;,
+    &quot;expIsPARCreated&quot; : false
+  },
+  &quot;EstablishmentInformation&quot; : {
+    &quot;BusinessLegalName&quot; : &quot;ACT - 1&quot;,
+    &quot;BusinessDBAName&quot; : &quot;adf&quot;,
+    &quot;TaxID&quot; : null,
+    &quot;ContactName&quot; : &quot;Dieggo John&quot;,
+    &quot;ContactEmail&quot; : null,
+    &quot;Street&quot; : &quot;adsf&quot;,
+    &quot;City&quot; : null,
+    &quot;State&quot; : null,
+    &quot;Zipcode&quot; : null,
+    &quot;Neighborhood&quot; : &quot;adsfsadf&quot;,
+    &quot;Address&quot; : &quot;Street -:  adsf City -: null State -: null Zipcode -: undefined&quot;,
+    &quot;BlaCreatedText&quot; : &quot;0f0RM0000004CGEYA2&quot;,
+    &quot;isExistingApplication&quot; : false
+  },
+  &quot;SalonInformation&quot; : {
+    &quot;SalonStartDate&quot; : &quot;2020-03-23&quot;,
+    &quot;SalonInAResidence&quot; : &quot;No&quot;,
+    &quot;BusinessLocation&quot; : &quot;No&quot;,
+    &quot;BusinessType&quot; : null
+  },
+  &quot;Certification&quot; : {
+    &quot;CertificationText&quot; : true,
+    &quot;Signature&quot; : &quot;adf&quot;
+  },
+  &quot;OwnershipInformation&quot; : {
+    &quot;PurchaseOrTakeOver&quot; : &quot;Purchasing&quot;,
+    &quot;PriorEstablishmentDetails&quot; : null,
+    &quot;OwnershipType&quot; : &quot;Individual&quot;,
+    &quot;IndividualOwnership&quot; : {
+      &quot;IndividualLastName&quot; : &quot;adsf&quot;,
+      &quot;IndividualFirstName&quot; : null
+    },
+    &quot;CorporationOrLLCOwnership&quot; : null,
+    &quot;PartnershipOwnership&quot; : null
+  },
+  &quot;SampleUser&quot; : &quot;005RM0000025atnYAA&quot;,
+  &quot;ApplicationStatus&quot; : &quot;Submitted&quot;,
+  &quot;ContactId&quot; : &quot;003RM000006GmF9YAK&quot;,
+  &quot;isBLASubmitted&quot; : false,
+  &quot;sInstanceId&quot; : &quot;a3JRM00000000C32AI&quot;,
+  &quot;DRId_PreliminaryApplicationRef__c&quot; : &quot;a67RM00000000AgYAI&quot;,
+  &quot;CreatedStandardPARId&quot; : &quot;0goRM0000004CL9YAM&quot;,
+  &quot;CreatedPreliminaryApplicationRefId&quot; : &quot;a67RM00000000AgYAI&quot;,
+  &quot;ApplicationAttachments&quot; : {
+    &quot;IdentificationProof&quot; : [ {
+      &quot;filename&quot; : &quot;2- Creating a DataRaptor Interface to Map an OmniScript to a PDF.pdf&quot;,
+      &quot;size&quot; : 36531,
+      &quot;data&quot; : &quot;5c8bb52c-7edf-42b0-bcca-dd8064b8540e&quot;,
+      &quot;$$hashKey&quot; : &quot;object:1661&quot;
+    } ],
+    &quot;PropertyProof&quot; : [ {
+      &quot;filename&quot; : &quot;2- Creating a DataRaptor Interface to Map an OmniScript to a PDF.pdf&quot;,
+      &quot;size&quot; : 36531,
+      &quot;data&quot; : &quot;b335ab39-1e0a-4989-9df2-de7e285c54f1&quot;,
+      &quot;$$hashKey&quot; : &quot;object:1668&quot;
+    } ],
+    &quot;EINProof&quot; : null
+  },
+  &quot;DRId_BusinessLicenseApplication&quot; : &quot;0f0RM0000004CGEYA2&quot;,
+  &quot;DRId_Case&quot; : &quot;500RM000002hshsYAA&quot;,
+  &quot;CreatedApplicationId&quot; : &quot;BLA-0000000061&quot;
+}</expectedInputJson>
+    <fieldLevelSecurityEnabled>false</fieldLevelSecurityEnabled>
+    <inputType>JSON</inputType>
+    <isManagedUsingStdDesigner>false</isManagedUsingStdDesigner>
+    <name>LWCDRUpdateBLA</name>
+    <nullInputsIncludedInOutput>false</nullInputsIncludedInOutput>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRUpdateBLA13179115218524529</globalKey>
+        <inputFieldName>SalonBusinessActivityId</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRUpdateBLA</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>BusinessTypeId</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRUpdateBLA8361741811958086</globalKey>
+        <inputFieldName>SalonAccountId</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRUpdateBLA</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>AccountId</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRUpdateBLA9884958717436094</globalKey>
+        <inputFieldName>EstablishmentInformation:BlaCreatedText</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRUpdateBLA</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>true</requiredForUpsert>
+        <upsertKey>true</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRUpdateBLA7348037118480393</globalKey>
+        <inputFieldName>EstablishmentInformation:State</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRUpdateBLA</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>SiteState</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>true</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>LWCDRUpdateBLA6746400509275448</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>LWCDRUpdateBLA</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRUpdateBLA5576730980817084</globalKey>
+        <inputFieldName>ApplicationStatus</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRUpdateBLA</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Status</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRUpdateBLA519216417375459</globalKey>
+        <inputFieldName>ApplicationType</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRUpdateBLA</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>ApplicationType</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>&quot;Business/\/\/Name/\/\/-/\/\/&quot; var:ApplicationInformation:AssociatedAccount + &quot;/\/\/,/\/\/Authorization/\/\/Type/\/\/-/\/\/&quot; + var:ApplicationInformation:AuthorizationType +</formulaConverted>
+        <formulaExpression>&quot;Business Name - &quot; + ApplicationInformation:AssociatedAccount + &quot; , Authorization Type - &quot; + ApplicationInformation:AuthorizationType</formulaExpression>
+        <formulaResultPath>CaseDescription</formulaResultPath>
+        <formulaSequence>1.0</formulaSequence>
+        <globalKey>LWCDRUpdateBLA40040484534593235</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRUpdateBLA</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRUpdateBLA5246037898552758</globalKey>
+        <inputFieldName>SalonAuthorizationTypeId</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRUpdateBLA</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>LicenseTypeId</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRUpdateBLA9052594423914468</globalKey>
+        <inputFieldName>EstablishmentInformation:City</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRUpdateBLA</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>SiteCity</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRUpdateBLA004165331503098502</globalKey>
+        <inputFieldName>ApplicationInformation:AuthorizationCategory</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRUpdateBLA</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Category</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRUpdateBLA11338496405639131</globalKey>
+        <inputFieldName>EstablishmentInformation:Street</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRUpdateBLA</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>SiteStreet</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRUpdateBLA994212042618889</globalKey>
+        <inputFieldName>ApplicationInformation:ApplicationCategory</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRUpdateBLA</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>ApplicationCategory</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRUpdateBLA45255722629742</globalKey>
+        <inputFieldName>ContactId</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRUpdateBLA</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>PrimaryOwnerId</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRUpdateBLA6561048349620893</globalKey>
+        <inputFieldName>Address</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRUpdateBLA</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>SiteAddress</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>| var:RenewApplication var:null = &quot;New&quot; &quot;Renewal&quot; IF</formulaConverted>
+        <formulaExpression>IF(%RenewApplication%=null, &quot;New&quot;, &quot;Renewal&quot;)</formulaExpression>
+        <formulaResultPath>ApplicationType</formulaResultPath>
+        <formulaSequence>2.0</formulaSequence>
+        <globalKey>LWCDRUpdateBLA16916165188494214</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRUpdateBLA</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>&quot;Street/\/\/-:/\/\/&quot; var:EstablishmentInformation:Street + &quot;,/\/\/City/\/\/-:/\/\/&quot; + var:EstablishmentInformation:City + &quot;,/\/\/State/\/\/-:/\/\/&quot; + var:
+EstablishmentInformation:State + &quot;,/\/\/Zipcode/\/\/-:/\/\/&quot; + var:EstablishmentInformation:Zipcode + &quot;,/\/\/Neighborhood/\/\/-:/\/\/&quot; + var:EstablishmentInformation:Neighborhood +</formulaConverted>
+        <formulaExpression>&quot;Street -: &quot;+EstablishmentInformation:Street+&quot;, City -: &quot;+EstablishmentInformation:City+&quot;, State -: &quot;+
+EstablishmentInformation:State+&quot;, Zipcode -: &quot;+EstablishmentInformation:Zipcode+&quot;, Neighborhood -: &quot;+EstablishmentInformation:Neighborhood</formulaExpression>
+        <formulaResultPath>Address</formulaResultPath>
+        <formulaSequence>3.0</formulaSequence>
+        <globalKey>LWCDRUpdateBLA49640490992625197</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRUpdateBLA</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRUpdateBLA035765356763888256</globalKey>
+        <inputFieldName>CaseDescription</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRUpdateBLA</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Description</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRUpdateBLA9538247164288594</globalKey>
+        <inputFieldName>EstablishmentInformation:Zipcode</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRUpdateBLA</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>SitePostalCode</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <outputType>SObject</outputType>
+    <previewJsonData>{
+  &quot;ContextId&quot; : &quot;&quot;,
+  &quot;timeStamp&quot; : &quot;2020-03-25T10:21:49.023Z&quot;,
+  &quot;userId&quot; : &quot;005B00000065DsSIAU&quot;,
+  &quot;userName&quot; : &quot;sazher_patch1@salesforce.com&quot;,
+  &quot;userProfile&quot; : &quot;System Administrator&quot;,
+  &quot;userTimeZone&quot; : -420,
+  &quot;userCurrencyCode&quot; : &quot;USD&quot;,
+  &quot;sfdcIFrameOrigin&quot; : &quot;https://vlocity-ins.na44.visual.stmfa.stm.force.com&quot;,
+  &quot;sfdcIFrameHost&quot; : &quot;web&quot;,
+  &quot;layout&quot; : &quot;lightning&quot;,
+  &quot;isdtp&quot; : &quot;p1&quot;,
+  &quot;id&quot; : &quot;a3KRM000000005X2AQ&quot;,
+  &quot;vlcPersistentComponent&quot; : { },
+  &quot;ApplicationInformation&quot; : {
+    &quot;isEditable&quot; : true,
+    &quot;AssociatedAccount&quot; : &quot;ACT - 1&quot;,
+    &quot;Industries&quot; : &quot;Healthcare&quot;,
+    &quot;isIndustriesFilled&quot; : true,
+    &quot;BusinessActivity&quot; : &quot;ACT 1 BT1&quot;,
+    &quot;isBusinessActivityFilled&quot; : true,
+    &quot;AuthorizationCategory&quot; : &quot;License&quot;,
+    &quot;AuthorizationType&quot; : &quot;RAT 1&quot;,
+    &quot;ApplicationCategory&quot; : &quot;Basic&quot;,
+    &quot;BusinessActivityId&quot; : &quot;2gFRM0000004C9S2AU&quot;,
+    &quot;AuthorizationTypeId&quot; : &quot;0ehRM0000004C9NYAU&quot;,
+    &quot;AssociatedAccountId&quot; : &quot;001RM000004eZGJYA2&quot;,
+    &quot;exprShowMinnesotaSalonLicenceApplication&quot; : true,
+    &quot;IsPARCreated&quot; : &quot;a67RM00000000AgYAI&quot;,
+    &quot;expIsPARCreated&quot; : false
+  },
+  &quot;EstablishmentInformation&quot; : {
+    &quot;BusinessLegalName&quot; : &quot;ACT - 1&quot;,
+    &quot;BusinessDBAName&quot; : &quot;adf&quot;,
+    &quot;TaxID&quot; : null,
+    &quot;ContactName&quot; : &quot;Dieggo John&quot;,
+    &quot;ContactEmail&quot; : null,
+    &quot;Street&quot; : &quot;adsf&quot;,
+    &quot;City&quot; : null,
+    &quot;State&quot; : null,
+    &quot;Zipcode&quot; : null,
+    &quot;Neighborhood&quot; : &quot;adsfsadf&quot;,
+    &quot;Address&quot; : &quot;Street -:  adsf City -: null State -: null Zipcode -: undefined&quot;,
+    &quot;BlaCreatedText&quot; : &quot;0f0RM0000004CGEYA2&quot;,
+    &quot;isExistingApplication&quot; : false
+  },
+  &quot;SalonInformation&quot; : {
+    &quot;SalonStartDate&quot; : &quot;2020-03-23&quot;,
+    &quot;SalonInAResidence&quot; : &quot;No&quot;,
+    &quot;BusinessLocation&quot; : &quot;No&quot;,
+    &quot;BusinessType&quot; : null
+  },
+  &quot;Certification&quot; : {
+    &quot;CertificationText&quot; : true,
+    &quot;Signature&quot; : &quot;adf&quot;
+  },
+  &quot;OwnershipInformation&quot; : {
+    &quot;PurchaseOrTakeOver&quot; : &quot;Purchasing&quot;,
+    &quot;PriorEstablishmentDetails&quot; : null,
+    &quot;OwnershipType&quot; : &quot;Individual&quot;,
+    &quot;IndividualOwnership&quot; : {
+      &quot;IndividualLastName&quot; : &quot;adsf&quot;,
+      &quot;IndividualFirstName&quot; : null
+    },
+    &quot;CorporationOrLLCOwnership&quot; : null,
+    &quot;PartnershipOwnership&quot; : null
+  },
+  &quot;SampleUser&quot; : &quot;005RM0000025atnYAA&quot;,
+  &quot;ApplicationStatus&quot; : &quot;Submitted&quot;,
+  &quot;ContactId&quot; : &quot;003RM000006GmF9YAK&quot;,
+  &quot;isBLASubmitted&quot; : false,
+  &quot;sInstanceId&quot; : &quot;a3JRM00000000C32AI&quot;,
+  &quot;DRId_PreliminaryApplicationRef__c&quot; : &quot;a67RM00000000AgYAI&quot;,
+  &quot;CreatedStandardPARId&quot; : &quot;0goRM0000004CL9YAM&quot;,
+  &quot;CreatedPreliminaryApplicationRefId&quot; : &quot;a67RM00000000AgYAI&quot;,
+  &quot;ApplicationAttachments&quot; : {
+    &quot;IdentificationProof&quot; : [ {
+      &quot;filename&quot; : &quot;2- Creating a DataRaptor Interface to Map an OmniScript to a PDF.pdf&quot;,
+      &quot;size&quot; : 36531,
+      &quot;data&quot; : &quot;5c8bb52c-7edf-42b0-bcca-dd8064b8540e&quot;,
+      &quot;$$hashKey&quot; : &quot;object:1661&quot;
+    } ],
+    &quot;PropertyProof&quot; : [ {
+      &quot;filename&quot; : &quot;2- Creating a DataRaptor Interface to Map an OmniScript to a PDF.pdf&quot;,
+      &quot;size&quot; : 36531,
+      &quot;data&quot; : &quot;b335ab39-1e0a-4989-9df2-de7e285c54f1&quot;,
+      &quot;$$hashKey&quot; : &quot;object:1668&quot;
+    } ],
+    &quot;EINProof&quot; : null
+  },
+  &quot;DRId_BusinessLicenseApplication&quot; : &quot;0f0RM0000004CGEYA2&quot;,
+  &quot;DRId_Case&quot; : &quot;500RM000002hshsYAA&quot;,
+  &quot;CreatedApplicationId&quot; : &quot;BLA-0000000061&quot;
+}</previewJsonData>
+    <processSuperBulk>false</processSuperBulk>
+    <responseCacheTtlMinutes>0.0</responseCacheTtlMinutes>
+    <rollbackOnError>false</rollbackOnError>
+    <sourceObject>json</sourceObject>
+    <sourceObjectDefault>false</sourceObjectDefault>
+    <synchronousProcessThreshold>-1.0</synchronousProcessThreshold>
+    <type>Load</type>
+    <uniqueName>LWCDRUpdateBLA_1</uniqueName>
+    <versionNumber>1.0</versionNumber>
+    <xmlDeclarationRemoved>false</xmlDeclarationRemoved>
+</OmniDataTransform>

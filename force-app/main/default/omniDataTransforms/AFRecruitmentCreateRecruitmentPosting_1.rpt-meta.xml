@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OmniDataTransform xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <assignmentRulesUsed>false</assignmentRulesUsed>
+    <deletedOnSuccess>false</deletedOnSuccess>
+    <errorIgnored>false</errorIgnored>
+    <expectedInputJson>{
+  &quot;RecruitmentPostingDetails&quot; : {
+    &quot;RecruitmentRequisition&quot; : &quot;Salesforce Hiring&quot;,
+    &quot;CandidateSourceKey&quot; : &quot;Salesforce Experience Cloud&quot;,
+    &quot;PostingType&quot; : &quot;Internal&quot;,
+    &quot;PostingStatus&quot; : &quot;InDraft&quot;,
+    &quot;StartDate&quot; : &quot;2024-05-03&quot;,
+    &quot;PostingEndDate&quot; : &quot;2024-05-07&quot;,
+    &quot;PostingDescription&quot; : &quot;bbgkk&quot;
+  }
+}</expectedInputJson>
+    <fieldLevelSecurityEnabled>false</fieldLevelSecurityEnabled>
+    <inputType>JSON</inputType>
+    <isManagedUsingStdDesigner>false</isManagedUsingStdDesigner>
+    <name>AFRecruitmentCreateRecruitmentPosting</name>
+    <nullInputsIncludedInOutput>false</nullInputsIncludedInOutput>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>AFRecruitmentCreateRecruitmentPostingCustom0jIKX000000lHWL2A2Item2</globalKey>
+        <inputFieldName>RecruitmentPostingDetails:RecruitmentRequisition</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>AFRecruitmentCreateRecruitmentPosting</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>PostingTitle</outputFieldName>
+        <outputObjectName>RecruitmentPosting</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>AFRecruitmentCreateRecruitmentPostingCustom0jIKX000000lHWL2A2Item1</globalKey>
+        <inputFieldName>RecruitmentPostingDetails:PostingDescription</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>AFRecruitmentCreateRecruitmentPosting</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Description</outputFieldName>
+        <outputObjectName>RecruitmentPosting</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>AFRecruitmentCreateRecruitmentPostingCustom0jIKX000000lHWL2A2Item4</globalKey>
+        <inputFieldName>RecruitmentPostingDetails:StartDate</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>AFRecruitmentCreateRecruitmentPosting</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>StartDate</outputFieldName>
+        <outputObjectName>RecruitmentPosting</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>AFRecruitmentCreateRecruitmentPostingCustom0jIKX000000lHWL2A2Item3</globalKey>
+        <inputFieldName>RecruitmentPostingDetails:PostingEndDate</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>AFRecruitmentCreateRecruitmentPosting</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>EndDate</outputFieldName>
+        <outputObjectName>RecruitmentPosting</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>AFRecruitmentCreateRecruitmentPostingCustom0jIKX000000lHWL2A2Item5</globalKey>
+        <inputFieldName>RecruitmentPostingDetails:PostingType</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>AFRecruitmentCreateRecruitmentPosting</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>PostingType</outputFieldName>
+        <outputObjectName>RecruitmentPosting</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>AFRecruitmentCreateRecruitmentPostingCustom52</globalKey>
+        <inputFieldName>RecruitmentPostingDetails:AppFramework</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>AFRecruitmentCreateRecruitmentPosting</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>gps_Application_Type__c</outputFieldName>
+        <outputObjectName>RecruitmentPosting</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>AFRecruitmentCreateRecruitmentPostingCustom0jIKX000000lHWL2A2Item7</globalKey>
+        <inputFieldName>RecruitmentPostingDetails:PostingId</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>AFRecruitmentCreateRecruitmentPosting</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>RecruitmentPosting</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>true</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>AFRecruitmentCreateRecruitmentPostingCustom0jIKX000000lHWL2A2Item6</globalKey>
+        <inputFieldName>RecruitmentPostingDetails:CandidateSourceKey</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>AFRecruitmentCreateRecruitmentPosting</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>CandidateSourceKey</outputFieldName>
+        <outputObjectName>RecruitmentPosting</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>AFRecruitmentCreateRecruitmentPostingCustom0jIKX000000lHWL2A2Item9</globalKey>
+        <inputFieldName>RecruitmentPostingDetails:RecruitmentRequisitionId</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>AFRecruitmentCreateRecruitmentPosting</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>RecruitmentRequisitionId</outputFieldName>
+        <outputObjectName>RecruitmentPosting</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>AFRecruitmentCreateRecruitmentPostingCustom0jIKX000000lHWL2A2Item8</globalKey>
+        <inputFieldName>RecruitmentPostingDetails:RecruitmentRequisitionName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>AFRecruitmentCreateRecruitmentPosting</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>RequisitionIdentifier</outputFieldName>
+        <outputObjectName>RecruitmentPosting</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>AFRecruitmentCreateRecruitmentPostingCustom0jIKX000000lHWL2A2Item0</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>AFRecruitmentCreateRecruitmentPosting</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>RecruitmentPosting</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>AFRecruitmentCreateRecruitmentPostingCustom0jIKX000000lHWL2A2Item10</globalKey>
+        <inputFieldName>RecruitmentPostingDetails:PostingStatus</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>AFRecruitmentCreateRecruitmentPosting</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Status</outputFieldName>
+        <outputObjectName>RecruitmentPosting</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <outputType>SObject</outputType>
+    <previewJsonData>{
+  &quot;ContextId&quot; : &quot;18Axx0000004C92EAE&quot;,
+  &quot;RecruitmentPostingDetails&quot; : {
+    &quot;RecruitmentRequisition&quot; : &quot;LMTS1&quot;,
+    &quot;CandidateSourceKey&quot; : &quot;Salesforce Experience Cloud&quot;,
+    &quot;PostingType&quot; : &quot;Internal&quot;,
+    &quot;PostingStatus&quot; : &quot;InDraft&quot;,
+    &quot;StartDate&quot; : &quot;2024-05-03&quot;,
+    &quot;PostingEndDate&quot; : &quot;2024-05-07&quot;,
+    &quot;PostingDescription&quot; : &quot;bbgkk&quot;
+  }
+}</previewJsonData>
+    <processSuperBulk>false</processSuperBulk>
+    <responseCacheTtlMinutes>0.0</responseCacheTtlMinutes>
+    <rollbackOnError>false</rollbackOnError>
+    <sourceObject>json</sourceObject>
+    <sourceObjectDefault>false</sourceObjectDefault>
+    <synchronousProcessThreshold>0.0</synchronousProcessThreshold>
+    <type>Load</type>
+    <uniqueName>AFRecruitmentCreateRecruitmentPosting_1</uniqueName>
+    <versionNumber>1.0</versionNumber>
+    <xmlDeclarationRemoved>false</xmlDeclarationRemoved>
+</OmniDataTransform>

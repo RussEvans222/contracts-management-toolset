@@ -1,0 +1,187 @@
+<template>
+    <article class="timeline-shell">
+        <header class="timeline-header">
+            <div>
+                <p class="eyebrow">Contract Workspace</p>
+                <h2>Contract History Timeline</h2>
+                <p class="subtitle">Left-to-right timeline of contract changes with simplified zoom controls.</p>
+            </div>
+            <div class="header-meta">
+                <span class="count-chip">{eventCountLabel}</span>
+                <lightning-button-icon
+                    icon-name="utility:refresh"
+                    variant="border-filled"
+                    alternative-text="Refresh timeline"
+                    title="Refresh timeline"
+                    onclick={handleRefresh}
+                ></lightning-button-icon>
+            </div>
+        </header>
+
+        <section class="timeline-controls">
+            <div class="control-grid">
+                <div class="zoom-row" role="group" aria-label="Timeline zoom controls">
+                    <template for:each={zoomButtons} for:item="zoomOption">
+                        <button
+                            key={zoomOption.value}
+                            type="button"
+                            class={zoomOption.className}
+                            data-zoom={zoomOption.value}
+                            onclick={handleZoomSelect}
+                        >
+                            {zoomOption.label}
+                        </button>
+                    </template>
+                    <button type="button" class="jump-today-btn" onclick={handleJumpToToday}>Today</button>
+                </div>
+            </div>
+            <div class="stats-row">
+                <span><strong>Resolution:</strong> {activeScaleLabel}</span>
+                <span>{zoomStatusLabel}</span>
+                <span><strong>Range:</strong> {rangeLabel}</span>
+            </div>
+            <div class="marker-legend" role="group" aria-label="Timeline marker legend">
+                <template for:each={markerLegendItems} for:item="legendItem">
+                    <button
+                        key={legendItem.key}
+                        type="button"
+                        class={legendItem.className}
+                        data-marker-type={legendItem.key}
+                        onclick={handleLegendToggle}
+                        aria-pressed={legendItem.isActive}
+                        title={legendItem.label}
+                    >
+                        <lightning-icon
+                            icon-name={legendItem.iconName}
+                            size="xx-small"
+                            class="legend-icon"
+                            alternative-text={legendItem.label}
+                            title={legendItem.label}
+                        ></lightning-icon>
+                        <span>{legendItem.label}</span>
+                    </button>
+                </template>
+            </div>
+            <template if:true={showTruncationNote}>
+                <p class="truncate-note">{truncationNote}</p>
+            </template>
+        </section>
+
+        <template if:true={hasEvents}>
+            <section class="timeline-panel" aria-label="Horizontal contract timeline">
+                <div class="panel-rail">
+                    <span class="today-fixed-chip">Today · {currentDateLabel}</span>
+                </div>
+                <div class="timeline-plot">
+                    <div class="timeline-canvas" style={timelineCanvasStyle}>
+                        <template for:each={axisTicks} for:item="tick">
+                            <span key={tick.key} class="axis-gridline" style={tick.style}></span>
+                        </template>
+
+                        <template for:each={timelineStems} for:item="stem">
+                            <span key={stem.rowKey} class="timeline-stem" style={stem.stemStyle}></span>
+                        </template>
+
+                        <template for:each={timelineMarkers} for:item="marker">
+                            <button
+                                key={marker.rowKey}
+                                type="button"
+                                class={marker.markerClass}
+                                style={marker.markerStyle}
+                                title={marker.title}
+                                data-bucket-key={marker.bucketKey}
+                                data-event-row-key={marker.eventRowKey}
+                                data-marker-type={marker.markerType}
+                                onclick={handleSelectBucket}
+                            >
+                                <lightning-icon
+                                    icon-name={marker.markerIconName}
+                                    size="x-small"
+                                    class="marker-icon"
+                                    alternative-text={marker.markerAltText}
+                                    title={marker.markerAltText}
+                                ></lightning-icon>
+                            </button>
+                        </template>
+
+                        <div class="timeline-axis" role="presentation">
+                            <template for:each={axisTicks} for:item="tick">
+                                <div key={tick.key} class="axis-tick" style={tick.style}>
+                                    <span class="tick-mark"></span>
+                                    <span class="tick-label">{tick.label}</span>
+                                </div>
+                            </template>
+                        </div>
+
+                        <div class="today-anchor" role="note">
+                            <span class="today-line"></span>
+                            <span class="today-chip">Today</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <template if:true={hasSelectedBucket}>
+                <section class="detail-card">
+                    <header class="detail-header">
+                        <h3>{selectedBucket.label}</h3>
+                        <span class="detail-count">{selectedBucket.countLabel}</span>
+                    </header>
+                    <p class="detail-summary">{selectedBucketSummary}</p>
+
+                    <ul class="event-list">
+                        <template for:each={selectedBucketEvents} for:item="eventRow">
+                            <li key={eventRow.rowKey} class="event-item">
+                                <div class="event-title-row">
+                                    <span class="event-title-left">
+                                        <lightning-icon
+                                            icon-name={eventRow.iconName}
+                                            size="xx-small"
+                                            class="event-icon"
+                                            alternative-text={eventRow.displaySourceCategory}
+                                            title={eventRow.displaySourceCategory}
+                                        ></lightning-icon>
+                                        <span class="event-field">{eventRow.displayFieldLabel}</span>
+                                    </span>
+                                    <span class={eventRow.changeBadgeClass}>{eventRow.changeType}</span>
+                                </div>
+
+                                <p class="event-meta">
+                                    <lightning-formatted-date-time
+                                        value={eventRow.createdDate}
+                                        year="numeric"
+                                        month="short"
+                                        day="2-digit"
+                                        hour="2-digit"
+                                        minute="2-digit"
+                                        second="2-digit"
+                                    ></lightning-formatted-date-time>
+                                    • {eventRow.displayUserName} • {eventRow.displaySourceCategory}
+                                </p>
+
+                                <template if:true={eventRow.isEventOnly}>
+                                    <p class="event-body">System event captured without a field value delta.</p>
+                                </template>
+                                <template if:false={eventRow.isEventOnly}>
+                                    <p class="event-body">
+                                        <span class="value-label">From:</span> {eventRow.displayOldValue}
+                                        <span class="value-separator">→</span>
+                                        <span class="value-label">To:</span> {eventRow.displayNewValue}
+                                    </p>
+                                </template>
+                            </li>
+                        </template>
+                    </ul>
+                </section>
+            </template>
+        </template>
+
+        <template if:false={hasEvents}>
+            <div class="empty">{emptyMessage}</div>
+        </template>
+
+        <template if:true={errorMessage}>
+            <div class="error-box">{errorMessage}</div>
+        </template>
+    </article>
+</template>

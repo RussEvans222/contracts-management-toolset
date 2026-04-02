@@ -1,0 +1,33 @@
+.feed{
+    height: var(--heightInPixels, 300px);
+	overflow-y: scroll;
+    z-index: 2;
+}
+/*
+.icon {
+    padding-bottom: 10px;
+}
+
+
+.item-icon .slds-icon{
+	fill: #ffffff;
+}
+.no-decoration{
+    text-decoration: none;
+    color: rgb(62, 62, 60);
+    
+}
+ */
+
+
+.slds-timeline__item_expandable.slds-is-open .slds-timeline__item_details{
+ padding: 0% !important;
+}
+
+.ul li h3{
+    padding-bottom: 2px;
+}
+
+.ul li p{
+    padding-bottom: 4px !important;
+}

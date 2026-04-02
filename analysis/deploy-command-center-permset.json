@@ -1,0 +1,75 @@
+{
+  "status": 0,
+  "result": {
+    "checkOnly": false,
+    "completedDate": "2026-03-31T16:48:48.000Z",
+    "createdBy": "005Hu00000UJSRh",
+    "createdByName": "Russell Evans",
+    "createdDate": "2026-03-31T16:48:45.000Z",
+    "details": {
+      "componentSuccesses": [
+        {
+          "changed": true,
+          "componentType": "",
+          "created": false,
+          "createdDate": "2026-03-31T16:48:47.000Z",
+          "deleted": false,
+          "fileName": "package.xml",
+          "fullName": "package.xml",
+          "success": true
+        },
+        {
+          "changed": true,
+          "componentType": "PermissionSet",
+          "created": true,
+          "createdDate": "2026-03-31T16:48:47.000Z",
+          "deleted": false,
+          "fileName": "permissionsets/Contracts_Command_Center_Visibility.permissionset",
+          "fullName": "Contracts_Command_Center_Visibility",
+          "id": "0PSHu00000BfZD0OAN",
+          "success": true
+        }
+      ],
+      "runTestResult": {
+        "numFailures": 0,
+        "numTestsRun": 0,
+        "totalTime": 0,
+        "codeCoverage": [],
+        "codeCoverageWarnings": [],
+        "failures": [],
+        "flowCoverage": [],
+        "flowCoverageWarnings": [],
+        "successes": []
+      },
+      "componentFailures": []
+    },
+    "done": true,
+    "id": "0AfHu00002yZ6ZHKA0",
+    "ignoreWarnings": false,
+    "lastModifiedDate": "2026-03-31T16:48:48.000Z",
+    "numberComponentErrors": 0,
+    "numberComponentsDeployed": 1,
+    "numberComponentsTotal": 1,
+    "numberFiles": "3",
+    "numberTestErrors": 0,
+    "numberTestsCompleted": 0,
+    "numberTestsTotal": 0,
+    "rollbackOnError": true,
+    "runTestsEnabled": false,
+    "startDate": "2026-03-31T16:48:45.000Z",
+    "status": "Succeeded",
+    "success": true,
+    "zipSize": 865,
+    "files": [
+      {
+        "fullName": "Contracts_Command_Center_Visibility",
+        "type": "PermissionSet",
+        "state": "Created",
+        "filePath": "/Users/russellevans/Downloads/Salesforce Builds/Contracts/force-app/main/default/permissionsets/Contracts_Command_Center_Visibility.permissionset-meta.xml"
+      }
+    ],
+    "zipFileCount": 2,
+    "deployUrl": "https://storm-67f93fa3759a67.my.salesforce.com/lightning/setup/DeployStatus/page?address=%2Fchangemgmt%2FmonitorDeploymentsDetails.apexp%3FasyncId%3D0AfHu00002yZ6ZHKA0%26retURL%3D%252Fchangemgmt%252FmonitorDeployment.apexp"
+  },
+  "warnings": []
+}

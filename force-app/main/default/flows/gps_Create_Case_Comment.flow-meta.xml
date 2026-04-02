@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>60.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Assign_Owner_ID</name>
+        <label>Assign Owner ID</label>
+        <locationX>314</locationX>
+        <locationY>350</locationY>
+        <assignmentItems>
+            <assignToReference>varCaseCommentCreatedById</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>varCaseRecord.Owner:User.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Create_a_Case_Comment</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_User_ID</name>
+        <label>Assign User ID</label>
+        <locationX>50</locationX>
+        <locationY>350</locationY>
+        <assignmentItems>
+            <assignToReference>varCaseCommentCreatedById</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_User_From_Contact.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Create_a_Case_Comment</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <description>If no User ID is found, default the Case Owner.</description>
+        <name>Check_for_User_ID</name>
+        <label>Check for User ID</label>
+        <locationX>182</locationX>
+        <locationY>242</locationY>
+        <defaultConnector>
+            <targetReference>Assign_Owner_ID</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>User_ID_Found</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_User_From_Contact.Id</leftValueReference>
+                <operator>WasSet</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_User_ID</targetReference>
+            </connector>
+            <label>User ID Found</label>
+        </rules>
+    </decisions>
+    <description>Used by the Case Management Menu item to Add a Comment to the Case selected.</description>
+    <environments>Default</environments>
+    <interviewLabel>gps Create Case Comment {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>gps Create Case Comment</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <description>Creates a Case Comment from the BOT.</description>
+        <name>Create_a_Case_Comment</name>
+        <label>Create a Case Comment</label>
+        <locationX>182</locationX>
+        <locationY>542</locationY>
+        <inputAssignments>
+            <field>CommentBody</field>
+            <value>
+                <elementReference>varCaseComment</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>CreatedById</field>
+            <value>
+                <elementReference>varCaseCommentCreatedById</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>CreatedDate</field>
+            <value>
+                <elementReference>$Flow.CurrentDateTime</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>IsPublished</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>ParentId</field>
+            <value>
+                <elementReference>varCaseRecord.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <object>CaseComment</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordLookups>
+        <description>Get the User ID from Case Contact Information</description>
+        <name>Get_User_From_Contact</name>
+        <label>Get User From Contact</label>
+        <locationX>182</locationX>
+        <locationY>134</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Check_for_User_ID</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>ContactId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>varCaseRecord.Contact.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>ContactId</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>User</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <runInMode>SystemModeWithSharing</runInMode>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_User_From_Contact</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>Case Comment from the Bot</description>
+        <name>varCaseComment</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>varCaseCommentCreatedById</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Case from the Bot</description>
+        <name>varCaseRecord</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Case</objectType>
+    </variables>
+</Flow>

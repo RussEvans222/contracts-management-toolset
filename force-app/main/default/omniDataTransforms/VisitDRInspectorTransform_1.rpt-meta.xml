@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OmniDataTransform xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <assignmentRulesUsed>false</assignmentRulesUsed>
+    <deletedOnSuccess>false</deletedOnSuccess>
+    <errorIgnored>false</errorIgnored>
+    <expectedInputJson>{
+  &quot;vlcTimeTracking&quot; : {
+    &quot;DataRaptorTransformAction1&quot; : null,
+    &quot;GetTemplateCount&quot; : null,
+    &quot;SetValuesIncidentType&quot; : null,
+    &quot;DRGetOtherActionPlanTemplates&quot; : null,
+    &quot;DRGetCurrentFacilityForVisit&quot; : null,
+    &quot;DRGetInternalUsersforInspection&quot; : null,
+    &quot;Summary&quot; : null,
+    &quot;DRGetCurrentCaseIncidentForVisit&quot; : null,
+    &quot;DRGetCurrentIAForVisit&quot; : null,
+    &quot;DRGetBLA_IActionPlanTemplates&quot; : null,
+    &quot;SetErrorsEndDatebeforeStart&quot; : null,
+    &quot;DRCreateLocationAddressFromContextIdandVisit&quot; : null,
+    &quot;DRGetCurrentBLAForVisit&quot; : null,
+    &quot;NavigateAction1&quot; : null,
+    &quot;CANCEL&quot; : null,
+    &quot;SetValuesDates&quot; : null,
+    &quot;VisitDetails&quot; : null,
+    &quot;DRCreateVisitRequestFromOmniscript_Facility&quot; : null,
+    &quot;NoTemplates&quot; : null
+  },
+  &quot;vlcPersistentComponent&quot; : { },
+  &quot;userTimeZone&quot; : null,
+  &quot;userProfile&quot; : null,
+  &quot;userName&quot; : null,
+  &quot;userId&quot; : null,
+  &quot;timeStamp&quot; : null,
+  &quot;ContextId&quot; : null,
+  &quot;Summary&quot; : { },
+  &quot;VisitDetails&quot; : {
+    &quot;ReviewerType&quot; : null,
+    &quot;PlannedVisitEnd&quot; : null,
+    &quot;MessagingEndAfterStart&quot; : null,
+    &quot;EndDateTimeValidation&quot; : null,
+    &quot;PlannedVisitStart&quot; : null,
+    &quot;ReviewerTypeIncident&quot; : null,
+    &quot;OwnerReviewerId&quot; : null,
+    &quot;OtherUser-Block&quot; : {
+      &quot;OtherUser&quot; : null
+    },
+    &quot;VisitorId&quot; : null,
+    &quot;OwnerReviewerName&quot; : null,
+    &quot;BlkInspectionType-Block&quot; : {
+      &quot;BlkInspectionType&quot; : null
+    },
+    &quot;VisitPriority&quot; : null,
+    &quot;InspectionTypeId&quot; : null,
+    &quot;VisitNotes&quot; : null
+  },
+  &quot;NoTemplates&quot; : { }
+}</expectedInputJson>
+    <fieldLevelSecurityEnabled>false</fieldLevelSecurityEnabled>
+    <inputType>JSON</inputType>
+    <isManagedUsingStdDesigner>false</isManagedUsingStdDesigner>
+    <name>VisitDRInspectorTransform</name>
+    <nullInputsIncludedInOutput>false</nullInputsIncludedInOutput>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>VisitDRInspectorTransformCustom6364</globalKey>
+        <inputFieldName>Inspector</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>VisitDRInspectorTransform</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldFormat>List&lt;Map&gt;</outputFieldFormat>
+        <outputFieldName>Inspectors</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <outputType>JSON</outputType>
+    <previewJsonData>{
+  &quot;Inspector&quot; : {
+    &quot;UserType&quot; : &quot;Standard&quot;,
+    &quot;UserId&quot; : &quot;005Kb00000BWhBkIAL&quot;,
+    &quot;Persona&quot; : &quot;Inspector&quot;,
+    &quot;UserName&quot; : &quot;Kaylee Kwan&quot;
+  }
+}</previewJsonData>
+    <processSuperBulk>false</processSuperBulk>
+    <responseCacheTtlMinutes>0.0</responseCacheTtlMinutes>
+    <rollbackOnError>false</rollbackOnError>
+    <sourceObject>json</sourceObject>
+    <sourceObjectDefault>false</sourceObjectDefault>
+    <synchronousProcessThreshold>0.0</synchronousProcessThreshold>
+    <type>Transform</type>
+    <uniqueName>VisitDRInspectorTransform_1</uniqueName>
+    <versionNumber>1.0</versionNumber>
+    <xmlDeclarationRemoved>false</xmlDeclarationRemoved>
+</OmniDataTransform>

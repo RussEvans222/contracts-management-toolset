@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OmniDataTransform xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <assignmentRulesUsed>false</assignmentRulesUsed>
+    <deletedOnSuccess>false</deletedOnSuccess>
+    <errorIgnored>false</errorIgnored>
+    <fieldLevelSecurityEnabled>false</fieldLevelSecurityEnabled>
+    <inputType>JSON</inputType>
+    <isManagedUsingStdDesigner>false</isManagedUsingStdDesigner>
+    <name>TransformGrantContractDetailsv2</name>
+    <nullInputsIncludedInOutput>false</nullInputsIncludedInOutput>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>2fe648a3-315b-4bc0-99de-c001c98b07a7</globalKey>
+        <inputFieldName>FundingAward:AwardeeId</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>TransformGrantContractDetailsv2</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>FundingAwardAwardeeId</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>2f0e1b83-32b8-40d5-89ee-fa1bd407e098</globalKey>
+        <inputFieldName>FundingAward:ContactName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>TransformGrantContractDetailsv2</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>FundingAwardContactName</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>be55e387-53cb-4629-9266-16a7b5b74c79</globalKey>
+        <inputFieldName>FundingAward:Name</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>TransformGrantContractDetailsv2</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>FundingAwardName</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>2aa8dc38-6e2c-4c15-bd86-961150db1117</globalKey>
+        <inputFieldName>FundingAward:Amount</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>TransformGrantContractDetailsv2</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>FundingAwardAmount</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>86a9bbb0-b553-4c68-bb58-ff3092afd75b</globalKey>
+        <inputFieldName>FundingAward:AwardeeName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>TransformGrantContractDetailsv2</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>FundingAwardAwardeeName</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>3aa34fb9-8f6e-4b88-9a1c-1afd9aaddfc6</globalKey>
+        <inputFieldName>FundingAward:StartDate</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>TransformGrantContractDetailsv2</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>FundingAwardStartDate</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>01be8989-2ba8-4ab4-bd66-039f16d375d2</globalKey>
+        <inputFieldName>FundingAward:FundingOpportunityId</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>TransformGrantContractDetailsv2</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>FundingAwardFundingOpportunityId</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>3706d26c-b1a5-47df-927f-00cab482c59e</globalKey>
+        <inputFieldName>FundingAward:EndDate</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>TransformGrantContractDetailsv2</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>FundingAwardEndDate</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>82a34d73-cb19-4411-bd9f-5ee70c211fa3</globalKey>
+        <inputFieldName>FundingAward:AwardNumber</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>TransformGrantContractDetailsv2</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>FundingAwardAwardNumber</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <outputType>JSON</outputType>
+    <previewJsonData>{
+  &quot;Contract&quot; : {
+    &quot;FundingAwardId&quot; : &quot;1212K000000GmmXQAS&quot;,
+    &quot;Id&quot; : &quot;8002K000000q1VWQAY&quot;,
+    &quot;FundingId&quot; : &quot;1212K000000GmmXQAS&quot;
+  },
+  &quot;FundingAward&quot; : {
+    &quot;Name&quot; : &quot;Test for Contracts&quot;,
+    &quot;EndDate&quot; : &quot;2024-12-01T19:46:00.000Z&quot;,
+    &quot;FundingOpportunityId&quot; : &quot;1192K000000000aQAA&quot;,
+    &quot;AwardeeName&quot; : &quot;Paul Marshall&quot;,
+    &quot;AwardeeId&quot; : &quot;0012K000027rWhMQAU&quot;,
+    &quot;Amount&quot; : 10000,
+    &quot;StartDate&quot; : &quot;2024-03-01T19:46:00.000Z&quot;
+  }
+}</previewJsonData>
+    <processSuperBulk>false</processSuperBulk>
+    <responseCacheTtlMinutes>0.0</responseCacheTtlMinutes>
+    <rollbackOnError>false</rollbackOnError>
+    <sourceObject>json</sourceObject>
+    <sourceObjectDefault>false</sourceObjectDefault>
+    <synchronousProcessThreshold>0.0</synchronousProcessThreshold>
+    <targetOutputFileName>KansasCommerceContract(Version 1)</targetOutputFileName>
+    <type>Transform</type>
+    <uniqueName>TransformGrantContractDetailsv2_1</uniqueName>
+    <versionNumber>1.0</versionNumber>
+    <xmlDeclarationRemoved>false</xmlDeclarationRemoved>
+</OmniDataTransform>

@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OmniDataTransform xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <assignmentRulesUsed>false</assignmentRulesUsed>
+    <deletedOnSuccess>false</deletedOnSuccess>
+    <errorIgnored>false</errorIgnored>
+    <expectedInputJson>{
+  &quot;vlcTimeTracking&quot; : {
+    &quot;DRSaveApplication&quot; : null,
+    &quot;ApplicationSubmitted&quot; : null,
+    &quot;CurrentLicenseInformation&quot; : null,
+    &quot;Documentation&quot; : null,
+    &quot;SetValues1&quot; : null,
+    &quot;Payment&quot; : null,
+    &quot;ApplicationChecklist&quot; : null,
+    &quot;AdditionalLicenseDetails&quot; : null,
+    &quot;LicenseTypeStep&quot; : null,
+    &quot;Acknowledgement&quot; : null,
+    &quot;ReviewFee&quot; : null,
+    &quot;GotoApplicationDetails&quot; : null,
+    &quot;ApplicantInformation&quot; : null,
+    &quot;Instructions&quot; : null
+  },
+  &quot;vlcPersistentComponent&quot; : { },
+  &quot;userTimeZone&quot; : null,
+  &quot;userProfile&quot; : null,
+  &quot;userName&quot; : null,
+  &quot;userId&quot; : null,
+  &quot;timeStamp&quot; : null,
+  &quot;ContextId&quot; : null,
+  &quot;ApplicationSubmitted&quot; : { },
+  &quot;CurrentLicenseInformation&quot; : {
+    &quot;PresentClassofLicense&quot; : null,
+    &quot;PresentTradeName&quot; : null,
+    &quot;PresentExpirationDate&quot; : null,
+    &quot;PresentStateLicenseNumber&quot; : null
+  },
+  &quot;Documentation&quot; : {
+    &quot;File1&quot; : [ {
+      &quot;data&quot; : null,
+      &quot;size&quot; : null,
+      &quot;filename&quot; : null
+    } ]
+  },
+  &quot;Payment&quot; : {
+    &quot;CustomLWC2&quot; : null,
+    &quot;Amount&quot; : null
+  },
+  &quot;ApplicationChecklist&quot; : { },
+  &quot;AdditionalLicenseDetails&quot; : {
+    &quot;Radio1&quot; : null,
+    &quot;Radio4&quot; : null,
+    &quot;Radio6&quot; : null,
+    &quot;Radio3&quot; : null,
+    &quot;Radio2&quot; : null,
+    &quot;Radio5&quot; : null,
+    &quot;TextArea1&quot; : null,
+    &quot;Radio7&quot; : null
+  },
+  &quot;LicenseTypeStep&quot; : {
+    &quot;LicenseType&quot; : null,
+    &quot;ApplicantApplyingAs&quot; : null
+  },
+  &quot;Acknowledgement&quot; : {
+    &quot;CaptureSignature&quot; : null,
+    &quot;Disclosure1&quot; : null
+  },
+  &quot;ReviewFee&quot; : {
+    &quot;PayNow&quot; : null
+  },
+  &quot;ApplicantInformation&quot; : {
+    &quot;ApplicantAddress&quot; : null,
+    &quot;HomePhone&quot; : null,
+    &quot;MobilePhone&quot; : null,
+    &quot;FirstName&quot; : null,
+    &quot;LLCInformation&quot; : null,
+    &quot;FEINNumber&quot; : null,
+    &quot;MailingAddressSame&quot; : null,
+    &quot;LastName&quot; : null,
+    &quot;EmailAddress&quot; : null,
+    &quot;TradeNameofEstablishment&quot; : null,
+    &quot;Preferred Language&quot; : null,
+    &quot;DLNumber&quot; : null
+  },
+  &quot;Instructions&quot; : { }
+}</expectedInputJson>
+    <fieldLevelSecurityEnabled>false</fieldLevelSecurityEnabled>
+    <inputType>JSON</inputType>
+    <isManagedUsingStdDesigner>false</isManagedUsingStdDesigner>
+    <name>DRSaveRetailLiquorLicense</name>
+    <nullInputsIncludedInOutput>false</nullInputsIncludedInOutput>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>| NOW</formulaConverted>
+        <formulaExpression>NOW()</formulaExpression>
+        <formulaResultPath>AppliedDate</formulaResultPath>
+        <formulaSequence>1.0</formulaSequence>
+        <globalKey>DRSaveRetailLiquorLicenseCustom6988</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRSaveRetailLiquorLicense</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>true</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>DRSaveRetailLiquorLicenseCustom597</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>DRSaveRetailLiquorLicense</name>
+        <outputCreationSequence>3.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFeeItem</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>true</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>DRSaveRetailLiquorLicenseCustom5733</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>DRSaveRetailLiquorLicense</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRSaveRetailLiquorLicenseCustom137</globalKey>
+        <inputFieldName>AppliedDate</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRSaveRetailLiquorLicense</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>AppliedDate</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRSaveRetailLiquorLicenseCustom7927</globalKey>
+        <inputFieldName>ApplicantInformation:TradeNameofEstablishment</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <lookupByFieldName>Name</lookupByFieldName>
+        <lookupObjectName>Account</lookupObjectName>
+        <lookupReturnedFieldName>Id</lookupReturnedFieldName>
+        <name>DRSaveRetailLiquorLicense</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>AccountId</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>DRSaveRetailLiquorLicenseCustom4207</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedFieldName>Id</linkedFieldName>
+        <linkedObjectSequence>1.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>DRSaveRetailLiquorLicense</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>ParentRecordId</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFee</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <defaultValue>PAID</defaultValue>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRSaveRetailLiquorLicenseCustom3834</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRSaveRetailLiquorLicense</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>Status</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFee</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>DRSaveRetailLiquorLicenseCustom5367</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedFieldName>AccountId</linkedFieldName>
+        <linkedObjectSequence>1.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>DRSaveRetailLiquorLicense</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>AccountId</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFee</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>true</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>DRSaveRetailLiquorLicenseCustom8465</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>DRSaveRetailLiquorLicense</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFee</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <defaultValue>Submitted</defaultValue>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRSaveRetailLiquorLicenseCustom3427</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRSaveRetailLiquorLicense</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Status</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <defaultValue>Application Fee</defaultValue>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRSaveRetailLiquorLicenseCustom6647</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRSaveRetailLiquorLicense</name>
+        <outputCreationSequence>3.0</outputCreationSequence>
+        <outputFieldName>Name</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFeeItem</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <defaultValue>Permit</defaultValue>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRSaveRetailLiquorLicenseCustom1459</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRSaveRetailLiquorLicense</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Category</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <defaultValue>2500</defaultValue>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRSaveRetailLiquorLicenseCustom1244</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRSaveRetailLiquorLicense</name>
+        <outputCreationSequence>3.0</outputCreationSequence>
+        <outputFieldName>FeeAmount</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFeeItem</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>DRSaveRetailLiquorLicenseCustom9040</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedFieldName>Id</linkedFieldName>
+        <linkedObjectSequence>2.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>DRSaveRetailLiquorLicense</name>
+        <outputCreationSequence>3.0</outputCreationSequence>
+        <outputFieldName>RegulatoryTrxnFeeId</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFeeItem</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <defaultValue>Retail Dispensary</defaultValue>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRSaveRetailLiquorLicenseCustom1526</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <lookupByFieldName>Name</lookupByFieldName>
+        <lookupObjectName>RegulatoryAuthorizationType</lookupObjectName>
+        <lookupReturnedFieldName>Id</lookupReturnedFieldName>
+        <name>DRSaveRetailLiquorLicense</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>LicenseTypeId</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <defaultValue>License</defaultValue>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRSaveRetailLiquorLicenseCustom2346</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRSaveRetailLiquorLicense</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>ApplicationCategory</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <outputType>SObject</outputType>
+    <previewJsonData>{
+  &quot;vlcTimeTracking&quot; : {
+    &quot;DRSaveApplication&quot; : null,
+    &quot;ApplicationSubmitted&quot; : null,
+    &quot;CurrentLicenseInformation&quot; : null,
+    &quot;Documentation&quot; : null,
+    &quot;SetValues1&quot; : null,
+    &quot;Payment&quot; : null,
+    &quot;ApplicationChecklist&quot; : null,
+    &quot;AdditionalLicenseDetails&quot; : null,
+    &quot;LicenseTypeStep&quot; : null,
+    &quot;Acknowledgement&quot; : null,
+    &quot;ReviewFee&quot; : null,
+    &quot;GotoApplicationDetails&quot; : null,
+    &quot;ApplicantInformation&quot; : null,
+    &quot;Instructions&quot; : null
+  },
+  &quot;vlcPersistentComponent&quot; : { },
+  &quot;userTimeZone&quot; : null,
+  &quot;userProfile&quot; : null,
+  &quot;userName&quot; : null,
+  &quot;userId&quot; : null,
+  &quot;timeStamp&quot; : null,
+  &quot;ContextId&quot; : null,
+  &quot;ApplicationSubmitted&quot; : { },
+  &quot;CurrentLicenseInformation&quot; : {
+    &quot;PresentClassofLicense&quot; : null,
+    &quot;PresentTradeName&quot; : null,
+    &quot;PresentExpirationDate&quot; : null,
+    &quot;PresentStateLicenseNumber&quot; : null
+  },
+  &quot;Documentation&quot; : {
+    &quot;File1&quot; : [ {
+      &quot;data&quot; : null,
+      &quot;size&quot; : null,
+      &quot;filename&quot; : null
+    } ]
+  },
+  &quot;Payment&quot; : {
+    &quot;CustomLWC2&quot; : null,
+    &quot;Amount&quot; : null
+  },
+  &quot;ApplicationChecklist&quot; : { },
+  &quot;AdditionalLicenseDetails&quot; : {
+    &quot;Radio1&quot; : null,
+    &quot;Radio4&quot; : null,
+    &quot;Radio6&quot; : null,
+    &quot;Radio3&quot; : null,
+    &quot;Radio2&quot; : null,
+    &quot;Radio5&quot; : null,
+    &quot;TextArea1&quot; : null,
+    &quot;Radio7&quot; : null
+  },
+  &quot;LicenseTypeStep&quot; : {
+    &quot;LicenseType&quot; : null,
+    &quot;ApplicantApplyingAs&quot; : null
+  },
+  &quot;Acknowledgement&quot; : {
+    &quot;CaptureSignature&quot; : null,
+    &quot;Disclosure1&quot; : null
+  },
+  &quot;ReviewFee&quot; : {
+    &quot;PayNow&quot; : null
+  },
+  &quot;ApplicantInformation&quot; : {
+    &quot;ApplicantAddress&quot; : null,
+    &quot;HomePhone&quot; : null,
+    &quot;MobilePhone&quot; : null,
+    &quot;FirstName&quot; : null,
+    &quot;LLCInformation&quot; : null,
+    &quot;FEINNumber&quot; : null,
+    &quot;MailingAddressSame&quot; : null,
+    &quot;LastName&quot; : null,
+    &quot;EmailAddress&quot; : null,
+    &quot;TradeNameofEstablishment&quot; : null,
+    &quot;Preferred Language&quot; : null,
+    &quot;DLNumber&quot; : null
+  },
+  &quot;Instructions&quot; : { }
+}</previewJsonData>
+    <processSuperBulk>false</processSuperBulk>
+    <responseCacheTtlMinutes>0.0</responseCacheTtlMinutes>
+    <rollbackOnError>false</rollbackOnError>
+    <sourceObject>json</sourceObject>
+    <sourceObjectDefault>false</sourceObjectDefault>
+    <synchronousProcessThreshold>0.0</synchronousProcessThreshold>
+    <type>Load</type>
+    <uniqueName>DRSaveRetailLiquorLicense_1</uniqueName>
+    <versionNumber>1.0</versionNumber>
+    <xmlDeclarationRemoved>false</xmlDeclarationRemoved>
+</OmniDataTransform>

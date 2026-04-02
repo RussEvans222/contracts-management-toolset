@@ -1,0 +1,608 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OmniIntegrationProcedure xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customJavaScript>{
+    &quot;JobSectionDetails&quot;: {
+        &quot;SelectOption&quot;: &quot;Create from scratch&quot;,
+        &quot;ShowSearchTemplate&quot;: false,
+        &quot;SearchTemplate-Block&quot;: null,
+        &quot;Formula1Content&quot;: null,
+        &quot;SectionName1&quot;: &quot;Job Overview&quot;,
+        &quot;Type2&quot;: &quot;Overview&quot;,
+        &quot;SelectStatus1&quot;: &quot;InDraft&quot;,
+        &quot;Language1&quot;: &quot;English&quot;,
+        &quot;SectionStartDate1&quot;: &quot;2024-04-01&quot;,
+        &quot;SectionEndDate1&quot;: &quot;2024-05-30&quot;,
+        &quot;SectionDescription1&quot;: &quot;Job Overview Description&quot;,
+        &quot;Formula1&quot;: &quot;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;India - Remote&lt;/strong&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Full time&lt;/strong&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Customer Success Manager&lt;/strong&gt;&lt;/li&gt;&lt;/ul&gt;&quot;,
+        &quot;Formula2&quot;: &quot;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;India - Remote&lt;/strong&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Full time&lt;/strong&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Customer Success Manager&lt;/strong&gt;&lt;/li&gt;&lt;/ul&gt;&quot;,
+        &quot;PopulateContent&quot;: &quot;New section&quot;
+    },
+    &quot;JobDetailsSection2&quot;: {
+        &quot;SelectOption1&quot;: &quot;Use Fields from an Existing Section&quot;,
+        &quot;ShowSearchTemplate1&quot;: true,
+        &quot;SearchTemplateSection2-Block&quot;: {
+            &quot;SearchTemplateSection2&quot;: &quot;Summary&quot;,
+            &quot;Section2Content&quot;: &quot;&lt;p&gt;Summary &lt;strong&gt;Content section&lt;/strong&gt;&lt;/p&gt;&quot;,
+            &quot;Section2EndDate&quot;: &quot;2024-04-03&quot;,
+            &quot;Section2Id&quot;: &quot;18CSB00000000zK2AQ&quot;,
+            &quot;Section2Type&quot;: &quot;Job Summary&quot;,
+            &quot;Section2Name&quot;: &quot;Summary&quot;,
+            &quot;Section2Status&quot;: &quot;InDraft&quot;,
+            &quot;Section2Language&quot;: &quot;English&quot;,
+            &quot;Section2Description&quot;: &quot;Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.&quot;
+        },
+        &quot;FormulaSection2&quot;: &quot;&lt;p&gt;Summary &lt;strong&gt;Content section&lt;/strong&gt;&lt;/p&gt;&quot;,
+        &quot;Section2Nam&quot;: null,
+        &quot;Select1&quot;: null,
+        &quot;SelectStatus2&quot;: null,
+        &quot;LanguageSection2&quot;: null,
+        &quot;SectionStartDate2&quot;: null,
+        &quot;SectionEndDate2&quot;: null,
+        &quot;SectionDescription2&quot;: null,
+        &quot;Formula3&quot;: &quot;&lt;p&gt;&lt;span style=\&quot;font-size: 14px; font-family: &quot;Salesforce Sans&quot;, sans-serif;\&quot;&gt;We&apos;re looking for exceptional candidates to join the Customer Success Team as a Principal Customer Success Manager and work with our most complex high value customer engagements.&lt;/span&gt;&lt;/p&gt;&quot;,
+        &quot;Formula4&quot;: &quot;&lt;p&gt;&lt;span style=\&quot;font-size: 14px; font-family: &quot;Salesforce Sans&quot;, sans-serif;\&quot;&gt;We&apos;re looking for exceptional candidates to join the Customer Success Team as a Principal Customer Success Manager and work with our most complex high value customer engagements.&lt;/span&gt;&lt;/p&gt;&quot;,
+        &quot;SectionPopulateContent&quot;: &quot;New section&quot;
+    },
+    &quot;JobDetailsSection3&quot;: {
+        &quot;SelectOption3&quot;: &quot;Use Fields from an Existing Section&quot;,
+        &quot;ShowSearchTemplate3&quot;: true,
+        &quot;SearchTemplateSection3-Block&quot;: {
+            &quot;SearchTemplateSection3&quot;: &quot;Responsibilities&quot;,
+            &quot;Section3Content&quot;: &quot;&lt;p&gt;Responsibilities section&lt;/p&gt;&quot;,
+            &quot;Section3EndDate&quot;: &quot;2024-04-25&quot;,
+            &quot;Section3StartDate&quot;: &quot;2024-04-03&quot;,
+            &quot;Section3Id&quot;: &quot;18CSB00000000zL2AQ&quot;,
+            &quot;Section3Type&quot;: &quot;Duties&quot;,
+            &quot;Section3Status&quot;: &quot;InDraft&quot;,
+            &quot;Section3Name&quot;: &quot;Responsibilities&quot;,
+            &quot;Section3Language&quot;: &quot;English&quot;,
+            &quot;Section3Description&quot;: &quot;Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.&quot;
+        },
+        &quot;ContentforExistingContent&quot;: &quot;&lt;p&gt;Responsibilities section&lt;/p&gt;&quot;,
+        &quot;SectionName3&quot;: null,
+        &quot;SelectType3&quot;: null,
+        &quot;SelectStatus3&quot;: null,
+        &quot;SelectLanguage3&quot;: null,
+        &quot;SelectStartDate3&quot;: null,
+        &quot;SelectEndDate3&quot;: null,
+        &quot;SectionDescription3&quot;: null,
+        &quot;Formula5&quot;: &quot;&lt;p&gt;&lt;strong&gt;Key Responsibilities&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Develop a deep understanding of assigned customers business and industry to ensure maximum impact of Salesforce products&lt;/li&gt;&lt;li&gt;Manage accountability of Salesforce with our customers&lt;/li&gt;&lt;li&gt;Provide digital strategy thought leadership, leveraging Salesforce s multi-cloud platform&lt;/li&gt;&lt;li&gt;Scope, plan and lead the delivery of engagements that enable the desired customer business outcomes.&lt;/li&gt;&lt;/ul&gt;&quot;,
+        &quot;Formula6&quot;: &quot;&lt;p&gt;&lt;strong&gt;Key Responsibilities&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Develop a deep understanding of assigned customers business and industry to ensure maximum impact of Salesforce products&lt;/li&gt;&lt;li&gt;Manage accountability of Salesforce with our customers&lt;/li&gt;&lt;li&gt;Provide digital strategy thought leadership, leveraging Salesforce s multi-cloud platform&lt;/li&gt;&lt;li&gt;Scope, plan and lead the delivery of engagements that enable the desired customer business outcomes.&lt;/li&gt;&lt;/ul&gt;&quot;,
+        &quot;PopulateContent3&quot;: &quot;New section&quot;
+    },
+    &quot;JobPostingDetails&quot;: {
+        &quot;RecruitmentRequisition&quot;: &quot;Salesforce Hiring&quot;,
+        &quot;JobPostingName&quot;: &quot;Customer Success Manager - India&quot;,
+        &quot;JobCandidateSourceKey&quot;: &quot;Salesforce Sales Cloud&quot;,
+        &quot;JobPostingType&quot;: &quot;External&quot;,
+        &quot;PostingStatus&quot;: &quot;InDraft&quot;,
+        &quot;JobPostingDescription&quot;: &quot;Manager Hiring&quot;,
+        &quot;JobStartDate&quot;: &quot;2024-05-01&quot;,
+        &quot;JobPostingEndDate&quot;: &quot;2024-05-31&quot;
+    },
+    &quot;ContextId&quot;: &quot;18ASB000000004r2AA&quot;,
+    &quot;omniscriptId&quot;: &quot;0jNSB0000003qLR2AY&quot;,
+    &quot;language&quot;: &quot;English&quot;,
+    &quot;type&quot;: &quot;Recruitment&quot;,
+    &quot;runMode&quot;: &quot;preview&quot;,
+    &quot;sId&quot;: &quot;0jNSB0000003qLR2AY&quot;,
+    &quot;theme&quot;: &quot;lightning&quot;,
+    &quot;subType&quot;: &quot;JobPosting&quot;,
+    &quot;timeStamp&quot;: &quot;2024-04-24T03:53:08.682Z&quot;,
+    &quot;userProfile&quot;: &quot;System Administrator&quot;,
+    &quot;userTimeZoneName&quot;: &quot;America/Los_Angeles&quot;,
+    &quot;userTimeZone&quot;: &quot;-420&quot;,
+    &quot;userCurrencyCode&quot;: &quot;USD&quot;,
+    &quot;userName&quot;: &quot;recruitmentsdb27@pss.com&quot;,
+    &quot;userId&quot;: &quot;005SB0000069JJJYA2&quot;,
+    &quot;omniProcessId&quot;: &quot;0jNSB0000003qLR2AY&quot;,
+    &quot;localTimeZoneName&quot;: &quot;Asia/Calcutta&quot;,
+    &quot;Id&quot;: &quot;18ASB000000004r2AA&quot;,
+    &quot;VacancyTitle&quot;: &quot;Salesforce Hiring&quot;,
+    &quot;MeetingNotes&quot;: &quot;&lt;p&gt;&lt;strong&gt;Key Responsibilities&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Develop a deep understanding of assigned customers business and industry to ensure maximum impact of Salesforce products&lt;/li&gt;&lt;li&gt;Manage accountability of Salesforce with our customers&lt;/li&gt;&lt;li&gt;Provide digital strategy thought leadership, leveraging Salesforce s multi-cloud platform&lt;/li&gt;&lt;li&gt;Scope, plan and lead the delivery of engagements that enable the desired customer business outcomes.&lt;/li&gt;&lt;/ul&gt;&quot;,
+    &quot;omniScriptId&quot;: &quot;0jNSB0000003qLR2AY&quot;,
+    &quot;elementName&quot;: &quot;IntegrationProcedureAction1&quot;
+}</customJavaScript>
+    <description>Creates a recruitment posting record and the recruitment content section records. Then, creates recruitment posting content section records that relate recruitment content section records with the recruitment posting record.</description>
+    <elementTypeComponentMapping>{&quot;ElementTypeToHTMLTemplateList&quot;:[]}</elementTypeComponentMapping>
+    <isActive>true</isActive>
+    <isIntegProcdSignatureAvl>false</isIntegProcdSignatureAvl>
+    <isIntegrationProcedure>true</isIntegrationProcedure>
+    <isManagedUsingStdDesigner>false</isManagedUsingStdDesigner>
+    <isMetadataCacheDisabled>false</isMetadataCacheDisabled>
+    <isOmniScriptEmbeddable>false</isOmniScriptEmbeddable>
+    <isTestProcedure>false</isTestProcedure>
+    <isWebCompEnabled>false</isWebCompEnabled>
+    <language>Procedure</language>
+    <name>CreateRecruitmentPostingandRelatedRecords</name>
+    <omniProcessElements>
+        <isActive>true</isActive>
+        <isOmniScriptEmbeddable>false</isOmniScriptEmbeddable>
+        <level>0.0</level>
+        <name>DeleteAction1</name>
+        <omniProcessVersionNumber>0.0</omniProcessVersionNumber>
+        <propertySetConfig>{
+  &quot;executionConditionalFormula&quot; : &quot;&quot;,
+  &quot;failureConditionalFormula&quot; : &quot;&quot;,
+  &quot;failOnStepError&quot; : true,
+  &quot;useFormulas&quot; : true,
+  &quot;deleteSObject&quot; : [ {
+    &quot;Type&quot; : &quot;RecruitmentPostingCntntSect&quot;,
+    &quot;Id&quot; : &quot;&quot;,
+    &quot;AllOrNone&quot; : false
+  } ],
+  &quot;responseJSONPath&quot; : &quot;&quot;,
+  &quot;responseJSONNode&quot; : &quot;&quot;,
+  &quot;additionalOutput&quot; : { },
+  &quot;failureResponse&quot; : { },
+  &quot;returnOnlyAdditionalOutput&quot; : false,
+  &quot;returnOnlyFailureResponse&quot; : false,
+  &quot;chainOnStep&quot; : false,
+  &quot;actionMessage&quot; : &quot;&quot;,
+  &quot;allOrNone&quot; : false,
+  &quot;show&quot; : null,
+  &quot;label&quot; : &quot;DeleteAction1&quot;,
+  &quot;disOnTplt&quot; : false
+}</propertySetConfig>
+        <sequenceNumber>7.0</sequenceNumber>
+        <type>Delete Action</type>
+    </omniProcessElements>
+    <omniProcessElements>
+        <isActive>true</isActive>
+        <isOmniScriptEmbeddable>false</isOmniScriptEmbeddable>
+        <level>0.0</level>
+        <name>DMSaveRecruitmentSection1Existing</name>
+        <omniProcessVersionNumber>0.0</omniProcessVersionNumber>
+        <propertySetConfig>{
+  &quot;executionConditionalFormula&quot; : &quot;%PostingDetailsSection1:PopulateContent%==\&quot;Existing section\&quot;&quot;,
+  &quot;failureConditionalFormula&quot; : &quot;&quot;,
+  &quot;failOnStepError&quot; : true,
+  &quot;useFormulas&quot; : true,
+  &quot;additionalInput&quot; : {
+    &quot;RecruitmentPostingId&quot; : &quot;=%RecruitmentCreateRecruitmentPosting:JobPostingId%&quot;,
+    &quot;RecruitmentContentSectionId&quot; : &quot;=%PostingDetailsSection1:SearchTemplate-Block:Section1Id%&quot;
+  },
+  &quot;additionalOutput&quot; : { },
+  &quot;failureResponse&quot; : { },
+  &quot;sendOnlyAdditionalInput&quot; : false,
+  &quot;returnOnlyAdditionalOutput&quot; : false,
+  &quot;returnOnlyFailureResponse&quot; : false,
+  &quot;responseJSONPath&quot; : &quot;&quot;,
+  &quot;responseJSONNode&quot; : &quot;&quot;,
+  &quot;sendJSONPath&quot; : &quot;&quot;,
+  &quot;sendJSONNode&quot; : &quot;&quot;,
+  &quot;bundle&quot; : &quot;RecruitmentCreateRecruitmentPostingContentSection&quot;,
+  &quot;chainOnStep&quot; : false,
+  &quot;actionMessage&quot; : &quot;&quot;,
+  &quot;show&quot; : null,
+  &quot;label&quot; : &quot;DataRaptorPostAction7&quot;,
+  &quot;disOnTplt&quot; : false
+}</propertySetConfig>
+        <sequenceNumber>9.0</sequenceNumber>
+        <type>DataRaptor Post Action</type>
+    </omniProcessElements>
+    <omniProcessElements>
+        <isActive>true</isActive>
+        <isOmniScriptEmbeddable>false</isOmniScriptEmbeddable>
+        <level>0.0</level>
+        <name>DMSaveRecruitmentSection2Existing</name>
+        <omniProcessVersionNumber>0.0</omniProcessVersionNumber>
+        <propertySetConfig>{
+  &quot;executionConditionalFormula&quot; : &quot;%PostingDetailsSection2:SectionPopulateContent%==\&quot;Existing section\&quot;&quot;,
+  &quot;failureConditionalFormula&quot; : &quot;&quot;,
+  &quot;failOnStepError&quot; : true,
+  &quot;useFormulas&quot; : true,
+  &quot;additionalInput&quot; : {
+    &quot;RecruitmentPostingId&quot; : &quot;=%RecruitmentCreateRecruitmentPosting:JobPostingId%&quot;,
+    &quot;RecruitmentContentSectionId&quot; : &quot;=%PostingDetailsSection2:SearchTemplateSection2-Block:Section2Id%&quot;
+  },
+  &quot;additionalOutput&quot; : { },
+  &quot;failureResponse&quot; : { },
+  &quot;sendOnlyAdditionalInput&quot; : false,
+  &quot;returnOnlyAdditionalOutput&quot; : false,
+  &quot;returnOnlyFailureResponse&quot; : false,
+  &quot;responseJSONPath&quot; : &quot;&quot;,
+  &quot;responseJSONNode&quot; : &quot;&quot;,
+  &quot;sendJSONPath&quot; : &quot;&quot;,
+  &quot;sendJSONNode&quot; : &quot;&quot;,
+  &quot;bundle&quot; : &quot;RecruitmentCreateRecruitmentPostingContentSection&quot;,
+  &quot;chainOnStep&quot; : false,
+  &quot;actionMessage&quot; : &quot;&quot;,
+  &quot;show&quot; : null,
+  &quot;label&quot; : &quot;DataRaptorPostAction7&quot;,
+  &quot;disOnTplt&quot; : false
+}</propertySetConfig>
+        <sequenceNumber>10.0</sequenceNumber>
+        <type>DataRaptor Post Action</type>
+    </omniProcessElements>
+    <omniProcessElements>
+        <isActive>true</isActive>
+        <isOmniScriptEmbeddable>false</isOmniScriptEmbeddable>
+        <level>0.0</level>
+        <name>DMSaveRecruitmentSection3Existing</name>
+        <omniProcessVersionNumber>0.0</omniProcessVersionNumber>
+        <propertySetConfig>{
+  &quot;executionConditionalFormula&quot; : &quot;%PostingDetailsSection3:PopulateContent3%==\&quot;Existing section\&quot;&quot;,
+  &quot;failureConditionalFormula&quot; : &quot;&quot;,
+  &quot;failOnStepError&quot; : true,
+  &quot;useFormulas&quot; : true,
+  &quot;additionalInput&quot; : {
+    &quot;RecruitmentPostingId&quot; : &quot;=%RecruitmentCreateRecruitmentPosting:JobPostingId%&quot;,
+    &quot;RecruitmentContentSectionId&quot; : &quot;=%PostingDetailsSection3:SearchTemplateSection3-Block:Section3Id%&quot;
+  },
+  &quot;additionalOutput&quot; : { },
+  &quot;failureResponse&quot; : { },
+  &quot;sendOnlyAdditionalInput&quot; : false,
+  &quot;returnOnlyAdditionalOutput&quot; : false,
+  &quot;returnOnlyFailureResponse&quot; : false,
+  &quot;responseJSONPath&quot; : &quot;&quot;,
+  &quot;responseJSONNode&quot; : &quot;&quot;,
+  &quot;sendJSONPath&quot; : &quot;&quot;,
+  &quot;sendJSONNode&quot; : &quot;&quot;,
+  &quot;bundle&quot; : &quot;RecruitmentCreateRecruitmentPostingContentSection&quot;,
+  &quot;chainOnStep&quot; : false,
+  &quot;actionMessage&quot; : &quot;&quot;,
+  &quot;show&quot; : null,
+  &quot;label&quot; : &quot;DataRaptorPostAction7&quot;,
+  &quot;disOnTplt&quot; : false
+}</propertySetConfig>
+        <sequenceNumber>11.0</sequenceNumber>
+        <type>DataRaptor Post Action</type>
+    </omniProcessElements>
+    <omniProcessElements>
+        <isActive>true</isActive>
+        <isOmniScriptEmbeddable>false</isOmniScriptEmbeddable>
+        <level>0.0</level>
+        <name>ListOfContentSection</name>
+        <omniProcessVersionNumber>0.0</omniProcessVersionNumber>
+        <propertySetConfig>{
+  &quot;executionConditionalFormula&quot; : &quot;&quot;,
+  &quot;failureConditionalFormula&quot; : &quot;&quot;,
+  &quot;failOnStepError&quot; : true,
+  &quot;useFormulas&quot; : true,
+  &quot;additionalInput&quot; : { },
+  &quot;additionalOutput&quot; : { },
+  &quot;failureResponse&quot; : { },
+  &quot;sendOnlyAdditionalInput&quot; : false,
+  &quot;returnOnlyAdditionalOutput&quot; : false,
+  &quot;returnOnlyFailureResponse&quot; : false,
+  &quot;responseJSONPath&quot; : &quot;&quot;,
+  &quot;responseJSONNode&quot; : &quot;&quot;,
+  &quot;sendJSONPath&quot; : &quot;&quot;,
+  &quot;sendJSONNode&quot; : &quot;&quot;,
+  &quot;advancedMerge&quot; : false,
+  &quot;advancedMergeMap&quot; : [ ],
+  &quot;preventIntraListMerge&quot; : false,
+  &quot;mergeFields&quot; : [ ],
+  &quot;allowMergeNulls&quot; : true,
+  &quot;hasPrimary&quot; : false,
+  &quot;primaryListKey&quot; : &quot;&quot;,
+  &quot;sortBy&quot; : [ ],
+  &quot;sortInDescendingOrder&quot; : false,
+  &quot;mergeListsOrder&quot; : [ &quot;RecruitmentCreateRecruitmentContentSection1:RecruitmentContentSection_1&quot;, &quot;RecruitmentCreateRecruitmentContentSection2:RecruitmentContentSection_1&quot;, &quot;RecruitmentCreateRecruitmentContentSection3:RecruitmentContentSection_1&quot; ],
+  &quot;filterListFormula&quot; : &quot;&quot;,
+  &quot;dynamicOutputFields&quot; : &quot;&quot;,
+  &quot;updateFieldValue&quot; : {
+    &quot;&quot; : &quot;&quot;
+  },
+  &quot;chainOnStep&quot; : false,
+  &quot;actionMessage&quot; : &quot;&quot;,
+  &quot;additionalChainableResponse&quot; : { },
+  &quot;show&quot; : null,
+  &quot;label&quot; : &quot;ListAction1&quot;,
+  &quot;disOnTplt&quot; : false
+}</propertySetConfig>
+        <sequenceNumber>6.0</sequenceNumber>
+        <type>List Merge Action</type>
+    </omniProcessElements>
+    <omniProcessElements>
+        <childElements>
+            <isActive>true</isActive>
+            <isOmniScriptEmbeddable>false</isOmniScriptEmbeddable>
+            <level>1.0</level>
+            <name>RecruitmentCreateRecruitmentPostingContentSection</name>
+            <omniProcessVersionNumber>0.0</omniProcessVersionNumber>
+            <propertySetConfig>{
+  &quot;executionConditionalFormula&quot; : &quot;ListOfContentSection!=NULL&quot;,
+  &quot;failureConditionalFormula&quot; : &quot;&quot;,
+  &quot;failOnStepError&quot; : true,
+  &quot;useFormulas&quot; : true,
+  &quot;additionalInput&quot; : {
+    &quot;RecruitmentPostingId&quot; : &quot;=%RecruitmentCreateRecruitmentPosting:JobPostingId%&quot;,
+    &quot;RecruitmentContentSectionId&quot; : &quot;=%ListOfContentSection:Id%&quot;
+  },
+  &quot;additionalOutput&quot; : { },
+  &quot;failureResponse&quot; : { },
+  &quot;sendOnlyAdditionalInput&quot; : false,
+  &quot;returnOnlyAdditionalOutput&quot; : false,
+  &quot;returnOnlyFailureResponse&quot; : false,
+  &quot;responseJSONPath&quot; : &quot;&quot;,
+  &quot;responseJSONNode&quot; : &quot;&quot;,
+  &quot;sendJSONPath&quot; : &quot;&quot;,
+  &quot;sendJSONNode&quot; : &quot;&quot;,
+  &quot;bundle&quot; : &quot;RecruitmentCreateRecruitmentPostingContentSection&quot;,
+  &quot;chainOnStep&quot; : false,
+  &quot;actionMessage&quot; : &quot;&quot;,
+  &quot;show&quot; : null,
+  &quot;label&quot; : &quot;DataRaptorPostAction5&quot;,
+  &quot;disOnTplt&quot; : false
+}</propertySetConfig>
+            <sequenceNumber>1.0</sequenceNumber>
+            <type>DataRaptor Post Action</type>
+        </childElements>
+        <isActive>true</isActive>
+        <isOmniScriptEmbeddable>false</isOmniScriptEmbeddable>
+        <level>0.0</level>
+        <name>LoopNewContentSection</name>
+        <omniProcessVersionNumber>0.0</omniProcessVersionNumber>
+        <propertySetConfig>{
+  &quot;loopList&quot; : &quot;ListOfContentSection&quot;,
+  &quot;executionConditionalFormula&quot; : &quot;&quot;,
+  &quot;loopOutput&quot; : { },
+  &quot;show&quot; : null,
+  &quot;label&quot; : &quot;LoopBlock1&quot;,
+  &quot;disOnTplt&quot; : false
+}</propertySetConfig>
+        <sequenceNumber>8.0</sequenceNumber>
+        <type>Loop Block</type>
+    </omniProcessElements>
+    <omniProcessElements>
+        <isActive>true</isActive>
+        <isOmniScriptEmbeddable>false</isOmniScriptEmbeddable>
+        <level>0.0</level>
+        <name>RecruitmentCreateRecruitmentContentSection1</name>
+        <omniProcessVersionNumber>0.0</omniProcessVersionNumber>
+        <propertySetConfig>{
+  &quot;executionConditionalFormula&quot; : &quot;%PostingDetailsSection1:PopulateContent%!=\&quot;Existing section\&quot;&quot;,
+  &quot;failureConditionalFormula&quot; : &quot;&quot;,
+  &quot;failOnStepError&quot; : true,
+  &quot;useFormulas&quot; : true,
+  &quot;additionalInput&quot; : {
+    &quot;ContentLanguage&quot; : &quot;=%RecruitmentTransformContentSectionInput:Section1ContentLanguage%&quot;,
+    &quot;ContentName&quot; : &quot;=%RecruitmentTransformContentSectionInput:Section1ContentName%&quot;,
+    &quot;ContentType&quot; : &quot;=%RecruitmentTransformContentSectionInput:Section1ContentType%&quot;,
+    &quot;SectionContent&quot; : &quot;=%RecruitmentTransformContentSectionInput:Section1Content%&quot;,
+    &quot;SectionStatus&quot; : &quot;=%RecruitmentTransformContentSectionInput:Section1Status%&quot;,
+    &quot;SectionStartDate&quot; : &quot;=%RecruitmentTransformContentSectionInput:Section1StartDate%&quot;,
+    &quot;SectionEndDate&quot; : &quot;=%RecruitmentTransformContentSectionInput:Section1EndDate%&quot;,
+    &quot;SectionDescription&quot; : &quot;=%RecruitmentTransformContentSectionInput:Section1Description%&quot;
+  },
+  &quot;additionalOutput&quot; : {
+    &quot;JobContentID&quot; : &quot;=%RecruitmentCreateRecruitmentContentSection1:RecruitmentContentSection_1:Id%&quot;
+  },
+  &quot;failureResponse&quot; : { },
+  &quot;sendOnlyAdditionalInput&quot; : false,
+  &quot;returnOnlyAdditionalOutput&quot; : false,
+  &quot;returnOnlyFailureResponse&quot; : false,
+  &quot;responseJSONPath&quot; : &quot;&quot;,
+  &quot;responseJSONNode&quot; : &quot;&quot;,
+  &quot;sendJSONPath&quot; : &quot;&quot;,
+  &quot;sendJSONNode&quot; : &quot;&quot;,
+  &quot;bundle&quot; : &quot;RecruitmentCreateRecruitmentContentSection&quot;,
+  &quot;chainOnStep&quot; : false,
+  &quot;actionMessage&quot; : &quot;&quot;,
+  &quot;show&quot; : null,
+  &quot;label&quot; : &quot;DataRaptorPostAction1&quot;,
+  &quot;disOnTplt&quot; : false
+}</propertySetConfig>
+        <sequenceNumber>3.0</sequenceNumber>
+        <type>DataRaptor Post Action</type>
+    </omniProcessElements>
+    <omniProcessElements>
+        <isActive>true</isActive>
+        <isOmniScriptEmbeddable>false</isOmniScriptEmbeddable>
+        <level>0.0</level>
+        <name>RecruitmentCreateRecruitmentContentSection2</name>
+        <omniProcessVersionNumber>0.0</omniProcessVersionNumber>
+        <propertySetConfig>{
+  &quot;executionConditionalFormula&quot; : &quot;%PostingDetailsSection2:SectionPopulateContent%!=\&quot;Existing section\&quot;&quot;,
+  &quot;failureConditionalFormula&quot; : &quot;&quot;,
+  &quot;failOnStepError&quot; : true,
+  &quot;useFormulas&quot; : true,
+  &quot;additionalInput&quot; : {
+    &quot;ContentLanguage&quot; : &quot;=%RecruitmentTransformContentSectionInput:Section2ContentLanguage%&quot;,
+    &quot;ContentName&quot; : &quot;=%RecruitmentTransformContentSectionInput:Section2ContentName%&quot;,
+    &quot;ContentType&quot; : &quot;=%RecruitmentTransformContentSectionInput:Section2ContentType%&quot;,
+    &quot;SectionContent&quot; : &quot;=%RecruitmentTransformContentSectionInput:Section2Content%&quot;,
+    &quot;SectionStatus&quot; : &quot;=%RecruitmentTransformContentSectionInput:Section2Status%&quot;,
+    &quot;SectionStartDate&quot; : &quot;=%RecruitmentTransformContentSectionInput:Section2StartDate%&quot;,
+    &quot;SectionEndDate&quot; : &quot;=%RecruitmentTransformContentSectionInput:Section2EndDate%&quot;,
+    &quot;SectionDescription&quot; : &quot;=%RecruitmentTransformContentSectionInput:Section2Description%&quot;
+  },
+  &quot;additionalOutput&quot; : {
+    &quot;JobContentID2&quot; : &quot;=%RecruitmentCreateRecruitmentContentSection2:RecruitmentContentSection_1:Id%&quot;
+  },
+  &quot;failureResponse&quot; : { },
+  &quot;sendOnlyAdditionalInput&quot; : false,
+  &quot;returnOnlyAdditionalOutput&quot; : false,
+  &quot;returnOnlyFailureResponse&quot; : false,
+  &quot;responseJSONPath&quot; : &quot;&quot;,
+  &quot;responseJSONNode&quot; : &quot;&quot;,
+  &quot;sendJSONPath&quot; : &quot;&quot;,
+  &quot;sendJSONNode&quot; : &quot;&quot;,
+  &quot;bundle&quot; : &quot;RecruitmentCreateRecruitmentContentSection&quot;,
+  &quot;chainOnStep&quot; : false,
+  &quot;actionMessage&quot; : &quot;&quot;,
+  &quot;show&quot; : null,
+  &quot;label&quot; : &quot;DataRaptorPostAction1&quot;,
+  &quot;disOnTplt&quot; : false
+}</propertySetConfig>
+        <sequenceNumber>4.0</sequenceNumber>
+        <type>DataRaptor Post Action</type>
+    </omniProcessElements>
+    <omniProcessElements>
+        <isActive>true</isActive>
+        <isOmniScriptEmbeddable>false</isOmniScriptEmbeddable>
+        <level>0.0</level>
+        <name>RecruitmentCreateRecruitmentContentSection3</name>
+        <omniProcessVersionNumber>0.0</omniProcessVersionNumber>
+        <propertySetConfig>{
+  &quot;executionConditionalFormula&quot; : &quot;%PostingDetailsSection3:PopulateContent3%!=\&quot;Existing section\&quot;&quot;,
+  &quot;failureConditionalFormula&quot; : &quot;&quot;,
+  &quot;failOnStepError&quot; : true,
+  &quot;useFormulas&quot; : true,
+  &quot;additionalInput&quot; : {
+    &quot;ContentLanguage&quot; : &quot;=%RecruitmentTransformContentSectionInput:Section3ContentLanguage%&quot;,
+    &quot;ContentName&quot; : &quot;=%RecruitmentTransformContentSectionInput:Section3ContentName%&quot;,
+    &quot;ContentType&quot; : &quot;=%RecruitmentTransformContentSectionInput:Section3ContentType%&quot;,
+    &quot;SectionContent&quot; : &quot;=%RecruitmentTransformContentSectionInput:Section3Content%&quot;,
+    &quot;SectionStatus&quot; : &quot;=%RecruitmentTransformContentSectionInput:Section3Status%&quot;,
+    &quot;SectionStartDate&quot; : &quot;=%RecruitmentTransformContentSectionInput:Section3StartDate%&quot;,
+    &quot;SectionEndDate&quot; : &quot;=%RecruitmentTransformContentSectionInput:Section3EndDate%&quot;,
+    &quot;SectionDescription&quot; : &quot;=%RecruitmentTransformContentSectionInput:Section3Description%&quot;
+  },
+  &quot;additionalOutput&quot; : {
+    &quot;JobContentID3&quot; : &quot;=%RecruitmentCreateRecruitmentContentSection3:RecruitmentContentSection_1:Id%&quot;
+  },
+  &quot;failureResponse&quot; : { },
+  &quot;sendOnlyAdditionalInput&quot; : false,
+  &quot;returnOnlyAdditionalOutput&quot; : false,
+  &quot;returnOnlyFailureResponse&quot; : false,
+  &quot;responseJSONPath&quot; : &quot;&quot;,
+  &quot;responseJSONNode&quot; : &quot;&quot;,
+  &quot;sendJSONPath&quot; : &quot;&quot;,
+  &quot;sendJSONNode&quot; : &quot;&quot;,
+  &quot;bundle&quot; : &quot;RecruitmentCreateRecruitmentContentSection&quot;,
+  &quot;chainOnStep&quot; : false,
+  &quot;actionMessage&quot; : &quot;&quot;,
+  &quot;show&quot; : null,
+  &quot;label&quot; : &quot;DataRaptorPostAction1&quot;,
+  &quot;disOnTplt&quot; : false
+}</propertySetConfig>
+        <sequenceNumber>5.0</sequenceNumber>
+        <type>DataRaptor Post Action</type>
+    </omniProcessElements>
+    <omniProcessElements>
+        <isActive>true</isActive>
+        <isOmniScriptEmbeddable>false</isOmniScriptEmbeddable>
+        <level>0.0</level>
+        <name>RecruitmentCreateRecruitmentPosting</name>
+        <omniProcessVersionNumber>0.0</omniProcessVersionNumber>
+        <propertySetConfig>{
+  &quot;executionConditionalFormula&quot; : &quot;&quot;,
+  &quot;failureConditionalFormula&quot; : &quot;&quot;,
+  &quot;failOnStepError&quot; : true,
+  &quot;useFormulas&quot; : true,
+  &quot;additionalInput&quot; : {
+    &quot;&quot; : &quot;&quot;
+  },
+  &quot;additionalOutput&quot; : {
+    &quot;JobPostingId&quot; : &quot;=%RecruitmentCreateRecruitmentPosting:RecruitmentPosting_1:Id%&quot;
+  },
+  &quot;failureResponse&quot; : { },
+  &quot;sendOnlyAdditionalInput&quot; : false,
+  &quot;returnOnlyAdditionalOutput&quot; : false,
+  &quot;returnOnlyFailureResponse&quot; : false,
+  &quot;responseJSONPath&quot; : &quot;&quot;,
+  &quot;responseJSONNode&quot; : &quot;&quot;,
+  &quot;sendJSONPath&quot; : &quot;&quot;,
+  &quot;sendJSONNode&quot; : &quot;&quot;,
+  &quot;bundle&quot; : &quot;AFRecruitmentCreateRecruitmentPosting&quot;,
+  &quot;chainOnStep&quot; : false,
+  &quot;actionMessage&quot; : &quot;&quot;,
+  &quot;show&quot; : null,
+  &quot;label&quot; : &quot;DataRaptorPostAction2&quot;,
+  &quot;disOnTplt&quot; : false
+}</propertySetConfig>
+        <sequenceNumber>2.0</sequenceNumber>
+        <type>DataRaptor Post Action</type>
+    </omniProcessElements>
+    <omniProcessElements>
+        <isActive>true</isActive>
+        <isOmniScriptEmbeddable>false</isOmniScriptEmbeddable>
+        <level>0.0</level>
+        <name>RecruitmentTransformContentSectionInput</name>
+        <omniProcessVersionNumber>0.0</omniProcessVersionNumber>
+        <propertySetConfig>{
+  &quot;executionConditionalFormula&quot; : &quot;&quot;,
+  &quot;failureConditionalFormula&quot; : &quot;&quot;,
+  &quot;failOnStepError&quot; : true,
+  &quot;useFormulas&quot; : true,
+  &quot;additionalInput&quot; : {
+    &quot;DMInput1&quot; : &quot;=%PostingDetailsSection1%&quot;,
+    &quot;DMInput2&quot; : &quot;=%PostingDetailsSection2%&quot;,
+    &quot;DMInput3&quot; : &quot;=%PostingDetailsSection3%&quot;
+  },
+  &quot;additionalOutput&quot; : { },
+  &quot;failureResponse&quot; : { },
+  &quot;sendOnlyAdditionalInput&quot; : false,
+  &quot;returnOnlyAdditionalOutput&quot; : false,
+  &quot;returnOnlyFailureResponse&quot; : false,
+  &quot;responseJSONPath&quot; : &quot;&quot;,
+  &quot;responseJSONNode&quot; : &quot;&quot;,
+  &quot;sendJSONPath&quot; : &quot;&quot;,
+  &quot;sendJSONNode&quot; : &quot;&quot;,
+  &quot;bundle&quot; : &quot;RecruitmentTransformContentSectionInput&quot;,
+  &quot;chainOnStep&quot; : false,
+  &quot;actionMessage&quot; : &quot;&quot;,
+  &quot;ignoreCache&quot; : false,
+  &quot;show&quot; : null,
+  &quot;label&quot; : &quot;DataRaptorTransformAction1&quot;,
+  &quot;disOnTplt&quot; : false
+}</propertySetConfig>
+        <sequenceNumber>1.0</sequenceNumber>
+        <type>DataRaptor Transform Action</type>
+    </omniProcessElements>
+    <omniProcessElements>
+        <isActive>true</isActive>
+        <isOmniScriptEmbeddable>false</isOmniScriptEmbeddable>
+        <level>0.0</level>
+        <name>ResponseAction</name>
+        <omniProcessVersionNumber>0.0</omniProcessVersionNumber>
+        <propertySetConfig>{
+  &quot;executionConditionalFormula&quot; : &quot;&quot;,
+  &quot;useFormulas&quot; : true,
+  &quot;additionalOutput&quot; : {
+    &quot;CreateRecruitmentPostingRecordsID&quot; : &quot;=%RecruitmentCreateRecruitmentPosting:RecruitmentPosting_1:Id%&quot;
+  },
+  &quot;returnOnlyAdditionalOutput&quot; : false,
+  &quot;returnFullDataJSON&quot; : false,
+  &quot;responseFormat&quot; : &quot;JSON&quot;,
+  &quot;responseJSONPath&quot; : &quot;&quot;,
+  &quot;responseJSONNode&quot; : &quot;&quot;,
+  &quot;sendJSONPath&quot; : &quot;&quot;,
+  &quot;sendJSONNode&quot; : &quot;&quot;,
+  &quot;responseDefaultData&quot; : { },
+  &quot;vlcResponseHeaders&quot; : { },
+  &quot;show&quot; : null,
+  &quot;label&quot; : &quot;ResponseAction1&quot;,
+  &quot;disOnTplt&quot; : false
+}</propertySetConfig>
+        <sequenceNumber>12.0</sequenceNumber>
+        <type>Response Action</type>
+    </omniProcessElements>
+    <omniProcessKey>Recruitment_CreateRecruitmentPostingRecords</omniProcessKey>
+    <omniProcessType>Integration Procedure</omniProcessType>
+    <overrideKey>position_recruitment_omni_flows__Recruitment_CreateRecruitmentPostingRecords_Procedure_1</overrideKey>
+    <propertySetConfig>{
+  &quot;linkToExternalObject&quot; : &quot;&quot;,
+  &quot;trackingCustomData&quot; : { },
+  &quot;includeAllActionsInResponse&quot; : false,
+  &quot;columnsPropertyMap&quot; : [ ],
+  &quot;relationshipFieldsMap&quot; : [ ],
+  &quot;labelSingular&quot; : &quot;&quot;,
+  &quot;labelPlural&quot; : &quot;&quot;,
+  &quot;description&quot; : &quot;&quot;,
+  &quot;nameColumn&quot; : &quot;&quot;,
+  &quot;rollbackOnError&quot; : false,
+  &quot;chainableQueriesLimit&quot; : 50,
+  &quot;chainableDMLStatementsLimit&quot; : null,
+  &quot;chainableCpuLimit&quot; : 2000,
+  &quot;chainableHeapSizeLimit&quot; : null,
+  &quot;chainableDMLRowsLimit&quot; : null,
+  &quot;chainableQueryRowsLimit&quot; : null,
+  &quot;chainableSoslQueriesLimit&quot; : null,
+  &quot;chainableActualTimeLimit&quot; : null,
+  &quot;additionalChainableResponse&quot; : { },
+  &quot;queueableChainableQueriesLimit&quot; : 120,
+  &quot;queueableChainableCpuLimit&quot; : 40000,
+  &quot;queueableChainableHeapSizeLimit&quot; : 6,
+  &quot;ttlMinutes&quot; : 5,
+  &quot;mockResponseMap&quot; : { }
+}</propertySetConfig>
+    <subType>CreateRecruitmentPostingRecords</subType>
+    <type>Recruitment</type>
+    <uniqueName>Recruitment_CreateRecruitmentPostingRecords_Procedure_1</uniqueName>
+    <versionNumber>1.0</versionNumber>
+    <webComponentKey>228be9eb-8c4e-fb48-e957-c939acfd3dae</webComponentKey>
+</OmniIntegrationProcedure>

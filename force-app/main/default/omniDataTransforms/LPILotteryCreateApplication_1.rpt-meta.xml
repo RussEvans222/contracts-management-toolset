@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OmniDataTransform xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <assignmentRulesUsed>false</assignmentRulesUsed>
+    <deletedOnSuccess>false</deletedOnSuccess>
+    <errorIgnored>false</errorIgnored>
+    <expectedInputJson>{
+  &quot;vlcTimeTracking&quot; : {
+    &quot;ApplicationDetails&quot; : null,
+    &quot;BusinessDetails&quot; : null,
+    &quot;Signature&quot; : null,
+    &quot;FeePayment&quot; : null,
+    &quot;Documentation&quot; : null,
+    &quot;Overview&quot; : null,
+    &quot;DRCreateApplication&quot; : null
+  },
+  &quot;vlcPersistentComponent&quot; : { },
+  &quot;userTimeZone&quot; : null,
+  &quot;userProfile&quot; : null,
+  &quot;userName&quot; : null,
+  &quot;userId&quot; : null,
+  &quot;timeStamp&quot; : null,
+  &quot;ContextId&quot; : null,
+  &quot;ApplicationDetails&quot; : {
+    &quot;TypeOfProducts&quot; : null,
+    &quot;StoreEmail&quot; : null,
+    &quot;ManagerLastName&quot; : null,
+    &quot;PhysicalAddress-Block&quot; : {
+      &quot;PhysicalAddress&quot; : null,
+      &quot;PhysicalStreet&quot; : null,
+      &quot;PhysicalPostalCode&quot; : null,
+      &quot;PhysicalCity&quot; : null,
+      &quot;PhysicalState&quot; : null
+    },
+    &quot;StoreOwnerFirstName&quot; : null,
+    &quot;ManagerFirstName&quot; : null,
+    &quot;StoreOwnerLastName&quot; : null,
+    &quot;TypeOfApplication&quot; : null,
+    &quot;EIN&quot; : null,
+    &quot;StorePhone&quot; : null,
+    &quot;StoreName&quot; : null
+  },
+  &quot;BusinessDetails&quot; : {
+    &quot;OpenSat&quot; : null,
+    &quot;ClosedFri&quot; : null,
+    &quot;TypeOfBusiness&quot; : null,
+    &quot;OpenSun&quot; : null,
+    &quot;OpenTues&quot; : null,
+    &quot;ClosedThur&quot; : null,
+    &quot;KenoApproved&quot; : null,
+    &quot;OpenWed&quot; : null,
+    &quot;CurrentlyHaveKeno&quot; : null,
+    &quot;OpenFri&quot; : null,
+    &quot;ClosedWed&quot; : null,
+    &quot;ClosedSun&quot; : null,
+    &quot;OpenThur&quot; : null,
+    &quot;RegisteredSecretaryOfState&quot; : null,
+    &quot;ClosedMon&quot; : null,
+    &quot;ClosedTues&quot; : null,
+    &quot;LiquorLicenseNumber&quot; : null,
+    &quot;ClosedSat&quot; : null,
+    &quot;CurrentlyHaveVendingMachine&quot; : null,
+    &quot;HaveLiquorLicense&quot; : null,
+    &quot;CurrentRetailer&quot; : null,
+    &quot;Seasonal&quot; : null,
+    &quot;OpenMon&quot; : null
+  },
+  &quot;Signature&quot; : {
+    &quot;CustomLWC1&quot; : null
+  },
+  &quot;FeePayment&quot; : {
+    &quot;CustomLWC2&quot; : null,
+    &quot;PayNow&quot; : null
+  },
+  &quot;Documentation&quot; : {
+    &quot;File2&quot; : [ {
+      &quot;data&quot; : null,
+      &quot;size&quot; : null,
+      &quot;filename&quot; : null
+    } ],
+    &quot;File1&quot; : [ {
+      &quot;data&quot; : null,
+      &quot;size&quot; : null,
+      &quot;filename&quot; : null
+    } ]
+  },
+  &quot;Overview&quot; : { }
+}</expectedInputJson>
+    <fieldLevelSecurityEnabled>false</fieldLevelSecurityEnabled>
+    <inputType>JSON</inputType>
+    <isManagedUsingStdDesigner>false</isManagedUsingStdDesigner>
+    <name>LPILotteryCreateApplication</name>
+    <nullInputsIncludedInOutput>false</nullInputsIncludedInOutput>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPILotteryCreateApplicationCustom0jIDn000000gqlHMAQItem2</globalKey>
+        <inputFieldName>StoreOwnerFullName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <lookupByFieldName>Name</lookupByFieldName>
+        <lookupObjectName>Contact</lookupObjectName>
+        <lookupReturnedFieldName>Id</lookupReturnedFieldName>
+        <name>LPILotteryCreateApplication</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>PrimaryOwnerId</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>true</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>LPILotteryCreateApplicationCustom0jIDn000000gqlHMAQItem21</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>LPILotteryCreateApplication</name>
+        <outputCreationSequence>3.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFeeItem</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPILotteryCreateApplicationCustom0jIDn000000gqlHMAQItem3</globalKey>
+        <inputFieldName>ApplicationDetails:PhysicalAddress-Block:PhysicalCity</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPILotteryCreateApplication</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>SiteCity</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>| NOW</formulaConverted>
+        <formulaExpression>NOW()</formulaExpression>
+        <formulaResultPath>AppliedDate</formulaResultPath>
+        <formulaSequence>2.0</formulaSequence>
+        <globalKey>LPILotteryCreateApplicationCustom0jIDn000000gqlHMAQItem0</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPILotteryCreateApplication</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>| var:ApplicationDetails:StoreOwnerFirstName &quot;/\/\/&quot; var:ApplicationDetails:StoreOwnerLastName CONCAT</formulaConverted>
+        <formulaExpression>CONCAT(ApplicationDetails:StoreOwnerFirstName,&quot; &quot;,ApplicationDetails:StoreOwnerLastName)</formulaExpression>
+        <formulaResultPath>StoreOwnerFullName</formulaResultPath>
+        <formulaSequence>1.0</formulaSequence>
+        <globalKey>LPILotteryCreateApplicationCustom0jIDn000000gqlHMAQItem1</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPILotteryCreateApplication</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <defaultValue>500</defaultValue>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPILotteryCreateApplicationCustom0jIDn000000gqlHMAQItem20</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPILotteryCreateApplication</name>
+        <outputCreationSequence>3.0</outputCreationSequence>
+        <outputFieldName>FeeAmount</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFeeItem</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <defaultValue>KENO 603 Fee</defaultValue>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPILotteryCreateApplicationCustom0jIDn000000gqlHMAQItem19</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPILotteryCreateApplication</name>
+        <outputCreationSequence>3.0</outputCreationSequence>
+        <outputFieldName>Name</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFeeItem</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>true</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>LPILotteryCreateApplicationCustom0jIDn000000gqlHMAQItem13</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>LPILotteryCreateApplication</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPILotteryCreateApplicationCustom0jIDn000000gqlHMAQItem12</globalKey>
+        <inputFieldName>StoreOwnerFullName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <lookupByFieldName>Name</lookupByFieldName>
+        <lookupObjectName>Contact</lookupObjectName>
+        <lookupReturnedFieldName>Id</lookupReturnedFieldName>
+        <name>LPILotteryCreateApplication</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>ApplicantId</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPILotteryCreateApplicationCustom0jIDn000000gqlHMAQItem14</globalKey>
+        <inputFieldName>ApplicationDetails:StoreName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <lookupByFieldName>Name</lookupByFieldName>
+        <lookupObjectName>Account</lookupObjectName>
+        <lookupReturnedFieldName>Id</lookupReturnedFieldName>
+        <name>LPILotteryCreateApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>AccountId</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFee</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>true</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>LPILotteryCreateApplicationCustom0jIDn000000gqlHMAQItem17</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>LPILotteryCreateApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFee</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <defaultValue>PAID</defaultValue>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPILotteryCreateApplicationCustom0jIDn000000gqlHMAQItem16</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPILotteryCreateApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>Status</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFee</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>LPILotteryCreateApplicationCustom0jIDn000000gqlHMAQItem15</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedFieldName>Id</linkedFieldName>
+        <linkedObjectSequence>1.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>LPILotteryCreateApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>ParentRecordId</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFee</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>LPILotteryCreateApplicationCustom0jIDn000000gqlHMAQItem18</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedFieldName>Id</linkedFieldName>
+        <linkedObjectSequence>2.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>LPILotteryCreateApplication</name>
+        <outputCreationSequence>3.0</outputCreationSequence>
+        <outputFieldName>RegulatoryTrxnFeeId</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFeeItem</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <defaultValue>Retail Dispensary</defaultValue>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPILotteryCreateApplicationCustom0jIDn000000gqlHMAQItem5</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <lookupByFieldName>Name</lookupByFieldName>
+        <lookupObjectName>RegulatoryAuthorizationType</lookupObjectName>
+        <lookupReturnedFieldName>Id</lookupReturnedFieldName>
+        <name>LPILotteryCreateApplication</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>LicenseTypeId</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <defaultValue>Submitted</defaultValue>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPILotteryCreateApplicationCustom0jIDn000000gqlHMAQItem4</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPILotteryCreateApplication</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Status</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPILotteryCreateApplicationCustom0jIDn000000gqlHMAQItem6</globalKey>
+        <inputFieldName>ApplicationDetails:PhysicalAddress-Block:PhysicalStreet</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPILotteryCreateApplication</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>SiteStreet</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <defaultValue>Permit</defaultValue>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPILotteryCreateApplicationCustom0jIDn000000gqlHMAQItem9</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPILotteryCreateApplication</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Category</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPILotteryCreateApplicationCustom0jIDn000000gqlHMAQItem8</globalKey>
+        <inputFieldName>ApplicationDetails:PhysicalAddress-Block:PhysicalPostalCode</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPILotteryCreateApplication</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>SitePostalCode</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPILotteryCreateApplicationCustom0jIDn000000gqlHMAQItem7</globalKey>
+        <inputFieldName>ApplicationDetails:PhysicalAddress-Block:PhysicalState</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPILotteryCreateApplication</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>SiteState</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPILotteryCreateApplicationCustom0jIDn000000gqlHMAQItem11</globalKey>
+        <inputFieldName>AppliedDate</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPILotteryCreateApplication</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>AppliedDate</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPILotteryCreateApplicationCustom0jIDn000000gqlHMAQItem10</globalKey>
+        <inputFieldName>ApplicationDetails:StoreName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <lookupByFieldName>Name</lookupByFieldName>
+        <lookupObjectName>Account</lookupObjectName>
+        <lookupReturnedFieldName>Id</lookupReturnedFieldName>
+        <name>LPILotteryCreateApplication</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>AccountId</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <outputType>SObject</outputType>
+    <previewJsonData>{
+  &quot;vlcTimeTracking&quot; : {
+    &quot;ApplicationDetails&quot; : null,
+    &quot;BusinessDetails&quot; : null,
+    &quot;Signature&quot; : null,
+    &quot;FeePayment&quot; : null,
+    &quot;Documentation&quot; : null,
+    &quot;Overview&quot; : null,
+    &quot;DRCreateApplication&quot; : null
+  },
+  &quot;vlcPersistentComponent&quot; : { },
+  &quot;userTimeZone&quot; : null,
+  &quot;userProfile&quot; : null,
+  &quot;userName&quot; : null,
+  &quot;userId&quot; : null,
+  &quot;timeStamp&quot; : null,
+  &quot;ContextId&quot; : null,
+  &quot;ApplicationDetails&quot; : {
+    &quot;TypeOfProducts&quot; : null,
+    &quot;StoreEmail&quot; : null,
+    &quot;ManagerLastName&quot; : null,
+    &quot;PhysicalAddress-Block&quot; : {
+      &quot;PhysicalAddress&quot; : null,
+      &quot;PhysicalStreet&quot; : null,
+      &quot;PhysicalPostalCode&quot; : null,
+      &quot;PhysicalCity&quot; : null,
+      &quot;PhysicalState&quot; : null
+    },
+    &quot;StoreOwnerFirstName&quot; : null,
+    &quot;ManagerFirstName&quot; : null,
+    &quot;StoreOwnerLastName&quot; : null,
+    &quot;TypeOfApplication&quot; : null,
+    &quot;EIN&quot; : null,
+    &quot;StorePhone&quot; : null,
+    &quot;StoreName&quot; : null
+  },
+  &quot;BusinessDetails&quot; : {
+    &quot;OpenSat&quot; : null,
+    &quot;ClosedFri&quot; : null,
+    &quot;TypeOfBusiness&quot; : null,
+    &quot;OpenSun&quot; : null,
+    &quot;OpenTues&quot; : null,
+    &quot;ClosedThur&quot; : null,
+    &quot;KenoApproved&quot; : null,
+    &quot;OpenWed&quot; : null,
+    &quot;CurrentlyHaveKeno&quot; : null,
+    &quot;OpenFri&quot; : null,
+    &quot;ClosedWed&quot; : null,
+    &quot;ClosedSun&quot; : null,
+    &quot;OpenThur&quot; : null,
+    &quot;RegisteredSecretaryOfState&quot; : null,
+    &quot;ClosedMon&quot; : null,
+    &quot;ClosedTues&quot; : null,
+    &quot;LiquorLicenseNumber&quot; : null,
+    &quot;ClosedSat&quot; : null,
+    &quot;CurrentlyHaveVendingMachine&quot; : null,
+    &quot;HaveLiquorLicense&quot; : null,
+    &quot;CurrentRetailer&quot; : null,
+    &quot;Seasonal&quot; : null,
+    &quot;OpenMon&quot; : null
+  },
+  &quot;Signature&quot; : {
+    &quot;CustomLWC1&quot; : null
+  },
+  &quot;FeePayment&quot; : {
+    &quot;CustomLWC2&quot; : null,
+    &quot;PayNow&quot; : null
+  },
+  &quot;Documentation&quot; : {
+    &quot;File2&quot; : [ {
+      &quot;data&quot; : null,
+      &quot;size&quot; : null,
+      &quot;filename&quot; : null
+    } ],
+    &quot;File1&quot; : [ {
+      &quot;data&quot; : null,
+      &quot;size&quot; : null,
+      &quot;filename&quot; : null
+    } ]
+  },
+  &quot;Overview&quot; : { }
+}</previewJsonData>
+    <processSuperBulk>false</processSuperBulk>
+    <responseCacheTtlMinutes>0.0</responseCacheTtlMinutes>
+    <rollbackOnError>false</rollbackOnError>
+    <sourceObject>json</sourceObject>
+    <sourceObjectDefault>false</sourceObjectDefault>
+    <synchronousProcessThreshold>0.0</synchronousProcessThreshold>
+    <type>Load</type>
+    <uniqueName>LPILotteryCreateApplication_1</uniqueName>
+    <versionNumber>1.0</versionNumber>
+    <xmlDeclarationRemoved>false</xmlDeclarationRemoved>
+</OmniDataTransform>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OmniDataTransform xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <assignmentRulesUsed>false</assignmentRulesUsed>
+    <deletedOnSuccess>false</deletedOnSuccess>
+    <description>Used to put JSON into a string</description>
+    <errorIgnored>false</errorIgnored>
+    <expectedInputJson>{
+  &quot;vlcTimeTracking&quot; : {
+    &quot;DRGetInspectionForExport&quot; : null,
+    &quot;DRTransformIntoString&quot; : null,
+    &quot;SelectInspectionType&quot; : null
+  },
+  &quot;vlcPersistentComponent&quot; : { },
+  &quot;userTimeZone&quot; : null,
+  &quot;userProfile&quot; : null,
+  &quot;userName&quot; : null,
+  &quot;userId&quot; : null,
+  &quot;timeStamp&quot; : null,
+  &quot;ContextId&quot; : null,
+  &quot;SelectInspectionType&quot; : {
+    &quot;InspectionType&quot; : null
+  }
+}</expectedInputJson>
+    <fieldLevelSecurityEnabled>false</fieldLevelSecurityEnabled>
+    <inputType>JSON</inputType>
+    <isManagedUsingStdDesigner>false</isManagedUsingStdDesigner>
+    <name>QuickBuildTransformExportIntoSerializedString</name>
+    <nullInputsIncludedInOutput>false</nullInputsIncludedInOutput>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>QuickBuildTransformExportIntoSerializedString6015172827994599</globalKey>
+        <inputFieldName>SerializedInspectionExport</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>QuickBuildTransformExportIntoSerializedString</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>SerializedInspectionExport</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>| var:DRGetInspectionForExport SERIALIZE</formulaConverted>
+        <formulaExpression>SERIALIZE(DRGetInspectionForExport)</formulaExpression>
+        <formulaResultPath>SerializedInspectionExport</formulaResultPath>
+        <formulaSequence>1.0</formulaSequence>
+        <globalKey>QuickBuildTransformExportIntoSerializedString06545454722933419</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>QuickBuildTransformExportIntoSerializedString</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <outputType>JSON</outputType>
+    <previewJsonData>{
+  &quot;omnidesignerChannelId&quot; : &quot;omni-designer-channel-id-1616608904039&quot;,
+  &quot;timeStamp&quot; : &quot;2021-03-24T18:08:43.267Z&quot;,
+  &quot;userProfile&quot; : &quot;System Administrator&quot;,
+  &quot;userTimeZone&quot; : &quot;-420&quot;,
+  &quot;userCurrencyCode&quot; : &quot;USD&quot;,
+  &quot;userName&quot; : &quot;jblankenship@rentassistance01292021.demo&quot;,
+  &quot;userId&quot; : &quot;0054x000003dns8AAA&quot;,
+  &quot;SelectInspectionType&quot; : {
+    &quot;InspectionType&quot; : &quot;NYC Parks Tree Inspection&quot;
+  },
+  &quot;DRGetInspectionForExport&quot; : {
+    &quot;RegulatoryAuthority&quot; : {
+      &quot;Name&quot; : &quot;NYC Parks&quot;
+    },
+    &quot;RegulatoryCode&quot; : {
+      &quot;Subject&quot; : &quot;NYC Tree&quot;,
+      &quot;EffectiveTo&quot; : &quot;2025-12-31T00:00:00.000Z&quot;,
+      &quot;EffectiveFrom&quot; : &quot;2021-01-02T00:00:00.000Z&quot;,
+      &quot;RegulatoryAuthorityName&quot; : &quot;NYC Parks&quot;,
+      &quot;Name&quot; : &quot;NYC Trees&quot;
+    },
+    &quot;AssessmentIndicatorDefinition&quot; : [ {
+      &quot;Name&quot; : &quot;Can Tree be cut down?&quot;,
+      &quot;DataType&quot; : &quot;Boolean&quot;
+    }, {
+      &quot;Name&quot; : &quot;Is Surrounding Area Clear of obstructions?&quot;,
+      &quot;DataType&quot; : &quot;Boolean&quot;
+    } ],
+    &quot;RegulatoryCodeAssessmentInd&quot; : [ {
+      &quot;RegulatoryCodeName&quot; : &quot;NYC Trees&quot;,
+      &quot;AssessmentIndDefinitionName&quot; : &quot;Can Tree be cut down?&quot;
+    }, {
+      &quot;RegulatoryCodeName&quot; : &quot;NYC Trees&quot;,
+      &quot;AssessmentIndDefinitionName&quot; : &quot;Is Surrounding Area Clear of obstructions?&quot;
+    } ],
+    &quot;AssessmentTaskDefinition&quot; : [ {
+      &quot;TaskType&quot; : &quot;InspectionChecklist&quot;,
+      &quot;Name&quot; : &quot;Tree Condition&quot;
+    }, {
+      &quot;TaskType&quot; : &quot;InspectionChecklist&quot;,
+      &quot;Name&quot; : &quot;Surrounding Area&quot;
+    } ],
+    &quot;AssessmentTaskIndDefinition&quot; : [ {
+      &quot;AssessmentIndDefinitionName&quot; : &quot;Can Tree be cut down?&quot;,
+      &quot;AssessmentTaskDefinitionName&quot; : &quot;Tree Condition&quot;
+    }, {
+      &quot;AssessmentIndDefinitionName&quot; : &quot;Is Surrounding Area Clear of obstructions?&quot;,
+      &quot;AssessmentTaskDefinitionName&quot; : &quot;Surrounding Area&quot;
+    } ],
+    &quot;ActionPlanTemplate&quot; : {
+      &quot;ActionPlanTemplateVersion&quot; : {
+        &quot;ActionPlanTemplateItemSignature&quot; : {
+          &quot;ActionPlanTemplateItemValue&quot; : {
+            &quot;IsActive&quot; : true,
+            &quot;ValueLiteral&quot; : &quot;Inspector&quot;,
+            &quot;ItemEntityType&quot; : &quot;SignatureTask&quot;,
+            &quot;ItemEntityFieldName&quot; : &quot;AssessmentTask.Name&quot;,
+            &quot;Name&quot; : &quot;Name&quot;
+          },
+          &quot;IsRequired&quot; : false,
+          &quot;ItemEntityType&quot; : &quot;SignatureTask&quot;,
+          &quot;Name&quot; : &quot;Inspector&quot;,
+          &quot;IsActive&quot; : true
+        },
+        &quot;ActionPlanTemplateItem&quot; : [ {
+          &quot;ActionPlanTemplateItemValue2&quot; : {
+            &quot;IsActive&quot; : true,
+            &quot;ItemEntityType&quot; : &quot;AssessmentTask&quot;,
+            &quot;ItemEntityFieldName&quot; : &quot;AssessmentTask.AssessmentTaskDefinitionId&quot;,
+            &quot;Name&quot; : &quot;AssessmentTaskDefinitionId&quot;,
+            &quot;ValueLiteralLookup&quot; : &quot;Tree Condition&quot;
+          },
+          &quot;ActionPlanTemplateItemValue&quot; : {
+            &quot;ItemEntityFieldName&quot; : &quot;AssessmentTask.Name&quot;,
+            &quot;ItemEntityType&quot; : &quot;AssessmentTask&quot;,
+            &quot;Name&quot; : &quot;Name&quot;,
+            &quot;ValueLiteral&quot; : &quot;Tree Condition&quot;,
+            &quot;IsActive&quot; : true
+          },
+          &quot;ItemEntityType&quot; : &quot;AssessmentTask&quot;,
+          &quot;IsRequired&quot; : false,
+          &quot;Name&quot; : &quot;Tree Condition&quot;,
+          &quot;IsActive&quot; : true
+        }, {
+          &quot;ActionPlanTemplateItemValue2&quot; : {
+            &quot;IsActive&quot; : true,
+            &quot;ItemEntityType&quot; : &quot;AssessmentTask&quot;,
+            &quot;ItemEntityFieldName&quot; : &quot;AssessmentTask.AssessmentTaskDefinitionId&quot;,
+            &quot;Name&quot; : &quot;AssessmentTaskDefinitionId&quot;,
+            &quot;ValueLiteralLookup&quot; : &quot;Surrounding Area&quot;
+          },
+          &quot;ActionPlanTemplateItemValue&quot; : {
+            &quot;ItemEntityFieldName&quot; : &quot;AssessmentTask.Name&quot;,
+            &quot;ItemEntityType&quot; : &quot;AssessmentTask&quot;,
+            &quot;Name&quot; : &quot;Name&quot;,
+            &quot;ValueLiteral&quot; : &quot;Surrounding Area&quot;,
+            &quot;IsActive&quot; : true
+          },
+          &quot;ItemEntityType&quot; : &quot;AssessmentTask&quot;,
+          &quot;IsRequired&quot; : false,
+          &quot;Name&quot; : &quot;Surrounding Area&quot;,
+          &quot;IsActive&quot; : true
+        } ],
+        &quot;Name&quot; : &quot;NYC Parks Tree Inspection&quot;
+      },
+      &quot;TargetEntityType&quot; : &quot;Visit&quot;,
+      &quot;Name&quot; : &quot;NYC Parks Tree Inspection&quot;,
+      &quot;Description&quot; : &quot;NYC Parks Tree Inspection&quot;,
+      &quot;ActionPlanType&quot; : &quot;Retail&quot;
+    },
+    &quot;InspectionType&quot; : {
+      &quot;Name&quot; : &quot;NYC Parks Tree Inspection&quot;
+    }
+  },
+  &quot;DRTransformIntoString&quot; : { }
+}</previewJsonData>
+    <processSuperBulk>false</processSuperBulk>
+    <responseCacheTtlMinutes>0.0</responseCacheTtlMinutes>
+    <rollbackOnError>false</rollbackOnError>
+    <sourceObject>json</sourceObject>
+    <sourceObjectDefault>false</sourceObjectDefault>
+    <synchronousProcessThreshold>-1.0</synchronousProcessThreshold>
+    <type>Transform</type>
+    <uniqueName>QuickBuildTransformExportIntoSerializedString_1</uniqueName>
+    <versionNumber>1.0</versionNumber>
+    <xmlDeclarationRemoved>false</xmlDeclarationRemoved>
+</OmniDataTransform>

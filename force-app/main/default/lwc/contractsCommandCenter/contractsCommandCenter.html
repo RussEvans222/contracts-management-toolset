@@ -1,0 +1,156 @@
+<template>
+    <article class="command-center-shell">
+        <header class="hero">
+            <div class="hero-content">
+                <p class="eyebrow">Salesforce Contracts</p>
+                <h1>Contracts Command Center</h1>
+                <p class="subtitle">Operational metrics, stage coverage, and one-click actions for contract execution.</p>
+            </div>
+            <div class="hero-meta">
+                <template if:true={snapshot.lastRefreshed}>
+                    <span>Refreshed</span>
+                    <lightning-formatted-date-time value={snapshot.lastRefreshed} year="numeric" month="short" day="2-digit" hour="2-digit" minute="2-digit"></lightning-formatted-date-time>
+                </template>
+            </div>
+        </header>
+
+        <section class="metrics-grid">
+            <template for:each={metricTiles} for:item="tile">
+                <div key={tile.key} class={tile.className}>
+                    <div class="metric-label">{tile.label}</div>
+                    <div class="metric-value">{tile.value}</div>
+                </div>
+            </template>
+        </section>
+
+        <section class="actions-row">
+            <lightning-button label="New Contract" variant="brand" data-action="newContract" onclick={handleAction}></lightning-button>
+            <lightning-button label="All Contracts" data-action="allContracts" onclick={handleAction}></lightning-button>
+            <lightning-button label="In Approval" data-action="inApproval" onclick={handleAction}></lightning-button>
+            <lightning-button label="Activated" data-action="activated" onclick={handleAction}></lightning-button>
+            <lightning-button label="Service Contracts" data-action="serviceContracts" onclick={handleAction}></lightning-button>
+            <lightning-button label="Refresh" data-action="refresh" onclick={handleAction}></lightning-button>
+        </section>
+
+        <section class="insights-grid">
+            <div class="panel">
+                <h2>Stage Distribution</h2>
+                <template if:true={hasStageMetrics}>
+                    <div class="donut-wrap">
+                        <div class="donut-chart">
+                            <svg class="donut-svg" viewBox="0 0 120 120" aria-hidden="true">
+                                <circle class="donut-bg" cx="60" cy="60" r="42"></circle>
+                                <template for:each={donutSegments} for:item="segment">
+                                    <circle
+                                        key={segment.status}
+                                        class="donut-segment"
+                                        cx="60"
+                                        cy="60"
+                                        r="42"
+                                        style={segment.segmentStyle}
+                                    ></circle>
+                                </template>
+                            </svg>
+                            <div class="donut-hole">
+                                <span class="donut-total">{snapshot.totalContracts}</span>
+                                <span class="donut-caption">Contracts</span>
+                            </div>
+                        </div>
+                        <div class="donut-legend">
+                            <template for:each={snapshot.stageMetrics} for:item="metric">
+                                <div key={metric.status} class="legend-row">
+                                    <span class="legend-dot" style={metric.colorStyle}></span>
+                                    <span class="legend-label">{metric.status}</span>
+                                    <span class="legend-value">{metric.count} ({metric.percentage}%)</span>
+                                </div>
+                            </template>
+                        </div>
+                    </div>
+                </template>
+                <template if:false={hasStageMetrics}>
+                    <p class="empty">No stage metrics available.</p>
+                </template>
+            </div>
+
+            <div class="panel">
+                <h2>Expiring Contracts</h2>
+                <template if:true={hasExpiringContracts}>
+                    <div class="expiring-table">
+                        <div class="thead">
+                            <span>Name</span>
+                            <span>Status</span>
+                            <span>End Date</span>
+                        </div>
+                        <template for:each={snapshot.expiringContracts} for:item="contractItem">
+                            <div key={contractItem.contractId} class="trow">
+                                <span>
+                                    <strong>{contractItem.contractNumber}</strong>
+                                    <template if:true={contractItem.accountName}> • {contractItem.accountName}</template>
+                                </span>
+                                <span>{contractItem.status}</span>
+                                <span>
+                                    <lightning-formatted-date-time value={contractItem.endDate} year="numeric" month="short" day="2-digit"></lightning-formatted-date-time>
+                                </span>
+                            </div>
+                        </template>
+                    </div>
+                </template>
+                <template if:false={hasExpiringContracts}>
+                    <p class="empty">No expiring contracts found.</p>
+                </template>
+            </div>
+
+            <div class="panel panel-wide">
+                <h2>Attention Queue</h2>
+                <div class="attention-kpis">
+                    <span>New Requests: <strong>{snapshot.draftCount}</strong></span>
+                    <span>Awaiting Signature: <strong>{snapshot.awaitingSignatureCount}</strong></span>
+                    <span>Expiring in 30 Days: <strong>{snapshot.expiring30Count}</strong></span>
+                </div>
+                <template if:true={hasAttentionContracts}>
+                    <div class="attention-table">
+                        <div class="thead">
+                            <span>Contract</span>
+                            <span>Reason</span>
+                            <span>Status</span>
+                            <span>End Date</span>
+                            <span>Action</span>
+                        </div>
+                        <template for:each={snapshot.attentionContracts} for:item="entry">
+                            <div key={entry.contractId} class="trow">
+                                <span>
+                                    <strong>{entry.contractNumber}</strong>
+                                    <template if:true={entry.accountName}> • {entry.accountName}</template>
+                                </span>
+                                <span><span class={entry.reasonClass}>{entry.attentionReason}</span></span>
+                                <span>{entry.status}</span>
+                                <span>
+                                    <template if:true={entry.endDate}>
+                                        <lightning-formatted-date-time value={entry.endDate} year="numeric" month="short" day="2-digit"></lightning-formatted-date-time>
+                                    </template>
+                                    <template if:false={entry.endDate}>-</template>
+                                </span>
+                                <span>
+                                    <lightning-button
+                                        variant="base"
+                                        label="Open"
+                                        data-action="openContract"
+                                        data-contract-id={entry.contractId}
+                                        onclick={handleAction}
+                                    ></lightning-button>
+                                </span>
+                            </div>
+                        </template>
+                    </div>
+                </template>
+                <template if:false={hasAttentionContracts}>
+                    <p class="empty">No contracts currently require attention.</p>
+                </template>
+            </div>
+        </section>
+
+        <template if:true={errorMessage}>
+            <div class="error-box">{errorMessage}</div>
+        </template>
+    </article>
+</template>

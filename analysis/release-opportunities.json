@@ -1,0 +1,52 @@
+{
+  "generatedAt": "2026-03-31T00:00:00Z",
+  "baselineRelease": "Spring '26",
+  "scope": "Contracts Management with Microsoft 365 and DocuSign integrations",
+  "opportunities": [
+    {
+      "id": "spring26-secure-http-redirection",
+      "priority": "now",
+      "title": "Secure redirection for HTTP callouts (release update)",
+      "rationale": "Relevant for external callouts used by contract integrations.",
+      "prerequisite": "Validate all outbound integration endpoints and redirect behavior.",
+      "owner": "Platform Admin",
+      "targetWave": "Wave 1"
+    },
+    {
+      "id": "spring26-flow-auto-layout-check",
+      "priority": "now",
+      "title": "Flow auto-layout migration and compatibility check",
+      "rationale": "Contracts lifecycle orchestration commonly depends on Flow behavior stability.",
+      "prerequisite": "Inventory contract-related screen flows and migration state.",
+      "owner": "Salesforce Admin",
+      "targetWave": "Wave 1"
+    },
+    {
+      "id": "spring26-flow-reliability",
+      "priority": "next",
+      "title": "Adopt Spring '26 Flow reliability/performance improvements",
+      "rationale": "Reduces runtime failures in approvals, renewals, and signing handoffs.",
+      "prerequisite": "Baseline existing flow runtime metrics and fault paths.",
+      "owner": "Automation Owner",
+      "targetWave": "Wave 2"
+    },
+    {
+      "id": "spring26-lwc-apex-modernization",
+      "priority": "next",
+      "title": "LWC/Apex modernization for contract extensions",
+      "rationale": "Improves maintainability and reduces long-term technical risk.",
+      "prerequisite": "Map custom code touched by contract workflows.",
+      "owner": "Dev Lead",
+      "targetWave": "Wave 2"
+    },
+    {
+      "id": "spring26-lifecycle-analytics",
+      "priority": "later",
+      "title": "Contract lifecycle analytics expansion",
+      "rationale": "Improves visibility into negotiation, approval, and signature bottlenecks.",
+      "prerequisite": "Define KPI ownership and reporting sources.",
+      "owner": "RevOps",
+      "targetWave": "Wave 3"
+    }
+  ]
+}

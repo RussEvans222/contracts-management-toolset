@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OmniDataTransform xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <assignmentRulesUsed>false</assignmentRulesUsed>
+    <deletedOnSuccess>false</deletedOnSuccess>
+    <errorIgnored>false</errorIgnored>
+    <expectedInputJson>{
+  &quot;vlcTimeTracking&quot; : {
+    &quot;UpdateApplication&quot; : null,
+    &quot;NavigateAction1&quot; : null,
+    &quot;DRGetIndividualApplicationID&quot; : null,
+    &quot;SetInitialValues&quot; : null,
+    &quot;DocumentChecklistStep&quot; : null
+  },
+  &quot;vlcPersistentComponent&quot; : { },
+  &quot;userTimeZone&quot; : null,
+  &quot;userProfile&quot; : null,
+  &quot;userName&quot; : null,
+  &quot;userId&quot; : null,
+  &quot;timeStamp&quot; : null,
+  &quot;ContextId&quot; : null,
+  &quot;DocumentChecklistStep&quot; : {
+    &quot;AuthoritytoOperate&quot; : [ {
+      &quot;data&quot; : null,
+      &quot;size&quot; : null,
+      &quot;filename&quot; : null
+    } ],
+    &quot;ProjectAreaMap&quot; : [ {
+      &quot;data&quot; : null,
+      &quot;size&quot; : null,
+      &quot;filename&quot; : null
+    } ],
+    &quot;StaffingCertification&quot; : [ {
+      &quot;data&quot; : null,
+      &quot;size&quot; : null,
+      &quot;filename&quot; : null
+    } ],
+    &quot;Insurance&quot; : [ {
+      &quot;data&quot; : null,
+      &quot;size&quot; : null,
+      &quot;filename&quot; : null
+    } ]
+  }
+}</expectedInputJson>
+    <fieldLevelSecurityEnabled>false</fieldLevelSecurityEnabled>
+    <inputType>JSON</inputType>
+    <isManagedUsingStdDesigner>false</isManagedUsingStdDesigner>
+    <name>DRUpdateFileNameAuthoritytoOperate</name>
+    <nullInputsIncludedInOutput>false</nullInputsIncludedInOutput>
+    <omniDataTransformItem>
+        <defaultValue>Authority to Operate</defaultValue>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRUpdateFileNameAuthoritytoOperateCustom0jIKX000000wpaF2AQItem1</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRUpdateFileNameAuthoritytoOperate</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Title</outputFieldName>
+        <outputObjectName>ContentDocument</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>true</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>DRUpdateFileNameAuthoritytoOperateCustom0jIKX000000wpaF2AQItem0</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>DRUpdateFileNameAuthoritytoOperate</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>ContentDocument</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRUpdateFileNameAuthoritytoOperateCustom0jIKX000000wpaF2AQItem2</globalKey>
+        <inputFieldName>DocumentChecklistStep:AuthoritytoOperate:data</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRUpdateFileNameAuthoritytoOperate</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>ContentDocument</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>true</upsertKey>
+    </omniDataTransformItem>
+    <outputType>SObject</outputType>
+    <previewJsonData>{
+  &quot;vlcTimeTracking&quot; : {
+    &quot;UpdateApplication&quot; : null,
+    &quot;NavigateAction1&quot; : null,
+    &quot;DRGetIndividualApplicationID&quot; : null,
+    &quot;SetInitialValues&quot; : null,
+    &quot;DocumentChecklistStep&quot; : null
+  },
+  &quot;vlcPersistentComponent&quot; : { },
+  &quot;userTimeZone&quot; : null,
+  &quot;userProfile&quot; : null,
+  &quot;userName&quot; : null,
+  &quot;userId&quot; : null,
+  &quot;timeStamp&quot; : null,
+  &quot;ContextId&quot; : null,
+  &quot;DocumentChecklistStep&quot; : {
+    &quot;AuthoritytoOperate&quot; : [ {
+      &quot;data&quot; : null,
+      &quot;size&quot; : null,
+      &quot;filename&quot; : null
+    } ],
+    &quot;ProjectAreaMap&quot; : [ {
+      &quot;data&quot; : null,
+      &quot;size&quot; : null,
+      &quot;filename&quot; : null
+    } ],
+    &quot;StaffingCertification&quot; : [ {
+      &quot;data&quot; : null,
+      &quot;size&quot; : null,
+      &quot;filename&quot; : null
+    } ],
+    &quot;Insurance&quot; : [ {
+      &quot;data&quot; : null,
+      &quot;size&quot; : null,
+      &quot;filename&quot; : null
+    } ]
+  }
+}</previewJsonData>
+    <processSuperBulk>false</processSuperBulk>
+    <responseCacheTtlMinutes>0.0</responseCacheTtlMinutes>
+    <rollbackOnError>false</rollbackOnError>
+    <sourceObject>json</sourceObject>
+    <sourceObjectDefault>false</sourceObjectDefault>
+    <synchronousProcessThreshold>0.0</synchronousProcessThreshold>
+    <type>Load</type>
+    <uniqueName>DRUpdateFileNameAuthoritytoOperate_1</uniqueName>
+    <versionNumber>1.0</versionNumber>
+    <xmlDeclarationRemoved>false</xmlDeclarationRemoved>
+</OmniDataTransform>

@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OmniDataTransform xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <assignmentRulesUsed>false</assignmentRulesUsed>
+    <deletedOnSuccess>false</deletedOnSuccess>
+    <errorIgnored>false</errorIgnored>
+    <expectedInputJson>{
+  &quot;vlcTimeTracking&quot; : {
+    &quot;DRSaveApplication&quot; : null,
+    &quot;PhysicalPlant&quot; : null,
+    &quot;Acknowledgement&quot; : null,
+    &quot;ApplicationSubmitted&quot; : null,
+    &quot;AdditionalInformation&quot; : null,
+    &quot;SetValues1&quot; : null,
+    &quot;ReviewFee&quot; : null,
+    &quot;LegalOwnerOperatorInformation&quot; : null,
+    &quot;Services&quot; : null,
+    &quot;PaymentMethod&quot; : null,
+    &quot;Documentation&quot; : null,
+    &quot;GotoApplicationDetails&quot; : null,
+    &quot;ApplicantInformation&quot; : null,
+    &quot;Instructions&quot; : null,
+    &quot;LicenseTypeStep&quot; : null
+  },
+  &quot;vlcPersistentComponent&quot; : { },
+  &quot;userTimeZone&quot; : null,
+  &quot;userProfile&quot; : null,
+  &quot;userName&quot; : null,
+  &quot;userId&quot; : null,
+  &quot;timeStamp&quot; : null,
+  &quot;ContextId&quot; : null,
+  &quot;PhysicalPlant&quot; : {
+    &quot;FacilityWater&quot; : null,
+    &quot;BuildingTypes&quot; : null
+  },
+  &quot;Acknowledgement&quot; : {
+    &quot;Disclosure1&quot; : null,
+    &quot;CaptureSignature&quot; : null
+  },
+  &quot;ApplicationSubmitted&quot; : { },
+  &quot;AdditionalInformation&quot; : {
+    &quot;AddressofExistingFacility&quot; : null,
+    &quot;FacilityClosed&quot; : null,
+    &quot;StateLicenseNumber&quot; : null,
+    &quot;CalendarYearofOperation&quot; : null,
+    &quot;ExistingFacilityName&quot; : null
+  },
+  &quot;ReviewFee&quot; : {
+    &quot;PayNow&quot; : null
+  },
+  &quot;LegalOwnerOperatorInformation&quot; : {
+    &quot;EmailAddress2&quot; : null,
+    &quot;LastName2&quot; : null,
+    &quot;LegalOwnerOperatorName&quot; : null,
+    &quot;FacilityAddress2&quot; : null,
+    &quot;FirstName2&quot; : null,
+    &quot;State2&quot; : null,
+    &quot;Title2&quot; : null,
+    &quot;PostalCode2&quot; : null,
+    &quot;City2&quot; : null,
+    &quot;Country2&quot; : null,
+    &quot;PhoneNumber2&quot; : null,
+    &quot;FaxNumber2&quot; : null,
+    &quot;FEINNumber&quot; : null
+  },
+  &quot;Services&quot; : {
+    &quot;SchoolDistrictNotified&quot; : null,
+    &quot;FacilityBeds&quot; : null,
+    &quot;PopulationsServed&quot; : null,
+    &quot;AnticipatedOpeningDate&quot; : null,
+    &quot;SchoolDistrictName&quot; : null,
+    &quot;ChildrenCircumstance&quot; : null,
+    &quot;AgeRangeStart&quot; : null,
+    &quot;AgeRangeEnd&quot; : null
+  },
+  &quot;PaymentMethod&quot; : {
+    &quot;Amount&quot; : null,
+    &quot;CustomLWC2&quot; : null
+  },
+  &quot;Documentation&quot; : {
+    &quot;Checkbox1&quot; : null,
+    &quot;Checkbox6&quot; : null,
+    &quot;Checkbox2&quot; : null,
+    &quot;Checkbox7&quot; : null,
+    &quot;Checkbox3&quot; : null,
+    &quot;File1&quot; : [ {
+      &quot;data&quot; : null,
+      &quot;size&quot; : null,
+      &quot;filename&quot; : null
+    } ],
+    &quot;Checkbox5&quot; : null,
+    &quot;Checkbox8&quot; : null,
+    &quot;Checkbox4&quot; : null
+  },
+  &quot;ApplicantInformation&quot; : {
+    &quot;PhoneNumber&quot; : null,
+    &quot;FaxNumber&quot; : null,
+    &quot;LastName&quot; : null,
+    &quot;MailingAddressSame&quot; : null,
+    &quot;FacilityName&quot; : null,
+    &quot;FirstName&quot; : null,
+    &quot;EmailAddress&quot; : null,
+    &quot;PhysicalAddress&quot; : null,
+    &quot;MailingAddress&quot; : null,
+    &quot;Title&quot; : null
+  },
+  &quot;Instructions&quot; : { },
+  &quot;LicenseTypeStep&quot; : {
+    &quot;LicenseType&quot; : null,
+    &quot;OwnershipTypeOtherDetails&quot; : null,
+    &quot;OwnershipType&quot; : null
+  }
+}</expectedInputJson>
+    <fieldLevelSecurityEnabled>false</fieldLevelSecurityEnabled>
+    <inputType>JSON</inputType>
+    <isManagedUsingStdDesigner>false</isManagedUsingStdDesigner>
+    <name>DRSavePsychiatricResidentialTreatmentFacility</name>
+    <nullInputsIncludedInOutput>false</nullInputsIncludedInOutput>
+    <omniDataTransformItem>
+        <disabled>true</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>DRSavePsychiatricResidentialTreatmentFacilityCustom889</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>DRSavePsychiatricResidentialTreatmentFacility</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFee</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <defaultValue>Submitted</defaultValue>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRSavePsychiatricResidentialTreatmentFacilityCustom3492</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRSavePsychiatricResidentialTreatmentFacility</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Status</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <defaultValue>Occupational Therapy License</defaultValue>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRSavePsychiatricResidentialTreatmentFacilityCustom2405</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <lookupByFieldName>Name</lookupByFieldName>
+        <lookupObjectName>RegulatoryAuthorizationType</lookupObjectName>
+        <lookupReturnedFieldName>Id</lookupReturnedFieldName>
+        <name>DRSavePsychiatricResidentialTreatmentFacility</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>LicenseTypeId</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>| NOW</formulaConverted>
+        <formulaExpression>NOW()</formulaExpression>
+        <formulaResultPath>AppliedDate</formulaResultPath>
+        <formulaSequence>1.0</formulaSequence>
+        <globalKey>DRSavePsychiatricResidentialTreatmentFacilityCustom9382</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRSavePsychiatricResidentialTreatmentFacility</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>true</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>DRSavePsychiatricResidentialTreatmentFacilityCustom192</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>DRSavePsychiatricResidentialTreatmentFacility</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <defaultValue>License</defaultValue>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRSavePsychiatricResidentialTreatmentFacilityCustom1764</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRSavePsychiatricResidentialTreatmentFacility</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>ApplicationCategory</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <defaultValue>Application Fee</defaultValue>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRSavePsychiatricResidentialTreatmentFacilityCustom4215</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRSavePsychiatricResidentialTreatmentFacility</name>
+        <outputCreationSequence>3.0</outputCreationSequence>
+        <outputFieldName>Name</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFeeItem</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>DRSavePsychiatricResidentialTreatmentFacilityCustom6618</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedFieldName>AccountId</linkedFieldName>
+        <linkedObjectSequence>1.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>DRSavePsychiatricResidentialTreatmentFacility</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>AccountId</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFee</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRSavePsychiatricResidentialTreatmentFacilityCustom40</globalKey>
+        <inputFieldName>LegalOwnerOperatorInformation:LegalOwnerOperatorName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <lookupByFieldName>Name</lookupByFieldName>
+        <lookupObjectName>Account</lookupObjectName>
+        <lookupReturnedFieldName>Id</lookupReturnedFieldName>
+        <name>DRSavePsychiatricResidentialTreatmentFacility</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>AccountId</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <defaultValue>Submitted</defaultValue>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRSavePsychiatricResidentialTreatmentFacilityCustom4588</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRSavePsychiatricResidentialTreatmentFacility</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Status</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <defaultValue>PAID</defaultValue>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRSavePsychiatricResidentialTreatmentFacilityCustom8898</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRSavePsychiatricResidentialTreatmentFacility</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>Status</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFee</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRSavePsychiatricResidentialTreatmentFacilityCustom3041</globalKey>
+        <inputFieldName>AppliedDate</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRSavePsychiatricResidentialTreatmentFacility</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>AppliedDate</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <defaultValue>1300</defaultValue>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRSavePsychiatricResidentialTreatmentFacilityCustom4949</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRSavePsychiatricResidentialTreatmentFacility</name>
+        <outputCreationSequence>3.0</outputCreationSequence>
+        <outputFieldName>FeeAmount</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFeeItem</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>DRSavePsychiatricResidentialTreatmentFacilityCustom1871</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedFieldName>Id</linkedFieldName>
+        <linkedObjectSequence>2.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>DRSavePsychiatricResidentialTreatmentFacility</name>
+        <outputCreationSequence>3.0</outputCreationSequence>
+        <outputFieldName>RegulatoryTrxnFeeId</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFeeItem</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <defaultValue>Permit</defaultValue>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRSavePsychiatricResidentialTreatmentFacilityCustom3787</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRSavePsychiatricResidentialTreatmentFacility</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Category</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>true</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>DRSavePsychiatricResidentialTreatmentFacilityCustom8586</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>DRSavePsychiatricResidentialTreatmentFacility</name>
+        <outputCreationSequence>3.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFeeItem</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>DRSavePsychiatricResidentialTreatmentFacilityCustom8252</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedFieldName>Id</linkedFieldName>
+        <linkedObjectSequence>1.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>DRSavePsychiatricResidentialTreatmentFacility</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>ParentRecordId</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFee</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <outputType>SObject</outputType>
+    <previewJsonData>{
+  &quot;vlcTimeTracking&quot; : {
+    &quot;DRSaveApplication&quot; : null,
+    &quot;PhysicalPlant&quot; : null,
+    &quot;Acknowledgement&quot; : null,
+    &quot;ApplicationSubmitted&quot; : null,
+    &quot;AdditionalInformation&quot; : null,
+    &quot;SetValues1&quot; : null,
+    &quot;ReviewFee&quot; : null,
+    &quot;LegalOwnerOperatorInformation&quot; : null,
+    &quot;Services&quot; : null,
+    &quot;PaymentMethod&quot; : null,
+    &quot;Documentation&quot; : null,
+    &quot;GotoApplicationDetails&quot; : null,
+    &quot;ApplicantInformation&quot; : null,
+    &quot;Instructions&quot; : null,
+    &quot;LicenseTypeStep&quot; : null
+  },
+  &quot;vlcPersistentComponent&quot; : { },
+  &quot;userTimeZone&quot; : null,
+  &quot;userProfile&quot; : null,
+  &quot;userName&quot; : null,
+  &quot;userId&quot; : null,
+  &quot;timeStamp&quot; : null,
+  &quot;ContextId&quot; : null,
+  &quot;PhysicalPlant&quot; : {
+    &quot;FacilityWater&quot; : null,
+    &quot;BuildingTypes&quot; : null
+  },
+  &quot;Acknowledgement&quot; : {
+    &quot;Disclosure1&quot; : null,
+    &quot;CaptureSignature&quot; : null
+  },
+  &quot;ApplicationSubmitted&quot; : { },
+  &quot;AdditionalInformation&quot; : {
+    &quot;AddressofExistingFacility&quot; : null,
+    &quot;FacilityClosed&quot; : null,
+    &quot;StateLicenseNumber&quot; : null,
+    &quot;CalendarYearofOperation&quot; : null,
+    &quot;ExistingFacilityName&quot; : null
+  },
+  &quot;ReviewFee&quot; : {
+    &quot;PayNow&quot; : null
+  },
+  &quot;LegalOwnerOperatorInformation&quot; : {
+    &quot;EmailAddress2&quot; : null,
+    &quot;LastName2&quot; : null,
+    &quot;LegalOwnerOperatorName&quot; : null,
+    &quot;FacilityAddress2&quot; : null,
+    &quot;FirstName2&quot; : null,
+    &quot;State2&quot; : null,
+    &quot;Title2&quot; : null,
+    &quot;PostalCode2&quot; : null,
+    &quot;City2&quot; : null,
+    &quot;Country2&quot; : null,
+    &quot;PhoneNumber2&quot; : null,
+    &quot;FaxNumber2&quot; : null,
+    &quot;FEINNumber&quot; : null
+  },
+  &quot;Services&quot; : {
+    &quot;SchoolDistrictNotified&quot; : null,
+    &quot;FacilityBeds&quot; : null,
+    &quot;PopulationsServed&quot; : null,
+    &quot;AnticipatedOpeningDate&quot; : null,
+    &quot;SchoolDistrictName&quot; : null,
+    &quot;ChildrenCircumstance&quot; : null,
+    &quot;AgeRangeStart&quot; : null,
+    &quot;AgeRangeEnd&quot; : null
+  },
+  &quot;PaymentMethod&quot; : {
+    &quot;Amount&quot; : null,
+    &quot;CustomLWC2&quot; : null
+  },
+  &quot;Documentation&quot; : {
+    &quot;Checkbox1&quot; : null,
+    &quot;Checkbox6&quot; : null,
+    &quot;Checkbox2&quot; : null,
+    &quot;Checkbox7&quot; : null,
+    &quot;Checkbox3&quot; : null,
+    &quot;File1&quot; : [ {
+      &quot;data&quot; : null,
+      &quot;size&quot; : null,
+      &quot;filename&quot; : null
+    } ],
+    &quot;Checkbox5&quot; : null,
+    &quot;Checkbox8&quot; : null,
+    &quot;Checkbox4&quot; : null
+  },
+  &quot;ApplicantInformation&quot; : {
+    &quot;PhoneNumber&quot; : null,
+    &quot;FaxNumber&quot; : null,
+    &quot;LastName&quot; : null,
+    &quot;MailingAddressSame&quot; : null,
+    &quot;FacilityName&quot; : null,
+    &quot;FirstName&quot; : null,
+    &quot;EmailAddress&quot; : null,
+    &quot;PhysicalAddress&quot; : null,
+    &quot;MailingAddress&quot; : null,
+    &quot;Title&quot; : null
+  },
+  &quot;Instructions&quot; : { },
+  &quot;LicenseTypeStep&quot; : {
+    &quot;LicenseType&quot; : null,
+    &quot;OwnershipTypeOtherDetails&quot; : null,
+    &quot;OwnershipType&quot; : null
+  }
+}</previewJsonData>
+    <processSuperBulk>false</processSuperBulk>
+    <responseCacheTtlMinutes>0.0</responseCacheTtlMinutes>
+    <rollbackOnError>false</rollbackOnError>
+    <sourceObject>json</sourceObject>
+    <sourceObjectDefault>false</sourceObjectDefault>
+    <synchronousProcessThreshold>0.0</synchronousProcessThreshold>
+    <type>Load</type>
+    <uniqueName>DRSavePsychiatricResidentialTreatmentFacility_1</uniqueName>
+    <versionNumber>1.0</versionNumber>
+    <xmlDeclarationRemoved>false</xmlDeclarationRemoved>
+</OmniDataTransform>

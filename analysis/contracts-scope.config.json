@@ -1,0 +1,73 @@
+{
+  "targetOrgAlias": "cm-prod-demo",
+  "apiVersion": "63.0",
+  "targetMetadataTypes": [
+    "ApexClass",
+    "ApexTrigger",
+    "LightningComponentBundle",
+    "Flow",
+    "FlowDefinition",
+    "CustomObject",
+    "CustomField",
+    "PermissionSet",
+    "Layout",
+    "FlexiPage",
+    "CustomMetadata"
+  ],
+  "integrationMetadataTypes": [
+    "NamedCredential",
+    "ExternalCredential",
+    "RemoteSiteSetting",
+    "ConnectedApp",
+    "AuthProvider"
+  ],
+  "omniMetadataTypes": [
+    "OmniScript",
+    "OmniIntegrationProcedure",
+    "OmniDataTransform",
+    "OmniUiCard"
+  ],
+  "includeKeywords": [
+    "contract",
+    "agreement",
+    "clause",
+    "template",
+    "obligation",
+    "signature",
+    "sign",
+    "docusign",
+    "m365",
+    "microsoft",
+    "word",
+    "document",
+    "legal",
+    "lifecycle",
+    "approval"
+  ],
+  "excludeKeywords": [
+    "testdata",
+    "sampledata",
+    "mock",
+    "deprecated"
+  ],
+  "dependencyTypes": [
+    "ApexClass",
+    "ApexTrigger",
+    "LightningComponentBundle",
+    "Flow",
+    "FlowDefinition",
+    "OmniScript",
+    "OmniIntegrationProcedure",
+    "OmniDataTransform",
+    "OmniUiCard"
+  ],
+  "integrationMarkers": [
+    "docusign",
+    "m365",
+    "microsoft",
+    "word",
+    "outlook",
+    "graph",
+    "esignature"
+  ]
+}

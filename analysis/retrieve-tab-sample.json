@@ -1,0 +1,48 @@
+{
+  "status": 0,
+  "result": {
+    "done": true,
+    "fileProperties": [
+      {
+        "createdById": "005Hu00000UJSRhIAP",
+        "createdByName": "Russell Evans",
+        "createdDate": "2026-03-25T16:02:21.000Z",
+        "fileName": "unpackaged/tabs/qbranch__Q_Home_Lightning.tab",
+        "fullName": "qbranch__Q_Home_Lightning",
+        "id": "01rHu0000031mTqIAI",
+        "lastModifiedById": "005Hu00000UJSRhIAP",
+        "lastModifiedByName": "Russell Evans",
+        "lastModifiedDate": "2026-03-25T16:02:21.000Z",
+        "manageableState": "installed",
+        "namespacePrefix": "qbranch",
+        "type": "CustomTab"
+      },
+      {
+        "createdById": "005Hu00000UJSRhIAP",
+        "createdByName": "Russell Evans",
+        "createdDate": "2026-03-31T16:33:53.523Z",
+        "fileName": "unpackaged/package.xml",
+        "fullName": "unpackaged/package.xml",
+        "id": "",
+        "lastModifiedById": "005Hu00000UJSRhIAP",
+        "lastModifiedByName": "Russell Evans",
+        "lastModifiedDate": "2026-03-31T16:33:53.523Z",
+        "manageableState": "unmanaged",
+        "type": "Package"
+      }
+    ],
+    "id": "09SHu00001YOpKTMA1",
+    "status": "Succeeded",
+    "success": true,
+    "messages": [],
+    "files": [
+      {
+        "fullName": "qbranch__Q_Home_Lightning",
+        "type": "CustomTab",
+        "state": "Created",
+        "filePath": "/Users/russellevans/Downloads/Salesforce Builds/Contracts/force-app/main/default/tabs/qbranch__Q_Home_Lightning.tab-meta.xml"
+      }
+    ]
+  },
+  "warnings": []
+}

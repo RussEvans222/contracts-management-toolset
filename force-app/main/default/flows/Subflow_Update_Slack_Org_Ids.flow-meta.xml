@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Update_Slack_Org_records</name>
+        <label>Update Slack Org records</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <actionName>BrixFlowDeployer</actionName>
+        <actionType>apex</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>brixName</name>
+            <value>
+                <stringValue>QBrix-6-NGO-SlackIntegration</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>entryPoint</name>
+            <value>
+                <stringValue>update_slack</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>entryPointType</name>
+            <value>
+                <stringValue>flow</stringValue>
+            </value>
+        </inputParameters>
+        <nameSegment>BrixFlowDeployer</nameSegment>
+        <offset>0</offset>
+    </actionCalls>
+    <apiVersion>64.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <environments>Default</environments>
+    <interviewLabel>Subflow: Update Slack Org Ids {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Subflow: Update Slack Org Ids</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_Slack_Org_records</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+</Flow>

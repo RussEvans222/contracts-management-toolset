@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OmniDataTransform xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <assignmentRulesUsed>false</assignmentRulesUsed>
+    <deletedOnSuccess>false</deletedOnSuccess>
+    <errorIgnored>false</errorIgnored>
+    <expectedInputJson>{
+  &quot;ContextId&quot; : &quot;&quot;,
+  &quot;timeStamp&quot; : &quot;2020-03-18T18:10:09.137Z&quot;,
+  &quot;userId&quot; : &quot;005B0000005gGB9IAM&quot;,
+  &quot;userName&quot; : &quot;lpi_226stmfa@lpi.org&quot;,
+  &quot;userProfile&quot; : &quot;System Administrator&quot;,
+  &quot;userTimeZone&quot; : -420,
+  &quot;userCurrencyCode&quot; : &quot;USD&quot;,
+  &quot;sfdcIFrameOrigin&quot; : &quot;https://vlocity-ins.na44.visual.stmfa.stm.force.com&quot;,
+  &quot;sfdcIFrameHost&quot; : &quot;web&quot;,
+  &quot;layout&quot; : &quot;lightning&quot;,
+  &quot;isdtp&quot; : &quot;p1&quot;,
+  &quot;id&quot; : &quot;a80RM000000004JYAQ&quot;,
+  &quot;vlcPersistentComponent&quot; : { },
+  &quot;ApplicationInformation&quot; : {
+    &quot;AssociatedAccount&quot; : &quot;Act1&quot;,
+    &quot;Industries&quot; : &quot;Healthcare&quot;,
+    &quot;isIndustriesFilled&quot; : true,
+    &quot;BusinessActivity&quot; : &quot;Act 1 BT&quot;,
+    &quot;isBusinessActivityFilled&quot; : true,
+    &quot;AuthorizationCategory&quot; : &quot;License&quot;,
+    &quot;AuthorizationType&quot; : &quot;RAT 1&quot;,
+    &quot;ApplicationCategory&quot; : &quot;Basic&quot;,
+    &quot;BusinessActivityId&quot; : &quot;2gFRM0000004C9I2AU&quot;,
+    &quot;AuthorizationTypeId&quot; : &quot;0ehRM0000004C9DYAU&quot;,
+    &quot;AssociatedAccountId&quot; : &quot;001RM000004dRr6YAE&quot;,
+    &quot;exprShowMinnesotaSalonLicenceApplication&quot; : true
+  },
+  &quot;EstablishmentInformation&quot; : {
+    &quot;BusinessLegalName&quot; : &quot;Act1&quot;,
+    &quot;BusinessDBAName&quot; : &quot;sdf&quot;,
+    &quot;TaxID&quot; : null,
+    &quot;ContactName&quot; : &quot;Act1 Contact&quot;,
+    &quot;ContactEmail&quot; : null,
+    &quot;Street&quot; : null,
+    &quot;City&quot; : null,
+    &quot;State&quot; : null,
+    &quot;Zipcode&quot; : null,
+    &quot;Neighborhood&quot; : null,
+    &quot;Address&quot; : &quot;Street -:  null City -: null State -: null Zipcode -: undefined&quot;
+  },
+  &quot;SalonInformation&quot; : {
+    &quot;SalonStartDate&quot; : &quot;2020-03-17&quot;,
+    &quot;SalonInAResidence&quot; : &quot;No&quot;,
+    &quot;BusinessLocation&quot; : &quot;No&quot;,
+    &quot;BusinessType&quot; : null
+  },
+  &quot;ReasonForNewLicenseApplication&quot; : {
+    &quot;SelectReasonforNewLicenseApplication&quot; : &quot;new&quot;,
+    &quot;SalonPrevLic&quot; : null,
+    &quot;SalonRelocPrevAddr&quot; : null,
+    &quot;SalonPrevOwner&quot; : null,
+    &quot;PreviousExpirationDate&quot; : null
+  },
+  &quot;Certification&quot; : {
+    &quot;CertificationText&quot; : true,
+    &quot;Signature&quot; : &quot;zcv&quot;
+  },
+  &quot;SampleUser&quot; : &quot;005RM0000024wK9YAI&quot;,
+  &quot;ApplicationStatus&quot; : &quot;Submitted&quot;,
+  &quot;ContactId&quot; : &quot;003RM000006GHdyYAG&quot;,
+  &quot;OwnershipInformation&quot; : {
+    &quot;PurchaseOrTakeOver&quot; : &quot;Purchasing&quot;,
+    &quot;PriorEstablishmentDetails&quot; : null,
+    &quot;OwnershipType&quot; : &quot;Individual&quot;,
+    &quot;IndividualOwnership&quot; : {
+      &quot;IndividualLastName&quot; : &quot;adf&quot;,
+      &quot;IndividualFirstName&quot; : &quot;adf&quot;
+    },
+    &quot;CorporationOrLLCOwnership&quot; : null,
+    &quot;PartnershipOwnership&quot; : null
+  },
+  &quot;sInstanceId&quot; : &quot;a7zRM000000008GYAQ&quot;,
+  &quot;DRId_PreliminaryApplicationRef__c&quot; : &quot;aAmRM000000005M0AQ&quot;,
+  &quot;CreatedPreliminaryApplicationRefId&quot; : &quot;aAmRM000000005M0AQ&quot;,
+  &quot;ApplicationAttachments&quot; : {
+    &quot;IdentificationProof&quot; : [ {
+      &quot;filename&quot; : &quot;2- Creating a DataRaptor Interface to Map an OmniScript to a PDF.pdf&quot;,
+      &quot;size&quot; : 36531,
+      &quot;data&quot; : &quot;0eff9f5b-9894-42cf-8ebe-ec81f99a68cc&quot;,
+      &quot;$$hashKey&quot; : &quot;object:1071&quot;
+    } ],
+    &quot;PropertyProof&quot; : [ {
+      &quot;filename&quot; : &quot;2- Creating a DataRaptor Interface to Map an OmniScript to a PDF.pdf&quot;,
+      &quot;size&quot; : 36531,
+      &quot;data&quot; : &quot;5303c26b-3539-4d95-904a-d53fb469393a&quot;,
+      &quot;$$hashKey&quot; : &quot;object:1076&quot;
+    } ],
+    &quot;EINProof&quot; : null
+  },
+  &quot;DRId_BusinessLicenseApplication&quot; : &quot;0f0RM0000004CAzYAM&quot;,
+  &quot;DRId_Case&quot; : &quot;500RM000002hqBKYAY&quot;,
+  &quot;CreatedApplicationId&quot; : &quot;BLA-0000000023&quot;
+}</expectedInputJson>
+    <fieldLevelSecurityEnabled>false</fieldLevelSecurityEnabled>
+    <inputType>JSON</inputType>
+    <isManagedUsingStdDesigner>false</isManagedUsingStdDesigner>
+    <name>DRCreatePreliminaryApplicationReference</name>
+    <nullInputsIncludedInOutput>false</nullInputsIncludedInOutput>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>c214bd49-8841-49c3-82e4-7f6568547632</globalKey>
+        <inputFieldName>ApplicationInformation:AssociatedAccountId</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRCreatePreliminaryApplicationReference</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>BusinessAccountNameId</outputFieldName>
+        <outputObjectName>PreliminaryApplicationRef</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>var:ApplicationInformation:AssociatedAccount &quot;-&quot; + var:ApplicationInformation:AuthorizationType + &quot;-&quot; + var:timeStamp +</formulaConverted>
+        <formulaExpression>ApplicationInformation:AssociatedAccount+&quot;-&quot;+ ApplicationInformation:AuthorizationType +&quot;-&quot;+timeStamp</formulaExpression>
+        <formulaResultPath>ApplicationName</formulaResultPath>
+        <formulaSequence>2.0</formulaSequence>
+        <globalKey>dd9317db-90fa-48ed-874a-b3ef049ed91e</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRCreatePreliminaryApplicationReference</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>&quot;/resume-application?OmniScriptInstanceId=&quot; var:sInstanceId +</formulaConverted>
+        <formulaExpression>&quot;/resume-application?OmniScriptInstanceId=&quot;+sInstanceId</formulaExpression>
+        <formulaResultPath>savedOmniApplicationUrl</formulaResultPath>
+        <formulaSequence>1.0</formulaSequence>
+        <globalKey>fa5edf55-a466-4f4e-b9a8-153928f24cf9</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRCreatePreliminaryApplicationReference</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <defaultValue>BusinessLicenseApplication</defaultValue>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>958eb87f-318f-4879-99d2-156e9cd4bec2</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRCreatePreliminaryApplicationReference</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldFormat>String</outputFieldFormat>
+        <outputFieldName>ApplicationType</outputFieldName>
+        <outputObjectName>PreliminaryApplicationRef</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>408e28f9-ce21-4bb9-b432-38e480d3f7d6</globalKey>
+        <inputFieldName>ApplicationName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRCreatePreliminaryApplicationReference</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>ApplicationName</outputFieldName>
+        <outputObjectName>PreliminaryApplicationRef</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>607dcaf6-8fc6-437e-b799-09620acade24</globalKey>
+        <inputFieldName>savedOmniApplicationUrl</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRCreatePreliminaryApplicationReference</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>SavedApplicationUrl</outputFieldName>
+        <outputObjectName>PreliminaryApplicationRef</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>true</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>ce03a5c1-25f3-4fd1-9b5d-54d92eec2d69</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>DRCreatePreliminaryApplicationReference</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>PreliminaryApplicationRef</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <outputType>SObject</outputType>
+    <previewJsonData>{
+  &quot;ContextId&quot; : &quot;&quot;,
+  &quot;timeStamp&quot; : &quot;2020-03-18T18:10:09.137Z&quot;,
+  &quot;userId&quot; : &quot;005B0000005gGB9IAM&quot;,
+  &quot;userName&quot; : &quot;lpi_226stmfa@lpi.org&quot;,
+  &quot;userProfile&quot; : &quot;System Administrator&quot;,
+  &quot;userTimeZone&quot; : -420,
+  &quot;userCurrencyCode&quot; : &quot;USD&quot;,
+  &quot;sfdcIFrameOrigin&quot; : &quot;https://vlocity-ins.na44.visual.stmfa.stm.force.com&quot;,
+  &quot;sfdcIFrameHost&quot; : &quot;web&quot;,
+  &quot;layout&quot; : &quot;lightning&quot;,
+  &quot;isdtp&quot; : &quot;p1&quot;,
+  &quot;id&quot; : &quot;a80RM000000004JYAQ&quot;,
+  &quot;vlcPersistentComponent&quot; : { },
+  &quot;ApplicationInformation&quot; : {
+    &quot;AssociatedAccount&quot; : &quot;Act1&quot;,
+    &quot;Industries&quot; : &quot;Healthcare&quot;,
+    &quot;isIndustriesFilled&quot; : true,
+    &quot;BusinessActivity&quot; : &quot;Act 1 BT&quot;,
+    &quot;isBusinessActivityFilled&quot; : true,
+    &quot;AuthorizationCategory&quot; : &quot;License&quot;,
+    &quot;AuthorizationType&quot; : &quot;RAT 1&quot;,
+    &quot;ApplicationCategory&quot; : &quot;Basic&quot;,
+    &quot;BusinessActivityId&quot; : &quot;2gFRM0000004C9I2AU&quot;,
+    &quot;AuthorizationTypeId&quot; : &quot;0ehRM0000004C9DYAU&quot;,
+    &quot;AssociatedAccountId&quot; : &quot;001B000001KWbzVIAT&quot;,
+    &quot;exprShowMinnesotaSalonLicenceApplication&quot; : true
+  },
+  &quot;EstablishmentInformation&quot; : {
+    &quot;BusinessLegalName&quot; : &quot;Act1&quot;,
+    &quot;BusinessDBAName&quot; : &quot;sdf&quot;,
+    &quot;TaxID&quot; : null,
+    &quot;ContactName&quot; : &quot;Act1 Contact&quot;,
+    &quot;ContactEmail&quot; : null,
+    &quot;Street&quot; : null,
+    &quot;City&quot; : null,
+    &quot;State&quot; : null,
+    &quot;Zipcode&quot; : null,
+    &quot;Neighborhood&quot; : null,
+    &quot;Address&quot; : &quot;Street -:  null City -: null State -: null Zipcode -: undefined&quot;
+  },
+  &quot;SalonInformation&quot; : {
+    &quot;SalonStartDate&quot; : &quot;2020-03-17&quot;,
+    &quot;SalonInAResidence&quot; : &quot;No&quot;,
+    &quot;BusinessLocation&quot; : &quot;No&quot;,
+    &quot;BusinessType&quot; : null
+  },
+  &quot;ReasonForNewLicenseApplication&quot; : {
+    &quot;SelectReasonforNewLicenseApplication&quot; : &quot;new&quot;,
+    &quot;SalonPrevLic&quot; : null,
+    &quot;SalonRelocPrevAddr&quot; : null,
+    &quot;SalonPrevOwner&quot; : null,
+    &quot;PreviousExpirationDate&quot; : null
+  },
+  &quot;Certification&quot; : {
+    &quot;CertificationText&quot; : true,
+    &quot;Signature&quot; : &quot;zcv&quot;
+  },
+  &quot;SampleUser&quot; : &quot;005RM0000024wK9YAI&quot;,
+  &quot;ApplicationStatus&quot; : &quot;Submitted&quot;,
+  &quot;ContactId&quot; : &quot;003RM000006GHdyYAG&quot;,
+  &quot;OwnershipInformation&quot; : {
+    &quot;PurchaseOrTakeOver&quot; : &quot;Purchasing&quot;,
+    &quot;PriorEstablishmentDetails&quot; : null,
+    &quot;OwnershipType&quot; : &quot;Individual&quot;,
+    &quot;IndividualOwnership&quot; : {
+      &quot;IndividualLastName&quot; : &quot;adf&quot;,
+      &quot;IndividualFirstName&quot; : &quot;adf&quot;
+    },
+    &quot;CorporationOrLLCOwnership&quot; : null,
+    &quot;PartnershipOwnership&quot; : null
+  },
+  &quot;sInstanceId&quot; : &quot;a7zRM000000008GYAQ&quot;,
+  &quot;DRId_PreliminaryApplicationRef__c&quot; : &quot;aAmRM000000005M0AQ&quot;,
+  &quot;CreatedPreliminaryApplicationRefId&quot; : &quot;aAmRM000000005M0AQ&quot;,
+  &quot;ApplicationAttachments&quot; : {
+    &quot;IdentificationProof&quot; : [ {
+      &quot;filename&quot; : &quot;2- Creating a DataRaptor Interface to Map an OmniScript to a PDF.pdf&quot;,
+      &quot;size&quot; : 36531,
+      &quot;data&quot; : &quot;0eff9f5b-9894-42cf-8ebe-ec81f99a68cc&quot;,
+      &quot;$$hashKey&quot; : &quot;object:1071&quot;
+    } ],
+    &quot;PropertyProof&quot; : [ {
+      &quot;filename&quot; : &quot;2- Creating a DataRaptor Interface to Map an OmniScript to a PDF.pdf&quot;,
+      &quot;size&quot; : 36531,
+      &quot;data&quot; : &quot;5303c26b-3539-4d95-904a-d53fb469393a&quot;,
+      &quot;$$hashKey&quot; : &quot;object:1076&quot;
+    } ],
+    &quot;EINProof&quot; : null
+  },
+  &quot;DRId_BusinessLicenseApplication&quot; : &quot;0f0RM0000004CAzYAM&quot;,
+  &quot;DRId_Case&quot; : &quot;500RM000002hqBKYAY&quot;,
+  &quot;CreatedApplicationId&quot; : &quot;BLA-0000000023&quot;
+}</previewJsonData>
+    <processSuperBulk>false</processSuperBulk>
+    <responseCacheTtlMinutes>0.0</responseCacheTtlMinutes>
+    <rollbackOnError>false</rollbackOnError>
+    <sourceObject>json</sourceObject>
+    <sourceObjectDefault>false</sourceObjectDefault>
+    <synchronousProcessThreshold>-1.0</synchronousProcessThreshold>
+    <type>Load</type>
+    <uniqueName>DRCreatePreliminaryApplicationReference_1</uniqueName>
+    <versionNumber>1.0</versionNumber>
+    <xmlDeclarationRemoved>false</xmlDeclarationRemoved>
+</OmniDataTransform>

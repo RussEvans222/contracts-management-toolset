@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OmniDataTransform xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <assignmentRulesUsed>false</assignmentRulesUsed>
+    <deletedOnSuccess>false</deletedOnSuccess>
+    <errorIgnored>false</errorIgnored>
+    <fieldLevelSecurityEnabled>true</fieldLevelSecurityEnabled>
+    <inputType>JSON</inputType>
+    <isManagedUsingStdDesigner>false</isManagedUsingStdDesigner>
+    <name>DRGetBusinessLicenseApplicationWasReturned</name>
+    <nullInputsIncludedInOutput>false</nullInputsIncludedInOutput>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <filterValue>applicationId</filterValue>
+        <globalKey>fe84d40d-d0e2-44e6-87e2-089cab497d7c</globalKey>
+        <inputFieldName>Id</inputFieldName>
+        <inputObjectName>BusinessLicenseApplication</inputObjectName>
+        <inputObjectQuerySequence>1.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRGetBusinessLicenseApplicationWasReturned</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Business</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>f7888111-9827-434d-bb09-dc30ef738a06</globalKey>
+        <inputFieldName>Business:WasReturned</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRGetBusinessLicenseApplicationWasReturned</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>WasReturned</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <outputType>JSON</outputType>
+    <previewJsonData>{
+  &quot;ContextId&quot; : &quot;&quot;,
+  &quot;timeStamp&quot; : &quot;2020-03-24T12:56:18.856Z&quot;,
+  &quot;userId&quot; : &quot;005B00000065DsSIAU&quot;,
+  &quot;userName&quot; : &quot;sazher_patch1@salesforce.com&quot;,
+  &quot;userProfile&quot; : &quot;System Administrator&quot;,
+  &quot;userTimeZone&quot; : -420,
+  &quot;userCurrencyCode&quot; : &quot;USD&quot;,
+  &quot;sfdcIFrameOrigin&quot; : &quot;https://vlocity-ins.na44.visual.stmfa.stm.force.com&quot;,
+  &quot;sfdcIFrameHost&quot; : &quot;web&quot;,
+  &quot;layout&quot; : &quot;lightning&quot;,
+  &quot;isdtp&quot; : &quot;p1&quot;,
+  &quot;id&quot; : &quot;a3KRM000000005X2AQ&quot;,
+  &quot;vlcPersistentComponent&quot; : { },
+  &quot;ApplicationInformation&quot; : {
+    &quot;isEditable&quot; : false,
+    &quot;AssociatedAccount&quot; : null,
+    &quot;Industries&quot; : null,
+    &quot;isIndustriesFilled&quot; : false,
+    &quot;BusinessActivity&quot; : null,
+    &quot;isBusinessActivityFilled&quot; : false,
+    &quot;AuthorizationCategory&quot; : null,
+    &quot;AuthorizationType&quot; : null,
+    &quot;ApplicationCategory&quot; : null,
+    &quot;BusinessActivityId&quot; : null,
+    &quot;AuthorizationTypeId&quot; : null,
+    &quot;AssociatedAccountId&quot; : null,
+    &quot;exprShowMinnesotaSalonLicenceApplication&quot; : false,
+    &quot;isNewApplication&quot; : false
+  },
+  &quot;EstablishmentInformation&quot; : {
+    &quot;BusinessLegalName&quot; : null,
+    &quot;BusinessDBAName&quot; : null,
+    &quot;TaxID&quot; : null,
+    &quot;ContactName&quot; : &quot;Dieggo John&quot;,
+    &quot;ContactEmail&quot; : null,
+    &quot;Street&quot; : null,
+    &quot;City&quot; : null,
+    &quot;State&quot; : null,
+    &quot;Zipcode&quot; : null,
+    &quot;Neighborhood&quot; : null,
+    &quot;Address&quot; : null
+  },
+  &quot;SalonInformation&quot; : {
+    &quot;SalonStartDate&quot; : null,
+    &quot;SalonInAResidence&quot; : null,
+    &quot;BusinessLocation&quot; : null,
+    &quot;BusinessType&quot; : null
+  },
+  &quot;Certification&quot; : {
+    &quot;CertificationText&quot; : false,
+    &quot;Signature&quot; : null
+  },
+  &quot;PreConfirmationScreen&quot; : {
+    &quot;BlaCreatedText&quot; : &quot;0f0RM0000004CEmYAM&quot;
+  },
+  &quot;OwnershipInformation&quot; : {
+    &quot;PurchaseOrTakeOver&quot; : null,
+    &quot;PriorEstablishmentDetails&quot; : null,
+    &quot;OwnershipType&quot; : null,
+    &quot;IndividualOwnership&quot; : null,
+    &quot;CorporationOrLLCOwnership&quot; : null,
+    &quot;PartnershipOwnership&quot; : null
+  },
+  &quot;SampleUser&quot; : &quot;005RM0000025atnYAA&quot;,
+  &quot;ApplicationStatus&quot; : &quot;Submitted&quot;,
+  &quot;ContactId&quot; : &quot;003RM000006GmF9YAK&quot;,
+  &quot;isBLASubmitted&quot; : true,
+  &quot;sInstanceId&quot; : &quot;a3JRM000000009i2AA&quot;
+}</previewJsonData>
+    <processSuperBulk>false</processSuperBulk>
+    <responseCacheTtlMinutes>0.0</responseCacheTtlMinutes>
+    <rollbackOnError>false</rollbackOnError>
+    <sourceObject>json</sourceObject>
+    <sourceObjectDefault>false</sourceObjectDefault>
+    <synchronousProcessThreshold>-1.0</synchronousProcessThreshold>
+    <type>Extract</type>
+    <uniqueName>DRGetBusinessLicenseApplicationWasReturned_1</uniqueName>
+    <versionNumber>1.0</versionNumber>
+    <xmlDeclarationRemoved>false</xmlDeclarationRemoved>
+</OmniDataTransform>

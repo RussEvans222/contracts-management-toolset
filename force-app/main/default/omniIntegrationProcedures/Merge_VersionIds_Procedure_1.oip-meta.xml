@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OmniIntegrationProcedure xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customJavaScript>{
+    &quot;SObjectId&quot;: &quot;5008c00001IeZIzAAN&quot;,
+    &quot;selectedTemplate&quot;: [
+        {
+            &quot;Id&quot;: &quot;aE18c000000SHiTCAW&quot;,
+            &quot;Name&quot;: &quot;MedInfoCoverLetter&quot;,
+            &quot;TemplateType&quot;: &quot;Microsoft Word .DOCX Template&quot;,
+            &quot;VersionNumber&quot;: 4,
+            &quot;FetchDocumentTemplateFromNameStatus&quot;: true,
+            &quot;LoopBlockIterationStatus&quot;: true,
+            &quot;LoopBlockIterationIndex&quot;: 1
+        }
+    ],
+    &quot;docTitle&quot;: &quot;&quot;,
+    &quot;pdfContentVersionIds&quot;: [
+        &quot;0688c000005XLSiAAO&quot;,
+        &quot;(0688c000005WtJgAAK, 0688c000005XL04AAG, 0688c000005XLOzAAO)&quot;
+    ],
+    &quot;ContextId&quot;: &quot;5008c00001IeZIzAAN&quot;,
+    &quot;LanguageCode&quot;: &quot;en_US&quot;,
+    &quot;timeStamp&quot;: &quot;2022-05-02T14:18:18.177Z&quot;,
+    &quot;userProfile&quot;: &quot;System Administrator&quot;,
+    &quot;userTimeZoneName&quot;: &quot;America/Los_Angeles&quot;,
+    &quot;userTimeZone&quot;: &quot;-420&quot;,
+    &quot;userCurrencyCode&quot;: &quot;USD&quot;,
+    &quot;userName&quot;: &quot;sivajikandimalla@sivajikandimalla-220330-790.demo&quot;,
+    &quot;userId&quot;: &quot;0058c00000BHQVoAAP&quot;,
+    &quot;generateMergeDocument&quot;: {},
+    &quot;response&quot;: {},
+    &quot;ResponseAction1Status&quot;: true,
+    &quot;MIR_CoverLetterData&quot;: {
+        &quot;UserTitle&quot;: &quot;&quot;,
+        &quot;UserPhone&quot;: &quot;&quot;,
+        &quot;Description&quot;: &quot;&quot;,
+        &quot;Date&quot;: &quot;05-02-2022&quot;,
+        &quot;LastName&quot;: &quot;Doyle&quot;,
+        &quot;Zip&quot;: &quot;94105&quot;,
+        &quot;State&quot;: &quot;CA&quot;,
+        &quot;City&quot;: &quot;San Francisco&quot;,
+        &quot;Street&quot;: &quot;1 Market St&quot;,
+        &quot;FirstName&quot;: &quot;Lauren&quot;,
+        &quot;Product&quot;: &quot;Quattroglu&quot;,
+        &quot;UserEmail&quot;: &quot;sivaji.kandimalla@salesforce.com&quot;,
+        &quot;UserLastName&quot;: &quot;Kandimalla&quot;,
+        &quot;UserFirstName&quot;: &quot;Sivaji&quot;
+    },
+    &quot;MIR_CoverLetterDataStatus&quot;: true,
+    &quot;Files&quot;: [
+        {
+            &quot;pdfContentVersionId&quot;: [
+                &quot;0688c000005WtJgAAK&quot;,
+                &quot;0688c000005XL04AAG&quot;,
+                &quot;0688c000005XLOzAAO&quot;
+            ]
+        }
+    ],
+    &quot;FilesStatus&quot;: true,
+    &quot;MedInfo-GetKnowledgeFiles&quot;: {
+        &quot;ArticleFiles&quot;: [
+            {
+                &quot;TemplateType&quot;: &quot;FILE&quot;,
+                &quot;VersionNumber&quot;: &quot;1&quot;,
+                &quot;Name&quot;: &quot;testing pdf&quot;,
+                &quot;pdfContentVersionId&quot;: &quot;0688c000005XL04AAG&quot;,
+                &quot;Id&quot;: &quot;0688c000005XL04AAG&quot;
+            },
+            {
+                &quot;TemplateType&quot;: &quot;FILE&quot;,
+                &quot;VersionNumber&quot;: &quot;1&quot;,
+                &quot;Name&quot;: &quot;testing pdf2&quot;,
+                &quot;pdfContentVersionId&quot;: &quot;0688c000005XLOzAAO&quot;,
+                &quot;Id&quot;: &quot;0688c000005XLOzAAO&quot;
+            }
+        ],
+        &quot;Articles&quot;: [
+            {
+                &quot;KnowledgeArticleID&quot;: &quot;kA08c0000017D5yCAE&quot;,
+                &quot;Title&quot;: &quot;Frequently asked questions testing&quot;,
+                &quot;Summary&quot;: &quot;testing&quot;
+            },
+            {
+                &quot;KnowledgeArticleID&quot;: &quot;kA08c0000017CogCAE&quot;,
+                &quot;Title&quot;: &quot;Knowledge Frequently asked questions about billing testing&quot;
+            },
+            {
+                &quot;KnowledgeArticleID&quot;: &quot;kA08c0000017CogCAE&quot;,
+                &quot;Title&quot;: &quot;Knowledge Frequently asked questions about billing testing&quot;
+            },
+            {
+                &quot;KnowledgeArticleID&quot;: &quot;kA08c0000016seSCAQ&quot;,
+                &quot;Title&quot;: &quot;CPAP FAQ&quot;,
+                &quot;Summary&quot;: &quot;Here are the frequently asked questions on how and when to use a CPAP&quot;,
+                &quot;Detail&quot;: &quot;&lt;p&gt;&lt;b&gt;Q: How often should I replace my nasal pillows or cushion?&lt;/b&gt;&lt;br&gt;A: With regular care, nasal pillows and cushions should last 3 to 6 months but will vary by patient. The life of a mask cushion and pillow depends on use, the oils from your skin, and cleaning. It is always a good idea to inspect your mask routinely; poor care may adversely affect the fit of the cushion/pillow and thus performance.&lt;/p&gt;\n\n&lt;p&gt;To get the longest life from your mask, be sure to wash your face each night before putting on your mask, and wash your mask after each use. Use only mild soap, nothing with perfumes, moisturizers, antibacterial agents, bleaches, etc, Always dry your mask and cushion out of direct sunlight.&lt;/p&gt;\n\n&lt;dl&gt;&lt;dt id=\&quot;4\&quot;&gt; &lt;/dt&gt;&lt;/dl&gt;\n\n&lt;p&gt;&lt;b&gt;Q: Where can I get reliable information on Sleep Apnea?&lt;/b&gt;&lt;br&gt;A:&lt;a href=\&quot;http://www.nhlbi.nih.gov/health/dci/Diseases/SleepApnea/SleepApnea_WhatIs.html\&quot; target=\&quot;_blank\&quot;&gt;The National Institutes of Health&lt;/a&gt;. The mission of this institue is to seek fundamental knowledge about the nature and behavior of living systems and the application of that knowledge to enhance health, lengthen life, and reduce the burdens of illness and disability. Additionally, we have some very informative and up to date information articles and blogs in the upper right hand corner of the Home Page.&lt;br&gt; &lt;/p&gt;\n\n&lt;p&gt;&lt;b&gt;Q: What is the difference between Resmed&apos;s sizes?&lt;/b&gt;A: Shallow means that the top of the mask has a small cutout for the bridge of the nose. It generally is used for a less prominent nasal bridge. Standard, which is also the medium size, has a larger cutout to allow for a larger bridge.&lt;/p&gt;\n\n&lt;dl&gt;&lt;dt id=\&quot;6\&quot;&gt; &lt;/dt&gt;&lt;/dl&gt;\n\n&lt;p&gt;&lt;b&gt;Q: My CPAP machine is five years old. Should I get a new one?&lt;/b&gt;&lt;br&gt;A: Manufacturers create new and more effective CPAP models each year. There isn&apos;t any need to replace your CPAP unit because it is 5 years old but a malfunction could be dangerous. Has your unit been inspected yearly and are the pressure settings are accurate? Filters should be changed regularly. Ask the CPAP Shop what new features are available in order for you to continue using CPAP with greater comfort and convenience.&lt;/p&gt;\n\n&lt;dl&gt;&lt;dt id=\&quot;16\&quot;&gt; &lt;/dt&gt;&lt;/dl&gt;\n\n&lt;p&gt;&lt;b&gt;Q: Nasal Mask or Full Face Mask? Which one is better for me?&lt;/b&gt;A: Using the right mask is essential to the success of your treatment. You will need a mask this is comfortable and fits properly. It should form a good seal on your face so that air doesn&apos;t leak as this would be uncomfortable and make your therapy less effective. A nasal mask which covers just the nose is the most common. However, some people breath through their mouth when they sleep. In this case, a full face mask that covers both the nose and mouth is the best option. Nasal pillows, 2 small oval shaped cushions that are inserted into the nose, are now becoming more popular. This type of Nasal mask offers a clear field of vision. Another option would be a nasal mask and chinstrap. This will prevent the jaw from opening during sleep and still provide for effective therapy.&lt;/p&gt;\n\n&lt;dl&gt;&lt;dt id=\&quot;7\&quot;&gt; &lt;/dt&gt;&lt;/dl&gt;\n\n&lt;p&gt;&lt;b&gt;Q: When I wake up in the morning I see strap marks on my face. Is that a problem?&lt;/b&gt;&lt;br&gt;A: If the marks resolve quickly after awakening, then it&apos;s not really an issue. If however, the marks progress toward pressure sores, then your mask is to tight. Remember, a tight fit is not necessarily a proper fit. A common error is to pull the headgear straps very tight. Newer masks are made of thinner, softer material which allows the mask to respond to body heat, thereby negating the need for pressure to ensure a leak free fit. Also, if you have persistent issues with masks, a zinc-oxide based adhesive tape on the sensitive areas may help alleviate the problem.&lt;/p&gt;\n\n&lt;dl&gt;&lt;dt id=\&quot;8\&quot;&gt; &lt;/dt&gt;&lt;/dl&gt;\n\n&lt;p&gt;&lt;b&gt;Q: I have OSA and I need to buy a bipap machine?&lt;/b&gt;&lt;br&gt;A: The first thing which needs to be done is to get a written prescription for the BiPap and its settings. Unless it is an Auto BiPAP, a IPAP and EPAP setting will be required. We suggest contacting us to determine different features and functionality for each BiPAP machine and mask. We can be reached via email at contact@thecpapshop.com or by phone at 866-414-9700.&lt;/p&gt;\n\n&lt;dl&gt;&lt;dt id=\&quot;9\&quot;&gt; &lt;/dt&gt;&lt;/dl&gt;\n\n&lt;p&gt;&lt;b&gt;Q: Last night was my first night wearing the CPAP mask. It was very uncomfortable. What can I do?&lt;/b&gt;&lt;br&gt;A: A common error is to secure the mask too tightly. While you are laying in bed, lay the mask on your face. Connect the headgear so the mask is snug but not tight. If you have a problem with leaking, the mask size could be the issue. There are many designs of masks, with different features intended to make the CPAP experience as comfortable and effective as possible. If the mask does not fit well, and is not comfortable, a person is less likely to be compliant. It is crucial to find a mask that is comfortable. We are always available to consult with you on different types and styles of masks.&lt;/p&gt;\n\n&lt;p&gt;&lt;br&gt;&lt;b&gt;Q: I&apos;ve had my CPAP machine 3 weeks and continue to sneeze all day. What may be causing this?&lt;/b&gt;&lt;br&gt;A: Perhaps your having an allergic reaction to the cleaner your using. If you are using humidity, try using distilled water. If neither of these help, perhaps your allegic to the material in CPAP mask. If the problem continues, please consult with us at contact@thecpapshop.com for further assistance.&lt;/p&gt;\n\n&lt;dl&gt;&lt;dt id=\&quot;10\&quot;&gt; &lt;/dt&gt;&lt;/dl&gt;\n\n&lt;p&gt;&lt;b&gt;Q: How much difference does it make on a CPAP machines setting to go from a 6 foot to an 8 foot hose?&lt;/b&gt;&lt;br&gt;A: It should not affect the pressure much but continue to monitor how you feel. If necessary, the machine will need to be adjusted slightly to suit your needs. We also have a handheld pressure meter which will allow you to measure the pressure at the end of the tube.&lt;/p&gt;\n\n&lt;dl&gt;&lt;dt&gt; &lt;/dt&gt;&lt;/dl&gt;\n\n&lt;p&gt;&lt;b&gt;Q: I have heard there are great new masks and headgear on the market. Should I try them out?&lt;/b&gt;&lt;br&gt;A: Only if you are having trouble with your current mask or headgear. Getting the proper fit is crucial in CPAP. A good fitting mask does not leak around the edges, does not leave pressure marks or cause pressure sores. Many of the newer CPAP masks available are made from softer, more pliable materials which provide a more comfortable fit with fewer leaks. Contact us at The CPAP Shop to understand the options available to you.&lt;/p&gt;\n\n&lt;p&gt;&lt;br&gt;&lt;b&gt;Q: Will you bill my insurance company?&lt;/b&gt;&lt;/p&gt;\n\n&lt;p&gt;A: To maintain our extremely low pricing, we do not deal directly with insurance companies. Nevertheless, we are listed by many insurance companies as an Out of Network provider. We cannot determine your particular level of reimbursement, if any. However, we are an Out of Network provider for Blue Cross/Blue Shield in PA. Our provider number is 1743518 which you can provide to any Blue Cross/Blue Shield in the US. We suggest you call your insurance company to get the paperwork and details on submitting a claim. We will work with you and provide you with the codes your insurance company requires. Please remember that this small amount of work will save you plenty of money in the long run.&lt;/p&gt;\n\n&lt;dl&gt;&lt;dt&gt; &lt;/dt&gt;&lt;/dl&gt;\n\n&lt;p&gt;&lt;b&gt;Q: How do you ship and what are your shipping costs?&lt;/b&gt;&lt;br&gt; A: Standard shipping is with USPS Priority Mail or UPS. Our standard shipping rate for within the continental U.S. is $7.75 for orders less than $100. For orders over $99, shipping is free. Overnight shipping is also available with in stock items. We also have standard rates for other parts of the world. If an international rate is not listed, please send us an email so we can determine the correct shipping rate.&lt;/p&gt;\n\n&lt;dl&gt;&lt;dt id=\&quot;17\&quot;&gt; &lt;/dt&gt;&lt;/dl&gt;\n\n&lt;p&gt;&lt;b&gt;Q: How do I know if I need a full face mask?&lt;/b&gt;&lt;/p&gt;\n\n&lt;p&gt;A: Here is a checklist to determine if a full face mask is right for you.&lt;/p&gt;\n\n&lt;ul&gt;&lt;li&gt;\n\t&lt;p&gt;Do you often wake up with a dry mouth and/or throat?&lt;/p&gt;\n\t&lt;/li&gt;&lt;li&gt;\n\t&lt;p&gt;Do you tend to breathe through your mouth rather than your nose?&lt;/p&gt;\n\t&lt;/li&gt;&lt;li&gt;\n\t&lt;p&gt;Do you suffer from allergies?&lt;/p&gt;\n\t&lt;/li&gt;&lt;li&gt;\n\t&lt;p&gt;Do you have a blocked nose or congestion at certain times of the year?&lt;/p&gt;\n\t&lt;/li&gt;&lt;li&gt;\n\t&lt;p&gt;Have you ever had a broken nose?&lt;/p&gt;\n\t&lt;/li&gt;&lt;li&gt;\n\t&lt;p&gt;Have you ever had nasal surgery?&lt;/p&gt;\n\t&lt;/li&gt;&lt;li&gt;\n\t&lt;p&gt;Do you have a deviated septum(wall dividing nasal cavities leans towards one side)?&lt;/p&gt;\n\t&lt;/li&gt;&lt;li&gt;\n\t&lt;p&gt;If you are already using therapy with a nasal mask: Are you continuing to snore even when using therapy?&lt;/p&gt;\n\t&lt;/li&gt;&lt;li&gt;\n\t&lt;p&gt;Do you use a chinstrap?&lt;/p&gt;\n\t&lt;/li&gt;&lt;/ul&gt;&quot;
+            }
+        ]
+    },
+    &quot;MedInfo-GetKnowledgeFilesStatus&quot;: true,
+    &quot;MedInfo-GetCaseFiles&quot;: {
+        &quot;ProductFiles&quot;: {
+            &quot;TemplateType&quot;: &quot;FILE&quot;,
+            &quot;VersionNumber&quot;: &quot;1&quot;,
+            &quot;Name&quot;: &quot;Quattroglu Product Insert&quot;,
+            &quot;pdfContentVersionId&quot;: &quot;0688c000005WtJgAAK&quot;,
+            &quot;Id&quot;: &quot;0688c000005WtJgAAK&quot;
+        }
+    },
+    &quot;MedInfo-GetCaseFilesStatus&quot;: true,
+    &quot;options&quot;: {
+        &quot;useContinuation&quot;: false,
+        &quot;vlcClass&quot;: &quot;omnistudio.IntegrationProcedureService&quot;,
+        &quot;ignoreCache&quot;: false,
+        &quot;useQueueableApexRemoting&quot;: false,
+        &quot;preTransformBundle&quot;: &quot;&quot;,
+        &quot;postTransformBundle&quot;: &quot;&quot;,
+        &quot;useFuture&quot;: false,
+        &quot;chainable&quot;: false
+    },
+    &quot;ArticlesLength&quot;: 0,
+    &quot;FilesLength&quot;: 3,
+    &quot;ContentVersionIds&quot;: [
+        {
+            &quot;pdfContentVersionId&quot;: [
+                &quot;0688c000005WtJgAAK&quot;,
+                &quot;0688c000005XL04AAG&quot;,
+                &quot;0688c000005XLOzAAO&quot;
+            ]
+        }
+    ],
+    &quot;templateType&quot;: &quot;Microsoft Word .DOCX Template&quot;,
+    &quot;documentTitle&quot;: &quot;&quot;,
+    &quot;templateNames&quot;: [
+        {
+            &quot;VlocityDocumentTemplate&quot;: &quot;MedInfoCoverLetter&quot;
+        }
+    ],
+    &quot;FileFormat&quot;: &quot;pdf&quot;,
+    &quot;attachFileFormat&quot;: &quot;pdf&quot;,
+    &quot;docGenerationMechanism&quot;: &quot;VlocityClientSide&quot;,
+    &quot;documentViewer&quot;: &quot;VlocityClientSideViewer&quot;,
+    &quot;downloadFileFormat&quot;: &quot;all&quot;,
+    &quot;pdfGenerationSource&quot;: &quot;VlocityClientSide&quot;,
+    &quot;useTemplateDRExtract&quot;: &quot;No&quot;,
+    &quot;AvailableTemplates&quot;: 0,
+    &quot;generateDocument&quot;: {
+        &quot;GenerateDocumentWord&quot;: [
+            {
+                &quot;Id&quot;: &quot;aE18c000000SHiTCAW&quot;,
+                &quot;Name&quot;: &quot;MedInfoCoverLetter&quot;,
+                &quot;TemplateType&quot;: &quot;Microsoft Word .DOCX Template&quot;,
+                &quot;VersionNumber&quot;: 4,
+                &quot;FetchDocumentTemplateFromNameStatus&quot;: true,
+                &quot;LoopBlockIterationStatus&quot;: true,
+                &quot;LoopBlockIterationIndex&quot;: 1,
+                &quot;wordContentVersionId&quot;: &quot;0688c000005XLShAAO&quot;,
+                &quot;initiatePDFGeneration&quot;: true,
+                &quot;pdfContentVersionId&quot;: &quot;0688c000005XLSiAAO&quot;,
+                &quot;documentTitle&quot;: &quot;Makana MIR.docx&quot;,
+                &quot;pdfDocumentTitle&quot;: &quot;&quot;,
+                &quot;distributionPublicUrl&quot;: &quot;&quot;
+            }
+        ]
+    },
+    &quot;CountTemplateSelected&quot;: 1,
+    &quot;generatePdfDocument&quot;: true,
+    &quot;pdfGenerationCompleted&quot;: true
+}</customJavaScript>
+    <description>9/6/22 TS get rid of underscores in DRs</description>
+    <elementTypeComponentMapping>{&quot;ElementTypeToHTMLTemplateList&quot;:[]}</elementTypeComponentMapping>
+    <isActive>true</isActive>
+    <isIntegProcdSignatureAvl>false</isIntegProcdSignatureAvl>
+    <isIntegrationProcedure>true</isIntegrationProcedure>
+    <isManagedUsingStdDesigner>false</isManagedUsingStdDesigner>
+    <isMetadataCacheDisabled>false</isMetadataCacheDisabled>
+    <isOmniScriptEmbeddable>false</isOmniScriptEmbeddable>
+    <isTestProcedure>false</isTestProcedure>
+    <isWebCompEnabled>false</isWebCompEnabled>
+    <language>Procedure</language>
+    <name>mergepdfVersionIds</name>
+    <omniProcessElements>
+        <isActive>true</isActive>
+        <isOmniScriptEmbeddable>false</isOmniScriptEmbeddable>
+        <level>0.0</level>
+        <name>MergeDocumentList</name>
+        <omniProcessVersionNumber>0.0</omniProcessVersionNumber>
+        <propertySetConfig>{
+  &quot;executionConditionalFormula&quot; : &quot;&quot;,
+  &quot;failureConditionalFormula&quot; : &quot;&quot;,
+  &quot;failOnStepError&quot; : true,
+  &quot;useFormulas&quot; : true,
+  &quot;additionalInput&quot; : { },
+  &quot;additionalOutput&quot; : { },
+  &quot;failureResponse&quot; : { },
+  &quot;sendOnlyAdditionalInput&quot; : false,
+  &quot;returnOnlyAdditionalOutput&quot; : false,
+  &quot;returnOnlyFailureResponse&quot; : false,
+  &quot;responseJSONPath&quot; : &quot;&quot;,
+  &quot;responseJSONNode&quot; : &quot;&quot;,
+  &quot;sendJSONPath&quot; : &quot;&quot;,
+  &quot;sendJSONNode&quot; : &quot;&quot;,
+  &quot;advancedMerge&quot; : false,
+  &quot;advancedMergeMap&quot; : [ ],
+  &quot;mergeFields&quot; : [ ],
+  &quot;allowMergeNulls&quot; : true,
+  &quot;hasPrimary&quot; : false,
+  &quot;primaryListKey&quot; : &quot;&quot;,
+  &quot;sortBy&quot; : [ ],
+  &quot;sortInDescendingOrder&quot; : false,
+  &quot;mergeListsOrder&quot; : [ &quot;generateDocument:GenerateDocumentWord&quot;, &quot;Files&quot; ],
+  &quot;filterListFormula&quot; : &quot;&quot;,
+  &quot;dynamicOutputFields&quot; : &quot;&quot;,
+  &quot;updateFieldValue&quot; : { },
+  &quot;chainOnStep&quot; : false,
+  &quot;actionMessage&quot; : &quot;&quot;,
+  &quot;additionalChainableResponse&quot; : { },
+  &quot;show&quot; : null,
+  &quot;label&quot; : &quot;ListAction1&quot;,
+  &quot;disOnTplt&quot; : false
+}</propertySetConfig>
+        <sequenceNumber>1.0</sequenceNumber>
+        <type>List Merge Action</type>
+    </omniProcessElements>
+    <omniProcessElements>
+        <isActive>true</isActive>
+        <isOmniScriptEmbeddable>false</isOmniScriptEmbeddable>
+        <level>0.0</level>
+        <name>ResponseAction1</name>
+        <omniProcessVersionNumber>0.0</omniProcessVersionNumber>
+        <propertySetConfig>{
+  &quot;executionConditionalFormula&quot; : &quot;&quot;,
+  &quot;useFormulas&quot; : true,
+  &quot;additionalOutput&quot; : { },
+  &quot;returnOnlyAdditionalOutput&quot; : false,
+  &quot;returnFullDataJSON&quot; : false,
+  &quot;responseFormat&quot; : &quot;JSON&quot;,
+  &quot;responseJSONPath&quot; : &quot;&quot;,
+  &quot;responseJSONNode&quot; : &quot;&quot;,
+  &quot;sendJSONPath&quot; : &quot;transformDocumentTemplateIds&quot;,
+  &quot;sendJSONNode&quot; : &quot;&quot;,
+  &quot;responseDefaultData&quot; : { },
+  &quot;vlcResponseHeaders&quot; : { },
+  &quot;show&quot; : null,
+  &quot;label&quot; : &quot;ResponseAction1&quot;,
+  &quot;disOnTplt&quot; : false
+}</propertySetConfig>
+        <sequenceNumber>4.0</sequenceNumber>
+        <type>Response Action</type>
+    </omniProcessElements>
+    <omniProcessElements>
+        <isActive>true</isActive>
+        <isOmniScriptEmbeddable>false</isOmniScriptEmbeddable>
+        <level>0.0</level>
+        <name>transformDocumentTemplateIds</name>
+        <omniProcessVersionNumber>0.0</omniProcessVersionNumber>
+        <propertySetConfig>{
+  &quot;executionConditionalFormula&quot; : &quot;&quot;,
+  &quot;failureConditionalFormula&quot; : &quot;&quot;,
+  &quot;failOnStepError&quot; : true,
+  &quot;useFormulas&quot; : true,
+  &quot;additionalInput&quot; : { },
+  &quot;additionalOutput&quot; : { },
+  &quot;failureResponse&quot; : { },
+  &quot;sendOnlyAdditionalInput&quot; : false,
+  &quot;returnOnlyAdditionalOutput&quot; : false,
+  &quot;returnOnlyFailureResponse&quot; : false,
+  &quot;responseJSONPath&quot; : &quot;&quot;,
+  &quot;responseJSONNode&quot; : &quot;&quot;,
+  &quot;sendJSONPath&quot; : &quot;transformMergeList&quot;,
+  &quot;sendJSONNode&quot; : &quot;&quot;,
+  &quot;bundle&quot; : &quot;transformDocumentTemplatesDCT&quot;,
+  &quot;chainOnStep&quot; : false,
+  &quot;actionMessage&quot; : &quot;&quot;,
+  &quot;ignoreCache&quot; : true,
+  &quot;show&quot; : null,
+  &quot;label&quot; : &quot;DataRaptorTransformAction1&quot;,
+  &quot;disOnTplt&quot; : false
+}</propertySetConfig>
+        <sequenceNumber>3.0</sequenceNumber>
+        <type>DataRaptor Transform Action</type>
+    </omniProcessElements>
+    <omniProcessElements>
+        <isActive>true</isActive>
+        <isOmniScriptEmbeddable>false</isOmniScriptEmbeddable>
+        <level>0.0</level>
+        <name>transformMergeList</name>
+        <omniProcessVersionNumber>0.0</omniProcessVersionNumber>
+        <propertySetConfig>{
+  &quot;executionConditionalFormula&quot; : &quot;&quot;,
+  &quot;failureConditionalFormula&quot; : &quot;&quot;,
+  &quot;failOnStepError&quot; : true,
+  &quot;elementValueMap&quot; : {
+    &quot;SetPdfIds&quot; : &quot;%MergeDocumentList%&quot;
+  },
+  &quot;responseJSONPath&quot; : &quot;&quot;,
+  &quot;responseJSONNode&quot; : &quot;&quot;,
+  &quot;chainOnStep&quot; : false,
+  &quot;actionMessage&quot; : &quot;&quot;,
+  &quot;show&quot; : null,
+  &quot;label&quot; : &quot;SetValues2&quot;,
+  &quot;disOnTplt&quot; : false
+}</propertySetConfig>
+        <sequenceNumber>2.0</sequenceNumber>
+        <type>Set Values</type>
+    </omniProcessElements>
+    <omniProcessKey>Merge_VersionIds</omniProcessKey>
+    <omniProcessType>Integration Procedure</omniProcessType>
+    <propertySetConfig>{
+  &quot;linkToExternalObject&quot; : &quot;&quot;,
+  &quot;trackingCustomData&quot; : { },
+  &quot;includeAllActionsInResponse&quot; : false,
+  &quot;columnsPropertyMap&quot; : [ ],
+  &quot;relationshipFieldsMap&quot; : [ ],
+  &quot;labelSingular&quot; : &quot;&quot;,
+  &quot;labelPlural&quot; : &quot;&quot;,
+  &quot;description&quot; : &quot;&quot;,
+  &quot;nameColumn&quot; : &quot;&quot;,
+  &quot;rollbackOnError&quot; : false,
+  &quot;chainableQueriesLimit&quot; : 50,
+  &quot;chainableDMLStatementsLimit&quot; : null,
+  &quot;chainableCpuLimit&quot; : 2000,
+  &quot;chainableHeapSizeLimit&quot; : null,
+  &quot;chainableDMLRowsLimit&quot; : null,
+  &quot;chainableQueryRowsLimit&quot; : null,
+  &quot;chainableSoslQueriesLimit&quot; : null,
+  &quot;chainableActualTimeLimit&quot; : null,
+  &quot;additionalChainableResponse&quot; : { },
+  &quot;queueableChainableQueriesLimit&quot; : 120,
+  &quot;queueableChainableCpuLimit&quot; : 40000,
+  &quot;queueableChainableHeapSizeLimit&quot; : 6,
+  &quot;ttlMinutes&quot; : 5,
+  &quot;mockResponseMap&quot; : { }
+}</propertySetConfig>
+    <subType>VersionIds</subType>
+    <type>Merge</type>
+    <uniqueName>Merge_VersionIds_Procedure_1</uniqueName>
+    <versionNumber>1.0</versionNumber>
+    <webComponentKey>676b3853-8a8a-5cc9-6a1f-75f091da21bc</webComponentKey>
+</OmniIntegrationProcedure>

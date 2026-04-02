@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Create a pre-populated internal follow-up obligation for this contract.</description>
+    <fieldOverrides>
+        <field>Name</field>
+        <formula>&quot;Submit Invoice &amp; Validate Payment&quot;</formula>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>Description</field>
+        <formula>&quot;Ensure vendor submits invoice in accordance with contract terms. Validate invoice against encumbered funds and contract payment structure prior to processing payment.&quot;</formula>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>Status</field>
+        <formula>&quot;At Risk&quot;</formula>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>State</field>
+        <formula>&quot;OnHold&quot;</formula>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>StatusChangeReason</field>
+        <formula>&quot;Not Started&quot;</formula>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>Party</field>
+        <formula>&quot;FIRST_PARTY&quot;</formula>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>AssigneeUserId</field>
+        <formula>IF(BEGINS(Contract.OwnerId, &quot;005&quot;), Contract.OwnerId, $User.Id)</formula>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>ReferenceObjectId</field>
+        <formula>Contract.Id</formula>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>StartDate</field>
+        <formula>IF(ISBLANK(Contract.StartDate), TODAY(), Contract.StartDate)</formula>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>EndDate</field>
+        <formula>IF(ISBLANK(Contract.StartDate), TODAY() + 30, Contract.StartDate + 30)</formula>
+    </fieldOverrides>
+    <label>Create Obligation</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <quickActionLayout>
+        <layoutSectionStyle>TwoColumnsLeftToRight</layoutSectionStyle>
+        <quickActionLayoutColumns>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>Name</field>
+                <uiBehavior>Edit</uiBehavior>
+            </quickActionLayoutItems>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>EndDate</field>
+                <uiBehavior>Edit</uiBehavior>
+            </quickActionLayoutItems>
+        </quickActionLayoutColumns>
+        <quickActionLayoutColumns/>
+    </quickActionLayout>
+    <successMessage>Obligation created.</successMessage>
+    <targetObject>Obligation</targetObject>
+    <targetParentField>ReferenceObject</targetParentField>
+    <type>Create</type>
+</QuickAction>

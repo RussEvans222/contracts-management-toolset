@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OmniDataTransform xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <assignmentRulesUsed>false</assignmentRulesUsed>
+    <deletedOnSuccess>false</deletedOnSuccess>
+    <description>Creates a claim record when an employee files a workers&apos; compensation claim.</description>
+    <errorIgnored>false</errorIgnored>
+    <fieldLevelSecurityEnabled>false</fieldLevelSecurityEnabled>
+    <inputType>JSON</inputType>
+    <isManagedUsingStdDesigner>false</isManagedUsingStdDesigner>
+    <name>PSSSocInsCreateClaim</name>
+    <nullInputsIncludedInOutput>false</nullInputsIncludedInOutput>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>PSSSocInsCreateClaimCustom710</globalKey>
+        <inputFieldName>AccountId</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>PSSSocInsCreateClaim</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>AccountId</outputFieldName>
+        <outputObjectName>Claim</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>true</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>PSSSocInsCreateClaim5618271815728206</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>PSSSocInsCreateClaim</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>Claim</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>| var:WorkerPersonalDetails:PSS_SI_v1_FirstName &quot;_&quot; var:WorkerPersonalDetails:PSS_SI_v1_LastName &quot;_&quot; | | &quot;yyyy-MM-dd&apos;T&apos;HH:mm:ss&quot; NOW &quot;yyyy-MM-dd&apos;T&apos;HH:mm:ss&quot; FORMATDATETIME CONCAT</formulaConverted>
+        <formulaExpression>CONCAT(WorkerPersonalDetails:PSS_SI_v1_FirstName,&quot;_&quot;, WorkerPersonalDetails:PSS_SI_v1_LastName,&quot;_&quot;,FORMATDATETIME(NOW(&quot;yyyy-MM-dd&apos;T&apos;HH:mm:ss&quot;),&quot;yyyy-MM-dd&apos;T&apos;HH:mm:ss&quot;)))</formulaExpression>
+        <formulaResultPath>WorkersPersonalDetails:Name</formulaResultPath>
+        <formulaSequence>1.0</formulaSequence>
+        <globalKey>PSSSocInsCreateClaim0825589129334956</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>PSSSocInsCreateClaim</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <defaultValue>Workers&apos; Compensation</defaultValue>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>PSSSocInsCreateClaimCustom9785</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>PSSSocInsCreateClaim</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>ClaimType</outputFieldName>
+        <outputObjectName>Claim</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>PSSSocInsCreateClaim7719883170506752</globalKey>
+        <inputFieldName>WorkersPersonalDetails:Name</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>PSSSocInsCreateClaim</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Name</outputFieldName>
+        <outputObjectName>Claim</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <outputType>SObject</outputType>
+    <previewJsonData>{
+  &quot;WorkerPersonalDetails&quot; : {
+    &quot;PSS_SI_v1_City&quot; : &quot;asdfasd&quot;,
+    &quot;PSS_SI_v1_Address&quot; : &quot;tesafsd&quot;,
+    &quot;PSS_SI_v1_Gender&quot; : &quot;Male&quot;,
+    &quot;PSS_SI_v1_ZipCode&quot; : &quot;234543&quot;,
+    &quot;PSS_SI_v1_State&quot; : &quot;Hasdf&quot;,
+    &quot;PSS_SI_v1_Country&quot; : &quot;India&quot;,
+    &quot;PSS_SI_v1_Email&quot; : &quot;abc@gmail.com&quot;,
+    &quot;PSS_SI_v1_FirstName&quot; : &quot;tesadf&quot;,
+    &quot;PSS_SI_v1_CellPhoneNumber&quot; : &quot;1234543234&quot;,
+    &quot;PSS_SI_v1_DateOfBirth&quot; : &quot;2024-02-01&quot;,
+    &quot;PSS_SI_v1_HomeTelephoneNumber&quot; : &quot;1234543343&quot;,
+    &quot;PSS_SI_v1_LastName&quot; : &quot;asdf&quot;
+  }
+}</previewJsonData>
+    <processSuperBulk>false</processSuperBulk>
+    <responseCacheTtlMinutes>0.0</responseCacheTtlMinutes>
+    <rollbackOnError>true</rollbackOnError>
+    <sourceObject>json</sourceObject>
+    <sourceObjectDefault>false</sourceObjectDefault>
+    <synchronousProcessThreshold>0.0</synchronousProcessThreshold>
+    <type>Load</type>
+    <uniqueName>PSSSocInsCreateClaim_1</uniqueName>
+    <versionNumber>1.0</versionNumber>
+    <xmlDeclarationRemoved>false</xmlDeclarationRemoved>
+</OmniDataTransform>

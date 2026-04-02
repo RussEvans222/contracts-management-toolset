@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OmniDataTransform xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <assignmentRulesUsed>false</assignmentRulesUsed>
+    <deletedOnSuccess>false</deletedOnSuccess>
+    <errorIgnored>false</errorIgnored>
+    <expectedOutputJson>{
+  &quot;timeStamp&quot; : &quot;2023-05-31T12:01:23.209Z&quot;,
+  &quot;userProfile&quot; : &quot;System Administrator&quot;,
+  &quot;userTimeZoneName&quot; : &quot;America/Los_Angeles&quot;,
+  &quot;userTimeZone&quot; : &quot;-420&quot;,
+  &quot;userCurrencyCode&quot; : &quot;USD&quot;,
+  &quot;userName&quot; : &quot;jeremy.blankenship@gpssummer23.dev&quot;,
+  &quot;userId&quot; : &quot;0054S0000037D4jQAE&quot;,
+  &quot;omniProcessId&quot; : &quot;0jN4S000000H0dbUAC&quot;,
+  &quot;HeadOfHouseholdDetails&quot; : {
+    &quot;PSS_BM_v2_HeadOfHouseholdFirstName&quot; : &quot;r&quot;,
+    &quot;PSS_BM_v2_HeadOfHouseholdLastName&quot; : &quot;r&quot;,
+    &quot;PSS_BM_v2_HeadOfHouseholdEmail&quot; : &quot;j@j.com&quot;,
+    &quot;PSS_BM_v2_HeadOfHouseholdPhoneNumber&quot; : &quot;3939393939&quot;,
+    &quot;PSS_BM_v2_HeadOfHouseholdCellNumber&quot; : &quot;3939393939&quot;,
+    &quot;PSS_BM_v2_HeadOfHouseholdAddress&quot; : &quot;123 Main St&quot;,
+    &quot;PSS_BM_v2_HeadOfHouseholdCity&quot; : &quot;Jers&quot;,
+    &quot;PSS_BM_v2_HeadOfHouseholdState&quot; : &quot;NJ&quot;,
+    &quot;PSS_BM_v2_HeadOfHouseholdZipCode&quot; : &quot;39393&quot;,
+    &quot;PSS_BM_v2_HeadOfHouseholdCounty&quot; : &quot;USA&quot;
+  },
+  &quot;HouseholdInformation&quot; : {
+    &quot;PSS_BM_v2_ProgramList&quot; : &quot;General Assistance&quot;,
+    &quot;PSS_BM_v2_AreThereChildrenInTheHousehold&quot; : true,
+    &quot;PSS_BM_v2_AreThereElderlyHouseholdMembers&quot; : false,
+    &quot;PSS_BM_v2_HouseholdSize&quot; : 1,
+    &quot;PSS_BM_v2_AreThereDisabledHouseholdMembers&quot; : false,
+    &quot;MinimumHouseholdMemberDetailsValidation&quot; : null,
+    &quot;MaximumHouseholdMemberDetailsValidation&quot; : null,
+    &quot;PSS_BM_v2_HouseholdMemberDetails&quot; : {
+      &quot;PSS_BM_v2_Age&quot; : 0,
+      &quot;PSS_BM_v2_HouseholdMemberName&quot; : &quot;a a&quot;,
+      &quot;PSS_BM_v2_HouseholdMemberFirstName&quot; : &quot;a&quot;,
+      &quot;PSS_BM_v2_HouseholdMemberLastName&quot; : &quot;a&quot;,
+      &quot;PSS_BM_v2_Relationship&quot; : &quot;Daughter&quot;,
+      &quot;PSS_BM_v2_DateOfBirth&quot; : &quot;2023-05-03&quot;,
+      &quot;PSS_BM_v2_GradeCompleted&quot; : &quot;10&quot;,
+      &quot;PSS_BM_v2_Race&quot; : &quot;BL&quot;,
+      &quot;PSS_BM_v2_Ethnicity&quot; : &quot;NH&quot;,
+      &quot;PSS_BM_v2_IsDisabled&quot; : &quot;No&quot;,
+      &quot;PSS_BM_v2_USCitizen&quot; : &quot;No&quot;,
+      &quot;PSS_BM_v2_Gender&quot; : &quot;F&quot;
+    }
+  },
+  &quot;Income&quot; : { },
+  &quot;Expenses&quot; : { },
+  &quot;HousingAndHeating&quot; : { },
+  &quot;Acknowledgement&quot; : { },
+  &quot;ApplicationReview&quot; : { },
+  &quot;sInstanceId&quot; : &quot;0kT4S000000CcvVUAS&quot;
+}</expectedOutputJson>
+    <fieldLevelSecurityEnabled>false</fieldLevelSecurityEnabled>
+    <inputType>JSON</inputType>
+    <isManagedUsingStdDesigner>false</isManagedUsingStdDesigner>
+    <name>DRGetHouseholdBenefitsAssessment</name>
+    <nullInputsIncludedInOutput>false</nullInputsIncludedInOutput>
+    <omniDataTransformItem>
+        <defaultValue>High School</defaultValue>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRGetHouseholdBenefitsAssessmentCustom5151</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRGetHouseholdBenefitsAssessment</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>HoldHofH:PSS_BM_v5_HouseholdMemberDetails:PSS_BM_v5_GradeCompleted</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRGetHouseholdBenefitsAssessmentCustom2555</globalKey>
+        <inputFieldName>HeadOfHousehold:FirstName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRGetHouseholdBenefitsAssessment</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>HoldHofH:PSS_BM_v5_HouseholdMemberDetails:PSS_BM_v5_HouseholdMemberFirstName</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRGetHouseholdBenefitsAssessmentCustom0jI4S000000GxO0UAKItem13</globalKey>
+        <inputFieldName>HeadOfHousehold:MailingCity</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRGetHouseholdBenefitsAssessment</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>HeadOfHouseholdDetails:PSS_BM_v5_HeadOfHouseholdCity</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <filterValue>HeadOfHousehold:AccountId</filterValue>
+        <globalKey>DRGetHouseholdBenefitsAssessmentCustom0jI4S000000GxO0UAKItem1</globalKey>
+        <inputFieldName>Id</inputFieldName>
+        <inputObjectName>Account</inputObjectName>
+        <inputObjectQuerySequence>3.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRGetHouseholdBenefitsAssessment</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>HouseholdAccount</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRGetHouseholdBenefitsAssessmentCustom1496</globalKey>
+        <inputFieldName>HeadOfHousehold:MailingCity</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRGetHouseholdBenefitsAssessment</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>HeadOfHouseholdDetails:PSS_BM_v5_HeadOfHouseholdCounty</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <filterValue>HouseholdAccount:Id</filterValue>
+        <globalKey>DRGetHouseholdBenefitsAssessmentCustom0jI4S000000GxO0UAKItem2</globalKey>
+        <inputFieldName>AccountId</inputFieldName>
+        <inputObjectName>AccountContactRelation</inputObjectName>
+        <inputObjectQuerySequence>4.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRGetHouseholdBenefitsAssessment</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>HouseholdMember</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRGetHouseholdBenefitsAssessmentCustom0jI4S000000GxO0UAKItem12</globalKey>
+        <inputFieldName>HeadOfHousehold:MobilePhone</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRGetHouseholdBenefitsAssessment</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>HeadOfHouseholdDetails:PSS_BM_v5_HeadOfHouseholdCellNumber</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRGetHouseholdBenefitsAssessmentCustom0jI4S000000GxO0UAKItem14</globalKey>
+        <inputFieldName>HeadOfHousehold:MailingState</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRGetHouseholdBenefitsAssessment</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>HeadOfHouseholdDetails:PSS_BM_v5_HeadOfHouseholdState</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <filterValue>User:ContactId</filterValue>
+        <globalKey>DRGetHouseholdBenefitsAssessmentCustom0jI4S000000GxO0UAKItem3</globalKey>
+        <inputFieldName>Id</inputFieldName>
+        <inputObjectName>Contact</inputObjectName>
+        <inputObjectQuerySequence>2.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRGetHouseholdBenefitsAssessment</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>HeadOfHousehold</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRGetHouseholdBenefitsAssessmentCustom5310</globalKey>
+        <inputFieldName>HouseholdMember:Contact.LastName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRGetHouseholdBenefitsAssessment</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>HoldHouseholdInformation:PSS_BM_v5_HouseholdMemberDetails:PSS_BM_v5_HouseholdMemberLastName</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRGetHouseholdBenefitsAssessmentCustom5611</globalKey>
+        <inputFieldName>HeadOfHousehold:Birthdate</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRGetHouseholdBenefitsAssessment</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>HeaderOfHouseholdDetails:HeadOfHouseholdBirthDate</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <defaultValue>Yes</defaultValue>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRGetHouseholdBenefitsAssessmentCustom4113</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRGetHouseholdBenefitsAssessment</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>HoldHofH:PSS_BM_v5_HouseholdMemberDetails:PSS_BM_v5_USCitizen</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <defaultValue>Self</defaultValue>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRGetHouseholdBenefitsAssessmentCustom9178</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRGetHouseholdBenefitsAssessment</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>HoldHofH:PSS_BM_v5_HouseholdMemberDetails:PSS_BM_v5_Relationship</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <filterValue>userId</filterValue>
+        <globalKey>DRGetHouseholdBenefitsAssessmentCustom0jI4S000000GxO0UAKItem0</globalKey>
+        <inputFieldName>Id</inputFieldName>
+        <inputObjectName>User</inputObjectName>
+        <inputObjectQuerySequence>1.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRGetHouseholdBenefitsAssessment</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>User</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRGetHouseholdBenefitsAssessmentCustom404</globalKey>
+        <inputFieldName>HeadOfHousehold:Gender</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRGetHouseholdBenefitsAssessment</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>HoldHofH:PSS_BM_v5_HouseholdMemberDetails:PSS_BM_v5_Gender</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{
+  &quot;Female&quot; : &quot;F&quot;,
+  &quot;Male&quot; : &quot;M&quot;
+}</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRGetHouseholdBenefitsAssessmentCustom0jI4S000000GxO0UAKItem15</globalKey>
+        <inputFieldName>HeadOfHousehold:FirstName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRGetHouseholdBenefitsAssessment</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>HeadOfHouseholdDetails:PSS_BM_v5_HeadOfHouseholdFirstName</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRGetHouseholdBenefitsAssessmentCustom0jI4S000000GxO0UAKItem11</globalKey>
+        <inputFieldName>HeadOfHousehold:Phone</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRGetHouseholdBenefitsAssessment</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>HeadOfHouseholdDetails:PSS_BM_v5_HeadOfHouseholdPhoneNumber</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <defaultValue>Yes</defaultValue>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRGetHouseholdBenefitsAssessmentCustom1382</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRGetHouseholdBenefitsAssessment</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>HoldHouseholdInformation:PSS_BM_v5_HouseholdMemberDetails:PSS_BM_v5_USCitizen</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRGetHouseholdBenefitsAssessmentCustom0jI4S000000GxO0UAKItem7</globalKey>
+        <inputFieldName>HouseholdMember:Contact.Gender</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRGetHouseholdBenefitsAssessment</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>HoldHouseholdInformation:PSS_BM_v5_HouseholdMemberDetails:PSS_BM_v5_Gender</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{
+  &quot;Female&quot; : &quot;F&quot;,
+  &quot;Male&quot; : &quot;M&quot;
+}</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <defaultValue>High School</defaultValue>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRGetHouseholdBenefitsAssessmentCustom9305</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRGetHouseholdBenefitsAssessment</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>HoldHouseholdInformation:PSS_BM_v5_HouseholdMemberDetails:PSS_BM_v5_GradeCompleted</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRGetHouseholdBenefitsAssessmentCustom0jI4S000000GxO0UAKItem9</globalKey>
+        <inputFieldName>HouseholdMember:Contact.FirstName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRGetHouseholdBenefitsAssessment</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>HoldHouseholdInformation:PSS_BM_v5_HouseholdMemberDetails:PSS_BM_v5_HouseholdMemberFirstName</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRGetHouseholdBenefitsAssessmentCustom7276</globalKey>
+        <inputFieldName>HeadOfHousehold:LastName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRGetHouseholdBenefitsAssessment</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>HoldHofH:PSS_BM_v5_HouseholdMemberDetails:PSS_BM_v5_HouseholdMemberLastName</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRGetHouseholdBenefitsAssessmentCustom0jI4S000000GxO0UAKItem5</globalKey>
+        <inputFieldName>HouseholdMember:Roles</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRGetHouseholdBenefitsAssessment</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>HoldHouseholdInformation:PSS_BM_v5_HouseholdMemberDetails:PSS_BM_v5_Relationship</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRGetHouseholdBenefitsAssessmentCustom0jI4S000000GxO0UAKItem4</globalKey>
+        <inputFieldName>HeadOfHousehold:MailingPostalCode</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRGetHouseholdBenefitsAssessment</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>HeadOfHouseholdDetails:PSS_BM_v5_HeadOfHouseholdZipCode</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRGetHouseholdBenefitsAssessmentCustom2967</globalKey>
+        <inputFieldName>HeadOfHousehold:Birthdate</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRGetHouseholdBenefitsAssessment</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>HoldHofH:PSS_BM_v5_HouseholdMemberDetails:PSS_BM_v5_DateOfBirth</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRGetHouseholdBenefitsAssessmentCustom0jI4S000000GxO0UAKItem6</globalKey>
+        <inputFieldName>HeadOfHousehold:Email</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRGetHouseholdBenefitsAssessment</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>HeadOfHouseholdDetails:PSS_BM_v5_HeadOfHouseholdEmail</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <defaultValue>No</defaultValue>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRGetHouseholdBenefitsAssessmentCustom5598</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRGetHouseholdBenefitsAssessment</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>HoldHouseholdInformation:PSS_BM_v5_HouseholdMemberDetails:PSS_BM_v5_IsDisabled</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRGetHouseholdBenefitsAssessmentCustom2064</globalKey>
+        <inputFieldName>HeadOfHousehold:LastName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRGetHouseholdBenefitsAssessment</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>HeadOfHouseholdDetails:PSS_BM_v5_HeadOfHouseholdLastName</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRGetHouseholdBenefitsAssessmentCustom0jI4S000000GxO0UAKItem10</globalKey>
+        <inputFieldName>HeadOfHousehold:MailingStreet</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRGetHouseholdBenefitsAssessment</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>HeadOfHouseholdDetails:PSS_BM_v5_HeadOfHouseholdAddress</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <defaultValue>No</defaultValue>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRGetHouseholdBenefitsAssessmentCustom2041</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRGetHouseholdBenefitsAssessment</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>HoldHofH:PSS_BM_v5_HouseholdMemberDetails:PSS_BM_v5_IsDisabled</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRGetHouseholdBenefitsAssessmentCustom0jI4S000000GxO0UAKItem8</globalKey>
+        <inputFieldName>HouseholdMember:Contact.Birthdate</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRGetHouseholdBenefitsAssessment</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>HoldHouseholdInformation:PSS_BM_v5_HouseholdMemberDetails:PSS_BM_v5_DateOfBirth</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <outputType>JSON</outputType>
+    <previewJsonData>{
+  &quot;userId&quot; : &quot;0054S000003W9d8QAC&quot;
+}</previewJsonData>
+    <processSuperBulk>false</processSuperBulk>
+    <responseCacheTtlMinutes>0.0</responseCacheTtlMinutes>
+    <rollbackOnError>false</rollbackOnError>
+    <sourceObject>json</sourceObject>
+    <sourceObjectDefault>false</sourceObjectDefault>
+    <synchronousProcessThreshold>0.0</synchronousProcessThreshold>
+    <type>Extract</type>
+    <uniqueName>DRGetHouseholdBenefitsAssessment_1</uniqueName>
+    <versionNumber>1.0</versionNumber>
+    <xmlDeclarationRemoved>false</xmlDeclarationRemoved>
+</OmniDataTransform>

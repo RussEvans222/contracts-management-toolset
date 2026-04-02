@@ -1,0 +1,716 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OmniDataTransform xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <assignmentRulesUsed>false</assignmentRulesUsed>
+    <deletedOnSuccess>false</deletedOnSuccess>
+    <errorIgnored>false</errorIgnored>
+    <expectedInputJson>{
+  &quot;WorkerPersonalDetails&quot; : {
+    &quot;PSS_SI_v1_FirstName&quot; : &quot;&quot;,
+    &quot;PSS_SI_v1_LastName&quot; : &quot;&quot;,
+    &quot;PSS_SI_v1_DateOfBirth&quot; : &quot;&quot;,
+    &quot;PSS_SI_v1_Gender&quot; : &quot;&quot;,
+    &quot;PSS_SI_v1_HomeTelephoneNumber&quot; : &quot;&quot;,
+    &quot;PSS_SI_v1_CellPhoneNumber&quot; : &quot;&quot;,
+    &quot;PSS_SI_v1_Email&quot; : &quot;&quot;,
+    &quot;PSS_SI_v1_Address&quot; : &quot;&quot;,
+    &quot;PSS_SI_v1_Country&quot; : &quot;&quot;,
+    &quot;PSS_SI_v1_State&quot; : &quot;&quot;,
+    &quot;PSS_SI_v1_City&quot; : &quot;&quot;,
+    &quot;PSS_SI_v1_ZipCode&quot; : &quot;&quot;
+  },
+  &quot;IncidentWorkersInjuryDetails&quot; : {
+    &quot;PSS_SI_v1_NatureOfInjury&quot; : &quot;&quot;,
+    &quot;PSS_SI_v1_TakingTimeOff&quot; : &quot;&quot;,
+    &quot;PSS_SI_v1_MedicalTreatment&quot; : &quot;&quot;,
+    &quot;PSS_SI_v1_HowYouInjured&quot; : &quot;&quot;,
+    &quot;PSS_SI_v1_EmployerResponsibleForWorkplace&quot; : &quot;&quot;,
+    &quot;PSS_SI_v1_DateTimeForInjury&quot; : &quot;&quot;,
+    &quot;PSS_SI_v1_WorkStoppedDateTime&quot; : &quot;&quot;,
+    &quot;PSS_SI_v1_ReportDateTimeForInjury&quot; : &quot;&quot;
+  },
+  &quot;WorkersEmploymentDetails&quot; : {
+    &quot;PSS_SI_v1_Occupation&quot; : &quot;&quot;,
+    &quot;PSS_SI_v1_NameOfEmployer&quot; : &quot;&quot;,
+    &quot;PSS_SI_v1_AreYouStillEmployed&quot; : &quot;&quot;,
+    &quot;PSS_SI_v1_EmploymentType&quot; : &quot;&quot;,
+    &quot;PSS_SI_v1_EmploymentStartDate&quot; : &quot;&quot;,
+    &quot;PSS_SI_v1_IncomeFrequency&quot; : &quot;&quot;,
+    &quot;PSS_SI_v1_Income&quot; : 13512
+  },
+  &quot;CertificateOfCapacity&quot; : {
+    &quot;PSS_SI_v1_InjuryType&quot; : null,
+    &quot;PSS_SI_v1_WorkerCapacity&quot; : null,
+    &quot;PSS_SI_v1_FromDate&quot; : &quot;&quot;,
+    &quot;PSS_SI_v1_ToDate&quot; : &quot;&quot;,
+    &quot;PSS_SI_v1_ProviderName&quot; : &quot;&quot;,
+    &quot;PSS_SI_v1_ProviderContactNumber&quot; : &quot;&quot;,
+    &quot;PSS_SI_v1_ExaminationDate&quot; : &quot;&quot;,
+    &quot;PSS_SI_v1_SignedDate&quot; : &quot;&quot;,
+    &quot;PSS_SI_v1_IssuedDate&quot; : &quot;&quot;
+  },
+  &quot;Acknowledgment&quot; : {
+    &quot;PSS_SI_v1_Date&quot; : &quot;&quot;,
+    &quot;PSS_SI_v1_Signature&quot; : &quot;&quot;
+  }
+}</expectedInputJson>
+    <fieldLevelSecurityEnabled>false</fieldLevelSecurityEnabled>
+    <inputType>JSON</inputType>
+    <isManagedUsingStdDesigner>false</isManagedUsingStdDesigner>
+    <name>PSSSocInsSaveAssessmentResponsesToPDF</name>
+    <nullInputsIncludedInOutput>false</nullInputsIncludedInOutput>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>PSSSocInsSaveAssessmentResponsesToPDFCustom0jISG0000000jef2AAItem21</globalKey>
+        <inputFieldName>WorkerPersonalDetails:PSS_SI_v1_Country</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>PSSSocInsSaveAssessmentResponsesToPDF</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Country</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>PSSSocInsSaveAssessmentResponsesToPDFCustom0jISG0000000jef2AAItem28</globalKey>
+        <inputFieldName>WorkersEmploymentDetails:PSS_SI_v1_IncomeFrequency</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>PSSSocInsSaveAssessmentResponsesToPDF</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>IncomeFrequency</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>PSSSocInsSaveAssessmentResponsesToPDFCustom0jISG0000000jef2AAItem26</globalKey>
+        <inputFieldName>WorkersEmploymentDetails:PSS_SI_v1_EmploymentStartDate</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>PSSSocInsSaveAssessmentResponsesToPDF</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>EmploymentStartDate</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>PSSSocInsSaveAssessmentResponsesToPDFCustom0jISG0000000jef2AAItem20</globalKey>
+        <inputFieldName>Acknowledgment:PSS_SI_v1_Signature</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>PSSSocInsSaveAssessmentResponsesToPDF</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Signature</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>PSSSocInsSaveAssessmentResponsesToPDFCustom0jISG0000000jef2AAItem6</globalKey>
+        <inputFieldName>IncidentWorkersInjuryDetails:PSS_SI_v1_DateTimeForInjury</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>PSSSocInsSaveAssessmentResponsesToPDF</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>InjuryDatetime</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>PSSSocInsSaveAssessmentResponsesToPDFCustom0jISG0000000jef2AAItem25</globalKey>
+        <inputFieldName>WorkerPersonalDetails:PSS_SI_v1_ZipCode</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>PSSSocInsSaveAssessmentResponsesToPDF</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>ZipCode</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>PSSSocInsSaveAssessmentResponsesToPDFCustom3390</globalKey>
+        <inputFieldName>IncidentWorkersInjuryDetails:EmployerAtTimeofInjuryTypeAHead-Block:PSS_SI_v1_EmployerResponsibleForWorkplace</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>PSSSocInsSaveAssessmentResponsesToPDF</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>InjuryTimeEmployer</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>PSSSocInsSaveAssessmentResponsesToPDFCustom0jISG0000000jef2AAItem19</globalKey>
+        <inputFieldName>CertificateOfCapacity:PSS_SI_v1_IssuedDate</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>PSSSocInsSaveAssessmentResponsesToPDF</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>IssuedDate</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>PSSSocInsSaveAssessmentResponsesToPDFCustom0jISG0000000jef2AAItem10</globalKey>
+        <inputFieldName>CertificateOfCapacity:PSS_SI_v1_WorkerCapacity</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>PSSSocInsSaveAssessmentResponsesToPDF</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>WorkCapacity</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>PSSSocInsSaveAssessmentResponsesToPDFCustom0jISG0000000jef2AAItem11</globalKey>
+        <inputFieldName>WorkerPersonalDetails:PSS_SI_v1_Address</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>PSSSocInsSaveAssessmentResponsesToPDF</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Address</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>PSSSocInsSaveAssessmentResponsesToPDFCustom0jISG0000000jef2AAItem12</globalKey>
+        <inputFieldName>CertificateOfCapacity:PSS_SI_v1_FromDate</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>PSSSocInsSaveAssessmentResponsesToPDF</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>FromDate</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>PSSSocInsSaveAssessmentResponsesToPDFCustom0jISG0000000jef2AAItem13</globalKey>
+        <inputFieldName>CertificateOfCapacity:PSS_SI_v1_ToDate</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>PSSSocInsSaveAssessmentResponsesToPDF</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>ToDate</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>PSSSocInsSaveAssessmentResponsesToPDFCustom0jISG0000000jef2AAItem7</globalKey>
+        <inputFieldName>IncidentWorkersInjuryDetails:PSS_SI_v1_WorkStoppedDateTime</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>PSSSocInsSaveAssessmentResponsesToPDF</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>StoppedWorkDatetime</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>PSSSocInsSaveAssessmentResponsesToPDFCustom0jISG0000000jef2AAItem29</globalKey>
+        <inputFieldName>WorkersEmploymentDetails:PSS_SI_v1_Occupation</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>PSSSocInsSaveAssessmentResponsesToPDF</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Occupation</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>PSSSocInsSaveAssessmentResponsesToPDFCustom0jISG0000000jef2AAItem0</globalKey>
+        <inputFieldName>WorkersEmploymentDetails:EmployerTypeAhead-Block:PSS_SI_v1_NameOfEmployer</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>PSSSocInsSaveAssessmentResponsesToPDF</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Employer</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>PSSSocInsSaveAssessmentResponsesToPDFCustom0jISG0000000jef2AAItem16</globalKey>
+        <inputFieldName>CertificateOfCapacity:PSS_SI_v1_ProviderContactNumber</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>PSSSocInsSaveAssessmentResponsesToPDF</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>HealthcareProviderPhone</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>PSSSocInsSaveAssessmentResponsesToPDFCustom0jISG0000000jef2AAItem2</globalKey>
+        <inputFieldName>Acknowledgment:PSS_SI_v1_Date</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>PSSSocInsSaveAssessmentResponsesToPDF</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Date</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>PSSSocInsSaveAssessmentResponsesToPDFCustom0jISG0000000jef2AAItem35</globalKey>
+        <inputFieldName>WorkerPersonalDetails:PSS_SI_v1_Email</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>PSSSocInsSaveAssessmentResponsesToPDF</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Email</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>PSSSocInsSaveAssessmentResponsesToPDFCustom0jISG0000000jef2AAItem1</globalKey>
+        <inputFieldName>IncidentWorkersInjuryDetails:PSS_SI_v1_NatureOfInjury</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>PSSSocInsSaveAssessmentResponsesToPDF</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>NatureOfInjury</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>PSSSocInsSaveAssessmentResponsesToPDFCustom0jISG0000000jef2AAItem37</globalKey>
+        <inputFieldName>IncidentWorkersInjuryDetails:PSS_SI_v1_MedicalTreatment</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>PSSSocInsSaveAssessmentResponsesToPDF</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>MedicalTreatment</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>PSSSocInsSaveAssessmentResponsesToPDFCustom0jISG0000000jef2AAItem14</globalKey>
+        <inputFieldName>CertificateOfCapacity:HealthcareProviderTypeAhead-Block:PSS_SI_v1_ProviderName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>PSSSocInsSaveAssessmentResponsesToPDF</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>HealthcareProvider</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>PSSSocInsSaveAssessmentResponsesToPDFCustom0jISG0000000jef2AAItem15</globalKey>
+        <inputFieldName>WorkersEmploymentDetails:PSS_SI_v1_EmploymentType</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>PSSSocInsSaveAssessmentResponsesToPDF</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>EmploymentType</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>PSSSocInsSaveAssessmentResponsesToPDFCustom0jISG0000000jef2AAItem32</globalKey>
+        <inputFieldName>WorkerPersonalDetails:PSS_SI_v1_DateOfBirth</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>PSSSocInsSaveAssessmentResponsesToPDF</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>DateOfBirth</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>PSSSocInsSaveAssessmentResponsesToPDFCustom0jISG0000000jef2AAItem18</globalKey>
+        <inputFieldName>CertificateOfCapacity:PSS_SI_v1_SignedDate</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>PSSSocInsSaveAssessmentResponsesToPDF</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>SignedDate</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>PSSSocInsSaveAssessmentResponsesToPDFCustom0jISG0000000jef2AAItem17</globalKey>
+        <inputFieldName>CertificateOfCapacity:PSS_SI_v1_ExaminationDate</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>PSSSocInsSaveAssessmentResponsesToPDF</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>ExaminationDate</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>PSSSocInsSaveAssessmentResponsesToPDFCustom0jISG0000000jef2AAItem34</globalKey>
+        <inputFieldName>WorkerPersonalDetails:PSS_SI_v1_CellPhoneNumber</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>PSSSocInsSaveAssessmentResponsesToPDF</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>MobilePhone</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>PSSSocInsSaveAssessmentResponsesToPDFCustom0jISG0000000jef2AAItem3</globalKey>
+        <inputFieldName>WorkersEmploymentDetails:PSS_SI_v1_AreYouStillEmployed</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>PSSSocInsSaveAssessmentResponsesToPDF</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>StillAtCurrentEmployer</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>PSSSocInsSaveAssessmentResponsesToPDFCustom0jISG0000000jef2AAItem4</globalKey>
+        <inputFieldName>IncidentWorkersInjuryDetails:PSS_SI_v1_HowYouInjured</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>PSSSocInsSaveAssessmentResponsesToPDF</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>IncidentDetails</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>PSSSocInsSaveAssessmentResponsesToPDFCustom0jISG0000000jef2AAItem31</globalKey>
+        <inputFieldName>WorkerPersonalDetails:PSS_SI_v1_FirstName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>PSSSocInsSaveAssessmentResponsesToPDF</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>FirstName</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>PSSSocInsSaveAssessmentResponsesToPDFCustom0jISG0000000jef2AAItem36</globalKey>
+        <inputFieldName>IncidentWorkersInjuryDetails:PSS_SI_v1_TakingTimeOff</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>PSSSocInsSaveAssessmentResponsesToPDF</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>StoppedWork</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>PSSSocInsSaveAssessmentResponsesToPDFCustom0jISG0000000jef2AAItem33</globalKey>
+        <inputFieldName>WorkerPersonalDetails:PSS_SI_v1_Gender</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>PSSSocInsSaveAssessmentResponsesToPDF</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Gender</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>PSSSocInsSaveAssessmentResponsesToPDFCustom0jISG0000000jef2AAItem8</globalKey>
+        <inputFieldName>IncidentWorkersInjuryDetails:PSS_SI_v1_ReportDateTimeForInjury</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>PSSSocInsSaveAssessmentResponsesToPDF</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>ReportInjuryDatetime</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>PSSSocInsSaveAssessmentResponsesToPDFCustom0jISG0000000jef2AAItem27</globalKey>
+        <inputFieldName>WorkersEmploymentDetails:PSS_SI_v1_Income</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>PSSSocInsSaveAssessmentResponsesToPDF</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Income</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>PSSSocInsSaveAssessmentResponsesToPDFCustom0jISG0000000jef2AAItem30</globalKey>
+        <inputFieldName>WorkerPersonalDetails:PSS_SI_v1_HomeTelephoneNumber</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>PSSSocInsSaveAssessmentResponsesToPDF</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>HomePhone</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>PSSSocInsSaveAssessmentResponsesToPDFCustom0jISG0000000jef2AAItem9</globalKey>
+        <inputFieldName>CertificateOfCapacity:PSS_SI_v1_InjuryType</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>PSSSocInsSaveAssessmentResponsesToPDF</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>InjuryType</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>PSSSocInsSaveAssessmentResponsesToPDFCustom0jISG0000000jef2AAItem22</globalKey>
+        <inputFieldName>WorkerPersonalDetails:PSS_SI_v1_LastName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>PSSSocInsSaveAssessmentResponsesToPDF</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>LastName</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>PSSSocInsSaveAssessmentResponsesToPDFCustom0jISG0000000jef2AAItem23</globalKey>
+        <inputFieldName>WorkerPersonalDetails:PSS_SI_v1_State</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>PSSSocInsSaveAssessmentResponsesToPDF</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>State</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>PSSSocInsSaveAssessmentResponsesToPDFCustom0jISG0000000jef2AAItem24</globalKey>
+        <inputFieldName>WorkerPersonalDetails:PSS_SI_v1_City</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>PSSSocInsSaveAssessmentResponsesToPDF</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>City</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <outputType>PDF</outputType>
+    <previewJsonData>{
+  &quot;WorkersEmploymentDetails&quot; : {
+    &quot;PSS_SI_v1_UploadPayslips&quot; : null,
+    &quot;PSS_SI_v1_NameOfEmployer&quot; : &quot;salesforce&quot;,
+    &quot;PSS_SI_v1_AreYouStillEmployed&quot; : &quot;No&quot;,
+    &quot;PSS_SI_v1_EmploymentType&quot; : &quot;Full Time&quot;,
+    &quot;PSS_SI_v1_EmploymentStartDate&quot; : &quot;2024-03-07&quot;,
+    &quot;PSS_SI_v1_IncomeFrequency&quot; : &quot;Monthly&quot;,
+    &quot;PSS_SI_v1_Income&quot; : 34534
+  },
+  &quot;CertificateOfCapacity&quot; : {
+    &quot;PSS_SI_v1_UploadDocument&quot; : null
+  },
+  &quot;ClaimValues&quot; : null,
+  &quot;omniscriptId&quot; : &quot;0jNSM0000000HC92AM&quot;,
+  &quot;language&quot; : &quot;English&quot;,
+  &quot;type&quot; : &quot;SocialInsurance&quot;,
+  &quot;runMode&quot; : &quot;preview&quot;,
+  &quot;sId&quot; : &quot;0jNSM0000000HC92AM&quot;,
+  &quot;theme&quot; : &quot;lightning&quot;,
+  &quot;subType&quot; : &quot;FileClaim&quot;,
+  &quot;timeStamp&quot; : &quot;2024-03-04T12:26:30.641Z&quot;,
+  &quot;userProfile&quot; : &quot;System Administrator&quot;,
+  &quot;userTimeZoneName&quot; : &quot;America/Los_Angeles&quot;,
+  &quot;userTimeZone&quot; : &quot;-480&quot;,
+  &quot;userCurrencyCode&quot; : &quot;USD&quot;,
+  &quot;userName&quot; : &quot;epic.24c1f9d59f5d@salesforce.com&quot;,
+  &quot;userId&quot; : &quot;005SM000000ykeHYAQ&quot;,
+  &quot;omniProcessId&quot; : &quot;0jNSM0000000HC92AM&quot;,
+  &quot;localTimeZoneName&quot; : &quot;Asia/Calcutta&quot;,
+  &quot;WorkerPersonalDetails&quot; : {
+    &quot;PSS_SI_v1_FirstName&quot; : &quot;Demo &quot;,
+    &quot;PSS_SI_v1_LastName&quot; : &quot;Sprint&quot;,
+    &quot;PSS_SI_v1_DateOfBirth&quot; : &quot;2024-02-28&quot;,
+    &quot;PSS_SI_v1_Gender&quot; : &quot;Male&quot;,
+    &quot;PSS_SI_v1_Email&quot; : &quot;govind@gmail.com&quot;,
+    &quot;PSS_SI_v1_Address&quot; : &quot;ad&quot;,
+    &quot;PSS_SI_v1_City&quot; : &quot;fsad&quot;,
+    &quot;PSS_SI_v1_State&quot; : &quot;fs&quot;,
+    &quot;PSS_SI_v1_ZipCode&quot; : &quot;423543&quot;,
+    &quot;PSS_SI_v1_Country&quot; : &quot;gdfs&quot;
+  },
+  &quot;IncidentWorkersInjuryDetails&quot; : {
+    &quot;PSS_SI_v1_NatureOfInjury&quot; : null,
+    &quot;EmployerTypeAHead-Block&quot; : {
+      &quot;EmployerTypeAHead&quot; : &quot;salesforce.com&quot;,
+      &quot;PSS_SI_v1_EmployerResponsibleForWorkplace&quot; : &quot;salesforce.com&quot;,
+      &quot;PSS_SI_v1_EmployerAccountId&quot; : &quot;001SM000004dEeRYAU&quot;
+    },
+    &quot;PSS_SI_v1_DateTimeForInjury&quot; : &quot;2024-02-25T06:30:00.000Z&quot;,
+    &quot;PSS_SI_v1_ReportDateTimeForInjury&quot; : &quot;2024-02-25T06:30:00.000Z&quot;
+  },
+  &quot;sInstanceId&quot; : &quot;0kTSM0000000JvV2AU&quot;,
+  &quot;DRId_PreliminaryApplicationRef&quot; : &quot;0goSM0000000EUPYA2&quot;,
+  &quot;Acknowledgment&quot; : {
+    &quot;PSS_SI_v1_Date&quot; : &quot;2024-03-03T18:30:00.000Z&quot;,
+    &quot;PSS_SI_v1_Signature&quot; : &quot;rwe&quot;
+  },
+  &quot;Review&quot; : {
+    &quot;ReviewWorkersPersonalDetails&quot; : {
+      &quot;PSS_SI_v1_ReviewFirstName&quot; : &quot;Demo &quot;,
+      &quot;PSS_SI_v1_ReviewLastName&quot; : &quot;Sprint&quot;,
+      &quot;PSS_SI_v1_ReviewDateOfBirth&quot; : &quot;2024-02-28T00:00:00.000Z&quot;,
+      &quot;PSS_SI_v1_ReviewGender&quot; : &quot;Male&quot;,
+      &quot;PSS_SI_v1_ReviewHomePhone&quot; : &quot;&quot;,
+      &quot;PSS_SI_v1_ReviewMobilePhone&quot; : &quot;&quot;,
+      &quot;PSS_SI_v1_ReviewEmail&quot; : &quot;govind@gmail.com&quot;,
+      &quot;PSS_SI_v1_ReviewAddress&quot; : &quot;ad&quot;,
+      &quot;PSS_SI_v1_ReviewCity&quot; : &quot;fsad&quot;,
+      &quot;PSS_SI_v1_ReviewState&quot; : &quot;fs&quot;,
+      &quot;PSS_SI_v1_ReviewZipCode&quot; : &quot;423543&quot;,
+      &quot;PSS_SI_v1_ReviewCountry&quot; : &quot;gdfs&quot;
+    },
+    &quot;ReviewIncidentAndWorkersInjuryDetails&quot; : {
+      &quot;PSS_SI_v1_ReviewTakingTimeOff&quot; : &quot;&quot;,
+      &quot;PSS_SI_v1_ReviewMedicalTreatment&quot; : &quot;&quot;,
+      &quot;PSS_SI_v1_ReviewNatureOfInjury&quot; : &quot;&quot;,
+      &quot;PSS_SI_v1_ReviewHowYouInjured&quot; : &quot;&quot;,
+      &quot;PSS_SI_v1_ReviewEmployerResponsibleForWorkplace&quot; : &quot;salesforce.com&quot;,
+      &quot;PSS_SI_v1_ReviewDateTimeForInjury&quot; : &quot;2024-2-25&quot;,
+      &quot;PSS_SI_v1_ReviewWorkStoppedDateTime&quot; : &quot;&quot;,
+      &quot;PSS_SI_v1_ReviewReportDateTimeForInjury&quot; : &quot;2024-2-25&quot;
+    },
+    &quot;ReviewWorkerEmploymentDetails&quot; : {
+      &quot;PSS_SI_v1_ReviewOccupation&quot; : &quot;&quot;,
+      &quot;PSS_SI_v1_ReviewNameOfEmployer&quot; : &quot;salesforce&quot;,
+      &quot;PSS_SI_v1_ReviewAreYouStillEmployed&quot; : &quot;No&quot;,
+      &quot;PSS_SI_v1_ReviewEmploymentType&quot; : &quot;Full Time&quot;,
+      &quot;PSS_SI_v1_ReviewEmploymentStartDate&quot; : &quot;2024-03-07&quot;,
+      &quot;PSS_SI_v1_ReviewIncomeFrequency&quot; : &quot;Monthly&quot;,
+      &quot;PSS_SI_v1_ReviewIncome&quot; : 34534
+    },
+    &quot;ReviewCertificateOfCapacity&quot; : {
+      &quot;PSS_SI_v1_ReviewInjuryType&quot; : &quot;&quot;,
+      &quot;PSS_SI_v1_ReviewWorkerCapacity&quot; : &quot;&quot;,
+      &quot;PSS_SI_v1_ReviewFromDate&quot; : &quot;&quot;,
+      &quot;PSS_SI_v1_ReviewToDate&quot; : &quot;&quot;,
+      &quot;PSS_SI_v1_ReviewProviderName&quot; : &quot;&quot;,
+      &quot;PSS_SI_v1_ReviewProviderContactNumber&quot; : &quot;&quot;,
+      &quot;PSS_SI_v1_ReviewExaminationDate&quot; : &quot;&quot;,
+      &quot;PSS_SI_v1_ReviewSignedDate&quot; : &quot;&quot;,
+      &quot;PSS_SI_v1_ReviewIssuedDate&quot; : &quot;&quot;
+    },
+    &quot;ReviewAcknowledgment&quot; : {
+      &quot;PSS_SI_v1_ReviewSignature&quot; : &quot;rwe&quot;,
+      &quot;PSS_SI_v1_ReviewDate&quot; : &quot;2024-03-03T18:30:00.000Z&quot;
+    }
+  },
+  &quot;omniScriptId&quot; : &quot;0jNSM0000000HC92AM&quot;,
+  &quot;elementName&quot; : &quot;CreateIndividualApplicationAndRelatedRecords&quot;
+}</previewJsonData>
+    <processSuperBulk>false</processSuperBulk>
+    <responseCacheTtlMinutes>0.0</responseCacheTtlMinutes>
+    <rollbackOnError>true</rollbackOnError>
+    <sourceObject>json</sourceObject>
+    <sourceObjectDefault>false</sourceObjectDefault>
+    <synchronousProcessThreshold>0.0</synchronousProcessThreshold>
+    <type>Transform</type>
+    <uniqueName>PSSSocInsSaveAssessmentResponsesToPDF_1</uniqueName>
+    <versionNumber>1.0</versionNumber>
+    <xmlDeclarationRemoved>false</xmlDeclarationRemoved>
+</OmniDataTransform>

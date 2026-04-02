@@ -1,0 +1,31 @@
+{
+  "status": 0,
+  "result": {
+    "records": [
+      {
+        "attributes": {
+          "type": "AggregateResult"
+        },
+        "Status": "In Approval Process",
+        "c": 10
+      },
+      {
+        "attributes": {
+          "type": "AggregateResult"
+        },
+        "Status": "Activated",
+        "c": 11
+      },
+      {
+        "attributes": {
+          "type": "AggregateResult"
+        },
+        "Status": "Draft",
+        "c": 9
+      }
+    ],
+    "totalSize": 3,
+    "done": true
+  },
+  "warnings": []
+}

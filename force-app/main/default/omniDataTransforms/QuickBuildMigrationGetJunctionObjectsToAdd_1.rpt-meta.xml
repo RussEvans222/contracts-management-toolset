@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OmniDataTransform xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <assignmentRulesUsed>false</assignmentRulesUsed>
+    <deletedOnSuccess>false</deletedOnSuccess>
+    <description>This converts the information store in the JSON export file into something usable by a DataRaptor.  Also filters out records not needed for insert with Junctions.</description>
+    <errorIgnored>false</errorIgnored>
+    <expectedInputJson>{
+  &quot;vlcTimeTracking&quot; : {
+    &quot;DRReserializeImport&quot; : null,
+    &quot;RemoteActionImportGetFileContents&quot; : null,
+    &quot;UploadFile&quot; : null
+  },
+  &quot;vlcPersistentComponent&quot; : { },
+  &quot;userTimeZone&quot; : null,
+  &quot;userProfile&quot; : null,
+  &quot;userName&quot; : null,
+  &quot;userId&quot; : null,
+  &quot;timeStamp&quot; : null,
+  &quot;ContextId&quot; : null,
+  &quot;UploadFile&quot; : {
+    &quot;UploadJSON&quot; : [ {
+      &quot;data&quot; : null,
+      &quot;size&quot; : null,
+      &quot;filename&quot; : null
+    } ]
+  }
+}</expectedInputJson>
+    <fieldLevelSecurityEnabled>false</fieldLevelSecurityEnabled>
+    <inputType>JSON</inputType>
+    <isManagedUsingStdDesigner>false</isManagedUsingStdDesigner>
+    <name>QuickBuildMigrationGetJunctionObjectsToAdd</name>
+    <nullInputsIncludedInOutput>false</nullInputsIncludedInOutput>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>QuickBuildMigrationGetJunctionObjectsToAdd27867249585240694</globalKey>
+        <inputFieldName>HasDefinedValues</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>QuickBuildMigrationGetJunctionObjectsToAdd</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>HasDefinedValues</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>| var:DeserializedFileContent:AssessmentIndicatorDefinition:AssessmentIndDefinedValue:ParentName ISNOTBLANK</formulaConverted>
+        <formulaExpression>ISNOTBLANK(DeserializedFileContent:AssessmentIndicatorDefinition:AssessmentIndDefinedValue:ParentName)</formulaExpression>
+        <formulaResultPath>HasDefinedValues</formulaResultPath>
+        <formulaSequence>7.0</formulaSequence>
+        <globalKey>QuickBuildMigrationGetJunctionObjectsToAdd009827817152481044</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>QuickBuildMigrationGetJunctionObjectsToAdd</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>| | var:DeserializedFileContent:RegulatoryCodeAssessmentInd LIST &apos;RegCodeAssessmentInd/\/\/==/\/\/&quot;&quot;&apos; FILTER</formulaConverted>
+        <formulaExpression>FILTER(LIST(DeserializedFileContent:RegulatoryCodeAssessmentInd), &apos;RegCodeAssessmentInd == &quot;&quot;&apos;)</formulaExpression>
+        <formulaResultPath>FilteredList2:RegCodeAssementIndToInsert</formulaResultPath>
+        <formulaSequence>4.0</formulaSequence>
+        <globalKey>QuickBuildMigrationGetJunctionObjectsToAdd2727090864302619</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>QuickBuildMigrationGetJunctionObjectsToAdd</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>| var:FilteredList ISNOTBLANK</formulaConverted>
+        <formulaExpression>ISNOTBLANK(FilteredList)</formulaExpression>
+        <formulaResultPath>HasAssessmentTaskIndJunction</formulaResultPath>
+        <formulaSequence>5.0</formulaSequence>
+        <globalKey>QuickBuildMigrationGetJunctionObjectsToAdd9529636433979503</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>QuickBuildMigrationGetJunctionObjectsToAdd</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>| &apos;InspectionTemplateUtils&apos; &apos;getAssessmentTaskIndDefinition&apos; var:DeserializedFileContent:AssessmentTaskIndDefinition:AssessmentTaskDefinitionName var:DeserializedFileContent:RegulatoryCodeAssessmentInd:AssessmentIndDefinitionName FUNCTION</formulaConverted>
+        <formulaExpression>FUNCTION(&apos;InspectionTemplateUtils&apos;,&apos;getAssessmentTaskIndDefinition&apos;,DeserializedFileContent:AssessmentTaskIndDefinition:AssessmentTaskDefinitionName,DeserializedFileContent:RegulatoryCodeAssessmentInd:AssessmentIndDefinitionName)</formulaExpression>
+        <formulaResultPath>DeserializedFileContent:AssessmentTaskIndDefinition:AssessTaskIndDefinitionName</formulaResultPath>
+        <formulaSequence>2.0</formulaSequence>
+        <globalKey>QuickBuildMigrationGetJunctionObjectsToAdd11483325231337305</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>QuickBuildMigrationGetJunctionObjectsToAdd</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>| | var:DeserializedFileContent:AssessmentTaskIndDefinition LIST &apos;AssessTaskIndDefinitionName/\/\/==/\/\/&quot;&quot;&apos; FILTER</formulaConverted>
+        <formulaExpression>FILTER(LIST(DeserializedFileContent:AssessmentTaskIndDefinition), &apos;AssessTaskIndDefinitionName == &quot;&quot;&apos;)</formulaExpression>
+        <formulaResultPath>FilteredList:AssessmentIndDefinitionsToInsert</formulaResultPath>
+        <formulaSequence>3.0</formulaSequence>
+        <globalKey>QuickBuildMigrationGetJunctionObjectsToAdd7790608044160208</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>QuickBuildMigrationGetJunctionObjectsToAdd</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>| var:FilteredList2 ISNOTBLANK</formulaConverted>
+        <formulaExpression>ISNOTBLANK(FilteredList2)</formulaExpression>
+        <formulaResultPath>HasRegulatoryIndJunction</formulaResultPath>
+        <formulaSequence>6.0</formulaSequence>
+        <globalKey>QuickBuildMigrationGetJunctionObjectsToAdd33840438074031143</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>QuickBuildMigrationGetJunctionObjectsToAdd</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>| &apos;InspectionTemplateUtils&apos; &apos;getRegCodeAssessmentInd&apos; var:DeserializedFileContent:RegulatoryCodeAssessmentInd:RegulatoryCodeName var:DeserializedFileContent:RegulatoryCodeAssessmentInd:AssessmentIndDefinitionName FUNCTION</formulaConverted>
+        <formulaExpression>FUNCTION(&apos;InspectionTemplateUtils&apos;,&apos;getRegCodeAssessmentInd&apos;,DeserializedFileContent:RegulatoryCodeAssessmentInd:RegulatoryCodeName,DeserializedFileContent:RegulatoryCodeAssessmentInd:AssessmentIndDefinitionName)</formulaExpression>
+        <formulaResultPath>DeserializedFileContent:RegulatoryCodeAssessmentInd:RegCodeAssessmentInd</formulaResultPath>
+        <formulaSequence>1.0</formulaSequence>
+        <globalKey>QuickBuildMigrationGetJunctionObjectsToAdd4075157371442739</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>QuickBuildMigrationGetJunctionObjectsToAdd</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>QuickBuildMigrationGetJunctionObjectsToAdd21091488973708628</globalKey>
+        <inputFieldName>FilteredList2:RegCodeAssementIndToInsert</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>QuickBuildMigrationGetJunctionObjectsToAdd</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>FilteredList2:RegCodeAssementIndToInsert</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>QuickBuildMigrationGetJunctionObjectsToAdd15034693061279225</globalKey>
+        <inputFieldName>FilteredList:AssessmentIndDefinitionsToInsert</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>QuickBuildMigrationGetJunctionObjectsToAdd</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>FilteredList:AssessmentIndDefinitionsToInsert</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>QuickBuildMigrationGetJunctionObjectsToAdd33920708547140777</globalKey>
+        <inputFieldName>HasAssessmentTaskIndJunction</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>QuickBuildMigrationGetJunctionObjectsToAdd</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>HasAssessmentTaskIndJunction</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>QuickBuildMigrationGetJunctionObjectsToAdd08664749906075264</globalKey>
+        <inputFieldName>HasRegulatoryIndJunction</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>QuickBuildMigrationGetJunctionObjectsToAdd</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>HasRegulatoryIndJunction</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <outputType>JSON</outputType>
+    <previewJsonData>{
+  &quot;ContextId&quot; : &quot;&quot;,
+  &quot;timeStamp&quot; : &quot;2021-09-02T15:48:51.740Z&quot;,
+  &quot;userId&quot; : &quot;0055Y00000Gb048QAB&quot;,
+  &quot;userName&quot; : &quot;admin@lpi-inspectiontest-1.demo&quot;,
+  &quot;userProfile&quot; : &quot;System Administrator&quot;,
+  &quot;userTimeZone&quot; : -420,
+  &quot;userCurrencyCode&quot; : &quot;USD&quot;,
+  &quot;sfdcIFrameOrigin&quot; : &quot;https://lpi-inspectiontest-1-demo--vlocity-ins.visualforce.com&quot;,
+  &quot;sfdcIFrameHost&quot; : &quot;web&quot;,
+  &quot;layout&quot; : &quot;lightning&quot;,
+  &quot;isdtp&quot; : &quot;p1&quot;,
+  &quot;id&quot; : &quot;a5y5Y000000c6xVQAQ&quot;,
+  &quot;vlcPersistentComponent&quot; : { },
+  &quot;UploadFile&quot; : {
+    &quot;UploadJSON&quot; : [ {
+      &quot;filename&quot; : &quot;Deck Inspection Type (2).json&quot;,
+      &quot;size&quot; : 6925,
+      &quot;data&quot; : &quot;3c147ec7-fa3c-4a45-ab24-df963731188c&quot;,
+      &quot;$$hashKey&quot; : &quot;object:79&quot;,
+      &quot;contentDocumentId&quot; : &quot;0695Y00000RCTA7QAP&quot;,
+      &quot;vId&quot; : &quot;0685Y00000RoNcRQAV&quot;
+    } ]
+  },
+  &quot;fileContent&quot; : &quot;{\&quot;RegulatoryAuthority\&quot;:{\&quot;Name\&quot;:\&quot;County Building Code\&quot;},\&quot;RegulatoryCode\&quot;:[{\&quot;EffectiveTo\&quot;:\&quot;2025-12-31T00:00:00.000Z\&quot;,\&quot;Subject\&quot;:\&quot;Plan Adherence\&quot;,\&quot;EffectiveFrom\&quot;:\&quot;2021-01-02T00:00:00.000Z\&quot;,\&quot;Name\&quot;:\&quot;Plan Adherence\&quot;,\&quot;RegulatoryAuthorityName\&quot;:\&quot;County Building Code\&quot;},{\&quot;EffectiveTo\&quot;:\&quot;2025-12-31T00:00:00.000Z\&quot;,\&quot;Subject\&quot;:\&quot;Live Load\&quot;,\&quot;EffectiveFrom\&quot;:\&quot;2021-01-02T00:00:00.000Z\&quot;,\&quot;Name\&quot;:\&quot;R301.5\&quot;,\&quot;RegulatoryAuthorityName\&quot;:\&quot;County Building Code\&quot;},{\&quot;EffectiveTo\&quot;:\&quot;2025-12-31T00:00:00.000Z\&quot;,\&quot;Subject\&quot;:\&quot;Protection of Wood and Wood-Based Products Against Decay\&quot;,\&quot;EffectiveFrom\&quot;:\&quot;2021-01-02T00:00:00.000Z\&quot;,\&quot;Name\&quot;:\&quot;R317.1\&quot;,\&quot;RegulatoryAuthorityName\&quot;:\&quot;County Building Code\&quot;},{\&quot;EffectiveTo\&quot;:\&quot;2025-12-31T00:00:00.000Z\&quot;,\&quot;Subject\&quot;:\&quot;Design Requirements for Wastewater Collection, Treatment and Disposal Systems\&quot;,\&quot;EffectiveFrom\&quot;:\&quot;2021-01-02T00:00:00.000Z\&quot;,\&quot;Name\&quot;:\&quot;R317.3\&quot;,\&quot;RegulatoryAuthorityName\&quot;:\&quot;County Building Code\&quot;},{\&quot;EffectiveTo\&quot;:\&quot;2025-12-31T00:00:00.000Z\&quot;,\&quot;Subject\&quot;:\&quot;Guards\&quot;,\&quot;EffectiveFrom\&quot;:\&quot;2021-01-02T00:00:00.000Z\&quot;,\&quot;Name\&quot;:\&quot;R312.1.1\&quot;,\&quot;RegulatoryAuthorityName\&quot;:\&quot;County Building Code\&quot;},{\&quot;EffectiveTo\&quot;:\&quot;2025-12-31T00:00:00.000Z\&quot;,\&quot;Subject\&quot;:\&quot;Risers\&quot;,\&quot;EffectiveFrom\&quot;:\&quot;2021-01-02T00:00:00.000Z\&quot;,\&quot;Name\&quot;:\&quot;R311.7.5.1\&quot;,\&quot;RegulatoryAuthorityName\&quot;:\&quot;County Building Code\&quot;},{\&quot;EffectiveTo\&quot;:\&quot;2025-12-31T00:00:00.000Z\&quot;,\&quot;Subject\&quot;:\&quot;Extra Heavy Duty\&quot;,\&quot;EffectiveFrom\&quot;:\&quot;2021-01-02T00:00:00.000Z\&quot;,\&quot;Name\&quot;:\&quot;R507.2.4\&quot;,\&quot;RegulatoryAuthorityName\&quot;:\&quot;County Building Code\&quot;},{\&quot;EffectiveTo\&quot;:\&quot;2025-12-31T00:00:00.000Z\&quot;,\&quot;Subject\&quot;:\&quot;Wood Materials\&quot;,\&quot;EffectiveFrom\&quot;:\&quot;2021-01-02T00:00:00.000Z\&quot;,\&quot;Name\&quot;:\&quot;R 507.2.1\&quot;,\&quot;RegulatoryAuthorityName\&quot;:\&quot;County Building Code\&quot;}],\&quot;AssessmentIndicatorDefinition\&quot;:[{\&quot;DataType\&quot;:\&quot;Boolean\&quot;,\&quot;Name\&quot;:\&quot;Deck placement, setback, size and materials are per approved plans\&quot;},{\&quot;DataType\&quot;:\&quot;Boolean\&quot;,\&quot;Name\&quot;:\&quot;Deck is positively attached and supports both lateral and live loads (40lb/sq.ft. minimum)\&quot;},{\&quot;DataType\&quot;:\&quot;Boolean\&quot;,\&quot;Name\&quot;:\&quot;All deck material treated or naturally resistant to decay. Cuts, notches, and holes are treated with preservative.\&quot;},{\&quot;DataType\&quot;:\&quot;Boolean\&quot;,\&quot;Name\&quot;:\&quot;Fasteners and hardware for pressure preservative and fire-retardant-treated wood shall be of hot-dipped galvanized steel, stainless steel, silicon bronze or copper. (\&quot;},{\&quot;DataType\&quot;:\&quot;Boolean\&quot;,\&quot;Name\&quot;:\&quot;Where deck is &gt;30\\\&quot; vertical above the grade plane, within 3’ horizontal, a guard is installed.\&quot;},{\&quot;DataType\&quot;:\&quot;Boolean\&quot;,\&quot;Name\&quot;:\&quot;Open risers don’t allow passage of 4” sphere, except stairs with a rise of 30” or less.\&quot;},{\&quot;DataType\&quot;:\&quot;Boolean\&quot;,\&quot;Name\&quot;:\&quot;Deck lateral connections require a minimum (2) 1,500 lb. hold-down tension devices, installed in not less than two locations (ends) per deck, installed and connected to interior parallel joists\&quot;},{\&quot;DataType\&quot;:\&quot;Boolean\&quot;,\&quot;Name\&quot;:\&quot;Ledger for decks bolted/lagged to structure\&quot;}],\&quot;RegulatoryCodeAssessmentInd\&quot;:[{\&quot;RegulatoryCodeName\&quot;:\&quot;Plan Adherence\&quot;,\&quot;AssessmentIndDefinitionName\&quot;:\&quot;Deck placement, setback, size and materials are per approved plans\&quot;},{\&quot;RegulatoryCodeName\&quot;:\&quot;R301.5\&quot;,\&quot;AssessmentIndDefinitionName\&quot;:\&quot;Deck is positively attached and supports both lateral and live loads (40lb/sq.ft. minimum)\&quot;},{\&quot;RegulatoryCodeName\&quot;:\&quot;R317.1\&quot;,\&quot;AssessmentIndDefinitionName\&quot;:\&quot;All deck material treated or naturally resistant to decay. Cuts, notches, and holes are treated with preservative.\&quot;},{\&quot;RegulatoryCodeName\&quot;:\&quot;R317.3\&quot;,\&quot;AssessmentIndDefinitionName\&quot;:\&quot;Fasteners and hardware for pressure preservative and fire-retardant-treated wood shall be of hot-dipped galvanized steel, stainless steel, silicon bronze or copper. (\&quot;},{\&quot;RegulatoryCodeName\&quot;:\&quot;R312.1.1\&quot;,\&quot;AssessmentIndDefinitionName\&quot;:\&quot;Where deck is &gt;30\\\&quot; vertical above the grade plane, within 3’ horizontal, a guard is installed.\&quot;},{\&quot;RegulatoryCodeName\&quot;:\&quot;R311.7.5.1\&quot;,\&quot;AssessmentIndDefinitionName\&quot;:\&quot;Open risers don’t allow passage of 4” sphere, except stairs with a rise of 30” or less.\&quot;},{\&quot;RegulatoryCodeName\&quot;:\&quot;R507.2.4\&quot;,\&quot;AssessmentIndDefinitionName\&quot;:\&quot;Deck lateral connections require a minimum (2) 1,500 lb. hold-down tension devices, installed in not less than two locations (ends) per deck, installed and connected to interior parallel joists\&quot;},{\&quot;RegulatoryCodeName\&quot;:\&quot;R 507.2.1\&quot;,\&quot;AssessmentIndDefinitionName\&quot;:\&quot;Ledger for decks bolted/lagged to structure\&quot;}],\&quot;AssessmentTaskDefinition\&quot;:{\&quot;TaskType\&quot;:\&quot;InspectionChecklist\&quot;,\&quot;Name\&quot;:\&quot;Deck Inspection\&quot;},\&quot;AssessmentTaskIndDefinition\&quot;:[{\&quot;AssessmentTaskDefinitionName\&quot;:\&quot;Deck Inspection\&quot;,\&quot;AssessmentIndDefinitionName\&quot;:\&quot;Deck placement, setback, size and materials are per approved plans\&quot;},{\&quot;AssessmentTaskDefinitionName\&quot;:\&quot;Deck Inspection\&quot;,\&quot;AssessmentIndDefinitionName\&quot;:\&quot;Deck is positively attached and supports both lateral and live loads (40lb/sq.ft. minimum)\&quot;},{\&quot;AssessmentTaskDefinitionName\&quot;:\&quot;Deck Inspection\&quot;,\&quot;AssessmentIndDefinitionName\&quot;:\&quot;All deck material treated or naturally resistant to decay. Cuts, notches, and holes are treated with preservative.\&quot;},{\&quot;AssessmentTaskDefinitionName\&quot;:\&quot;Deck Inspection\&quot;,\&quot;AssessmentIndDefinitionName\&quot;:\&quot;Fasteners and hardware for pressure preservative and fire-retardant-treated wood shall be of hot-dipped galvanized steel, stainless steel, silicon bronze or copper. (\&quot;},{\&quot;AssessmentTaskDefinitionName\&quot;:\&quot;Deck Inspection\&quot;,\&quot;AssessmentIndDefinitionName\&quot;:\&quot;Where deck is &gt;30\\\&quot; vertical above the grade plane, within 3’ horizontal, a guard is installed.\&quot;},{\&quot;AssessmentTaskDefinitionName\&quot;:\&quot;Deck Inspection\&quot;,\&quot;AssessmentIndDefinitionName\&quot;:\&quot;Open risers don’t allow passage of 4” sphere, except stairs with a rise of 30” or less.\&quot;},{\&quot;AssessmentTaskDefinitionName\&quot;:\&quot;Deck Inspection\&quot;,\&quot;AssessmentIndDefinitionName\&quot;:\&quot;Deck lateral connections require a minimum (2) 1,500 lb. hold-down tension devices, installed in not less than two locations (ends) per deck, installed and connected to interior parallel joists\&quot;},{\&quot;AssessmentTaskDefinitionName\&quot;:\&quot;Deck Inspection\&quot;,\&quot;AssessmentIndDefinitionName\&quot;:\&quot;Ledger for decks bolted/lagged to structure\&quot;}],\&quot;ActionPlanTemplate\&quot;:{\&quot;ActionPlanTemplateVersion\&quot;:{\&quot;ActionPlanTemplateItemSignature\&quot;:{\&quot;ActionPlanTemplateItemValue\&quot;:{\&quot;ItemEntityFieldName\&quot;:\&quot;AssessmentTask.Name\&quot;,\&quot;ItemEntityType\&quot;:\&quot;SignatureTask\&quot;,\&quot;IsActive\&quot;:true,\&quot;Name\&quot;:\&quot;Name\&quot;,\&quot;ValueLiteral\&quot;:\&quot;Inspector\&quot;},\&quot;IsRequired\&quot;:false,\&quot;IsActive\&quot;:true,\&quot;ItemEntityType\&quot;:\&quot;SignatureTask\&quot;,\&quot;Name\&quot;:\&quot;Inspector\&quot;,\&quot;DisplayOrder\&quot;:1},\&quot;ActionPlanTemplateItem\&quot;:{\&quot;ActionPlanTemplateItemValue2\&quot;:{\&quot;ItemEntityFieldName\&quot;:\&quot;AssessmentTask.AssessmentTaskDefinitionId\&quot;,\&quot;IsActive\&quot;:true,\&quot;Name\&quot;:\&quot;AssessmentTaskDefinitionId\&quot;,\&quot;ItemEntityType\&quot;:\&quot;AssessmentTask\&quot;,\&quot;ValueLiteralLookup\&quot;:\&quot;Deck Inspection\&quot;},\&quot;ActionPlanTemplateItemValue\&quot;:{\&quot;IsActive\&quot;:true,\&quot;Name\&quot;:\&quot;Name\&quot;,\&quot;ItemEntityType\&quot;:\&quot;AssessmentTask\&quot;,\&quot;ValueLiteral\&quot;:\&quot;Deck Inspection\&quot;,\&quot;ItemEntityFieldName\&quot;:\&quot;AssessmentTask.Name\&quot;},\&quot;IsActive\&quot;:true,\&quot;Name\&quot;:\&quot;Deck Inspection\&quot;,\&quot;IsRequired\&quot;:false,\&quot;ItemEntityType\&quot;:\&quot;AssessmentTask\&quot;},\&quot;Name\&quot;:\&quot;Deck Inspection Type\&quot;},\&quot;Description\&quot;:\&quot;Deck Inspection Type\&quot;,\&quot;TargetEntityType\&quot;:\&quot;Visit\&quot;,\&quot;ActionPlanType\&quot;:\&quot;Retail\&quot;,\&quot;Name\&quot;:\&quot;Deck Inspection Type\&quot;},\&quot;InspectionType\&quot;:{\&quot;Name\&quot;:\&quot;Deck Inspection Type\&quot;}}&quot;,
+  &quot;error&quot; : &quot;OK&quot;,
+  &quot;DeserializedFileContent&quot; : {
+    &quot;InspectionType&quot; : {
+      &quot;Name&quot; : &quot;Deck Inspection Type&quot;
+    },
+    &quot;ActionPlanTemplate&quot; : {
+      &quot;Name&quot; : &quot;Deck Inspection Type&quot;,
+      &quot;ActionPlanType&quot; : &quot;Retail&quot;,
+      &quot;TargetEntityType&quot; : &quot;Visit&quot;,
+      &quot;Description&quot; : &quot;Deck Inspection Type&quot;,
+      &quot;ActionPlanTemplateVersion&quot; : {
+        &quot;Name&quot; : &quot;Deck Inspection Type&quot;,
+        &quot;ActionPlanTemplateItem&quot; : {
+          &quot;ItemEntityType&quot; : &quot;AssessmentTask&quot;,
+          &quot;IsRequired&quot; : false,
+          &quot;Name&quot; : &quot;Deck Inspection&quot;,
+          &quot;IsActive&quot; : true,
+          &quot;ActionPlanTemplateItemValue&quot; : {
+            &quot;ItemEntityFieldName&quot; : &quot;AssessmentTask.Name&quot;,
+            &quot;ValueLiteral&quot; : &quot;Deck Inspection&quot;,
+            &quot;ItemEntityType&quot; : &quot;AssessmentTask&quot;,
+            &quot;Name&quot; : &quot;Name&quot;,
+            &quot;IsActive&quot; : true
+          },
+          &quot;ActionPlanTemplateItemValue2&quot; : {
+            &quot;ValueLiteralLookup&quot; : &quot;Deck Inspection&quot;,
+            &quot;ItemEntityType&quot; : &quot;AssessmentTask&quot;,
+            &quot;Name&quot; : &quot;AssessmentTaskDefinitionId&quot;,
+            &quot;IsActive&quot; : true,
+            &quot;ItemEntityFieldName&quot; : &quot;AssessmentTask.AssessmentTaskDefinitionId&quot;
+          }
+        },
+        &quot;ActionPlanTemplateItemSignature&quot; : {
+          &quot;DisplayOrder&quot; : 1,
+          &quot;Name&quot; : &quot;Inspector&quot;,
+          &quot;ItemEntityType&quot; : &quot;SignatureTask&quot;,
+          &quot;IsActive&quot; : true,
+          &quot;IsRequired&quot; : false,
+          &quot;ActionPlanTemplateItemValue&quot; : {
+            &quot;ValueLiteral&quot; : &quot;Inspector&quot;,
+            &quot;Name&quot; : &quot;Name&quot;,
+            &quot;IsActive&quot; : true,
+            &quot;ItemEntityType&quot; : &quot;SignatureTask&quot;,
+            &quot;ItemEntityFieldName&quot; : &quot;AssessmentTask.Name&quot;
+          }
+        }
+      }
+    },
+    &quot;AssessmentTaskIndDefinition&quot; : [ {
+      &quot;AssessmentIndDefinitionName&quot; : &quot;Deck placement, setback, size and materials are per approved plans&quot;,
+      &quot;AssessmentTaskDefinitionName&quot; : &quot;Deck Inspection&quot;
+    }, {
+      &quot;AssessmentIndDefinitionName&quot; : &quot;Deck is positively attached and supports both lateral and live loads (40lb/sq.ft. minimum)&quot;,
+      &quot;AssessmentTaskDefinitionName&quot; : &quot;Deck Inspection&quot;
+    }, {
+      &quot;AssessmentIndDefinitionName&quot; : &quot;All deck material treated or naturally resistant to decay. Cuts, notches, and holes are treated with preservative.&quot;,
+      &quot;AssessmentTaskDefinitionName&quot; : &quot;Deck Inspection&quot;
+    }, {
+      &quot;AssessmentIndDefinitionName&quot; : &quot;Fasteners and hardware for pressure preservative and fire-retardant-treated wood shall be of hot-dipped galvanized steel, stainless steel, silicon bronze or copper. (&quot;,
+      &quot;AssessmentTaskDefinitionName&quot; : &quot;Deck Inspection&quot;
+    }, {
+      &quot;AssessmentIndDefinitionName&quot; : &quot;Where deck is &gt;30\&quot; vertical above the grade plane, within 3’ horizontal, a guard is installed.&quot;,
+      &quot;AssessmentTaskDefinitionName&quot; : &quot;Deck Inspection&quot;
+    }, {
+      &quot;AssessmentIndDefinitionName&quot; : &quot;Open risers don’t allow passage of 4” sphere, except stairs with a rise of 30” or less.&quot;,
+      &quot;AssessmentTaskDefinitionName&quot; : &quot;Deck Inspection&quot;
+    }, {
+      &quot;AssessmentIndDefinitionName&quot; : &quot;Deck lateral connections require a minimum (2) 1,500 lb. hold-down tension devices, installed in not less than two locations (ends) per deck, installed and connected to interior parallel joists&quot;,
+      &quot;AssessmentTaskDefinitionName&quot; : &quot;Deck Inspection&quot;
+    }, {
+      &quot;AssessmentIndDefinitionName&quot; : &quot;Ledger for decks bolted/lagged to structure&quot;,
+      &quot;AssessmentTaskDefinitionName&quot; : &quot;Deck Inspection&quot;
+    } ],
+    &quot;AssessmentTaskDefinition&quot; : {
+      &quot;Name&quot; : &quot;Deck Inspection&quot;,
+      &quot;TaskType&quot; : &quot;InspectionChecklist&quot;
+    },
+    &quot;RegulatoryCodeAssessmentInd&quot; : [ {
+      &quot;AssessmentIndDefinitionName&quot; : &quot;Deck placement, setback, size and materials are per approved plans&quot;,
+      &quot;RegulatoryCodeName&quot; : &quot;Plan Adherence&quot;
+    }, {
+      &quot;AssessmentIndDefinitionName&quot; : &quot;Deck is positively attached and supports both lateral and live loads (40lb/sq.ft. minimum)&quot;,
+      &quot;RegulatoryCodeName&quot; : &quot;R301.5&quot;
+    }, {
+      &quot;AssessmentIndDefinitionName&quot; : &quot;All deck material treated or naturally resistant to decay. Cuts, notches, and holes are treated with preservative.&quot;,
+      &quot;RegulatoryCodeName&quot; : &quot;R317.1&quot;
+    }, {
+      &quot;AssessmentIndDefinitionName&quot; : &quot;Fasteners and hardware for pressure preservative and fire-retardant-treated wood shall be of hot-dipped galvanized steel, stainless steel, silicon bronze or copper. (&quot;,
+      &quot;RegulatoryCodeName&quot; : &quot;R317.3&quot;
+    }, {
+      &quot;AssessmentIndDefinitionName&quot; : &quot;Where deck is &gt;30\&quot; vertical above the grade plane, within 3’ horizontal, a guard is installed.&quot;,
+      &quot;RegulatoryCodeName&quot; : &quot;R312.1.1&quot;
+    }, {
+      &quot;AssessmentIndDefinitionName&quot; : &quot;Open risers don’t allow passage of 4” sphere, except stairs with a rise of 30” or less.&quot;,
+      &quot;RegulatoryCodeName&quot; : &quot;R311.7.5.1&quot;
+    }, {
+      &quot;AssessmentIndDefinitionName&quot; : &quot;Deck lateral connections require a minimum (2) 1,500 lb. hold-down tension devices, installed in not less than two locations (ends) per deck, installed and connected to interior parallel joists&quot;,
+      &quot;RegulatoryCodeName&quot; : &quot;R507.2.4&quot;
+    }, {
+      &quot;AssessmentIndDefinitionName&quot; : &quot;Ledger for decks bolted/lagged to structure&quot;,
+      &quot;RegulatoryCodeName&quot; : &quot;R 507.2.1&quot;
+    } ],
+    &quot;AssessmentIndicatorDefinition&quot; : [ {
+      &quot;Name&quot; : &quot;Deck placement, setback, size and materials are per approved plans&quot;,
+      &quot;DataType&quot; : &quot;Boolean&quot;
+    }, {
+      &quot;Name&quot; : &quot;Deck is positively attached and supports both lateral and live loads (40lb/sq.ft. minimum)&quot;,
+      &quot;DataType&quot; : &quot;Boolean&quot;
+    }, {
+      &quot;Name&quot; : &quot;All deck material treated or naturally resistant to decay. Cuts, notches, and holes are treated with preservative.&quot;,
+      &quot;DataType&quot; : &quot;Boolean&quot;
+    }, {
+      &quot;Name&quot; : &quot;Fasteners and hardware for pressure preservative and fire-retardant-treated wood shall be of hot-dipped galvanized steel, stainless steel, silicon bronze or copper. (&quot;,
+      &quot;DataType&quot; : &quot;Boolean&quot;
+    }, {
+      &quot;Name&quot; : &quot;Where deck is &gt;30\&quot; vertical above the grade plane, within 3’ horizontal, a guard is installed.&quot;,
+      &quot;DataType&quot; : &quot;Boolean&quot;
+    }, {
+      &quot;Name&quot; : &quot;Open risers don’t allow passage of 4” sphere, except stairs with a rise of 30” or less.&quot;,
+      &quot;DataType&quot; : &quot;Boolean&quot;
+    }, {
+      &quot;Name&quot; : &quot;Deck lateral connections require a minimum (2) 1,500 lb. hold-down tension devices, installed in not less than two locations (ends) per deck, installed and connected to interior parallel joists&quot;,
+      &quot;DataType&quot; : &quot;Boolean&quot;
+    }, {
+      &quot;Name&quot; : &quot;Ledger for decks bolted/lagged to structure&quot;,
+      &quot;DataType&quot; : &quot;Boolean&quot;
+    } ],
+    &quot;RegulatoryCode&quot; : [ {
+      &quot;RegulatoryAuthorityName&quot; : &quot;County Building Code&quot;,
+      &quot;Name&quot; : &quot;Plan Adherence&quot;,
+      &quot;EffectiveFrom&quot; : &quot;2021-01-02T00:00:00.000Z&quot;,
+      &quot;Subject&quot; : &quot;Plan Adherence&quot;,
+      &quot;EffectiveTo&quot; : &quot;2025-12-31T00:00:00.000Z&quot;
+    }, {
+      &quot;RegulatoryAuthorityName&quot; : &quot;County Building Code&quot;,
+      &quot;Name&quot; : &quot;R301.5&quot;,
+      &quot;EffectiveFrom&quot; : &quot;2021-01-02T00:00:00.000Z&quot;,
+      &quot;Subject&quot; : &quot;Live Load&quot;,
+      &quot;EffectiveTo&quot; : &quot;2025-12-31T00:00:00.000Z&quot;
+    }, {
+      &quot;RegulatoryAuthorityName&quot; : &quot;County Building Code&quot;,
+      &quot;Name&quot; : &quot;R317.1&quot;,
+      &quot;EffectiveFrom&quot; : &quot;2021-01-02T00:00:00.000Z&quot;,
+      &quot;Subject&quot; : &quot;Protection of Wood and Wood-Based Products Against Decay&quot;,
+      &quot;EffectiveTo&quot; : &quot;2025-12-31T00:00:00.000Z&quot;
+    }, {
+      &quot;RegulatoryAuthorityName&quot; : &quot;County Building Code&quot;,
+      &quot;Name&quot; : &quot;R317.3&quot;,
+      &quot;EffectiveFrom&quot; : &quot;2021-01-02T00:00:00.000Z&quot;,
+      &quot;Subject&quot; : &quot;Design Requirements for Wastewater Collection, Treatment and Disposal Systems&quot;,
+      &quot;EffectiveTo&quot; : &quot;2025-12-31T00:00:00.000Z&quot;
+    }, {
+      &quot;RegulatoryAuthorityName&quot; : &quot;County Building Code&quot;,
+      &quot;Name&quot; : &quot;R312.1.1&quot;,
+      &quot;EffectiveFrom&quot; : &quot;2021-01-02T00:00:00.000Z&quot;,
+      &quot;Subject&quot; : &quot;Guards&quot;,
+      &quot;EffectiveTo&quot; : &quot;2025-12-31T00:00:00.000Z&quot;
+    }, {
+      &quot;RegulatoryAuthorityName&quot; : &quot;County Building Code&quot;,
+      &quot;Name&quot; : &quot;R311.7.5.1&quot;,
+      &quot;EffectiveFrom&quot; : &quot;2021-01-02T00:00:00.000Z&quot;,
+      &quot;Subject&quot; : &quot;Risers&quot;,
+      &quot;EffectiveTo&quot; : &quot;2025-12-31T00:00:00.000Z&quot;
+    }, {
+      &quot;RegulatoryAuthorityName&quot; : &quot;County Building Code&quot;,
+      &quot;Name&quot; : &quot;R507.2.4&quot;,
+      &quot;EffectiveFrom&quot; : &quot;2021-01-02T00:00:00.000Z&quot;,
+      &quot;Subject&quot; : &quot;Extra Heavy Duty&quot;,
+      &quot;EffectiveTo&quot; : &quot;2025-12-31T00:00:00.000Z&quot;
+    }, {
+      &quot;RegulatoryAuthorityName&quot; : &quot;County Building Code&quot;,
+      &quot;Name&quot; : &quot;R 507.2.1&quot;,
+      &quot;EffectiveFrom&quot; : &quot;2021-01-02T00:00:00.000Z&quot;,
+      &quot;Subject&quot; : &quot;Wood Materials&quot;,
+      &quot;EffectiveTo&quot; : &quot;2025-12-31T00:00:00.000Z&quot;
+    } ],
+    &quot;RegulatoryAuthority&quot; : {
+      &quot;Name&quot; : &quot;County Building Code&quot;
+    }
+  },
+  &quot;HasSignature&quot; : true
+}</previewJsonData>
+    <processSuperBulk>false</processSuperBulk>
+    <responseCacheTtlMinutes>0.0</responseCacheTtlMinutes>
+    <rollbackOnError>false</rollbackOnError>
+    <sourceObject>json</sourceObject>
+    <sourceObjectDefault>false</sourceObjectDefault>
+    <synchronousProcessThreshold>-1.0</synchronousProcessThreshold>
+    <type>Transform</type>
+    <uniqueName>QuickBuildMigrationGetJunctionObjectsToAdd_1</uniqueName>
+    <versionNumber>1.0</versionNumber>
+    <xmlDeclarationRemoved>false</xmlDeclarationRemoved>
+</OmniDataTransform>

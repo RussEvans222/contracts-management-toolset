@@ -1,0 +1,849 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OmniDataTransform xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <assignmentRulesUsed>false</assignmentRulesUsed>
+    <deletedOnSuccess>false</deletedOnSuccess>
+    <errorIgnored>false</errorIgnored>
+    <expectedInputJson>{
+  &quot;timeStamp&quot; : &quot;2021-09-01T20:44:36.883Z&quot;,
+  &quot;userProfile&quot; : &quot;System Administrator&quot;,
+  &quot;userTimeZone&quot; : &quot;-420&quot;,
+  &quot;userCurrencyCode&quot; : &quot;USD&quot;,
+  &quot;userName&quot; : &quot;jblankenship@lpi2.0testing.demo&quot;,
+  &quot;userId&quot; : &quot;0055f000000yem1AAA&quot;,
+  &quot;SampleUser&quot; : &quot;0055f000000yem1AAA&quot;,
+  &quot;PrepopulateAddress&quot; : &quot; ,    USA&quot;,
+  &quot;GeneralInformation&quot; : {
+    &quot;ApplicationDate&quot; : &quot;2021-09-01T04:00:00.000Z&quot;,
+    &quot;FormulaCounty&quot; : &quot;Montgomery County&quot;,
+    &quot;JobAddress-Block&quot; : {
+      &quot;JobAddress&quot; : &quot;1234 East Main Street, Independence, KS, USA&quot;,
+      &quot;JobZip&quot; : &quot;67301&quot;,
+      &quot;JobCounty&quot; : &quot;Montgomery County&quot;,
+      &quot;JobState&quot; : &quot;KS&quot;,
+      &quot;JobCity&quot; : &quot;Independence&quot;,
+      &quot;JobStreet&quot; : &quot;1234 East Main Street&quot;
+    },
+    &quot;LotNumber&quot; : &quot;35&quot;,
+    &quot;ParcelNumber&quot; : &quot;060-6C&quot;
+  },
+  &quot;ContractorInformation&quot; : {
+    &quot;StateLicenseNumber&quot; : &quot;39-390392103&quot;,
+    &quot;ContractorEmail&quot; : &quot;steve.williams@mailinator.com&quot;,
+    &quot;ContractorPhone&quot; : &quot;3943929393&quot;,
+    &quot;Contractor&quot; : &quot;Steve Williams&quot;,
+    &quot;ContractorAddress-Block&quot; : {
+      &quot;ContractorAddress&quot; : &quot;123 Main Street, Edison, NJ, USA&quot;,
+      &quot;ContractorStreet&quot; : &quot;123 Main Street&quot;,
+      &quot;ContractorCity&quot; : &quot;Edison&quot;,
+      &quot;ContractorState&quot; : &quot;NJ&quot;,
+      &quot;ContractorZip&quot; : &quot;08817&quot;
+    }
+  },
+  &quot;OwnerInformation&quot; : {
+    &quot;PropertyOwnerEmail&quot; : null,
+    &quot;PropertyOwnerPhone&quot; : null,
+    &quot;PropertyOwnerAddress-Block&quot; : {
+      &quot;PropertyOwnerAddress&quot; : &quot;393 Main Street, Liberty, KS, USA&quot;,
+      &quot;PropertyOwnerZip&quot; : &quot;67351&quot;,
+      &quot;PropertyOwnerState&quot; : &quot;KS&quot;,
+      &quot;PropertyOwnerCity&quot; : &quot;Liberty&quot;,
+      &quot;PropertyOwnerStreet&quot; : &quot;393 Main Street&quot;
+    },
+    &quot;PropertyOwnerName&quot; : &quot;Charles Green&quot;
+  }
+}</expectedInputJson>
+    <fieldLevelSecurityEnabled>false</fieldLevelSecurityEnabled>
+    <inputType>JSON</inputType>
+    <isManagedUsingStdDesigner>false</isManagedUsingStdDesigner>
+    <name>LPISaveDeckApplication</name>
+    <nullInputsIncludedInOutput>false</nullInputsIncludedInOutput>
+    <omniDataTransformItem>
+        <defaultValue>One Percent State Fee</defaultValue>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPISaveDeckApplication15998951414354234</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPISaveDeckApplication</name>
+        <outputCreationSequence>5.0</outputCreationSequence>
+        <outputFieldName>Name</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFeeItem</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>LPISaveDeckApplication7022822912812272</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedFieldName>Id</linkedFieldName>
+        <linkedObjectSequence>6.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>LPISaveDeckApplication</name>
+        <outputCreationSequence>7.0</outputCreationSequence>
+        <outputFieldName>ParentId</outputFieldName>
+        <outputObjectName>Address</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPISaveDeckApplication307311648881758</globalKey>
+        <inputFieldName>OwnerInformation:PropertyOwnerAddress-Block:PropertyOwnerZip</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPISaveDeckApplication</name>
+        <outputCreationSequence>7.0</outputCreationSequence>
+        <outputFieldName>PostalCode</outputFieldName>
+        <outputObjectName>Address</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPISaveDeckApplication9004405012556747</globalKey>
+        <inputFieldName>ContractorInformation:Contractor</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPISaveDeckApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>PublicSector__CoordinatorName__c</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPISaveDeckApplication9847210840155123</globalKey>
+        <inputFieldName>BuildingInformation:CostOfConstruction</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPISaveDeckApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>Cost_of_Construction__c</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <defaultValue>Submitted</defaultValue>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPISaveDeckApplication11100327328119963</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPISaveDeckApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>Status</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPISaveDeckApplication4821609249856478</globalKey>
+        <inputFieldName>LocationName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPISaveDeckApplication</name>
+        <outputCreationSequence>8.0</outputCreationSequence>
+        <outputFieldName>Name</outputFieldName>
+        <outputObjectName>Location</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>true</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPISaveDeckApplication39575484095169355</globalKey>
+        <inputFieldName>AccountId</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPISaveDeckApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>AccountId</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPISaveDeckApplication5430299478134906</globalKey>
+        <inputFieldName>GeneralInformation:JobAddress-Block:JobCity</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPISaveDeckApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>SiteCity</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>LPISaveDeckApplication21275600526487115</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedFieldName>Id</linkedFieldName>
+        <linkedObjectSequence>1.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>LPISaveDeckApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>ApplicationCaseId</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPISaveDeckApplication5597009970193672</globalKey>
+        <inputFieldName>FeesAndPayment:OnePercentStateFee</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPISaveDeckApplication</name>
+        <outputCreationSequence>5.0</outputCreationSequence>
+        <outputFieldName>FeeAmount</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFeeItem</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>LPISaveDeckApplication9174822276288863</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedFieldName>Id</linkedFieldName>
+        <linkedObjectSequence>7.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>LPISaveDeckApplication</name>
+        <outputCreationSequence>8.0</outputCreationSequence>
+        <outputFieldName>VisitorAddressId</outputFieldName>
+        <outputObjectName>Location</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <defaultValue>Permit Fee</defaultValue>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPISaveDeckApplication3706880136815107</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPISaveDeckApplication</name>
+        <outputCreationSequence>4.0</outputCreationSequence>
+        <outputFieldName>Name</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFeeItem</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>true</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>LPISaveDeckApplication4358331672871347</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>LPISaveDeckApplication</name>
+        <outputCreationSequence>8.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>Location</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>true</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>LPISaveDeckApplication9435241145166426</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>LPISaveDeckApplication</name>
+        <outputCreationSequence>6.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>Location</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPISaveDeckApplication6996094263136636</globalKey>
+        <inputFieldName>ContractorInformation:ContractorPhone</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPISaveDeckApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>PublicSector__CoordinatorPhone__c</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPISaveDeckApplication7356625996665025</globalKey>
+        <inputFieldName>ContactId</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPISaveDeckApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>PrimaryOwnerId</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPISaveDeckApplication21695456012022762</globalKey>
+        <inputFieldName>OwnerInformation:PropertyOwnerAddress-Block:PropertyOwnerStreet</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPISaveDeckApplication</name>
+        <outputCreationSequence>7.0</outputCreationSequence>
+        <outputFieldName>Street</outputFieldName>
+        <outputObjectName>Address</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>true</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>LPISaveDeckApplication08889559467389074</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>LPISaveDeckApplication</name>
+        <outputCreationSequence>7.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>Address</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPISaveDeckApplication6609097651006033</globalKey>
+        <inputFieldName>OwnerInformation:PropertyOwnerAddress-Block:PropertyOwnerState</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPISaveDeckApplication</name>
+        <outputCreationSequence>7.0</outputCreationSequence>
+        <outputFieldName>State</outputFieldName>
+        <outputObjectName>Address</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPISaveDeckApplication6747165512920625</globalKey>
+        <inputFieldName>LocationName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPISaveDeckApplication</name>
+        <outputCreationSequence>6.0</outputCreationSequence>
+        <outputFieldName>Name</outputFieldName>
+        <outputObjectName>Location</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>true</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPISaveDeckApplication36152395377256563</globalKey>
+        <inputFieldName>OwnerInformation:PropertyOwnerAddress-Block:PropertyOwnerCity</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPISaveDeckApplication</name>
+        <outputCreationSequence>7.0</outputCreationSequence>
+        <outputFieldName>City</outputFieldName>
+        <outputObjectName>Address</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPISaveDeckApplication6130220567427198</globalKey>
+        <inputFieldName>FeesAndPayment:PermitFee</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPISaveDeckApplication</name>
+        <outputCreationSequence>4.0</outputCreationSequence>
+        <outputFieldName>FeeAmount</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFeeItem</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>LPISaveDeckApplication26701638107259185</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedFieldName>VisitorAddressId</linkedFieldName>
+        <linkedObjectSequence>6.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>LPISaveDeckApplication</name>
+        <outputCreationSequence>7.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>Address</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>true</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPISaveDeckApplication9940313342134153</globalKey>
+        <inputFieldName>AccountId</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPISaveDeckApplication</name>
+        <outputCreationSequence>3.0</outputCreationSequence>
+        <outputFieldName>AccountId</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFee</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>| var:OwnerInformation:PropertyOwnerName &quot;/\/\/Inspection&quot; CONCAT</formulaConverted>
+        <formulaExpression>CONCAT(OwnerInformation:PropertyOwnerName,&quot; Inspection&quot;)</formulaExpression>
+        <formulaResultPath>LocationName</formulaResultPath>
+        <formulaSequence>1.0</formulaSequence>
+        <globalKey>LPISaveDeckApplication75118712548839</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPISaveDeckApplication</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>true</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>LPISaveDeckApplication47164316917839466</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>LPISaveDeckApplication</name>
+        <outputCreationSequence>4.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFeeItem</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPISaveDeckApplication1637019250017322</globalKey>
+        <inputFieldName>GeneralInformation:JobAddress-Block:JobAddress</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPISaveDeckApplication</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Subject</outputFieldName>
+        <outputObjectName>Case</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>true</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>LPISaveDeckApplication20053287806128983</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>LPISaveDeckApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPISaveDeckApplication3376177907848148</globalKey>
+        <inputFieldName>BuildingInformation:GrossSquareFootage</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPISaveDeckApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>PublicSector__FacilitySquareFootage__c</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPISaveDeckApplication254894600013829</globalKey>
+        <inputFieldName>ContactId</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPISaveDeckApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>ApplicantId</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPISaveDeckApplication6939174487535305</globalKey>
+        <inputFieldName>ContractorInformation:ContractorEmail</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPISaveDeckApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>PublicSector__CoordinatorEmail__c</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>true</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>LPISaveDeckApplication9189222215276036</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>LPISaveDeckApplication</name>
+        <outputCreationSequence>5.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFeeItem</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>true</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>LPISaveDeckApplication5504588419535701</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>LPISaveDeckApplication</name>
+        <outputCreationSequence>3.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFee</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <defaultValue>PAID</defaultValue>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPISaveDeckApplication5957257645555538</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPISaveDeckApplication</name>
+        <outputCreationSequence>3.0</outputCreationSequence>
+        <outputFieldName>Status</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFee</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>LPISaveDeckApplication28803887184304733</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedFieldName>Id</linkedFieldName>
+        <linkedObjectSequence>2.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>LPISaveDeckApplication</name>
+        <outputCreationSequence>3.0</outputCreationSequence>
+        <outputFieldName>ParentRecordId</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFee</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPISaveDeckApplication9506568085440004</globalKey>
+        <inputFieldName>GeneralInformation:JobAddress-Block:JobState</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPISaveDeckApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>SiteState</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPISaveDeckApplication7294839191681588</globalKey>
+        <inputFieldName>GeneralInformation:JobAddress-Block:JobStreet</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPISaveDeckApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>SiteStreet</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>LPISaveDeckApplication8960520212597256</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedFieldName>Id</linkedFieldName>
+        <linkedObjectSequence>3.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>LPISaveDeckApplication</name>
+        <outputCreationSequence>4.0</outputCreationSequence>
+        <outputFieldName>RegulatoryTrxnFeeId</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFeeItem</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPISaveDeckApplication914142161836689</globalKey>
+        <inputFieldName>GeneralInformation:JobAddress-Block:JobZip</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPISaveDeckApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>SitePostalCode</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPISaveDeckApplication49108607887637157</globalKey>
+        <inputFieldName>AccountId</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPISaveDeckApplication</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>AccountId</outputFieldName>
+        <outputObjectName>Case</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>LPISaveDeckApplication9604447566260548</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedFieldName>Id</linkedFieldName>
+        <linkedObjectSequence>3.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>LPISaveDeckApplication</name>
+        <outputCreationSequence>5.0</outputCreationSequence>
+        <outputFieldName>RegulatoryTrxnFeeId</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFeeItem</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPISaveDeckApplication9366154632599422</globalKey>
+        <inputFieldName>GeneralInformation:ApplicationDate</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPISaveDeckApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>AppliedDate</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>true</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>LPISaveDeckApplication7831154027365324</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>LPISaveDeckApplication</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>Case</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPISaveDeckApplication3989420911455508</globalKey>
+        <inputFieldName>BuildingInformation:DescriptionOfWork</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPISaveDeckApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>Description</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <defaultValue>Contractor</defaultValue>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPISaveDeckApplication9436230977817319</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPISaveDeckApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>PublicSector__CoordinatorTitle__c</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <defaultValue>Building Permit</defaultValue>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPISaveDeckApplication7858462933442496</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <lookupByFieldName>Name</lookupByFieldName>
+        <lookupObjectName>RegulatoryAuthorizationType</lookupObjectName>
+        <lookupReturnedFieldName>Id</lookupReturnedFieldName>
+        <name>LPISaveDeckApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>LicenseTypeId</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <defaultValue>Permit</defaultValue>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPISaveDeckApplication4930355612411974</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPISaveDeckApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>Category</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <outputType>SObject</outputType>
+    <previewJsonData>{
+  &quot;vlcTimeTracking&quot; : {
+    &quot;DRSaveDeckApplication&quot; : null,
+    &quot;DRGetApplicationId&quot; : null,
+    &quot;Confirmation&quot; : null,
+    &quot;DocumentsAndSignature&quot; : null,
+    &quot;BuildingInformation&quot; : null,
+    &quot;ContractorInformation&quot; : null,
+    &quot;OwnerInformation&quot; : null,
+    &quot;GeneralInformation&quot; : null
+  },
+  &quot;vlcPersistentComponent&quot; : { },
+  &quot;userTimeZone&quot; : null,
+  &quot;userProfile&quot; : null,
+  &quot;userName&quot; : null,
+  &quot;userId&quot; : null,
+  &quot;timeStamp&quot; : null,
+  &quot;ContextId&quot; : null,
+  &quot;Confirmation&quot; : { },
+  &quot;DocumentsAndSignature&quot; : {
+    &quot;SignatureLWC&quot; : null,
+    &quot;SignDate&quot; : null,
+    &quot;AssociatedFiles&quot; : [ {
+      &quot;data&quot; : null,
+      &quot;size&quot; : null,
+      &quot;filename&quot; : null
+    } ],
+    &quot;PrintedName&quot; : null
+  },
+  &quot;BuildingInformation&quot; : {
+    &quot;TotalFee&quot; : null,
+    &quot;PermitFee&quot; : null,
+    &quot;TypeOfWork&quot; : null,
+    &quot;OnePercentStateFee&quot; : null,
+    &quot;GrossSquareFootage&quot; : null,
+    &quot;CostOfConstruction&quot; : null,
+    &quot;DescriptionOfWork&quot; : null
+  },
+  &quot;ContractorInformation&quot; : {
+    &quot;StateLicenseNumber&quot; : null,
+    &quot;ContractorAddress-Block&quot; : {
+      &quot;ContractorAddress&quot; : null,
+      &quot;ContractorZip&quot; : null,
+      &quot;ContractorCity&quot; : null,
+      &quot;ContractorState&quot; : null,
+      &quot;ContractorStreet&quot; : null
+    },
+    &quot;ContractorPhone&quot; : null,
+    &quot;ContractorEmail&quot; : null,
+    &quot;Contractor&quot; : null
+  },
+  &quot;OwnerInformation&quot; : {
+    &quot;PropertyOwnerPhone&quot; : null,
+    &quot;PropertyOwnerName&quot; : null,
+    &quot;PropertyOwnerAddress-Block&quot; : {
+      &quot;PropertyOwnerAddress&quot; : null,
+      &quot;PropertyOwnerZip&quot; : null,
+      &quot;PropertyOwnerCity&quot; : null,
+      &quot;PropertyOwnerState&quot; : null,
+      &quot;PropertyOwnerStreet&quot; : null
+    }
+  },
+  &quot;GeneralInformation&quot; : {
+    &quot;FormulaCounty&quot; : null,
+    &quot;JobAddress-Block&quot; : {
+      &quot;JobAddress&quot; : null,
+      &quot;JobZip&quot; : null,
+      &quot;JobCity&quot; : null,
+      &quot;JobState&quot; : null,
+      &quot;JobStreet&quot; : null,
+      &quot;JobCounty&quot; : null
+    },
+    &quot;ParcelNumber&quot; : null,
+    &quot;LotNumber&quot; : null,
+    &quot;ApplicationDate&quot; : null
+  }
+}</previewJsonData>
+    <processSuperBulk>false</processSuperBulk>
+    <responseCacheTtlMinutes>0.0</responseCacheTtlMinutes>
+    <rollbackOnError>false</rollbackOnError>
+    <sourceObject>json</sourceObject>
+    <sourceObjectDefault>false</sourceObjectDefault>
+    <synchronousProcessThreshold>-1.0</synchronousProcessThreshold>
+    <type>Load</type>
+    <uniqueName>LPISaveDeckApplication_1</uniqueName>
+    <versionNumber>1.0</versionNumber>
+    <xmlDeclarationRemoved>false</xmlDeclarationRemoved>
+</OmniDataTransform>

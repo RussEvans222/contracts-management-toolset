@@ -1,0 +1,724 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OmniDataTransform xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <assignmentRulesUsed>false</assignmentRulesUsed>
+    <deletedOnSuccess>false</deletedOnSuccess>
+    <errorIgnored>false</errorIgnored>
+    <expectedInputJson>{
+  &quot;vlcTimeTracking&quot; : {
+    &quot;DRApplicationId1&quot; : null,
+    &quot;DRBusinessAccountProfileInfo&quot; : null,
+    &quot;EstablishmentInformation&quot; : null,
+    &quot;DoneAction&quot; : null,
+    &quot;Confirmation&quot; : null,
+    &quot;DRGetIds&quot; : null,
+    &quot;DRContactForUser&quot; : null,
+    &quot;SetContext&quot; : null,
+    &quot;DRSaveLicensePermitApplication&quot; : null,
+    &quot;Certification&quot; : null,
+    &quot;ApplicationAttachments&quot; : null,
+    &quot;OwnershipInformation&quot; : null,
+    &quot;ReasonForNewLicenseApplication&quot; : null,
+    &quot;SalonInformation&quot; : null,
+    &quot;ApplicationInformation&quot; : null
+  },
+  &quot;vlcPersistentComponent&quot; : { },
+  &quot;userTimeZone&quot; : null,
+  &quot;userProfile&quot; : null,
+  &quot;userName&quot; : null,
+  &quot;userId&quot; : null,
+  &quot;timeStamp&quot; : null,
+  &quot;ContextId&quot; : null,
+  &quot;Certification&quot; : {
+    &quot;Signature&quot; : null,
+    &quot;CertificationText&quot; : null
+  },
+  &quot;ApplicationAttachments&quot; : {
+    &quot;EINProof&quot; : [ {
+      &quot;data&quot; : null,
+      &quot;size&quot; : null,
+      &quot;filename&quot; : null
+    } ],
+    &quot;PropertyProof&quot; : [ {
+      &quot;data&quot; : null,
+      &quot;size&quot; : null,
+      &quot;filename&quot; : null
+    } ],
+    &quot;IdentificationProof&quot; : [ {
+      &quot;data&quot; : null,
+      &quot;size&quot; : null,
+      &quot;filename&quot; : null
+    } ]
+  },
+  &quot;OwnershipInformation&quot; : {
+    &quot;PriorEstablishmentDetails&quot; : {
+      &quot;PriorEstablishmentLicense&quot; : null,
+      &quot;PriorEstablishmentName&quot; : null
+    },
+    &quot;PartnershipOwnership&quot; : {
+      &quot;Partner2_LastName&quot; : null,
+      &quot;Partner2_FirstName&quot; : null,
+      &quot;Partner1_LastName&quot; : null,
+      &quot;Partner1_FirstName&quot; : null,
+      &quot;EIN&quot; : null
+    },
+    &quot;CorporationOrLLCOwnership&quot; : {
+      &quot;CorporationEIN&quot; : null,
+      &quot;CorporationName&quot; : null,
+      &quot;Member2_FirstName&quot; : null,
+      &quot;Member2_LastName&quot; : null,
+      &quot;Member1_LastName&quot; : null,
+      &quot;Member1_FirstName&quot; : null
+    },
+    &quot;IndividualOwnership&quot; : {
+      &quot;IndividualFirstName&quot; : null,
+      &quot;IndividualLastName&quot; : null
+    },
+    &quot;OwnershipType&quot; : null,
+    &quot;PurchaseOrTakeOver&quot; : null
+  },
+  &quot;ReasonForNewLicenseApplication&quot; : {
+    &quot;PreviousExpirationDate&quot; : null,
+    &quot;SalonPrevOwner&quot; : null,
+    &quot;SalonRelocPrevAddr&quot; : null,
+    &quot;SalonPrevLic&quot; : null,
+    &quot;SelectReasonforNewLicenseApplication&quot; : null
+  },
+  &quot;SalonInformation&quot; : {
+    &quot;SalonInAResidence&quot; : null,
+    &quot;BusinessType&quot; : null,
+    &quot;BusinessLocation&quot; : null,
+    &quot;SalonStartDate&quot; : null
+  },
+  &quot;EstablishmentInformation&quot; : {
+    &quot;ContactEmail&quot; : null,
+    &quot;ContactName&quot; : null,
+    &quot;TaxID&quot; : null,
+    &quot;BusinessDBAName&quot; : null,
+    &quot;BusinessLegalName&quot; : null,
+    &quot;State&quot; : null,
+    &quot;Zipcode&quot; : null,
+    &quot;City&quot; : null,
+    &quot;Street&quot; : null,
+    &quot;Address&quot; : null,
+    &quot;Neighborhood&quot; : null
+  },
+  &quot;Confirmation&quot; : { },
+  &quot;ApplicationInformation&quot; : {
+    &quot;isBusinessActivityFilled&quot; : null,
+    &quot;isIndustriesFilled&quot; : null,
+    &quot;AssociatedAccountId&quot; : null,
+    &quot;Industries&quot; : null,
+    &quot;AssociatedAccount&quot; : null,
+    &quot;BusinessActivityId&quot; : null,
+    &quot;AuthorizationTypeId&quot; : null,
+    &quot;BusinessActivity&quot; : null,
+    &quot;AuthorizationType&quot; : null,
+    &quot;exprShowMinnesotaSalonLicenceApplication&quot; : null,
+    &quot;ApplicationCategory&quot; : null,
+    &quot;AuthorizationCategory&quot; : null
+  }
+}</expectedInputJson>
+    <expectedOutputJson>{
+  &quot;Employer Identification Number&quot; : &quot;&quot;,
+  &quot;Name of Corporation or LLC&quot; : &quot;&quot;,
+  &quot;Owner First Name&quot; : &quot;&quot;,
+  &quot;Date you plan to open or take over this establishment&quot; : &quot;&quot;,
+  &quot;Business Account&quot; : &quot;&quot;,
+  &quot;Are you purchasing or taking over an existing establishment&quot; : &quot;&quot;,
+  &quot;HomeSalonText&quot; : &quot;&quot;,
+  &quot;Is this salon in a residence&quot; : &quot;&quot;,
+  &quot;Prior Establishment Name&quot; : &quot;&quot;,
+  &quot;Are you located inside a business Example Health Club Hotel Retirement Community etc&quot; : &quot;&quot;,
+  &quot;If Yes Please mention the type of business&quot; : &quot;&quot;,
+  &quot;Prior Establishment License&quot; : &quot;&quot;,
+  &quot;Owner Last Name&quot; : &quot;&quot;,
+  &quot;Previous owner&quot; : &quot;&quot;,
+  &quot;Previous address&quot; : &quot;&quot;,
+  &quot;Reason for New License Application&quot; : &quot;&quot;,
+  &quot;Previous license number&quot; : &quot;&quot;,
+  &quot;Previous expiration date&quot; : &quot;&quot;,
+  &quot;Member First Name2&quot; : &quot;&quot;,
+  &quot;Member Last Name1&quot; : &quot;&quot;,
+  &quot;Member First Name1&quot; : &quot;&quot;,
+  &quot;Employer Identification Number_2&quot; : &quot;&quot;,
+  &quot;Partner Last Name1&quot; : &quot;&quot;,
+  &quot;Member Last Name2&quot; : &quot;&quot;,
+  &quot;Partner Last Name2&quot; : &quot;&quot;,
+  &quot;Partner First Name1&quot; : &quot;&quot;,
+  &quot;Partner First Name2&quot; : &quot;&quot;,
+  &quot;I agree&quot; : &quot;&quot;,
+  &quot;Signature&quot; : &quot;&quot;
+}</expectedOutputJson>
+    <fieldLevelSecurityEnabled>false</fieldLevelSecurityEnabled>
+    <inputType>JSON</inputType>
+    <isManagedUsingStdDesigner>false</isManagedUsingStdDesigner>
+    <name>SalonLicenseForm</name>
+    <nullInputsIncludedInOutput>false</nullInputsIncludedInOutput>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>SalonLicenseForm5090867268305901</globalKey>
+        <inputFieldName>SalonInformation:BusinessLocation</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>SalonLicenseForm</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldFormat>String</outputFieldFormat>
+        <outputFieldName>Are you located inside a business Example Health Club Hotel Retirement Community etc</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>SalonLicenseForm6918571750975302</globalKey>
+        <inputFieldName>SalonInformation:SalonStartDate</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>SalonLicenseForm</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldFormat>Date(MM/dd/YYYY)</outputFieldFormat>
+        <outputFieldName>Date you plan to open or take over this establishment</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>SalonLicenseForm8500787739560403</globalKey>
+        <inputFieldName>SalonInformation:BusinessType</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>SalonLicenseForm</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldFormat>String</outputFieldFormat>
+        <outputFieldName>If Yes Please mention the type of business</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>SalonLicenseForm9370418285160478</globalKey>
+        <inputFieldName>SalonInformation:NumberOfEmployees</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>SalonLicenseForm</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Number of employees</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>SalonLicenseForm23425266827842028</globalKey>
+        <inputFieldName>ReasonForNewLicenseApplication:SalonPrevLic</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>SalonLicenseForm</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldFormat>String</outputFieldFormat>
+        <outputFieldName>Previous license number</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>SalonLicenseForm18502874177213524</globalKey>
+        <inputFieldName>ReasonForNewLicenseApplication:PreviousExpirationDate</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>SalonLicenseForm</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldFormat>String</outputFieldFormat>
+        <outputFieldName>Previous expiration date</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>SalonLicenseForm7552565829243651</globalKey>
+        <inputFieldName>ReasonForNewLicenseApplication:SelectReasonforNewLicenseApplication</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>SalonLicenseForm</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldFormat>String</outputFieldFormat>
+        <outputFieldName>Reason for New License Application</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>SalonLicenseForm7920947750314313</globalKey>
+        <inputFieldName>SalonInformation:SalonInAResidence</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>SalonLicenseForm</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldFormat>String</outputFieldFormat>
+        <outputFieldName>Is this salon in a residence</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>SalonLicenseForm48284230898111</globalKey>
+        <inputFieldName>OwnershipInformation:PartnershipOwnership:EIN</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>SalonLicenseForm</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldFormat>String</outputFieldFormat>
+        <outputFieldName>Employer Identification Number</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>SalonLicenseForm31144573161270817</globalKey>
+        <inputFieldName>OwnershipInformation:IndividualOwnership:IndividualLastName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>SalonLicenseForm</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldFormat>String</outputFieldFormat>
+        <outputFieldName>Owner Last Name</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>SalonLicenseForm37516155063534384</globalKey>
+        <inputFieldName>OwnershipInformation:PriorEstablishmentDetails:PriorEstablishmentName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>SalonLicenseForm</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldFormat>String</outputFieldFormat>
+        <outputFieldName>Prior Establishment Name</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>SalonLicenseForm9075783736922645</globalKey>
+        <inputFieldName>OwnershipInformation:PriorEstablishmentDetails:PriorEstablishmentLicense</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>SalonLicenseForm</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldFormat>String</outputFieldFormat>
+        <outputFieldName>Prior Establishment License</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>SalonLicenseForm7432187005455397</globalKey>
+        <inputFieldName>ReasonForNewLicenseApplication:SalonRelocPrevAddr</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>SalonLicenseForm</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldFormat>String</outputFieldFormat>
+        <outputFieldName>Previous address</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>SalonLicenseForm8517053510668164</globalKey>
+        <inputFieldName>OwnershipInformation:PurchaseOrTakeOver</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>SalonLicenseForm</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldFormat>String</outputFieldFormat>
+        <outputFieldName>Are you purchasing or taking over an existing establishment</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>SalonLicenseForm8231280466024964</globalKey>
+        <inputFieldName>OwnershipInformation:CorporationOrLLCOwnership:Member2_FirstName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>SalonLicenseForm</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldFormat>String</outputFieldFormat>
+        <outputFieldName>Member First Name2</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>SalonLicenseForm08893422606030277</globalKey>
+        <inputFieldName>ReasonForNewLicenseApplication:SalonPrevOwner</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>SalonLicenseForm</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldFormat>String</outputFieldFormat>
+        <outputFieldName>Previous owner</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>SalonLicenseForm5288411080272304</globalKey>
+        <inputFieldName>OwnershipInformation:IndividualOwnership:IndividualFirstName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>SalonLicenseForm</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldFormat>String</outputFieldFormat>
+        <outputFieldName>Owner First Name</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>SalonLicenseForm9149518664555647</globalKey>
+        <inputFieldName>OwnershipInformation:CorporationOrLLCOwnership:Member2_LastName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>SalonLicenseForm</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldFormat>String</outputFieldFormat>
+        <outputFieldName>Member Last Name2</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>SalonLicenseForm9344528328512345</globalKey>
+        <inputFieldName>OwnershipInformation:PartnershipOwnership:Partner2_FirstName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>SalonLicenseForm</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldFormat>String</outputFieldFormat>
+        <outputFieldName>Partner First Name</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>SalonLicenseForm6524159401410885</globalKey>
+        <inputFieldName>OwnershipInformation:PartnershipOwnership:Partner2_LastName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>SalonLicenseForm</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldFormat>String</outputFieldFormat>
+        <outputFieldName>Partner Last Name2</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>SalonLicenseForm37865183744988107</globalKey>
+        <inputFieldName>ApplicationInformation:AssociatedAccount</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>SalonLicenseForm</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldFormat>String</outputFieldFormat>
+        <outputFieldName>Business Account</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>SalonLicenseForm37255607976112737</globalKey>
+        <inputFieldName>OwnershipInformation:PartnershipOwnership:Partner1_LastName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>SalonLicenseForm</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldFormat>String</outputFieldFormat>
+        <outputFieldName>Partner Last Name1</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>SalonLicenseForm8391631004857756</globalKey>
+        <inputFieldName>Certification:CertificationText</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>SalonLicenseForm</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldFormat>Boolean</outputFieldFormat>
+        <outputFieldName>I agree</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>SalonLicenseForm9782743182744738</globalKey>
+        <inputFieldName>OwnershipInformation:CorporationOrLLCOwnership:CorporationName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>SalonLicenseForm</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldFormat>String</outputFieldFormat>
+        <outputFieldName>Name of Corporation or LLC</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>SalonLicenseForm880982274279491</globalKey>
+        <inputFieldName>OwnershipInformation:CorporationOrLLCOwnership:CorporationEIN</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>SalonLicenseForm</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldFormat>String</outputFieldFormat>
+        <outputFieldName>Employer Identification Number</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>SalonLicenseForm7633371277649037</globalKey>
+        <inputFieldName>Certification:Signature</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>SalonLicenseForm</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldFormat>String</outputFieldFormat>
+        <outputFieldName>Signature</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>SalonLicenseForm7008268495435404</globalKey>
+        <inputFieldName>OwnershipInformation:CorporationOrLLCOwnership:Member1_LastName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>SalonLicenseForm</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldFormat>String</outputFieldFormat>
+        <outputFieldName>Member Last Name1</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>SalonLicenseForm8968536590584857</globalKey>
+        <inputFieldName>OwnershipInformation:CorporationOrLLCOwnership:Member1_FirstName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>SalonLicenseForm</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldFormat>String</outputFieldFormat>
+        <outputFieldName>Member First Name1</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>SalonLicenseForm9952501042706257</globalKey>
+        <inputFieldName>OwnershipInformation:PartnershipOwnership:Partner1_FirstName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>SalonLicenseForm</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldFormat>String</outputFieldFormat>
+        <outputFieldName>Partner First Name1</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>SalonLicenseForm9161023320597095</globalKey>
+        <inputFieldName>SalonInformation:NumberOfChairs</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>SalonLicenseForm</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Number of chairs</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>SalonLicenseForm3617267619819924</globalKey>
+        <inputFieldName>totalFee</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>SalonLicenseForm</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldFormat>Currency</outputFieldFormat>
+        <outputFieldName>Application Fee</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <outputType>PDF</outputType>
+    <previewJsonData>{
+  &quot;ContextId&quot; : &quot;&quot;,
+  &quot;timeStamp&quot; : &quot;2020-03-26T08:05:35.447Z&quot;,
+  &quot;userId&quot; : &quot;005B00000065DsSIAU&quot;,
+  &quot;userName&quot; : &quot;sazher_patch1@salesforce.com&quot;,
+  &quot;userProfile&quot; : &quot;System Administrator&quot;,
+  &quot;userTimeZone&quot; : -420,
+  &quot;userCurrencyCode&quot; : &quot;USD&quot;,
+  &quot;layout&quot; : &quot;lightning&quot;,
+  &quot;id&quot; : &quot;a3KRM000000005X2AQ&quot;,
+  &quot;vlcPersistentComponent&quot; : { },
+  &quot;ApplicationInformation&quot; : {
+    &quot;isEditable&quot; : true,
+    &quot;AssociatedAccount&quot; : &quot;ACT - 1&quot;,
+    &quot;Industries&quot; : &quot;Healthcare&quot;,
+    &quot;isIndustriesFilled&quot; : true,
+    &quot;BusinessActivity&quot; : &quot;ACT 1 BT1&quot;,
+    &quot;isBusinessActivityFilled&quot; : true,
+    &quot;AuthorizationCategory&quot; : &quot;License&quot;,
+    &quot;AuthorizationType&quot; : &quot;RAT 1&quot;,
+    &quot;ApplicationCategory&quot; : &quot;Basic&quot;,
+    &quot;BusinessActivityId&quot; : &quot;2gFRM0000004C9S2AU&quot;,
+    &quot;AuthorizationTypeId&quot; : &quot;0ehRM0000004C9NYAU&quot;,
+    &quot;AssociatedAccountId&quot; : &quot;001RM000004eZGJYA2&quot;,
+    &quot;exprShowMinnesotaSalonLicenceApplication&quot; : true,
+    &quot;IsPARCreated&quot; : &quot;a67RM00000000BPYAY&quot;,
+    &quot;expIsPARCreated&quot; : false
+  },
+  &quot;EstablishmentInformation&quot; : {
+    &quot;BusinessLegalName&quot; : &quot;ACT - 1&quot;,
+    &quot;BusinessDBAName&quot; : &quot;asdfa&quot;,
+    &quot;TaxID&quot; : null,
+    &quot;ContactName&quot; : &quot;Dieggo John&quot;,
+    &quot;ContactEmail&quot; : null,
+    &quot;Street&quot; : &quot;adsf&quot;,
+    &quot;City&quot; : &quot;asdf&quot;,
+    &quot;State&quot; : &quot;asdf&quot;,
+    &quot;Zipcode&quot; : &quot;asdf&quot;,
+    &quot;Neighborhood&quot; : &quot;asdfasdf&quot;,
+    &quot;Address&quot; : &quot;Street -:  adsf City -: asdf State -: asdf Zipcode -: undefined&quot;,
+    &quot;BlaCreatedText&quot; : &quot;0f0RM0000004CGYYA2&quot;,
+    &quot;isExistingApplication&quot; : false
+  },
+  &quot;SalonInformation&quot; : {
+    &quot;SalonStartDate&quot; : &quot;2020-03-23&quot;,
+    &quot;SalonInAResidence&quot; : &quot;No&quot;,
+    &quot;BusinessLocation&quot; : &quot;No&quot;,
+    &quot;BusinessType&quot; : null
+  },
+  &quot;Certification&quot; : {
+    &quot;CertificationText&quot; : true,
+    &quot;Signature&quot; : &quot;asdfasfd&quot;
+  },
+  &quot;OwnershipInformation&quot; : {
+    &quot;PurchaseOrTakeOver&quot; : &quot;Purchasing&quot;,
+    &quot;PriorEstablishmentDetails&quot; : null,
+    &quot;OwnershipType&quot; : &quot;Individual&quot;,
+    &quot;IndividualOwnership&quot; : {
+      &quot;IndividualLastName&quot; : &quot;asdf&quot;,
+      &quot;IndividualFirstName&quot; : null
+    },
+    &quot;CorporationOrLLCOwnership&quot; : null,
+    &quot;PartnershipOwnership&quot; : null
+  },
+  &quot;SampleUser&quot; : &quot;005RM0000025atnYAA&quot;,
+  &quot;ApplicationStatus&quot; : &quot;Submitted&quot;,
+  &quot;ContactId&quot; : &quot;003RM000006GmF9YAK&quot;,
+  &quot;isBLASubmitted&quot; : false,
+  &quot;sInstanceId&quot; : &quot;a3JRM00000000Cr2AI&quot;,
+  &quot;DRId_PreliminaryApplicationRef__c&quot; : &quot;a67RM00000000BPYAY&quot;,
+  &quot;CreatedStandardPARId&quot; : &quot;0goRM0000004CLsYAM&quot;,
+  &quot;CreatedPreliminaryApplicationRefId&quot; : &quot;a67RM00000000BPYAY&quot;,
+  &quot;ApplicationAttachments&quot; : {
+    &quot;IdentificationProof&quot; : [ {
+      &quot;filename&quot; : &quot;2- Creating a DataRaptor Interface to Map an OmniScript to a PDF.pdf&quot;,
+      &quot;size&quot; : 36531,
+      &quot;data&quot; : &quot;b575cb28-583a-4fe4-aa07-2ec118b7526f&quot;,
+      &quot;$$hashKey&quot; : &quot;object:996&quot;
+    } ],
+    &quot;PropertyProof&quot; : [ {
+      &quot;filename&quot; : &quot;2- Creating a DataRaptor Interface to Map an OmniScript to a PDF.pdf&quot;,
+      &quot;size&quot; : 36531,
+      &quot;data&quot; : &quot;a0005105-66ab-451d-bb2b-8d6e62d05bb7&quot;,
+      &quot;$$hashKey&quot; : &quot;object:1003&quot;
+    } ],
+    &quot;EINProof&quot; : null
+  },
+  &quot;DRId_BusinessLicenseApplication&quot; : &quot;0f0RM0000004CGYYA2&quot;,
+  &quot;DRId_Case&quot; : &quot;500RM000002ht5AYAQ&quot;,
+  &quot;CreatedApplicationId&quot; : &quot;BLA-0000000065&quot;
+}</previewJsonData>
+    <processSuperBulk>false</processSuperBulk>
+    <responseCacheTtlMinutes>0.0</responseCacheTtlMinutes>
+    <rollbackOnError>false</rollbackOnError>
+    <sourceObject>json</sourceObject>
+    <sourceObjectDefault>false</sourceObjectDefault>
+    <synchronousProcessThreshold>-1.0</synchronousProcessThreshold>
+    <targetOutputFileName>BLA_Fillable_PDF_v3_pdf</targetOutputFileName>
+    <type>Transform</type>
+    <uniqueName>SalonLicenseForm_1</uniqueName>
+    <versionNumber>1.0</versionNumber>
+    <xmlDeclarationRemoved>false</xmlDeclarationRemoved>
+</OmniDataTransform>

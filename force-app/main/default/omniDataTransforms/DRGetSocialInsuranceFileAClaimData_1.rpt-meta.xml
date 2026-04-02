@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OmniDataTransform xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <assignmentRulesUsed>false</assignmentRulesUsed>
+    <deletedOnSuccess>false</deletedOnSuccess>
+    <errorIgnored>false</errorIgnored>
+    <expectedOutputJson>{
+  &quot;WorkersEmploymentDetails&quot; : {
+    &quot;PSS_SI_v1_UploadPayslips&quot; : null,
+    &quot;PSS_SI_v1_Occupation&quot; : &quot;Forklift operator&quot;,
+    &quot;EmployerTypeAhead-Block&quot; : {
+      &quot;EmployerTypeAhead&quot; : &quot;Jennifer&apos;s Custom Creations&quot;,
+      &quot;PSS_SI_v1_EmployerAccountId&quot; : &quot;001KX000002KYqLYAW&quot;,
+      &quot;PSS_SI_v1_NameOfEmployer&quot; : &quot;Jennifer&apos;s Custom Creations&quot;
+    },
+    &quot;PSS_SI_v1_AreYouStillEmployed&quot; : &quot;Yes&quot;,
+    &quot;PSS_SI_v1_EmploymentType&quot; : &quot;Full Time&quot;,
+    &quot;PSS_SI_v1_EmploymentStartDate&quot; : &quot;2023-05-08&quot;,
+    &quot;PSS_SI_v1_IncomeFrequency&quot; : &quot;Weekly&quot;,
+    &quot;PSS_SI_v1_Income&quot; : 1000
+  },
+  &quot;CertificateOfCapacity&quot; : {
+    &quot;PSS_SI_v1_UploadDocument&quot; : null,
+    &quot;PSS_SI_v1_InjuryType&quot; : &quot;Fracture&quot;,
+    &quot;PSS_SI_v1_WorkerCapacity&quot; : 25,
+    &quot;HealthcareProviderTypeAhead-Block&quot; : {
+      &quot;HealthcareProviderTypeAhead&quot; : &quot;Bayfield Counselling&quot;,
+      &quot;PSS_SI_v1_HealthcareProviderId&quot; : &quot;0cmKX0000008OQLYA2&quot;,
+      &quot;PSS_SI_v1_ProviderName&quot; : &quot;Bayfield Counselling&quot;
+    },
+    &quot;PSS_SI_v1_IssuedDate&quot; : &quot;2024-05-02&quot;
+  },
+  &quot;ClaimValues&quot; : null,
+  &quot;omniscriptId&quot; : &quot;0jNKX000000CaxF2AS&quot;,
+  &quot;language&quot; : &quot;English&quot;,
+  &quot;type&quot; : &quot;SocialInsurance&quot;,
+  &quot;runMode&quot; : &quot;preview&quot;,
+  &quot;sId&quot; : &quot;0jNKX000000CaxF2AS&quot;,
+  &quot;theme&quot; : &quot;lightning&quot;,
+  &quot;subType&quot; : &quot;FileClaim&quot;,
+  &quot;timeStamp&quot; : &quot;2024-05-31T14:46:51.378Z&quot;,
+  &quot;userProfile&quot; : &quot;System Administrator&quot;,
+  &quot;userTimeZoneName&quot; : &quot;America/Los_Angeles&quot;,
+  &quot;userTimeZone&quot; : &quot;-420&quot;,
+  &quot;userCurrencyCode&quot; : &quot;USD&quot;,
+  &quot;userName&quot; : &quot;jblankenship@gps250.dev3&quot;,
+  &quot;userId&quot; : &quot;005KX000000xWOxYAM&quot;,
+  &quot;omniProcessId&quot; : &quot;0jNKX000000CaxF2AS&quot;,
+  &quot;localTimeZoneName&quot; : &quot;America/New_York&quot;,
+  &quot;WorkerPersonalDetails&quot; : {
+    &quot;PSS_SI_v1_FirstName&quot; : &quot;Paul&quot;,
+    &quot;PSS_SI_v1_LastName&quot; : &quot;Marshall&quot;,
+    &quot;PSS_SI_v1_DateOfBirth&quot; : &quot;1995-01-01&quot;,
+    &quot;PSS_SI_v1_Gender&quot; : &quot;Male&quot;,
+    &quot;PSS_SI_v1_HomeTelephoneNumber&quot; : &quot;3838383838&quot;,
+    &quot;PSS_SI_v1_CellPhoneNumber&quot; : &quot;3838383838&quot;,
+    &quot;PSS_SI_v1_Email&quot; : &quot;p@m.com&quot;,
+    &quot;PSS_SI_v1_Address&quot; : &quot;123 Main St&quot;,
+    &quot;PSS_SI_v1_City&quot; : &quot;Richmond&quot;,
+    &quot;PSS_SI_v1_State&quot; : &quot;VA&quot;,
+    &quot;PSS_SI_v1_ZipCode&quot; : &quot;23113&quot;,
+    &quot;PSS_SI_v1_Country&quot; : &quot;USA&quot;
+  },
+  &quot;IncidentWorkersInjuryDetails&quot; : {
+    &quot;PSS_SI_v1_NatureOfInjury&quot; : &quot;Broken Arm;Broken Leg&quot;,
+    &quot;PSS_SI_v1_TakingTimeOff&quot; : &quot;Yes&quot;,
+    &quot;PSS_SI_v1_MedicalTreatment&quot; : &quot;Yes&quot;,
+    &quot;PSS_SI_v1_HowYouInjured&quot; : &quot;Forklift accident broke arm&quot;,
+    &quot;EmployerAtTimeofInjuryTypeAHead-Block&quot; : {
+      &quot;EmployerAtTimeofInjuryTypeAHead&quot; : &quot;Jennifer&apos;s Custom Creations&quot;,
+      &quot;PSS_SI_v1_EmployerResponsibleForWorkplace&quot; : &quot;Jennifer&apos;s Custom Creations&quot;,
+      &quot;PSS_SI_v1_InjuryTimeEmployerId&quot; : &quot;001KX000002KYqLYAW&quot;
+    },
+    &quot;PSS_SI_v1_DateTimeForInjury&quot; : &quot;2024-05-02T16:00:00.000Z&quot;,
+    &quot;PSS_SI_v1_WorkStoppedDateTime&quot; : &quot;2024-05-02T16:00:00.000Z&quot;,
+    &quot;PSS_SI_v1_ReportDateTimeForInjury&quot; : &quot;2024-05-02T16:00:00.000Z&quot;
+  },
+  &quot;Acknowledgment&quot; : {
+    &quot;PSS_SI_v1_Date&quot; : &quot;2024-05-31T04:00:00.000Z&quot;
+  },
+  &quot;Review&quot; : { },
+  &quot;sInstanceId&quot; : &quot;0kTKX000000blNR2AY&quot;,
+  &quot;DRId_PreliminaryApplicationRef&quot; : &quot;0goKX0000008OMwYAM&quot;
+}</expectedOutputJson>
+    <fieldLevelSecurityEnabled>false</fieldLevelSecurityEnabled>
+    <inputType>JSON</inputType>
+    <isManagedUsingStdDesigner>false</isManagedUsingStdDesigner>
+    <name>DRGetSocialInsuranceFileAClaimData</name>
+    <nullInputsIncludedInOutput>false</nullInputsIncludedInOutput>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRGetSocialInsuranceFileAClaimDataCustom3050</globalKey>
+        <inputFieldName>Contact:Birthdate</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRGetSocialInsuranceFileAClaimData</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>WorkerPersonalDetails:PSS_SI_v1_DateOfBirth</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRGetSocialInsuranceFileAClaimDataCustom61</globalKey>
+        <inputFieldName>HealthcareProvider:Name</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRGetSocialInsuranceFileAClaimData</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>HealthcareProvider:Name</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRGetSocialInsuranceFileAClaimDataCustom2361</globalKey>
+        <inputFieldName>Contact:MobilePhone</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRGetSocialInsuranceFileAClaimData</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>WorkerPersonalDetails:PSS_SI_v1_CellPhoneNumber</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRGetSocialInsuranceFileAClaimDataCustom8303</globalKey>
+        <inputFieldName>Contact:LastName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRGetSocialInsuranceFileAClaimData</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>WorkerPersonalDetails:PSS_SI_v1_LastName</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRGetSocialInsuranceFileAClaimDataCustom6451</globalKey>
+        <inputFieldName>HealthcareProvider:Id</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRGetSocialInsuranceFileAClaimData</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>HealthcareProvider:Id</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRGetSocialInsuranceFileAClaimDataCustom2527</globalKey>
+        <inputFieldName>Contact:MailingStreet</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRGetSocialInsuranceFileAClaimData</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>WorkerPersonalDetails:PSS_SI_v1_Address</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRGetSocialInsuranceFileAClaimDataCustom5010</globalKey>
+        <inputFieldName>Contact:MailingPostalCode</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRGetSocialInsuranceFileAClaimData</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>WorkerPersonalDetails:PSS_SI_v1_ZipCode</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRGetSocialInsuranceFileAClaimDataCustom9251</globalKey>
+        <inputFieldName>ThreeDaysAgo</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRGetSocialInsuranceFileAClaimData</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>ThreeDaysAgo</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRGetSocialInsuranceFileAClaimDataCustom6690</globalKey>
+        <inputFieldName>Contact:FirstName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRGetSocialInsuranceFileAClaimData</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>WorkerPersonalDetails:PSS_SI_v1_FirstName</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRGetSocialInsuranceFileAClaimDataCustom2990</globalKey>
+        <inputFieldName>Contact:MailingCountry</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRGetSocialInsuranceFileAClaimData</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>WorkerPersonalDetails:PSS_SI_v1_Country</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <filterValue>User:ContactId</filterValue>
+        <globalKey>DRGetSocialInsuranceFileAClaimDataCustom5127</globalKey>
+        <inputFieldName>Id</inputFieldName>
+        <inputObjectName>Contact</inputObjectName>
+        <inputObjectQuerySequence>2.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRGetSocialInsuranceFileAClaimData</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Contact</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <filterValue>HealthcareProvider</filterValue>
+        <globalKey>DRGetSocialInsuranceFileAClaimDataCustom5667</globalKey>
+        <inputFieldName>Name</inputFieldName>
+        <inputObjectName>HealthcareProvider</inputObjectName>
+        <inputObjectQuerySequence>4.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRGetSocialInsuranceFileAClaimData</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>HealthcareProvider</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRGetSocialInsuranceFileAClaimDataCustom8741</globalKey>
+        <inputFieldName>Contact:Email</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRGetSocialInsuranceFileAClaimData</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>WorkerPersonalDetails:PSS_SI_v1_Email</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRGetSocialInsuranceFileAClaimDataCustom1965</globalKey>
+        <inputFieldName>NowValue</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRGetSocialInsuranceFileAClaimData</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>NowValue</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRGetSocialInsuranceFileAClaimDataCustom2688</globalKey>
+        <inputFieldName>Contact:MailingState</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRGetSocialInsuranceFileAClaimData</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>WorkerPersonalDetails:PSS_SI_v1_State</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRGetSocialInsuranceFileAClaimDataCustom5732</globalKey>
+        <inputFieldName>Contact:Gender</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRGetSocialInsuranceFileAClaimData</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>WorkerPersonalDetails:PSS_SI_v1_Gender</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRGetSocialInsuranceFileAClaimDataCustom9305</globalKey>
+        <inputFieldName>BusinessName:Id</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRGetSocialInsuranceFileAClaimData</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>BusinessName:Id</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <filterValue>userId</filterValue>
+        <globalKey>DRGetSocialInsuranceFileAClaimDataCustom8834</globalKey>
+        <inputFieldName>Id</inputFieldName>
+        <inputObjectName>User</inputObjectName>
+        <inputObjectQuerySequence>1.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRGetSocialInsuranceFileAClaimData</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>User</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRGetSocialInsuranceFileAClaimDataCustom6706</globalKey>
+        <inputFieldName>BusinessName:Name</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRGetSocialInsuranceFileAClaimData</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>BusinessName:Name</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>LIMIT</filterOperator>
+        <filterValue>1</filterValue>
+        <globalKey>DRGetSocialInsuranceFileAClaimDataCustom3620</globalKey>
+        <inputObjectName>Account</inputObjectName>
+        <inputObjectQuerySequence>3.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRGetSocialInsuranceFileAClaimData</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>BusinessName</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>LIMIT</filterOperator>
+        <filterValue>1</filterValue>
+        <globalKey>DRGetSocialInsuranceFileAClaimDataCustom6181</globalKey>
+        <inputObjectName>HealthcareProvider</inputObjectName>
+        <inputObjectQuerySequence>4.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRGetSocialInsuranceFileAClaimData</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>HealthcareProvider</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <filterValue>BusinessName</filterValue>
+        <globalKey>DRGetSocialInsuranceFileAClaimDataCustom9478</globalKey>
+        <inputFieldName>Name</inputFieldName>
+        <inputObjectName>Account</inputObjectName>
+        <inputObjectQuerySequence>3.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRGetSocialInsuranceFileAClaimData</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>BusinessName</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRGetSocialInsuranceFileAClaimDataCustom5277</globalKey>
+        <inputFieldName>Contact:MailingCity</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRGetSocialInsuranceFileAClaimData</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>WorkerPersonalDetails:PSS_SI_v1_City</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRGetSocialInsuranceFileAClaimDataCustom797</globalKey>
+        <inputFieldName>Contact:Phone</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRGetSocialInsuranceFileAClaimData</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>WorkerPersonalDetails:PSS_SI_v1_HomeTelephoneNumber</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <outputType>JSON</outputType>
+    <previewJsonData>{
+  &quot;userId&quot; : &quot;005KX000000UBiQYAW&quot;,
+  &quot;BusinessName&quot; : &quot;Associated Supply Co.&quot;,
+  &quot;HealthcareProvider&quot; : &quot;Brookside Rehabilitation&quot;
+}</previewJsonData>
+    <processSuperBulk>false</processSuperBulk>
+    <responseCacheTtlMinutes>0.0</responseCacheTtlMinutes>
+    <rollbackOnError>false</rollbackOnError>
+    <sourceObject>json</sourceObject>
+    <sourceObjectDefault>false</sourceObjectDefault>
+    <synchronousProcessThreshold>0.0</synchronousProcessThreshold>
+    <type>Extract</type>
+    <uniqueName>DRGetSocialInsuranceFileAClaimData_1</uniqueName>
+    <versionNumber>1.0</versionNumber>
+    <xmlDeclarationRemoved>false</xmlDeclarationRemoved>
+</OmniDataTransform>

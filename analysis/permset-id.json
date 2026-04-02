@@ -1,0 +1,18 @@
+{
+  "status": 0,
+  "result": {
+    "records": [
+      {
+        "attributes": {
+          "type": "PermissionSet",
+          "url": "/services/data/v66.0/tooling/sobjects/PermissionSet/0PSHu00000BfZD0OAN"
+        },
+        "Id": "0PSHu00000BfZD0OAN",
+        "Name": "Contracts_Command_Center_Visibility"
+      }
+    ],
+    "totalSize": 1,
+    "done": true
+  },
+  "warnings": []
+}

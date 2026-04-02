@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OmniDataTransform xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <assignmentRulesUsed>false</assignmentRulesUsed>
+    <deletedOnSuccess>false</deletedOnSuccess>
+    <description>This converts the information store in the JSON export file into something usable by a DataRaptor.  Also filters out records not needed for insert with Junctions.</description>
+    <errorIgnored>false</errorIgnored>
+    <expectedInputJson>{
+  &quot;vlcTimeTracking&quot; : {
+    &quot;DRReserializeImport&quot; : null,
+    &quot;RemoteActionImportGetFileContents&quot; : null,
+    &quot;UploadFile&quot; : null
+  },
+  &quot;vlcPersistentComponent&quot; : { },
+  &quot;userTimeZone&quot; : null,
+  &quot;userProfile&quot; : null,
+  &quot;userName&quot; : null,
+  &quot;userId&quot; : null,
+  &quot;timeStamp&quot; : null,
+  &quot;ContextId&quot; : null,
+  &quot;UploadFile&quot; : {
+    &quot;UploadJSON&quot; : [ {
+      &quot;data&quot; : null,
+      &quot;size&quot; : null,
+      &quot;filename&quot; : null
+    } ]
+  }
+}</expectedInputJson>
+    <fieldLevelSecurityEnabled>false</fieldLevelSecurityEnabled>
+    <inputType>JSON</inputType>
+    <isManagedUsingStdDesigner>false</isManagedUsingStdDesigner>
+    <name>QuickBuildDeserializeJSONImport</name>
+    <nullInputsIncludedInOutput>false</nullInputsIncludedInOutput>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>| var:DeserializedFileContent:ActionPlanTemplate:ActionPlanTemplateVersion:ActionPlanTemplateItemSignature ISNOTBLANK</formulaConverted>
+        <formulaExpression>ISNOTBLANK(DeserializedFileContent:ActionPlanTemplate:ActionPlanTemplateVersion:ActionPlanTemplateItemSignature)</formulaExpression>
+        <formulaResultPath>HasSignature</formulaResultPath>
+        <formulaSequence>2.0</formulaSequence>
+        <globalKey>QuickBuildDeserializeJSONImport2387071123375506</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>QuickBuildDeserializeJSONImport</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>| var:fileContent DESERIALIZE</formulaConverted>
+        <formulaExpression>DESERIALIZE(fileContent)</formulaExpression>
+        <formulaResultPath>DeserializedFileContent</formulaResultPath>
+        <formulaSequence>1.0</formulaSequence>
+        <globalKey>QuickBuildDeserializeJSONImport2163495861325948</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>QuickBuildDeserializeJSONImport</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>QuickBuildDeserializeJSONImport4665996418522178</globalKey>
+        <inputFieldName>HasSignature</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>QuickBuildDeserializeJSONImport</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>HasSignature</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>QuickBuildDeserializeJSONImport9150936204570002</globalKey>
+        <inputFieldName>DeserializedFileContent</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>QuickBuildDeserializeJSONImport</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>DeserializedFileContent</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <outputType>JSON</outputType>
+    <previewJsonData>{
+  &quot;ContextId&quot; : &quot;&quot;,
+  &quot;timeStamp&quot; : &quot;2021-03-25T20:19:51.982Z&quot;,
+  &quot;userId&quot; : &quot;0055Y00000EoGAkQAN&quot;,
+  &quot;userName&quot; : &quot;jblankenship@esri-lpi2021.demo&quot;,
+  &quot;userProfile&quot; : &quot;System Administrator&quot;,
+  &quot;userTimeZone&quot; : -420,
+  &quot;userCurrencyCode&quot; : &quot;USD&quot;,
+  &quot;sfdcIFrameOrigin&quot; : &quot;https://esri-lpi-2021-demo--vlocity-ins.visualforce.com&quot;,
+  &quot;sfdcIFrameHost&quot; : &quot;web&quot;,
+  &quot;layout&quot; : &quot;lightning&quot;,
+  &quot;isdtp&quot; : &quot;p1&quot;,
+  &quot;id&quot; : &quot;a5y5Y000000LPJ6QAO&quot;,
+  &quot;vlcPersistentComponent&quot; : { },
+  &quot;UploadFile&quot; : {
+    &quot;UploadJSON&quot; : [ {
+      &quot;filename&quot; : &quot;Here Goes Nothing 2.json&quot;,
+      &quot;size&quot; : 9396,
+      &quot;data&quot; : &quot;d6033ec8-cee4-44c3-88bb-49d44fb1b540&quot;,
+      &quot;$$hashKey&quot; : &quot;object:41&quot;,
+      &quot;contentDocumentId&quot; : &quot;0695Y00000NIwMXQA1&quot;,
+      &quot;vId&quot; : &quot;0685Y00000NCjPXQA1&quot;
+    } ]
+  },
+  &quot;fileContent&quot; : &quot;{\&quot;RegulatoryAuthority\&quot;:[{\&quot;Name\&quot;:\&quot;AAA\&quot;},{\&quot;Name\&quot;:\&quot;BBB\&quot;},{\&quot;Name\&quot;:\&quot;CCC\&quot;},{\&quot;Name\&quot;:\&quot;DDD\&quot;},{\&quot;Name\&quot;:\&quot;EEE\&quot;},{\&quot;Name\&quot;:\&quot;FFF\&quot;},{\&quot;Name\&quot;:\&quot;GGG\&quot;},{\&quot;Name\&quot;:\&quot;HHH\&quot;},{\&quot;Name\&quot;:\&quot;III\&quot;}],\&quot;RegulatoryCode\&quot;:[{\&quot;Subject\&quot;:\&quot;AAA\&quot;,\&quot;EffectiveTo\&quot;:\&quot;2025-12-31T00:00:00.000Z\&quot;,\&quot;EffectiveFrom\&quot;:\&quot;2021-01-02T00:00:00.000Z\&quot;,\&quot;RegulatoryAuthorityName\&quot;:\&quot;AAA\&quot;,\&quot;Name\&quot;:\&quot;AAA\&quot;},{\&quot;Subject\&quot;:\&quot;BBB\&quot;,\&quot;EffectiveTo\&quot;:\&quot;2025-12-31T00:00:00.000Z\&quot;,\&quot;EffectiveFrom\&quot;:\&quot;2021-01-02T00:00:00.000Z\&quot;,\&quot;RegulatoryAuthorityName\&quot;:\&quot;BBB\&quot;,\&quot;Name\&quot;:\&quot;BBB\&quot;},{\&quot;Subject\&quot;:\&quot;CCC\&quot;,\&quot;EffectiveTo\&quot;:\&quot;2025-12-31T00:00:00.000Z\&quot;,\&quot;EffectiveFrom\&quot;:\&quot;2021-01-02T00:00:00.000Z\&quot;,\&quot;RegulatoryAuthorityName\&quot;:\&quot;CCC\&quot;,\&quot;Name\&quot;:\&quot;CCC\&quot;},{\&quot;Subject\&quot;:\&quot;DDD\&quot;,\&quot;EffectiveTo\&quot;:\&quot;2025-12-31T00:00:00.000Z\&quot;,\&quot;EffectiveFrom\&quot;:\&quot;2021-01-02T00:00:00.000Z\&quot;,\&quot;RegulatoryAuthorityName\&quot;:\&quot;DDD\&quot;,\&quot;Name\&quot;:\&quot;DDD\&quot;},{\&quot;Subject\&quot;:\&quot;EEE\&quot;,\&quot;EffectiveTo\&quot;:\&quot;2025-12-31T00:00:00.000Z\&quot;,\&quot;EffectiveFrom\&quot;:\&quot;2021-01-02T00:00:00.000Z\&quot;,\&quot;RegulatoryAuthorityName\&quot;:\&quot;EEE\&quot;,\&quot;Name\&quot;:\&quot;EEE\&quot;},{\&quot;Subject\&quot;:\&quot;FFF\&quot;,\&quot;EffectiveTo\&quot;:\&quot;2025-12-31T00:00:00.000Z\&quot;,\&quot;EffectiveFrom\&quot;:\&quot;2021-01-02T00:00:00.000Z\&quot;,\&quot;RegulatoryAuthorityName\&quot;:\&quot;FFF\&quot;,\&quot;Name\&quot;:\&quot;FFF\&quot;},{\&quot;Subject\&quot;:\&quot;GGG\&quot;,\&quot;EffectiveTo\&quot;:\&quot;2025-12-31T00:00:00.000Z\&quot;,\&quot;EffectiveFrom\&quot;:\&quot;2021-01-02T00:00:00.000Z\&quot;,\&quot;RegulatoryAuthorityName\&quot;:\&quot;GGG\&quot;,\&quot;Name\&quot;:\&quot;GGG\&quot;},{\&quot;Subject\&quot;:\&quot;HHH\&quot;,\&quot;EffectiveTo\&quot;:\&quot;2025-12-31T00:00:00.000Z\&quot;,\&quot;EffectiveFrom\&quot;:\&quot;2021-01-02T00:00:00.000Z\&quot;,\&quot;RegulatoryAuthorityName\&quot;:\&quot;HHH\&quot;,\&quot;Name\&quot;:\&quot;HHH\&quot;},{\&quot;Subject\&quot;:\&quot;III\&quot;,\&quot;EffectiveTo\&quot;:\&quot;2025-12-31T00:00:00.000Z\&quot;,\&quot;EffectiveFrom\&quot;:\&quot;2021-01-02T00:00:00.000Z\&quot;,\&quot;RegulatoryAuthorityName\&quot;:\&quot;III\&quot;,\&quot;Name\&quot;:\&quot;III\&quot;}],\&quot;AssessmentIndicatorDefinition\&quot;:[{\&quot;Name\&quot;:\&quot;AAA\&quot;,\&quot;DataType\&quot;:\&quot;Boolean\&quot;},{\&quot;Name\&quot;:\&quot;AAA111\&quot;,\&quot;DataType\&quot;:\&quot;Boolean\&quot;},{\&quot;Name\&quot;:\&quot;AAA222\&quot;,\&quot;DataType\&quot;:\&quot;Boolean\&quot;},{\&quot;Name\&quot;:\&quot;BBB\&quot;,\&quot;DataType\&quot;:\&quot;Boolean\&quot;},{\&quot;Name\&quot;:\&quot;CCC\&quot;,\&quot;DataType\&quot;:\&quot;Boolean\&quot;},{\&quot;Name\&quot;:\&quot;DDD\&quot;,\&quot;DataType\&quot;:\&quot;Boolean\&quot;},{\&quot;Name\&quot;:\&quot;DDD111\&quot;,\&quot;DataType\&quot;:\&quot;Boolean\&quot;},{\&quot;Name\&quot;:\&quot;EEE\&quot;,\&quot;DataType\&quot;:\&quot;Boolean\&quot;},{\&quot;Name\&quot;:\&quot;EEE111\&quot;,\&quot;DataType\&quot;:\&quot;Boolean\&quot;},{\&quot;Name\&quot;:\&quot;FFF\&quot;,\&quot;DataType\&quot;:\&quot;Boolean\&quot;},{\&quot;Name\&quot;:\&quot;FFF111\&quot;,\&quot;DataType\&quot;:\&quot;Boolean\&quot;},{\&quot;Name\&quot;:\&quot;AAA333\&quot;,\&quot;DataType\&quot;:\&quot;Boolean\&quot;},{\&quot;Name\&quot;:\&quot;GGG\&quot;,\&quot;DataType\&quot;:\&quot;Boolean\&quot;},{\&quot;Name\&quot;:\&quot;GGG111\&quot;,\&quot;DataType\&quot;:\&quot;Boolean\&quot;},{\&quot;Name\&quot;:\&quot;HHH\&quot;,\&quot;DataType\&quot;:\&quot;Boolean\&quot;},{\&quot;Name\&quot;:\&quot;III\&quot;,\&quot;DataType\&quot;:\&quot;Boolean\&quot;}],\&quot;RegulatoryCodeAssessmentInd\&quot;:[{\&quot;RegulatoryCodeName\&quot;:\&quot;AAA\&quot;,\&quot;AssessmentIndDefinitionName\&quot;:\&quot;AAA\&quot;},{\&quot;RegulatoryCodeName\&quot;:\&quot;AAA\&quot;,\&quot;AssessmentIndDefinitionName\&quot;:\&quot;AAA111\&quot;},{\&quot;RegulatoryCodeName\&quot;:\&quot;AAA\&quot;,\&quot;AssessmentIndDefinitionName\&quot;:\&quot;AAA222\&quot;},{\&quot;RegulatoryCodeName\&quot;:\&quot;BBB\&quot;,\&quot;AssessmentIndDefinitionName\&quot;:\&quot;BBB\&quot;},{\&quot;RegulatoryCodeName\&quot;:\&quot;CCC\&quot;,\&quot;AssessmentIndDefinitionName\&quot;:\&quot;CCC\&quot;},{\&quot;RegulatoryCodeName\&quot;:\&quot;DDD\&quot;,\&quot;AssessmentIndDefinitionName\&quot;:\&quot;DDD\&quot;},{\&quot;RegulatoryCodeName\&quot;:\&quot;DDD\&quot;,\&quot;AssessmentIndDefinitionName\&quot;:\&quot;DDD111\&quot;},{\&quot;RegulatoryCodeName\&quot;:\&quot;EEE\&quot;,\&quot;AssessmentIndDefinitionName\&quot;:\&quot;EEE\&quot;},{\&quot;RegulatoryCodeName\&quot;:\&quot;EEE\&quot;,\&quot;AssessmentIndDefinitionName\&quot;:\&quot;EEE111\&quot;},{\&quot;RegulatoryCodeName\&quot;:\&quot;FFF\&quot;,\&quot;AssessmentIndDefinitionName\&quot;:\&quot;FFF\&quot;},{\&quot;RegulatoryCodeName\&quot;:\&quot;FFF\&quot;,\&quot;AssessmentIndDefinitionName\&quot;:\&quot;FFF111\&quot;},{\&quot;RegulatoryCodeName\&quot;:\&quot;AAA\&quot;,\&quot;AssessmentIndDefinitionName\&quot;:\&quot;AAA333\&quot;},{\&quot;RegulatoryCodeName\&quot;:\&quot;AAA\&quot;,\&quot;AssessmentIndDefinitionName\&quot;:\&quot;AAA333\&quot;},{\&quot;RegulatoryCodeName\&quot;:\&quot;GGG\&quot;,\&quot;AssessmentIndDefinitionName\&quot;:\&quot;GGG\&quot;},{\&quot;RegulatoryCodeName\&quot;:\&quot;GGG\&quot;,\&quot;AssessmentIndDefinitionName\&quot;:\&quot;GGG111\&quot;},{\&quot;RegulatoryCodeName\&quot;:\&quot;HHH\&quot;,\&quot;AssessmentIndDefinitionName\&quot;:\&quot;HHH\&quot;},{\&quot;RegulatoryCodeName\&quot;:\&quot;III\&quot;,\&quot;AssessmentIndDefinitionName\&quot;:\&quot;III\&quot;}],\&quot;AssessmentTaskDefinition\&quot;:[{\&quot;TaskType\&quot;:\&quot;InspectionChecklist\&quot;,\&quot;Name\&quot;:\&quot;AAA\&quot;},{\&quot;TaskType\&quot;:\&quot;InspectionChecklist\&quot;,\&quot;Name\&quot;:\&quot;BBB\&quot;},{\&quot;TaskType\&quot;:\&quot;InspectionChecklist\&quot;,\&quot;Name\&quot;:\&quot;CCC\&quot;},{\&quot;TaskType\&quot;:\&quot;InspectionChecklist\&quot;,\&quot;Name\&quot;:\&quot;DDD\&quot;},{\&quot;TaskType\&quot;:\&quot;InspectionChecklist\&quot;,\&quot;Name\&quot;:\&quot;EEE\&quot;},{\&quot;TaskType\&quot;:\&quot;InspectionChecklist\&quot;,\&quot;Name\&quot;:\&quot;FFF\&quot;},{\&quot;TaskType\&quot;:\&quot;InspectionChecklist\&quot;,\&quot;Name\&quot;:\&quot;GGG\&quot;},{\&quot;TaskType\&quot;:\&quot;InspectionChecklist\&quot;,\&quot;Name\&quot;:\&quot;HHH\&quot;},{\&quot;TaskType\&quot;:\&quot;InspectionChecklist\&quot;,\&quot;Name\&quot;:\&quot;III\&quot;}],\&quot;AssessmentTaskIndDefinition\&quot;:[{\&quot;AssessmentIndDefinitionName\&quot;:\&quot;AAA\&quot;,\&quot;AssessmentTaskDefinitionName\&quot;:\&quot;AAA\&quot;},{\&quot;AssessmentIndDefinitionName\&quot;:\&quot;AAA111\&quot;,\&quot;AssessmentTaskDefinitionName\&quot;:\&quot;AAA\&quot;},{\&quot;AssessmentIndDefinitionName\&quot;:\&quot;AAA222\&quot;,\&quot;AssessmentTaskDefinitionName\&quot;:\&quot;AAA\&quot;},{\&quot;AssessmentIndDefinitionName\&quot;:\&quot;AAA333\&quot;,\&quot;AssessmentTaskDefinitionName\&quot;:\&quot;AAA\&quot;},{\&quot;AssessmentIndDefinitionName\&quot;:\&quot;BBB\&quot;,\&quot;AssessmentTaskDefinitionName\&quot;:\&quot;BBB\&quot;},{\&quot;AssessmentIndDefinitionName\&quot;:\&quot;CCC\&quot;,\&quot;AssessmentTaskDefinitionName\&quot;:\&quot;CCC\&quot;},{\&quot;AssessmentIndDefinitionName\&quot;:\&quot;DDD\&quot;,\&quot;AssessmentTaskDefinitionName\&quot;:\&quot;DDD\&quot;},{\&quot;AssessmentIndDefinitionName\&quot;:\&quot;DDD111\&quot;,\&quot;AssessmentTaskDefinitionName\&quot;:\&quot;DDD\&quot;},{\&quot;AssessmentIndDefinitionName\&quot;:\&quot;EEE\&quot;,\&quot;AssessmentTaskDefinitionName\&quot;:\&quot;EEE\&quot;},{\&quot;AssessmentIndDefinitionName\&quot;:\&quot;EEE111\&quot;,\&quot;AssessmentTaskDefinitionName\&quot;:\&quot;EEE\&quot;},{\&quot;AssessmentIndDefinitionName\&quot;:\&quot;FFF\&quot;,\&quot;AssessmentTaskDefinitionName\&quot;:\&quot;FFF\&quot;},{\&quot;AssessmentIndDefinitionName\&quot;:\&quot;FFF111\&quot;,\&quot;AssessmentTaskDefinitionName\&quot;:\&quot;FFF\&quot;},{\&quot;AssessmentIndDefinitionName\&quot;:\&quot;GGG\&quot;,\&quot;AssessmentTaskDefinitionName\&quot;:\&quot;GGG\&quot;},{\&quot;AssessmentIndDefinitionName\&quot;:\&quot;GGG111\&quot;,\&quot;AssessmentTaskDefinitionName\&quot;:\&quot;GGG\&quot;},{\&quot;AssessmentIndDefinitionName\&quot;:\&quot;HHH\&quot;,\&quot;AssessmentTaskDefinitionName\&quot;:\&quot;HHH\&quot;},{\&quot;AssessmentIndDefinitionName\&quot;:\&quot;III\&quot;,\&quot;AssessmentTaskDefinitionName\&quot;:\&quot;III\&quot;}],\&quot;ActionPlanTemplate\&quot;:{\&quot;ActionPlanTemplateVersion\&quot;:{\&quot;ActionPlanTemplateItem\&quot;:[{\&quot;ActionPlanTemplateItemValue2\&quot;:{\&quot;IsActive\&quot;:true,\&quot;ItemEntityType\&quot;:\&quot;AssessmentTask\&quot;,\&quot;ItemEntityFieldName\&quot;:\&quot;AssessmentTask.AssessmentTaskDefinitionId\&quot;,\&quot;Name\&quot;:\&quot;AssessmentTaskDefinitionId\&quot;,\&quot;ValueLiteralLookup\&quot;:\&quot;III\&quot;},\&quot;ActionPlanTemplateItemValue\&quot;:{\&quot;ItemEntityFieldName\&quot;:\&quot;AssessmentTask.Name\&quot;,\&quot;ItemEntityType\&quot;:\&quot;AssessmentTask\&quot;,\&quot;Name\&quot;:\&quot;Name\&quot;,\&quot;ValueLiteral\&quot;:\&quot;III\&quot;,\&quot;IsActive\&quot;:true},\&quot;ItemEntityType\&quot;:\&quot;AssessmentTask\&quot;,\&quot;IsRequired\&quot;:false,\&quot;Name\&quot;:\&quot;III\&quot;,\&quot;IsActive\&quot;:true},{\&quot;ActionPlanTemplateItemValue2\&quot;:{\&quot;IsActive\&quot;:true,\&quot;ItemEntityType\&quot;:\&quot;AssessmentTask\&quot;,\&quot;ItemEntityFieldName\&quot;:\&quot;AssessmentTask.AssessmentTaskDefinitionId\&quot;,\&quot;Name\&quot;:\&quot;AssessmentTaskDefinitionId\&quot;,\&quot;ValueLiteralLookup\&quot;:\&quot;AAA\&quot;},\&quot;ActionPlanTemplateItemValue\&quot;:{\&quot;ItemEntityFieldName\&quot;:\&quot;AssessmentTask.Name\&quot;,\&quot;ItemEntityType\&quot;:\&quot;AssessmentTask\&quot;,\&quot;Name\&quot;:\&quot;Name\&quot;,\&quot;ValueLiteral\&quot;:\&quot;AAA\&quot;,\&quot;IsActive\&quot;:true},\&quot;ItemEntityType\&quot;:\&quot;AssessmentTask\&quot;,\&quot;IsRequired\&quot;:false,\&quot;Name\&quot;:\&quot;AAA\&quot;,\&quot;IsActive\&quot;:true},{\&quot;ActionPlanTemplateItemValue2\&quot;:{\&quot;IsActive\&quot;:true,\&quot;ItemEntityType\&quot;:\&quot;AssessmentTask\&quot;,\&quot;ItemEntityFieldName\&quot;:\&quot;AssessmentTask.AssessmentTaskDefinitionId\&quot;,\&quot;Name\&quot;:\&quot;AssessmentTaskDefinitionId\&quot;,\&quot;ValueLiteralLookup\&quot;:\&quot;BBB\&quot;},\&quot;ActionPlanTemplateItemValue\&quot;:{\&quot;ItemEntityFieldName\&quot;:\&quot;AssessmentTask.Name\&quot;,\&quot;ItemEntityType\&quot;:\&quot;AssessmentTask\&quot;,\&quot;Name\&quot;:\&quot;Name\&quot;,\&quot;ValueLiteral\&quot;:\&quot;BBB\&quot;,\&quot;IsActive\&quot;:true},\&quot;ItemEntityType\&quot;:\&quot;AssessmentTask\&quot;,\&quot;IsRequired\&quot;:false,\&quot;Name\&quot;:\&quot;BBB\&quot;,\&quot;IsActive\&quot;:true},{\&quot;ActionPlanTemplateItemValue2\&quot;:{\&quot;IsActive\&quot;:true,\&quot;ItemEntityType\&quot;:\&quot;AssessmentTask\&quot;,\&quot;ItemEntityFieldName\&quot;:\&quot;AssessmentTask.AssessmentTaskDefinitionId\&quot;,\&quot;Name\&quot;:\&quot;AssessmentTaskDefinitionId\&quot;,\&quot;ValueLiteralLookup\&quot;:\&quot;CCC\&quot;},\&quot;ActionPlanTemplateItemValue\&quot;:{\&quot;ItemEntityFieldName\&quot;:\&quot;AssessmentTask.Name\&quot;,\&quot;ItemEntityType\&quot;:\&quot;AssessmentTask\&quot;,\&quot;Name\&quot;:\&quot;Name\&quot;,\&quot;ValueLiteral\&quot;:\&quot;CCC\&quot;,\&quot;IsActive\&quot;:true},\&quot;ItemEntityType\&quot;:\&quot;AssessmentTask\&quot;,\&quot;IsRequired\&quot;:false,\&quot;Name\&quot;:\&quot;CCC\&quot;,\&quot;IsActive\&quot;:true},{\&quot;ActionPlanTemplateItemValue2\&quot;:{\&quot;IsActive\&quot;:true,\&quot;ItemEntityType\&quot;:\&quot;AssessmentTask\&quot;,\&quot;ItemEntityFieldName\&quot;:\&quot;AssessmentTask.AssessmentTaskDefinitionId\&quot;,\&quot;Name\&quot;:\&quot;AssessmentTaskDefinitionId\&quot;,\&quot;ValueLiteralLookup\&quot;:\&quot;DDD\&quot;},\&quot;ActionPlanTemplateItemValue\&quot;:{\&quot;ItemEntityFieldName\&quot;:\&quot;AssessmentTask.Name\&quot;,\&quot;ItemEntityType\&quot;:\&quot;AssessmentTask\&quot;,\&quot;Name\&quot;:\&quot;Name\&quot;,\&quot;ValueLiteral\&quot;:\&quot;DDD\&quot;,\&quot;IsActive\&quot;:true},\&quot;ItemEntityType\&quot;:\&quot;AssessmentTask\&quot;,\&quot;IsRequired\&quot;:false,\&quot;Name\&quot;:\&quot;DDD\&quot;,\&quot;IsActive\&quot;:true},{\&quot;ActionPlanTemplateItemValue2\&quot;:{\&quot;IsActive\&quot;:true,\&quot;ItemEntityType\&quot;:\&quot;AssessmentTask\&quot;,\&quot;ItemEntityFieldName\&quot;:\&quot;AssessmentTask.AssessmentTaskDefinitionId\&quot;,\&quot;Name\&quot;:\&quot;AssessmentTaskDefinitionId\&quot;,\&quot;ValueLiteralLookup\&quot;:\&quot;EEE\&quot;},\&quot;ActionPlanTemplateItemValue\&quot;:{\&quot;ItemEntityFieldName\&quot;:\&quot;AssessmentTask.Name\&quot;,\&quot;ItemEntityType\&quot;:\&quot;AssessmentTask\&quot;,\&quot;Name\&quot;:\&quot;Name\&quot;,\&quot;ValueLiteral\&quot;:\&quot;EEE\&quot;,\&quot;IsActive\&quot;:true},\&quot;ItemEntityType\&quot;:\&quot;AssessmentTask\&quot;,\&quot;IsRequired\&quot;:false,\&quot;Name\&quot;:\&quot;EEE\&quot;,\&quot;IsActive\&quot;:true},{\&quot;ActionPlanTemplateItemValue2\&quot;:{\&quot;IsActive\&quot;:true,\&quot;ItemEntityType\&quot;:\&quot;AssessmentTask\&quot;,\&quot;ItemEntityFieldName\&quot;:\&quot;AssessmentTask.AssessmentTaskDefinitionId\&quot;,\&quot;Name\&quot;:\&quot;AssessmentTaskDefinitionId\&quot;,\&quot;ValueLiteralLookup\&quot;:\&quot;FFF\&quot;},\&quot;ActionPlanTemplateItemValue\&quot;:{\&quot;ItemEntityFieldName\&quot;:\&quot;AssessmentTask.Name\&quot;,\&quot;ItemEntityType\&quot;:\&quot;AssessmentTask\&quot;,\&quot;Name\&quot;:\&quot;Name\&quot;,\&quot;ValueLiteral\&quot;:\&quot;FFF\&quot;,\&quot;IsActive\&quot;:true},\&quot;ItemEntityType\&quot;:\&quot;AssessmentTask\&quot;,\&quot;IsRequired\&quot;:false,\&quot;Name\&quot;:\&quot;FFF\&quot;,\&quot;IsActive\&quot;:true},{\&quot;ActionPlanTemplateItemValue2\&quot;:{\&quot;IsActive\&quot;:true,\&quot;ItemEntityType\&quot;:\&quot;AssessmentTask\&quot;,\&quot;ItemEntityFieldName\&quot;:\&quot;AssessmentTask.AssessmentTaskDefinitionId\&quot;,\&quot;Name\&quot;:\&quot;AssessmentTaskDefinitionId\&quot;,\&quot;ValueLiteralLookup\&quot;:\&quot;GGG\&quot;},\&quot;ActionPlanTemplateItemValue\&quot;:{\&quot;ItemEntityFieldName\&quot;:\&quot;AssessmentTask.Name\&quot;,\&quot;ItemEntityType\&quot;:\&quot;AssessmentTask\&quot;,\&quot;Name\&quot;:\&quot;Name\&quot;,\&quot;ValueLiteral\&quot;:\&quot;GGG\&quot;,\&quot;IsActive\&quot;:true},\&quot;ItemEntityType\&quot;:\&quot;AssessmentTask\&quot;,\&quot;IsRequired\&quot;:false,\&quot;Name\&quot;:\&quot;GGG\&quot;,\&quot;IsActive\&quot;:true},{\&quot;ActionPlanTemplateItemValue2\&quot;:{\&quot;IsActive\&quot;:true,\&quot;ItemEntityType\&quot;:\&quot;AssessmentTask\&quot;,\&quot;ItemEntityFieldName\&quot;:\&quot;AssessmentTask.AssessmentTaskDefinitionId\&quot;,\&quot;Name\&quot;:\&quot;AssessmentTaskDefinitionId\&quot;,\&quot;ValueLiteralLookup\&quot;:\&quot;HHH\&quot;},\&quot;ActionPlanTemplateItemValue\&quot;:{\&quot;ItemEntityFieldName\&quot;:\&quot;AssessmentTask.Name\&quot;,\&quot;ItemEntityType\&quot;:\&quot;AssessmentTask\&quot;,\&quot;Name\&quot;:\&quot;Name\&quot;,\&quot;ValueLiteral\&quot;:\&quot;HHH\&quot;,\&quot;IsActive\&quot;:true},\&quot;ItemEntityType\&quot;:\&quot;AssessmentTask\&quot;,\&quot;IsRequired\&quot;:false,\&quot;Name\&quot;:\&quot;HHH\&quot;,\&quot;IsActive\&quot;:true}],\&quot;Name\&quot;:\&quot;Here Goes Nothing 2\&quot;},\&quot;TargetEntityType\&quot;:\&quot;Visit\&quot;,\&quot;Name\&quot;:\&quot;Here Goes Nothing 2\&quot;,\&quot;Description\&quot;:\&quot;Here Goes Nothing 2\&quot;,\&quot;ActionPlanType\&quot;:\&quot;Retail\&quot;},\&quot;InspectionType\&quot;:{\&quot;Name\&quot;:\&quot;Here Goes Nothing 2\&quot;}}&quot;,
+  &quot;error&quot; : &quot;OK&quot;
+}</previewJsonData>
+    <processSuperBulk>false</processSuperBulk>
+    <responseCacheTtlMinutes>0.0</responseCacheTtlMinutes>
+    <rollbackOnError>false</rollbackOnError>
+    <sourceObject>json</sourceObject>
+    <sourceObjectDefault>false</sourceObjectDefault>
+    <synchronousProcessThreshold>-1.0</synchronousProcessThreshold>
+    <type>Transform</type>
+    <uniqueName>QuickBuildDeserializeJSONImport_1</uniqueName>
+    <versionNumber>1.0</versionNumber>
+    <xmlDeclarationRemoved>false</xmlDeclarationRemoved>
+</OmniDataTransform>

@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OmniDataTransform xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <assignmentRulesUsed>false</assignmentRulesUsed>
+    <deletedOnSuccess>false</deletedOnSuccess>
+    <errorIgnored>false</errorIgnored>
+    <expectedInputJson>{
+  &quot;vlcTimeTracking&quot; : {
+    &quot;DRGetAssessmentDefinedValues&quot; : null,
+    &quot;DRCreateAssessmentTaskIndJunction&quot; : null,
+    &quot;DRCreateRegAssementIndJunction&quot; : null,
+    &quot;DRTransformAddInJunctions&quot; : null,
+    &quot;NavigateAction1&quot; : null,
+    &quot;DRUpdateTemplateVersionFinal&quot; : null,
+    &quot;DRAddSignatures&quot; : null,
+    &quot;DRCreateInspection&quot; : null,
+    &quot;Items&quot; : null,
+    &quot;SignatureTasks&quot; : null,
+    &quot;Details&quot; : null
+  },
+  &quot;vlcPersistentComponent&quot; : { },
+  &quot;userTimeZone&quot; : null,
+  &quot;userProfile&quot; : null,
+  &quot;userName&quot; : null,
+  &quot;userId&quot; : null,
+  &quot;timeStamp&quot; : null,
+  &quot;ContextId&quot; : null,
+  &quot;Items&quot; : {
+    &quot;FileCount&quot; : null,
+    &quot;InspectionFile&quot; : [ {
+      &quot;data&quot; : null,
+      &quot;size&quot; : null,
+      &quot;filename&quot; : null
+    } ],
+    &quot;InspectionComponents&quot; : {
+      &quot;ParsedValue&quot; : null,
+      &quot;ItemEntity&quot; : null,
+      &quot;RegulatoryCodeAuthority&quot; : null,
+      &quot;RegulatoryCodeName&quot; : null,
+      &quot;RegulatoryCodeSubject&quot; : null,
+      &quot;AssessmentIndicatorType&quot; : null,
+      &quot;AssessmentIndicatorName&quot; : null,
+      &quot;TaskDefinition&quot; : null,
+      &quot;AssessmentIndicatorDefinedValues&quot; : null
+    }
+  },
+  &quot;SignatureTasks&quot; : {
+    &quot;Signatures&quot; : {
+      &quot;Order&quot; : null,
+      &quot;SignatureName&quot; : null,
+      &quot;SignatureRequired&quot; : null
+    }
+  },
+  &quot;Details&quot; : {
+    &quot;RequireSignatures&quot; : null,
+    &quot;Description&quot; : null,
+    &quot;Name&quot; : null
+  }
+}</expectedInputJson>
+    <fieldLevelSecurityEnabled>false</fieldLevelSecurityEnabled>
+    <inputType>JSON</inputType>
+    <isManagedUsingStdDesigner>false</isManagedUsingStdDesigner>
+    <name>QuickBuildGetAssessmentDefinedValuesFromCSV</name>
+    <nullInputsIncludedInOutput>false</nullInputsIncludedInOutput>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>| &apos;InspectionTemplateUtils&apos; &apos;getAssessmentIndicatorDefinedValues&apos; var:Items:InspectionComponents:AssessmentIndicatorDefinedValues FUNCTION</formulaConverted>
+        <formulaExpression>FUNCTION(&apos;InspectionTemplateUtils&apos;,&apos;getAssessmentIndicatorDefinedValues&apos;,Items:InspectionComponents:AssessmentIndicatorDefinedValues)</formulaExpression>
+        <formulaResultPath>Items:InspectionComponents:ParsedDefinedValues</formulaResultPath>
+        <formulaSequence>1.0</formulaSequence>
+        <globalKey>QuickBuildGetAssessmentDefinedValuesFromCSV5352475550783244</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>QuickBuildGetAssessmentDefinedValuesFromCSV</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>| | var:Items:InspectionComponents LIST &apos;AssessmentIndicatorDefinedValues/\/\/!=/\/\/$Vlocity.NULL&apos; FILTER</formulaConverted>
+        <formulaExpression>FILTER(LIST(Items:InspectionComponents),&apos;AssessmentIndicatorDefinedValues != $Vlocity.NULL&apos;)</formulaExpression>
+        <formulaResultPath>DefinedValuesForImport</formulaResultPath>
+        <formulaSequence>3.0</formulaSequence>
+        <globalKey>QuickBuildGetAssessmentDefinedValuesFromCSV6936408254192277</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>QuickBuildGetAssessmentDefinedValuesFromCSV</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>var:Items:InspectionComponents:AssessmentIndicatorName</formulaConverted>
+        <formulaExpression>Items:InspectionComponents:AssessmentIndicatorName</formulaExpression>
+        <formulaResultPath>Items:InspectionComponents:ParsedDefinedValues:AssessmentIndicatorName</formulaResultPath>
+        <formulaSequence>2.0</formulaSequence>
+        <globalKey>QuickBuildGetAssessmentDefinedValuesFromCSV8310259547229593</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>QuickBuildGetAssessmentDefinedValuesFromCSV</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>QuickBuildGetAssessmentDefinedValuesFromCSV14047738831963041</globalKey>
+        <inputFieldName>HasDefinedValues</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>QuickBuildGetAssessmentDefinedValuesFromCSV</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>HasDefinedValues</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>| var:DefinedValuesForImport ISNOTBLANK</formulaConverted>
+        <formulaExpression>ISNOTBLANK(DefinedValuesForImport)</formulaExpression>
+        <formulaResultPath>HasDefinedValues</formulaResultPath>
+        <formulaSequence>4.0</formulaSequence>
+        <globalKey>QuickBuildGetAssessmentDefinedValuesFromCSV08067909307404086</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>QuickBuildGetAssessmentDefinedValuesFromCSV</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>QuickBuildGetAssessmentDefinedValuesFromCSV6700723901612338</globalKey>
+        <inputFieldName>DefinedValuesForImport</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>QuickBuildGetAssessmentDefinedValuesFromCSV</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>DefinedValuedForImport</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <outputType>JSON</outputType>
+    <previewJsonData>{
+  &quot;timeStamp&quot; : &quot;2021-09-07T13:43:08.464Z&quot;,
+  &quot;userProfile&quot; : &quot;System Administrator&quot;,
+  &quot;userTimeZone&quot; : &quot;-420&quot;,
+  &quot;userCurrencyCode&quot; : &quot;USD&quot;,
+  &quot;userName&quot; : &quot;admin@lpi-inspectiontest-1.demo&quot;,
+  &quot;userId&quot; : &quot;0055Y00000Gb048QAB&quot;,
+  &quot;SignatureTasks&quot; : null,
+  &quot;Details&quot; : {
+    &quot;RequireSignatures&quot; : false,
+    &quot;Name&quot; : &quot; Test1111&quot;,
+    &quot;Description&quot; : &quot;Test1111&quot;
+  },
+  &quot;Items&quot; : {
+    &quot;FileCount&quot; : 0,
+    &quot;InspectionComponents&quot; : [ {
+      &quot;AssessmentIndicatorDefinedValues&quot; : null,
+      &quot;ItemEntity&quot; : &quot;AssessmentTask&quot;,
+      &quot;TaskDefinition&quot; : &quot;Test1111A&quot;,
+      &quot;AssessmentIndicatorName&quot; : &quot;Test1111A&quot;,
+      &quot;AssessmentIndicatorType&quot; : &quot;Boolean&quot;,
+      &quot;RegulatoryCodeName&quot; : &quot;Test1111A&quot;,
+      &quot;RegulatoryCodeSubject&quot; : &quot;Test1111A&quot;,
+      &quot;RegulatoryCodeAuthority&quot; : &quot;Test1111A&quot;
+    }, {
+      &quot;AssessmentIndicatorDefinedValues&quot; : &quot;AAA|BBB|CCC|DDD|EEE&quot;,
+      &quot;ItemEntity&quot; : &quot;AssessmentTask&quot;,
+      &quot;TaskDefinition&quot; : &quot;Test1111B&quot;,
+      &quot;AssessmentIndicatorName&quot; : &quot;Test1111B&quot;,
+      &quot;AssessmentIndicatorType&quot; : &quot;Picklist&quot;,
+      &quot;RegulatoryCodeName&quot; : &quot;Test1111B&quot;,
+      &quot;RegulatoryCodeSubject&quot; : &quot;Test1111B&quot;,
+      &quot;RegulatoryCodeAuthority&quot; : &quot;Test1111B&quot;
+    }, {
+      &quot;AssessmentIndicatorDefinedValues&quot; : null,
+      &quot;ItemEntity&quot; : &quot;AssessmentTask&quot;,
+      &quot;TaskDefinition&quot; : &quot;Test1111C&quot;,
+      &quot;AssessmentIndicatorName&quot; : &quot;Test1111C&quot;,
+      &quot;AssessmentIndicatorType&quot; : &quot;Text&quot;,
+      &quot;RegulatoryCodeName&quot; : &quot;Test1111C&quot;,
+      &quot;RegulatoryCodeSubject&quot; : &quot;Test1111C&quot;,
+      &quot;RegulatoryCodeAuthority&quot; : &quot;Test1111C&quot;
+    }, {
+      &quot;AssessmentIndicatorDefinedValues&quot; : &quot;HHH|III|JJJ|LLL&quot;,
+      &quot;ItemEntity&quot; : &quot;AssessmentTask&quot;,
+      &quot;TaskDefinition&quot; : &quot;Test1111D&quot;,
+      &quot;AssessmentIndicatorName&quot; : &quot;Test1111D&quot;,
+      &quot;AssessmentIndicatorType&quot; : &quot;Picklist&quot;,
+      &quot;RegulatoryCodeName&quot; : &quot;Test1111D&quot;,
+      &quot;RegulatoryCodeSubject&quot; : &quot;Test1111D&quot;,
+      &quot;RegulatoryCodeAuthority&quot; : &quot;Test1111D&quot;
+    } ]
+  },
+  &quot;DefinedValuedForImport&quot; : [ {
+    &quot;AssessmentIndicatorDefinedValues&quot; : &quot;AAA|BBB|CCC|DDD|EEE&quot;,
+    &quot;ItemEntity&quot; : &quot;AssessmentTask&quot;,
+    &quot;TaskDefinition&quot; : &quot;Test1111B&quot;,
+    &quot;AssessmentIndicatorName&quot; : &quot;Test1111B&quot;,
+    &quot;AssessmentIndicatorType&quot; : &quot;Picklist&quot;,
+    &quot;RegulatoryCodeName&quot; : &quot;Test1111B&quot;,
+    &quot;RegulatoryCodeSubject&quot; : &quot;Test1111B&quot;,
+    &quot;RegulatoryCodeAuthority&quot; : &quot;Test1111B&quot;,
+    &quot;ParsedDefinedValues&quot; : [ {
+      &quot;DefinedValue&quot; : &quot;AAA&quot;,
+      &quot;AssessmentIndicatorName&quot; : &quot;Test1111B&quot;
+    }, {
+      &quot;DefinedValue&quot; : &quot;BBB&quot;,
+      &quot;AssessmentIndicatorName&quot; : &quot;Test1111B&quot;
+    }, {
+      &quot;DefinedValue&quot; : &quot;CCC&quot;,
+      &quot;AssessmentIndicatorName&quot; : &quot;Test1111B&quot;
+    }, {
+      &quot;DefinedValue&quot; : &quot;DDD&quot;,
+      &quot;AssessmentIndicatorName&quot; : &quot;Test1111B&quot;
+    }, {
+      &quot;DefinedValue&quot; : &quot;EEE&quot;,
+      &quot;AssessmentIndicatorName&quot; : &quot;Test1111B&quot;
+    } ]
+  }, {
+    &quot;AssessmentIndicatorDefinedValues&quot; : &quot;HHH|III|JJJ|LLL&quot;,
+    &quot;ItemEntity&quot; : &quot;AssessmentTask&quot;,
+    &quot;TaskDefinition&quot; : &quot;Test1111D&quot;,
+    &quot;AssessmentIndicatorName&quot; : &quot;Test1111D&quot;,
+    &quot;AssessmentIndicatorType&quot; : &quot;Picklist&quot;,
+    &quot;RegulatoryCodeName&quot; : &quot;Test1111D&quot;,
+    &quot;RegulatoryCodeSubject&quot; : &quot;Test1111D&quot;,
+    &quot;RegulatoryCodeAuthority&quot; : &quot;Test1111D&quot;,
+    &quot;ParsedDefinedValues&quot; : [ {
+      &quot;DefinedValue&quot; : &quot;HHH&quot;,
+      &quot;AssessmentIndicatorName&quot; : &quot;Test1111D&quot;
+    }, {
+      &quot;DefinedValue&quot; : &quot;III&quot;,
+      &quot;AssessmentIndicatorName&quot; : &quot;Test1111D&quot;
+    }, {
+      &quot;DefinedValue&quot; : &quot;JJJ&quot;,
+      &quot;AssessmentIndicatorName&quot; : &quot;Test1111D&quot;
+    }, {
+      &quot;DefinedValue&quot; : &quot;LLL&quot;,
+      &quot;AssessmentIndicatorName&quot; : &quot;Test1111D&quot;
+    } ]
+  } ],
+  &quot;HasDefinedValues&quot; : true,
+  &quot;FilteredList2&quot; : {
+    &quot;RegCodeAssementIndToInsert&quot; : [ {
+      &quot;AssessmentIndicatorDefinedValues&quot; : null,
+      &quot;ItemEntity&quot; : &quot;AssessmentTask&quot;,
+      &quot;TaskDefinition&quot; : &quot;Test1111A&quot;,
+      &quot;AssessmentIndicatorName&quot; : &quot;Test1111A&quot;,
+      &quot;AssessmentIndicatorType&quot; : &quot;Boolean&quot;,
+      &quot;RegulatoryCodeName&quot; : &quot;Test1111A&quot;,
+      &quot;RegulatoryCodeSubject&quot; : &quot;Test1111A&quot;,
+      &quot;RegulatoryCodeAuthority&quot; : &quot;Test1111A&quot;,
+      &quot;RegCodeAssessmentInd&quot; : &quot;&quot;,
+      &quot;AssessmentTaskIndDefinitionName&quot; : &quot;&quot;
+    }, {
+      &quot;AssessmentIndicatorDefinedValues&quot; : &quot;AAA|BBB|CCC|DDD|EEE&quot;,
+      &quot;ItemEntity&quot; : &quot;AssessmentTask&quot;,
+      &quot;TaskDefinition&quot; : &quot;Test1111B&quot;,
+      &quot;AssessmentIndicatorName&quot; : &quot;Test1111B&quot;,
+      &quot;AssessmentIndicatorType&quot; : &quot;Picklist&quot;,
+      &quot;RegulatoryCodeName&quot; : &quot;Test1111B&quot;,
+      &quot;RegulatoryCodeSubject&quot; : &quot;Test1111B&quot;,
+      &quot;RegulatoryCodeAuthority&quot; : &quot;Test1111B&quot;,
+      &quot;RegCodeAssessmentInd&quot; : &quot;&quot;,
+      &quot;AssessmentTaskIndDefinitionName&quot; : &quot;&quot;
+    }, {
+      &quot;AssessmentIndicatorDefinedValues&quot; : null,
+      &quot;ItemEntity&quot; : &quot;AssessmentTask&quot;,
+      &quot;TaskDefinition&quot; : &quot;Test1111C&quot;,
+      &quot;AssessmentIndicatorName&quot; : &quot;Test1111C&quot;,
+      &quot;AssessmentIndicatorType&quot; : &quot;Text&quot;,
+      &quot;RegulatoryCodeName&quot; : &quot;Test1111C&quot;,
+      &quot;RegulatoryCodeSubject&quot; : &quot;Test1111C&quot;,
+      &quot;RegulatoryCodeAuthority&quot; : &quot;Test1111C&quot;,
+      &quot;RegCodeAssessmentInd&quot; : &quot;&quot;,
+      &quot;AssessmentTaskIndDefinitionName&quot; : &quot;&quot;
+    }, {
+      &quot;AssessmentIndicatorDefinedValues&quot; : &quot;HHH|III|JJJ|LLL&quot;,
+      &quot;ItemEntity&quot; : &quot;AssessmentTask&quot;,
+      &quot;TaskDefinition&quot; : &quot;Test1111D&quot;,
+      &quot;AssessmentIndicatorName&quot; : &quot;Test1111D&quot;,
+      &quot;AssessmentIndicatorType&quot; : &quot;Picklist&quot;,
+      &quot;RegulatoryCodeName&quot; : &quot;Test1111D&quot;,
+      &quot;RegulatoryCodeSubject&quot; : &quot;Test1111D&quot;,
+      &quot;RegulatoryCodeAuthority&quot; : &quot;Test1111D&quot;,
+      &quot;RegCodeAssessmentInd&quot; : &quot;&quot;,
+      &quot;AssessmentTaskIndDefinitionName&quot; : &quot;&quot;
+    } ]
+  },
+  &quot;FilteredList&quot; : {
+    &quot;AssessmentIndDefinitionsToInsert&quot; : [ {
+      &quot;AssessmentIndicatorDefinedValues&quot; : null,
+      &quot;ItemEntity&quot; : &quot;AssessmentTask&quot;,
+      &quot;TaskDefinition&quot; : &quot;Test1111A&quot;,
+      &quot;AssessmentIndicatorName&quot; : &quot;Test1111A&quot;,
+      &quot;AssessmentIndicatorType&quot; : &quot;Boolean&quot;,
+      &quot;RegulatoryCodeName&quot; : &quot;Test1111A&quot;,
+      &quot;RegulatoryCodeSubject&quot; : &quot;Test1111A&quot;,
+      &quot;RegulatoryCodeAuthority&quot; : &quot;Test1111A&quot;,
+      &quot;RegCodeAssessmentInd&quot; : &quot;&quot;,
+      &quot;AssessmentTaskIndDefinitionName&quot; : &quot;&quot;
+    }, {
+      &quot;AssessmentIndicatorDefinedValues&quot; : &quot;AAA|BBB|CCC|DDD|EEE&quot;,
+      &quot;ItemEntity&quot; : &quot;AssessmentTask&quot;,
+      &quot;TaskDefinition&quot; : &quot;Test1111B&quot;,
+      &quot;AssessmentIndicatorName&quot; : &quot;Test1111B&quot;,
+      &quot;AssessmentIndicatorType&quot; : &quot;Picklist&quot;,
+      &quot;RegulatoryCodeName&quot; : &quot;Test1111B&quot;,
+      &quot;RegulatoryCodeSubject&quot; : &quot;Test1111B&quot;,
+      &quot;RegulatoryCodeAuthority&quot; : &quot;Test1111B&quot;,
+      &quot;RegCodeAssessmentInd&quot; : &quot;&quot;,
+      &quot;AssessmentTaskIndDefinitionName&quot; : &quot;&quot;
+    }, {
+      &quot;AssessmentIndicatorDefinedValues&quot; : null,
+      &quot;ItemEntity&quot; : &quot;AssessmentTask&quot;,
+      &quot;TaskDefinition&quot; : &quot;Test1111C&quot;,
+      &quot;AssessmentIndicatorName&quot; : &quot;Test1111C&quot;,
+      &quot;AssessmentIndicatorType&quot; : &quot;Text&quot;,
+      &quot;RegulatoryCodeName&quot; : &quot;Test1111C&quot;,
+      &quot;RegulatoryCodeSubject&quot; : &quot;Test1111C&quot;,
+      &quot;RegulatoryCodeAuthority&quot; : &quot;Test1111C&quot;,
+      &quot;RegCodeAssessmentInd&quot; : &quot;&quot;,
+      &quot;AssessmentTaskIndDefinitionName&quot; : &quot;&quot;
+    }, {
+      &quot;AssessmentIndicatorDefinedValues&quot; : &quot;HHH|III|JJJ|LLL&quot;,
+      &quot;ItemEntity&quot; : &quot;AssessmentTask&quot;,
+      &quot;TaskDefinition&quot; : &quot;Test1111D&quot;,
+      &quot;AssessmentIndicatorName&quot; : &quot;Test1111D&quot;,
+      &quot;AssessmentIndicatorType&quot; : &quot;Picklist&quot;,
+      &quot;RegulatoryCodeName&quot; : &quot;Test1111D&quot;,
+      &quot;RegulatoryCodeSubject&quot; : &quot;Test1111D&quot;,
+      &quot;RegulatoryCodeAuthority&quot; : &quot;Test1111D&quot;,
+      &quot;RegCodeAssessmentInd&quot; : &quot;&quot;,
+      &quot;AssessmentTaskIndDefinitionName&quot; : &quot;&quot;
+    } ]
+  },
+  &quot;HasRegulatoryIndDefintions&quot; : true,
+  &quot;HasAssessmentTaskIndDefinitions&quot; : true,
+  &quot;DRId_InspectionType&quot; : &quot;0fJ5Y000000kBbeUAE&quot;,
+  &quot;DRId_ActionPlanTemplateVersion&quot; : &quot;0PT5Y000000oS8YWAU&quot;,
+  &quot;DRId_ActionPlanTemplate&quot; : &quot;0PR5Y000000oS8XWAU&quot;
+}</previewJsonData>
+    <processSuperBulk>false</processSuperBulk>
+    <responseCacheTtlMinutes>0.0</responseCacheTtlMinutes>
+    <rollbackOnError>false</rollbackOnError>
+    <sourceObject>json</sourceObject>
+    <sourceObjectDefault>false</sourceObjectDefault>
+    <synchronousProcessThreshold>-1.0</synchronousProcessThreshold>
+    <type>Transform</type>
+    <uniqueName>QuickBuildGetAssessmentDefinedValuesFromCSV_1</uniqueName>
+    <versionNumber>1.0</versionNumber>
+    <xmlDeclarationRemoved>false</xmlDeclarationRemoved>
+</OmniDataTransform>

@@ -1,0 +1,25 @@
+{
+  "generatedAt": "2026-03-31T17:27:09.491Z",
+  "targetOrgAlias": "cm-prod-demo",
+  "loginUrl": "https://storm-67f93fa3759a67.my.salesforce.com",
+  "org": {
+    "id": "00DHu00000yuaySMAQ",
+    "name": "Salesforce Trial Org Request & Manage",
+    "instanceName": "NA238",
+    "organizationType": "Enterprise Edition",
+    "isSandbox": false
+  },
+  "user": {
+    "username": "storm.67f93fa3759a67@salesforce.com",
+    "userId": "00DHu00000yuaySMAQ"
+  },
+  "orgDisplay": {
+    "apiVersion": "66.0",
+    "connectedStatus": "connected",
+    "instanceUrl": "https://storm-67f93fa3759a67.my.salesforce.com"
+  },
+  "discoveryMode": {
+    "writeOrDeployAllowedByScripts": false,
+    "note": "This project only includes retrieval and analysis scripts. No deploy commands are used."
+  }
+}

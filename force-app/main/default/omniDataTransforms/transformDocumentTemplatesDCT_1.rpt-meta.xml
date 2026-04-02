@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OmniDataTransform xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <assignmentRulesUsed>false</assignmentRulesUsed>
+    <deletedOnSuccess>false</deletedOnSuccess>
+    <errorIgnored>false</errorIgnored>
+    <expectedInputJson>{
+  &quot;SObjectId&quot; : &quot;5008c00001IeZJ5AAN&quot;,
+  &quot;selectedTemplate&quot; : [ {
+    &quot;Id&quot; : &quot;aE18c000000RrwlCAC&quot;,
+    &quot;Name&quot; : &quot;MedInfoArticles&quot;,
+    &quot;TemplateType&quot; : &quot;Microsoft Word .DOCX Template&quot;,
+    &quot;VersionNumber&quot; : 2,
+    &quot;FetchDocumentTemplateFromNameStatus&quot; : true,
+    &quot;LoopBlockIterationStatus&quot; : true,
+    &quot;LoopBlockIterationIndex&quot; : 1
+  }, {
+    &quot;Id&quot; : &quot;aE18c000000RrwmCAC&quot;,
+    &quot;Name&quot; : &quot;MedInfoCoverLetter&quot;,
+    &quot;TemplateType&quot; : &quot;Microsoft Word .DOCX Template&quot;,
+    &quot;VersionNumber&quot; : 3,
+    &quot;FetchDocumentTemplateFromNameStatus&quot; : true,
+    &quot;LoopBlockIterationStatus&quot; : true,
+    &quot;LoopBlockIterationIndex&quot; : 2
+  }, {
+    &quot;TemplateType&quot; : &quot;FILE&quot;,
+    &quot;VersionNumber&quot; : &quot;1&quot;,
+    &quot;Name&quot; : &quot;Quattroglu Product Insert&quot;,
+    &quot;pdfGenContentVersionId&quot; : &quot;0688c000005WtJgAAK&quot;,
+    &quot;Id&quot; : &quot;0688c000005WtJgAAK&quot;
+  } ],
+  &quot;docTitle&quot; : &quot;Proposal Document&quot;,
+  &quot;pdfContentVersionIds&quot; : [ &quot;0688c000005XEUdAAO&quot;, &quot;0688c000005XEUYAA4&quot; ],
+  &quot;ContextId&quot; : &quot;5008c00001IeZJ5AAN&quot;,
+  &quot;LanguageCode&quot; : &quot;en_US&quot;,
+  &quot;timeStamp&quot; : &quot;2022-04-18T20:02:54.832Z&quot;,
+  &quot;userProfile&quot; : &quot;System Administrator&quot;,
+  &quot;userTimeZoneName&quot; : &quot;America/Los_Angeles&quot;,
+  &quot;userTimeZone&quot; : &quot;-420&quot;,
+  &quot;userCurrencyCode&quot; : &quot;USD&quot;,
+  &quot;userName&quot; : &quot;sivajikandimalla@sivajikandimalla-220330-790.demo&quot;,
+  &quot;userId&quot; : &quot;0058c00000BHQVoAAP&quot;,
+  &quot;generateMergeDocument&quot; : { },
+  &quot;Articles&quot; : [ {
+    &quot;KnowledgeArticleID&quot; : &quot;kA08c0000016seGCAQ&quot;,
+    &quot;Title&quot; : &quot;Wie schicke ich einen Artikel zurück?&quot;,
+    &quot;Summary&quot; : &quot;Schritt-für-Schritt-Anleitungen für die Rücksendung eines Artikels&quot;,
+    &quot;Detail&quot; : &quot;&lt;b&gt;1. Schritt&lt;/b&gt;&lt;br&gt;Füllen Sie zunächst das Rücksendeformular aus, das mit Ihrem Artikel geliefert wurde. Achten Sie darauf, alle Informationen einzutragen einschließlich der Grund für Ihre Rückseldung und ob es sich um einen Austausch oder eine Rückerstattung handelt.&lt;br&gt;&lt;br&gt;&lt;b&gt;2. Schritt&lt;/b&gt;&lt;br&gt;Verpacken Sie den gesamten Inhalt in der Originalverpackung. Einige Elemente bestehen aus mehreren Teilen oder Stücken. Retournieren Sie stets den gesamten Artikel oder Lieferung für einen Austausch oder eine Rückerstattung.&lt;br&gt;&lt;br&gt;&lt;b style=\&quot;\&quot;&gt;3. Schritt&lt;/b&gt;&lt;br&gt;Wählen Sie ein Rückgabeverfahren:\n&lt;ul&gt;&lt;li&gt;Option A: Verwenden Sie die Return-Aufkleber mit Ihrem Rucksack Schlupf vorgesehen.&lt;/li&gt;&lt;li&gt;Option B: Verwenden Sie einen Versandträger Ihrer Wahl.&lt;/li&gt;&lt;/ul&gt;\n&lt;br&gt;&lt;b style=\&quot;\&quot;&gt;4. Schritt&lt;/b&gt;&lt;br&gt;Abdeckung / entfernen Sie alle Original-Versandetiketten auf dem Kasten oder verpacken sie in kam. Wenn Sie den Rückholservice sind, entfernen Sie das Etikett und bringen es zu Ihrem Paket. Lösen und schließen Sie den Rücksendeformular Ihrer Satz Slip mit der perforierten Linie. Halten Sie die restlichen Packung Schlupf, bis Ihre Rückkehr verarbeitet. Schicken Sie das Paket auf einer der auf dem Etikett aufgeführten Rückgabe Träger. Kosten für die Rück Etikett erscheinen rechts auf dem Etikett. Kaufversicherung ist nicht notwendig, weil es mit den Etikettenkosten enthalten.&lt;br&gt;&lt;br&gt;Wenn Sie über einen Versandträger Ihrer Wahl, wählen Sie Abfertigungsrücksendung sind zu versichern und das Einzelteil für volle Wert der Ware zurückgegeben. Denken Sie daran, das ausgefüllte Retourenformular im Paket einschließen. Halten Sie die restlichen Pack Slip für Ihre Unterlagen. Für die Rückkehr, Credits zu einer Kreditkarte sofort nach Verarbeitung angewendet werden, aber möglicherweise nicht auf Ihrem Kontoauszug ein bis zwei Abrechnungszyklen angezeigt.&quot;
+  }, {
+    &quot;KnowledgeArticleID&quot; : &quot;kA08c0000016seGCAQ&quot;,
+    &quot;Title&quot; : &quot;How do I return an item?&quot;,
+    &quot;Summary&quot; : &quot;Step-by-step instructions for returning an item to the company&quot;,
+    &quot;Detail&quot; : &quot;&lt;b&gt;Step 1&lt;/b&gt;&lt;br&gt;Start by completing the return form of the pack slip that came with your item. Be sure to fill in all information, including the reason for your return and if you&amp;#39;d like to receive an exchange or refund.&lt;br&gt;&lt;br&gt;&lt;b&gt;Step 2&lt;/b&gt;&lt;br&gt;Repack all contents in the original packaging. Some items consist of several parts or pieces. Always return the entire item or set for an exchange or refund.&lt;br&gt;&lt;br&gt;&lt;b&gt;Step 3&lt;/b&gt;&lt;br&gt;Choose a return method:\n&lt;ul&gt;&lt;li&gt;Option A: Use the Return Label provided with your pack slip.&lt;/li&gt;&lt;li&gt;Option B: Use a shipping carrier of your choice.&lt;/li&gt;&lt;/ul&gt;\n&lt;b&gt;Step 4&lt;/b&gt;&lt;br&gt;Cover/remove all original shipping labels on the box or package it arrived in. If you&amp;#39;re using the Return Label, remove the label and affix it to your package. Detach and enclose the return form of your pack slip using the perforated line. Keep the remaining pack slip until your return is processed. Return the package to one of the carriers listed on the Return Label. Charges for the Return Label appear right on the label.  Purchasing insurance is not necessary because it&amp;#39;s included with the label charges.&lt;br&gt;&lt;br&gt;If you&amp;#39;re returning through a shipping carrier of your choice, select ground service and insure the item for full value of the merchandise being returned. Remember to enclose the completed return form in the package. Keep the remaining pack slip for your records. For returns, credits to a credit card will be applied immediately upon processing, but may not appear on your statement for one to two billing cycles.&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt; &quot;
+  }, {
+    &quot;KnowledgeArticleID&quot; : &quot;kA08c0000016seGCAQ&quot;,
+    &quot;Title&quot; : &quot;¿Cómo devuelvo un artículo?&quot;,
+    &quot;Summary&quot; : &quot;Paso a paso las instrucciones para devolver un artículo a la empresa&quot;,
+    &quot;Detail&quot; : &quot;&lt;b&gt;Paso 1&lt;/b&gt;&lt;br&gt;Comience por completar el formulario de devolución del recibo de paquete que viene con su artículo. Asegúrese de llenar toda la información, incluyendo la razón de la devolución y si desea recibir un cambio o reembolso.&lt;br&gt;&lt;br&gt;&lt;b&gt;Paso 2&lt;/b&gt;&lt;br&gt;Vuelva a embalar todo el contenido en su empaque original. Algunos artículos constan de varias partes o piezas. Siempre devuleva el artículo o todo el conjunto para un intercambio o un reembolso.&lt;br&gt;&lt;br&gt;&lt;b&gt;Paso 3&lt;/b&gt;&lt;br&gt;Seleccione un método de retorno:\n&lt;ul&gt;&lt;li&gt;Opción A: Utilice la etiqueta de devolución provista con su membrete del paquete.&lt;/li&gt;&lt;li&gt;Opción B: Utilice una empresa de transporte de su elección.&lt;/li&gt;&lt;/ul&gt;\n&lt;b&gt;Paso 4&lt;/b&gt;&lt;br&gt;Cubra/remueva todas las etiquetas de envío originales en la caja o paquete en que llegó. Si está usando la etiqueta de devolución, retire la etiqueta y adjúntelo a su paquete. Separar y adjuntar el formulario de devolución de su membrete del paquete mediante la línea perforada. Mantenga el membrete del paquete restante hasta que se procese su retorno. Devolver el paquete a una de las compañías indicadas en la etiqueta de devolución. Los cargos por la etiqueta de devolución aparecen a la derecha en la etiqueta. La compra de un seguro no es necesario, ya que está incluido en los gastos de la etiqueta.&lt;br&gt;&lt;br&gt;Si usted está haciendo la devolución a través de una compañía de envío de su elección, seleccione el servicio de tierra y asegure el artículo por el valor total de la mercancía que se devuelve. No olvide adjuntar el formulario de devolución en el paquete. Mantenga el membrete del paquete restante para sus registros. Para devoluciones, créditos a una tarjeta de crédito se aplicará inmediatamente después del procesamiento de la devolución, pero pueden no aparecer en su estado de cuenta de uno o dos ciclos de facturación.&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt; &quot;
+  }, {
+    &quot;KnowledgeArticleID&quot; : &quot;kA08c0000016seGCAQ&quot;,
+    &quot;Title&quot; : &quot;¿Cómo devuelvo un artículo?&quot;,
+    &quot;Summary&quot; : &quot;Paso a paso las instrucciones para devolver un artículo a la empresa&quot;,
+    &quot;Detail&quot; : &quot;&lt;b&gt;Paso 1&lt;/b&gt;&lt;br&gt;Comience por completar el formulario de devolución del recibo de paquete que viene con su artículo. Asegúrese de llenar toda la información, incluyendo la razón de la devolución y si desea recibir un cambio o reembolso.&lt;br&gt;&lt;br&gt;&lt;b&gt;Paso 2&lt;/b&gt;&lt;br&gt;Vuelva a embalar todo el contenido en su empaque original. Algunos artículos constan de varias partes o piezas. Siempre devuleva el artículo o todo el conjunto para un intercambio o un reembolso.&lt;br&gt;&lt;br&gt;&lt;b&gt;Paso 3&lt;/b&gt;&lt;br&gt;Seleccione un método de retorno:\n&lt;ul&gt;&lt;li&gt;Opción A: Utilice la etiqueta de devolución provista con su membrete del paquete.&lt;/li&gt;&lt;li&gt;Opción B: Utilice una empresa de transporte de su elección.&lt;/li&gt;&lt;/ul&gt;\n&lt;b&gt;Paso 4&lt;/b&gt;&lt;br&gt;Cubra/remueva todas las etiquetas de envío originales en la caja o paquete en que llegó. Si está usando la etiqueta de devolución, retire la etiqueta y adjúntelo a su paquete. Separar y adjuntar el formulario de devolución de su membrete del paquete mediante la línea perforada. Mantenga el membrete del paquete restante hasta que se procese su retorno. Devolver el paquete a una de las compañías indicadas en la etiqueta de devolución. Los cargos por la etiqueta de devolución aparecen a la derecha en la etiqueta. La compra de un seguro no es necesario, ya que está incluido en los gastos de la etiqueta.&lt;br&gt;&lt;br&gt;Si usted está haciendo la devolución a través de una compañía de envío de su elección, seleccione el servicio de tierra y asegure el artículo por el valor total de la mercancía que se devuelve. No olvide adjuntar el formulario de devolución en el paquete. Mantenga el membrete del paquete restante para sus registros. Para devoluciones, créditos a una tarjeta de crédito se aplicará inmediatamente después del procesamiento de la devolución, pero pueden no aparecer en su estado de cuenta de uno o dos ciclos de facturación.&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt; &quot;
+  }, {
+    &quot;KnowledgeArticleID&quot; : &quot;kA08c0000016seGCAQ&quot;,
+    &quot;Title&quot; : &quot;Comment renvoyer un produit?&quot;,
+    &quot;Summary&quot; : &quot;Instructions pas-à-pas pour renvoyer un produit&quot;,
+    &quot;Detail&quot; : &quot;&lt;b&gt;Etape 1&lt;/b&gt;&lt;br&gt;Commencez par remplir le bon de retour qui accompagnait votre article. Assurez-vous de remplir l&amp;#39;ensemble des champs, notament la raison du retour produit et si vous préférez un échange ou un remboursement.&lt;br&gt;&lt;br&gt;&lt;b&gt;Etape 2&lt;/b&gt;&lt;br&gt;Emballez l&amp;#39;ensemble du contenu dans le carton d&amp;#39;origine. Certains articles comportent plusieurs pièces ou parties. Retournez toujours un produit au complet pour obtenir un échange ou un remboursement.&lt;br&gt;&lt;br&gt;&lt;b&gt;Etape 3&lt;/b&gt;&lt;br&gt;Choisissez une méthode de renvoi:\n&lt;ul&gt;&lt;li&gt;Option A: Utilisez le le bon de retour fourni avec votre colis d&amp;#39;origine.&lt;/li&gt;&lt;li&gt;Option B: Utilisez un prestataire de transport de votre choix.&lt;/li&gt;&lt;/ul&gt;\n&lt;b&gt;Etape 4&lt;/b&gt;&lt;br&gt;Recouvrez/Retirez tous les bordereaux de livraison d&amp;#39;origine sur le colis. Si vous utilisez le bordereau de retour, collez-le sur le colis. Détachez la &amp;quot;partie à conserver&amp;quot; et gardez ce document jusqu&amp;#39;à ce que votre retour produit soit traité. Renvoyez votre colis par l&amp;#39;intermédiaire de l&amp;#39;un des prestataires de transport listés sur le bon de retour. Le tarif pour le retour produit apparait à droite du nom du fournisseur de service. La souscription à une assurance n&amp;#39;est pas nécessaire car elle est déjà incluse dans le tarif de retour produit.&lt;br&gt;&lt;br&gt;Si vous renvoyez le produit au travers d&amp;#39;un prestataire de transport de votre choix, prenez soin d&amp;#39;assurez le produit pour une valeur correspondant au montant du produit. Assurez vous de glisser le bon de retour rempli dans le colis. Détachez et gardez la &amp;quot;partie à conserver&amp;quot; jusqu&amp;#39;à ce que votre retour produit soit traité. Pour les remboursements, votre carte de crédit sera créditée immédiatement après traitement de votre retour. produit.&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt; &quot;
+  }, {
+    &quot;KnowledgeArticleID&quot; : &quot;kA08c0000016secCAA&quot;,
+    &quot;Title&quot; : &quot;Heart Valve Replacement&quot;,
+    &quot;Summary&quot; : &quot;Sometimes people have serious problems with their heart valves. A heart valve repair or replacement surgery restores or replaces a defective heart valve.\r\n\r\nIf your doctor recommends a heart valve repair or replacement, the decision whether or not to have the procedure is also yours. This reference summary will review the benefits and risks of this surgery.&quot;,
+    &quot;Detail&quot; : &quot;&lt;p&gt;&lt;b&gt;Symptoms And Their Causes&lt;/b&gt;&lt;br&gt;Valves are very delicate structures that can be damaged for a variety of reasons:&lt;/p&gt;\n\n&lt;ul&gt;&lt;li&gt;\n\t&lt;p&gt;Inflammation of the valves, as seen in diseases such as rheumatic heart disease.&lt;/p&gt;\n\t&lt;/li&gt;&lt;li&gt;\n\t&lt;p&gt;Infections of the valves, as seen in bacterial endocarditis.&lt;/p&gt;\n\t&lt;/li&gt;&lt;li&gt;\n\t&lt;p&gt;Calcification and stiffness of the valves due to chronic or continual, long-term wear and tear.&lt;/p&gt;\n\t&lt;/li&gt;&lt;li&gt;\n\t&lt;p&gt;Defects from birth, also known as congenital malformations.&lt;/p&gt;\n\t&lt;/li&gt;&lt;/ul&gt;\n\n&lt;p&gt;These diseases can lead to 2 possible problems. One problem can be that the damaged valve may have a smaller opening than the original valve. This is known as stenosis. With stenosis, the heart has to work much harder at pushing the blood through. Over time this can cause strain on the heart and could even lead to death.&lt;/p&gt;\n\n&lt;p&gt;&lt;br&gt;The other possible problem can be that the heart valve may allow blood to flow backward. This is called insufficiency. With insufficiency, the heart is less efficient at pumping blood to the body. This results in an increased workload, which can cause the heart to fail over time.&lt;/p&gt;\n&lt;img alt=\&quot;Healthy Valve\&quot; src=\&quot;https://sivajikand-220330-790-demo--c.documentforce.com/servlet/rtaImage?eid=ka08c000000yuo7&amp;amp;feoid=00N8c00000b0VCF&amp;amp;refid=0EM8c000002ARvf\&quot;&gt;&lt;/img&gt;&lt;img alt=\&quot;Damaged Valve\&quot; src=\&quot;https://sivajikand-220330-790-demo--c.documentforce.com/servlet/rtaImage?eid=ka08c000000yuo7&amp;amp;feoid=00N8c00000b0VCF&amp;amp;refid=0EM8c000002ARvg\&quot;&gt;&lt;/img&gt;&quot;
+  } ],
+  &quot;Files&quot; : [ {
+    &quot;Id&quot; : &quot;0688c000005WtJgAAK&quot;,
+    &quot;pdfGenContentVersionId&quot; : &quot;0688c000005WtJgAAK&quot;,
+    &quot;Name&quot; : &quot;Quattroglu Product Insert&quot;,
+    &quot;VersionNumber&quot; : &quot;1&quot;,
+    &quot;TemplateType&quot; : &quot;FILE&quot;
+  } ],
+  &quot;ArticlesLength&quot; : 6,
+  &quot;FilesLength&quot; : 1,
+  &quot;templateType&quot; : &quot;Microsoft Word .DOCX Template&quot;,
+  &quot;templates&quot; : [ {
+    &quot;VlocityDocumentTemplate&quot; : &quot;MedInfoArticles&quot;
+  }, {
+    &quot;VlocityDocumentTemplate&quot; : &quot;MedInfoCoverLetter&quot;
+  } ],
+  &quot;documentTitle&quot; : &quot;Proposal Document&quot;,
+  &quot;FileFormat&quot; : &quot;pdf&quot;,
+  &quot;attachFileFormat&quot; : &quot;pdf&quot;,
+  &quot;docGenerationMechanism&quot; : &quot;VlocityClientSide&quot;,
+  &quot;documentViewer&quot; : &quot;VlocityClientSideViewer&quot;,
+  &quot;downloadFileFormat&quot; : &quot;all&quot;,
+  &quot;pdfGenerationSource&quot; : &quot;VlocityClientSide&quot;,
+  &quot;useTemplateDRExtract&quot; : &quot;No&quot;,
+  &quot;AvailableTemplates&quot; : 0,
+  &quot;generateDocument&quot; : {
+    &quot;GenerateDocumentWord&quot; : [ {
+      &quot;Id&quot; : &quot;aE18c000000RrwlCAC&quot;,
+      &quot;Name&quot; : &quot;MedInfoArticles&quot;,
+      &quot;TemplateType&quot; : &quot;Microsoft Word .DOCX Template&quot;,
+      &quot;VersionNumber&quot; : 2,
+      &quot;FetchDocumentTemplateFromNameStatus&quot; : true,
+      &quot;LoopBlockIterationStatus&quot; : true,
+      &quot;LoopBlockIterationIndex&quot; : 1,
+      &quot;wordContentVersionId&quot; : &quot;0688c000005XEUTAA4&quot;,
+      &quot;initiatePDFGeneration&quot; : true,
+      &quot;pdfContentVersionId&quot; : &quot;0688c000005XEUdAAO&quot;,
+      &quot;documentTitle&quot; : &quot;Proposal Document.docx&quot;,
+      &quot;pdfDocumentTitle&quot; : &quot;Proposal Document&quot;,
+      &quot;distributionPublicUrl&quot; : &quot;&quot;
+    }, {
+      &quot;Id&quot; : &quot;aE18c000000RrwmCAC&quot;,
+      &quot;Name&quot; : &quot;MedInfoCoverLetter&quot;,
+      &quot;TemplateType&quot; : &quot;Microsoft Word .DOCX Template&quot;,
+      &quot;VersionNumber&quot; : 3,
+      &quot;FetchDocumentTemplateFromNameStatus&quot; : true,
+      &quot;LoopBlockIterationStatus&quot; : true,
+      &quot;LoopBlockIterationIndex&quot; : 2,
+      &quot;wordContentVersionId&quot; : &quot;0688c000005XEUOAA4&quot;,
+      &quot;initiatePDFGeneration&quot; : true,
+      &quot;pdfContentVersionId&quot; : &quot;0688c000005XEUYAA4&quot;,
+      &quot;documentTitle&quot; : &quot;Proposal Document.docx&quot;,
+      &quot;pdfDocumentTitle&quot; : &quot;Proposal Document&quot;,
+      &quot;distributionPublicUrl&quot; : &quot;&quot;
+    }, {
+      &quot;TemplateType&quot; : &quot;FILE&quot;,
+      &quot;VersionNumber&quot; : &quot;1&quot;,
+      &quot;Name&quot; : &quot;Quattroglu Product Insert&quot;,
+      &quot;pdfGenContentVersionId&quot; : &quot;0688c000005WtJgAAK&quot;,
+      &quot;Id&quot; : &quot;0688c000005WtJgAAK&quot;,
+      &quot;wordContentVersionId&quot; : &quot;&quot;,
+      &quot;initiatePDFGeneration&quot; : false,
+      &quot;pdfContentVersionId&quot; : &quot;&quot;,
+      &quot;documentTitle&quot; : &quot;Proposal Document&quot;,
+      &quot;pdfDocumentTitle&quot; : &quot;Proposal Document&quot;,
+      &quot;distributionPublicUrl&quot; : &quot;&quot;
+    } ]
+  },
+  &quot;CountTemplateSelected&quot; : 3,
+  &quot;generatePdfDocument&quot; : true,
+  &quot;pdfGenerationCompleted&quot; : false
+}</expectedInputJson>
+    <expectedOutputJson>{
+  &quot;pdfContentVersionIds&quot; : [ &quot;0688c000005XEUdAAO&quot;, &quot;0688c000005XEUYAA4&quot;, &quot;0688c000005WtJgAAK&quot; ]
+}</expectedOutputJson>
+    <fieldLevelSecurityEnabled>false</fieldLevelSecurityEnabled>
+    <inputType>JSON</inputType>
+    <isManagedUsingStdDesigner>false</isManagedUsingStdDesigner>
+    <name>transformDocumentTemplatesDCT</name>
+    <nullInputsIncludedInOutput>false</nullInputsIncludedInOutput>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>f325ca4e-5ded-4751-9558-68a4bcb03211</globalKey>
+        <inputFieldName>pdfContentVersionIds</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>transformDocumentTemplatesDCT</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>pdfContentVersionIds</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>var:SetPdfIds:pdfContentVersionId</formulaConverted>
+        <formulaExpression>SetPdfIds:pdfContentVersionId</formulaExpression>
+        <formulaResultPath>pdfContentVersionIds</formulaResultPath>
+        <formulaSequence>1.0</formulaSequence>
+        <globalKey>d4e4f3de-17cd-4d10-acba-a7c79c4448b3</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>transformDocumentTemplatesDCT</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <outputType>JSON</outputType>
+    <previewJsonData>{
+  &quot;SetPdfIds&quot; : [ {
+    &quot;distributionPublicUrl&quot; : &quot;&quot;,
+    &quot;pdfDocumentTitle&quot; : &quot;&quot;,
+    &quot;documentTitle&quot; : &quot;Makana MIR.docx&quot;,
+    &quot;pdfContentVersionId&quot; : &quot;0688c000005XLX8AAO&quot;,
+    &quot;initiatePDFGeneration&quot; : true,
+    &quot;wordContentVersionId&quot; : &quot;0688c000005XLX3AAO&quot;,
+    &quot;LoopBlockIterationIndex&quot; : 1,
+    &quot;LoopBlockIterationStatus&quot; : true,
+    &quot;FetchDocumentTemplateFromNameStatus&quot; : true,
+    &quot;VersionNumber&quot; : 4,
+    &quot;TemplateType&quot; : &quot;Microsoft Word .DOCX Template&quot;,
+    &quot;Name&quot; : &quot;MedInfoCoverLetter&quot;,
+    &quot;Id&quot; : &quot;aE18c000000SHiTCAW&quot;
+  }, {
+    &quot;Id&quot; : &quot;0688c000005WtJgAAK&quot;,
+    &quot;pdfContentVersionId&quot; : &quot;0688c000005WtJgAAK&quot;,
+    &quot;Name&quot; : &quot;Quattroglu Product Insert&quot;,
+    &quot;VersionNumber&quot; : &quot;1&quot;,
+    &quot;TemplateType&quot; : &quot;FILE&quot;
+  }, {
+    &quot;Id&quot; : &quot;0688c000005XL04AAG&quot;,
+    &quot;pdfContentVersionId&quot; : &quot;0688c000005XL04AAG&quot;,
+    &quot;Name&quot; : &quot;testing pdf&quot;,
+    &quot;VersionNumber&quot; : &quot;1&quot;,
+    &quot;TemplateType&quot; : &quot;FILE&quot;
+  }, {
+    &quot;Id&quot; : &quot;0688c000005XLOzAAO&quot;,
+    &quot;pdfContentVersionId&quot; : &quot;0688c000005XLOzAAO&quot;,
+    &quot;Name&quot; : &quot;testing pdf2&quot;,
+    &quot;VersionNumber&quot; : &quot;1&quot;,
+    &quot;TemplateType&quot; : &quot;FILE&quot;
+  } ]
+}</previewJsonData>
+    <processSuperBulk>false</processSuperBulk>
+    <responseCacheTtlMinutes>0.0</responseCacheTtlMinutes>
+    <rollbackOnError>false</rollbackOnError>
+    <sourceObject>json</sourceObject>
+    <sourceObjectDefault>false</sourceObjectDefault>
+    <synchronousProcessThreshold>0.0</synchronousProcessThreshold>
+    <type>Transform</type>
+    <uniqueName>transformDocumentTemplatesDCT_1</uniqueName>
+    <versionNumber>1.0</versionNumber>
+    <xmlDeclarationRemoved>false</xmlDeclarationRemoved>
+</OmniDataTransform>

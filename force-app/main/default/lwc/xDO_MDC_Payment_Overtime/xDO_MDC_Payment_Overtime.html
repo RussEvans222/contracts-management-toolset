@@ -1,0 +1,26 @@
+<template>
+	<article class="slds-card">
+		<div class="slds-card__header slds-grid">
+			<header class="slds-media slds-media_center slds-has-flexi-truncate">
+				<div class="slds-media__body">
+					<h2 class="slds-card__header-title" style="display:block">
+						<span>{headerTitle}</span>
+						<div class="slds-m-top_x-small slds-text-heading_small">{paymentOvertime}
+						</div>
+					</h2>
+				</div>
+				<div class="slds-no-flex">
+					<button class="slds-button slds-button_icon-border">
+						<lightning-icon class="icn" icon-name="utility:down" size="xx-small" title="small size">
+						</lightning-icon>
+					</button>
+				</div>
+			</header>
+		</div>
+		<lightning-card>
+			<div style="height: 100%; width: 100%;">
+				<canvas id="myChart" width="1500" height="600"></canvas>
+			</div>
+		</lightning-card>
+	</article>
+</template>

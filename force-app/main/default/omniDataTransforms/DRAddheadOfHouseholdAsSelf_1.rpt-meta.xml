@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OmniDataTransform xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <assignmentRulesUsed>false</assignmentRulesUsed>
+    <deletedOnSuccess>false</deletedOnSuccess>
+    <errorIgnored>false</errorIgnored>
+    <expectedInputJson>{
+  &quot;HoldHofH&quot; : {
+    &quot;PSS_BM_v1_HouseholdMemberDetails&quot; : {
+      &quot;PSS_BM_v1_GradeCompleted&quot; : &quot;12th&quot;,
+      &quot;PSS_BM_v1_HouseholdMemberFirstName&quot; : &quot;Radhika&quot;,
+      &quot;PSS_BM_v1_Relationship&quot; : &quot;Self&quot;,
+      &quot;PSS_BM_v1_DateOfBirth&quot; : &quot;2002-06-21&quot;,
+      &quot;PSS_BM_v1_IsDisabled&quot; : &quot;N&quot;,
+      &quot;PSS_BM_v1_USCitizen&quot; : &quot;Y&quot;,
+      &quot;PSS_BM_v1_Gender&quot; : &quot;F&quot;,
+      &quot;PSS_BM_v1_HouseholdMemberLastName&quot; : &quot;Marshall&quot;
+    }
+  },
+  &quot;HeaderOfHouseholdDetails&quot; : {
+    &quot;HeadOfHouseholdBirthDate&quot; : &quot;2002-06-21&quot;
+  },
+  &quot;HoldHouseholdInformation&quot; : {
+    &quot;PSS_BM_v1_HouseholdMemberDetails&quot; : [ {
+      &quot;PSS_BM_v1_GradeCompleted&quot; : &quot;NA&quot;,
+      &quot;PSS_BM_v1_DateOfBirth&quot; : &quot;2018-06-21&quot;,
+      &quot;PSS_BM_v1_Relationship&quot; : &quot;Daughter&quot;,
+      &quot;PSS_BM_v1_IsDisabled&quot; : &quot;No&quot;,
+      &quot;PSS_BM_v1_USCitizen&quot; : &quot;Yes&quot;,
+      &quot;PSS_BM_v1_Gender&quot; : &quot;F&quot;,
+      &quot;PSS_BM_v1_HouseholdMemberLastName&quot; : &quot;Marshall&quot;
+    }, {
+      &quot;PSS_BM_v1_GradeCompleted&quot; : &quot;NA&quot;,
+      &quot;PSS_BM_v1_DateOfBirth&quot; : &quot;1969-06-04&quot;,
+      &quot;PSS_BM_v1_Relationship&quot; : &quot;Grandmother&quot;,
+      &quot;PSS_BM_v1_IsDisabled&quot; : &quot;No&quot;,
+      &quot;PSS_BM_v1_USCitizen&quot; : &quot;Yes&quot;,
+      &quot;PSS_BM_v1_Gender&quot; : &quot;F&quot;,
+      &quot;PSS_BM_v1_HouseholdMemberLastName&quot; : &quot;Jai&quot;
+    } ]
+  },
+  &quot;HeadOfHouseholdDetails&quot; : {
+    &quot;PSS_BM_v1_HeadOfHouseholdFirstName&quot; : &quot;Radhika&quot;,
+    &quot;PSS_BM_v1_HeadOfHouseholdEmail&quot; : &quot;rmarshall@mailinator.com&quot;,
+    &quot;PSS_BM_v1_HeadOfHouseholdLastName&quot; : &quot;Marshall&quot;,
+    &quot;PSS_BM_v1_HeadOfHouseholdState&quot; : &quot;NJ&quot;,
+    &quot;PSS_BM_v1_HeadOfHouseholdPhoneNumber&quot; : &quot;8175555555&quot;,
+    &quot;PSS_BM_v1_HeadOfHouseholdCity&quot; : &quot;Jersey City&quot;,
+    &quot;PSS_BM_v1_HeadOfHouseholdZipCode&quot; : &quot;07310&quot;,
+    &quot;PSS_BM_v1_HeadOfHouseholdCounty&quot; : &quot;Jersey City&quot;,
+    &quot;PSS_BM_v1_HeadOfHouseholdAddress&quot; : &quot;100 14th Street&quot;,
+    &quot;PSS_BM_v1_HeadOfHouseholdCellNumber&quot; : &quot;8175555555&quot;
+  }
+}</expectedInputJson>
+    <expectedOutputJson>{
+  &quot;timeStamp&quot; : &quot;2023-05-31T13:18:04.606Z&quot;,
+  &quot;userProfile&quot; : &quot;System Administrator&quot;,
+  &quot;userTimeZoneName&quot; : &quot;America/Los_Angeles&quot;,
+  &quot;userTimeZone&quot; : &quot;-420&quot;,
+  &quot;userCurrencyCode&quot; : &quot;USD&quot;,
+  &quot;userName&quot; : &quot;jeremy.blankenship@gpssummer23.dev&quot;,
+  &quot;userId&quot; : &quot;0054S000002J5I0QAK&quot;,
+  &quot;omniProcessId&quot; : &quot;0jN4S000000H0dbUAC&quot;,
+  &quot;HeadOfHouseholdDetails&quot; : {
+    &quot;PSS_BM_v1_HeadOfHouseholdFirstName&quot; : &quot;Radhika&quot;,
+    &quot;PSS_BM_v1_HeadOfHouseholdEmail&quot; : &quot;rmarshall@mailinator.com&quot;,
+    &quot;PSS_BM_v1_HeadOfHouseholdLastName&quot; : &quot;Marshall&quot;,
+    &quot;PSS_BM_v1_HeadOfHouseholdState&quot; : &quot;NJ&quot;,
+    &quot;PSS_BM_v1_HeadOfHouseholdPhoneNumber&quot; : &quot;8175555555&quot;,
+    &quot;PSS_BM_v1_HeadOfHouseholdCity&quot; : &quot;Jersey City&quot;,
+    &quot;PSS_BM_v1_HeadOfHouseholdZipCode&quot; : &quot;07310&quot;,
+    &quot;PSS_BM_v1_HeadOfHouseholdCounty&quot; : &quot;Jersey City&quot;,
+    &quot;PSS_BM_v1_HeadOfHouseholdAddress&quot; : &quot;100 14th Street&quot;,
+    &quot;PSS_BM_v1_HeadOfHouseholdCellNumber&quot; : &quot;8175555555&quot;
+  },
+  &quot;HouseholdInformation&quot; : {
+    &quot;PSS_BM_v1_ProgramList&quot; : null,
+    &quot;PSS_BM_v1_AreThereChildrenInTheHousehold&quot; : true,
+    &quot;PSS_BM_v1_AreThereElderlyHouseholdMembers&quot; : false,
+    &quot;PSS_BM_v1_HouseholdSize&quot; : 2,
+    &quot;PSS_BM_v1_AreThereDisabledHouseholdMembers&quot; : false,
+    &quot;MinimumHouseholdMemberDetailsValidation&quot; : null,
+    &quot;MaximumHouseholdMemberDetailsValidation&quot; : null,
+    &quot;PSS_BM_v1_HouseholdMemberDetails&quot; : [ {
+      &quot;PSS_BM_v1_Age&quot; : 4,
+      &quot;PSS_BM_v1_HouseholdMemberName&quot; : &quot;Meera Marshall&quot;,
+      &quot;PSS_BM_v1_DateOfBirth&quot; : &quot;2018-06-21&quot;,
+      &quot;PSS_BM_v1_GradeCompleted&quot; : &quot;NA&quot;,
+      &quot;PSS_BM_v1_HouseholdMemberFirstName&quot; : &quot;Meera&quot;,
+      &quot;PSS_BM_v1_Relationship&quot; : &quot;Daughter&quot;,
+      &quot;PSS_BM_v1_IsDisabled&quot; : &quot;No&quot;,
+      &quot;PSS_BM_v1_USCitizen&quot; : &quot;Yes&quot;,
+      &quot;PSS_BM_v1_Gender&quot; : &quot;F&quot;,
+      &quot;PSS_BM_v1_HouseholdMemberLastName&quot; : &quot;Marshall&quot;
+    }, {
+      &quot;PSS_BM_v1_Age&quot; : 53,
+      &quot;PSS_BM_v1_HouseholdMemberName&quot; : &quot;Freya Jai&quot;,
+      &quot;PSS_BM_v1_DateOfBirth&quot; : &quot;1969-06-04&quot;,
+      &quot;PSS_BM_v1_GradeCompleted&quot; : &quot;NA&quot;,
+      &quot;PSS_BM_v1_HouseholdMemberFirstName&quot; : &quot;Freya&quot;,
+      &quot;PSS_BM_v1_Relationship&quot; : &quot;Grandmother&quot;,
+      &quot;PSS_BM_v1_IsDisabled&quot; : &quot;No&quot;,
+      &quot;PSS_BM_v1_USCitizen&quot; : &quot;Yes&quot;,
+      &quot;PSS_BM_v1_Gender&quot; : &quot;F&quot;,
+      &quot;PSS_BM_v1_HouseholdMemberLastName&quot; : &quot;Jai&quot;
+    } ]
+  },
+  &quot;Income&quot; : { },
+  &quot;Expenses&quot; : { },
+  &quot;HousingAndHeating&quot; : { },
+  &quot;Acknowledgement&quot; : { },
+  &quot;ApplicationReview&quot; : { },
+  &quot;sInstanceId&quot; : &quot;0kT4S000000CcvpUAC&quot;
+}</expectedOutputJson>
+    <fieldLevelSecurityEnabled>false</fieldLevelSecurityEnabled>
+    <inputType>JSON</inputType>
+    <isManagedUsingStdDesigner>false</isManagedUsingStdDesigner>
+    <name>DRAddheadOfHouseholdAsSelf</name>
+    <nullInputsIncludedInOutput>false</nullInputsIncludedInOutput>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRAddheadOfHouseholdAsSelfCustom1144</globalKey>
+        <inputFieldName>Combined</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRAddheadOfHouseholdAsSelf</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>HouseholdInformation</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>var:HoldHofH:PSS_BM_v5_HouseholdMemberDetails var:HoldHouseholdInformation:PSS_BM_v5_HouseholdMemberDetails</formulaConverted>
+        <formulaExpression>HoldHofH:PSS_BM_v5_HouseholdMemberDetails,HoldHouseholdInformation:PSS_BM_v5_HouseholdMemberDetails</formulaExpression>
+        <formulaResultPath>Combined:PSS_BM_v5_HouseholdMemberDetails</formulaResultPath>
+        <formulaSequence>1.0</formulaSequence>
+        <globalKey>DRAddheadOfHouseholdAsSelfCustom8820</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRAddheadOfHouseholdAsSelf</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <outputType>JSON</outputType>
+    <previewJsonData>{
+  &quot;HoldHofH&quot; : {
+    &quot;PSS_BM_v1_HouseholdMemberDetails&quot; : {
+      &quot;PSS_BM_v1_GradeCompleted&quot; : &quot;12th&quot;,
+      &quot;PSS_BM_v1_HouseholdMemberFirstName&quot; : &quot;Radhika&quot;,
+      &quot;PSS_BM_v1_Relationship&quot; : &quot;Self&quot;,
+      &quot;PSS_BM_v1_DateOfBirth&quot; : &quot;2002-06-21&quot;,
+      &quot;PSS_BM_v1_IsDisabled&quot; : &quot;N&quot;,
+      &quot;PSS_BM_v1_USCitizen&quot; : &quot;Y&quot;,
+      &quot;PSS_BM_v1_Gender&quot; : &quot;F&quot;,
+      &quot;PSS_BM_v1_HouseholdMemberLastName&quot; : &quot;Marshall&quot;
+    }
+  },
+  &quot;HeaderOfHouseholdDetails&quot; : {
+    &quot;HeadOfHouseholdBirthDate&quot; : &quot;2002-06-21&quot;
+  },
+  &quot;HoldHouseholdInformation&quot; : {
+    &quot;PSS_BM_v1_HouseholdMemberDetails&quot; : [ {
+      &quot;PSS_BM_v1_GradeCompleted&quot; : &quot;NA&quot;,
+      &quot;PSS_BM_v1_DateOfBirth&quot; : &quot;2018-06-21&quot;,
+      &quot;PSS_BM_v1_Relationship&quot; : &quot;Daughter&quot;,
+      &quot;PSS_BM_v1_IsDisabled&quot; : &quot;No&quot;,
+      &quot;PSS_BM_v1_USCitizen&quot; : &quot;Yes&quot;,
+      &quot;PSS_BM_v1_Gender&quot; : &quot;F&quot;,
+      &quot;PSS_BM_v1_HouseholdMemberLastName&quot; : &quot;Marshall&quot;
+    }, {
+      &quot;PSS_BM_v1_GradeCompleted&quot; : &quot;NA&quot;,
+      &quot;PSS_BM_v1_DateOfBirth&quot; : &quot;1969-06-04&quot;,
+      &quot;PSS_BM_v1_Relationship&quot; : &quot;Grandmother&quot;,
+      &quot;PSS_BM_v1_IsDisabled&quot; : &quot;No&quot;,
+      &quot;PSS_BM_v1_USCitizen&quot; : &quot;Yes&quot;,
+      &quot;PSS_BM_v1_Gender&quot; : &quot;F&quot;,
+      &quot;PSS_BM_v1_HouseholdMemberLastName&quot; : &quot;Jai&quot;
+    } ]
+  },
+  &quot;HeadOfHouseholdDetails&quot; : {
+    &quot;PSS_BM_v1_HeadOfHouseholdFirstName&quot; : &quot;Radhika&quot;,
+    &quot;PSS_BM_v1_HeadOfHouseholdEmail&quot; : &quot;rmarshall@mailinator.com&quot;,
+    &quot;PSS_BM_v1_HeadOfHouseholdLastName&quot; : &quot;Marshall&quot;,
+    &quot;PSS_BM_v1_HeadOfHouseholdState&quot; : &quot;NJ&quot;,
+    &quot;PSS_BM_v1_HeadOfHouseholdPhoneNumber&quot; : &quot;8175555555&quot;,
+    &quot;PSS_BM_v1_HeadOfHouseholdCity&quot; : &quot;Jersey City&quot;,
+    &quot;PSS_BM_v1_HeadOfHouseholdZipCode&quot; : &quot;07310&quot;,
+    &quot;PSS_BM_v1_HeadOfHouseholdCounty&quot; : &quot;Jersey City&quot;,
+    &quot;PSS_BM_v1_HeadOfHouseholdAddress&quot; : &quot;100 14th Street&quot;,
+    &quot;PSS_BM_v1_HeadOfHouseholdCellNumber&quot; : &quot;8175555555&quot;
+  }
+}</previewJsonData>
+    <processSuperBulk>false</processSuperBulk>
+    <responseCacheTtlMinutes>0.0</responseCacheTtlMinutes>
+    <rollbackOnError>false</rollbackOnError>
+    <sourceObject>json</sourceObject>
+    <sourceObjectDefault>false</sourceObjectDefault>
+    <synchronousProcessThreshold>0.0</synchronousProcessThreshold>
+    <type>Transform</type>
+    <uniqueName>DRAddheadOfHouseholdAsSelf_1</uniqueName>
+    <versionNumber>1.0</versionNumber>
+    <xmlDeclarationRemoved>false</xmlDeclarationRemoved>
+</OmniDataTransform>

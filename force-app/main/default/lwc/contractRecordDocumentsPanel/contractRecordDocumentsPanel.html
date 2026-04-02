@@ -1,0 +1,94 @@
+<template>
+    <article class="panel-shell">
+        <header class="panel-header">
+            <div>
+                <p class="eyebrow">Contract Workspace</p>
+                <h2>Contract Documents Snapshot</h2>
+            </div>
+            <lightning-button-icon
+                icon-name="utility:refresh"
+                variant="border-filled"
+                alternative-text="Refresh"
+                title="Refresh"
+                onclick={handleRefresh}
+            ></lightning-button-icon>
+        </header>
+
+        <template if:true={hasSummary}>
+            <section class="pill-row">
+                <span class={summary.contractStatusClass}>Contract: {summary.contractStatus}</span>
+                <span class={summary.signatureStatusClass}>Signature: {summary.signatureLabel}</span>
+                <template if:true={summary.signatureVendor}>
+                    <span class="pill">Vendor: {summary.signatureVendor}</span>
+                </template>
+            </section>
+
+            <section class="content-grid">
+                <button class="preview-button" type="button" onclick={handleOpenViewer}>
+                    <template if:true={hasDocument}>
+                        <template if:true={summary.showThumbnail}>
+                            <img
+                                class="preview-image"
+                                src={summary.thumbnailUrlActive}
+                                alt={summary.titleLabel}
+                                onerror={handleImageError}
+                            />
+                        </template>
+                        <template if:false={summary.showThumbnail}>
+                            <div class="preview-fallback">
+                                <lightning-icon icon-name="doctype:attachment" size="large"></lightning-icon>
+                            </div>
+                        </template>
+                    </template>
+                    <template if:false={hasDocument}>
+                        <div class="preview-fallback">
+                            <lightning-icon icon-name="doctype:attachment" size="large"></lightning-icon>
+                        </div>
+                    </template>
+                </button>
+
+                <div class="details">
+                    <h3>{summary.contractLabel}</h3>
+                    <template if:true={summary.contractName}>
+                        <p class="meta">{summary.contractName}</p>
+                    </template>
+                    <template if:true={hasDocument}>
+                        <p class="meta">{summary.titleLabel}</p>
+                        <p class="meta">{summary.versionLabel} • {summary.fileLabel} • Versions: {summary.versionCount}</p>
+                    </template>
+                    <template if:false={hasDocument}>
+                        <p class="meta">No generated contract files are currently linked to this contract.</p>
+                    </template>
+                    <template if:true={signatureDateAvailable}>
+                        <p class="meta">
+                            Signature Update:
+                            <lightning-formatted-date-time
+                                value={summary.signatureLastUpdated}
+                                year="numeric"
+                                month="short"
+                                day="2-digit"
+                                hour="2-digit"
+                                minute="2-digit"
+                            ></lightning-formatted-date-time>
+                        </p>
+                    </template>
+
+                    <div class="actions">
+                        <lightning-button variant="brand" label="Open Contract Documents" onclick={handleOpenViewer}></lightning-button>
+                        <lightning-button label="Open Contract" onclick={handleOpenContract}></lightning-button>
+                        <lightning-button
+                            variant="brand-outline"
+                            label="Preview File"
+                            onclick={handleOpenFilePreview}
+                            disabled={previewDisabled}
+                        ></lightning-button>
+                    </div>
+                </div>
+            </section>
+        </template>
+
+        <template if:true={errorMessage}>
+            <div class="error-box">{errorMessage}</div>
+        </template>
+    </article>
+</template>

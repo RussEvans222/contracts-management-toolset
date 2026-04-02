@@ -1,0 +1,47 @@
+{
+  "status": 0,
+  "result": {
+    "done": true,
+    "fileProperties": [
+      {
+        "createdById": "005Hu00000UJSRhIAP",
+        "createdByName": "Russell Evans",
+        "createdDate": "2026-03-25T16:02:21.000Z",
+        "fileName": "unpackaged/flexipages/Commerce_Dashboard.flexipage",
+        "fullName": "Commerce_Dashboard",
+        "id": "0M0Hu000003X8LVKA0",
+        "lastModifiedById": "005Hu00000UJSRhIAP",
+        "lastModifiedByName": "Russell Evans",
+        "lastModifiedDate": "2026-03-25T16:02:21.000Z",
+        "manageableState": "unmanaged",
+        "type": "FlexiPage"
+      },
+      {
+        "createdById": "005Hu00000UJSRhIAP",
+        "createdByName": "Russell Evans",
+        "createdDate": "2026-03-31T16:34:13.846Z",
+        "fileName": "unpackaged/package.xml",
+        "fullName": "unpackaged/package.xml",
+        "id": "",
+        "lastModifiedById": "005Hu00000UJSRhIAP",
+        "lastModifiedByName": "Russell Evans",
+        "lastModifiedDate": "2026-03-31T16:34:13.846Z",
+        "manageableState": "unmanaged",
+        "type": "Package"
+      }
+    ],
+    "id": "09SHu00001YOpKdMAL",
+    "status": "Succeeded",
+    "success": true,
+    "messages": [],
+    "files": [
+      {
+        "fullName": "Commerce_Dashboard",
+        "type": "FlexiPage",
+        "state": "Created",
+        "filePath": "/Users/russellevans/Downloads/Salesforce Builds/Contracts/force-app/main/default/flexipages/Commerce_Dashboard.flexipage-meta.xml"
+      }
+    ]
+  },
+  "warnings": []
+}

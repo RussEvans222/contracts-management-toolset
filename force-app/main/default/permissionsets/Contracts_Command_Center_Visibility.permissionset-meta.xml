@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Ensures Contracts Command Center tab is visible.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Contracts Command Center Visibility</label>
+    <tabSettings>
+        <tab>SalesforceContracts_Viewer</tab>
+        <visibility>Visible</visibility>
+    </tabSettings>
+    <tabSettings>
+        <tab>SalesforceContracts_Analytics</tab>
+        <visibility>Visible</visibility>
+    </tabSettings>
+    <tabSettings>
+        <tab>SalesforceContracts_Command_Center</tab>
+        <visibility>Visible</visibility>
+    </tabSettings>
+    <tabSettings>
+        <tab>SalesforceContracts_Template_Manager</tab>
+        <visibility>Visible</visibility>
+    </tabSettings>
+</PermissionSet>

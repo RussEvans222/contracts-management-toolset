@@ -1,0 +1,72 @@
+<template>
+    <template if:true={isActivityModalNewOpen}>
+        <!-- Modal for activity creating-->
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                <lightning-record-edit-form object-api-name="xdo_dc_Timeline_Activity__c" onsubmit={handleSubmit}>
+                <!-- Modal header -->
+                <header class="slds-modal__header">
+                    <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={handleClose}>
+                        <lightning-icon icon-name="utility:close"
+                            alternative-text="close"
+                            variant="inverse"
+                            size="small" ></lightning-icon>
+                        <span class="slds-assistive-text">Close</span>
+                    </button>
+                    <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">{title}</h2>
+                </header>
+                <!-- Modal body-->
+                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                        <lightning-input-field field-name="title__c" required> </lightning-input-field>
+                        <lightning-input-field field-name="description__c" required> </lightning-input-field>
+                        <div class="slds-grid">
+                            <div class="slds-col slds-size_4-of-12">
+                                <lightning-input-field field-name="Time__c" required> </lightning-input-field>
+                            </div>
+                            <div class="slds-col slds-size_4-of-12">
+                                <lightning-input-field field-name="Days_Ago__c" required> </lightning-input-field>
+                            </div>
+                            <div class="slds-col slds-size_4-of-12">
+                                    <lightning-input-field field-name="Order__c"></lightning-input-field>
+                            </div>
+                        </div>
+                       <!-- <lightning-input-field field-name="stream_hide__c"></lightning-input-field> -->
+                        <lightning-input-field field-name="icon__c" class="slds-hide"></lightning-input-field>
+                        <div class="slds-grid slds-wrap">
+                            <div class="slds-col slds-size_8-of-12">
+                                <lightning-combobox name="progress" value={iconValue} label="Choose Icon from List" options={icons} onchange={handleIconChange} dropdown-alignment="bottom-left" ></lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_4-of-12 slds-align_absolute-center">
+                               <!-- <lightning-icon icon-name={iconValue} size="large" ></lightning-icon> -->
+                            </div>
+                
+                             <div class="slds-col slds-size_8-of-12 slds-align_absolute-center">
+                                <span class="slds-p-around_x-small"><strong>OR</strong></span>
+                            </div>
+                            <div class="slds-col slds-size_2-of-12 slds-align_absolute-center">
+                                <lightning-icon icon-name={iconValue} size="large" ></lightning-icon>
+                            </div>
+                            <div class="slds-col slds-size_8-of-12 ">
+                                <lightning-input type="text" variant="standard" value={iconValue} name="name" label="Enter SLDS Icon Name" placeholder="type here..." onchange={handleIconChange}></lightning-input>
+                            </div>
+                            <div class="slds-col slds-size_2-of-12 slds-align_absolute-center">
+                               <!-- <lightning-icon icon-name={iconValue} size="large" ></lightning-icon> -->
+                            </div>
+                             <div class="slds-col slds-size_2-of-12 slds-p-top_x-large">
+                                <a href="https://www.lightningdesignsystem.com/icons/" target="_blank">SLDS Icon List</a>
+                            </div>
+                        </div>
+
+                        <lightning-input-field field-name="related_to__c" class="slds-hide" value={relatedToId}></lightning-input-field>
+                </div>
+                <!-- Modal footer-->
+                <footer class="slds-modal__footer">
+                    <lightning-button class="slds-m-top_small" label="Cancel" onclick={handleClose}></lightning-button>
+                    <lightning-button class="slds-m-top_small" type="submit" label="Create New"></lightning-button>
+                </footer>
+            </lightning-record-edit-form>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+</template>

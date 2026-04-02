@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>62.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <choices>
+        <name>Ahead_of_Schedule</name>
+        <choiceText>Ahead of Schedule</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Ahead of Schedule</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>Behind_Schedule</name>
+        <choiceText>Behind Schedule</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Behind Schedule</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>Completed</name>
+        <choiceText>Completed</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Completed</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>On_Track</name>
+        <choiceText>&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;On Track&lt;/span&gt;</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>On Track</stringValue>
+        </value>
+    </choices>
+    <environments>Default</environments>
+    <interviewLabel>Grantmaking Progress Report: 1 Project Overview READ ONLY {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Grantmaking Progress Report: 1 Project Overview READ ONLY</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordLookups>
+        <name>Get_Funding_Award_Requirement_Section_Record</name>
+        <label>Get Funding Award Requirement Section Record</label>
+        <locationX>176</locationX>
+        <locationY>134</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Project_Overview</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>FundingAwardRqmtSection</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <screens>
+        <name>Project_Overview</name>
+        <label>Project Overview</label>
+        <locationX>176</locationX>
+        <locationY>242</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>ProjectOverview_ReadOnlyResponses</name>
+            <fieldText>&lt;p&gt;&lt;strong&gt;Please provide a brief summary of the project&apos;s progress to date.&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;The project has established local clinic partnerships, conducted health campaigns, and initiated screenings. Progress is on schedule.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;What is the current status of the project?&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;On Track&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;What is the expected completion date of the project?&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;2025-02-28&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <nextOrFinishButtonLabel>Save</nextOrFinishButtonLabel>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Funding_Award_Requirement_Section_Record</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>recordId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

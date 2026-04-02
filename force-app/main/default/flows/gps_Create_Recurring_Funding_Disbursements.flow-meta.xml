@@ -1,0 +1,2057 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <apiVersion>64.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <description>Adds another new funding disbursement record to the NewDisbursementRecords collection and increments the NewDisbursementRecordsCount.</description>
+        <name>AddAnotherNewFundingDisbursementToCollection</name>
+        <label>Add Another New Funding Disbursement</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>NewDisbursementRecord.FundingAwardId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>NewDisbursementRecord.Amount</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>NewDisbursementAmountFormula</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>NewDisbursementRecord.DisbursementName</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>NewDisbursementNameFormula</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>NewDisbursementRecord.ScheduledDate</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>NewDisbursementScheduledDateAdjustedForTimeZone</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>NewDisbursementRecords</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>NewDisbursementRecord</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>NewDisbursementRecordsCount</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <numberValue>1.0</numberValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <isGoTo>true</isGoTo>
+            <targetReference>ShouldAddAnotherFundingDisbursement</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Adds the value in the AllocationPercent component of the ScreenDisplayNewFundingDisbursementsCollectBudgetAllocations screen and adds 1 to the NewBudgetAllocationsCount variable.</description>
+        <name>AddBudgetAllocationsAndPercentOfAllocations</name>
+        <label>Add Budget Allocations and Percent of Allocations</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>BudgetAllocationTotalPercent</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>IterateOverNewBudgetAllocations.AllocationPercent</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>NewBudgetAllocationsCount</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <numberValue>1.0</numberValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>IterateOverNewBudgetAllocations</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Adds the amount of the current funding disbursement in the loop to the ExistingFundingDisbursementsTotalAmount variable.</description>
+        <name>AddExistingFundingDisbursementsTotalAmount</name>
+        <label>Add Existing Funding Disbursements Total Amount</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>ExistingFundingDisbursementsTotalAmount</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>IterateOverExistingFundingDisbursements.Amount</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>IterateOverExistingFundingDisbursements</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Adds the amount of the new funding disbursements in the loop to the NewFundingDisbursementsTotalAmount variable and increments the NewDisbursementRecordsCount by 1.</description>
+        <name>AddNewFundingDisbursementsTotalAmount</name>
+        <label>Add New Funding Disbursements Total Amount</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>NewFundingDisbursementsTotalAmount</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>IterateOverNewFundingDisbursements.Amount</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>IterateOverNewFundingDisbursements</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Sets the PendingBudgetAllocationsCount to blank to detect the last NewBudgetAllocations. Sets the UnallocatedDisbursementsTotalAmount to the disbursement&apos;s amount so that the total amount allocated doesn&apos;t exceed the disbursement amount.</description>
+        <name>ResetAllocationCountAndUnallocatedTotalAmount</name>
+        <label>Reset Allocation Count and Unallocated Total Amount</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>PendingBudgetAllocationsCount</assignToReference>
+            <operator>Assign</operator>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>UnallocatedDisbursementsTotalAmount</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>IterateOverNewDisbursementsWithAllocations.Amount</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>IterateOverNewBudgetAllocationsRepeater</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Resets the ExistingFundingDisbursementsTotalAmount variable to 0.</description>
+        <name>ResetExistingFundingDisbursementsTotalAmount</name>
+        <label>Reset Existing Funding Disbursements Total Amount</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>ExistingFundingDisbursementsTotalAmount</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <numberValue>0.0</numberValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>IterateOverExistingFundingDisbursements</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Resets the value of the NewFundingDisbursementsTotalAmount to 0 and the value of the NewDisbursementRecordsCount to 0.</description>
+        <name>ResetNewFundingDisbursementTotalAmount</name>
+        <label>Reset New Funding Disbursement Total Amount</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>NewFundingDisbursementsTotalAmount</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <numberValue>0.0</numberValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>IterateOverNewFundingDisbursements</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Resets the NewBudgetAllocations record collection variable to blank.</description>
+        <name>ResetsNewBudgetAllocations</name>
+        <label>Reset New Budget Allocations</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>NewBudgetAllocations</assignToReference>
+            <operator>Assign</operator>
+        </assignmentItems>
+        <connector>
+            <targetReference>IterateOverNewDisbursementsWithAllocations</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Reset the NewDisbursementRecordsCount variable with the actual count of create funding disbursements.</description>
+        <name>SetCreatedFundingDisbursementsCount</name>
+        <label>Set Created Funding Disbursements Count</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>NewDisbursementRecordsCount</assignToReference>
+            <operator>AssignCount</operator>
+            <value>
+                <elementReference>NewDisbursementRecords</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>ShouldCreateDisbursementAllocations</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Sets the PreviewAllocationsStage and PreviewDisbursementsStage stages to active. Resets the value of the BudgetAllocationTotalPercent and NewBudgetAllocationsCount variables to 0.</description>
+        <name>SetPreviewStagesToActiveResetAllocationCountAndTotal</name>
+        <label>Set Preview Stages To Active and Reset Allocation Count and Total</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>BudgetAllocationTotalPercent</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <numberValue>0.0</numberValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>NewBudgetAllocationsCount</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <numberValue>0.0</numberValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Flow.ActiveStages</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>PreviewAllocationsStage</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Flow.ActiveStages</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>CreateAllocationsStage</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>IterateOverNewBudgetAllocations</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Resets the variables involved in creating funding disbursements. Sets the NewDisbursementRecords collection to a blank value, the NewDisbursementRecordsCount variable to 0, the TimeZoneOffsetDate variable to the value in FirstDisbursementDate in the ScreenCollectFundingDisbursementDetails screen, and the FirstDisbursementScheduleDateTimezoneOffset variable to the value of the TimeZoneOffsetFormula.</description>
+        <name>SetRecurringDisbursementRecords</name>
+        <label>Set Recurring Disbursement Records</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>NewDisbursementRecordsCount</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <numberValue>0.0</numberValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>NewDisbursementRecords</assignToReference>
+            <operator>Assign</operator>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>TimeZoneOffsetDate</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>FirstDisbursementDate</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>FirstDisbursementScheduleDateTimezoneOffset</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>TimeZoneOffsetFormula</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>ShouldAddAnotherFundingDisbursement</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Sets the remaining budget allocation amount in the UnallocatedDisbursementsTotalAmount variable by subtracting it from the DisbursementAllocationAmountFormula.</description>
+        <name>SetRemainingBudgetAllocationAmount</name>
+        <label>Set Remaining Budget Allocation Amount</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>UnallocatedDisbursementsTotalAmount</assignToReference>
+            <operator>Subtract</operator>
+            <value>
+                <elementReference>DisbursementAllocationAmountFormula</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>SetsAllocationRecordDetails</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Sets the NewBudgetAllocations fields and adds the record to the NewBudgetAllocations collection. Adds 1 to the NewBudgetAllocationsCount variable.</description>
+        <name>SetsAllocationRecordDetails</name>
+        <label>Sets Allocation Record Details</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>NewBudgetAllocation.BudgetId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>IterateOverNewBudgetAllocationsRepeater.BudgetLookup.recordId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>NewBudgetAllocation.FundingDisbursementId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>IterateOverNewDisbursementsWithAllocations.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>NewBudgetAllocation.Status</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>IterateOverNewBudgetAllocationsRepeater.AllocationStatusPicklist</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>NewBudgetAllocation.Amount</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>NewAllocationAmountFormula</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>NewBudgetAllocation.Name</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>NewAllocationNameFormula</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>NewBudgetAllocations</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>NewBudgetAllocation</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>PendingBudgetAllocationsCount</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <numberValue>1.0</numberValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>IterateOverNewBudgetAllocationsRepeater</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Sets the TimeZoneOffsetDate as the NewDisbursementScheduledDateRaw so that the TimeZoneOffset formula can accurately calculate the NewDisbursementScheduledDateAdjustedForTimeZone.</description>
+        <name>SetsScheduledDataTimeZoneOffset</name>
+        <label>Sets Scheduled Date Time Zone Offset</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>TimeZoneOffsetDate</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>FundingDisbursementScheduledDateFormula</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>AddAnotherNewFundingDisbursementToCollection</targetReference>
+        </connector>
+    </assignments>
+    <choices>
+        <description>Stores the choice label and value for the Day option for PeriodPicklist on the ScreenCollectFundingAwardRequirementDetails screen.</description>
+        <name>ChoicePeriodDay</name>
+        <choiceText>Day</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Day</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>Stores the choice label and value for the Month option for PeriodPicklist on the ScreenCollectFundingAwardRequirementDetails screen.</description>
+        <name>ChoicePeriodMonth</name>
+        <choiceText>Month</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Month</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>Stores the choice label and value for the Week option for PeriodPicklist on the ScreenCollectFundingAwardRequirementDetails screen.</description>
+        <name>ChoicePeriodWeek</name>
+        <choiceText>Week</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Week</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>Stores the choice label and value for the Year option for PeriodPicklist on the ScreenCollectFundingAwardRequirementDetails screen.</description>
+        <name>ChoicePeriodYear</name>
+        <choiceText>Year</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Year</stringValue>
+        </value>
+    </choices>
+    <customProperties>
+        <name>ScreenProgressIndicator</name>
+        <value>
+            <stringValue>{&quot;location&quot;:&quot;top&quot;,&quot;type&quot;:&quot;path&quot;}</stringValue>
+        </value>
+    </customProperties>
+    <decisions>
+        <description>Determines whether the user selected AddAllocationsToNewDisbursementsCheckbox to create allocations on the ScreenDisplayNewFundingDisbursementsCollectBudgetAllocations screen.</description>
+        <name>DoesUserCreateAllocations</name>
+        <label>Does User Create Allocations?</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>DoesCreateAllocations</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>AddAllocationsToNewDisbursementsCheckbox</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>SetPreviewStagesToActiveResetAllocationCountAndTotal</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Determines whether the funding award is found by checking if the Funding Award in Get Funding Award variable contains a record.</description>
+        <name>HaveFundingAward</name>
+        <label>Have Funding Award?</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>ScreenDisplayErrorNoFundingAward</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>HasFundingAward</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>GetFundingAward</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>GetExistingFundingDisbursements</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Determines whether the BudgetAllocationTotalPercent is more than 100.</description>
+        <name>IsBudgetAllocationTotalPercentOver100</name>
+        <label>Is Budget Allocation Total Percent Over 100%?</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>ResetsNewBudgetAllocations</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>IsOver100</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>BudgetAllocationTotalPercent</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <numberValue>100.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>ScreenDisplayErrorOverAllocated</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Determines whether the ExistingAndNewDisbursementsTotalAmountFormula is more than the AmountAvailableToDisburse.</description>
+        <name>IsTotalDisbursementAmountMoreThanAvailableAmount</name>
+        <label>Is Total Disbursement Amount More than Available Amount?</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>CreateFundingDisbursements</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>IsMoreThanAvailableAmount</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>ExistingAndNewDisbursementsTotalAmountFormula</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <elementReference>GetFundingAward.Amount</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>ScreenDisplayErrorDisbursementAmountsExceedAvailableAmount</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Determines whether the flow should add another new funding disbursement record to the NewDisbursementRecords collection by checking if NewDisbursementRecordsCount is less than the value in the NewDisbursementsNumber screen component in the ScreenCollectFundingDisbursementDetails screen.</description>
+        <name>ShouldAddAnotherFundingDisbursement</name>
+        <label>Should Add Another Funding Disbursement?</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>ScreenPreviewFundingDisbursements</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>CanAddAnotherFundingDisbursement</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>NewDisbursementRecordsCount</leftValueReference>
+                <operator>LessThan</operator>
+                <rightValue>
+                    <elementReference>NewDisbursementsNumber</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>SetsScheduledDataTimeZoneOffset</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Determines whether allocations should be created.</description>
+        <name>ShouldCreateDisbursementAllocations</name>
+        <label>Should Create Disbursement Allocations?</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>ScreenDisplayNewFundingDisbursements</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>CanCreateAllocations</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>AllocationsForNewDisbursementsCheckbox</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>ScreenDisplayNewFundingDisbursementsCollectBudgetAllocations</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <dynamicChoiceSets>
+        <description>Stores the picklist choice set used in the AllocationStatusPicklist screen component on the ScreenDisplayNewFundingDisbursementsCollectBudgetAllocations screen. The object is set to Budget Allocation, the data type is set to Picklist, and the field is set to Status.</description>
+        <name>ChoiceBudgetAllocationStatus</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>Status</picklistField>
+        <picklistObject>BudgetAllocation</picklistObject>
+    </dynamicChoiceSets>
+    <environments>Default</environments>
+    <formulas>
+        <description>Calculates the amount left to disburse by subtracting to total of the existing disbursements from the funding award amount.</description>
+        <name>AmountAvailableToDisburseFormula</name>
+        <dataType>Currency</dataType>
+        <expression>{!GetFundingAward.Amount} - {!ExistingFundingDisbursementsTotalAmount}</expression>
+        <scale>2</scale>
+    </formulas>
+    <formulas>
+        <description>Calculates the amount that the NewFundingDisbursementsTotalAmount exceeds the AmountAvailableToDisburseFormula.</description>
+        <name>AmountNewDisbursementsExceedAvailableFormula</name>
+        <dataType>Currency</dataType>
+        <expression>{!NewFundingDisbursementsTotalAmount} - {!AmountAvailableToDisburseFormula}</expression>
+        <scale>2</scale>
+    </formulas>
+    <formulas>
+        <description>Calculates the total value of the amount multiplied by the percent in the IterateOverNewBudgetAllocationsRepeater loop, without accounting for any rounding errors.</description>
+        <name>DisbursementAllocationAmountFormula</name>
+        <dataType>Currency</dataType>
+        <expression>ROUND({!IterateOverNewDisbursementsWithAllocations.Amount} * {!IterateOverNewBudgetAllocationsRepeater.AllocationPercent} / 100, 2)</expression>
+        <scale>2</scale>
+    </formulas>
+    <formulas>
+        <description>Calculates the total amount of existing and new funding disbursements in the ExistingDisbursementsTotalAmount and the NewDisbursementsTotalAmount variables.</description>
+        <name>ExistingAndNewDisbursementsTotalAmountFormula</name>
+        <dataType>Currency</dataType>
+        <expression>{!ExistingFundingDisbursementsTotalAmount} + {!NewFundingDisbursementsTotalAmount}</expression>
+        <scale>2</scale>
+    </formulas>
+    <formulas>
+        <description>Calculates the date/time for when the new disbursement is scheduled without adjusting for the running user&apos;s time zone offset.</description>
+        <name>FundingDisbursementScheduledDateFormula</name>
+        <dataType>DateTime</dataType>
+        <expression>IF(
+            {!PeriodPicklist} = {!ChoicePeriodDay} || {!PeriodPicklist} = {!ChoicePeriodWeek},
+            {!FirstDisbursementDate} + IF({!PeriodPicklist} = {!ChoicePeriodWeek}, 7, 1) * {!NumberOfPeriodsNumber} * {!NewDisbursementRecordsCount},
+            ADDMONTHS({!FirstDisbursementDate}, IF({!PeriodPicklist} = {!ChoicePeriodYear}, 12, 1) * {!NumberOfPeriodsNumber} * {!NewDisbursementRecordsCount})
+            )</expression>
+    </formulas>
+    <formulas>
+        <description>Calculates whether the NewDisbursementRecord is the last record to be added to the NewDisbursementRecords collection.</description>
+        <name>IsLastNewDisbursementRecordFormula</name>
+        <dataType>Boolean</dataType>
+        <expression>{!NewDisbursementRecordsCount} = {!NewDisbursementsNumber} - 1</expression>
+    </formulas>
+    <formulas>
+        <description>Calculates if the current record in the IterateOverNewBudgetAllocationsRepeater loop is the last one by comparing PendingBudgetAllocationsCount to NewBudgetAllocationsCount.</description>
+        <name>LastNewAllocationFormula</name>
+        <dataType>Boolean</dataType>
+        <expression> {!PendingBudgetAllocationsCount} + 1 = {!NewBudgetAllocationsCount}</expression>
+    </formulas>
+    <formulas>
+        <description>Calculates the value of DisbursementAllocationAmountFormula plus any adjustments due to rounding errors in the LastNewAllocationFormula.</description>
+        <name>NewAllocationAmountFormula</name>
+        <dataType>Currency</dataType>
+        <expression>{!DisbursementAllocationAmountFormula} + IF(
+            {!LastNewAllocationFormula} &amp;&amp; ({!UnallocatedDisbursementsTotalAmount} &lt; 0 || {!BudgetAllocationTotalPercent} = 100),
+            {!UnallocatedDisbursementsTotalAmount},
+            0
+            )</expression>
+        <scale>2</scale>
+    </formulas>
+    <formulas>
+        <description>Generates the name of the new allocation record, based on the disbursement&apos;s name and the percent of the allocation.</description>
+        <name>NewAllocationNameFormula</name>
+        <dataType>String</dataType>
+        <expression>{!IterateOverNewDisbursementsWithAllocations.DisbursementName} + &quot; (&quot; +  TEXT({!IterateOverNewBudgetAllocationsRepeater.AllocationPercent}) + &quot;%)&quot;</expression>
+    </formulas>
+    <formulas>
+        <description>Calculates the percent that BudgetAllocationTotalPercent is over 100%.</description>
+        <name>NewAllocationPercentOver100Formula</name>
+        <dataType>Number</dataType>
+        <expression>{!BudgetAllocationTotalPercent} - 100</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
+        <description>Calculates the amount that remains to be disbursed after NewDisbursementAmountUnadjustedFormula is adjusted for rounding errors.</description>
+        <name>NewDisbursementAmountAdjustedFormula</name>
+        <dataType>Currency</dataType>
+        <expression>{!DisbursementAmount} - ({!NewDisbursementAmountUnadjustedFormula} * {!NewDisbursementsNumber})</expression>
+        <scale>2</scale>
+    </formulas>
+    <formulas>
+        <description>Calculates the amount of the NewDisbursementRecord and adds the NewDisbursementAmountAdjustment to the last NewDisbursementRecord in the NewDisbursementRecords collection.</description>
+        <name>NewDisbursementAmountFormula</name>
+        <dataType>Currency</dataType>
+        <expression>{!NewDisbursementAmountUnadjustedFormula} + IF({!IsLastNewDisbursementRecordFormula}, {!NewDisbursementAmountAdjustedFormula}, 0)</expression>
+        <scale>2</scale>
+    </formulas>
+    <formulas>
+        <description>Calculates the amount, unadjusted for rounding errors, to disburse, that&apos;s divided by the NumberOfNewDisbursements.</description>
+        <name>NewDisbursementAmountUnadjustedFormula</name>
+        <dataType>Currency</dataType>
+        <expression>ROUND({!DisbursementAmount} / {!NewDisbursementsNumber}, 2)</expression>
+        <scale>2</scale>
+    </formulas>
+    <formulas>
+        <description>Calculates the value of the Name field on the NewDisbursementRecord by combining the funding award&apos;s name and the disbursement&apos;s scheduled date.</description>
+        <name>NewDisbursementNameFormula</name>
+        <dataType>String</dataType>
+        <expression>{!GetFundingAward.Name} &amp; &quot;: &quot;
+            &amp; TEXT(YEAR(DATEVALUE({!NewDisbursementScheduledDateAdjustedForTimeZone}))) &amp; &quot;-&quot;
+            &amp; LPAD(TEXT(MONTH(DATEVALUE({!NewDisbursementScheduledDateAdjustedForTimeZone}))), 2, &quot;0&quot;) &amp; &quot;-&quot;
+            &amp; LPAD(TEXT(DAY(DATEVALUE({!NewDisbursementScheduledDateAdjustedForTimeZone}))), 2, &quot;0&quot;)</expression>
+    </formulas>
+    <formulas>
+        <description>Calculates the date/time for the scheduled date of the funding disbursement created by the flow based on the running user&apos;s time zone.</description>
+        <name>NewDisbursementScheduledDateAdjustedForTimeZone</name>
+        <dataType>DateTime</dataType>
+        <expression>{!FundingDisbursementScheduledDateFormula} + ({!FirstDisbursementScheduleDateTimezoneOffset} - {!TimeZoneOffsetFormula}) / 24</expression>
+    </formulas>
+    <formulas>
+        <description>Calculates the difference between TimeZoneOffsetDate and UTC for each hour of the schedule.</description>
+        <name>TimeZoneOffsetFormula</name>
+        <dataType>Number</dataType>
+        <expression>(DATEVALUE(DATETIMEVALUE(TEXT({!TimeZoneOffsetDate}) + &quot; 00:00:00&quot;)) - {!TimeZoneOffsetDate}) +
+            (DATEVALUE(DATETIMEVALUE(TEXT({!TimeZoneOffsetDate}) + &quot; 01:00:00&quot;)) - {!TimeZoneOffsetDate}) +
+            (DATEVALUE(DATETIMEVALUE(TEXT({!TimeZoneOffsetDate}) + &quot; 02:00:00&quot;)) - {!TimeZoneOffsetDate}) +
+            (DATEVALUE(DATETIMEVALUE(TEXT({!TimeZoneOffsetDate}) + &quot; 03:00:00&quot;)) - {!TimeZoneOffsetDate}) +
+            (DATEVALUE(DATETIMEVALUE(TEXT({!TimeZoneOffsetDate}) + &quot; 04:00:00&quot;)) - {!TimeZoneOffsetDate}) +
+            (DATEVALUE(DATETIMEVALUE(TEXT({!TimeZoneOffsetDate}) + &quot; 05:00:00&quot;)) - {!TimeZoneOffsetDate}) +
+            (DATEVALUE(DATETIMEVALUE(TEXT({!TimeZoneOffsetDate}) + &quot; 06:00:00&quot;)) - {!TimeZoneOffsetDate}) +
+            (DATEVALUE(DATETIMEVALUE(TEXT({!TimeZoneOffsetDate}) + &quot; 07:00:00&quot;)) - {!TimeZoneOffsetDate}) +
+            (DATEVALUE(DATETIMEVALUE(TEXT({!TimeZoneOffsetDate}) + &quot; 08:00:00&quot;)) - {!TimeZoneOffsetDate}) +
+            (DATEVALUE(DATETIMEVALUE(TEXT({!TimeZoneOffsetDate}) + &quot; 09:00:00&quot;)) - {!TimeZoneOffsetDate}) +
+            (DATEVALUE(DATETIMEVALUE(TEXT({!TimeZoneOffsetDate}) + &quot; 10:00:00&quot;)) - {!TimeZoneOffsetDate}) +
+            (DATEVALUE(DATETIMEVALUE(TEXT({!TimeZoneOffsetDate}) + &quot; 11:00:00&quot;)) - {!TimeZoneOffsetDate}) +
+            (DATEVALUE(DATETIMEVALUE(TEXT({!TimeZoneOffsetDate}) + &quot; 12:00:00&quot;)) - {!TimeZoneOffsetDate}) +
+            (DATEVALUE(DATETIMEVALUE(TEXT({!TimeZoneOffsetDate}) + &quot; 13:00:00&quot;)) - {!TimeZoneOffsetDate}) +
+            (DATEVALUE(DATETIMEVALUE(TEXT({!TimeZoneOffsetDate}) + &quot; 14:00:00&quot;)) - {!TimeZoneOffsetDate}) +
+            (DATEVALUE(DATETIMEVALUE(TEXT({!TimeZoneOffsetDate}) + &quot; 15:00:00&quot;)) - {!TimeZoneOffsetDate}) +
+            (DATEVALUE(DATETIMEVALUE(TEXT({!TimeZoneOffsetDate}) + &quot; 16:00:00&quot;)) - {!TimeZoneOffsetDate}) +
+            (DATEVALUE(DATETIMEVALUE(TEXT({!TimeZoneOffsetDate}) + &quot; 17:00:00&quot;)) - {!TimeZoneOffsetDate}) +
+            (DATEVALUE(DATETIMEVALUE(TEXT({!TimeZoneOffsetDate}) + &quot; 18:00:00&quot;)) - {!TimeZoneOffsetDate}) +
+            (DATEVALUE(DATETIMEVALUE(TEXT({!TimeZoneOffsetDate}) + &quot; 19:00:00&quot;)) - {!TimeZoneOffsetDate}) +
+            (DATEVALUE(DATETIMEVALUE(TEXT({!TimeZoneOffsetDate}) + &quot; 20:00:00&quot;)) - {!TimeZoneOffsetDate}) +
+            (DATEVALUE(DATETIMEVALUE(TEXT({!TimeZoneOffsetDate}) + &quot; 21:00:00&quot;)) - {!TimeZoneOffsetDate}) +
+            (DATEVALUE(DATETIMEVALUE(TEXT({!TimeZoneOffsetDate}) + &quot; 22:00:00&quot;)) - {!TimeZoneOffsetDate}) +
+            (DATEVALUE(DATETIMEVALUE(TEXT({!TimeZoneOffsetDate}) + &quot; 23:00:00&quot;)) - {!TimeZoneOffsetDate})</expression>
+        <scale>0</scale>
+    </formulas>
+    <interviewLabel>Create Recurring Funding Disbursements {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Create Recurring Funding Disbursements</label>
+    <loops>
+        <description>Repeats an action for each record in the Funding Disbursements from Get Existing Funding Disbursements record collection variable.</description>
+        <name>IterateOverExistingFundingDisbursements</name>
+        <label>Iterate Over Existing Funding Disbursements</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <collectionReference>GetExistingFundingDisbursements</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>AddExistingFundingDisbursementsTotalAmount</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>ScreenCollectFundingDisbursementDetails</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <loops>
+        <description>Repeats actions for each budget allocation in the NewBudgetAllocations repeater component in the ScreenDisplayNewFundingDisbursementsCollectBudgetAllocations screen.</description>
+        <name>IterateOverNewBudgetAllocations</name>
+        <label>Iterate Over New Budget Allocations</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <collectionReference>NewBudgetAllocationsRepeater.AllItems</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>AddBudgetAllocationsAndPercentOfAllocations</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>IsBudgetAllocationTotalPercentOver100</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <loops>
+        <description>Repeats actions for each record in the NewBudgetAllocationsRepeater repeater component in the ScreenDisplayNewFundingDisbursementsCollectBudgetAllocations screen.</description>
+        <name>IterateOverNewBudgetAllocationsRepeater</name>
+        <label>Iterate Over New Budget Allocations</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <collectionReference>NewBudgetAllocationsRepeater.AllItems</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>SetRemainingBudgetAllocationAmount</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>IterateOverNewDisbursementsWithAllocations</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <loops>
+        <description>Repeats actions for each funding disbursement record in the NewFundingDisbursements record collection variable.</description>
+        <name>IterateOverNewDisbursementsWithAllocations</name>
+        <label>Iterate Over New Disbursements with Allocations</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <collectionReference>NewDisbursementRecords</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>ResetAllocationCountAndUnallocatedTotalAmount</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>ScreenPreviewBudgetAllocations</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <loops>
+        <description>Repeats an action for each record in the NewDisbursementRecords record collection variable.</description>
+        <name>IterateOverNewFundingDisbursements</name>
+        <label>Iterate Over New Funding Disbursements</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <collectionReference>NewDisbursementRecords</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>AddNewFundingDisbursementsTotalAmount</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>IsTotalDisbursementAmountMoreThanAvailableAmount</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordCreates>
+        <description>Creates funding disbursement records and stores them in the NewFundingDisbursements collection.</description>
+        <name>CreateFundingDisbursements</name>
+        <label>Create Funding Disbursements</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>SetCreatedFundingDisbursementsCount</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>RollBackRecordsCreateDisbursementError</targetReference>
+        </faultConnector>
+        <inputReference>NewDisbursementRecords</inputReference>
+    </recordCreates>
+    <recordCreates>
+        <description>Creates new allocation records using the values stored in the NewBudgetAllocations collection.</description>
+        <name>CreateNewBudgetAllocations</name>
+        <label>Create New Budget Allocations</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>ScreenDisplayNewFundingDisbursementsBudgetAllocations</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>RollBackRecordsCreateAllocationError</targetReference>
+        </faultConnector>
+        <inputReference>NewBudgetAllocations</inputReference>
+    </recordCreates>
+    <recordLookups>
+        <description>Gets the existing funding disbursement records that are related to the funding award by checking if the FundingAwardId matches the recordId. Stores the ID, DisbursementName, ScheduledDate, Amount, PaymentMethodType, and Status of the results in the Funding Disbursements from Get Existing Funding Disbursements collection variable.</description>
+        <name>GetExistingFundingDisbursements</name>
+        <label>Get Existing Funding Disbursements</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>ResetExistingFundingDisbursementsTotalAmount</targetReference>
+        </connector>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>ScreenDisplayErrorGetRecords</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>FundingAwardId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>FundingDisbursement</object>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>DisbursementName</queriedFields>
+        <queriedFields>ScheduledDate</queriedFields>
+        <queriedFields>Amount</queriedFields>
+        <queriedFields>PaymentMethodType</queriedFields>
+        <queriedFields>Status</queriedFields>
+        <sortField>ScheduledDate</sortField>
+        <sortOrder>Asc</sortOrder>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>Gets the funding award record with an ID that matches the recordId passed into the flow. Stores the result in the recordId record variable.</description>
+        <name>GetFundingAward</name>
+        <label>Get Funding Award</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>HaveFundingAward</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>ScreenDisplayErrorGetRecords</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>FundingAward</object>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>Name</queriedFields>
+        <queriedFields>Amount</queriedFields>
+        <queriedFields>StartDate</queriedFields>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordRollbacks>
+        <description>Cancels all pending record changes for elements after ScreenPreviewBudgetAllocations. Funding disbursement records were already created; therefore, disbursement records aren&apos;t rolled back.</description>
+        <name>RollBackRecordsCreateAllocationError</name>
+        <label>Roll Back Record Changes</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>ScreenDisplayErrorCreateAllocations</targetReference>
+        </connector>
+    </recordRollbacks>
+    <recordRollbacks>
+        <description>Cancels all pending record changes for elements after ScreenPreviewFundingDisbursements.</description>
+        <name>RollBackRecordsCreateDisbursementError</name>
+        <label>Roll Back Record Changes</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>ScreenDisplayErrorCreateDisbursements</targetReference>
+        </connector>
+    </recordRollbacks>
+    <runInMode>DefaultMode</runInMode>
+    <screens>
+        <description>Allows the flow user to review current funding award disbursements, select funding disbursements, and add details for new funding award disbursements on a recurring schedule.</description>
+        <name>ScreenCollectFundingDisbursementDetails</name>
+        <label>Collect Funding Disbursement Details</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>SetRecurringDisbursementRecords</targetReference>
+        </connector>
+        <fields>
+            <name>FundingDisbursementsSectionHeading</name>
+            <fieldText>Funding Disbursements</fieldText>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>FundingDisbursementsSectionHeading_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>FundingDisbursementsDataTable</name>
+                    <dataTypeMappings>
+                        <typeName>T</typeName>
+                        <typeValue>FundingDisbursement</typeValue>
+                    </dataTypeMappings>
+                    <extensionName>industries_common:inlineEditTable</extensionName>
+                    <fieldType>ComponentInstance</fieldType>
+                    <inputParameters>
+                        <name>label</name>
+                        <value>
+                            <stringValue>Funding Disbursements Data Table</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>rowSelectionMethod</name>
+                        <value>
+                            <stringValue>NO_SELECTION</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>tableEditMode</name>
+                        <value>
+                            <stringValue>READ_ONLY</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>recordCollection</name>
+                        <value>
+                            <elementReference>GetExistingFundingDisbursements</elementReference>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>objectApiName</name>
+                        <value>
+                            <stringValue>FundingDisbursement</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>columns</name>
+                        <value>
+                            <stringValue>[{&quot;apiName&quot;:&quot;Id&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:0,&quot;label&quot;:&quot;Funding Disbursement ID&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;DisbursementName&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:1,&quot;label&quot;:&quot;Disbursement Name&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;ScheduledDate&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:2,&quot;label&quot;:&quot;Scheduled Date&quot;,&quot;type&quot;:&quot;customDateTime&quot;},{&quot;apiName&quot;:&quot;Amount&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:3,&quot;label&quot;:&quot;Amount&quot;,&quot;type&quot;:&quot;currency&quot;},{&quot;apiName&quot;:&quot;PaymentMethodType&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:4,&quot;label&quot;:&quot;Payment Method Type&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;Status&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:5,&quot;label&quot;:&quot;Status&quot;,&quot;type&quot;:&quot;text&quot;}]</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <storeOutputAutomatically>true</storeOutputAutomatically>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>12</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <regionContainerType>SectionWithHeader</regionContainerType>
+        </fields>
+        <fields>
+            <name>ReadOnlyAwardAmount</name>
+            <dataType>Currency</dataType>
+            <defaultValue>
+                <elementReference>GetFundingAward.Amount</elementReference>
+            </defaultValue>
+            <fieldText>Award Amount</fieldText>
+            <fieldType>InputField</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isReadOnly>
+                <booleanValue>true</booleanValue>
+            </isReadOnly>
+            <isRequired>false</isRequired>
+            <scale>2</scale>
+        </fields>
+        <fields>
+            <name>ReadOnlyExistingDisbursementAmount</name>
+            <dataType>Currency</dataType>
+            <defaultValue>
+                <elementReference>ExistingFundingDisbursementsTotalAmount</elementReference>
+            </defaultValue>
+            <fieldText>Total Disbursement Amount</fieldText>
+            <fieldType>InputField</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isReadOnly>
+                <booleanValue>true</booleanValue>
+            </isReadOnly>
+            <isRequired>false</isRequired>
+            <scale>2</scale>
+        </fields>
+        <fields>
+            <name>ReadOnlyAmountAvailableToDisburse</name>
+            <dataType>Currency</dataType>
+            <defaultValue>
+                <elementReference>AmountAvailableToDisburseFormula</elementReference>
+            </defaultValue>
+            <fieldText>Amount Available to Disburse</fieldText>
+            <fieldType>InputField</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isReadOnly>
+                <booleanValue>true</booleanValue>
+            </isReadOnly>
+            <isRequired>false</isRequired>
+            <scale>2</scale>
+        </fields>
+        <fields>
+            <name>DisbursementScheduleHeader</name>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;Set Disbursement Schedule&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>DisbursementAmount</name>
+            <dataType>Currency</dataType>
+            <defaultValue>
+                <elementReference>AmountAvailableToDisburseFormula</elementReference>
+            </defaultValue>
+            <fieldText>Amount</fieldText>
+            <fieldType>InputField</fieldType>
+            <helpText>&lt;p&gt;The total amount disbursed can&apos;t exceed the amount of the funding award.&lt;/p&gt;</helpText>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+            <scale>2</scale>
+            <validationRule>
+                <errorMessage>&lt;p&gt;Enter a valid amount.&lt;/p&gt;</errorMessage>
+                <formulaExpression>0.01 &lt;= {!DisbursementAmount} / {!NewDisbursementsNumber}</formulaExpression>
+            </validationRule>
+        </fields>
+        <fields>
+            <name>NewDisbursementsNumber</name>
+            <dataType>Number</dataType>
+            <defaultValue>
+                <numberValue>1.0</numberValue>
+            </defaultValue>
+            <fieldText>Total Number of Disbursements</fieldText>
+            <fieldType>InputField</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+            <scale>0</scale>
+            <validationRule>
+                <errorMessage>&lt;p&gt;Must be greater than 0&lt;/p&gt;</errorMessage>
+                <formulaExpression>{!NewDisbursementsNumber} &gt; 0</formulaExpression>
+            </validationRule>
+        </fields>
+        <fields>
+            <name>NumberOfPeriodsNumber</name>
+            <dataType>Number</dataType>
+            <defaultValue>
+                <numberValue>1.0</numberValue>
+            </defaultValue>
+            <fieldText>Repeat Every</fieldText>
+            <fieldType>InputField</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+            <scale>0</scale>
+            <validationRule>
+                <errorMessage>&lt;p&gt;Enter at least 1.&lt;/p&gt;</errorMessage>
+                <formulaExpression>{!NumberOfPeriodsNumber} &gt; 0</formulaExpression>
+            </validationRule>
+        </fields>
+        <fields>
+            <name>PeriodPicklist</name>
+            <choiceReferences>ChoicePeriodDay</choiceReferences>
+            <choiceReferences>ChoicePeriodWeek</choiceReferences>
+            <choiceReferences>ChoicePeriodMonth</choiceReferences>
+            <choiceReferences>ChoicePeriodYear</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>ChoicePeriodMonth</defaultSelectedChoiceReference>
+            <fieldText>Period</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>FirstDisbursementDate</name>
+            <dataType>DateTime</dataType>
+            <defaultValue>
+                <elementReference>GetFundingAward.StartDate</elementReference>
+            </defaultValue>
+            <fieldText>First Disbursement Date</fieldText>
+            <fieldType>InputField</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>AdditionalDetailsSectionHeader</name>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;Additional Details&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>ScreenCollectFundingDisbursementDetails_Section2</name>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>ScreenCollectFundingDisbursementDetails_Section2_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <fieldType>ObjectProvided</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>false</isRequired>
+                    <objectFieldReference>NewDisbursementRecord.PaymentMethodType</objectFieldReference>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>ScreenCollectFundingDisbursementDetails_Section2_Column2</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <fieldType>ObjectProvided</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>false</isRequired>
+                    <objectFieldReference>NewDisbursementRecord.Status</objectFieldReference>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <regionContainerType>SectionWithoutHeader</regionContainerType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+        <stageReference>
+            <elementReference>PreviewDisbursementsStage</elementReference>
+        </stageReference>
+    </screens>
+    <screens>
+        <description>Displays an error to the flow user when there&apos;s an error creating new allocation records.</description>
+        <name>ScreenDisplayErrorCreateAllocations</name>
+        <label>Display Error</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>ErrorCreateAllocationsDisplayText</name>
+            <fieldText>&lt;p&gt;Something went wrong and we couldn&apos;t create new allocation records. Click Previous to try again, or contact your Salesforce admin for help.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;{!$Flow.FaultMessage}&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <nextOrFinishButtonLabel>Finish without Creating Allocations</nextOrFinishButtonLabel>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+        <stageReference>
+            <elementReference>CreateAllocationsStage</elementReference>
+        </stageReference>
+    </screens>
+    <screens>
+        <description>Displays an error to the flow user when there&apos;s an error creating new disbursement records.</description>
+        <name>ScreenDisplayErrorCreateDisbursements</name>
+        <label>Display Error</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>ErrorCreateDisbursementsDisplayText</name>
+            <fieldText>&lt;p&gt;Something went wrong and we couldn&apos;t create new disbursement records. Click &lt;strong&gt;Previous&lt;/strong&gt; to try again, or contact your Salesforce admin for help.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;{!$Flow.FaultMessage}&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <nextOrFinishButtonLabel>Finish without Creating Disbursements</nextOrFinishButtonLabel>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+        <stageReference>
+            <elementReference>CreateDisbursementsStage</elementReference>
+        </stageReference>
+    </screens>
+    <screens>
+        <description>Displays an error to the flow user when the total amount of all new funding disbursements exceed the amount available to disburse.</description>
+        <name>ScreenDisplayErrorDisbursementAmountsExceedAvailableAmount</name>
+        <label>Display Error</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>ErrorCreateNewDisbursementRecordsCollectionDisplayText</name>
+            <fieldText>&lt;p&gt;We can&apos;t create the funding award disbursements because the total amount of all new disbursements, ({!ExistingAndNewDisbursementsTotalAmountFormula}), is more than the amount available to disburse, ({!AmountAvailableToDisburseFormula}), by {!AmountNewDisbursementsExceedAvailableFormula}. Click &lt;strong&gt;Previous&lt;/strong&gt; to go back and reduce the disbursement amount.&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <nextOrFinishButtonLabel>Don&apos;t Create Disbursements</nextOrFinishButtonLabel>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+        <stageReference>
+            <elementReference>PreviewDisbursementsStage</elementReference>
+        </stageReference>
+    </screens>
+    <screens>
+        <description>Displays an error to the flow user when there&apos;s an error getting the funding award or funding disbursement records.</description>
+        <name>ScreenDisplayErrorGetRecords</name>
+        <label>Display Error</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>ErrorGetRecordsDisplayText</name>
+            <fieldText>&lt;p&gt;Something went wrong and we couldn&apos;t get the funding award or the related funding disbursement. Contact your Salesforce admin for help.&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;{!$Flow.FaultMessage}&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+        <stageReference>
+            <elementReference>PreviewDisbursementsStage</elementReference>
+        </stageReference>
+    </screens>
+    <screens>
+        <description>Displays an error to the flow user when a record wasn&apos;t found in the Funding Award in Get Funding Award variable or when the flow user doesn&apos;t have permission to read the funding award record.</description>
+        <name>ScreenDisplayErrorNoFundingAward</name>
+        <label>Display Error</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>ErrorNoFundingAwardDisplayText</name>
+            <fieldText>&lt;p&gt;We couldn&apos;t find the funding award record.&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+        <stageReference>
+            <elementReference>PreviewDisbursementsStage</elementReference>
+        </stageReference>
+    </screens>
+    <screens>
+        <description>Displays an error to the flow user when the sum of the allocation percentages exceed 100%.</description>
+        <name>ScreenDisplayErrorOverAllocated</name>
+        <label>Display Error</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>InvalidAllocationPercentagesSumMessage</name>
+            <fieldText>&lt;p&gt;We can&apos;t create the allocations because they add up to ({!BudgetAllocationTotalPercent}%), which is {!NewAllocationPercentOver100Formula}% over 100%.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Click &lt;strong&gt;Previous&lt;/strong&gt; to go back and reduce the allocations and try again, or click &lt;strong&gt;Finish without Creating Allocations&lt;/strong&gt;.&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <nextOrFinishButtonLabel>Finish without Creating Allocations</nextOrFinishButtonLabel>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+        <stageReference>
+            <elementReference>PreviewAllocationsStage</elementReference>
+        </stageReference>
+    </screens>
+    <screens>
+        <description>Displays a confirmation to the flow user that the funding disbursements were created and shows the new records in a data table. The Previous button is hidden to avoid unexpectedly creating or updating records.</description>
+        <name>ScreenDisplayNewFundingDisbursements</name>
+        <label>Display New Funding Disbursements</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>NewFundingDisbursementConfirmationDisplayText</name>
+            <fieldText>&lt;p&gt;{!NewDisbursementRecordsCount} were created. Review the new records.&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>NewFundingDisbursementsDataTable</name>
+            <dataTypeMappings>
+                <typeName>T</typeName>
+                <typeValue>FundingDisbursement</typeValue>
+            </dataTypeMappings>
+            <extensionName>industries_common:inlineEditTable</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>label</name>
+                <value>
+                    <stringValue>New Funding Disbursements Data Table</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>rowSelectionMethod</name>
+                <value>
+                    <stringValue>NO_SELECTION</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>tableEditMode</name>
+                <value>
+                    <stringValue>READ_ONLY</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>recordCollection</name>
+                <value>
+                    <elementReference>NewDisbursementRecords</elementReference>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>objectApiName</name>
+                <value>
+                    <stringValue>FundingDisbursement</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>columns</name>
+                <value>
+                    <stringValue>[{&quot;apiName&quot;:&quot;Id&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:0,&quot;label&quot;:&quot;Funding Disbursement ID&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;DisbursementName&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:1,&quot;label&quot;:&quot;Disbursement Name&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;FundingAwardId&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:2,&quot;label&quot;:&quot;Funding Award ID&quot;,&quot;type&quot;:&quot;customRichText&quot;},{&quot;apiName&quot;:&quot;ScheduledDate&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:3,&quot;label&quot;:&quot;Scheduled Date&quot;,&quot;type&quot;:&quot;customDateTime&quot;},{&quot;apiName&quot;:&quot;Amount&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:4,&quot;label&quot;:&quot;Amount&quot;,&quot;type&quot;:&quot;currency&quot;},{&quot;apiName&quot;:&quot;PaymentMethodType&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:5,&quot;label&quot;:&quot;Payment Method Type&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;Status&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:6,&quot;label&quot;:&quot;Status&quot;,&quot;type&quot;:&quot;text&quot;}]</stringValue>
+                </value>
+            </inputParameters>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+        <stageReference>
+            <elementReference>CreateDisbursementsStage</elementReference>
+        </stageReference>
+    </screens>
+    <screens>
+        <description>Displays a confirmation to the flow user that the funding disbursements and budget allocations were created and shows the new records in data tables. Hides the Previous and Pause buttons in the footer to avoid unintentionally creating or updating records.</description>
+        <name>ScreenDisplayNewFundingDisbursementsBudgetAllocations</name>
+        <label>Display New Funding Disbursements and Budget Allocations</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>NewFundingDisbursementBudgetAllocationConfirmationDisplayText</name>
+            <fieldText>&lt;p&gt;{!NewDisbursementsNumber} were created and {!NewBudgetAllocationsCount} were created for each new disbursement. Review the new records.&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>NewFundingDisbursementsSectionHeader2</name>
+            <fieldText>New Funding Disbursements</fieldText>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>NewFundingDisbursementsSectionHeader2_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>NewFundingDisbursementsAddAllocationsDataTable</name>
+                    <dataTypeMappings>
+                        <typeName>T</typeName>
+                        <typeValue>FundingDisbursement</typeValue>
+                    </dataTypeMappings>
+                    <extensionName>industries_common:inlineEditTable</extensionName>
+                    <fieldType>ComponentInstance</fieldType>
+                    <inputParameters>
+                        <name>label</name>
+                        <value>
+                            <stringValue>New Funding Disbursements Data Table</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>rowSelectionMethod</name>
+                        <value>
+                            <stringValue>NO_SELECTION</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>tableEditMode</name>
+                        <value>
+                            <stringValue>READ_ONLY</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>recordCollection</name>
+                        <value>
+                            <elementReference>NewDisbursementRecords</elementReference>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>objectApiName</name>
+                        <value>
+                            <stringValue>FundingDisbursement</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>columns</name>
+                        <value>
+                            <stringValue>[{&quot;apiName&quot;:&quot;Id&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:0,&quot;label&quot;:&quot;Funding Disbursement ID&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;DisbursementName&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:1,&quot;label&quot;:&quot;Disbursement Name&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;FundingAwardId&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:2,&quot;label&quot;:&quot;Funding Award ID&quot;,&quot;type&quot;:&quot;customRichText&quot;},{&quot;apiName&quot;:&quot;ScheduledDate&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:3,&quot;label&quot;:&quot;Scheduled Date&quot;,&quot;type&quot;:&quot;customDateTime&quot;},{&quot;apiName&quot;:&quot;Amount&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:4,&quot;label&quot;:&quot;Amount&quot;,&quot;type&quot;:&quot;currency&quot;},{&quot;apiName&quot;:&quot;PaymentMethodType&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:5,&quot;label&quot;:&quot;Payment Method Type&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;Status&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:6,&quot;label&quot;:&quot;Status&quot;,&quot;type&quot;:&quot;text&quot;}]</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <storeOutputAutomatically>true</storeOutputAutomatically>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>12</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <regionContainerType>SectionWithHeader</regionContainerType>
+        </fields>
+        <fields>
+            <name>NewBudgetAllocationsSectionHeader</name>
+            <fieldText>New Budget Allocations</fieldText>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>NewBudgetAllocationsSectionHeader_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>NewBudgetAllocationsDataTable</name>
+                    <dataTypeMappings>
+                        <typeName>T</typeName>
+                        <typeValue>BudgetAllocation</typeValue>
+                    </dataTypeMappings>
+                    <extensionName>industries_common:inlineEditTable</extensionName>
+                    <fieldType>ComponentInstance</fieldType>
+                    <inputParameters>
+                        <name>label</name>
+                        <value>
+                            <stringValue>New Budget Allocations Data Table</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>rowSelectionMethod</name>
+                        <value>
+                            <stringValue>NO_SELECTION</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>tableEditMode</name>
+                        <value>
+                            <stringValue>READ_ONLY</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>recordCollection</name>
+                        <value>
+                            <elementReference>NewBudgetAllocations</elementReference>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>objectApiName</name>
+                        <value>
+                            <stringValue>BudgetAllocation</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>columns</name>
+                        <value>
+                            <stringValue>[{&quot;apiName&quot;:&quot;Id&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:0,&quot;label&quot;:&quot;Budget Allocation ID&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;FundingDisbursementId&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:1,&quot;label&quot;:&quot;Funding Disbursement ID&quot;,&quot;type&quot;:&quot;customRichText&quot;},{&quot;apiName&quot;:&quot;BudgetId&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:2,&quot;label&quot;:&quot;Budget ID&quot;,&quot;type&quot;:&quot;customRichText&quot;},{&quot;apiName&quot;:&quot;Amount&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:3,&quot;label&quot;:&quot;Amount&quot;,&quot;type&quot;:&quot;currency&quot;},{&quot;apiName&quot;:&quot;Status&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:4,&quot;label&quot;:&quot;Status&quot;,&quot;type&quot;:&quot;text&quot;}]</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <storeOutputAutomatically>true</storeOutputAutomatically>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>12</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <regionContainerType>SectionWithHeader</regionContainerType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+        <stageReference>
+            <elementReference>CreateAllocationsStage</elementReference>
+        </stageReference>
+    </screens>
+    <screens>
+        <description>Displays a confirmation to the flow user that the funding disbursements were created, shows the new records in a data table, and provides a repeater section to add budget allocations to the new funding disbursements. The Previous button is hidden to avoid unexpectedly creating or updating records.</description>
+        <name>ScreenDisplayNewFundingDisbursementsCollectBudgetAllocations</name>
+        <label>Display New Funding Disbursements Collect Budget Allocations</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>DoesUserCreateAllocations</targetReference>
+        </connector>
+        <fields>
+            <name>FundingDisbursementCollectAllocationConfirmationDisplayText</name>
+            <fieldText>&lt;p&gt;{!NewDisbursementRecordsCount} were created. Review the new records.&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>NewFundingDisbursementsSectionHeader</name>
+            <fieldText>New Funding Disbursements</fieldText>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>NewFundingDisbursementsSectionHeader_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>NewFundingDisbursementsCollectAllocationsDataTable</name>
+                    <dataTypeMappings>
+                        <typeName>T</typeName>
+                        <typeValue>FundingDisbursement</typeValue>
+                    </dataTypeMappings>
+                    <extensionName>industries_common:inlineEditTable</extensionName>
+                    <fieldType>ComponentInstance</fieldType>
+                    <inputParameters>
+                        <name>label</name>
+                        <value>
+                            <stringValue>New Funding Disbursements Data Table</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>rowSelectionMethod</name>
+                        <value>
+                            <stringValue>NO_SELECTION</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>tableEditMode</name>
+                        <value>
+                            <stringValue>READ_ONLY</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>recordCollection</name>
+                        <value>
+                            <elementReference>NewDisbursementRecords</elementReference>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>objectApiName</name>
+                        <value>
+                            <stringValue>FundingDisbursement</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>columns</name>
+                        <value>
+                            <stringValue>[{&quot;apiName&quot;:&quot;Id&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:0,&quot;label&quot;:&quot;Funding Disbursement ID&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;DisbursementName&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:1,&quot;label&quot;:&quot;Disbursement Name&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;FundingAwardId&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:2,&quot;label&quot;:&quot;Funding Award ID&quot;,&quot;type&quot;:&quot;customRichText&quot;},{&quot;apiName&quot;:&quot;ScheduledDate&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:3,&quot;label&quot;:&quot;Scheduled Date&quot;,&quot;type&quot;:&quot;customDateTime&quot;},{&quot;apiName&quot;:&quot;Amount&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:4,&quot;label&quot;:&quot;Amount&quot;,&quot;type&quot;:&quot;currency&quot;},{&quot;apiName&quot;:&quot;PaymentMethodType&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:5,&quot;label&quot;:&quot;Payment Method Type&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;Status&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:6,&quot;label&quot;:&quot;Status&quot;,&quot;type&quot;:&quot;text&quot;}]</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <storeOutputAutomatically>true</storeOutputAutomatically>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>12</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <regionContainerType>SectionWithHeader</regionContainerType>
+        </fields>
+        <fields>
+            <name>AddBudgetAllocationsSectionHeader</name>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 20px; color: rgb(68, 68, 68);&quot;&gt;Budget Allocations&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>AddAllocationsToNewDisbursementsCheckbox</name>
+            <dataType>Boolean</dataType>
+            <defaultValue>
+                <booleanValue>true</booleanValue>
+            </defaultValue>
+            <fieldText>Add new allocations to these disbursements?</fieldText>
+            <fieldType>InputField</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>CreateBudgetAllocationsDisplayText</name>
+            <fieldText>&lt;p&gt;To create a budget allocation for each funding disbursement, click &lt;strong&gt;Add&lt;/strong&gt;. The total allocation can&apos;t exceed 100%.&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+            <visibilityRule>
+                <conditionLogic>and</conditionLogic>
+                <conditions>
+                    <leftValueReference>AddAllocationsToNewDisbursementsCheckbox</leftValueReference>
+                    <operator>EqualTo</operator>
+                    <rightValue>
+                        <booleanValue>true</booleanValue>
+                    </rightValue>
+                </conditions>
+            </visibilityRule>
+        </fields>
+        <fields>
+            <name>NewBudgetAllocationsRepeater</name>
+            <fieldType>Repeater</fieldType>
+            <fields>
+                <name>BudgetLookup</name>
+                <extensionName>flowruntime:lookup</extensionName>
+                <fieldType>ComponentInstance</fieldType>
+                <inputParameters>
+                    <name>fieldApiName</name>
+                    <value>
+                        <stringValue>BudgetId</stringValue>
+                    </value>
+                </inputParameters>
+                <inputParameters>
+                    <name>label</name>
+                    <value>
+                        <stringValue>Budget</stringValue>
+                    </value>
+                </inputParameters>
+                <inputParameters>
+                    <name>objectApiName</name>
+                    <value>
+                        <stringValue>BudgetAllocation</stringValue>
+                    </value>
+                </inputParameters>
+                <inputParameters>
+                    <name>maxValues</name>
+                    <value>
+                        <numberValue>1.0</numberValue>
+                    </value>
+                </inputParameters>
+                <inputParameters>
+                    <name>required</name>
+                    <value>
+                        <booleanValue>true</booleanValue>
+                    </value>
+                </inputParameters>
+                <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                <isRequired>true</isRequired>
+                <storeOutputAutomatically>true</storeOutputAutomatically>
+            </fields>
+            <fields>
+                <name>AllocationPercent</name>
+                <dataType>Number</dataType>
+                <defaultValue>
+                    <numberValue>0.0</numberValue>
+                </defaultValue>
+                <fieldText>Percent Allocated</fieldText>
+                <fieldType>InputField</fieldType>
+                <helpText>&lt;p&gt;Enter a whole number for the percent. For example, enter 50 for 50%.&lt;/p&gt;</helpText>
+                <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                <isRequired>true</isRequired>
+                <scale>0</scale>
+            </fields>
+            <fields>
+                <name>AllocationStatusPicklist</name>
+                <choiceReferences>ChoiceBudgetAllocationStatus</choiceReferences>
+                <dataType>String</dataType>
+                <fieldText>Status</fieldText>
+                <fieldType>DropdownBox</fieldType>
+                <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <visibilityRule>
+                <conditionLogic>and</conditionLogic>
+                <conditions>
+                    <leftValueReference>AddAllocationsToNewDisbursementsCheckbox</leftValueReference>
+                    <operator>EqualTo</operator>
+                    <rightValue>
+                        <booleanValue>true</booleanValue>
+                    </rightValue>
+                </conditions>
+            </visibilityRule>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+        <stageReference>
+            <elementReference>CreateDisbursementsStage</elementReference>
+        </stageReference>
+    </screens>
+    <screens>
+        <description>Allows the flow user to review new allocation records before they&apos;re created. The user can update values in the PreviewBudgetAllocationsDataTable. The previous footer button is hidden to avoid accidentally creating or updating records.</description>
+        <name>ScreenPreviewBudgetAllocations</name>
+        <label>Preview Budget Allocations</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>CreateNewBudgetAllocations</targetReference>
+        </connector>
+        <fields>
+            <name>PreviewAllocationRecordsDisplayText</name>
+            <fieldText>&lt;p&gt;Review and update the funding award budget allocations that will be created. To change the number of budget allocations to create for each new disbursement or to edit the details of a budget allocation, click &lt;strong&gt;Previous&lt;/strong&gt;. When the values in the table look good, click &lt;strong&gt;Create Budget Allocations&lt;/strong&gt;.&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>PreviewBudgetAllocationsDataTable</name>
+            <dataTypeMappings>
+                <typeName>T</typeName>
+                <typeValue>BudgetAllocation</typeValue>
+            </dataTypeMappings>
+            <extensionName>industries_common:inlineEditTable</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>label</name>
+                <value>
+                    <stringValue>Preview Budget Allocations Data Table</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>rowSelectionMethod</name>
+                <value>
+                    <stringValue>NO_SELECTION</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>tableEditMode</name>
+                <value>
+                    <stringValue>EDITABLE</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>recordCollection</name>
+                <value>
+                    <elementReference>NewBudgetAllocations</elementReference>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>objectApiName</name>
+                <value>
+                    <stringValue>BudgetAllocation</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>columns</name>
+                <value>
+                    <stringValue>[{&quot;apiName&quot;:&quot;Name&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:0,&quot;label&quot;:&quot;Budget Allocation Name&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;FundingDisbursementId&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:1,&quot;label&quot;:&quot;Funding Disbursement ID&quot;,&quot;type&quot;:&quot;customRichText&quot;},{&quot;apiName&quot;:&quot;BudgetId&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:2,&quot;label&quot;:&quot;Budget ID&quot;,&quot;type&quot;:&quot;customRichText&quot;},{&quot;apiName&quot;:&quot;Amount&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:3,&quot;label&quot;:&quot;Amount&quot;,&quot;type&quot;:&quot;currency&quot;},{&quot;apiName&quot;:&quot;Status&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:4,&quot;label&quot;:&quot;Status&quot;,&quot;type&quot;:&quot;text&quot;}]</stringValue>
+                </value>
+            </inputParameters>
+            <inputsOnNextNavToAssocScrn>ResetValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+            <outputParameters>
+                <assignToReference>NewBudgetAllocations</assignToReference>
+                <name>recordCollection</name>
+            </outputParameters>
+        </fields>
+        <nextOrFinishButtonLabel>Create Budget Allocations</nextOrFinishButtonLabel>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+        <stageReference>
+            <elementReference>PreviewAllocationsStage</elementReference>
+        </stageReference>
+    </screens>
+    <screens>
+        <description>Allows the flow user to review the new funding disbursements before the records are created. The user can update values in the PreviewFundingDisbursementsDataTable, click Previous to go back and adjust the schedule, or click Create Disbursements.</description>
+        <name>ScreenPreviewFundingDisbursements</name>
+        <label>Preview Funding Disbursements</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>ResetNewFundingDisbursementTotalAmount</targetReference>
+        </connector>
+        <fields>
+            <name>PreviewFundingDisbursementsDisplayText</name>
+            <fieldText>&lt;p&gt;Preview funding disbursements before creating the records. You can update values in the table. To adjust the recurrence schedule, click &lt;strong&gt;Previous&lt;/strong&gt; and update the schedule. When the funding disbursements look right, click &lt;strong&gt;Create Disbursements&lt;/strong&gt;.&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>PreviewFundingDisbursementsDataTable</name>
+            <dataTypeMappings>
+                <typeName>T</typeName>
+                <typeValue>FundingDisbursement</typeValue>
+            </dataTypeMappings>
+            <extensionName>industries_common:inlineEditTable</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>label</name>
+                <value>
+                    <stringValue>Preview Funding Disbursements Data Table</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>rowSelectionMethod</name>
+                <value>
+                    <stringValue>NO_SELECTION</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>tableEditMode</name>
+                <value>
+                    <stringValue>EDITABLE</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>recordCollection</name>
+                <value>
+                    <elementReference>NewDisbursementRecords</elementReference>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>objectApiName</name>
+                <value>
+                    <stringValue>FundingDisbursement</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>columns</name>
+                <value>
+                    <stringValue>[{&quot;apiName&quot;:&quot;DisbursementName&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:0,&quot;label&quot;:&quot;Disbursement Name&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;FundingAwardId&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:1,&quot;label&quot;:&quot;Funding Award ID&quot;,&quot;type&quot;:&quot;customRichText&quot;},{&quot;apiName&quot;:&quot;ScheduledDate&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:2,&quot;label&quot;:&quot;Scheduled Date&quot;,&quot;type&quot;:&quot;customDateTime&quot;},{&quot;apiName&quot;:&quot;Amount&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:3,&quot;label&quot;:&quot;Amount&quot;,&quot;type&quot;:&quot;currency&quot;},{&quot;apiName&quot;:&quot;PaymentMethodType&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:4,&quot;label&quot;:&quot;Payment Method Type&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;Status&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:5,&quot;label&quot;:&quot;Status&quot;,&quot;type&quot;:&quot;text&quot;}]</stringValue>
+                </value>
+            </inputParameters>
+            <inputsOnNextNavToAssocScrn>ResetValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+            <outputParameters>
+                <assignToReference>NewDisbursementRecords</assignToReference>
+                <name>recordCollection</name>
+            </outputParameters>
+        </fields>
+        <fields>
+            <name>BudgetAllocationsSectionHeader</name>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;Budget Allocations&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>AllocationsForNewDisbursementsCheckbox</name>
+            <dataType>Boolean</dataType>
+            <fieldText>Add new budget allocations for these disbursements</fieldText>
+            <fieldType>InputField</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+        </fields>
+        <nextOrFinishButtonLabel>Create Disbursements</nextOrFinishButtonLabel>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+        <stageReference>
+            <elementReference>PreviewDisbursementsStage</elementReference>
+        </stageReference>
+    </screens>
+    <sourceTemplate>grantmk__CreateRecurringDisbursements</sourceTemplate>
+    <stages>
+        <description>Stores the label and order for the stage where the flow creates budget allocations. This label appears on the progress bar when a user runs this flow.</description>
+        <name>CreateAllocationsStage</name>
+        <isActive>false</isActive>
+        <label>Create Allocations</label>
+        <stageOrder>11</stageOrder>
+    </stages>
+    <stages>
+        <description>Stores the label and order for the stage where the flow creates disbursements. This label appears on the progress bar when a user runs this flow.</description>
+        <name>CreateDisbursementsStage</name>
+        <isActive>true</isActive>
+        <label>Create Disbursements</label>
+        <stageOrder>1</stageOrder>
+    </stages>
+    <stages>
+        <description>Stores the label and order for the stage where the user reviews user-entered values for budget allocations that the flow will create. This label appears on the progress bar when a user runs this flow.</description>
+        <name>PreviewAllocationsStage</name>
+        <isActive>false</isActive>
+        <label>Preview Allocations</label>
+        <stageOrder>10</stageOrder>
+    </stages>
+    <stages>
+        <description>Stores the label and order for the stage where the user reviews user-entered values for funding disbursements that the flow will create. This label appears on the progress bar when a user runs this flow.</description>
+        <name>PreviewDisbursementsStage</name>
+        <isActive>true</isActive>
+        <label>Preview Disbursements</label>
+        <stageOrder>0</stageOrder>
+    </stages>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>GetFundingAward</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>Stores the total percent of the budget allocations created by the flow.</description>
+        <name>BudgetAllocationTotalPercent</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+        <value>
+            <numberValue>0.0</numberValue>
+        </value>
+    </variables>
+    <variables>
+        <description>Stores the total amount of the existing funding disbursements.</description>
+        <name>ExistingFundingDisbursementsTotalAmount</name>
+        <dataType>Currency</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>2</scale>
+        <value>
+            <numberValue>0.0</numberValue>
+        </value>
+    </variables>
+    <variables>
+        <description>Stores the number of time zones away from UTC to use for the first disbursement date.</description>
+        <name>FirstDisbursementScheduleDateTimezoneOffset</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+    </variables>
+    <variables>
+        <description>Stores the budget allocation record.</description>
+        <name>NewBudgetAllocation</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>BudgetAllocation</objectType>
+    </variables>
+    <variables>
+        <description>Stores a collection of budget allocation records to be inserted.</description>
+        <name>NewBudgetAllocations</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>BudgetAllocation</objectType>
+    </variables>
+    <variables>
+        <description>Stores the total number of budget allocations created by the flow.</description>
+        <name>NewBudgetAllocationsCount</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+        <value>
+            <numberValue>0.0</numberValue>
+        </value>
+    </variables>
+    <variables>
+        <description>Stores a new funding disbursement record.</description>
+        <name>NewDisbursementRecord</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>FundingDisbursement</objectType>
+    </variables>
+    <variables>
+        <description>Stores the collection of funding disbursement records created by the flow.</description>
+        <name>NewDisbursementRecords</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>FundingDisbursement</objectType>
+    </variables>
+    <variables>
+        <description>Stores the number of disbursement records to be created by the flow.</description>
+        <name>NewDisbursementRecordsCount</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+        <value>
+            <numberValue>0.0</numberValue>
+        </value>
+    </variables>
+    <variables>
+        <description>Stores the total amount of the new funding disbursements.</description>
+        <name>NewFundingDisbursementsTotalAmount</name>
+        <dataType>Currency</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>2</scale>
+        <value>
+            <numberValue>0.0</numberValue>
+        </value>
+    </variables>
+    <variables>
+        <description>Stores the number of allocation records to be created by the flow.</description>
+        <name>PendingBudgetAllocationsCount</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+        <value>
+            <numberValue>0.0</numberValue>
+        </value>
+    </variables>
+    <variables>
+        <description>Stores the ID of the funding award passed into the flow.</description>
+        <name>recordId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Stores a temporary date-only value of the record due date.</description>
+        <name>TimeZoneOffsetDate</name>
+        <dataType>Date</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Stores the total disbursement amount that isn&apos;t allocated to a budget allocation.</description>
+        <name>UnallocatedDisbursementsTotalAmount</name>
+        <dataType>Currency</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>2</scale>
+        <value>
+            <numberValue>0.0</numberValue>
+        </value>
+    </variables>
+</Flow>

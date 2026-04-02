@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>49.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>RCV_Open_Flag_is_True</name>
+        <label>RCV Open Flag is True</label>
+        <locationX>690</locationX>
+        <locationY>129</locationY>
+        <assignmentItems>
+            <assignToReference>AnyRCVOpen</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Verify_All_RCVs_are_Resolved</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>Check_RCV_Status</name>
+        <label>Check RCV Status</label>
+        <locationX>168</locationX>
+        <locationY>319</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Is_RCV_Resolved</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Resolved</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_Visit_for_RCV</targetReference>
+            </connector>
+            <label>Is RCV Resolved?</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Determine_Visit_Context_Type</name>
+        <label>Determine Visit Context Type</label>
+        <locationX>970</locationX>
+        <locationY>540</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Is_BLA</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Visit_for_RCV.ContextId</leftValueReference>
+                <operator>StartsWith</operator>
+                <rightValue>
+                    <stringValue>0f0</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_BLA</targetReference>
+            </connector>
+            <label>Is BLA</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Is_Current_RCV_Resolved</name>
+        <label>Is Current RCV Resolved?</label>
+        <locationX>1058</locationX>
+        <locationY>274</locationY>
+        <defaultConnector>
+            <targetReference>RCV_Open_Flag_is_True</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>RCV_is_Open</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Verify_All_RCVs_are_Resolved.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Open</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>RCV_Open_Flag_is_True</targetReference>
+            </connector>
+            <label>RCV is Open</label>
+        </rules>
+        <rules>
+            <name>RCV_is_New</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Verify_All_RCVs_are_Resolved.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Resolved</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Verify_All_RCVs_are_Resolved</targetReference>
+            </connector>
+            <label>RCV is Resolved</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Should_Context_be_Updated</name>
+        <label>Should Context be Updated?</label>
+        <locationX>711</locationX>
+        <locationY>542</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>All_RCVs_are_Resolved</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>AnyRCVOpen</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Determine_Visit_Context_Type</targetReference>
+            </connector>
+            <label>All RCVs are Resolved</label>
+        </rules>
+    </decisions>
+    <interviewLabel>Update BLA Status on RCV Change {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Update BLA Status on RCV Change</label>
+    <loops>
+        <name>Verify_All_RCVs_are_Resolved</name>
+        <label>Verify All RCVs are Resolved</label>
+        <locationX>490</locationX>
+        <locationY>402</locationY>
+        <collectionReference>Get_All_RCVs_for_Visit</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Is_Current_RCV_Resolved</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>Should_Context_be_Updated</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_All_RCVs_for_Visit</name>
+        <label>Get All RCVs for Visit</label>
+        <locationX>175</locationX>
+        <locationY>675</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Verify_All_RCVs_are_Resolved</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>InspectionId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.InspectionId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>RegulatoryCodeViolation</object>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>Status</queriedFields>
+        <sortField>LastModifiedDate</sortField>
+        <sortOrder>Desc</sortOrder>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Visit_for_RCV</name>
+        <label>Get Visit for RCV</label>
+        <locationX>175</locationX>
+        <locationY>531</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Get_All_RCVs_for_Visit</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.InspectionId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Visit</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_BLA</name>
+        <label>Update BLA</label>
+        <locationX>1198</locationX>
+        <locationY>415</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_Visit_for_RCV.ContextId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>Inspection Completed</stringValue>
+            </value>
+        </inputAssignments>
+        <object>BusinessLicenseApplication</object>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>50</locationY>
+        <connector>
+            <targetReference>Check_RCV_Status</targetReference>
+        </connector>
+        <object>RegulatoryCodeViolation</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>AnyRCVOpen</name>
+        <dataType>Boolean</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <booleanValue>false</booleanValue>
+        </value>
+    </variables>
+</Flow>

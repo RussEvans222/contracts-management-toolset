@@ -1,0 +1,360 @@
+<template>
+    <article class="viewer-shell">
+        <header class="viewer-header">
+            <div>
+                <p class="eyebrow">Contracts Workspace</p>
+                <h1>Contract Viewer</h1>
+                <p class="subtitle">{subtitleText}</p>
+            </div>
+            <div class="header-meta">
+                <span>{tileCountLabel}</span>
+                <lightning-button label="Refresh" onclick={handleRefresh}></lightning-button>
+            </div>
+        </header>
+
+        <template if:true={showGlobalControls}>
+            <section class="controls">
+                <div class="mode-toggle">
+                    <lightning-button
+                        label="Latest 16"
+                        variant={latestModeVariant}
+                        data-mode="latest"
+                        onclick={handleModeChange}
+                    ></lightning-button>
+                    <lightning-button
+                        label="View All"
+                        variant={allModeVariant}
+                        data-mode="all"
+                        onclick={handleModeChange}
+                    ></lightning-button>
+                </div>
+                <div class="status-pill-row">
+                    <template for:each={statusPills} for:item="pill">
+                        <button
+                            key={pill.value}
+                            type="button"
+                            class={pill.className}
+                            data-status={pill.value}
+                            onclick={handleStatusChange}
+                        >
+                            <span>{pill.label}</span>
+                            <span class="pill-count">{pill.count}</span>
+                        </button>
+                    </template>
+                </div>
+            </section>
+        </template>
+
+        <template if:true={hasTiles}>
+            <section class="grid">
+                <template for:each={tiles} for:item="tile">
+                    <article key={tile.contentDocumentId} class="tile">
+                        <button
+                            class="tile-preview-button"
+                            data-contract-id={tile.contractId}
+                            onclick={handleOpenContract}
+                            type="button"
+                        >
+                            <div class={tile.thumbClass}>
+                                <span class={tile.signedRibbonClass}>Signed</span>
+                                <template if:true={tile.showThumbnail}>
+                                    <img
+                                        class="thumb"
+                                        src={tile.thumbnailUrlActive}
+                                        alt={tile.displayTitle}
+                                        data-doc-id={tile.contentDocumentId}
+                                        onerror={handleImageError}
+                                    />
+                                </template>
+                                <template if:false={tile.showThumbnail}>
+                                    <div class="thumb-fallback">
+                                        <lightning-icon icon-name="doctype:attachment" size="large"></lightning-icon>
+                                    </div>
+                                </template>
+                            </div>
+                        </button>
+
+                        <div class="tile-body">
+                            <div class="title-row">
+                                <h2>{tile.displayTitle}</h2>
+                                <span class={tile.statusClass}>{tile.statusLabel}</span>
+                            </div>
+                            <p class="meta">
+                                <strong>{tile.contractNumber}</strong>
+                                <template if:true={tile.contractName}> • {tile.contractName}</template>
+                            </p>
+                            <p class="meta">Versions: {tile.versionCount} • {tile.fileType}</p>
+                            <div class="cta-row">
+                                <lightning-button
+                                    label="Open Contract"
+                                    data-contract-id={tile.contractId}
+                                    onclick={handleOpenContract}
+                                ></lightning-button>
+                                <lightning-button
+                                    label="Versions"
+                                    variant="brand-outline"
+                                    data-contract-id={tile.contractId}
+                                    data-contract-label={tile.contractLabel}
+                                    onclick={handleViewVersions}
+                                ></lightning-button>
+                            </div>
+                        </div>
+                    </article>
+                </template>
+            </section>
+        </template>
+
+        <template if:false={hasTiles}>
+            <div class="empty">
+                <p>{emptyMessage}</p>
+            </div>
+        </template>
+
+        <template if:true={errorMessage}>
+            <div class="error-box">{errorMessage}</div>
+        </template>
+    </article>
+
+    <template if:true={showVersionsModal}>
+        <section class="slds-modal slds-fade-in-open" role="dialog" aria-modal="true" aria-label="Contract versions">
+            <div class="slds-modal__container versions-modal-container">
+                <header class="slds-modal__header versions-modal-header">
+                    <h2 class="slds-text-heading_medium">{versionsModalTitle}</h2>
+                    <div class="versions-header-actions">
+                        <template if:true={canCompareVersions}>
+                            <lightning-button label="Compare Versions" variant="brand" onclick={handleOpenCompareModal}></lightning-button>
+                        </template>
+                    </div>
+                    <button class="slds-button slds-button_icon slds-modal__close" title="Close" onclick={handleCloseVersions}>
+                        <lightning-icon icon-name="utility:close" size="small" alternative-text="Close"></lightning-icon>
+                    </button>
+                </header>
+                <div class="slds-modal__content slds-p-around_medium versions-modal-content">
+                    <template if:true={versionsLoading}>
+                        <div class="modal-loading">
+                            <lightning-spinner alternative-text="Loading versions" size="medium"></lightning-spinner>
+                        </div>
+                    </template>
+
+                    <template if:true={versionsError}>
+                        <div class="error-box">{versionsError}</div>
+                    </template>
+
+                    <template if:true={hasVersionRows}>
+                        <section class="version-grid">
+                            <template for:each={versionRows} for:item="row">
+                                <article key={row.rowKey} class="version-card">
+                                    <div class="version-preview-wrap">
+                                        <template if:true={row.showPrimaryThumbnail}>
+                                            <img
+                                                class="version-thumb"
+                                                src={row.primaryThumbnailUrlActive}
+                                                alt={row.primaryFileTitle}
+                                                data-version-id={row.versionRecordId}
+                                                onerror={handleVersionImageError}
+                                            />
+                                        </template>
+                                        <template if:false={row.showPrimaryThumbnail}>
+                                            <div class="version-thumb-fallback">
+                                                <lightning-icon icon-name="doctype:attachment" size="medium"></lightning-icon>
+                                            </div>
+                                        </template>
+                                    </div>
+
+                                    <div class="version-body">
+                                        <div class="version-title-row">
+                                            <h3>{row.versionLabel}</h3>
+                                            <span class={row.badgeClass}>{row.versionStatus}</span>
+                                        </div>
+
+                                        <p class="meta">
+                                            <lightning-formatted-date-time
+                                                value={row.createdDate}
+                                                year="numeric"
+                                                month="short"
+                                                day="2-digit"
+                                                hour="2-digit"
+                                                minute="2-digit"
+                                            ></lightning-formatted-date-time>
+                                            • {row.processLabel}
+                                        </p>
+                                        <p class="meta">Files: {row.fileCount} • Primary: {row.primaryFileType}</p>
+                                        <p class="meta truncate">{row.primaryFileTitle}</p>
+
+                                        <template if:true={row.hasFiles}>
+                                            <div class="file-pill-row">
+                                                <template for:each={row.filePills} for:item="fileItem">
+                                                    <button
+                                                        key={fileItem.fileKey}
+                                                        type="button"
+                                                        class="file-pill"
+                                                        data-doc-id={fileItem.contentDocumentId}
+                                                        onclick={handlePreviewFile}
+                                                    >
+                                                        {fileItem.fileType}
+                                                    </button>
+                                                </template>
+                                                <template if:true={row.fileOverflowCount}>
+                                                    <span class="file-overflow">+{row.fileOverflowCount} more</span>
+                                                </template>
+                                            </div>
+                                        </template>
+
+                                        <div class="cta-row">
+                                            <lightning-button
+                                                label="Open Contract"
+                                                data-contract-id={row.contractId}
+                                                onclick={handleOpenContractFromVersion}
+                                            ></lightning-button>
+                                            <lightning-button
+                                                label="Preview File"
+                                                variant="brand-outline"
+                                                data-doc-id={row.primaryContentDocumentId}
+                                                onclick={handlePreviewFile}
+                                            ></lightning-button>
+                                        </div>
+                                    </div>
+                                </article>
+                            </template>
+                        </section>
+                    </template>
+
+                    <template if:false={hasVersionRows}>
+                        <template if:false={versionsLoading}>
+                            <div class="empty">
+                                <p>{versionEmptyMessage}</p>
+                            </div>
+                        </template>
+                    </template>
+                </div>
+                <footer class="slds-modal__footer versions-modal-footer">
+                    <lightning-button label="Close" onclick={handleCloseVersions}></lightning-button>
+                </footer>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+
+    <template if:true={showCompareModal}>
+        <section class="slds-modal slds-fade-in-open" role="dialog" aria-modal="true" aria-label="Compare versions">
+            <div class="slds-modal__container compare-modal-container">
+                <header class="slds-modal__header compare-modal-header">
+                    <h2 class="slds-text-heading_medium">{compareModalTitle}</h2>
+                    <button class="slds-button slds-button_icon slds-modal__close" title="Close" onclick={handleCloseCompareModal}>
+                        <lightning-icon icon-name="utility:close" size="small" alternative-text="Close"></lightning-icon>
+                    </button>
+                </header>
+                <div class="slds-modal__content slds-p-around_medium compare-modal-content">
+                    <div class="compare-controls">
+                        <lightning-combobox
+                            name="compareLeft"
+                            label="Version A"
+                            value={compareLeftId}
+                            options={compareVersionOptions}
+                            onchange={handleCompareLeftChange}
+                        ></lightning-combobox>
+                        <lightning-button label="Swap" onclick={handleSwapCompare}></lightning-button>
+                        <lightning-combobox
+                            name="compareRight"
+                            label="Version B"
+                            value={compareRightId}
+                            options={compareVersionOptions}
+                            onchange={handleCompareRightChange}
+                        ></lightning-combobox>
+                    </div>
+
+                    <template if:true={compareSelectionError}>
+                        <div class="error-box">{compareSelectionError}</div>
+                    </template>
+                    <template if:true={canRenderCompareResults}>
+                        <div class="compare-ai-note">
+                            Preview-only mode. AI text redline comparison is planned for a future release.
+                        </div>
+                    </template>
+
+                    <template if:true={canRenderCompareResults}>
+                        <section class="compare-grid">
+                            <article class="compare-side-card">
+                                <div class="compare-side-header">
+                                    <h3>{compareLeftRow.versionLabel}</h3>
+                                    <span class={compareLeftRow.badgeClass}>{compareLeftRow.versionStatus}</span>
+                                </div>
+                                <div class="compare-preview-wrap">
+                                    <template if:true={compareLeftRow.showPrimaryThumbnail}>
+                                        <img
+                                            class="compare-thumb"
+                                            src={compareLeftRow.primaryThumbnailUrlActive}
+                                            alt={compareLeftRow.primaryFileTitle}
+                                            data-version-id={compareLeftRow.versionRecordId}
+                                            onerror={handleVersionImageError}
+                                        />
+                                    </template>
+                                    <template if:false={compareLeftRow.showPrimaryThumbnail}>
+                                        <div class="compare-thumb-fallback">
+                                            <lightning-icon icon-name="doctype:attachment" size="medium"></lightning-icon>
+                                        </div>
+                                    </template>
+                                </div>
+                                <p class="meta">{compareLeftRow.primaryFileTitle}</p>
+                                <div class="cta-row">
+                                    <lightning-button
+                                        label="Open Contract"
+                                        data-contract-id={compareLeftRow.contractId}
+                                        onclick={handleOpenContractFromVersion}
+                                    ></lightning-button>
+                                    <lightning-button
+                                        label="Preview"
+                                        variant="brand-outline"
+                                        data-doc-id={compareLeftRow.primaryContentDocumentId}
+                                        onclick={handlePreviewFile}
+                                    ></lightning-button>
+                                </div>
+                            </article>
+
+                            <article class="compare-side-card">
+                                <div class="compare-side-header">
+                                    <h3>{compareRightRow.versionLabel}</h3>
+                                    <span class={compareRightRow.badgeClass}>{compareRightRow.versionStatus}</span>
+                                </div>
+                                <div class="compare-preview-wrap">
+                                    <template if:true={compareRightRow.showPrimaryThumbnail}>
+                                        <img
+                                            class="compare-thumb"
+                                            src={compareRightRow.primaryThumbnailUrlActive}
+                                            alt={compareRightRow.primaryFileTitle}
+                                            data-version-id={compareRightRow.versionRecordId}
+                                            onerror={handleVersionImageError}
+                                        />
+                                    </template>
+                                    <template if:false={compareRightRow.showPrimaryThumbnail}>
+                                        <div class="compare-thumb-fallback">
+                                            <lightning-icon icon-name="doctype:attachment" size="medium"></lightning-icon>
+                                        </div>
+                                    </template>
+                                </div>
+                                <p class="meta">{compareRightRow.primaryFileTitle}</p>
+                                <div class="cta-row">
+                                    <lightning-button
+                                        label="Open Contract"
+                                        data-contract-id={compareRightRow.contractId}
+                                        onclick={handleOpenContractFromVersion}
+                                    ></lightning-button>
+                                    <lightning-button
+                                        label="Preview"
+                                        variant="brand-outline"
+                                        data-doc-id={compareRightRow.primaryContentDocumentId}
+                                        onclick={handlePreviewFile}
+                                    ></lightning-button>
+                                </div>
+                            </article>
+                        </section>
+                    </template>
+                </div>
+                <footer class="slds-modal__footer compare-modal-footer">
+                    <lightning-button label="Close" onclick={handleCloseCompareModal}></lightning-button>
+                </footer>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+</template>

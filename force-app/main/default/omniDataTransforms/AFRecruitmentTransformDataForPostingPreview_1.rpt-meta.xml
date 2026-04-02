@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OmniDataTransform xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <assignmentRulesUsed>false</assignmentRulesUsed>
+    <deletedOnSuccess>false</deletedOnSuccess>
+    <errorIgnored>false</errorIgnored>
+    <expectedInputJson>{
+  &quot;ElapsedTime&quot; : 235,
+  &quot;Type&quot; : &quot;DataRaptor Transform Action&quot;,
+  &quot;Input&quot; : {
+    &quot;SummaryContent&quot; : {
+      &quot;SummarySectionContent&quot; : &quot;&lt;p&gt;Summary &lt;strong&gt;Content section&lt;/strong&gt;&lt;/p&gt;&quot;,
+      &quot;SummarySectionName&quot; : &quot;Summary&quot;
+    },
+    &quot;PostingDescription&quot; : &quot;test&quot;,
+    &quot;PostingStatus&quot; : &quot;InDraft&quot;,
+    &quot;PostingEndDate&quot; : &quot;2024-05-16&quot;,
+    &quot;CandidateSourceKey&quot; : &quot;Salesforce Experience Cloud&quot;,
+    &quot;DutyContent&quot; : {
+      &quot;DutySectionName&quot; : &quot;&quot;,
+      &quot;DutySectionContent&quot; : &quot;&lt;p&gt;aaadaddaad&lt;/p&gt;&quot;
+    },
+    &quot;OverviewContent&quot; : {
+      &quot;OverviewSectionContent&quot; : &quot;&lt;p&gt;aaadaddaad&lt;/p&gt;&quot;,
+      &quot;OverviewSectionName&quot; : &quot;WorkJob Overview&quot;
+    },
+    &quot;StartDate&quot; : &quot;2024-05-01&quot;,
+    &quot;PostingType&quot; : &quot;Internal&quot;,
+    &quot;RecruitmentRequisition&quot; : &quot;Salesforce Hiring&quot;
+  },
+  &quot;Status&quot; : true
+}</expectedInputJson>
+    <expectedOutputJson>{
+  &quot;Section3Type&quot; : &quot;Duties&quot;,
+  &quot;Section2Name&quot; : &quot;JobWork Summary&quot;,
+  &quot;JobPostingDescription&quot; : &quot;Customer Success Hiring.&quot;,
+  &quot;Section2Status&quot; : &quot;InDraft&quot;,
+  &quot;Section1Description&quot; : &quot;We&apos;re looking for exceptional candidates to join the Customer Success Team as a Principal Customer Success Manager and work with our most complex high value customer engagements.&quot;,
+  &quot;Section2StartDate&quot; : &quot;2024-04-02&quot;,
+  &quot;Section2Description&quot; : &quot;Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.&quot;,
+  &quot;JobStartDate&quot; : &quot;2024-04-26&quot;,
+  &quot;Section2Type&quot; : &quot;Job Summary&quot;,
+  &quot;JobCandidateSourceKey&quot; : &quot;Salesforce Experience Cloud&quot;,
+  &quot;JobPostingEndDate&quot; : &quot;2024-05-31&quot;,
+  &quot;Section3Content&quot; : &quot;&lt;ul&gt;&lt;li&gt;Develop a deep understanding of assigned customers business and industry to ensure maximum impact of Salesforce products&lt;/li&gt;&lt;li&gt;Manage accountability of Salesforce with our customers&lt;/li&gt;&lt;li&gt;Provide digital strategy thought leadership, leveraging Salesforce s multi-cloud platform&lt;/li&gt;&lt;li&gt;Scope, plan and lead the delivery of engagements that enable the desired customer business outcomes.&lt;/li&gt;&lt;li&gt;While supporting customer on their outcomes, you are laser focused on direct attribution of their engagement and work products to the outcomes of Adoption, Performance, Engagement.&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Aligned to the highest level of Salesforce Success Plan (Signature) by delivering value from Success Engagements.&lt;/strong&gt;&lt;/li&gt;&lt;/ul&gt;&quot;,
+  &quot;Section3Status&quot; : &quot;InDraft&quot;,
+  &quot;Section3Name&quot; : &quot;JobWork Responsibilities&quot;,
+  &quot;Section2Content&quot; : &quot;&lt;p&gt;&lt;span style=\&quot;font-size: 14px;\&quot;&gt;You are a strategic business professional with experience in driving large scale technology based change. With a focus on enhancing return on investment, you will challenge the customer status quo and influence large-scale Salesforce enabled transformation programs with a view to champion a new culture of business and IT collaboration, innovation, agility, increased adoption and continuous improvement.&lt;/span&gt;&lt;/p&gt;&quot;,
+  &quot;Section1Content&quot; : &quot;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Customer Success&lt;/strong&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Indonesia - Remote&lt;/strong&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Full time&lt;/strong&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;JR249023&lt;/strong&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Customer Success&lt;/strong&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Indonesia - Remote&lt;/strong&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Full time&lt;/strong&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;JR249023&lt;/strong&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Customer Success&lt;/strong&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Indonesia - Remote&lt;/strong&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Full time&lt;/strong&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;JR249023&lt;/strong&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&quot;,
+  &quot;SearchTemplate&quot; : &quot;WorkJob Overview&quot;,
+  &quot;Section3EndDate&quot; : &quot;2024-04-25&quot;,
+  &quot;Section2EndDate&quot; : &quot;2024-04-03&quot;,
+  &quot;Section3Language&quot; : &quot;English&quot;,
+  &quot;Section1EndDate&quot; : &quot;2024-05-30&quot;,
+  &quot;Section3StartDate&quot; : &quot;2024-04-03&quot;,
+  &quot;Section1Status&quot; : &quot;InDraft&quot;,
+  &quot;Section1Language&quot; : &quot;English&quot;,
+  &quot;Section1Type&quot; : &quot;Overview&quot;,
+  &quot;Section2Language&quot; : &quot;English&quot;,
+  &quot;PostingStatus&quot; : &quot;InDraft&quot;,
+  &quot;Section1StartDate&quot; : &quot;2024-04-26&quot;,
+  &quot;SearchTemplateSection2&quot; : &quot;JobWork Summary&quot;,
+  &quot;SearchTemplateSection3&quot; : &quot;JobWork Responsibilities&quot;,
+  &quot;JobPostingType&quot; : &quot;Internal&quot;,
+  &quot;Section3Description&quot; : &quot;Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.&quot;,
+  &quot;Section1Name&quot; : &quot;WorkJob Overview&quot;
+}</expectedOutputJson>
+    <fieldLevelSecurityEnabled>false</fieldLevelSecurityEnabled>
+    <inputType>JSON</inputType>
+    <isManagedUsingStdDesigner>false</isManagedUsingStdDesigner>
+    <name>AFRecruitmentTransformDataForPostingPreview</name>
+    <nullInputsIncludedInOutput>false</nullInputsIncludedInOutput>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>AFRecruitmentTransformDataForPostingPreviewCustom0jIKX000000lISO2A2Item10</globalKey>
+        <inputFieldName>StartDate</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>AFRecruitmentTransformDataForPostingPreview</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>StartDate</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>AFRecruitmentTransformDataForPostingPreviewCustom0jIKX000000lISO2A2Item9</globalKey>
+        <inputFieldName>PostingStatus</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>AFRecruitmentTransformDataForPostingPreview</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Status</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>AFRecruitmentTransformDataForPostingPreviewCustom0jIKX000000lISO2A2Item1</globalKey>
+        <inputFieldName>PostingType</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>AFRecruitmentTransformDataForPostingPreview</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>PostingType</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>AFRecruitmentTransformDataForPostingPreviewCustom4252</globalKey>
+        <inputFieldName>AppFramework</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>AFRecruitmentTransformDataForPostingPreview</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>ApplicationFrameworkType</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>AFRecruitmentTransformDataForPostingPreviewCustom0jIKX000000lISO2A2Item0</globalKey>
+        <inputFieldName>RecruitmentRequisition</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>AFRecruitmentTransformDataForPostingPreview</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>RecruitmentRequisition</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>AFRecruitmentTransformDataForPostingPreviewCustom0jIKX000000lISO2A2Item3</globalKey>
+        <inputFieldName>DutyContent:DutySectionName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>AFRecruitmentTransformDataForPostingPreview</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Section3Name</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>AFRecruitmentTransformDataForPostingPreviewCustom0jIKX000000lISO2A2Item2</globalKey>
+        <inputFieldName>SummaryContent:SummarySectionContent</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>AFRecruitmentTransformDataForPostingPreview</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Section2Content</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>AFRecruitmentTransformDataForPostingPreviewCustom0jIKX000000lISO2A2Item7</globalKey>
+        <inputFieldName>OverviewContent:OverviewSectionName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>AFRecruitmentTransformDataForPostingPreview</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Section1Name</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>AFRecruitmentTransformDataForPostingPreviewCustom0jIKX000000lISO2A2Item5</globalKey>
+        <inputFieldName>SummaryContent:SummarySectionName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>AFRecruitmentTransformDataForPostingPreview</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Section2Name</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>AFRecruitmentTransformDataForPostingPreviewCustom0jIKX000000lISO2A2Item6</globalKey>
+        <inputFieldName>OverviewContent:OverviewSectionContent</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>AFRecruitmentTransformDataForPostingPreview</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Section1Content</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>AFRecruitmentTransformDataForPostingPreviewCustom0jIKX000000lISO2A2Item4</globalKey>
+        <inputFieldName>DutyContent:DutySectionContent</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>AFRecruitmentTransformDataForPostingPreview</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Section3Content</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>AFRecruitmentTransformDataForPostingPreviewCustom0jIKX000000lISO2A2Item8</globalKey>
+        <inputFieldName>PostingEndDate</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>AFRecruitmentTransformDataForPostingPreview</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>EndDate</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <outputType>JSON</outputType>
+    <previewJsonData>{
+  &quot;RecruitmentRequisition&quot; : &quot;Salesforce Hiring&quot;,
+  &quot;CandidateSourceKey&quot; : &quot;Salesforce Experience Cloud&quot;,
+  &quot;PostingType&quot; : &quot;Internal&quot;,
+  &quot;PostingStatus&quot; : &quot;InDraft&quot;,
+  &quot;StartDate&quot; : &quot;2024-05-01&quot;,
+  &quot;PostingEndDate&quot; : &quot;2024-05-10&quot;,
+  &quot;PostingDescription&quot; : &quot;trst&quot;
+}</previewJsonData>
+    <processSuperBulk>false</processSuperBulk>
+    <responseCacheTtlMinutes>0.0</responseCacheTtlMinutes>
+    <rollbackOnError>false</rollbackOnError>
+    <sourceObject>json</sourceObject>
+    <sourceObjectDefault>false</sourceObjectDefault>
+    <synchronousProcessThreshold>0.0</synchronousProcessThreshold>
+    <type>Transform</type>
+    <uniqueName>AFRecruitmentTransformDataForPostingPreview_1</uniqueName>
+    <versionNumber>1.0</versionNumber>
+    <xmlDeclarationRemoved>false</xmlDeclarationRemoved>
+</OmniDataTransform>

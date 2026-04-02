@@ -1,0 +1,45 @@
+.my-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: .25rem;
+}
+
+.cicon-green {
+    background-color: rgb(75,192,118);
+}
+.cicon-yellow-green {
+    background-color: rgb(143,201,114);
+}
+.cicon-yellow {
+    background-color: rgb(242,207,91);
+}
+.cicon-orange {
+    background-color: rgb(250,151,92);
+}
+.cicon-blue {
+    background-color: rgb(86,170,223);
+}
+.cicon-pink {
+    background-color: rgb(239,126,173);
+}
+.cicon-navy {
+    background-color: rgb(84,105,141);
+}
+.cicon-red {
+    background-color: rgb(233,105,110);
+}
+.cicon-light-blue {
+    background-color: rgb(71,207,210);
+}
+.cicon-gray {
+    background-color: rgb(129,153,175);
+}
+.hide {
+    display: none;
+    width: 0px;
+}
+
+.iconWrap, .iconList {
+    display: flex;
+    align-items: flex-end;
+}

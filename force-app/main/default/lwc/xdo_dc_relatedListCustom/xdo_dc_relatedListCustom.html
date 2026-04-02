@@ -1,0 +1,488 @@
+<template>
+    <!-- <template if:true={hasList}> -->
+        <article class="slds-card slds-card_boundary">
+            <template if:false={hasRecords}>
+                <lightning-button 
+                    variant="brand"
+                    label="New Related List"
+                    title="Create a New Custom Related List"
+                    icon-name="utility:new"
+                    class="slds-m-around_large slds-align_absolute-center"
+                    onclick={showModalBox}>
+                </lightning-button>
+            </template>
+            <template if:true={hasRecords}>
+                <div class="slds-page-header ">
+                    <div class="slds-grid">
+                        <div class="slds-col slds-has-flexi-truncate">
+                            <div class="slds-media slds-media--center slds-has-flexi-truncate">
+                                <lightning-icon icon-name={icon} alternative-text="Event" title="Event" size="small" class="slds-m-right_small"></lightning-icon>
+                                <!-- <div class={iconColor}>
+                                    <img src={iconUrl} />
+                                </div> -->
+                                <div class="slds-media__body slds-no-space slds-grow">
+                                    <h2>
+                                        <a href="javascript:void(0);" class="slds-card__header-link slds-truncate">
+                                            <span class="slds-text-heading--small">{listTitle} ({recordCount})</span>
+                                            <!-- <span class="slds-text-heading--small">{!v.listTitle} ({!v.allRecordCount})</span> -->
+                                        </a>
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="slds-col slds-no-flex slds-grid slds-align-bottom">
+                                <lightning-button-menu alternative-text="Show menu" variant="border-filled" icon-name="utility:settings" class="slds-p-right_x-small">
+                                    <!-- <lightning-menu-item value="MenuItemOne" label="Menu Item One"></lightning-menu-item> -->
+                                </lightning-button-menu>
+                                <lightning-button-icon icon-name="utility:refresh"  variant="border-filled" alternative-text="Settings" title="Settings" class=""></lightning-button-icon>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="slds-p-left_xx-small actionsContainer">
+                                <div class="slds-button-group" role="group">
+                                    <lightning-button
+                                        onclick={showNewRecordModal}
+                                        aria-haspopup="dialog"
+                                        label="New">
+                                    </lightning-button>
+                                    <!-- <button class="slds-button slds-button_neutral" onclick="{openCreateModal}">New</button> -->
+                                    <!-- <button class="slds-button slds-button_neutral">Change Owner</button> -->
+                                </div>
+                            </div>
+                        </div>
+                        <lightning-button-icon icon-name="utility:edit"  variant="border-filled" alternative-text="Edit" title="Edit" class="" onclick={showEditListModal}></lightning-button-icon>
+                    </div>
+                    <template lwc:if={subHeader}>
+                        <div class="slds-grid">
+                            <div class="">
+                                <p class="slds-text-body--small">
+                                    <span aria-live="polite" role="status" aria-label="Cases">{subHeader}</span>
+                                </p>
+                            </div>
+                        </div>
+                    </template>
+                    <template lwc:else>
+                        <div class="slds-grid">
+                            <div class="">
+                                <p class="slds-text-body--small">
+                                    <span aria-live="polite" role="status" aria-label="Cases">{recordCount} items {subHeader} • Sorted by {column1Header} • Updated 48 minutes ago</span>
+                                </p>
+                            </div>
+                        </div>
+                    </template>
+                    <!-- <div class="slds-no-flex">
+                    </div> -->
+                </div>
+                <div class="slds-border_top">
+                    <div class="">
+
+                        <div class="" style={setTableHeight}>
+                            <lightning-datatable
+                                    key-field="id"
+                                    data={data}
+                                    show-row-number-column
+                                    hide-checkbox-column
+                                    row-number-offset={rowOffset}
+                                    columns={columns}
+                                    onsave={handleSave}
+                                    onrowaction={handleRowAction}>
+                            </lightning-datatable>
+                        </div>
+                    </div>
+                </div>
+            </template>
+            <div class="slds-card__footer"></div>
+            <template if:true={isShowModal}>
+                <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open slds-modal_medium">
+                <div class="slds-modal__container">
+                    <lightning-record-edit-form object-api-name="xDO_MDC_customListHeaders__c" onsubmit={handleSubmitList}>
+                        <!-- modal header start -->
+                        <header class="slds-modal__header">
+                            <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={hideModalBox}>
+                                <lightning-icon icon-name="utility:close"
+                                alternative-text="close"
+                                variant="inverse"
+                                size="small" ></lightning-icon>
+                                <span class="slds-assistive-text">Close</span>
+                            </button>
+                            <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Create New Custom Related List</h2>
+                        </header>
+                    
+                        <!-- modal body start -->
+                        <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                            <div class="slds-grid slds-m-bottom_large">
+                                <div class="slds-col slds-size_8-of-12">
+                                    <img src={headerImg}>
+                                </div>
+                                <div class="slds-col slds-size_4-of-12 slds-align-middle slds-text-heading_small">
+                                    <p><b>1</b> - Title Icon</p>
+                                    <p><b>2</b> - List Title</p>
+                                    <p><b>3</b> - List Subheader</p>
+                                    <p><b>4</b> - Column 1 Header</p>
+                                    <p><b>5</b> - Column 2 Header</p>
+                                    <p><b>6</b> - Column 3 Header</p>
+                                    <p><b>7</b> - Column 4 Header</p>
+                                </div>
+                            </div>
+                            <lightning-messages> </lightning-messages>
+                            <div class="slds-grid">
+                                <div class="slds-col slds-size_4-of-12 slds-p-horizontal_xx-small">
+                                    <lightning-combobox name="iconValue" value={iconValue} label="Choose Icon from List" options={icons} onchange={handleIconChange} dropdown-alignment="bottom-left" ></lightning-combobox>
+                                </div>
+                                <div class="slds-col slds-size_1-of-12">
+                                    <span class="slds-p-around_x-small slds-align_absolute-center slds-m-top_large"><strong>-OR-</strong></span>
+                                </div>
+                                <div class="slds-col slds-size_4-of-12">
+                                    <lightning-input type="text" variant="standard" value={iconValue} name="name" label="Enter SLDS Icon Name" placeholder="type here..." onchange={handleIconChange}></lightning-input>
+                                </div>
+                                <!-- <div class="slds-col slds-size_4-of-12">
+                                    <lightning-combobox name="iconValue" value={iconValue} label="Choose Icon Background" options={iconBgs} onchange={handleBgChange} dropdown-alignment="bottom-left" ></lightning-combobox>
+                                </div> -->
+                                <div class="slds-col slds-size_1-of-12 iconWrap slds-m-left_medium">
+                                    <lightning-icon icon-name={iconValue} size="large" ></lightning-icon>
+                                </div>
+                                <div class="slds-col slds-size_3-of-12 iconList">
+                                    <a href="https://www.lightningdesignsystem.com/icons/" target="_blank">SLDS Icon List</a>
+                                </div>
+                            </div>
+                            <div class="slds-grid">
+                                <div class="slds-col slds-size_4-of-12">
+                                    <lightning-input-field field-name="List_Title__c"></lightning-input-field>
+                                </div>
+                            </div>
+                            <div class="slds-grid">
+                                <div class="slds-col slds-size_8-of-12">
+                                    <lightning-input-field field-name="List_Subheader__c"></lightning-input-field>
+                                </div>
+                            </div>
+                            <div class="slds-grid">
+                                <div class="slds-col slds-size_3-of-12">
+                                    <lightning-input-field field-name="Column_1_Header__c" required> </lightning-input-field>
+                                </div>
+                                <div class="slds-col slds-size_3-of-12">
+                                    <lightning-input-field field-name="Column_2_Header__c"> </lightning-input-field>
+                                </div>
+                                <div class="slds-col slds-size_3-of-12">
+                                    <lightning-input-field field-name="Column_3_Header__c"></lightning-input-field>
+                                </div>
+                                <div class="slds-col slds-size_3-of-12">
+                                    <lightning-input-field field-name="Column_4_Header__c"></lightning-input-field>
+                                </div>
+                            </div>
+                            <div class="slds-grid">
+                                <div class="slds-col slds-size_3-of-12 slds-p-horizontal_xx-small">
+                                    <lightning-combobox
+                                        name="dataType1"
+                                        label="Data Type"
+                                        value={dataType1}
+                                        placeholder="Select Data Type"
+                                        options={dataTypes}
+                                        onchange={handleDT1Change} >
+                                    </lightning-combobox>
+                                </div>
+                                <div class="slds-col slds-size_3-of-12 slds-p-horizontal_xx-small">
+                                    <lightning-combobox
+                                        name="dataType2"
+                                        label="Data Type"
+                                        value={dataType2}
+                                        placeholder="Select Data Type"
+                                        options={dataTypes}
+                                        onchange={handleDT2Change} >
+                                    </lightning-combobox>
+                                </div>
+                                <div class="slds-col slds-size_3-of-12 slds-p-horizontal_xx-small">
+                                    <lightning-combobox
+                                        name="dataType3"
+                                        label="Data Type"
+                                        value={dataType3}
+                                        placeholder="Select Data Type"
+                                        options={dataTypes}
+                                        onchange={handleDT3Change} >
+                                    </lightning-combobox>
+                                </div>
+                                <div class="slds-col slds-size_3-of-12 slds-p-horizontal_xx-small">
+                                    <lightning-combobox
+                                        name="dataType4"
+                                        label="Data Type"
+                                        value={dataType4}
+                                        placeholder="Select Data Type"
+                                        options={dataTypes}
+                                        onchange={handleDT4Change} >
+                                    </lightning-combobox>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- <lightning-flow
+                            flow-api-name='xDO_MDC_Custom_Related_List'
+                            onstatuschange={handleStatusChange}
+                            flow-input-variables={inputVariables}
+                        >
+                        </lightning-flow> -->
+                
+                        <!-- modal footer start-->
+                        <footer class="slds-modal__footer">
+                            <button class="slds-button slds-button_brand"
+                                    onclick={saveRecord}>Save</button>
+                            <button class="slds-button slds-button_neutral" onclick={hideModalBox}>Cancel</button>
+                        </footer>
+                    </lightning-record-edit-form>
+                </div>
+                </section>
+                <div class="slds-backdrop slds-backdrop_open"></div>
+            </template>
+            <template if:true={editList}>
+                <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-02" aria-modal="true" aria-describedby="modal-content-id-2" class="slds-modal slds-fade-in-open">
+                <div class="slds-modal__container">
+                    <!-- modal header start -->
+                    <header class="slds-modal__header">
+                        <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={hideEditListModal}>
+                            <lightning-icon icon-name="utility:close"
+                            alternative-text="close"
+                            variant="inverse"
+                            size="small" ></lightning-icon>
+                            <span class="slds-assistive-text">Close</span>
+                        </button>
+                        <h2 id="modal-heading-02" class="slds-text-heading_medium slds-hyphenate">Edit Related List Headers</h2>
+                    </header>
+                
+                    <!-- modal body start -->
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-2">
+                        <lightning-record-edit-form
+                            record-id={listId}
+                            onsuccess={saveEditList}
+                            object-api-name="xDO_MDC_customListHeaders__c"
+                        >
+                            <lightning-messages> </lightning-messages>
+                            <lightning-input-field field-name="List_Title__c" value={listTitle}></lightning-input-field>
+                            <!-- <lightning-input-field field-name="Title_Icon__c"> </lightning-input-field>
+                            <lightning-input-field field-name="Icon_Background_Color__c"> </lightning-input-field> -->
+                            <lightning-input-field field-name="List_Icon__c" value={icon}> </lightning-input-field>
+                            <lightning-input-field field-name="List_Subheader__c" value={subHeader}></lightning-input-field>
+                            <lightning-input-field field-name="Column_1_Header__c" value={column1Header}></lightning-input-field>
+                            <lightning-input-field field-name="Column1_Data_Type__c" value={dataType1}></lightning-input-field>
+                            <lightning-input-field field-name="Column_2_Header__c" value={column2Header}> </lightning-input-field>
+                            <lightning-input-field field-name="Column2_Data_Type__c" value={dataType2}></lightning-input-field>
+                            <lightning-input-field field-name="Column_3_Header__c" value={column3Header}> </lightning-input-field>
+                            <lightning-input-field field-name="Column3_Data_Type__c" value={dataType3}></lightning-input-field>
+                            <lightning-input-field field-name="Column_4_Header__c" value={column4Header}> </lightning-input-field>
+                            <lightning-input-field field-name="Column4_Data_Type__c" value={dataType4}></lightning-input-field>
+                            <lightning-button
+                                class="slds-m-top_small"
+                                variant="brand"
+                                type="submit"
+                                name="update"
+                                label="Update"
+                            >
+                            </lightning-button>
+                        </lightning-record-edit-form>
+                        <!-- <div class="slds-form modalForm">
+                            <lightning-input type="text" label="List Name (Must be unique)" onchange={handleInputChange}></lightning-input>
+                        </div> -->
+                    </div>
+            
+                    <!-- modal footer start-->
+                    <!-- <footer class="slds-modal__footer">
+                        <button class="slds-button slds-button_brand" onclick={saveListRecord}>Save</button>
+                        <button class="slds-button slds-button_neutral" onclick={hideNewListModal}>Cancel</button>
+                    </footer> -->
+                
+                </div>
+                </section>
+                <div class="slds-backdrop slds-backdrop_open"></div>
+            </template>
+            <template if:true={newListRecord}>
+                <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-03" aria-modal="true" aria-describedby="modal-content-id-3" class="slds-modal slds-fade-in-open slds-modal_medium">
+                <div class="slds-modal__container">
+                    <!-- modal header start -->
+                    <header class="slds-modal__header">
+                        <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={hideNewRecordModal}>
+                            <lightning-icon icon-name="utility:close"
+                            alternative-text="close"
+                            variant="inverse"
+                            size="small" ></lightning-icon>
+                            <span class="slds-assistive-text">Close</span>
+                        </button>
+                        <h2 id="modal-heading-03" class="slds-text-heading_medium slds-hyphenate">Enter Values For New Row</h2>
+                    </header>
+                
+                    <!-- modal body start -->
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-3">
+                        <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+                            <thead>
+                            <tr class="slds-line-height_reset">
+                                <th class="" scope="col">
+                                    <div class="slds-truncate" title="Select Contact">Select Record</div>
+                                </th>
+                                <template for:each={columns} for:item="column">
+                                    <template lwc:if={column.label}>
+                                        <th key={column.Id} class="" scope="col">
+                                            <div class="slds-truncate" title={column.label}>{column.label}</div>
+                                        </th>
+                                    </template>
+                                </template>
+                                <th class="" scope="col">
+                                    <div class="slds-truncate" title="Action">Action</div>
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                <template if:true={recordDataWrp}>
+                                    <template for:each={recordDataWrp} for:item="rec" for:index="index">
+                                        <tr class="slds-hint-parent" key={rec.Id}>
+                                            <td data-label="Select Record">
+                                                <div class="slds-truncate" title="Select Record">
+                                                    <lightning-input type="checkbox" disabled={disabledCheckbox} name="input1"></lightning-input>
+                                                </div>
+                                            </td>
+                                            <td data-label="column1Title">
+                                                <div class="slds-truncate" title={rec.column1Title}>{rec.column1Title}</div>
+                                            </td>
+                                            <td data-label="column2Title">
+                                                <div class="slds-truncate" title={rec.column2Title}>{rec.column2Title}</div>
+                                            </td>
+                                            <td data-label="column3Title">
+                                                <div class="slds-truncate" title={rec.column3Title}>{rec.column3Title}</div>
+                                            </td>
+                                            <td data-label="column4Title">
+                                                <div class="slds-truncate" title={rec.column4Title}>{rec.column4Title}</div>
+                                            </td>
+                                            <td data-label="Action">
+                                                <div class="slds-truncate" title="Action">
+                                                    <lightning-button label="Delete" variant="neutral" value={index} onclick={deleteNewRecord}></lightning-button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </template>
+                                </template>
+                                <template if:true={blankRow}>
+                                    <template for:each={blankRow} for:item="rec" for:index="ind">
+                                        <tr class="slds-hint-parent" key={rec.Id}>
+                                            <td data-label="Select Record">
+                                                <div class="slds-truncate" title="Select Record">
+                                                    <lightning-input type="checkbox" name={ind} value={rec.isChecked} onchange={setCheckBox}></lightning-input>
+                                                </div>
+                                            </td>
+                                            <td data-label="column1Title">
+                                                <lightning-input variant="label-hidden" type="text" value={rec.column1Title} placeholder="Column 1 Value" name={ind} onchange={setCol1Value}></lightning-input>
+                                            </td>
+                                            <template lwc:if={column2Header}>
+                                                <td data-label="column2Title">
+                                                    <lightning-input variant="label-hidden" type="text" value={rec.column2Title} placeholder="Column 2 Value" name={ind} onchange={setCol2Value}></lightning-input>
+                                                </td>
+                                            </template>
+                                            <template lwc:if={column3Header}>
+                                                <td data-label="column3Title">
+                                                    <lightning-input variant="label-hidden" type="text" value={rec.column3Title} placeholder="Column 3 Value" name={ind} onchange={setCol3Value}></lightning-input>
+                                                </td>
+                                            </template>
+                                            <template lwc:if={column4Header}>
+                                                <td data-label="column4Title">
+                                                    <lightning-input variant="label-hidden" type="text" value={rec.column4Title} placeholder="Column 4 Value" name={ind} onchange={setCol4Value}></lightning-input>
+                                                </td>
+                                            </template>
+                                            <td data-label="Action">
+                                                <lightning-button label="Remove" variant="neutral" value={ind} onclick={removeRow}></lightning-button>
+                                            </td>
+                                        </tr>
+                                    </template>
+                                </template>
+                            </tbody>
+                        </table>
+
+                        <!-- <lightning-record-edit-form
+                            onsubmit={saveLstRecord}
+                            onsuccess={recordSaveSuccess}
+                            object-api-name="xDO_MDC_customListRecord__c"
+                        >
+                            <lightning-messages> </lightning-messages>
+                            <lightning-input-field field-name="Column_1_Value__c" onchange={handleRecChange1} class="newRecordInput"></lightning-input-field>
+                            <lightning-input-field field-name="Column_2_Value__c" onchange={handleRecChange2} class="newRecordInput"> </lightning-input-field>
+                            <lightning-input-field field-name="Column_3_Value__c" onchange={handleRecChange3} class="newRecordInput"> </lightning-input-field>
+                            <lightning-input-field field-name="Column_4_Value__c" onchange={handleRecChange4} class="newRecordInput"> </lightning-input-field>
+                            <lightning-button
+                                class="slds-m-top_small"
+                                variant="brand"
+                                type="submit"
+                                label="Save New Row"
+                            >
+                            </lightning-button>
+                        </lightning-record-edit-form> -->
+                        <!-- <div class="slds-form modalForm">
+                            <lightning-input type="text" label="List Name (Must be unique)" onchange={handleInputChange}></lightning-input>
+                        </div> -->
+                    </div>
+            
+                    <!-- modal footer start-->
+                    <footer class="slds-modal__footer">
+                        <!-- <button class="slds-button slds-button_brand" onclick={saveListRecord}>Save</button>
+                        <button class="slds-button slds-button_neutral" onclick={hideNewListModal}>Cancel</button> -->
+                        <lightning-button name="multipleRowRemoval" class="slds-p-around_xx-small" label="Remove Row" variant="destructive" onclick={removeRow}></lightning-button>
+                        <lightning-button name="multipleRowAddition" label="Add Row" class="slds-p-around_xx-small" variant="brand-outline" onclick={addRow}></lightning-button>
+                        <lightning-button name="multipleRowSave" label="Save Records" class="slds-p-around_xx-small" variant="brand" onclick={saveData}></lightning-button>
+                    </footer>
+                
+                </div>
+                </section>
+                <div class="slds-backdrop slds-backdrop_open"></div>
+            </template>
+            <template if:true={editRec}>
+                <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-04" aria-modal="true" aria-describedby="modal-content-id-4" class="slds-modal slds-fade-in-open">
+                <div class="slds-modal__container">
+                    <!-- modal header start -->
+                    <header class="slds-modal__header">
+                        <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={hideEditRecModal}>
+                            <lightning-icon icon-name="utility:close"
+                            alternative-text="close"
+                            variant="inverse"
+                            size="small" ></lightning-icon>
+                            <span class="slds-assistive-text">Close</span>
+                        </button>
+                        <h2 id="modal-heading-04" class="slds-text-heading_medium slds-hyphenate">Edit Row Details</h2>
+                    </header>
+                
+                    <!-- modal body start -->
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-4">
+                        <lightning-record-edit-form
+                            record-id={currRecId}
+                            onsuccess={saveEditRec}
+                            object-api-name="xDO_MDC_customListRecord__c"
+                        >
+                            <lightning-messages> </lightning-messages>
+                            <lightning-input-field field-name="Column_1_Value__c"></lightning-input-field>
+                            <lightning-input-field field-name="Column_2_Value__c"> </lightning-input-field>
+                            <lightning-input-field field-name="Column_3_Value__c"> </lightning-input-field>
+                            <lightning-input-field field-name="Column_4_Value__c"> </lightning-input-field>
+                            <lightning-button
+                                class="slds-m-top_small"
+                                variant="brand"
+                                type="submit"
+                                name="update"
+                                label="Update"
+                            >
+                            </lightning-button>
+                        </lightning-record-edit-form>
+                        <!-- <div class="slds-form modalForm">
+                            <lightning-input type="text" label="List Name (Must be unique)" onchange={handleInputChange}></lightning-input>
+                        </div> -->
+                    </div>
+            
+                    <!-- modal footer start-->
+                    <!-- <footer class="slds-modal__footer">
+                        <button class="slds-button slds-button_brand" onclick={saveListRecord}>Save</button>
+                        <button class="slds-button slds-button_neutral" onclick={hideNewListModal}>Cancel</button>
+                    </footer> -->
+                
+                </div>
+                </section>
+                <div class="slds-backdrop slds-backdrop_open"></div>
+            </template>
+            <!-- <footer class="slds-card__footer">
+                <lightning-button name="multipleRowSave" label="Save Records" class="slds-p-around_xx-small" variant="brand-outline" onclick={saveData}></lightning-button>
+                <lightning-button name="multipleRowAddition" label="Add Row" class="slds-p-around_xx-small" variant="brand" onclick={addRow}></lightning-button>
+                <lightning-button name="multipleRowRemoval" class="slds-p-around_xx-small" label="Remove Row" variant="destructive" onclick={removeRow}></lightning-button>
+            </footer> -->
+        </article>
+    <!-- </template> -->
+</template>

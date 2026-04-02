@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OmniDataTransform xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <assignmentRulesUsed>false</assignmentRulesUsed>
+    <deletedOnSuccess>false</deletedOnSuccess>
+    <errorIgnored>false</errorIgnored>
+    <expectedInputJson>{
+  &quot;OPAQ&quot; : [ {
+    &quot;OmniProcessId&quot; : &quot;0jNHs000000c6zIMAQ&quot;,
+    &quot;AssessmentQuestionVersionId&quot; : &quot;0lFHs000000bsuGMAQ&quot;,
+    &quot;OmniProcessElementId&quot; : &quot;0kEHs000001FwtmMAC&quot;
+  }, {
+    &quot;OmniProcessId&quot; : &quot;0jNHs000000c6zIMAQ&quot;,
+    &quot;AssessmentQuestionVersionId&quot; : &quot;0lFHs000000bsuHMAQ&quot;,
+    &quot;OmniProcessElementId&quot; : &quot;0kEHs000001FwtnMAC&quot;
+  }, {
+    &quot;OmniProcessId&quot; : &quot;0jNHs000000c6zIMAQ&quot;,
+    &quot;AssessmentQuestionVersionId&quot; : &quot;0lFHs000000bsuIMAQ&quot;,
+    &quot;OmniProcessElementId&quot; : &quot;0kEHs000001FwtoMAC&quot;
+  } ]
+}</expectedInputJson>
+    <fieldLevelSecurityEnabled>false</fieldLevelSecurityEnabled>
+    <inputType>JSON</inputType>
+    <isManagedUsingStdDesigner>false</isManagedUsingStdDesigner>
+    <name>QuickBuildOSAssessmentQuestionUpsert</name>
+    <nullInputsIncludedInOutput>false</nullInputsIncludedInOutput>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>QuickBuildOSAssessmentQuestionUpsertCustom3127</globalKey>
+        <inputFieldName>OPAQ:OmniProcessId</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>QuickBuildOSAssessmentQuestionUpsert</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>OmniProcessId</outputFieldName>
+        <outputObjectName>OmniProcessAsmtQuestionVer</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>true</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>QuickBuildOSAssessmentQuestionUpsertCustom4160</globalKey>
+        <inputFieldName>OPAQ:AssessmentQuestionVersionId</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>QuickBuildOSAssessmentQuestionUpsert</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>AssessmentQuestionVersionId</outputFieldName>
+        <outputObjectName>OmniProcessAsmtQuestionVer</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>true</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>QuickBuildOSAssessmentQuestionUpsertCustom2503</globalKey>
+        <inputFieldName>OPAQ:OmniProcessElementId</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>QuickBuildOSAssessmentQuestionUpsert</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>OmniProcessElementId</outputFieldName>
+        <outputObjectName>OmniProcessAsmtQuestionVer</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>true</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>true</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>QuickBuildOSAssessmentQuestionUpsertCustom2821</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>QuickBuildOSAssessmentQuestionUpsert</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>OmniProcessAsmtQuestionVer</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <outputType>SObject</outputType>
+    <previewJsonData>{
+  &quot;OPAQ&quot; : [ {
+    &quot;OmniProcessId&quot; : &quot;0jNHs000000c6zNMAQ&quot;,
+    &quot;AssessmentQuestionVersionId&quot; : &quot;0lFHs000000bsuLMAQ&quot;,
+    &quot;OmniProcessElementId&quot; : &quot;0kEHs000001Fx6fMAC&quot;
+  }, {
+    &quot;OmniProcessId&quot; : &quot;0jNHs000000c6zNMAQ&quot;,
+    &quot;AssessmentQuestionVersionId&quot; : &quot;0lFHs000000bsuMMAQ&quot;,
+    &quot;OmniProcessElementId&quot; : &quot;0kEHs000001Fx6gMAC&quot;
+  }, {
+    &quot;OmniProcessId&quot; : &quot;0jNHs000000c6zNMAQ&quot;,
+    &quot;AssessmentQuestionVersionId&quot; : &quot;0lFHs000000bsuNMAQ&quot;,
+    &quot;OmniProcessElementId&quot; : &quot;0kEHs000001Fx6hMAC&quot;
+  } ]
+}</previewJsonData>
+    <processSuperBulk>false</processSuperBulk>
+    <responseCacheTtlMinutes>0.0</responseCacheTtlMinutes>
+    <rollbackOnError>false</rollbackOnError>
+    <sourceObject>json</sourceObject>
+    <sourceObjectDefault>false</sourceObjectDefault>
+    <synchronousProcessThreshold>0.0</synchronousProcessThreshold>
+    <type>Load</type>
+    <uniqueName>QuickBuildOSAssessmentQuestionUpsert_1</uniqueName>
+    <versionNumber>1.0</versionNumber>
+    <xmlDeclarationRemoved>false</xmlDeclarationRemoved>
+</OmniDataTransform>

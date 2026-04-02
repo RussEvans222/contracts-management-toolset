@@ -1,0 +1,11 @@
+<template>
+    <div class="c-container">
+        <lightning-datatable
+                key-field="Id"
+                data={_scenarioList}
+                columns={columns}
+                max-row-selection="1"
+                onrowselection={getSelectedName}>
+        </lightning-datatable>
+    </div>
+</template>

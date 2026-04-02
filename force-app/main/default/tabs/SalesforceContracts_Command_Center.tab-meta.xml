@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Contracts command center landing page for pipeline and analytics visibility.</description>
+    <flexiPage>SalesforceContracts_Command_Center</flexiPage>
+    <label>Contracts Command Center</label>
+    <motif>Custom18: Form</motif>
+</CustomTab>

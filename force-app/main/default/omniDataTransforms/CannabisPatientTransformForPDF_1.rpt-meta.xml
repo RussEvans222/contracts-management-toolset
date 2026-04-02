@@ -1,0 +1,696 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OmniDataTransform xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <assignmentRulesUsed>false</assignmentRulesUsed>
+    <deletedOnSuccess>false</deletedOnSuccess>
+    <errorIgnored>false</errorIgnored>
+    <expectedInputJson>{
+  &quot;vlcTimeTracking&quot; : {
+    &quot;PatientPDF&quot; : null,
+    &quot;DRSaveCannabisPatient&quot; : null,
+    &quot;DRGetContactForPatient&quot; : null,
+    &quot;DEBUG-SETTOCHARLES&quot; : null,
+    &quot;SetUser&quot; : null,
+    &quot;NavigateAction1&quot; : null,
+    &quot;DRGetApplicationId&quot; : null,
+    &quot;Confirmation&quot; : null,
+    &quot;Attachments&quot; : null,
+    &quot;ProofOfResidency&quot; : null,
+    &quot;FeePayment&quot; : null,
+    &quot;GetPovertyLevel&quot; : null,
+    &quot;Instructions&quot; : null,
+    &quot;Attestation&quot; : null,
+    &quot;PractionerInformation&quot; : null,
+    &quot;PatientInformation&quot; : null
+  },
+  &quot;vlcPersistentComponent&quot; : { },
+  &quot;userTimeZone&quot; : null,
+  &quot;userProfile&quot; : null,
+  &quot;userName&quot; : null,
+  &quot;userId&quot; : null,
+  &quot;timeStamp&quot; : null,
+  &quot;ContextId&quot; : null,
+  &quot;Confirmation&quot; : { },
+  &quot;Attachments&quot; : {
+    &quot;File5&quot; : [ {
+      &quot;data&quot; : null,
+      &quot;size&quot; : null,
+      &quot;filename&quot; : null
+    } ],
+    &quot;File3&quot; : [ {
+      &quot;data&quot; : null,
+      &quot;size&quot; : null,
+      &quot;filename&quot; : null
+    } ],
+    &quot;File2&quot; : [ {
+      &quot;data&quot; : null,
+      &quot;size&quot; : null,
+      &quot;filename&quot; : null
+    } ],
+    &quot;File4&quot; : [ {
+      &quot;data&quot; : null,
+      &quot;size&quot; : null,
+      &quot;filename&quot; : null
+    } ],
+    &quot;File1&quot; : [ {
+      &quot;data&quot; : null,
+      &quot;size&quot; : null,
+      &quot;filename&quot; : null
+    } ]
+  },
+  &quot;ProofOfResidency&quot; : {
+    &quot;SelectProofOfResidency&quot; : null
+  },
+  &quot;FeePayment&quot; : {
+    &quot;FeeAmount&quot; : null,
+    &quot;CustomLWC2&quot; : null,
+    &quot;ReducedPayment&quot; : null
+  },
+  &quot;Instructions&quot; : { },
+  &quot;Attestation&quot; : {
+    &quot;CustomLWC1&quot; : null
+  },
+  &quot;PractionerInformation&quot; : {
+    &quot;PractionerAddress-Block&quot; : {
+      &quot;PractionerAddress&quot; : null,
+      &quot;ProviderZipcode&quot; : null,
+      &quot;ProviderState&quot; : null,
+      &quot;ProviderCity&quot; : null,
+      &quot;ProviderStreetAddress&quot; : null
+    },
+    &quot;ProviderEmail&quot; : null,
+    &quot;ProviderPhone&quot; : null,
+    &quot;ProviderLastName&quot; : null,
+    &quot;ProviderMiddleInitial&quot; : null,
+    &quot;ProviderFirstName&quot; : null,
+    &quot;TypeOfPractitioner&quot; : null
+  },
+  &quot;PatientInformation&quot; : {
+    &quot;CheckAge&quot; : null,
+    &quot;PatientAddress-Block&quot; : {
+      &quot;PatientAddress&quot; : null,
+      &quot;Zipcode&quot; : null,
+      &quot;State&quot; : null,
+      &quot;City&quot; : null,
+      &quot;StreetAddress&quot; : null
+    },
+    &quot;Age&quot; : null,
+    &quot;HouseholdSize&quot; : null,
+    &quot;HouseholdIncome&quot; : null,
+    &quot;ApplicationType&quot; : null,
+    &quot;Phone&quot; : null,
+    &quot;Email&quot; : null,
+    &quot;BirthDate&quot; : null,
+    &quot;SocialSecurityNumber&quot; : null,
+    &quot;MiddleInitial&quot; : null,
+    &quot;FirstName&quot; : null,
+    &quot;LastName&quot; : null
+  }
+}</expectedInputJson>
+    <fieldLevelSecurityEnabled>false</fieldLevelSecurityEnabled>
+    <inputType>JSON</inputType>
+    <isManagedUsingStdDesigner>false</isManagedUsingStdDesigner>
+    <name>CannabisPatientTransformForPDF</name>
+    <nullInputsIncludedInOutput>false</nullInputsIncludedInOutput>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>11975d2c-b81e-48ca-8d2c-d1a706b7c30d</globalKey>
+        <inputFieldName>PatientInformation:LastName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>CannabisPatientTransformForPDF</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Last Name</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>1d4cf94c-5a87-4123-8a03-a598fc4c5abb</globalKey>
+        <inputFieldName>Renewal</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>CannabisPatientTransformForPDF</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Renewal</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>004b88bf-7f6a-4039-bcc5-ff868196bb7f</globalKey>
+        <inputFieldName>Checkbox4</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>CannabisPatientTransformForPDF</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Check Box4</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>ce7add41-e6a4-4596-b9d6-9ff862692cdc</globalKey>
+        <inputFieldName>PatientInformation:Email</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>CannabisPatientTransformForPDF</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Email Address</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>b21d42d0-da0a-49bc-abcf-36d7c656ae1d</globalKey>
+        <inputFieldName>PractionerInformation:ProviderPhone</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>CannabisPatientTransformForPDF</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Phone Number_2</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>aff2ae9e-cdbf-42b2-baca-7c5b9e9e7a0d</globalKey>
+        <inputFieldName>PDFPatientState</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>CannabisPatientTransformForPDF</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>State</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>80c4cdf0-258c-410b-b5b3-fd6fe24ab24a</globalKey>
+        <inputFieldName>PractionerInformation:ProviderLastName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>CannabisPatientTransformForPDF</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Last Name_2</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>95cb5679-2bc1-4839-8ffb-81b4163cdac9</globalKey>
+        <inputFieldName>PDFPatientPostalCode</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>CannabisPatientTransformForPDF</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Zip Code</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>| var:PractionerInformation:TypeOfPractitioner &quot;Naturopathic/\/\/Physician&quot; == true false IF</formulaConverted>
+        <formulaExpression>IF(PractionerInformation:TypeOfPractitioner==&quot;Naturopathic Physician&quot;,true,false)</formulaExpression>
+        <formulaResultPath>Checkbox5</formulaResultPath>
+        <formulaSequence>6.0</formulaSequence>
+        <globalKey>ead1f6ef-c68a-4af2-b1cb-96218f5396a8</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>CannabisPatientTransformForPDF</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>b5b44a8a-6152-47e2-a76e-09226f68ca0a</globalKey>
+        <inputFieldName>PatientInformation:FirstName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>CannabisPatientTransformForPDF</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>First Name</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>2953702b-8a0d-46ee-ad31-7da7a2c81c98</globalKey>
+        <inputFieldName>PatientInformation:Phone</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>CannabisPatientTransformForPDF</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>State_2</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>5f0d67e4-9b52-4204-bb67-cff8a475eebe</globalKey>
+        <inputFieldName>Checkbox2</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>CannabisPatientTransformForPDF</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Check Box2</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>62303d36-bf37-4fd6-910c-3af9e31d0485</globalKey>
+        <inputFieldName>Checkbox3</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>CannabisPatientTransformForPDF</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Check Box3</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>8c44a40b-c8b2-4d17-857a-9b24ffe10ae5</globalKey>
+        <inputFieldName>PatientInformation:SocialSecurityNumber</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>CannabisPatientTransformForPDF</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>SocialSecurityNumber</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>a8cf9abb-81e6-46ec-9525-a195a7ca8d52</globalKey>
+        <inputFieldName>PDFPatientStreet</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>CannabisPatientTransformForPDF</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Street</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>49422809-5a6d-4c7c-bb0d-cf4a1ed9e13c</globalKey>
+        <inputFieldName>PractionerInformation:ProviderEmail</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>CannabisPatientTransformForPDF</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Email Address_2</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>49306145-894a-4011-ade4-4d836593e8e7</globalKey>
+        <inputFieldName>PatientInformation:MiddleInitial</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>CannabisPatientTransformForPDF</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Middle Initial</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>| var:PatientInformation:ApplicationType &quot;Renewal&quot; == true false IF</formulaConverted>
+        <formulaExpression>IF(PatientInformation:ApplicationType==&quot;Renewal&quot;,true,false)</formulaExpression>
+        <formulaResultPath>Renewal</formulaResultPath>
+        <formulaSequence>2.0</formulaSequence>
+        <globalKey>03b028b9-0b2b-4a0b-9ec1-beebd11243eb</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>CannabisPatientTransformForPDF</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>40505ea9-904c-4c84-a9e5-29490071f643</globalKey>
+        <inputFieldName>PDFPractionerCity</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>CannabisPatientTransformForPDF</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>City_2</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>| var:PractionerInformation:TypeOfPractitioner &quot;Physician/\/\/Assistant/\/\/(PA)&quot; == true false IF</formulaConverted>
+        <formulaExpression>IF(PractionerInformation:TypeOfPractitioner==&quot;Physician Assistant (PA)&quot;,true,false)</formulaExpression>
+        <formulaResultPath>Checkbox4</formulaResultPath>
+        <formulaSequence>5.0</formulaSequence>
+        <globalKey>02fc2dde-2533-48be-95ce-f84d9c5a272c</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>CannabisPatientTransformForPDF</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>| var:PatientInformation:ApplicationType &quot;Initial&quot; == true false IF</formulaConverted>
+        <formulaExpression>IF(PatientInformation:ApplicationType==&quot;Initial&quot;,true,false)</formulaExpression>
+        <formulaResultPath>Initial</formulaResultPath>
+        <formulaSequence>1.0</formulaSequence>
+        <globalKey>4b11abf6-d74f-4e31-ae22-b5c954b5682e</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>CannabisPatientTransformForPDF</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>bf053792-4a15-40b1-8a0d-3453ed74baac</globalKey>
+        <inputFieldName>Initial</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>CannabisPatientTransformForPDF</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Initial</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>| var:PractionerInformation:TypeOfPractitioner &quot;Physician/\/\/(MD,/\/\/DO)&quot; == true false IF</formulaConverted>
+        <formulaExpression>IF(PractionerInformation:TypeOfPractitioner==&quot;Physician (MD, DO)&quot;,true,false)</formulaExpression>
+        <formulaResultPath>Checkbox2</formulaResultPath>
+        <formulaSequence>3.0</formulaSequence>
+        <globalKey>a2447e4a-82d2-4ba8-b4a7-c3a2cc4c7d9e</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>CannabisPatientTransformForPDF</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>158e56de-778c-48bf-9f75-c4ccb3589fba</globalKey>
+        <inputFieldName>PractionerInformation:ProviderFirstName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>CannabisPatientTransformForPDF</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>First Name_2</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>be67f7aa-504b-4231-9afd-5a109ffb5f3f</globalKey>
+        <inputFieldName>PDFPractionerPostalCode</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>CannabisPatientTransformForPDF</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Zip Code_2</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>| var:PractionerInformation:TypeOfPractitioner &quot;Nurse/\/\/Practitioner//\/\/APRN&quot; == true false IF</formulaConverted>
+        <formulaExpression>IF(PractionerInformation:TypeOfPractitioner==&quot;Nurse Practitioner/ APRN&quot;,true,false)</formulaExpression>
+        <formulaResultPath>Checkbox3</formulaResultPath>
+        <formulaSequence>4.0</formulaSequence>
+        <globalKey>a92c5787-8c21-4d1f-bb72-173a73b0526d</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>CannabisPatientTransformForPDF</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>8ae4c4f5-8d6a-470b-a527-f94d6be342b0</globalKey>
+        <inputFieldName>PDFPatientCity</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>CannabisPatientTransformForPDF</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>City</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>64ed96f9-2d9a-4315-a989-84fec98a6a2e</globalKey>
+        <inputFieldName>Checkbox5</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>CannabisPatientTransformForPDF</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Check Box5</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>237da274-5a31-442c-a3dd-f31a02e62812</globalKey>
+        <inputFieldName>PatientInformation:Phone</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>CannabisPatientTransformForPDF</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Phone Number</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>ca400c07-3d10-486f-abe1-74780a884fe8</globalKey>
+        <inputFieldName>PatientInformation:BirthDate</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>CannabisPatientTransformForPDF</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>BirthDate</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>14dea45d-4458-41b7-89e9-5c97473702ea</globalKey>
+        <inputFieldName>PDFPractionerStreet</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>CannabisPatientTransformForPDF</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Street PO Box Practionier</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>a7f58bb3-df48-4368-aa34-5d9ae7271176</globalKey>
+        <inputFieldName>PractionerInformation:ProviderMiddleInitial</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>CannabisPatientTransformForPDF</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Middle Initial_2</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <outputType>PDF</outputType>
+    <previewJsonData>{
+  &quot;vlcTimeTracking&quot; : {
+    &quot;PatientPDF&quot; : null,
+    &quot;DRSaveCannabisPatient&quot; : null,
+    &quot;DRGetContactForPatient&quot; : null,
+    &quot;DEBUG-SETTOCHARLES&quot; : null,
+    &quot;SetUser&quot; : null,
+    &quot;NavigateAction1&quot; : null,
+    &quot;DRGetApplicationId&quot; : null,
+    &quot;Confirmation&quot; : null,
+    &quot;Attachments&quot; : null,
+    &quot;ProofOfResidency&quot; : null,
+    &quot;FeePayment&quot; : null,
+    &quot;GetPovertyLevel&quot; : null,
+    &quot;Instructions&quot; : null,
+    &quot;Attestation&quot; : null,
+    &quot;PractionerInformation&quot; : null,
+    &quot;PatientInformation&quot; : null
+  },
+  &quot;vlcPersistentComponent&quot; : { },
+  &quot;userTimeZone&quot; : null,
+  &quot;userProfile&quot; : null,
+  &quot;userName&quot; : null,
+  &quot;userId&quot; : null,
+  &quot;timeStamp&quot; : null,
+  &quot;ContextId&quot; : null,
+  &quot;Confirmation&quot; : { },
+  &quot;Attachments&quot; : {
+    &quot;File5&quot; : [ {
+      &quot;data&quot; : null,
+      &quot;size&quot; : null,
+      &quot;filename&quot; : null
+    } ],
+    &quot;File3&quot; : [ {
+      &quot;data&quot; : null,
+      &quot;size&quot; : null,
+      &quot;filename&quot; : null
+    } ],
+    &quot;File2&quot; : [ {
+      &quot;data&quot; : null,
+      &quot;size&quot; : null,
+      &quot;filename&quot; : null
+    } ],
+    &quot;File4&quot; : [ {
+      &quot;data&quot; : null,
+      &quot;size&quot; : null,
+      &quot;filename&quot; : null
+    } ],
+    &quot;File1&quot; : [ {
+      &quot;data&quot; : null,
+      &quot;size&quot; : null,
+      &quot;filename&quot; : null
+    } ]
+  },
+  &quot;ProofOfResidency&quot; : {
+    &quot;SelectProofOfResidency&quot; : null
+  },
+  &quot;FeePayment&quot; : {
+    &quot;FeeAmount&quot; : null,
+    &quot;CustomLWC2&quot; : null,
+    &quot;ReducedPayment&quot; : null
+  },
+  &quot;Instructions&quot; : { },
+  &quot;Attestation&quot; : {
+    &quot;CustomLWC1&quot; : null
+  },
+  &quot;PractionerInformation&quot; : {
+    &quot;PractionerAddress-Block&quot; : {
+      &quot;PractionerAddress&quot; : null,
+      &quot;ProviderZipcode&quot; : null,
+      &quot;ProviderState&quot; : null,
+      &quot;ProviderCity&quot; : null,
+      &quot;ProviderStreetAddress&quot; : null
+    },
+    &quot;ProviderEmail&quot; : null,
+    &quot;ProviderPhone&quot; : null,
+    &quot;ProviderLastName&quot; : null,
+    &quot;ProviderMiddleInitial&quot; : null,
+    &quot;ProviderFirstName&quot; : null,
+    &quot;TypeOfPractitioner&quot; : null
+  },
+  &quot;PatientInformation&quot; : {
+    &quot;CheckAge&quot; : null,
+    &quot;PatientAddress-Block&quot; : {
+      &quot;PatientAddress&quot; : null,
+      &quot;Zipcode&quot; : null,
+      &quot;State&quot; : null,
+      &quot;City&quot; : null,
+      &quot;StreetAddress&quot; : null
+    },
+    &quot;Age&quot; : null,
+    &quot;HouseholdSize&quot; : null,
+    &quot;HouseholdIncome&quot; : null,
+    &quot;ApplicationType&quot; : null,
+    &quot;Phone&quot; : null,
+    &quot;Email&quot; : null,
+    &quot;BirthDate&quot; : null,
+    &quot;SocialSecurityNumber&quot; : null,
+    &quot;MiddleInitial&quot; : null,
+    &quot;FirstName&quot; : null,
+    &quot;LastName&quot; : null
+  }
+}</previewJsonData>
+    <processSuperBulk>false</processSuperBulk>
+    <responseCacheTtlMinutes>0.0</responseCacheTtlMinutes>
+    <rollbackOnError>false</rollbackOnError>
+    <sourceObject>json</sourceObject>
+    <sourceObjectDefault>false</sourceObjectDefault>
+    <synchronousProcessThreshold>-1.0</synchronousProcessThreshold>
+    <targetOutputFileName>DCCannabisPatient</targetOutputFileName>
+    <type>Transform</type>
+    <uniqueName>CannabisPatientTransformForPDF_1</uniqueName>
+    <versionNumber>1.0</versionNumber>
+    <xmlDeclarationRemoved>false</xmlDeclarationRemoved>
+</OmniDataTransform>

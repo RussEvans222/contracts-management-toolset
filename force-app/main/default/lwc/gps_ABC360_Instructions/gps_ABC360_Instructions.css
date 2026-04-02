@@ -1,0 +1,112 @@
+/* Deep Space Canvas */
+.star-map-canvas {
+    background: #050a14;
+    background-image: radial-gradient(circle at center, #101d35 0%, #050a14 100%);
+    border-radius: 0.5rem;
+    min-height: 400px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Enhanced Starfield - Twinkle Animation */
+.star-map-canvas::before {
+    content: "";
+    position: absolute;
+    top: -50%; left: -50%; width: 200%; height: 200%;
+    background-image: 
+        radial-gradient(2px 2px at 20px 30px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 40px 70px, #fff, rgba(0,0,0,0)),
+        radial-gradient(1.5px 1.5px at 50px 160px, #fff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 90px 40px, #fff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 130px 80px, #fff, rgba(0,0,0,0)),
+        radial-gradient(1.5px 1.5px at 160px 120px, #fff, rgba(0,0,0,0));
+    background-repeat: repeat;
+    background-size: 200px 200px;
+    opacity: 0.6;
+    animation: twinkle 12s infinite linear;
+}
+
+@keyframes twinkle {
+    from { transform: translateY(0); }
+    to { transform: translateY(-100px); }
+}
+
+.header-z, .grid-z, .help-footer {
+    position: relative;
+    z-index: 5;
+}
+
+/* Gradient Title */
+.launchpad-title {
+    font-size: 2.8rem;
+    font-weight: 900;
+    background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 20px rgba(79, 172, 254, 0.3);
+}
+
+.rocket-emoji {
+    -webkit-background-clip: border-box;
+    -webkit-text-fill-color: initial;
+    display: inline-block;
+}
+
+.space-text {
+    color: #94a3b8;
+    letter-spacing: 3px;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+/* Vertical Dividers - Neon HUD style */
+.divider-left { border-left: 1px solid rgba(79, 172, 254, 0.2); }
+.divider-right { border-right: 1px solid rgba(79, 172, 254, 0.2); }
+
+/* Text Constraints */
+.description-container {
+    width: 100%;
+    max-width: 100%;
+    overflow-wrap: break-word;
+}
+
+.section-description {
+    color: #e2e8f0;
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.icon-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.section-header {
+    color: #ffffff;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+/* Icon Color Themes */
+.cosmic-icon-blue { --slds-c-icon-color-foreground: #4facfe; }
+.cosmic-icon-purple { --slds-c-icon-color-foreground: #c471ed; }
+.cosmic-icon-indigo { --slds-c-icon-color-foreground: #00f2fe; }
+
+/* Footer */
+.help-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.footer-text { color: #94a3b8; }
+.slack-link { color: #4facfe; text-decoration: none; }
+.slack-link:hover { text-decoration: underline; color: #00f2fe; }
+
+/* Override standard card header to keep the top clean */
+:host {
+    --slds-c-card-header-spacing: 0;
+}

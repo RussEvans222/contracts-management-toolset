@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>gps_My_Benefit_Assignments</fullName>
+    <columns>Name</columns>
+    <columns>Benefit</columns>
+    <columns>Status</columns>
+    <columns>RecertificationDueDate</columns>
+    <columns>ParentRecord</columns>
+    <columns>Enrollee</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Enrollee</field>
+        <operation>equals</operation>
+        <value>Paul Marshall</value>
+    </filters>
+    <label>My Benefit Assignments</label>
+</ListView>

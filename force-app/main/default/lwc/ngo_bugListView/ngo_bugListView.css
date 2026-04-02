@@ -1,0 +1,19 @@
+.video-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000; /* Black background for cinema feel */
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+iframe {
+    max-width: 100%;
+    border: none;
+}
+
+/* Optional: Ensure the datatable doesn't cut off action menus */
+.slds-modal__content {
+    overflow: visible !important;
+}

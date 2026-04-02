@@ -1,0 +1,122 @@
+<template>
+    <lightning-card title="Product Release Notes" icon-name="standard:news">
+        <div slot="actions" class="slds-grid slds-grid_vertical-align-center">
+            <lightning-button 
+                label="Summarize Release Notes" 
+                variant="brand-outline" 
+                onclick={handleSummarize}
+                class="slds-m-right_small"
+                icon-name="utility:magicwand">
+            </lightning-button>
+            <lightning-input 
+                name="enter-search" 
+                type="search" 
+                placeholder="Search..."
+                variant="label-hidden"
+                onchange={handleSearchChange}>
+            </lightning-input>
+        </div>
+
+        <div class="slds-p-around_medium">
+            <template if:true={records}>
+                <div style="height: 400px;">
+                    <lightning-datatable
+                        key-field="ExternalId"
+                        data={records}
+                        columns={columns}
+                        hide-checkbox-column
+                        onsort={handleSort}
+                        sorted-by={sortedBy}
+                        sorted-direction={sortedDirection}
+                        onrowaction={handleRowAction}>
+                    </lightning-datatable>
+                </div>
+            </template>
+            
+            <template if:true={error}>
+                <div class="slds-text-color_error slds-p-top_medium">
+                    {error}
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+
+    <template if:true={isModalOpen}>
+        <section role="dialog" tabindex="-1" aria-modal="true" class="slds-modal slds-fade-in-open slds-modal_medium">
+            <div class="slds-modal__container">
+                <header class="slds-modal__header">
+                    <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" onclick={closeModal}>
+                        <lightning-icon icon-name="utility:close" variant="inverse" size="small"></lightning-icon>
+                    </button>
+                    <h2 class="slds-text-heading_medium">Release Details</h2>
+                </header>
+                <div class="slds-modal__content slds-p-around_medium">
+                    <template if:true={selectedVideoUrl}>
+                        <div style="background:#000; padding:1rem; border-radius:4px; text-align:center;" class="slds-m-bottom_medium">
+                            <iframe src={selectedVideoUrl} width="640" height="360" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </template>
+                    <div class="slds-box slds-theme_shade">
+                        <p class="slds-text-title_caps slds-m-bottom_small">Description</p>
+                        <lightning-formatted-rich-text 
+                            value={selectedDescription}
+                            class="slds-text-body_regular">
+                        </lightning-formatted-rich-text>
+                    </div>
+                </div>
+                <footer class="slds-modal__footer">
+                    <button class="slds-button slds-button_neutral" onclick={closeModal}>Close</button>
+                </footer>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+
+    <template if:true={isSummaryModalOpen}>
+        <section role="dialog" tabindex="-1" aria-modal="true" class="slds-modal slds-fade-in-open slds-modal_medium">
+            <div class="slds-modal__container">
+                
+                <header class="slds-modal__header slds-grid slds-grid_align-center slds-grid_vertical-align-center">
+                    <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" onclick={closeSummaryModal}>
+                        <lightning-icon icon-name="utility:close" variant="inverse" size="small"></lightning-icon>
+                    </button>
+                    <div class="slds-m-right_small">
+                        <img src={agentBriniLogo} alt="Agent Brini" style="height: 48px; width: auto;" />
+                    </div>
+                    <h2 class="slds-text-heading_medium" style="color: #0176D3; font-weight: 700;">
+                        Nonprofit IDO Release Notes, powered by Agent Brini
+                    </h2>
+                </header>
+
+                <div class="slds-modal__content slds-p-around_medium">
+                    
+                    <div class="slds-text-align_center slds-m-bottom_medium slds-text-body_regular" style="max-width: 85%; margin-left: auto; margin-right: auto;">
+                        <p class="slds-m-bottom_small">
+                            This is a summary of the most recent IDO Updates prior to your org's creation, as well as any bug fixes that have been installed.
+                        </p>
+                        <p class="slds-m-bottom_small">
+                            To get more details, and to see a video walkthrough of any updates, use the "More Information" action on any Release Note or Installed Update.
+                        </p>
+                    </div>
+
+                    <template if:true={isSummarizing}>
+                        <div class="slds-p-around_large slds-text-align_center">
+                            <lightning-spinner alternative-text="Summarizing..." size="medium"></lightning-spinner>
+                            <p class="slds-m-top_medium">Agent Brini is generating your summary...</p>
+                        </div>
+                    </template>
+                    
+                    <template if:false={isSummarizing}>
+                        <div class="slds-box slds-theme_shade slds-text-longform" style="background-color: #F3F9FE; border: 1px solid #C9C7C5;">
+                            <lightning-formatted-rich-text value={aiSummaryResult}></lightning-formatted-rich-text>
+                        </div>
+                    </template>
+                </div>
+                <footer class="slds-modal__footer">
+                    <button class="slds-button slds-button_neutral" onclick={closeSummaryModal}>Close</button>
+                </footer>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+</template>

@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OmniDataTransform xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <assignmentRulesUsed>false</assignmentRulesUsed>
+    <deletedOnSuccess>false</deletedOnSuccess>
+    <errorIgnored>false</errorIgnored>
+    <expectedInputJson>{
+  &quot;vlcTimeTracking&quot; : {
+    &quot;DRSaveApplicatio&quot; : null,
+    &quot;ProjectDescriptionStep&quot; : null,
+    &quot;SEPAComplianceStep&quot; : null,
+    &quot;WaterbodiesStep&quot; : null,
+    &quot;ApplicantInformation&quot; : null,
+    &quot;GotoApplicationDetails&quot; : null,
+    &quot;ProjectLocationStep&quot; : null,
+    &quot;AuthorizedAgentorContactStep&quot; : null,
+    &quot;SetValues1&quot; : null,
+    &quot;ApplicationSubmitted&quot; : null,
+    &quot;ReviewFee&quot; : null,
+    &quot;ExpeditedDates&quot; : null,
+    &quot;PropertyOwnersStep&quot; : null,
+    &quot;ProjectIdentificationStep&quot; : null,
+    &quot;Acknowledgement&quot; : null,
+    &quot;Payment&quot; : null,
+    &quot;ApplicationTypeStep&quot; : null,
+    &quot;Documentation&quot; : null,
+    &quot;Instructions&quot; : null
+  },
+  &quot;vlcPersistentComponent&quot; : { },
+  &quot;userTimeZone&quot; : null,
+  &quot;userProfile&quot; : null,
+  &quot;userName&quot; : null,
+  &quot;userId&quot; : null,
+  &quot;timeStamp&quot; : null,
+  &quot;ContextId&quot; : null,
+  &quot;ProjectDescriptionStep&quot; : {
+    &quot;SummarizeProject&quot; : null,
+    &quot;RequestedProjectEndDate&quot; : null,
+    &quot;OperatingEquipmentinWater&quot; : null,
+    &quot;RequestedProjectStartDate&quot; : null,
+    &quot;TypeofEquipmentUsed&quot; : null,
+    &quot;ProjectPlanDescription&quot; : null,
+    &quot;Projectconductedinmultiplephases&quot; : null
+  },
+  &quot;SEPAComplianceStep&quot; : {
+    &quot;SEPAReview&quot; : null,
+    &quot;SEPAReviewUpload&quot; : [ {
+      &quot;data&quot; : null,
+      &quot;size&quot; : null,
+      &quot;filename&quot; : null
+    } ],
+    &quot;SEPADetermination&quot; : null,
+    &quot;SEPAExempt&quot; : null
+  },
+  &quot;WaterbodiesStep&quot; : {
+    &quot;MethodExcavating&quot; : null,
+    &quot;Fillmaterial&quot; : null,
+    &quot;Waterbodiesdescription&quot; : null,
+    &quot;MitigationPlanUpload&quot; : [ {
+      &quot;data&quot; : null,
+      &quot;size&quot; : null,
+      &quot;filename&quot; : null
+    } ],
+    &quot;MitigationPlan&quot; : null,
+    &quot;WaterbodiesMitigationPlanSummary&quot; : null,
+    &quot;ProjectImpact&quot; : null
+  },
+  &quot;ApplicantInformation&quot; : {
+    &quot;LastName&quot; : null,
+    &quot;EmailAddress&quot; : null,
+    &quot;SiteCity&quot; : null,
+    &quot;ApplicantAccountType&quot; : null,
+    &quot;SiteState&quot; : null,
+    &quot;SitePostalCode&quot; : null,
+    &quot;TradeNameofEstablishment&quot; : null,
+    &quot;MobilePhone&quot; : null,
+    &quot;HomePhone&quot; : null,
+    &quot;SiteAddress&quot; : null,
+    &quot;FirstName&quot; : null
+  },
+  &quot;ProjectLocationStep&quot; : {
+    &quot;Within100yearfloodplain&quot; : null,
+    &quot;ProjectStartDate&quot; : null,
+    &quot;ProjectSection&quot; : null,
+    &quot;ProjectTownship&quot; : null,
+    &quot;ProjectSiteName&quot; : null,
+    &quot;ProjectParcelNumber&quot; : null,
+    &quot;ProjectWRIA&quot; : null,
+    &quot;ProjectDrivingDirections&quot; : null,
+    &quot;ProjectCounty&quot; : null,
+    &quot;ProjectAddress&quot; : null,
+    &quot;ProjectEndDate&quot; : null
+  },
+  &quot;AuthorizedAgentorContactStep&quot; : {
+    &quot;AgentPostalCode&quot; : null,
+    &quot;AgentCity&quot; : null,
+    &quot;AgentLastName&quot; : null,
+    &quot;AgentEmailAddress&quot; : null,
+    &quot;AgentState&quot; : null,
+    &quot;Agentesignaturecheckbox&quot; : null,
+    &quot;Actingonbehalfcheckbox&quot; : null,
+    &quot;AgentMobilePhone&quot; : null,
+    &quot;AgentFirstName&quot; : null,
+    &quot;AgentHomePhone&quot; : null,
+    &quot;AgentBusinessName&quot; : null,
+    &quot;File2&quot; : [ {
+      &quot;data&quot; : null,
+      &quot;size&quot; : null,
+      &quot;filename&quot; : null
+    } ],
+    &quot;AgentStreetAddress&quot; : null
+  },
+  &quot;ApplicationSubmitted&quot; : { },
+  &quot;ReviewFee&quot; : {
+    &quot;PayNow&quot; : null
+  },
+  &quot;ExpeditedDates&quot; : { },
+  &quot;PropertyOwnersStep&quot; : {
+    &quot;PropertyOwnerState&quot; : null,
+    &quot;PropertyOwnerisApplicantcheckbox&quot; : null,
+    &quot;ConsentofPropertyOwnerFile&quot; : [ {
+      &quot;data&quot; : null,
+      &quot;size&quot; : null,
+      &quot;filename&quot; : null
+    } ],
+    &quot;MultiplePropertyOwnerscheckbox&quot; : null,
+    &quot;PropertyOwnerMobilePhone&quot; : null,
+    &quot;PropertyOwnerFirstName&quot; : null,
+    &quot;PropertyOwnerPostalCode&quot; : null,
+    &quot;PropertyOwnerCity&quot; : null,
+    &quot;PropertyOwnerEmailAddress&quot; : null,
+    &quot;esignaturepropertyownercheckbox&quot; : null,
+    &quot;PropertyOwnerEasementCheckbox&quot; : null,
+    &quot;PropertyOwnerLastName&quot; : null,
+    &quot;PropertyOwnerHomePhone&quot; : null,
+    &quot;PropertyOwnerBusinessName&quot; : null,
+    &quot;PropertyOwnerStreetAddress&quot; : null
+  },
+  &quot;ProjectIdentificationStep&quot; : {
+    &quot;ProjectName&quot; : null,
+    &quot;ProjectType&quot; : null
+  },
+  &quot;Acknowledgement&quot; : {
+    &quot;Disclosure1&quot; : null,
+    &quot;CaptureSignature&quot; : null
+  },
+  &quot;Payment&quot; : {
+    &quot;CustomLWC2&quot; : null,
+    &quot;Amount&quot; : null
+  },
+  &quot;ApplicationTypeStep&quot; : {
+    &quot;LicenseType&quot; : null
+  },
+  &quot;Documentation&quot; : {
+    &quot;File1&quot; : [ {
+      &quot;data&quot; : null,
+      &quot;size&quot; : null,
+      &quot;filename&quot; : null
+    } ]
+  },
+  &quot;Instructions&quot; : { }
+}</expectedInputJson>
+    <fieldLevelSecurityEnabled>false</fieldLevelSecurityEnabled>
+    <inputType>JSON</inputType>
+    <isManagedUsingStdDesigner>false</isManagedUsingStdDesigner>
+    <name>DRSaveHydraulicProject</name>
+    <nullInputsIncludedInOutput>false</nullInputsIncludedInOutput>
+    <omniDataTransformItem>
+        <defaultValue>Location Access Permit</defaultValue>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRSaveHydraulicProjectCustom7056</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <lookupByFieldName>Name</lookupByFieldName>
+        <lookupObjectName>RegulatoryAuthorizationType</lookupObjectName>
+        <lookupReturnedFieldName>Id</lookupReturnedFieldName>
+        <name>DRSaveHydraulicProject</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>LicenseTypeId</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>true</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>DRSaveHydraulicProjectCustom5468</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>DRSaveHydraulicProject</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>DRSaveHydraulicProjectCustom6836</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedFieldName>AccountId</linkedFieldName>
+        <linkedObjectSequence>1.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>DRSaveHydraulicProject</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>AccountId</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFee</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <defaultValue>2500</defaultValue>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRSaveHydraulicProjectCustom5992</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRSaveHydraulicProject</name>
+        <outputCreationSequence>3.0</outputCreationSequence>
+        <outputFieldName>FeeAmount</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFeeItem</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRSaveHydraulicProjectCustom4523</globalKey>
+        <inputFieldName>ApplicantInformation:TradeNameofEstablishment</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <lookupByFieldName>Name</lookupByFieldName>
+        <lookupObjectName>Account</lookupObjectName>
+        <lookupReturnedFieldName>Id</lookupReturnedFieldName>
+        <name>DRSaveHydraulicProject</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>AccountId</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>| NOW</formulaConverted>
+        <formulaExpression>NOW()</formulaExpression>
+        <formulaResultPath>AppliedDate</formulaResultPath>
+        <formulaSequence>1.0</formulaSequence>
+        <globalKey>DRSaveHydraulicProjectCustom8823</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRSaveHydraulicProject</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <defaultValue>Permit</defaultValue>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRSaveHydraulicProjectCustom4882</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRSaveHydraulicProject</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Category</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <defaultValue>PAID</defaultValue>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRSaveHydraulicProjectCustom8139</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRSaveHydraulicProject</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>Status</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFee</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>DRSaveHydraulicProjectCustom9882</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedFieldName>Id</linkedFieldName>
+        <linkedObjectSequence>1.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>DRSaveHydraulicProject</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>ParentRecordId</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFee</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>DRSaveHydraulicProjectCustom2515</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedFieldName>Id</linkedFieldName>
+        <linkedObjectSequence>2.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>DRSaveHydraulicProject</name>
+        <outputCreationSequence>3.0</outputCreationSequence>
+        <outputFieldName>RegulatoryTrxnFeeId</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFeeItem</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <defaultValue>Permit</defaultValue>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRSaveHydraulicProjectCustom4044</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRSaveHydraulicProject</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>ApplicationCategory</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <defaultValue>Application Fee</defaultValue>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRSaveHydraulicProjectCustom4468</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRSaveHydraulicProject</name>
+        <outputCreationSequence>3.0</outputCreationSequence>
+        <outputFieldName>Name</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFeeItem</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <defaultValue>Submitted</defaultValue>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRSaveHydraulicProjectCustom1651</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRSaveHydraulicProject</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Status</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>true</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>DRSaveHydraulicProjectCustom4405</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>DRSaveHydraulicProject</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFee</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>true</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>DRSaveHydraulicProjectCustom9053</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>DRSaveHydraulicProject</name>
+        <outputCreationSequence>3.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFeeItem</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRSaveHydraulicProjectCustom4513</globalKey>
+        <inputFieldName>AppliedDate</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRSaveHydraulicProject</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>AppliedDate</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <outputType>SObject</outputType>
+    <previewJsonData>{
+  &quot;vlcTimeTracking&quot; : {
+    &quot;DRSaveApplicatio&quot; : null,
+    &quot;ProjectDescriptionStep&quot; : null,
+    &quot;SEPAComplianceStep&quot; : null,
+    &quot;WaterbodiesStep&quot; : null,
+    &quot;ApplicantInformation&quot; : null,
+    &quot;GotoApplicationDetails&quot; : null,
+    &quot;ProjectLocationStep&quot; : null,
+    &quot;AuthorizedAgentorContactStep&quot; : null,
+    &quot;SetValues1&quot; : null,
+    &quot;ApplicationSubmitted&quot; : null,
+    &quot;ReviewFee&quot; : null,
+    &quot;ExpeditedDates&quot; : null,
+    &quot;PropertyOwnersStep&quot; : null,
+    &quot;ProjectIdentificationStep&quot; : null,
+    &quot;Acknowledgement&quot; : null,
+    &quot;Payment&quot; : null,
+    &quot;ApplicationTypeStep&quot; : null,
+    &quot;Documentation&quot; : null,
+    &quot;Instructions&quot; : null
+  },
+  &quot;vlcPersistentComponent&quot; : { },
+  &quot;userTimeZone&quot; : null,
+  &quot;userProfile&quot; : null,
+  &quot;userName&quot; : null,
+  &quot;userId&quot; : null,
+  &quot;timeStamp&quot; : null,
+  &quot;ContextId&quot; : null,
+  &quot;ProjectDescriptionStep&quot; : {
+    &quot;SummarizeProject&quot; : null,
+    &quot;RequestedProjectEndDate&quot; : null,
+    &quot;OperatingEquipmentinWater&quot; : null,
+    &quot;RequestedProjectStartDate&quot; : null,
+    &quot;TypeofEquipmentUsed&quot; : null,
+    &quot;ProjectPlanDescription&quot; : null,
+    &quot;Projectconductedinmultiplephases&quot; : null
+  },
+  &quot;SEPAComplianceStep&quot; : {
+    &quot;SEPAReview&quot; : null,
+    &quot;SEPAReviewUpload&quot; : [ {
+      &quot;data&quot; : null,
+      &quot;size&quot; : null,
+      &quot;filename&quot; : null
+    } ],
+    &quot;SEPADetermination&quot; : null,
+    &quot;SEPAExempt&quot; : null
+  },
+  &quot;WaterbodiesStep&quot; : {
+    &quot;MethodExcavating&quot; : null,
+    &quot;Fillmaterial&quot; : null,
+    &quot;Waterbodiesdescription&quot; : null,
+    &quot;MitigationPlanUpload&quot; : [ {
+      &quot;data&quot; : null,
+      &quot;size&quot; : null,
+      &quot;filename&quot; : null
+    } ],
+    &quot;MitigationPlan&quot; : null,
+    &quot;WaterbodiesMitigationPlanSummary&quot; : null,
+    &quot;ProjectImpact&quot; : null
+  },
+  &quot;ApplicantInformation&quot; : {
+    &quot;LastName&quot; : null,
+    &quot;EmailAddress&quot; : null,
+    &quot;SiteCity&quot; : null,
+    &quot;ApplicantAccountType&quot; : null,
+    &quot;SiteState&quot; : null,
+    &quot;SitePostalCode&quot; : null,
+    &quot;TradeNameofEstablishment&quot; : null,
+    &quot;MobilePhone&quot; : null,
+    &quot;HomePhone&quot; : null,
+    &quot;SiteAddress&quot; : null,
+    &quot;FirstName&quot; : null
+  },
+  &quot;ProjectLocationStep&quot; : {
+    &quot;Within100yearfloodplain&quot; : null,
+    &quot;ProjectStartDate&quot; : null,
+    &quot;ProjectSection&quot; : null,
+    &quot;ProjectTownship&quot; : null,
+    &quot;ProjectSiteName&quot; : null,
+    &quot;ProjectParcelNumber&quot; : null,
+    &quot;ProjectWRIA&quot; : null,
+    &quot;ProjectDrivingDirections&quot; : null,
+    &quot;ProjectCounty&quot; : null,
+    &quot;ProjectAddress&quot; : null,
+    &quot;ProjectEndDate&quot; : null
+  },
+  &quot;AuthorizedAgentorContactStep&quot; : {
+    &quot;AgentPostalCode&quot; : null,
+    &quot;AgentCity&quot; : null,
+    &quot;AgentLastName&quot; : null,
+    &quot;AgentEmailAddress&quot; : null,
+    &quot;AgentState&quot; : null,
+    &quot;Agentesignaturecheckbox&quot; : null,
+    &quot;Actingonbehalfcheckbox&quot; : null,
+    &quot;AgentMobilePhone&quot; : null,
+    &quot;AgentFirstName&quot; : null,
+    &quot;AgentHomePhone&quot; : null,
+    &quot;AgentBusinessName&quot; : null,
+    &quot;File2&quot; : [ {
+      &quot;data&quot; : null,
+      &quot;size&quot; : null,
+      &quot;filename&quot; : null
+    } ],
+    &quot;AgentStreetAddress&quot; : null
+  },
+  &quot;ApplicationSubmitted&quot; : { },
+  &quot;ReviewFee&quot; : {
+    &quot;PayNow&quot; : null
+  },
+  &quot;ExpeditedDates&quot; : { },
+  &quot;PropertyOwnersStep&quot; : {
+    &quot;PropertyOwnerState&quot; : null,
+    &quot;PropertyOwnerisApplicantcheckbox&quot; : null,
+    &quot;ConsentofPropertyOwnerFile&quot; : [ {
+      &quot;data&quot; : null,
+      &quot;size&quot; : null,
+      &quot;filename&quot; : null
+    } ],
+    &quot;MultiplePropertyOwnerscheckbox&quot; : null,
+    &quot;PropertyOwnerMobilePhone&quot; : null,
+    &quot;PropertyOwnerFirstName&quot; : null,
+    &quot;PropertyOwnerPostalCode&quot; : null,
+    &quot;PropertyOwnerCity&quot; : null,
+    &quot;PropertyOwnerEmailAddress&quot; : null,
+    &quot;esignaturepropertyownercheckbox&quot; : null,
+    &quot;PropertyOwnerEasementCheckbox&quot; : null,
+    &quot;PropertyOwnerLastName&quot; : null,
+    &quot;PropertyOwnerHomePhone&quot; : null,
+    &quot;PropertyOwnerBusinessName&quot; : null,
+    &quot;PropertyOwnerStreetAddress&quot; : null
+  },
+  &quot;ProjectIdentificationStep&quot; : {
+    &quot;ProjectName&quot; : null,
+    &quot;ProjectType&quot; : null
+  },
+  &quot;Acknowledgement&quot; : {
+    &quot;Disclosure1&quot; : null,
+    &quot;CaptureSignature&quot; : null
+  },
+  &quot;Payment&quot; : {
+    &quot;CustomLWC2&quot; : null,
+    &quot;Amount&quot; : null
+  },
+  &quot;ApplicationTypeStep&quot; : {
+    &quot;LicenseType&quot; : null
+  },
+  &quot;Documentation&quot; : {
+    &quot;File1&quot; : [ {
+      &quot;data&quot; : null,
+      &quot;size&quot; : null,
+      &quot;filename&quot; : null
+    } ]
+  },
+  &quot;Instructions&quot; : { }
+}</previewJsonData>
+    <processSuperBulk>false</processSuperBulk>
+    <responseCacheTtlMinutes>0.0</responseCacheTtlMinutes>
+    <rollbackOnError>false</rollbackOnError>
+    <sourceObject>json</sourceObject>
+    <sourceObjectDefault>false</sourceObjectDefault>
+    <synchronousProcessThreshold>0.0</synchronousProcessThreshold>
+    <type>Load</type>
+    <uniqueName>DRSaveHydraulicProject_1</uniqueName>
+    <versionNumber>1.0</versionNumber>
+    <xmlDeclarationRemoved>false</xmlDeclarationRemoved>
+</OmniDataTransform>

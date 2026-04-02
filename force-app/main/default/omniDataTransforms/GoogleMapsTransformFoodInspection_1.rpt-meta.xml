@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OmniDataTransform xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <assignmentRulesUsed>false</assignmentRulesUsed>
+    <deletedOnSuccess>false</deletedOnSuccess>
+    <errorIgnored>false</errorIgnored>
+    <expectedInputJson>{
+  &quot;GoogleSearchResults&quot; : [ {
+    &quot;place_id&quot; : &quot;EiY1NTkgUGV0ZXJzYnVyZyBSZCwgRXZhbnN2aWxsZSwgSU4sIFVTQSIxEi8KFAoSCf8G54rg1XGIEY1MEfnd1UyBEK8EKhQKEglnWzk9SihuiBH3nD0KRvdjSA&quot;,
+    &quot;County&quot; : &quot;Vanderburgh County&quot;,
+    &quot;City&quot; : &quot;Evansville&quot;,
+    &quot;Country&quot; : &quot;United States&quot;,
+    &quot;State&quot; : &quot;IN&quot;,
+    &quot;Description&quot; : &quot;559 Petersburg Rd, Evansville, IN 47711, USA&quot;,
+    &quot;StreetAddress&quot; : &quot;559 Petersburg Rd&quot;
+  }, {
+    &quot;place_id&quot; : &quot;EiI1NTkgUGV0ZXJzYnVyZyBSZCwgSGVicm9uLCBLWSwgVVNBIjESLwoUChIJaS2CNP7IQYgR3IMXnHYHlpIQrwQqFAoSCZ9Qp1HWz0GIESqxxQQwJBZI&quot;,
+    &quot;County&quot; : &quot;Boone County&quot;,
+    &quot;City&quot; : &quot;Hebron&quot;,
+    &quot;Country&quot; : &quot;United States&quot;,
+    &quot;State&quot; : &quot;KY&quot;,
+    &quot;Description&quot; : &quot;559 Petersburg Rd, Hebron, KY 41048, USA&quot;,
+    &quot;StreetAddress&quot; : &quot;559 Petersburg Rd&quot;
+  }, {
+    &quot;place_id&quot; : &quot;ChIJ4SZS9CJ8sYkR8GP9YcBO2Wk&quot;,
+    &quot;County&quot; : &quot;Powhatan County&quot;,
+    &quot;City&quot; : &quot;Powhatan&quot;,
+    &quot;Country&quot; : &quot;United States&quot;,
+    &quot;State&quot; : &quot;VA&quot;,
+    &quot;Description&quot; : &quot;559 Petersburg Rd, Powhatan, VA 23139, USA&quot;,
+    &quot;StreetAddress&quot; : &quot;559 Petersburg Rd&quot;
+  }, {
+    &quot;place_id&quot; : &quot;EiI1NTkgUGV0ZXJzYnVyZyBSZCwgTGl0aXR6LCBQQSwgVVNBIjESLwoUChIJJZjfo1IixokRfmhcxaQvANsQrwQqFAoSCbGcHS6rI8aJEU66g7SIYK8r&quot;,
+    &quot;County&quot; : &quot;Lancaster County&quot;,
+    &quot;City&quot; : &quot;Lititz&quot;,
+    &quot;Country&quot; : &quot;United States&quot;,
+    &quot;State&quot; : &quot;PA&quot;,
+    &quot;Description&quot; : &quot;559 Petersburg Rd, Lititz, PA 17543, USA&quot;,
+    &quot;StreetAddress&quot; : &quot;559 Petersburg Rd&quot;
+  }, {
+    &quot;place_id&quot; : &quot;EiQ1NTkgUGV0ZXJzYnVyZyBSZCwgQ2FybGlzbGUsIFBBLCBVU0EiMRIvChQKEgkL0Gz_J-LIiRFl8a7D0CnQQBCvBCoUChIJ8x2RCiziyIkRd7TN3DYl5RM&quot;,
+    &quot;County&quot; : &quot;Cumberland County&quot;,
+    &quot;City&quot; : &quot;Carlisle&quot;,
+    &quot;Country&quot; : &quot;United States&quot;,
+    &quot;State&quot; : &quot;PA&quot;,
+    &quot;Description&quot; : &quot;559 Petersburg Rd, Carlisle, PA 17015, USA&quot;,
+    &quot;StreetAddress&quot; : &quot;559 Petersburg Rd&quot;
+  } ]
+}</expectedInputJson>
+    <fieldLevelSecurityEnabled>false</fieldLevelSecurityEnabled>
+    <inputType>JSON</inputType>
+    <isManagedUsingStdDesigner>false</isManagedUsingStdDesigner>
+    <name>GoogleMapsTransformFoodInspection</name>
+    <nullInputsIncludedInOutput>false</nullInputsIncludedInOutput>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>GoogleMapsTransformFoodInspectionCustom0jI4S000000H5BcUAKItem1</globalKey>
+        <inputFieldName>GoogleSearchResults:place_id</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>GoogleMapsTransformFoodInspection</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>place_id</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>GoogleMapsTransformFoodInspectionCustom0jI4S000000H5BcUAKItem5</globalKey>
+        <inputFieldName>GoogleSearchResults:Country</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>GoogleMapsTransformFoodInspection</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Country</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>GoogleMapsTransformFoodInspectionCustom0jI4S000000H5BcUAKItem3</globalKey>
+        <inputFieldName>GoogleSearchResults:County</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>GoogleMapsTransformFoodInspection</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>County</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>GoogleMapsTransformFoodInspectionCustom0jI4S000000H5BcUAKItem2</globalKey>
+        <inputFieldName>GoogleSearchResults:City</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>GoogleMapsTransformFoodInspection</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>InspectionCity</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>GoogleMapsTransformFoodInspectionCustom0jI4S000000H5BcUAKItem6</globalKey>
+        <inputFieldName>GoogleSearchResults:State</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>GoogleMapsTransformFoodInspection</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Text3</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>GoogleMapsTransformFoodInspectionCustom0jI4S000000H5BcUAKItem4</globalKey>
+        <inputFieldName>GoogleSearchResults:PostalCode</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>GoogleMapsTransformFoodInspection</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>InspectionZip</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>GoogleMapsTransformFoodInspectionCustom0jI4S000000H5BcUAKItem0</globalKey>
+        <inputFieldName>GoogleSearchResults:StreetAddress</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>GoogleMapsTransformFoodInspection</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>InspectionStreet</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>GoogleMapsTransformFoodInspectionCustom0jI4S000000H5BcUAKItem7</globalKey>
+        <inputFieldName>GoogleSearchResults:Description</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>GoogleMapsTransformFoodInspection</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Description</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <outputType>JSON</outputType>
+    <previewJsonData>{
+  &quot;GoogleSearchResults&quot; : [ {
+    &quot;place_id&quot; : &quot;EiY1NTkgUGV0ZXJzYnVyZyBSZCwgRXZhbnN2aWxsZSwgSU4sIFVTQSIxEi8KFAoSCf8G54rg1XGIEY1MEfnd1UyBEK8EKhQKEglnWzk9SihuiBH3nD0KRvdjSA&quot;,
+    &quot;County&quot; : &quot;Vanderburgh County&quot;,
+    &quot;City&quot; : &quot;Evansville&quot;,
+    &quot;Country&quot; : &quot;United States&quot;,
+    &quot;State&quot; : &quot;IN&quot;,
+    &quot;Description&quot; : &quot;559 Petersburg Rd, Evansville, IN 47711, USA&quot;,
+    &quot;StreetAddress&quot; : &quot;559 Petersburg Rd&quot;
+  }, {
+    &quot;place_id&quot; : &quot;EiI1NTkgUGV0ZXJzYnVyZyBSZCwgSGVicm9uLCBLWSwgVVNBIjESLwoUChIJaS2CNP7IQYgR3IMXnHYHlpIQrwQqFAoSCZ9Qp1HWz0GIESqxxQQwJBZI&quot;,
+    &quot;County&quot; : &quot;Boone County&quot;,
+    &quot;City&quot; : &quot;Hebron&quot;,
+    &quot;Country&quot; : &quot;United States&quot;,
+    &quot;State&quot; : &quot;KY&quot;,
+    &quot;Description&quot; : &quot;559 Petersburg Rd, Hebron, KY 41048, USA&quot;,
+    &quot;StreetAddress&quot; : &quot;559 Petersburg Rd&quot;
+  }, {
+    &quot;place_id&quot; : &quot;ChIJ4SZS9CJ8sYkR8GP9YcBO2Wk&quot;,
+    &quot;County&quot; : &quot;Powhatan County&quot;,
+    &quot;City&quot; : &quot;Powhatan&quot;,
+    &quot;Country&quot; : &quot;United States&quot;,
+    &quot;State&quot; : &quot;VA&quot;,
+    &quot;Description&quot; : &quot;559 Petersburg Rd, Powhatan, VA 23139, USA&quot;,
+    &quot;StreetAddress&quot; : &quot;559 Petersburg Rd&quot;
+  }, {
+    &quot;place_id&quot; : &quot;EiI1NTkgUGV0ZXJzYnVyZyBSZCwgTGl0aXR6LCBQQSwgVVNBIjESLwoUChIJJZjfo1IixokRfmhcxaQvANsQrwQqFAoSCbGcHS6rI8aJEU66g7SIYK8r&quot;,
+    &quot;County&quot; : &quot;Lancaster County&quot;,
+    &quot;City&quot; : &quot;Lititz&quot;,
+    &quot;Country&quot; : &quot;United States&quot;,
+    &quot;State&quot; : &quot;PA&quot;,
+    &quot;Description&quot; : &quot;559 Petersburg Rd, Lititz, PA 17543, USA&quot;,
+    &quot;StreetAddress&quot; : &quot;559 Petersburg Rd&quot;
+  }, {
+    &quot;place_id&quot; : &quot;EiQ1NTkgUGV0ZXJzYnVyZyBSZCwgQ2FybGlzbGUsIFBBLCBVU0EiMRIvChQKEgkL0Gz_J-LIiRFl8a7D0CnQQBCvBCoUChIJ8x2RCiziyIkRd7TN3DYl5RM&quot;,
+    &quot;County&quot; : &quot;Cumberland County&quot;,
+    &quot;City&quot; : &quot;Carlisle&quot;,
+    &quot;Country&quot; : &quot;United States&quot;,
+    &quot;State&quot; : &quot;PA&quot;,
+    &quot;Description&quot; : &quot;559 Petersburg Rd, Carlisle, PA 17015, USA&quot;,
+    &quot;StreetAddress&quot; : &quot;559 Petersburg Rd&quot;
+  } ]
+}</previewJsonData>
+    <processSuperBulk>false</processSuperBulk>
+    <responseCacheTtlMinutes>0.0</responseCacheTtlMinutes>
+    <rollbackOnError>false</rollbackOnError>
+    <sourceObject>json</sourceObject>
+    <sourceObjectDefault>false</sourceObjectDefault>
+    <synchronousProcessThreshold>0.0</synchronousProcessThreshold>
+    <type>Transform</type>
+    <uniqueName>GoogleMapsTransformFoodInspection_1</uniqueName>
+    <versionNumber>1.0</versionNumber>
+    <xmlDeclarationRemoved>false</xmlDeclarationRemoved>
+</OmniDataTransform>

@@ -1,0 +1,66 @@
+{
+  "status": 0,
+  "result": {
+    "done": true,
+    "fileProperties": [
+      {
+        "createdById": "005Hu00000UJSRhIAP",
+        "createdByName": "Russell Evans",
+        "createdDate": "2026-03-25T16:02:21.000Z",
+        "fileName": "unpackaged/tabs/SDO_Analytics_Dashboard_Magic.tab",
+        "fullName": "SDO_Analytics_Dashboard_Magic",
+        "id": "01rHu0000031mW4IAI",
+        "lastModifiedById": "005Hu00000UJSRhIAP",
+        "lastModifiedByName": "Russell Evans",
+        "lastModifiedDate": "2026-03-25T16:02:21.000Z",
+        "manageableState": "unmanaged",
+        "type": "CustomTab"
+      },
+      {
+        "createdById": "005Hu00000UJSRhIAP",
+        "createdByName": "Russell Evans",
+        "createdDate": "2026-03-25T16:02:21.000Z",
+        "fileName": "unpackaged/tabs/Commerce_Dashboard.tab",
+        "fullName": "Commerce_Dashboard",
+        "id": "01rHu0000031mSgIAI",
+        "lastModifiedById": "005Hu00000UJSRhIAP",
+        "lastModifiedByName": "Russell Evans",
+        "lastModifiedDate": "2026-03-25T16:02:21.000Z",
+        "manageableState": "unmanaged",
+        "type": "CustomTab"
+      },
+      {
+        "createdById": "005Hu00000UJSRhIAP",
+        "createdByName": "Russell Evans",
+        "createdDate": "2026-03-31T16:34:02.313Z",
+        "fileName": "unpackaged/package.xml",
+        "fullName": "unpackaged/package.xml",
+        "id": "",
+        "lastModifiedById": "005Hu00000UJSRhIAP",
+        "lastModifiedByName": "Russell Evans",
+        "lastModifiedDate": "2026-03-31T16:34:02.313Z",
+        "manageableState": "unmanaged",
+        "type": "Package"
+      }
+    ],
+    "id": "09SHu00001YOpKYMA1",
+    "status": "Succeeded",
+    "success": true,
+    "messages": [],
+    "files": [
+      {
+        "fullName": "SDO_Analytics_Dashboard_Magic",
+        "type": "CustomTab",
+        "state": "Created",
+        "filePath": "/Users/russellevans/Downloads/Salesforce Builds/Contracts/force-app/main/default/tabs/SDO_Analytics_Dashboard_Magic.tab-meta.xml"
+      },
+      {
+        "fullName": "Commerce_Dashboard",
+        "type": "CustomTab",
+        "state": "Created",
+        "filePath": "/Users/russellevans/Downloads/Salesforce Builds/Contracts/force-app/main/default/tabs/Commerce_Dashboard.tab-meta.xml"
+      }
+    ]
+  },
+  "warnings": []
+}

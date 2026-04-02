@@ -1,0 +1,1105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OmniDataTransform xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <assignmentRulesUsed>false</assignmentRulesUsed>
+    <deletedOnSuccess>false</deletedOnSuccess>
+    <errorIgnored>false</errorIgnored>
+    <expectedInputJson>{
+  &quot;timeStamp&quot; : &quot;2021-08-30T13:48:38.157Z&quot;,
+  &quot;userProfile&quot; : &quot;System Administrator&quot;,
+  &quot;userTimeZone&quot; : &quot;-420&quot;,
+  &quot;userCurrencyCode&quot; : &quot;USD&quot;,
+  &quot;userName&quot; : &quot;jblankenship@lpi2.0testing.demo&quot;,
+  &quot;userId&quot; : &quot;0055f000000yem1AAA&quot;,
+  &quot;AddressInformation&quot; : {
+    &quot;BusinessOwnershipInformation&quot; : {
+      &quot;ResponsibleOther&quot; : null,
+      &quot;EntityType&quot; : &quot;SoleProprietor&quot;,
+      &quot;ResponsibleName&quot; : &quot;Geoff Duckwall&quot;,
+      &quot;ResponsiblePhone&quot; : &quot;3939292929&quot;,
+      &quot;ResponsibleFax&quot; : &quot;6235558080&quot;,
+      &quot;ResponsibleEmail&quot; : &quot;joe.franklin@gmail.com&quot;,
+      &quot;ResponsibleAddress-Block&quot; : {
+        &quot;ResponsibleAddress&quot; : &quot;3939 Dallas Pkwy, Plano, TX 75093, USA&quot;,
+        &quot;ResponsibleStreet&quot; : &quot;3939 Dallas Parkway&quot;,
+        &quot;ResponsibleCity&quot; : &quot;Plano&quot;,
+        &quot;ResponsibleState&quot; : &quot;TX&quot;,
+        &quot;ResponsibleZip&quot; : &quot;75093&quot;
+      }
+    },
+    &quot;EstablishmentInfo&quot; : {
+      &quot;EstablishmentPhone&quot; : &quot;3939292929&quot;,
+      &quot;EstablishmentEmail&quot; : &quot;joe.franklin@gmail.com&quot;,
+      &quot;EstablishmentFax&quot; : &quot;6235557676&quot;,
+      &quot;EstablishmentName&quot; : &quot;Astro&apos;s Diner&quot;,
+      &quot;EstablishmentAddress-Block&quot; : {
+        &quot;EstablishmentAddress&quot; : &quot;4949 Main Street, Amherst, NY, USA&quot;,
+        &quot;EstablishmentStreet&quot; : &quot;3939 Dallas Parkway&quot;,
+        &quot;EstablishmentZip&quot; : &quot;75093&quot;,
+        &quot;EstablishmentState&quot; : &quot;TX&quot;,
+        &quot;EstablishmentCity&quot; : &quot;Plano&quot;
+      }
+    }
+  },
+  &quot;ContractorArchitectInfo&quot; : {
+    &quot;Checkbox1&quot; : false,
+    &quot;ArchitectNA&quot; : false
+  },
+  &quot;PermitQuestionnaire&quot; : {
+    &quot;Floors&quot; : 1,
+    &quot;SquareFeet&quot; : 4500,
+    &quot;ExteriorOpenings&quot; : &quot;ExteriorOpeningsNo&quot;,
+    &quot;DriveThru&quot; : &quot;DriveThruNo&quot;,
+    &quot;OutdoorOperations&quot; : &quot;OutdoorYes&quot;,
+    &quot;BriefDescription&quot; : &quot;Taking over the existing diner.  Changing the name to Astro&apos;s Diner.  Replacing the existing (broken) ice maker in the existing dog friendly patio with the same model.&quot;
+  },
+  &quot;Menu&quot; : {
+    &quot;SeatingCapacity&quot; : 55,
+    &quot;HoursOfOperation&quot; : {
+      &quot;EndTime&quot; : &quot;22:00:00.000Z&quot;,
+      &quot;StartTime&quot; : &quot;06:00:00.000Z&quot;,
+      &quot;DayOfWeek&quot; : &quot;Weekdays&quot;
+    },
+    &quot;MenuDesc&quot; : &quot;Astro’s Diner, a full-service, casual dining restaurant, will provide a static menu that is separated into groups (e.g., breakfast, lunch, dinner, brunch, drinks).  Each group will be broken down by categories like appetizers, pastas, sandwiches, sides, etc.  The type of food will be casual dining with traditional Mexican and American dishes.&quot;
+  },
+  &quot;PlumbingFinish&quot; : {
+    &quot;WaterProvider&quot; : &quot;Buckeye Community Water&quot;,
+    &quot;SewerProvider&quot; : &quot;Buckeye Utility District&quot;,
+    &quot;DrainFinish&quot; : {
+      &quot;VentCeiling&quot; : &quot;Not Applicable&quot;,
+      &quot;Multi-select10&quot; : &quot;DirectDrain&quot;,
+      &quot;Multi-select5&quot; : &quot;IndirectDrain;DirectDrain&quot;,
+      &quot;Multi-select9&quot; : &quot;IndirectDrain;DirectDrain&quot;,
+      &quot;Multi-select4&quot; : &quot;DirectDrain&quot;,
+      &quot;Multi-select8&quot; : &quot;DirectDrain&quot;,
+      &quot;Multi-select3&quot; : &quot;IndirectDrain;DirectDrain&quot;,
+      &quot;Multi-select7&quot; : &quot;DirectDrain&quot;,
+      &quot;Multi-select2&quot; : &quot;DirectDrain&quot;,
+      &quot;Multi-select6&quot; : &quot;DirectDrain&quot;,
+      &quot;Multi-select1&quot; : &quot;DirectDrain&quot;,
+      &quot;OtherCoveBase&quot; : &quot;N/A&quot;,
+      &quot;OtherCeiling&quot; : &quot;N/A&quot;,
+      &quot;OtherWalls&quot; : &quot;N/A&quot;,
+      &quot;OtherFloors&quot; : &quot;N/A&quot;,
+      &quot;WareCoveBase&quot; : &quot;Vinyl&quot;,
+      &quot;WareCeiling&quot; : &quot;Drywall&quot;,
+      &quot;WareWalls&quot; : &quot;Drywall&quot;,
+      &quot;WareFloors&quot; : &quot;Tile&quot;,
+      &quot;DumpsterCoveBase&quot; : &quot;N/A&quot;,
+      &quot;DumpsterCeiling&quot; : &quot;Aluminum&quot;,
+      &quot;DumpsterWalls&quot; : &quot;Cinder Block&quot;,
+      &quot;DumpsterFloors&quot; : &quot;Concrete&quot;,
+      &quot;VentCoveBase&quot; : &quot;Rubber&quot;,
+      &quot;VentWalls&quot; : &quot;Aluminum Siding&quot;,
+      &quot;VentFloors&quot; : &quot;Tile&quot;,
+      &quot;FreezerCoveBase&quot; : &quot;Vinyl&quot;,
+      &quot;FreezerCeiling&quot; : &quot;Aluminum&quot;,
+      &quot;FreezerWalls&quot; : &quot;Aluminum Siding&quot;,
+      &quot;FreezerFloors&quot; : &quot;Tile&quot;,
+      &quot;MopCoveBase&quot; : &quot;Vinyl&quot;,
+      &quot;MopCeiling&quot; : &quot;Drywall&quot;,
+      &quot;MopWalls&quot; : &quot;Drywall&quot;,
+      &quot;MopFloors&quot; : &quot;Tile&quot;,
+      &quot;BathroomCoveBase&quot; : &quot;Vinyl&quot;,
+      &quot;BathroomCeiling&quot; : &quot;Drywall&quot;,
+      &quot;BathroomWalls&quot; : &quot;Drywall&quot;,
+      &quot;BathroomFloors&quot; : &quot;Tile&quot;,
+      &quot;KitchenCoveBase&quot; : &quot;Vinyl&quot;,
+      &quot;KitchenCeiling&quot; : &quot;Drywall&quot;,
+      &quot;KitchenWalls&quot; : &quot;Drywall&quot;,
+      &quot;KitchenFloors&quot; : &quot;Tile&quot;
+    },
+    &quot;Sewer&quot; : &quot;Municipal&quot;,
+    &quot;RecoveryRate&quot; : 200,
+    &quot;WaterHeater&quot; : 500,
+    &quot;Water&quot; : &quot;Municipal&quot;,
+    &quot;PlumbingInformation&quot; : &quot;PlumbingForm&quot;
+  },
+  &quot;Disclaimer&quot; : {
+    &quot;Disclosure1&quot; : true,
+    &quot;DisclaimerDate1&quot; : &quot;2021-08-30&quot;,
+    &quot;Disclosure2&quot; : true,
+    &quot;DisclaimerDate2&quot; : &quot;2021-08-30&quot;
+  },
+  &quot;UploadDocs&quot; : { },
+  &quot;SampleUser&quot; : &quot;0055f000001oN4nAAE&quot;,
+  &quot;ContactName&quot; : &quot;Geoff Duckwall&quot;,
+  &quot;ContactId&quot; : &quot;0035f000003ABE9AAO&quot;,
+  &quot;PermitChoice&quot; : {
+    &quot;BusinessType&quot; : &quot;NewBusiness;MinorReview&quot;,
+    &quot;OwnerChangeDate&quot; : &quot;2021-10-01&quot;,
+    &quot;ConstInstallDate&quot; : &quot;2021-10-11&quot;,
+    &quot;ConstInstallEndDate&quot; : &quot;2021-10-15&quot;,
+    &quot;ExpeditedReview&quot; : &quot;ExpediteReviewNo&quot;,
+    &quot;NewBusiness&quot; : true,
+    &quot;MinorOrNew&quot; : true,
+    &quot;MinorAndNew&quot; : true,
+    &quot;PermitActivity&quot; : &quot;New&quot;
+  },
+  &quot;DogPatio&quot; : &quot;DogYes&quot;,
+  &quot;MinorReviewFeeName&quot; : &quot;Minor Review&quot;,
+  &quot;NewBusinessFeeName&quot; : &quot;New Business Permit&quot;,
+  &quot;Fee&quot; : 245,
+  &quot;FeePreviewStep&quot; : {
+    &quot;EnvFee&quot; : {
+      &quot;TotalFees&quot; : 560,
+      &quot;NewBusinessFee&quot; : 315,
+      &quot;MinorReviewFee&quot; : 245
+    }
+  },
+  &quot;PaymentStep&quot; : {
+    &quot;ShowTestCreditCard&quot; : false
+  },
+  &quot;GeneratePDF&quot; : &quot;00P5f000000pXuOEAU&quot;
+}</expectedInputJson>
+    <fieldLevelSecurityEnabled>false</fieldLevelSecurityEnabled>
+    <inputType>JSON</inputType>
+    <isManagedUsingStdDesigner>false</isManagedUsingStdDesigner>
+    <name>LWCDRCreateFoodEstablishmentPermitApplication</name>
+    <nullInputsIncludedInOutput>false</nullInputsIncludedInOutput>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRCreateFoodEstablishmentPermitApplication5394222550933867</globalKey>
+        <inputFieldName>SaveEstablishmentPostalCode</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRCreateFoodEstablishmentPermitApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>SitePostalCode</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <defaultValue>Submitted</defaultValue>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRCreateFoodEstablishmentPermitApplication9366086464656782</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRCreateFoodEstablishmentPermitApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>Status</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRCreateFoodEstablishmentPermitApplication8370228862890683</globalKey>
+        <inputFieldName>ContactId</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRCreateFoodEstablishmentPermitApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>PrimaryOwnerId</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRCreateFoodEstablishmentPermitApplication7425060585357162</globalKey>
+        <inputFieldName>CaseDescription</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRCreateFoodEstablishmentPermitApplication</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Description</outputFieldName>
+        <outputObjectName>Case</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>var:SaveEstablishmentAddress</formulaConverted>
+        <formulaExpression>SaveEstablishmentAddress</formulaExpression>
+        <formulaResultPath>Address</formulaResultPath>
+        <formulaSequence>4.0</formulaSequence>
+        <globalKey>LWCDRCreateFoodEstablishmentPermitApplication08239406577863506</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRCreateFoodEstablishmentPermitApplication</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRCreateFoodEstablishmentPermitApplication360866954034043</globalKey>
+        <inputFieldName>SaveEstablishmentState</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRCreateFoodEstablishmentPermitApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>SiteState</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <defaultValue>Restaurant</defaultValue>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRCreateFoodEstablishmentPermitApplication8103959132842817</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <lookupByFieldName>Name</lookupByFieldName>
+        <lookupObjectName>BusinessType</lookupObjectName>
+        <lookupReturnedFieldName>Id</lookupReturnedFieldName>
+        <name>LWCDRCreateFoodEstablishmentPermitApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>BusinessTypeId</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>true</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>LWCDRCreateFoodEstablishmentPermitApplication5051500923705659</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>LWCDRCreateFoodEstablishmentPermitApplication</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>Case</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>LWCDRCreateFoodEstablishmentPermitApplicationCustom457</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedFieldName>Id</linkedFieldName>
+        <linkedObjectSequence>6.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>LWCDRCreateFoodEstablishmentPermitApplication</name>
+        <outputCreationSequence>7.0</outputCreationSequence>
+        <outputFieldName>ParentId</outputFieldName>
+        <outputObjectName>Address</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <defaultValue>Permit</defaultValue>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRCreateFoodEstablishmentPermitApplication5424530120369595</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRCreateFoodEstablishmentPermitApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>Category</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <defaultValue>New Business Fee Name</defaultValue>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRCreateFoodEstablishmentPermitApplication9574481474455776</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRCreateFoodEstablishmentPermitApplication</name>
+        <outputCreationSequence>4.0</outputCreationSequence>
+        <outputFieldName>Name</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFeeItem</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>&quot;New&quot;</formulaConverted>
+        <formulaExpression>&quot;New&quot;</formulaExpression>
+        <formulaResultPath>ApplicationType</formulaResultPath>
+        <formulaSequence>3.0</formulaSequence>
+        <globalKey>LWCDRCreateFoodEstablishmentPermitApplication21894449652169157</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRCreateFoodEstablishmentPermitApplication</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRCreateFoodEstablishmentPermitApplication8819465057920772</globalKey>
+        <inputFieldName>ApplicationType</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRCreateFoodEstablishmentPermitApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>ApplicationType</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRCreateFoodEstablishmentPermitApplication040872309400717954</globalKey>
+        <inputFieldName>AddressInformation:EstablishmentInfo:EstablishmentName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <lookupByFieldName>Name</lookupByFieldName>
+        <lookupObjectName>Account</lookupObjectName>
+        <lookupReturnedFieldName>Id</lookupReturnedFieldName>
+        <name>LWCDRCreateFoodEstablishmentPermitApplication</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>AccountId</outputFieldName>
+        <outputObjectName>Case</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRCreateFoodEstablishmentPermitApplication12384622761847908</globalKey>
+        <inputFieldName>SaveEstablishmentCity</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRCreateFoodEstablishmentPermitApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>SiteCity</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRCreateFoodEstablishmentPermitApplication9259011038344793</globalKey>
+        <inputFieldName>SaveEstablishmentStreet</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRCreateFoodEstablishmentPermitApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>SiteStreet</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRCreateFoodEstablishmentPermitApplication6557771336999407</globalKey>
+        <inputFieldName>SaveEstablishmentState</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRCreateFoodEstablishmentPermitApplication</name>
+        <outputCreationSequence>7.0</outputCreationSequence>
+        <outputFieldName>State</outputFieldName>
+        <outputObjectName>Address</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRCreateFoodEstablishmentPermitApplication4862371023250678</globalKey>
+        <inputFieldName>CaseDescription</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRCreateFoodEstablishmentPermitApplication</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Subject</outputFieldName>
+        <outputObjectName>Case</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRCreateFoodEstablishmentPermitApplication7470442123450209</globalKey>
+        <inputFieldName>Address</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRCreateFoodEstablishmentPermitApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>SiteAddress</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRCreateFoodEstablishmentPermitApplication01470775778270883</globalKey>
+        <inputFieldName>SaveEstablishmentCity</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRCreateFoodEstablishmentPermitApplication</name>
+        <outputCreationSequence>7.0</outputCreationSequence>
+        <outputFieldName>City</outputFieldName>
+        <outputObjectName>Address</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRCreateFoodEstablishmentPermitApplication29776965458599336</globalKey>
+        <inputFieldName>SaveEstablishmentPostalCode</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRCreateFoodEstablishmentPermitApplication</name>
+        <outputCreationSequence>7.0</outputCreationSequence>
+        <outputFieldName>PostalCode</outputFieldName>
+        <outputObjectName>Address</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <defaultValue>Minor Review</defaultValue>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRCreateFoodEstablishmentPermitApplication7006966463823818</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRCreateFoodEstablishmentPermitApplication</name>
+        <outputCreationSequence>5.0</outputCreationSequence>
+        <outputFieldName>Name</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFeeItem</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRCreateFoodEstablishmentPermitApplication12822877869915983</globalKey>
+        <inputFieldName>AddressInformation:EstablishmentInfo:EstablishmentName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <lookupByFieldName>Name</lookupByFieldName>
+        <lookupObjectName>Account</lookupObjectName>
+        <lookupReturnedFieldName>Id</lookupReturnedFieldName>
+        <name>LWCDRCreateFoodEstablishmentPermitApplication</name>
+        <outputCreationSequence>3.0</outputCreationSequence>
+        <outputFieldName>AccountId</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFee</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>true</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>LWCDRCreateFoodEstablishmentPermitApplication3898148079056647</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>LWCDRCreateFoodEstablishmentPermitApplication</name>
+        <outputCreationSequence>3.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFee</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <defaultValue>PAID</defaultValue>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRCreateFoodEstablishmentPermitApplication1879313347799283</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRCreateFoodEstablishmentPermitApplication</name>
+        <outputCreationSequence>3.0</outputCreationSequence>
+        <outputFieldName>Status</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFee</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRCreateFoodEstablishmentPermitApplication8973718538993805</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedFieldName>Id</linkedFieldName>
+        <linkedObjectSequence>2.0</linkedObjectSequence>
+        <name>LWCDRCreateFoodEstablishmentPermitApplication</name>
+        <outputCreationSequence>3.0</outputCreationSequence>
+        <outputFieldName>ParentRecordId</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFee</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>true</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>LWCDRCreateFoodEstablishmentPermitApplication439983835303972</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>LWCDRCreateFoodEstablishmentPermitApplication</name>
+        <outputCreationSequence>4.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFeeItem</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRCreateFoodEstablishmentPermitApplication650703689232236</globalKey>
+        <inputFieldName>AddressInformation:EstablishmentInfo:EstablishmentName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <lookupByFieldName>Name</lookupByFieldName>
+        <lookupObjectName>Account</lookupObjectName>
+        <lookupReturnedFieldName>Id</lookupReturnedFieldName>
+        <name>LWCDRCreateFoodEstablishmentPermitApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>AccountId</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>true</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>LWCDRCreateFoodEstablishmentPermitApplication45768179749726867</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>LWCDRCreateFoodEstablishmentPermitApplication</name>
+        <outputCreationSequence>5.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFeeItem</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRCreateFoodEstablishmentPermitApplication42985161941464956</globalKey>
+        <inputFieldName>FeePreviewStep:EnvFee:NewBusinessFee</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRCreateFoodEstablishmentPermitApplication</name>
+        <outputCreationSequence>4.0</outputCreationSequence>
+        <outputFieldName>FeeAmount</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFeeItem</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>LWCDRCreateFoodEstablishmentPermitApplication7191557849956176</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedFieldName>Id</linkedFieldName>
+        <linkedObjectSequence>3.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>LWCDRCreateFoodEstablishmentPermitApplication</name>
+        <outputCreationSequence>5.0</outputCreationSequence>
+        <outputFieldName>RegulatoryTrxnFeeId</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFeeItem</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>LWCDRCreateFoodEstablishmentPermitApplication20929827319306837</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedFieldName>Id</linkedFieldName>
+        <linkedObjectSequence>3.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>LWCDRCreateFoodEstablishmentPermitApplication</name>
+        <outputCreationSequence>4.0</outputCreationSequence>
+        <outputFieldName>RegulatoryTrxnFeeId</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFeeItem</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRCreateFoodEstablishmentPermitApplication2789951917192326</globalKey>
+        <inputFieldName>FeePreviewStep:EnvFee:MinorReviewFee</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRCreateFoodEstablishmentPermitApplication</name>
+        <outputCreationSequence>5.0</outputCreationSequence>
+        <outputFieldName>FeeAmount</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFeeItem</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>&quot;Business/\/\/Name/\/\/-/\/\/&quot; var:AddressInformation:EstablishmentInfo:EstablishmentName + &quot;/\/\/,/\/\/Authorization/\/\/Type/\/\/-/\/\/Food/\/\/Establishment&quot; +</formulaConverted>
+        <formulaExpression>&quot;Business Name - &quot; + AddressInformation:EstablishmentInfo:EstablishmentName + &quot; , Authorization Type - Food Establishment&quot;</formulaExpression>
+        <formulaResultPath>CaseDescription</formulaResultPath>
+        <formulaSequence>1.0</formulaSequence>
+        <globalKey>LWCDRCreateFoodEstablishmentPermitApplication6518585620458577</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRCreateFoodEstablishmentPermitApplication</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>&quot;Food/\/\/Establishment&quot;</formulaConverted>
+        <formulaExpression>&quot;Food Establishment&quot;</formulaExpression>
+        <formulaResultPath>LicenseType</formulaResultPath>
+        <formulaSequence>5.0</formulaSequence>
+        <globalKey>LWCDRCreateFoodEstablishmentPermitApplication6637055952835447</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRCreateFoodEstablishmentPermitApplication</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRCreateFoodEstablishmentPermitApplication9198119756542611</globalKey>
+        <inputFieldName>SaveEstablishmentStreet</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRCreateFoodEstablishmentPermitApplication</name>
+        <outputCreationSequence>7.0</outputCreationSequence>
+        <outputFieldName>Street</outputFieldName>
+        <outputObjectName>Address</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <defaultValue>Contractor</defaultValue>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRCreateFoodEstablishmentPermitApplication07815696473587552</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRCreateFoodEstablishmentPermitApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>PublicSector__CoordinatorTitle__c</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRCreateFoodEstablishmentPermitApplication6987310783385776</globalKey>
+        <inputFieldName>AddressInformation:EstablishmentInfo:EstablishmentName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRCreateFoodEstablishmentPermitApplication</name>
+        <outputCreationSequence>6.0</outputCreationSequence>
+        <outputFieldName>Name</outputFieldName>
+        <outputObjectName>Location</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>true</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRCreateFoodEstablishmentPermitApplication6514526854619129</globalKey>
+        <inputFieldName>ContactId</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRCreateFoodEstablishmentPermitApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>ApplicantId</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRCreateFoodEstablishmentPermitApplication36013227234132716</globalKey>
+        <inputFieldName>ContractorArchitectInfo:ContractorPhone</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRCreateFoodEstablishmentPermitApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>PublicSector__CoordinatorPhone__c</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRCreateFoodEstablishmentPermitApplication5600705903410119</globalKey>
+        <inputFieldName>ContactId</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRCreateFoodEstablishmentPermitApplication</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>ContactId</outputFieldName>
+        <outputObjectName>Case</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRCreateFoodEstablishmentPermitApplication2076561910282979</globalKey>
+        <inputFieldName>Menu:SeatingCapacity</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRCreateFoodEstablishmentPermitApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>PublicSector__MaximumApprovedOccupancy__c</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRCreateFoodEstablishmentPermitApplication39043521141622195</globalKey>
+        <inputFieldName>PermitQuestionnaire:SquareFeet</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRCreateFoodEstablishmentPermitApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>PublicSector__FacilitySquareFootage__c</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRCreateFoodEstablishmentPermitApplication24139374944543723</globalKey>
+        <inputFieldName>AppliedDate</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRCreateFoodEstablishmentPermitApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>AppliedDate</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>var:timeStamp</formulaConverted>
+        <formulaExpression>timeStamp</formulaExpression>
+        <formulaResultPath>AppliedDate</formulaResultPath>
+        <formulaSequence>2.0</formulaSequence>
+        <globalKey>LWCDRCreateFoodEstablishmentPermitApplication12496832860132323</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRCreateFoodEstablishmentPermitApplication</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRCreateFoodEstablishmentPermitApplication8486335810439687</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedFieldName>Id</linkedFieldName>
+        <linkedObjectSequence>1.0</linkedObjectSequence>
+        <name>LWCDRCreateFoodEstablishmentPermitApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>ApplicationCaseId</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRCreateFoodEstablishmentPermitApplication4838097337222447</globalKey>
+        <inputFieldName>ContractorArchitectInfo:ContractorEmail</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRCreateFoodEstablishmentPermitApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>PublicSector__CoordinatorEmail__c</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>LWCDRCreateFoodEstablishmentPermitApplication46065023607497846</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedFieldName>VisitorAddressId</linkedFieldName>
+        <linkedObjectSequence>6.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>LWCDRCreateFoodEstablishmentPermitApplication</name>
+        <outputCreationSequence>7.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>Address</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>true</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <defaultValue>Food Establishment</defaultValue>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRCreateFoodEstablishmentPermitApplication908208601965141</globalKey>
+        <inputFieldName>LicenseType</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <lookupByFieldName>Name</lookupByFieldName>
+        <lookupObjectName>RegulatoryAuthorizationType</lookupObjectName>
+        <lookupReturnedFieldName>Id</lookupReturnedFieldName>
+        <name>LWCDRCreateFoodEstablishmentPermitApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>LicenseTypeId</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>true</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>LWCDRCreateFoodEstablishmentPermitApplication9085804357093841</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>LWCDRCreateFoodEstablishmentPermitApplication</name>
+        <outputCreationSequence>6.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>Location</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRCreateFoodEstablishmentPermitApplication7387401499869386</globalKey>
+        <inputFieldName>PermitQuestionnaire:BriefDescription</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRCreateFoodEstablishmentPermitApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>Description</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>true</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>LWCDRCreateFoodEstablishmentPermitApplication26920026627379934</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>LWCDRCreateFoodEstablishmentPermitApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRCreateFoodEstablishmentPermitApplication9418945121373723</globalKey>
+        <inputFieldName>ContractorArchitectInfo:ContractorName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRCreateFoodEstablishmentPermitApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>PublicSector__CoordinatorName__c</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>true</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>LWCDRCreateFoodEstablishmentPermitApplication5249961447529519</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>LWCDRCreateFoodEstablishmentPermitApplication</name>
+        <outputCreationSequence>7.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>Address</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <outputType>SObject</outputType>
+    <previewJsonData>{
+  &quot;PrefillEstablishmentAddress&quot; : &quot;11720 Plaza America Drive,Reston,VA,20190,United States&quot;,
+  &quot;PrefillResponsibleAddress&quot; : &quot;11720 Plaza America Drive,Reston,VA,20190,United States&quot;,
+  &quot;PrefillBillingAddress&quot; : null,
+  &quot;PrefillInspectionAddress&quot; : null,
+  &quot;omniscriptId&quot; : &quot;0jNKX000000CbUz2AK&quot;,
+  &quot;language&quot; : &quot;English&quot;,
+  &quot;type&quot; : &quot;LicensingAndPermitting&quot;,
+  &quot;runMode&quot; : &quot;preview&quot;,
+  &quot;sId&quot; : &quot;0jNKX000000CbUz2AK&quot;,
+  &quot;theme&quot; : &quot;lightning&quot;,
+  &quot;subType&quot; : &quot;FoodEstablishmentPermit&quot;,
+  &quot;timeStamp&quot; : &quot;2024-06-25T17:56:21.734Z&quot;,
+  &quot;userProfile&quot; : &quot;System Administrator&quot;,
+  &quot;userTimeZoneName&quot; : &quot;America/Los_Angeles&quot;,
+  &quot;userTimeZone&quot; : &quot;-420&quot;,
+  &quot;userCurrencyCode&quot; : &quot;USD&quot;,
+  &quot;userName&quot; : &quot;jblankenship@gps250.dev3&quot;,
+  &quot;userId&quot; : &quot;005KX000000xWOxYAM&quot;,
+  &quot;omniProcessId&quot; : &quot;0jNKX000000CbUz2AK&quot;,
+  &quot;localTimeZoneName&quot; : &quot;America/New_York&quot;,
+  &quot;ContractorArchitectInfo&quot; : {
+    &quot;Checkbox1&quot; : false,
+    &quot;ArchitectNA&quot; : true,
+    &quot;ContractorName&quot; : &quot;Steve Williams&quot;,
+    &quot;ContractorPhone&quot; : &quot;6343843828&quot;,
+    &quot;ContractorFax&quot; : &quot;3933493939&quot;,
+    &quot;ContractorEmail&quot; : &quot;stevewilliams@mailinator.com&quot;
+  },
+  &quot;PlumbingFinish&quot; : {
+    &quot;WaterProvider&quot; : &quot;Buckeye Community Water&quot;,
+    &quot;SewerProvider&quot; : &quot;Buckeye Utility District&quot;,
+    &quot;DrainFinish&quot; : null,
+    &quot;Water&quot; : &quot;Municipal&quot;,
+    &quot;WaterHeater&quot; : 500,
+    &quot;RecoveryRate&quot; : 200,
+    &quot;Sewer&quot; : &quot;Municipal&quot;
+  },
+  &quot;SampleUser&quot; : &quot;005KX000000UBiTYAW&quot;,
+  &quot;PrepopulatePostalCode&quot; : &quot;20190&quot;,
+  &quot;ContactName&quot; : &quot;Jennifer Simmons&quot;,
+  &quot;PrepopulateState&quot; : &quot;VA&quot;,
+  &quot;PrepopulateAddress&quot; : &quot;11720 Plaza America Drive,Reston,VA,20190,United States&quot;,
+  &quot;ContactId&quot; : &quot;003KX000001XoHbYAK&quot;,
+  &quot;ContactEmail&quot; : &quot;jsimmons062021@gmail.com&quot;,
+  &quot;PrepopulateCountry&quot; : &quot;United States&quot;,
+  &quot;PrepopulateCity&quot; : &quot;Reston&quot;,
+  &quot;PrepopulateStreet&quot; : &quot;11720 Plaza America Drive&quot;,
+  &quot;ContactPhone&quot; : &quot;361-826-0683&quot;,
+  &quot;PermitChoice&quot; : {
+    &quot;BusinessType&quot; : &quot;NewBusiness;MinorReview&quot;,
+    &quot;OwnerChangeDate&quot; : &quot;2021-10-01&quot;,
+    &quot;ConstInstallDate&quot; : &quot;2021-10-11&quot;,
+    &quot;ConstInstallEndDate&quot; : &quot;2021-10-15&quot;,
+    &quot;ExpeditedReview&quot; : &quot;ExpediteReviewNo&quot;,
+    &quot;NewBusiness&quot; : true,
+    &quot;MinorOrNew&quot; : true,
+    &quot;MinorAndNew&quot; : true,
+    &quot;PermitActivity&quot; : &quot;New&quot;
+  },
+  &quot;AddressInformation&quot; : {
+    &quot;BusinessOwnershipInformation&quot; : {
+      &quot;ResponsibleOther&quot; : null,
+      &quot;ResponsibleEmail&quot; : &quot;jsimmons@mailinator.com&quot;,
+      &quot;ResponsibleFax&quot; : &quot;6235558080&quot;,
+      &quot;ResponsiblePhone&quot; : &quot;6235554343&quot;,
+      &quot;ResponsibleName&quot; : &quot;Jennifer Simmons&quot;,
+      &quot;EntityType&quot; : &quot;SoleProprietor&quot;
+    },
+    &quot;EstablishmentInfo&quot; : {
+      &quot;EstablishmentName&quot; : &quot;Astro&apos;s Diner&quot;,
+      &quot;EstablishmentFax&quot; : &quot;6235557676&quot;,
+      &quot;EstablishmentEmail&quot; : &quot;AstrosDiner@mailinator.com&quot;,
+      &quot;EstablishmentPhone&quot; : &quot;6235551212&quot;
+    }
+  },
+  &quot;SaveEstablishmentAddress&quot; : &quot;11720 Plaza America Drive,Reston,VA,20190,United States&quot;,
+  &quot;SaveEstablishmentStreet&quot; : &quot;11720 Plaza America Drive&quot;,
+  &quot;SaveEstablishmentCity&quot; : &quot;Reston&quot;,
+  &quot;SaveEstablishmentState&quot; : &quot;VA&quot;,
+  &quot;SaveEstablishmentPostalCode&quot; : &quot;&quot;,
+  &quot;SaveEstablishmentCountry&quot; : &quot;United States&quot;,
+  &quot;SaveResponsibleAddress&quot; : &quot;11720 Plaza America Drive,Reston,VA,20190,United States&quot;,
+  &quot;SaveResponsibleStreet&quot; : &quot;11720 Plaza America Drive&quot;,
+  &quot;SaveResponsibleCity&quot; : &quot;Reston&quot;,
+  &quot;SaveResponsibleState&quot; : &quot;VA&quot;,
+  &quot;SaveResponsiblePostalCode&quot; : &quot;&quot;,
+  &quot;SaveResponsibleCountry&quot; : &quot;United States&quot;,
+  &quot;SaveInspectionAddress&quot; : &quot;11720 Plaza America Drive,Reston,VA,20190,United States&quot;,
+  &quot;SaveInspectionAStreet&quot; : &quot;11720 Plaza America Drive&quot;,
+  &quot;SaveInspectionCity&quot; : &quot;Reston&quot;,
+  &quot;SaveInspectionState&quot; : &quot;VA&quot;,
+  &quot;SaveInspectionPostalCode&quot; : &quot;&quot;,
+  &quot;SaveInspectionCountry&quot; : &quot;United States&quot;,
+  &quot;DogPatio&quot; : &quot;DogYes&quot;,
+  &quot;PermitQuestionnaire&quot; : {
+    &quot;BriefDescription&quot; : &quot;Taking over the existing diner.  Changing the name to Astro&apos;s Diner.  Replacing the existing (broken) ice maker in the existing dog friendly patio with the same model.&quot;,
+    &quot;OutdoorOperations&quot; : &quot;OutdoorYes&quot;,
+    &quot;DriveThru&quot; : &quot;DriveThruNo&quot;,
+    &quot;ExteriorOpenings&quot; : &quot;ExteriorOpeningsNo&quot;,
+    &quot;SquareFeet&quot; : 4500,
+    &quot;Floors&quot; : 1
+  },
+  &quot;Menu&quot; : {
+    &quot;MenuCuisine&quot; : null,
+    &quot;SeatingCapacity&quot; : 55,
+    &quot;HoursOfOperation&quot; : {
+      &quot;StartTime&quot; : &quot;06:00:00.000Z&quot;,
+      &quot;EndTime&quot; : &quot;22:00:00.000Z&quot;,
+      &quot;DayOfWeek&quot; : &quot;Weekdays&quot;
+    },
+    &quot;MenuDesc&quot; : &quot;Astro’s Diner, a full-service, casual dining restaurant, will provide a static menu that is separated into groups (e.g., breakfast, lunch, dinner, brunch, drinks).  Each group will be broken down by categories like appetizers, pastas, sandwiches, sides, etc.  The type of food will be casual dining with traditional Mexican and American dishes.&quot;
+  },
+  &quot;Disclaimer&quot; : {
+    &quot;Disclosure1&quot; : true,
+    &quot;DisclaimerDate1&quot; : &quot;2024-06-25&quot;,
+    &quot;Disclosure2&quot; : true,
+    &quot;DisclaimerDate2&quot; : &quot;2024-06-25&quot;
+  },
+  &quot;NewBusinessFeeName&quot; : &quot;New Business Permit&quot;,
+  &quot;MinorReviewFeeName&quot; : &quot;Minor Review&quot;,
+  &quot;Fee&quot; : 245,
+  &quot;FeePreviewStep&quot; : {
+    &quot;EnvFee&quot; : {
+      &quot;TotalFees&quot; : 560,
+      &quot;NewBusinessFee&quot; : 315,
+      &quot;MinorReviewFee&quot; : 245
+    }
+  }
+}</previewJsonData>
+    <processSuperBulk>false</processSuperBulk>
+    <responseCacheTtlMinutes>0.0</responseCacheTtlMinutes>
+    <rollbackOnError>true</rollbackOnError>
+    <sourceObject>json</sourceObject>
+    <sourceObjectDefault>false</sourceObjectDefault>
+    <synchronousProcessThreshold>-1.0</synchronousProcessThreshold>
+    <type>Load</type>
+    <uniqueName>LWCDRCreateFoodEstablishmentPermitApplication_1</uniqueName>
+    <versionNumber>1.0</versionNumber>
+    <xmlDeclarationRemoved>false</xmlDeclarationRemoved>
+</OmniDataTransform>

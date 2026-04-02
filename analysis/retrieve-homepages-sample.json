@@ -1,0 +1,85 @@
+{
+  "status": 0,
+  "result": {
+    "done": true,
+    "fileProperties": [
+      {
+        "createdById": "005Hu00000UJSRhIAP",
+        "createdByName": "Russell Evans",
+        "createdDate": "2026-03-25T16:02:21.000Z",
+        "fileName": "unpackaged/flexipages/SDO_Home_Page_Default.flexipage",
+        "fullName": "SDO_Home_Page_Default",
+        "id": "0M0Hu000003X8GYKA0",
+        "lastModifiedById": "005Hu00000UJSRhIAP",
+        "lastModifiedByName": "Russell Evans",
+        "lastModifiedDate": "2026-03-25T16:02:21.000Z",
+        "manageableState": "unmanaged",
+        "type": "FlexiPage"
+      },
+      {
+        "createdById": "005Hu00000UJSRhIAP",
+        "createdByName": "Russell Evans",
+        "createdDate": "2026-03-25T16:02:21.000Z",
+        "fileName": "unpackaged/flexipages/gps_Grants_Home.flexipage",
+        "fullName": "gps_Grants_Home",
+        "id": "0M0Hu000003X8MjKAK",
+        "lastModifiedById": "005Hu00000UJSRhIAP",
+        "lastModifiedByName": "Russell Evans",
+        "lastModifiedDate": "2026-03-25T16:02:21.000Z",
+        "manageableState": "unmanaged",
+        "type": "FlexiPage"
+      },
+      {
+        "createdById": "005Hu00000UJSRhIAP",
+        "createdByName": "Russell Evans",
+        "createdDate": "2026-03-25T16:02:21.000Z",
+        "fileName": "unpackaged/flexipages/Benefit_Management_Home_Page.flexipage",
+        "fullName": "Benefit_Management_Home_Page",
+        "id": "0M0Hu000003X8N4KAK",
+        "lastModifiedById": "005Hu00000UJSRhIAP",
+        "lastModifiedByName": "Russell Evans",
+        "lastModifiedDate": "2026-03-25T16:02:21.000Z",
+        "manageableState": "unmanaged",
+        "type": "FlexiPage"
+      },
+      {
+        "createdById": "005Hu00000UJSRhIAP",
+        "createdByName": "Russell Evans",
+        "createdDate": "2026-03-31T16:32:43.641Z",
+        "fileName": "unpackaged/package.xml",
+        "fullName": "unpackaged/package.xml",
+        "id": "",
+        "lastModifiedById": "005Hu00000UJSRhIAP",
+        "lastModifiedByName": "Russell Evans",
+        "lastModifiedDate": "2026-03-31T16:32:43.641Z",
+        "manageableState": "unmanaged",
+        "type": "Package"
+      }
+    ],
+    "id": "09SHu00001YOpKOMA1",
+    "status": "Succeeded",
+    "success": true,
+    "messages": [],
+    "files": [
+      {
+        "fullName": "SDO_Home_Page_Default",
+        "type": "FlexiPage",
+        "state": "Created",
+        "filePath": "/Users/russellevans/Downloads/Salesforce Builds/Contracts/force-app/main/default/flexipages/SDO_Home_Page_Default.flexipage-meta.xml"
+      },
+      {
+        "fullName": "gps_Grants_Home",
+        "type": "FlexiPage",
+        "state": "Created",
+        "filePath": "/Users/russellevans/Downloads/Salesforce Builds/Contracts/force-app/main/default/flexipages/gps_Grants_Home.flexipage-meta.xml"
+      },
+      {
+        "fullName": "Benefit_Management_Home_Page",
+        "type": "FlexiPage",
+        "state": "Created",
+        "filePath": "/Users/russellevans/Downloads/Salesforce Builds/Contracts/force-app/main/default/flexipages/Benefit_Management_Home_Page.flexipage-meta.xml"
+      }
+    ]
+  },
+  "warnings": []
+}

@@ -1,0 +1,83 @@
+<template>
+    <!-- <lightning-card title="Superstore Sales">
+        <lightning-badge label="Normal" slot="actions"></lightning-badge>
+        <p>Year to Date - Office Supplies</p>
+        <div class="slds-grid slds-m-top_medium slds-p-horizontal_small">
+            <h1 class="slds-text-heading_large slds-col_bump-right bold">$243.1k</h1>
+        </div>
+    </lightning-card> -->
+    <div class="pulseChart"
+         data-tracking="true"
+         data-tracking-id={NANOID}
+         data-tracking-dom-event="load"
+         data-tracking-version={VERSION}
+         data-tracking-action="Loaded Tableau Pulse"
+         data-tracking-delay="10"
+         data-tracking-minutes-saved="10"
+         data-tracking-source="QBrix-1-xDO-DataCloudMockComponents-Base">
+        <div class="myCardHeader">
+            <div class="slds-page-header__row">
+                <div class="slds-page-header__col-title">
+                    <p class="slds-page-header__name-meta">{timeRange}</p>
+                    <div class="slds-page-header__name">
+                        <div class="slds-page-header__name-title">
+                            <h1>
+                                <span class="slds-page-header__title slds-truncate" title="">{title}</span>
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-page-header__col-actions">
+                    <ul class="dropbtn icons btn-right showLeft">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <!-- <lightning-badge label="Normal"></lightning-badge> -->
+                </div>
+            </div>
+        </div>
+        <div class="slds-card__body_inner myCardBody">
+            <div class="">
+                <h1 class="slds-text-heading_large currentValue">{currentValue}</h1>
+                <p>
+                    <template lwc:if={scoreIsPositive}>
+                        <span class="slds-text-heading_smalls bold positive">{changeText}</span>
+                    </template>
+                    <template lwc:if={scoreIsNegative}>
+                        <span class="slds-text-heading_small bold negative">{changeText}</span>
+                    </template>
+                    <!-- <span class="slds-text-heading_small slds-text-color_success bold">{changeText}</span> -->
+                    <span> {changeContext}</span>
+                </p>
+                <div class="chartWrap slds-m-vertical_large">
+                    <div class="chartImg">
+                        <div class="legendLeft inline">
+                            <p class="top">{yLeftTop}</p>
+                            <p class="middle">{yLeftMiddle}</p>
+                            <p class="bottom">{yLeftBottom}</p>
+                        </div>
+                        <div class="tabImgWrap inline">
+                            <img src={tabImg} class="tabImg"/>
+                        </div>
+                        <div class="legendRight inline">
+                            <p class="top">{yRightTop}</p>
+                            <p class="middle">{yRightMiddle}</p>
+                            <p class="bottom">{yRightBottom}</p>
+                        </div>
+                    </div>
+                    <div class="legendBottom">
+                        <div class="bottomLeft">
+                            <p>{startMetric}</p>
+                        </div>
+                        <div class="bottomRight">
+                            <p>{endMetric}</p>
+                        </div>
+                    </div>
+                </div>
+                <p>{insightText}</p>
+                <!-- <p>The trend for <b>Superstore Sales</b> changed 6 months ago and is now <b>increasing</b> at a <b>faster</b> rate.</p> -->
+            </div>
+        </div>
+    </div>
+</template>

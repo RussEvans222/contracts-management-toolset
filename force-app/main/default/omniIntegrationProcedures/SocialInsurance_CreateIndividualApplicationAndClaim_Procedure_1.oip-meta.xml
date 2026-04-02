@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OmniIntegrationProcedure xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customJavaScript>{
+    &quot;WorkersEmploymentDetails&quot;: {
+        &quot;PSS_SI_v1_UploadPayslips&quot;: null
+    },
+    &quot;CertificateOfCapacity&quot;: {
+        &quot;PSS_SI_v1_UploadDocument&quot;: null
+    },
+    &quot;omniscriptId&quot;: &quot;0jNSG0000001oKX2AY&quot;,
+    &quot;language&quot;: &quot;English&quot;,
+    &quot;type&quot;: &quot;SocialInsurance&quot;,
+    &quot;runMode&quot;: &quot;preview&quot;,
+    &quot;sId&quot;: &quot;0jNSG0000001oKX2AY&quot;,
+    &quot;theme&quot;: &quot;lightning&quot;,
+    &quot;subType&quot;: &quot;FileClaim&quot;,
+    &quot;timeStamp&quot;: &quot;2024-02-01T10:31:21.264Z&quot;,
+    &quot;userProfile&quot;: &quot;System Administrator&quot;,
+    &quot;userTimeZoneName&quot;: &quot;America/Los_Angeles&quot;,
+    &quot;userTimeZone&quot;: &quot;-480&quot;,
+    &quot;userCurrencyCode&quot;: &quot;USD&quot;,
+    &quot;userName&quot;: &quot;vikingsvjt1sdb6@salesforce.com&quot;,
+    &quot;userId&quot;: &quot;005SG000004OK05YAG&quot;,
+    &quot;omniProcessId&quot;: &quot;0jNSG0000001oKX2AY&quot;,
+    &quot;localTimeZoneName&quot;: &quot;Asia/Calcutta&quot;,
+    &quot;WorkerPersonalDetails&quot;: {
+        &quot;PSS_SI_v1_FirstName&quot;: &quot;Test123&quot;,
+        &quot;PSS_SI_v1_LastName&quot;: &quot;Test123&quot;,
+        &quot;PSS_SI_v1_DateOfBirth&quot;: &quot;2024-01-31&quot;,
+        &quot;PSS_SI_v1_Gender&quot;: &quot;Male&quot;,
+        &quot;PSS_SI_v1_HomeTelephoneNumber&quot;: &quot;6437657688&quot;,
+        &quot;PSS_SI_v1_CellPhoneNumber&quot;: &quot;7567568787&quot;,
+        &quot;PSS_SI_v1_Email&quot;: &quot;Test@gmail.com&quot;,
+        &quot;PSS_SI_v1_Address&quot;: &quot;Test123Test123&quot;,
+        &quot;PSS_SI_v1_Country&quot;: &quot;IN&quot;,
+        &quot;PSS_SI_v1_City&quot;: &quot;HYD&quot;,
+        &quot;PSS_SI_v1_State&quot;: &quot;TN&quot;,
+        &quot;PSS_SI_v1_ZipCode&quot;: &quot;435358&quot;
+    },
+    &quot;IncidentWorkersInjuryDetails&quot;: {
+        &quot;PSS_SI_v1_NatureOfInjury&quot;: null,
+        &quot;PSS_SI_v1_EmployerResponsibleForWorkplace&quot;: &quot;Test123&quot;,
+        &quot;PSS_SI_v1_DateTimeForInjury&quot;: &quot;2024-01-30T06:30:00.000Z&quot;,
+        &quot;PSS_SI_v1_ReportDateTimeForInjury&quot;: &quot;2024-01-31T06:30:00.000Z&quot;
+    },
+    &quot;sInstanceId&quot;: &quot;0kTSG0000000ptl2AA&quot;,
+    &quot;DRId_PreliminaryApplicationRef&quot;: &quot;0goSG0000000pCDYAY&quot;,
+    &quot;Acknowledgment&quot;: {
+        &quot;PSS_SI_v1_Date&quot;: &quot;2024-01-31T18:30:00.000Z&quot;,
+        &quot;PSS_SI_v1_Signature&quot;: &quot;Test123&quot;
+    },
+    &quot;Review&quot;: {
+        &quot;ReviewWorkersPersonalDetails&quot;: {
+            &quot;PSS_SI_v1_ReviewFirstName&quot;: &quot;  Test123&quot;,
+            &quot;PSS_SI_v1_ReviewLastName&quot;: &quot;  Test123&quot;,
+            &quot;PSS_SI_v1_ReviewDateOfBirth&quot;: &quot;2024-01-30T18:30:00.000Z&quot;,
+            &quot;PSS_SI_v1_ReviewGender&quot;: &quot; Male&quot;,
+            &quot;PSS_SI_v1_ReviewHomePhone&quot;: &quot;6437657688&quot;,
+            &quot;PSS_SI_v1_ReviewMobilePhone&quot;: &quot; 7567568787&quot;,
+            &quot;PSS_SI_v1_ReviewEmail&quot;: &quot;  Test@gmail.com&quot;,
+            &quot;PSS_SI_v1_ReviewAddress&quot;: &quot;  Test123Test123&quot;,
+            &quot;PSS_SI_v1_ReviewCountry&quot;: &quot;  IN&quot;,
+            &quot;PSS_SI_v1_ReviewState&quot;: &quot;  TN&quot;,
+            &quot;PSS_SI_v1_ReviewCity&quot;: &quot;  HYD&quot;,
+            &quot;PSS_SI_v1_ReviewZipCode&quot;: &quot;  435358&quot;
+        },
+        &quot;ReviewIncidentAndWorkersInjuryDetails&quot;: {
+            &quot;PSS_SI_v1_ReviewTakingTimeOff&quot;: &quot;  null&quot;,
+            &quot;PSS_SI_v1_ReviewMedicalTreatment&quot;: &quot;  null&quot;,
+            &quot;PSS_SI_v1_ReviewNatureOfInjury&quot;: &quot;  null&quot;,
+            &quot;PSS_SI_v1_ReviewHowYouInjured&quot;: &quot;  null&quot;,
+            &quot;PSS_SI_v1_ReviewEmployerResponsibleForWorkplace&quot;: &quot;  Test123&quot;,
+            &quot;PSS_SI_v1_ReviewDateTimeForInjury&quot;: &quot;  2024-1-2&quot;,
+            &quot;PSS_SI_v1_ReviewWorkStoppedDateTime&quot;: &quot;  null-null-null&quot;,
+            &quot;PSS_SI_v1_ReviewReportDateTimeForInjury&quot;: &quot;  2024-1-3&quot;
+        },
+        &quot;ReviewWorkerEmploymentDetails&quot;: {
+            &quot;PSS_SI_v1_ReviewOccupation&quot;: &quot;  null&quot;,
+            &quot;PSS_SI_v1_ReviewNameOfEmployer&quot;: &quot;  null&quot;,
+            &quot;PSS_SI_v1_ReviewAreYouStillEmployed&quot;: &quot;  null&quot;,
+            &quot;PSS_SI_v1_ReviewEmploymentType&quot;: &quot;  null&quot;,
+            &quot;PSS_SI_v1_ReviewEmploymentStartDate&quot;: &quot;  null&quot;,
+            &quot;PSS_SI_v1_ReviewIncomeFrequency&quot;: &quot;  null&quot;,
+            &quot;PSS_SI_v1_ReviewIncome&quot;: 0
+        },
+        &quot;ReviewCertificateOfCapacity&quot;: {
+            &quot;PSS_SI_v1_ReviewInjuryType&quot;: &quot;  null&quot;,
+            &quot;PSS_SI_v1_ReviewWorkerCapacity&quot;: &quot;  null&quot;,
+            &quot;PSS_SI_v1_ReviewFromDate&quot;: &quot;  null&quot;,
+            &quot;PSS_SI_v1_ReviewToDate&quot;: &quot;  null&quot;,
+            &quot;PSS_SI_v1_ReviewProviderName&quot;: &quot;  null&quot;,
+            &quot;PSS_SI_v1_ReviewProviderContactNumber&quot;: &quot;  null&quot;,
+            &quot;PSS_SI_v1_ReviewExaminationDate&quot;: &quot;  null&quot;,
+            &quot;PSS_SI_v1_ReviewSignedDate&quot;: &quot;  null&quot;,
+            &quot;PSS_SI_v1_ReviewIssuedDate&quot;: &quot;  null&quot;
+        },
+        &quot;ReviewAcknowledgment&quot;: {
+            &quot;PSS_SI_v1_ReviewSignature&quot;: &quot;  Test123&quot;,
+            &quot;PSS_SI_v1_ReviewDate&quot;: &quot;  2024-01-31T18:30:00.000Z&quot;
+        }
+    },
+    &quot;omniScriptId&quot;: &quot;0jNSG0000001oKX2AY&quot;,
+    &quot;elementName&quot;: &quot;CreateIndividualApplicationAndRelatedRecords&quot;
+}</customJavaScript>
+    <description>Creates an individual application and a claim when an employee files a workers&apos; compensation claim.</description>
+    <elementTypeComponentMapping>{&quot;ElementTypeToHTMLTemplateList&quot;:[]}</elementTypeComponentMapping>
+    <isActive>true</isActive>
+    <isIntegProcdSignatureAvl>false</isIntegProcdSignatureAvl>
+    <isIntegrationProcedure>true</isIntegrationProcedure>
+    <isManagedUsingStdDesigner>false</isManagedUsingStdDesigner>
+    <isMetadataCacheDisabled>false</isMetadataCacheDisabled>
+    <isOmniScriptEmbeddable>false</isOmniScriptEmbeddable>
+    <isTestProcedure>false</isTestProcedure>
+    <isWebCompEnabled>false</isWebCompEnabled>
+    <language>Procedure</language>
+    <name>CreateIndividualApplicationAndClaim</name>
+    <omniProcessElements>
+        <isActive>true</isActive>
+        <isOmniScriptEmbeddable>false</isOmniScriptEmbeddable>
+        <level>0.0</level>
+        <name>CreateClaimEmployee</name>
+        <omniProcessVersionNumber>0.0</omniProcessVersionNumber>
+        <propertySetConfig>{
+  &quot;executionConditionalFormula&quot; : &quot;&quot;,
+  &quot;failureConditionalFormula&quot; : &quot;&quot;,
+  &quot;failOnStepError&quot; : true,
+  &quot;useFormulas&quot; : true,
+  &quot;additionalInput&quot; : {
+    &quot;AccountId&quot; : &quot;=%User:AccountId%&quot;
+  },
+  &quot;additionalOutput&quot; : { },
+  &quot;failureResponse&quot; : { },
+  &quot;sendOnlyAdditionalInput&quot; : false,
+  &quot;returnOnlyAdditionalOutput&quot; : false,
+  &quot;returnOnlyFailureResponse&quot; : false,
+  &quot;responseJSONPath&quot; : &quot;&quot;,
+  &quot;responseJSONNode&quot; : &quot;&quot;,
+  &quot;sendJSONPath&quot; : &quot;&quot;,
+  &quot;sendJSONNode&quot; : &quot;&quot;,
+  &quot;bundle&quot; : &quot;PSSSocInsCreateClaim&quot;,
+  &quot;chainOnStep&quot; : false,
+  &quot;actionMessage&quot; : &quot;&quot;,
+  &quot;show&quot; : null,
+  &quot;label&quot; : &quot;DataMapperPostAction1&quot;,
+  &quot;disOnTplt&quot; : false
+}</propertySetConfig>
+        <sequenceNumber>2.0</sequenceNumber>
+        <type>DataRaptor Post Action</type>
+    </omniProcessElements>
+    <omniProcessElements>
+        <isActive>true</isActive>
+        <isOmniScriptEmbeddable>false</isOmniScriptEmbeddable>
+        <level>0.0</level>
+        <name>PSSGetPersonAccountIDOfApplicant</name>
+        <omniProcessVersionNumber>0.0</omniProcessVersionNumber>
+        <propertySetConfig>{
+  &quot;executionConditionalFormula&quot; : &quot;&quot;,
+  &quot;failureConditionalFormula&quot; : &quot;&quot;,
+  &quot;failOnStepError&quot; : true,
+  &quot;useFormulas&quot; : true,
+  &quot;additionalInput&quot; : {
+    &quot;userId&quot; : &quot;=%userId%&quot;
+  },
+  &quot;additionalOutput&quot; : { },
+  &quot;failureResponse&quot; : { },
+  &quot;sendOnlyAdditionalInput&quot; : false,
+  &quot;returnOnlyAdditionalOutput&quot; : false,
+  &quot;returnOnlyFailureResponse&quot; : false,
+  &quot;responseJSONPath&quot; : &quot;User&quot;,
+  &quot;responseJSONNode&quot; : &quot;User&quot;,
+  &quot;sendJSONPath&quot; : &quot;&quot;,
+  &quot;sendJSONNode&quot; : &quot;&quot;,
+  &quot;bundle&quot; : &quot;PSSSocInsGetPersonAccountIDOfApplicant&quot;,
+  &quot;dataRaptor Input Parameters&quot; : [ ],
+  &quot;chainOnStep&quot; : false,
+  &quot;actionMessage&quot; : &quot;&quot;,
+  &quot;ignoreCache&quot; : false,
+  &quot;show&quot; : null,
+  &quot;label&quot; : &quot;DataMapperTurboAction1&quot;,
+  &quot;disOnTplt&quot; : false
+}</propertySetConfig>
+        <sequenceNumber>1.0</sequenceNumber>
+        <type>DataRaptor Turbo Action</type>
+    </omniProcessElements>
+    <omniProcessElements>
+        <isActive>true</isActive>
+        <isOmniScriptEmbeddable>false</isOmniScriptEmbeddable>
+        <level>0.0</level>
+        <name>PSSSCreateIndividualApplicationEmployee</name>
+        <omniProcessVersionNumber>0.0</omniProcessVersionNumber>
+        <propertySetConfig>{
+  &quot;executionConditionalFormula&quot; : &quot;&quot;,
+  &quot;failureConditionalFormula&quot; : &quot;&quot;,
+  &quot;failOnStepError&quot; : true,
+  &quot;useFormulas&quot; : true,
+  &quot;additionalInput&quot; : {
+    &quot;DRId_Claim&quot; : &quot;%CreateClaimEmployee:Claim_1:Id%&quot;,
+    &quot;AccountId&quot; : &quot;%User:AccountId%&quot;,
+    &quot;ApplicationType&quot; : &quot;Filed Claim&quot;
+  },
+  &quot;additionalOutput&quot; : { },
+  &quot;failureResponse&quot; : { },
+  &quot;sendOnlyAdditionalInput&quot; : false,
+  &quot;returnOnlyAdditionalOutput&quot; : false,
+  &quot;returnOnlyFailureResponse&quot; : false,
+  &quot;responseJSONPath&quot; : &quot;&quot;,
+  &quot;responseJSONNode&quot; : &quot;&quot;,
+  &quot;sendJSONPath&quot; : &quot;&quot;,
+  &quot;sendJSONNode&quot; : &quot;&quot;,
+  &quot;bundle&quot; : &quot;PSSSocInsCreateIndividualApplication&quot;,
+  &quot;chainOnStep&quot; : false,
+  &quot;actionMessage&quot; : &quot;&quot;,
+  &quot;show&quot; : null,
+  &quot;label&quot; : &quot;DataMapperPostAction2&quot;,
+  &quot;disOnTplt&quot; : false
+}</propertySetConfig>
+        <sequenceNumber>3.0</sequenceNumber>
+        <type>DataRaptor Post Action</type>
+    </omniProcessElements>
+    <omniProcessElements>
+        <isActive>true</isActive>
+        <isOmniScriptEmbeddable>false</isOmniScriptEmbeddable>
+        <level>0.0</level>
+        <name>Response</name>
+        <omniProcessVersionNumber>0.0</omniProcessVersionNumber>
+        <propertySetConfig>{
+  &quot;executionConditionalFormula&quot; : &quot;&quot;,
+  &quot;useFormulas&quot; : true,
+  &quot;additionalOutput&quot; : {
+    &quot;ClaimValues&quot; : {
+      &quot;ClaimName&quot; : &quot;%CreateClaimEmployee:Claim_1:Name%&quot;,
+      &quot;ClaimId&quot; : &quot;%CreateClaimEmployee:Claim_1:Id%&quot;,
+      &quot;IndividualApplicationId&quot; : &quot;%PSSSCreateIndividualApplicationEmployee:IndividualApplication_1:Id%&quot;
+    }
+  },
+  &quot;returnOnlyAdditionalOutput&quot; : false,
+  &quot;returnFullDataJSON&quot; : false,
+  &quot;responseFormat&quot; : &quot;JSON&quot;,
+  &quot;responseJSONPath&quot; : &quot;&quot;,
+  &quot;responseJSONNode&quot; : &quot;&quot;,
+  &quot;sendJSONPath&quot; : &quot;SetClaimValues&quot;,
+  &quot;sendJSONNode&quot; : &quot;&quot;,
+  &quot;responseDefaultData&quot; : { },
+  &quot;vlcResponseHeaders&quot; : { },
+  &quot;show&quot; : null,
+  &quot;label&quot; : &quot;ResponseAction1&quot;,
+  &quot;disOnTplt&quot; : false
+}</propertySetConfig>
+        <sequenceNumber>6.0</sequenceNumber>
+        <type>Response Action</type>
+    </omniProcessElements>
+    <omniProcessElements>
+        <isActive>true</isActive>
+        <isOmniScriptEmbeddable>false</isOmniScriptEmbeddable>
+        <level>0.0</level>
+        <name>Save-Responses</name>
+        <omniProcessVersionNumber>0.0</omniProcessVersionNumber>
+        <propertySetConfig>{
+  &quot;executionConditionalFormula&quot; : &quot;&quot;,
+  &quot;failureConditionalFormula&quot; : &quot;&quot;,
+  &quot;failOnStepError&quot; : true,
+  &quot;useFormulas&quot; : true,
+  &quot;additionalInput&quot; : { },
+  &quot;additionalOutput&quot; : { },
+  &quot;failureResponse&quot; : { },
+  &quot;sendOnlyAdditionalInput&quot; : false,
+  &quot;returnOnlyAdditionalOutput&quot; : false,
+  &quot;returnOnlyFailureResponse&quot; : false,
+  &quot;responseJSONPath&quot; : &quot;&quot;,
+  &quot;responseJSONNode&quot; : &quot;&quot;,
+  &quot;sendJSONPath&quot; : &quot;&quot;,
+  &quot;sendJSONNode&quot; : &quot;&quot;,
+  &quot;remoteClass&quot; : &quot;omnistudio.StoreResponses&quot;,
+  &quot;remoteOptions&quot; : {
+    &quot;Assessment.Name&quot; : &quot;%SetAssessmentName:AssessmentName%&quot;,
+    &quot;Assessment.AssessmentStatus&quot; : &quot;Completed&quot;,
+    &quot;Assessment.ResponseContextId&quot; : &quot;%PSSSCreateIndividualApplicationEmployee:IndividualApplication_1:Id%&quot;
+  },
+  &quot;remoteMethod&quot; : &quot;invokeMethod&quot;,
+  &quot;chainOnStep&quot; : false,
+  &quot;actionMessage&quot; : &quot;&quot;,
+  &quot;additionalChainableResponse&quot; : { },
+  &quot;show&quot; : null,
+  &quot;label&quot; : &quot;RemoteAction1&quot;,
+  &quot;disOnTplt&quot; : false
+}</propertySetConfig>
+        <sequenceNumber>5.0</sequenceNumber>
+        <type>Remote Action</type>
+    </omniProcessElements>
+    <omniProcessElements>
+        <isActive>true</isActive>
+        <isOmniScriptEmbeddable>false</isOmniScriptEmbeddable>
+        <level>0.0</level>
+        <name>SetAssessmentName</name>
+        <omniProcessVersionNumber>0.0</omniProcessVersionNumber>
+        <propertySetConfig>{
+  &quot;executionConditionalFormula&quot; : &quot;&quot;,
+  &quot;failureConditionalFormula&quot; : &quot;&quot;,
+  &quot;failOnStepError&quot; : true,
+  &quot;elementValueMap&quot; : {
+    &quot;AssessmentName&quot; : &quot;=CONCAT(\&quot;Assessment-\&quot;, FORMATDATETIME(NOW(\&quot;yyyy-MM-dd&apos;T&apos;HH:mm:ss\&quot;),\&quot;yyyy-MM-dd&apos;T&apos;HH:mm:ss\&quot;))&quot;
+  },
+  &quot;responseJSONPath&quot; : &quot;&quot;,
+  &quot;responseJSONNode&quot; : &quot;&quot;,
+  &quot;chainOnStep&quot; : false,
+  &quot;actionMessage&quot; : &quot;&quot;,
+  &quot;show&quot; : null,
+  &quot;label&quot; : &quot;SetValues1&quot;,
+  &quot;disOnTplt&quot; : false
+}</propertySetConfig>
+        <sequenceNumber>4.0</sequenceNumber>
+        <type>Set Values</type>
+    </omniProcessElements>
+    <omniProcessKey>SocialInsurance_CreateIndividualApplicationAndClaim</omniProcessKey>
+    <omniProcessType>Integration Procedure</omniProcessType>
+    <propertySetConfig>{
+  &quot;linkToExternalObject&quot; : &quot;&quot;,
+  &quot;trackingCustomData&quot; : { },
+  &quot;includeAllActionsInResponse&quot; : false,
+  &quot;columnsPropertyMap&quot; : [ ],
+  &quot;relationshipFieldsMap&quot; : [ ],
+  &quot;labelSingular&quot; : &quot;&quot;,
+  &quot;labelPlural&quot; : &quot;&quot;,
+  &quot;description&quot; : &quot;&quot;,
+  &quot;nameColumn&quot; : &quot;&quot;,
+  &quot;rollbackOnError&quot; : true,
+  &quot;chainableQueriesLimit&quot; : 50,
+  &quot;chainableDMLStatementsLimit&quot; : null,
+  &quot;chainableCpuLimit&quot; : 2000,
+  &quot;chainableHeapSizeLimit&quot; : null,
+  &quot;chainableDMLRowsLimit&quot; : null,
+  &quot;chainableQueryRowsLimit&quot; : null,
+  &quot;chainableSoslQueriesLimit&quot; : null,
+  &quot;chainableActualTimeLimit&quot; : null,
+  &quot;additionalChainableResponse&quot; : { },
+  &quot;queueableChainableQueriesLimit&quot; : 120,
+  &quot;queueableChainableCpuLimit&quot; : 40000,
+  &quot;queueableChainableHeapSizeLimit&quot; : 6,
+  &quot;ttlMinutes&quot; : 5,
+  &quot;mockResponseMap&quot; : { }
+}</propertySetConfig>
+    <subType>CreateIndividualApplicationAndClaim</subType>
+    <type>SocialInsurance</type>
+    <uniqueName>SocialInsurance_CreateIndividualApplicationAndClaim_Procedure_1</uniqueName>
+    <versionNumber>1.0</versionNumber>
+    <webComponentKey>21327f21-4846-f2ca-0f4f-86ba75ef14be</webComponentKey>
+</OmniIntegrationProcedure>

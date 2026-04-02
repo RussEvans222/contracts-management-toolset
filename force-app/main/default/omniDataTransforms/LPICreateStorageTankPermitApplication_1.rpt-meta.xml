@@ -1,0 +1,954 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OmniDataTransform xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <assignmentRulesUsed>false</assignmentRulesUsed>
+    <deletedOnSuccess>false</deletedOnSuccess>
+    <errorIgnored>false</errorIgnored>
+    <expectedInputJson>{
+  &quot;timeStamp&quot; : &quot;2021-08-24T12:22:01.084Z&quot;,
+  &quot;userProfile&quot; : &quot;System Administrator&quot;,
+  &quot;userTimeZone&quot; : &quot;-240&quot;,
+  &quot;userCurrencyCode&quot; : &quot;USD&quot;,
+  &quot;userName&quot; : &quot;jblankenship@lpi.demo&quot;,
+  &quot;userId&quot; : &quot;0055e000005x2m0AAA&quot;,
+  &quot;Facility&quot; : {
+    &quot;FacilityName&quot; : &quot;ABC Inc&quot;,
+    &quot;FacilityAddress-Block&quot; : {
+      &quot;FacilityAddress&quot; : &quot;3939 South Harvard Avenue, Tulsa, OK, USA&quot;,
+      &quot;FacilityPostalCode&quot; : &quot;74135&quot;,
+      &quot;FacilityCounty&quot; : &quot;Tulsa County&quot;,
+      &quot;FacilityState&quot; : &quot;OK&quot;,
+      &quot;FacilityCity&quot; : &quot;Tulsa&quot;,
+      &quot;FacilityPhysicalAddress&quot; : &quot;3939 South Harvard Avenue&quot;
+    },
+    &quot;FacilityPhone&quot; : &quot;3939393939&quot;,
+    &quot;TotalCapacityOfFacility&quot; : 10,
+    &quot;PrimaryContactEmail&quot; : &quot;393939393@mail.com&quot;,
+    &quot;FireMarshalsOfficePermitNumber&quot; : &quot;39&quot;,
+    &quot;FireMarshalsOfficePermitDate&quot; : &quot;8/4/2021&quot;,
+    &quot;FacilityDepRegistrationNumber&quot; : &quot;393939&quot;,
+    &quot;FacilityDepRegistrationDate&quot; : &quot;8/3/2021&quot;,
+    &quot;OwnerStartDate&quot; : &quot;8/4/2021&quot;,
+    &quot;OperatorStartDate&quot; : &quot;8/3/2021&quot;,
+    &quot;DepUseOfFacility&quot; : &quot;Aggregate Mining&quot;
+  },
+  &quot;TankDetails&quot; : {
+    &quot;ChangePermitType&quot; : null,
+    &quot;MeansWillBeUsedToSecureYesNoTheTankAgainstMoving&quot; : null,
+    &quot;SpecifyTheListing&quot; : null,
+    &quot;TypeOfPermit&quot; : &quot;New Aboveground Storage Facility&quot;,
+    &quot;TankNumber&quot; : &quot;393939&quot;,
+    &quot;NominalCapacityOfTank&quot; : 393,
+    &quot;TankMaterial&quot; : &quot;Steel&quot;,
+    &quot;TankOrientation&quot; : &quot;Horizontal&quot;,
+    &quot;Listing&quot; : &quot;UL 80&quot;,
+    &quot;UseOfTank&quot; : &quot;Public Fueling&quot;,
+    &quot;PublicUseOfTank&quot; : &quot;Automotive&quot;,
+    &quot;PrivateUseOfTank&quot; : &quot;Automotive&quot;,
+    &quot;FloodZone&quot; : &quot;No&quot;,
+    &quot;Vault&quot; : &quot;No&quot;,
+    &quot;SecondaryContainment&quot; : &quot;Dike, Concrete&quot;,
+    &quot;WeatherProtection&quot; : &quot;Inside a building&quot;,
+    &quot;Security&quot; : &quot;Chain Link Fence&quot;,
+    &quot;CollisionProtection&quot; : &quot;Barricades&quot;,
+    &quot;NearestImportantBuilding&quot; : 10,
+    &quot;NearestPropertyLine&quot; : 10,
+    &quot;NearestSideOfAPublicWay&quot; : 10,
+    &quot;OtherTanks&quot; : 10,
+    &quot;PropaneStorage&quot; : 10,
+    &quot;Dispensers&quot; : 10,
+    &quot;ElectricalWiringAndEquipment&quot; : &quot;Yes&quot;,
+    &quot;TankLeakDetection&quot; : &quot;Electronic/Ground Water&quot;
+  },
+  &quot;Applicant&quot; : {
+    &quot;ApplicantName&quot; : &quot;Geoff Duckwall&quot;,
+    &quot;ApplicantAddress-Block&quot; : {
+      &quot;ApplicantAddress&quot; : &quot;3939 South Harvard Avenue, Tulsa, OK, USA&quot;,
+      &quot;ApplicantPostalCode&quot; : &quot;74135&quot;,
+      &quot;ApplicantCounty&quot; : &quot;Tulsa County&quot;,
+      &quot;ApplicantState&quot; : &quot;OK&quot;,
+      &quot;ApplicantCity&quot; : &quot;Tulsa&quot;,
+      &quot;ApplicantStreetAddress&quot; : &quot;3939 South Harvard Avenue&quot;
+    }
+  },
+  &quot;ChamberInformation&quot; : {
+    &quot;Chamber&quot; : [ {
+      &quot;Capacity(UsGallons)&quot; : 10,
+      &quot;Product&quot; : &quot;Antifreeze&quot;,
+      &quot;ProductHeated&quot; : &quot;Yes&quot;,
+      &quot;ProductUnderPressure&quot; : &quot;Yes&quot;,
+      &quot;DoesFillPipeTerminateWithin6”OfTheBottomOfTheTank?&quot; : &quot;Yes&quot;,
+      &quot;DoesFillingSlowAt90AndStopAt95OfTankCapacity?&quot; : &quot;Yes&quot;,
+      &quot;OverfillProtection&quot; : &quot;Level Gauge&quot;
+    }, {
+      &quot;Capacity(UsGallons)&quot; : 20,
+      &quot;Product&quot; : &quot;Alcohol&quot;,
+      &quot;ProductHeated&quot; : &quot;Yes&quot;,
+      &quot;ProductUnderPressure&quot; : &quot;Yes&quot;,
+      &quot;DoesFillPipeTerminateWithin6”OfTheBottomOfTheTank?&quot; : &quot;Yes&quot;,
+      &quot;DoesFillingSlowAt90AndStopAt95OfTankCapacity?&quot; : &quot;Yes&quot;,
+      &quot;OverfillProtection&quot; : &quot;Mech + Elect&quot;
+    } ]
+  }
+}</expectedInputJson>
+    <fieldLevelSecurityEnabled>false</fieldLevelSecurityEnabled>
+    <inputType>JSON</inputType>
+    <isManagedUsingStdDesigner>false</isManagedUsingStdDesigner>
+    <name>LPICreateStorageTankPermitApplication</name>
+    <nullInputsIncludedInOutput>false</nullInputsIncludedInOutput>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>&quot;New&quot;</formulaConverted>
+        <formulaExpression>&quot;New&quot;</formulaExpression>
+        <formulaResultPath>ApplicationType</formulaResultPath>
+        <formulaSequence>3.0</formulaSequence>
+        <globalKey>LPICreateStorageTankPermitApplication8556267417039269</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPICreateStorageTankPermitApplication</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>&quot;Establishment/\/\/License&quot;</formulaConverted>
+        <formulaExpression>&quot;Establishment License&quot;</formulaExpression>
+        <formulaResultPath>caseType</formulaResultPath>
+        <formulaSequence>5.0</formulaSequence>
+        <globalKey>LPICreateStorageTankPermitApplication5035017936449471</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPICreateStorageTankPermitApplication</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPICreateStorageTankPermitApplication010799849101255976</globalKey>
+        <inputFieldName>Facility:FacilityAddress-Block:FacilityCity</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPICreateStorageTankPermitApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>SiteCity</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPICreateStorageTankPermitApplication7263049026835391</globalKey>
+        <inputFieldName>Applicant:ApplicantName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <lookupByFieldName>Name</lookupByFieldName>
+        <lookupObjectName>Contact</lookupObjectName>
+        <lookupReturnedFieldName>Id</lookupReturnedFieldName>
+        <name>LPICreateStorageTankPermitApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>ApplicantId</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>true</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>LPICreateStorageTankPermitApplication998038822104595</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>LPICreateStorageTankPermitApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>true</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>LPICreateStorageTankPermitApplication7114024580870137</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>LPICreateStorageTankPermitApplication</name>
+        <outputCreationSequence>7.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>Location</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPICreateStorageTankPermitApplication11882004114355293</globalKey>
+        <inputFieldName>AppliedDate</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPICreateStorageTankPermitApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>AppliedDate</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>true</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>LPICreateStorageTankPermitApplication29444928804474757</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>LPICreateStorageTankPermitApplication</name>
+        <outputCreationSequence>6.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>Address</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPICreateStorageTankPermitApplication2326861385882517</globalKey>
+        <inputFieldName>Facility:FacilityAddress-Block:FacilityPhysicalAddress</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPICreateStorageTankPermitApplication</name>
+        <outputCreationSequence>6.0</outputCreationSequence>
+        <outputFieldName>Street</outputFieldName>
+        <outputObjectName>Address</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPICreateStorageTankPermitApplication16170521015700512</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedFieldName>Id</linkedFieldName>
+        <linkedObjectSequence>1.0</linkedObjectSequence>
+        <name>LPICreateStorageTankPermitApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>ApplicationCaseId</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>LPICreateStorageTankPermitApplication12420225456448275</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedFieldName>VisitorAddressId</linkedFieldName>
+        <linkedObjectSequence>5.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>LPICreateStorageTankPermitApplication</name>
+        <outputCreationSequence>6.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>Address</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>true</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <defaultValue>Submitted</defaultValue>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPICreateStorageTankPermitApplication28322478084850267</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPICreateStorageTankPermitApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>Status</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPICreateStorageTankPermitApplication13626428027266835</globalKey>
+        <inputFieldName>Facility:FacilityAddress-Block:FacilityCity</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPICreateStorageTankPermitApplication</name>
+        <outputCreationSequence>6.0</outputCreationSequence>
+        <outputFieldName>City</outputFieldName>
+        <outputObjectName>Address</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPICreateStorageTankPermitApplication7626099269541577</globalKey>
+        <inputFieldName>Facility:FacilityAddress-Block:FacilityPhysicalAddress</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPICreateStorageTankPermitApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>SiteStreet</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>LPICreateStorageTankPermitApplication9383275305967804</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedFieldName>Id</linkedFieldName>
+        <linkedObjectSequence>5.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>LPICreateStorageTankPermitApplication</name>
+        <outputCreationSequence>6.0</outputCreationSequence>
+        <outputFieldName>ParentId</outputFieldName>
+        <outputObjectName>Address</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPICreateStorageTankPermitApplication3190932498923824</globalKey>
+        <inputFieldName>Facility:FacilityAddress-Block:FacilityState</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPICreateStorageTankPermitApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>SiteState</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPICreateStorageTankPermitApplication3422284485545266</globalKey>
+        <inputFieldName>Facility:FacilityAddress-Block:FacilityPostalCode</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPICreateStorageTankPermitApplication</name>
+        <outputCreationSequence>6.0</outputCreationSequence>
+        <outputFieldName>PostalCode</outputFieldName>
+        <outputObjectName>Address</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <defaultValue>PAID</defaultValue>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPICreateStorageTankPermitApplication14137288017743077</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPICreateStorageTankPermitApplication</name>
+        <outputCreationSequence>3.0</outputCreationSequence>
+        <outputFieldName>Status</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFee</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPICreateStorageTankPermitApplication8312849738619417</globalKey>
+        <inputFieldName>Facility:FacilityAddress-Block:FacilityState</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPICreateStorageTankPermitApplication</name>
+        <outputCreationSequence>6.0</outputCreationSequence>
+        <outputFieldName>State</outputFieldName>
+        <outputObjectName>Address</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPICreateStorageTankPermitApplication8200246409525453</globalKey>
+        <inputFieldName>Facility:FacilityAddress-Block:FacilityAddress</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPICreateStorageTankPermitApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>SiteAddress</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <defaultValue>Permit</defaultValue>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPICreateStorageTankPermitApplication09103690039810042</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPICreateStorageTankPermitApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>ApplicationCategory</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPICreateStorageTankPermitApplication3197628385789666</globalKey>
+        <inputFieldName>Facility:FacilityName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPICreateStorageTankPermitApplication</name>
+        <outputCreationSequence>5.0</outputCreationSequence>
+        <outputFieldName>Name</outputFieldName>
+        <outputObjectName>Location</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>true</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>&quot;Facility/\/\/-/\/\/&quot; var:Facility:FacilityName + &quot;/\/\/,/\/\/Tank/\/\/Type/\/\/-/\/\/&quot; + var:TankDetails:TypeOfPermit +</formulaConverted>
+        <formulaExpression>&quot;Facility - &quot; + Facility:FacilityName + &quot; , Tank Type - &quot; + TankDetails:TypeOfPermit</formulaExpression>
+        <formulaResultPath>CaseDescription</formulaResultPath>
+        <formulaSequence>1.0</formulaSequence>
+        <globalKey>LPICreateStorageTankPermitApplication774397978323921</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPICreateStorageTankPermitApplication</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPICreateStorageTankPermitApplication6516900914227621</globalKey>
+        <inputFieldName>Facility:FacilityName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <lookupByFieldName>Name</lookupByFieldName>
+        <lookupObjectName>Account</lookupObjectName>
+        <lookupReturnedFieldName>Id</lookupReturnedFieldName>
+        <name>LPICreateStorageTankPermitApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>AccountId</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPICreateStorageTankPermitApplication09191278023425853</globalKey>
+        <inputFieldName>Facility:FacilityName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPICreateStorageTankPermitApplication</name>
+        <outputCreationSequence>7.0</outputCreationSequence>
+        <outputFieldName>Name</outputFieldName>
+        <outputObjectName>Location</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>true</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>true</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>LPICreateStorageTankPermitApplication5766018538455717</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>LPICreateStorageTankPermitApplication</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>Case</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>true</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>LPICreateStorageTankPermitApplication9659806202265535</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>LPICreateStorageTankPermitApplication</name>
+        <outputCreationSequence>4.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFeeItem</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPICreateStorageTankPermitApplication4020534168276848</globalKey>
+        <inputFieldName>caseType</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPICreateStorageTankPermitApplication</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Type</outputFieldName>
+        <outputObjectName>Case</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPICreateStorageTankPermitApplication30288252426589435</globalKey>
+        <inputFieldName>Facility:FacilityName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <lookupByFieldName>Name</lookupByFieldName>
+        <lookupObjectName>Account</lookupObjectName>
+        <lookupReturnedFieldName>Id</lookupReturnedFieldName>
+        <name>LPICreateStorageTankPermitApplication</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>AccountId</outputFieldName>
+        <outputObjectName>Case</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>var:timeStamp</formulaConverted>
+        <formulaExpression>timeStamp</formulaExpression>
+        <formulaResultPath>AppliedDate</formulaResultPath>
+        <formulaSequence>2.0</formulaSequence>
+        <globalKey>LPICreateStorageTankPermitApplication060404096579159905</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPICreateStorageTankPermitApplication</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPICreateStorageTankPermitApplication19774749236356315</globalKey>
+        <inputFieldName>Applicant:ApplicantName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <lookupByFieldName>Name</lookupByFieldName>
+        <lookupObjectName>Contact</lookupObjectName>
+        <lookupReturnedFieldName>Id</lookupReturnedFieldName>
+        <name>LPICreateStorageTankPermitApplication</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>ContactId</outputFieldName>
+        <outputObjectName>Case</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>true</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>LPICreateStorageTankPermitApplication740345183741127</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>LPICreateStorageTankPermitApplication</name>
+        <outputCreationSequence>5.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>Location</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>&quot;Street/\/\/-:/\/\/&quot; var:EstablishmentInformation:Street + &quot;,/\/\/City/\/\/-:/\/\/&quot; + var:EstablishmentInformation:City + &quot;,/\/\/State/\/\/-:/\/\/&quot; + var:
+EstablishmentInformation:State + &quot;,/\/\/Zipcode/\/\/-:/\/\/&quot; + var:EstablishmentInformation:Zipcode + &quot;,/\/\/Neighborhood/\/\/-:/\/\/&quot; + var:EstablishmentInformation:Neighborhood +</formulaConverted>
+        <formulaExpression>&quot;Street -: &quot;+EstablishmentInformation:Street+&quot;, City -: &quot;+EstablishmentInformation:City+&quot;, State -: &quot;+
+EstablishmentInformation:State+&quot;, Zipcode -: &quot;+EstablishmentInformation:Zipcode+&quot;, Neighborhood -: &quot;+EstablishmentInformation:Neighborhood</formulaExpression>
+        <formulaResultPath>Address</formulaResultPath>
+        <formulaSequence>4.0</formulaSequence>
+        <globalKey>LPICreateStorageTankPermitApplication24860190406761173</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPICreateStorageTankPermitApplication</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPICreateStorageTankPermitApplication018942149806952635</globalKey>
+        <inputFieldName>Applicant:ApplicantName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <lookupByFieldName>Name</lookupByFieldName>
+        <lookupObjectName>Contact</lookupObjectName>
+        <lookupReturnedFieldName>Id</lookupReturnedFieldName>
+        <name>LPICreateStorageTankPermitApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>PrimaryOwnerId</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPICreateStorageTankPermitApplication9388579931916585</globalKey>
+        <inputFieldName>CaseDescription</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPICreateStorageTankPermitApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>Description</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPICreateStorageTankPermitApplication6893054906281055</globalKey>
+        <inputFieldName>Facility:FacilityAddress-Block:FacilityPostalCode</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPICreateStorageTankPermitApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>SitePostalCode</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <defaultValue>Petroleum Tank Permit</defaultValue>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPICreateStorageTankPermitApplication4975875192548682</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <lookupByFieldName>Name</lookupByFieldName>
+        <lookupObjectName>RegulatoryAuthorizationType</lookupObjectName>
+        <lookupReturnedFieldName>Id</lookupReturnedFieldName>
+        <name>LPICreateStorageTankPermitApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>LicenseTypeId</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <defaultValue>Underground Petroleum Tank Owner</defaultValue>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPICreateStorageTankPermitApplication8699429231736939</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <lookupByFieldName>Name</lookupByFieldName>
+        <lookupObjectName>BusinessType</lookupObjectName>
+        <lookupReturnedFieldName>Id</lookupReturnedFieldName>
+        <name>LPICreateStorageTankPermitApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>BusinessTypeId</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPICreateStorageTankPermitApplication02929386070145834</globalKey>
+        <inputFieldName>ApplicationType</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPICreateStorageTankPermitApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>ApplicationType</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <defaultValue>Permit</defaultValue>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPICreateStorageTankPermitApplication8077647011314979</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPICreateStorageTankPermitApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>Category</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPICreateStorageTankPermitApplication9219183916386222</globalKey>
+        <inputFieldName>CreatedApplicationId</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPICreateStorageTankPermitApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPICreateStorageTankPermitApplication7681224357618381</globalKey>
+        <inputFieldName>Facility:FacilityName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <lookupByFieldName>Name</lookupByFieldName>
+        <lookupObjectName>Account</lookupObjectName>
+        <lookupReturnedFieldName>Id</lookupReturnedFieldName>
+        <name>LPICreateStorageTankPermitApplication</name>
+        <outputCreationSequence>3.0</outputCreationSequence>
+        <outputFieldName>AccountId</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFee</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>LPICreateStorageTankPermitApplication9669213079845729</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedFieldName>Id</linkedFieldName>
+        <linkedObjectSequence>3.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>LPICreateStorageTankPermitApplication</name>
+        <outputCreationSequence>4.0</outputCreationSequence>
+        <outputFieldName>RegulatoryTrxnFeeId</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFeeItem</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <defaultValue>15</defaultValue>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPICreateStorageTankPermitApplication801642747119476</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPICreateStorageTankPermitApplication</name>
+        <outputCreationSequence>4.0</outputCreationSequence>
+        <outputFieldName>FeeAmount</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFeeItem</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <defaultValue>Permit Application Fee</defaultValue>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPICreateStorageTankPermitApplication9698830597950774</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPICreateStorageTankPermitApplication</name>
+        <outputCreationSequence>4.0</outputCreationSequence>
+        <outputFieldName>Name</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFeeItem</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPICreateStorageTankPermitApplication30222355540427404</globalKey>
+        <inputFieldName>CaseDescription</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPICreateStorageTankPermitApplication</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Description</outputFieldName>
+        <outputObjectName>Case</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>true</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>LPICreateStorageTankPermitApplication8863400181214685</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>LPICreateStorageTankPermitApplication</name>
+        <outputCreationSequence>3.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFee</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPICreateStorageTankPermitApplication7693984050997735</globalKey>
+        <inputFieldName>CaseDescription</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPICreateStorageTankPermitApplication</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Subject</outputFieldName>
+        <outputObjectName>Case</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>LPICreateStorageTankPermitApplication9101817231454239</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedFieldName>Id</linkedFieldName>
+        <linkedObjectSequence>6.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>LPICreateStorageTankPermitApplication</name>
+        <outputCreationSequence>7.0</outputCreationSequence>
+        <outputFieldName>VisitorAddressId</outputFieldName>
+        <outputObjectName>Location</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>LPICreateStorageTankPermitApplication19406098616582268</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedFieldName>Id</linkedFieldName>
+        <linkedObjectSequence>2.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>LPICreateStorageTankPermitApplication</name>
+        <outputCreationSequence>3.0</outputCreationSequence>
+        <outputFieldName>ParentRecordId</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFee</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <outputType>SObject</outputType>
+    <previewJsonData>{
+  &quot;timeStamp&quot; : &quot;2021-08-24T15:45:09.358Z&quot;,
+  &quot;userProfile&quot; : &quot;System Administrator&quot;,
+  &quot;userTimeZone&quot; : &quot;-240&quot;,
+  &quot;userCurrencyCode&quot; : &quot;USD&quot;,
+  &quot;userName&quot; : &quot;jblankenship@lpi.demo&quot;,
+  &quot;userId&quot; : &quot;0055e000005x2m0AAA&quot;,
+  &quot;Facility&quot; : {
+    &quot;OperatorStartDate&quot; : &quot;3/12/2007&quot;,
+    &quot;OwnerStartDate&quot; : &quot;4/12/2010&quot;,
+    &quot;FacilityDepRegistrationDate&quot; : &quot;2/26/2012&quot;,
+    &quot;FireMarshalsOfficePermitDate&quot; : &quot;7/15/2021&quot;,
+    &quot;DepUseOfFacility&quot; : &quot;Wholesale Oil&quot;,
+    &quot;FacilityDepRegistrationNumber&quot; : &quot;399393939393&quot;,
+    &quot;FireMarshalsOfficePermitNumber&quot; : &quot;393923929&quot;,
+    &quot;TotalCapacityOfFacility&quot; : 13030,
+    &quot;PrimaryContactEmail&quot; : &quot;mail@acadiafuels.com&quot;,
+    &quot;FacilityPhone&quot; : &quot;2074793835&quot;,
+    &quot;FacilityAddress-Block&quot; : {
+      &quot;FacilityAddress&quot; : &quot;711 Bar Harbor Rd, Trenton, ME 04605, USA&quot;
+    },
+    &quot;FacilityName&quot; : &quot;ACADIA FUEL LLC&quot;
+  },
+  &quot;TankDetails&quot; : {
+    &quot;ChangePermitType&quot; : null,
+    &quot;MeansWillBeUsedToSecureYesNoTheTankAgainstMoving&quot; : null,
+    &quot;SpecifyTheListing&quot; : null,
+    &quot;TankLeakDetection&quot; : &quot;Automatic Tank Gauge&quot;,
+    &quot;ElectricalWiringAndEquipment&quot; : &quot;Yes&quot;,
+    &quot;Dispensers&quot; : 292,
+    &quot;PropaneStorage&quot; : 828,
+    &quot;OtherTanks&quot; : 83,
+    &quot;NearestSideOfAPublicWay&quot; : 504,
+    &quot;NearestPropertyLine&quot; : 403,
+    &quot;NearestImportantBuilding&quot; : 130,
+    &quot;CollisionProtection&quot; : &quot;Bollards&quot;,
+    &quot;Security&quot; : &quot;Chain Link Fence&quot;,
+    &quot;WeatherProtection&quot; : &quot;None&quot;,
+    &quot;SecondaryContainment&quot; : &quot;None&quot;,
+    &quot;Vault&quot; : &quot;No&quot;,
+    &quot;FloodZone&quot; : &quot;No&quot;,
+    &quot;PrivateUseOfTank&quot; : &quot;Automotive&quot;,
+    &quot;PublicUseOfTank&quot; : &quot;Automotive&quot;,
+    &quot;UseOfTank&quot; : &quot;Public Fueling&quot;,
+    &quot;Listing&quot; : &quot;UL 142&quot;,
+    &quot;TankOrientation&quot; : &quot;Horizontal&quot;,
+    &quot;TankMaterial&quot; : &quot;Steel&quot;,
+    &quot;NominalCapacityOfTank&quot; : 1200,
+    &quot;TankNumber&quot; : &quot;949392939&quot;,
+    &quot;TypeOfPermit&quot; : &quot;New Aboveground Storage Facility&quot;
+  },
+  &quot;Applicant&quot; : {
+    &quot;ApplicantAddress-Block&quot; : {
+      &quot;ApplicantAddress&quot; : &quot;711 Bar Harbor Rd, Trenton, ME 04605, USA&quot;
+    },
+    &quot;ApplicantName&quot; : &quot;Geoff Duckwall&quot;
+  },
+  &quot;ChamberInformation&quot; : {
+    &quot;Chamber&quot; : [ {
+      &quot;OverfillProtection&quot; : &quot;Electronic&quot;,
+      &quot;DoesFillingSlowAt90AndStopAt95OfTankCapacity?&quot; : &quot;Yes&quot;,
+      &quot;DoesFillPipeTerminateWithin6”OfTheBottomOfTheTank?&quot; : &quot;No&quot;,
+      &quot;ProductUnderPressure&quot; : &quot;Yes&quot;,
+      &quot;ProductHeated&quot; : &quot;No&quot;,
+      &quot;Product&quot; : &quot;Diesel Fuel&quot;,
+      &quot;Capacity(UsGallons)&quot; : 500
+    }, {
+      &quot;OverfillProtection&quot; : &quot;Vent Whistle&quot;,
+      &quot;DoesFillingSlowAt90AndStopAt95OfTankCapacity?&quot; : &quot;Yes&quot;,
+      &quot;DoesFillPipeTerminateWithin6”OfTheBottomOfTheTank?&quot; : &quot;No&quot;,
+      &quot;ProductUnderPressure&quot; : &quot;Yes&quot;,
+      &quot;ProductHeated&quot; : &quot;No&quot;,
+      &quot;Product&quot; : &quot;Crude Oil&quot;,
+      &quot;Capacity(UsGallons)&quot; : 400
+    }, {
+      &quot;OverfillProtection&quot; : &quot;Electronic&quot;,
+      &quot;DoesFillingSlowAt90AndStopAt95OfTankCapacity?&quot; : &quot;Yes&quot;,
+      &quot;DoesFillPipeTerminateWithin6”OfTheBottomOfTheTank?&quot; : &quot;No&quot;,
+      &quot;ProductUnderPressure&quot; : &quot;Yes&quot;,
+      &quot;ProductHeated&quot; : &quot;No&quot;,
+      &quot;Product&quot; : &quot;Diesel Fuel&quot;,
+      &quot;Capacity(UsGallons)&quot; : 300
+    } ]
+  }
+}</previewJsonData>
+    <processSuperBulk>false</processSuperBulk>
+    <responseCacheTtlMinutes>0.0</responseCacheTtlMinutes>
+    <rollbackOnError>true</rollbackOnError>
+    <sourceObject>json</sourceObject>
+    <sourceObjectDefault>false</sourceObjectDefault>
+    <synchronousProcessThreshold>-1.0</synchronousProcessThreshold>
+    <type>Load</type>
+    <uniqueName>LPICreateStorageTankPermitApplication_1</uniqueName>
+    <versionNumber>1.0</versionNumber>
+    <xmlDeclarationRemoved>false</xmlDeclarationRemoved>
+</OmniDataTransform>

@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OmniDataTransform xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <assignmentRulesUsed>false</assignmentRulesUsed>
+    <deletedOnSuccess>false</deletedOnSuccess>
+    <errorIgnored>false</errorIgnored>
+    <expectedOutputJson>{
+  &quot;ContextId&quot; : &quot;13aKX000000wkMTYAY&quot;,
+  &quot;omniscriptId&quot; : &quot;0jNKX000000wruJ2AQ&quot;,
+  &quot;language&quot; : &quot;English&quot;,
+  &quot;type&quot; : &quot;GrantsAF&quot;,
+  &quot;runMode&quot; : &quot;preview&quot;,
+  &quot;sId&quot; : &quot;0jNKX000000wruJ2AQ&quot;,
+  &quot;theme&quot; : &quot;lightning&quot;,
+  &quot;subType&quot; : &quot;CreateOutcomeActivities&quot;,
+  &quot;timeStamp&quot; : &quot;2024-09-04T16:20:55.916Z&quot;,
+  &quot;userProfile&quot; : &quot;System Administrator&quot;,
+  &quot;userTimeZoneName&quot; : &quot;America/Los_Angeles&quot;,
+  &quot;userTimeZone&quot; : &quot;-420&quot;,
+  &quot;userCurrencyCode&quot; : &quot;USD&quot;,
+  &quot;userName&quot; : &quot;admin@df24.grantmaking&quot;,
+  &quot;userId&quot; : &quot;005KX0000012A3YYAU&quot;,
+  &quot;omniProcessId&quot; : &quot;0jNKX000000wruJ2AQ&quot;,
+  &quot;localTimeZoneName&quot; : &quot;America/New_York&quot;,
+  &quot;CreateOutcomeActivitiesStep&quot; : {
+    &quot;OutcomeBlock&quot; : [ {
+      &quot;OutcomeId&quot; : &quot;9OCKX000000TNM94AO&quot;,
+      &quot;ProgramId&quot; : &quot;11WKX000000kNrT2AU&quot;,
+      &quot;OutcomeNames&quot; : &quot;ABC&quot;
+    }, {
+      &quot;OutcomeId&quot; : &quot;9OCKX000000TNM44AO&quot;,
+      &quot;ProgramId&quot; : &quot;11WKX000000kNrT2AU&quot;,
+      &quot;OutcomeNames&quot; : &quot;DEF&quot;
+    } ]
+  }
+}</expectedOutputJson>
+    <fieldLevelSecurityEnabled>false</fieldLevelSecurityEnabled>
+    <inputType>JSON</inputType>
+    <isManagedUsingStdDesigner>false</isManagedUsingStdDesigner>
+    <name>DRGetOutcomesFromFundingOpportunity</name>
+    <nullInputsIncludedInOutput>false</nullInputsIncludedInOutput>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRGetOutcomesFromFundingOpportunityCustom4782</globalKey>
+        <inputFieldName>IA:FundingOpportunity.Name</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRGetOutcomesFromFundingOpportunity</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>FundingOpportunityName</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <filterValue>FO:Id</filterValue>
+        <globalKey>DRGetOutcomesFromFundingOpportunityCustom3305</globalKey>
+        <inputFieldName>Funding_Opportunity__c</inputFieldName>
+        <inputObjectName>Outcome</inputObjectName>
+        <inputObjectQuerySequence>4.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRGetOutcomesFromFundingOpportunity</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>OC</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRGetOutcomesFromFundingOpportunityCustom6661</globalKey>
+        <inputFieldName>OC:Id</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRGetOutcomesFromFundingOpportunity</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>CreateOutcomeActivitiesStep:OutcomeBlock:OutcomeId</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRGetOutcomesFromFundingOpportunityCustom3363</globalKey>
+        <inputFieldName>FO:ProgramId</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRGetOutcomesFromFundingOpportunity</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>CreateOutcomeActivitiesStep:OutcomeBlock:ProgramId</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <filterValue>IA:FundingOpportunityId</filterValue>
+        <globalKey>DRGetOutcomesFromFundingOpportunityCustom3605</globalKey>
+        <inputFieldName>Id</inputFieldName>
+        <inputObjectName>FundingOpportunity</inputObjectName>
+        <inputObjectQuerySequence>3.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRGetOutcomesFromFundingOpportunity</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>FO</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <filterValue>IAT:IndividualApplicationId</filterValue>
+        <globalKey>DRGetOutcomesFromFundingOpportunityCustom2290</globalKey>
+        <inputFieldName>Id</inputFieldName>
+        <inputObjectName>IndividualApplication</inputObjectName>
+        <inputObjectQuerySequence>2.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRGetOutcomesFromFundingOpportunity</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>IA</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRGetOutcomesFromFundingOpportunityCustom6165</globalKey>
+        <inputFieldName>OC:Name</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRGetOutcomesFromFundingOpportunity</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>CreateOutcomeActivitiesStep:OutcomeBlock:OutcomeName</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <filterValue>IndividualApplicationTaskId</filterValue>
+        <globalKey>DRGetOutcomesFromFundingOpportunityCustom4222</globalKey>
+        <inputFieldName>Id</inputFieldName>
+        <inputObjectName>IndividualApplicationTask</inputObjectName>
+        <inputObjectQuerySequence>1.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRGetOutcomesFromFundingOpportunity</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>IAT</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRGetOutcomesFromFundingOpportunityCustom722</globalKey>
+        <inputFieldName>IA:Id</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRGetOutcomesFromFundingOpportunity</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>CreateOutcomeActivitiesStep:OutcomeBlock:IAId</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRGetOutcomesFromFundingOpportunityCustom5489</globalKey>
+        <inputFieldName>IA:Id</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRGetOutcomesFromFundingOpportunity</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>IndividualApplicationId</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRGetOutcomesFromFundingOpportunityCustom5147</globalKey>
+        <inputFieldName>IA:FundingOpportunity.Description</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRGetOutcomesFromFundingOpportunity</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>FundingOpportunityDescription</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <outputType>JSON</outputType>
+    <previewJsonData>{
+  &quot;ContextId&quot; : &quot;13aKX000000wkMuYAI&quot;
+}</previewJsonData>
+    <processSuperBulk>false</processSuperBulk>
+    <responseCacheTtlMinutes>0.0</responseCacheTtlMinutes>
+    <rollbackOnError>false</rollbackOnError>
+    <sourceObject>json</sourceObject>
+    <sourceObjectDefault>false</sourceObjectDefault>
+    <synchronousProcessThreshold>0.0</synchronousProcessThreshold>
+    <type>Extract</type>
+    <uniqueName>DRGetOutcomesFromFundingOpportunity_1</uniqueName>
+    <versionNumber>1.0</versionNumber>
+    <xmlDeclarationRemoved>false</xmlDeclarationRemoved>
+</OmniDataTransform>

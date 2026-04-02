@@ -1,0 +1,43 @@
+<template>
+	<article class="slds-card">
+		<div class="slds-card__header slds-grid">
+			<header class="slds-media slds-media_center slds-has-flexi-truncate">
+
+				<div class="slds-media__body">
+					<h2 class="slds-card__header-title">
+						<span>{headerTitle}</span>
+					</h2>
+				</div>
+				<div class="slds-no-flex">
+					<button class="slds-button slds-button_icon-border">
+						<lightning-icon class="icn" icon-name="utility:down" size="xx-small" title="small size">
+						</lightning-icon>
+					</button>
+				</div>
+			</header>
+		</div>
+		<div class="slds-card__body slds-card__body_inner">
+			<div class="slds-grid slds-gutters">
+				<div class="slds-col">
+					<div class="slds-text-title_bold">{title1}
+					</div>
+					<div class="slds-text-heading_large" if:true={metric3}>{metric3}
+					</div>
+				</div>
+				<div class="slds-col">
+					<div class="slds-text-title_bold">{title2}
+					</div>
+					<div class="slds-text-heading_large">{Subtitle2}
+					</div>
+				</div>
+				<div class="slds-col">
+					<div class="slds-text-title_bold">{title3}
+					</div>
+					<div class="slds-text-heading_large">{Subtitle3}
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</article>
+</template>

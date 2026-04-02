@@ -1,0 +1,17 @@
+{
+  "status": 0,
+  "result": {
+    "records": [
+      {
+        "attributes": {
+          "type": "User",
+          "url": "/services/data/v66.0/sobjects/User/005Hu00000UJSRhIAP"
+        },
+        "Id": "005Hu00000UJSRhIAP"
+      }
+    ],
+    "totalSize": 1,
+    "done": true
+  },
+  "warnings": []
+}

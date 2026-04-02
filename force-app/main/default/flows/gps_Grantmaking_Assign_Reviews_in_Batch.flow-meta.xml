@@ -1,0 +1,906 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <description>Retrieves the user IDs of all active users who have the Review Application user permission</description>
+        <name>Get_Active_Application_Reviewer_IDs</name>
+        <label>Get Active Application Reviewer IDs</label>
+        <locationX>842</locationX>
+        <locationY>566</locationY>
+        <actionName>getActiveApplicationReviewerIds</actionName>
+        <actionType>getActiveApplicationReviewerIds</actionType>
+        <connector>
+            <targetReference>GetReviewerUsers</targetReference>
+        </connector>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>ScrnDplyErrNoReviewerUserFound</targetReference>
+        </faultConnector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <nameSegment>getActiveApplicationReviewerIds</nameSegment>
+        <offset>0</offset>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
+    <apiVersion>63.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <description>Adds the individual application record ID passed into the flow to the ids collection.</description>
+        <name>AddIndvApplicationRecordIdToCollection</name>
+        <label>Add Individual Application Record ID to Collection</label>
+        <locationX>314</locationX>
+        <locationY>134</locationY>
+        <assignmentItems>
+            <assignToReference>ids</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>HaveIndividualApplicationRecordIds</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Sets the individual application ID and user ID of ApplicationReview record variable using the current items in the IterateOverIndividualApplications and IterateOverSelectedReviewers loops. Also adds the ApplicationReview record to the ApplicationReviews record collection.</description>
+        <name>SetApplicationReviewVariables</name>
+        <label>Set Application Review Variables</label>
+        <locationX>2162</locationX>
+        <locationY>1754</locationY>
+        <assignmentItems>
+            <assignToReference>applicationReview.ApplicationId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>IterateOverIndividualApplications.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>applicationReview.AssignedUserId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>IterateOverSelectedReviewers.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>applicationReviews</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>applicationReview</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>IterateOverSelectedReviewers</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Sets the NumberOfSelectedApplications and NumberOfSelectedRevieweUsers variables to the number of selected to the number of SelectedApplications and SelectedReviewers respectively.</description>
+        <name>SetIdvApplnAndReviewerUserCollCnt</name>
+        <label>Set Individual Application and Reviewer User Collection Count</label>
+        <locationX>1634</locationX>
+        <locationY>1214</locationY>
+        <assignmentItems>
+            <assignToReference>numberOfSelectedApplications</assignToReference>
+            <operator>AssignCount</operator>
+            <value>
+                <elementReference>SelectedApplications.selectedRows</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>numberOfSelectedReviewerUsers</assignToReference>
+            <operator>AssignCount</operator>
+            <value>
+                <elementReference>SelectedReviewers.selectedRows</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>IsApplnReviewLimitExceeded</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Sets the internal status of the current item in the loop to In Review and adds the status to IndividualApplicationsToBeUpdated record collection.</description>
+        <name>SetInternalStatusVariables</name>
+        <label>Set Internal Status Variables</label>
+        <locationX>1986</locationX>
+        <locationY>2354</locationY>
+        <assignmentItems>
+            <assignToReference>ItrtOverIndivApplicationsUpdtIntrSts.InternalStatus</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>In Review</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>individualApplicationsToBeUpdated</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>ItrtOverIndivApplicationsUpdtIntrSts</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>ItrtOverIndivApplicationsUpdtIntrSts</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <description>Determines whether individual application records are selected by checking if the SelectedApplications has selected rows.</description>
+        <name>AreIndividualApplicationsSelected</name>
+        <label>Are Individual Applications Selected?</label>
+        <locationX>1106</locationX>
+        <locationY>998</locationY>
+        <defaultConnector>
+            <targetReference>AreReviewersSelected</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Yes (Default)</defaultConnectorLabel>
+        <rules>
+            <name>NoIndividualApplicationsSelected</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>SelectedApplications.selectedRows</leftValueReference>
+                <operator>IsEmpty</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>ScrnDplyErrorNoAppRecordsSel</targetReference>
+            </connector>
+            <label>No</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Determines whether reviewer user records are selected by checking if the SelectedApplications has selected rows.</description>
+        <name>AreReviewersSelected</name>
+        <label>Are Reviewers Selected?</label>
+        <locationX>1370</locationX>
+        <locationY>1106</locationY>
+        <defaultConnector>
+            <targetReference>SetIdvApplnAndReviewerUserCollCnt</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Yes (Default)</defaultConnectorLabel>
+        <rules>
+            <name>HasNoSelectedReviewers</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>SelectedReviewers.selectedRows</leftValueReference>
+                <operator>IsEmpty</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>ScrDisplayErrorNoReviewerSel</targetReference>
+            </connector>
+            <label>No</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Determines if individual application record IDs were found by checking if the ids collection variable contains values.</description>
+        <name>HaveIndividualApplicationRecordIds</name>
+        <label>Have Individual Application Record IDs?</label>
+        <locationX>314</locationX>
+        <locationY>242</locationY>
+        <defaultConnector>
+            <targetReference>GetIndividualApplications</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Yes (Default)</defaultConnectorLabel>
+        <rules>
+            <name>HasNoIndividualApplicationRecordIds</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>ids</leftValueReference>
+                <operator>IsEmpty</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>ScrnDplyNoIndividualApplicationsMessage</targetReference>
+            </connector>
+            <label>No</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Determines whether individual application records were found by checking if the Individual Applications from GetIndividualApplications collection variable contains a record.</description>
+        <name>HaveIndvidualApplications</name>
+        <label>Have Individual Applications?</label>
+        <locationX>578</locationX>
+        <locationY>458</locationY>
+        <defaultConnector>
+            <targetReference>Get_Active_Application_Reviewer_IDs</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Yes (Default)</defaultConnectorLabel>
+        <rules>
+            <name>DoesNotHaveIndividualApplications</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>GetIndividualApplications</leftValueReference>
+                <operator>IsEmpty</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>ScrnDplyErrorNoApplicationRecordFound</targetReference>
+            </connector>
+            <label>No</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Determines whether reviewer users were found by checking if the Users from GeReviewerUsers record collection contains a record.</description>
+        <name>HaveReviewerUsers</name>
+        <label>Have Reviewer Users?</label>
+        <locationX>842</locationX>
+        <locationY>782</locationY>
+        <defaultConnector>
+            <targetReference>ScreenSelectApplicationsAndReviewers</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Yes (Default)</defaultConnectorLabel>
+        <rules>
+            <name>DoesNotHaveReviewerUsers</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>GetReviewerUsers</leftValueReference>
+                <operator>IsEmpty</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>ScrnDplyErrNoReviewerUserFound</targetReference>
+            </connector>
+            <label>No</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Determines whether the application review limit is exceeded by checking if ApplicationReviewCount is greater than 500.</description>
+        <name>IsApplnReviewLimitExceeded</name>
+        <label>Is Application Review Limit Exceeded?</label>
+        <locationX>1634</locationX>
+        <locationY>1322</locationY>
+        <defaultConnector>
+            <targetReference>ScreenCollectApplicationReviewDetails</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No (Default)</defaultConnectorLabel>
+        <rules>
+            <name>IsExceededApplicationReviewLimit</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>ApplicationReviewCount</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <numberValue>500.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>ScrnDplyErrApplnReviewLimitExceeded</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <formulas>
+        <description>Calculates the application review count by multiplying NumberOfSelectedReviewerUsers and NumberOfSelectedApplications.</description>
+        <name>ApplicationReviewCount</name>
+        <dataType>Number</dataType>
+        <expression>{!numberOfSelectedReviewerUsers}*{!numberOfSelectedApplications}</expression>
+        <scale>0</scale>
+    </formulas>
+    <interviewLabel>gps_Grantmaking {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Grantmaking Assign Reviews in Batch</label>
+    <loops>
+        <description>Repeats actions for each record in the Individual Application from GetIndividualApplications collection variable.</description>
+        <name>IterateOverIndividualApplications</name>
+        <label>Iterate Over Individual Applications</label>
+        <locationX>1898</locationX>
+        <locationY>1538</locationY>
+        <collectionReference>GetIndividualApplications</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>IterateOverSelectedReviewers</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>ScreenDisplayApplicationReviews</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <loops>
+        <description>Repeats an action for each reviewer user selected from SelectedReviewers.</description>
+        <name>IterateOverSelectedReviewers</name>
+        <label>Iterate Over Selected Reviewers</label>
+        <locationX>2074</locationX>
+        <locationY>1646</locationY>
+        <collectionReference>SelectedReviewers.selectedRows</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>SetApplicationReviewVariables</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>IterateOverIndividualApplications</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <loops>
+        <description>Repeats actions for each record in the Individual Application from GetIndividualApplications collection variable.</description>
+        <name>ItrtOverIndivApplicationsUpdtIntrSts</name>
+        <label>Iterate Over Individual Applications</label>
+        <locationX>1898</locationX>
+        <locationY>2246</locationY>
+        <collectionReference>GetIndividualApplications</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>SetInternalStatusVariables</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>UpdateIndividualApplications</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordCreates>
+        <description>Creates application review records using the values in the ApplicationReviews record collection.</description>
+        <name>CreateApplicationReviews</name>
+        <label>Create Application Reviews</label>
+        <locationX>1898</locationX>
+        <locationY>2138</locationY>
+        <connector>
+            <targetReference>ItrtOverIndivApplicationsUpdtIntrSts</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>RollBackApplicationReviewRecordChanges</targetReference>
+        </faultConnector>
+        <inputReference>applicationReviews</inputReference>
+    </recordCreates>
+    <recordLookups>
+        <description>Gets individual application records with an ID matching those in the ids record collection. Stores the ID, internal status, name, applied date, and status of the results in the Individual Applications from GetIndividualApplications record collection.</description>
+        <name>GetIndividualApplications</name>
+        <label>Get Individual Applications</label>
+        <locationX>578</locationX>
+        <locationY>350</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>HaveIndvidualApplications</targetReference>
+        </connector>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>ScrnDplyErrorNoApplicationRecordFound</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>In</operator>
+            <value>
+                <elementReference>ids</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>IndividualApplication</object>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>InternalStatus</queriedFields>
+        <queriedFields>Name</queriedFields>
+        <queriedFields>AppliedDate</queriedFields>
+        <queriedFields>Status</queriedFields>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>Gets active user records that don’t have a guest user type. Stores the ID, name, email, company name, and title of the results in the Users from GetReviewerUsers record collection.</description>
+        <name>GetReviewerUsers</name>
+        <label>Get Reviewer Users</label>
+        <locationX>842</locationX>
+        <locationY>674</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>HaveReviewerUsers</targetReference>
+        </connector>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>ScrnDplyErrNoReviewerUserFound</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>UserType</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>Guest</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Id</field>
+            <operator>In</operator>
+            <value>
+                <elementReference>Get_Active_Application_Reviewer_IDs.activeApplicationReviewerIds</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>User</object>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>Name</queriedFields>
+        <queriedFields>Email</queriedFields>
+        <queriedFields>CompanyName</queriedFields>
+        <queriedFields>Title</queriedFields>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordRollbacks>
+        <description>Rolls back created application review records if an error occurs during the creation process.</description>
+        <name>RollBackApplicationReviewRecordChanges</name>
+        <label>Roll Back Record Changes</label>
+        <locationX>2426</locationX>
+        <locationY>2246</locationY>
+        <connector>
+            <targetReference>ScreenDplyErrorCreateApplnRvw</targetReference>
+        </connector>
+    </recordRollbacks>
+    <recordRollbacks>
+        <description>Rolls back the updated individual application records if an error occurs during the update process.</description>
+        <name>RollBackIndividualApplications</name>
+        <label>Roll Back Individual Applications</label>
+        <locationX>2162</locationX>
+        <locationY>2654</locationY>
+        <connector>
+            <targetReference>ScreenDplyErrorUpdateIndvAppln</targetReference>
+        </connector>
+    </recordRollbacks>
+    <recordUpdates>
+        <description>Updates the records in the IndividualApplicationsToBeUpdated record collection variable.</description>
+        <name>UpdateIndividualApplications</name>
+        <label>Update Individual Applications</label>
+        <locationX>1898</locationX>
+        <locationY>2546</locationY>
+        <connector>
+            <targetReference>ScrnDplyCreaApplnRvwRecordMsg</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>RollBackIndividualApplications</targetReference>
+        </faultConnector>
+        <inputReference>individualApplicationsToBeUpdated</inputReference>
+    </recordUpdates>
+    <screens>
+        <description>Displays an error to the flow user when no reviewer users are selected.</description>
+        <name>ScrDisplayErrorNoReviewerSel</name>
+        <label>Display Error</label>
+        <locationX>1106</locationX>
+        <locationY>1214</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>ErrorNoRvwUserRecordSelDisplayText</name>
+            <fieldText>&lt;p&gt;No reviewer users are selected. To continue, select at least one reviewer.&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <description>Allows the flow user to specify a due date, end date, and assigned date for the application review records that are to be created.</description>
+        <name>ScreenCollectApplicationReviewDetails</name>
+        <label>Collect Application Review Details</label>
+        <locationX>1898</locationX>
+        <locationY>1430</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>IterateOverIndividualApplications</targetReference>
+        </connector>
+        <fields>
+            <name>EnterApplicationReviewDetailsSection</name>
+            <fieldText>Enter Application Review Details</fieldText>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>EnterApplicationReviewDetailsSection_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <fieldType>ObjectProvided</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>false</isRequired>
+                    <objectFieldReference>applicationReview.Status</objectFieldReference>
+                </fields>
+                <fields>
+                    <fieldType>ObjectProvided</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>false</isRequired>
+                    <objectFieldReference>applicationReview.DueDate</objectFieldReference>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>EnterApplicationReviewDetailsSection_Column2</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <fieldType>ObjectProvided</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>false</isRequired>
+                    <objectFieldReference>applicationReview.ApplicationStageDefinitionId</objectFieldReference>
+                </fields>
+                <fields>
+                    <fieldType>ObjectProvided</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>false</isRequired>
+                    <objectFieldReference>applicationReview.AssignedDate</objectFieldReference>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <regionContainerType>SectionWithHeader</regionContainerType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <description>Allows the flow user to review a list of the application review records that are to be created.</description>
+        <name>ScreenDisplayApplicationReviews</name>
+        <label>Display Selected Application Reviews</label>
+        <locationX>1898</locationX>
+        <locationY>2030</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>CreateApplicationReviews</targetReference>
+        </connector>
+        <fields>
+            <name>ReviewSelectionsMessage</name>
+            <fieldText>&lt;p&gt;Click Assign Reviewers to create the application review records.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Number of records to create: {!ApplicationReviewCount}&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;You can’t go back after the records are created.&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <nextOrFinishButtonLabel>Assign Reviewers</nextOrFinishButtonLabel>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <description>Displays an error to the flow user when there’s an error creating application review records.</description>
+        <name>ScreenDplyErrorCreateApplnRvw</name>
+        <label>Display Error</label>
+        <locationX>2426</locationX>
+        <locationY>2354</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>ApplnReviewCreationFailureDisplayText</name>
+            <fieldText>&lt;p&gt;There was an error when creating application review records. Any records that were created have been rolled back. {!$Flow.FaultMessage}&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <description>Displays an error to the flow user when there’s an error updating individual application records.</description>
+        <name>ScreenDplyErrorUpdateIndvAppln</name>
+        <label>Display Error</label>
+        <locationX>2162</locationX>
+        <locationY>2762</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>ErrUpdateIndvApplnDisplayText</name>
+            <fieldText>&lt;p&gt;There was an error when updating individual application records. Any records that were updated have been rolled back. {!$Flow.FaultMessage}&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <description>Allows the flow user to review and select the individual application and reviewer records.</description>
+        <name>ScreenSelectApplicationsAndReviewers</name>
+        <label>Select Applications and Reviewers</label>
+        <locationX>1106</locationX>
+        <locationY>890</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>AreIndividualApplicationsSelected</targetReference>
+        </connector>
+        <fields>
+            <name>SelectedApplications</name>
+            <dataTypeMappings>
+                <typeName>T</typeName>
+                <typeValue>IndividualApplication</typeValue>
+            </dataTypeMappings>
+            <extensionName>flowruntime:datatable</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>label</name>
+                <value>
+                    <stringValue>Select Applications</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>selectionMode</name>
+                <value>
+                    <stringValue>MULTI_SELECT</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>minRowSelection</name>
+                <value>
+                    <numberValue>0.0</numberValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>tableData</name>
+                <value>
+                    <elementReference>GetIndividualApplications</elementReference>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>columns</name>
+                <value>
+                    <stringValue>[{&quot;apiName&quot;:&quot;Name&quot;,&quot;guid&quot;:&quot;column-d669&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:true,&quot;customHeaderLabel&quot;:&quot;Individual Applications&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:0,&quot;label&quot;:&quot;Application ID&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;AppliedDate&quot;,&quot;guid&quot;:&quot;column-213c&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:1,&quot;label&quot;:&quot;Applied Date&quot;,&quot;type&quot;:&quot;customDateTime&quot;},{&quot;apiName&quot;:&quot;Status&quot;,&quot;guid&quot;:&quot;column-a77d&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:2,&quot;label&quot;:&quot;Application Status&quot;,&quot;type&quot;:&quot;text&quot;}]</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>shouldDisplayLabel</name>
+                <value>
+                    <booleanValue>true</booleanValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>selectedRows</name>
+                <value>
+                    <elementReference>GetIndividualApplications</elementReference>
+                </value>
+            </inputParameters>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
+        </fields>
+        <fields>
+            <name>SelectedReviewers</name>
+            <dataTypeMappings>
+                <typeName>T</typeName>
+                <typeValue>User</typeValue>
+            </dataTypeMappings>
+            <extensionName>flowruntime:datatable</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>label</name>
+                <value>
+                    <stringValue>Select Reviewers</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>selectionMode</name>
+                <value>
+                    <stringValue>MULTI_SELECT</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>minRowSelection</name>
+                <value>
+                    <numberValue>0.0</numberValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>tableData</name>
+                <value>
+                    <elementReference>GetReviewerUsers</elementReference>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>isShowSearchBar</name>
+                <value>
+                    <booleanValue>true</booleanValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>columns</name>
+                <value>
+                    <stringValue>[{&quot;apiName&quot;:&quot;Name&quot;,&quot;guid&quot;:&quot;column-b83c&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:true,&quot;customHeaderLabel&quot;:&quot;User Name&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:0,&quot;label&quot;:&quot;Full Name&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;Email&quot;,&quot;guid&quot;:&quot;column-ffa3&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:1,&quot;label&quot;:&quot;Email&quot;,&quot;type&quot;:&quot;email&quot;},{&quot;apiName&quot;:&quot;CompanyName&quot;,&quot;guid&quot;:&quot;column-cdab&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:2,&quot;label&quot;:&quot;Company Name&quot;,&quot;type&quot;:&quot;text&quot;}]</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>shouldDisplayLabel</name>
+                <value>
+                    <booleanValue>true</booleanValue>
+                </value>
+            </inputParameters>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <description>Displays a success message when application review records are created.</description>
+        <name>ScrnDplyCreaApplnRvwRecordMsg</name>
+        <label>Display Created Application Review Record Message</label>
+        <locationX>1898</locationX>
+        <locationY>2654</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>ApplnRvwRecordCreationSuccessDisplayText</name>
+            <fieldText>&lt;p&gt;{!ApplicationReviewCount} application review records were created.&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <description>Displays an error to the flow user when the application review record creation limit is exceeded.</description>
+        <name>ScrnDplyErrApplnReviewLimitExceeded</name>
+        <label>Display Error</label>
+        <locationX>1370</locationX>
+        <locationY>1430</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>ErrSelFewerRevrOrApplnDplyTxt</name>
+            <fieldText>&lt;p&gt;The number of Application Review records to be created exceeds the limit of 500.&amp;nbsp;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;The total number of records is calculated as:&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Individual Application Record Count × User Record Count&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Go back and select fewer records to make sure the total doesn’t exceed 500.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <description>Displays an error to the flow user when no reviewer users are found.</description>
+        <name>ScrnDplyErrNoReviewerUserFound</name>
+        <label>Display Error</label>
+        <locationX>578</locationX>
+        <locationY>890</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>ErrorNoRvwUserFoundDisplayText</name>
+            <fieldText>&lt;p&gt;We couldn’t find any reviewer user records.&lt;span style=&quot;font-size: 16px;&quot;&gt;﻿&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;{!$Flow.FaultMessage}&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <description>Displays an error message to the flow user when no individual application records are found.</description>
+        <name>ScrnDplyErrorNoApplicationRecordFound</name>
+        <label>Display Error</label>
+        <locationX>314</locationX>
+        <locationY>566</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>ErrorNoAppRecordFoundDisplayText</name>
+            <fieldText>&lt;p&gt;We couldn’t find any individual application records.&lt;/p&gt;&lt;p&gt;{!$Flow.FaultMessage}&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <description>Displays an error to the flow user when no individual application records are selected.</description>
+        <name>ScrnDplyErrorNoAppRecordsSel</name>
+        <label>Display Error</label>
+        <locationX>842</locationX>
+        <locationY>1106</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>ErrorNoAppRecordSelDisplayText</name>
+            <fieldText>&lt;p&gt;No application records are selected. To continue, select one or more individual application records.&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <description>Display a message to the flow user that individual applications weren’t provided.</description>
+        <name>ScrnDplyNoIndividualApplicationsMessage</name>
+        <label>Display Error</label>
+        <locationX>50</locationX>
+        <locationY>350</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>ErrorNoAppIdsDisplayText</name>
+            <fieldText>&lt;p&gt;We didn’t receive any individual application records.&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <sourceTemplate>grantmk__AssignReviewsInBatch</sourceTemplate>
+    <start>
+        <locationX>188</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>AddIndvApplicationRecordIdToCollection</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>Stores the application ID and user ID for an application review record that’s to be created.</description>
+        <name>applicationReview</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>ApplicationReview</objectType>
+    </variables>
+    <variables>
+        <description>Stores application review records that are to be created.</description>
+        <name>applicationReviews</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>ApplicationReview</objectType>
+    </variables>
+    <variables>
+        <description>Stores a collection of individual application record IDs.</description>
+        <name>ids</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>A collection of individual application records to update.</description>
+        <name>individualApplicationsToBeUpdated</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>IndividualApplication</objectType>
+    </variables>
+    <variables>
+        <description>Stores the number of individual applications that are selected.</description>
+        <name>numberOfSelectedApplications</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+        <value>
+            <numberValue>0.0</numberValue>
+        </value>
+    </variables>
+    <variables>
+        <description>Stores the number of reviewer users who are selected.</description>
+        <name>numberOfSelectedReviewerUsers</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+        <value>
+            <numberValue>0.0</numberValue>
+        </value>
+    </variables>
+    <variables>
+        <description>Stores the individual application record ID passed into the flow.</description>
+        <name>recordId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <stringValue></stringValue>
+        </value>
+    </variables>
+</Flow>

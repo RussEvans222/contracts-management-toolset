@@ -1,0 +1,656 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OmniDataTransform xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <assignmentRulesUsed>false</assignmentRulesUsed>
+    <deletedOnSuccess>false</deletedOnSuccess>
+    <errorIgnored>false</errorIgnored>
+    <expectedInputJson>{
+  &quot;ContextId&quot; : &quot;0f0Hr000000fyfEIAQ&quot;,
+  &quot;omniscriptId&quot; : &quot;0jNHr0000004owWMAQ&quot;,
+  &quot;language&quot; : &quot;English&quot;,
+  &quot;type&quot; : &quot;LPI&quot;,
+  &quot;runMode&quot; : &quot;preview&quot;,
+  &quot;sId&quot; : &quot;0jNHr0000004owWMAQ&quot;,
+  &quot;theme&quot; : &quot;lightning&quot;,
+  &quot;subType&quot; : &quot;NewVisit&quot;,
+  &quot;timeStamp&quot; : &quot;2023-12-01T14:21:01.490Z&quot;,
+  &quot;userProfile&quot; : &quot;System Administrator&quot;,
+  &quot;userTimeZoneName&quot; : &quot;America/New_York&quot;,
+  &quot;userTimeZone&quot; : &quot;-300&quot;,
+  &quot;userCurrencyCode&quot; : &quot;USD&quot;,
+  &quot;userName&quot; : &quot;kwinderlich@1123winter24.demo&quot;,
+  &quot;userId&quot; : &quot;005Hr00000FOMbWIAX&quot;,
+  &quot;omniProcessId&quot; : &quot;0jNHr0000004owWMAQ&quot;,
+  &quot;localTimeZoneName&quot; : &quot;America/New_York&quot;,
+  &quot;InspectionTypeName&quot; : &quot;BLA&quot;,
+  &quot;AccountName&quot; : &quot;Fashion Cuts &amp; Perms&quot;,
+  &quot;SitePostalCode&quot; : &quot;20852&quot;,
+  &quot;InspectorName&quot; : &quot;Keith Winderlich&quot;,
+  &quot;SiteState&quot; : &quot;CA&quot;,
+  &quot;SiteOwner&quot; : &quot;005Hr00000FOMbWIAX&quot;,
+  &quot;SiteCity&quot; : &quot;San Francisco&quot;,
+  &quot;SiteStreet&quot; : &quot;5378 MISSION ST&quot;,
+  &quot;AccountId&quot; : &quot;001Hr00001s7dkMIAQ&quot;,
+  &quot;InspectorUserId&quot; : &quot;005Hr00000FOMbWIAX&quot;,
+  &quot;RecordName&quot; : &quot;Fashion Cuts &amp; Perms - BLA-0000000071&quot;,
+  &quot;PlannedVisitStartCalculated&quot; : &quot;12/01/2023, 11:21 am&quot;,
+  &quot;Inspector&quot; : [ {
+    &quot;UserType&quot; : &quot;Standard&quot;,
+    &quot;UserId&quot; : &quot;005Hr00000FZmykIAD&quot;,
+    &quot;Persona&quot; : &quot;Inspector&quot;,
+    &quot;DemoUser&quot; : false,
+    &quot;UserName&quot; : &quot;Irene Inspector&quot;
+  }, {
+    &quot;UserType&quot; : &quot;Standard&quot;,
+    &quot;UserId&quot; : &quot;005Hr00000FZn0vIAD&quot;,
+    &quot;Persona&quot; : &quot;Inspector&quot;,
+    &quot;DemoUser&quot; : true,
+    &quot;UserName&quot; : &quot;Kaylee Kwan&quot;
+  }, {
+    &quot;UserType&quot; : &quot;Standard&quot;,
+    &quot;UserId&quot; : &quot;005Hr00000FOMbWIAX&quot;,
+    &quot;Persona&quot; : &quot;Inspector&quot;,
+    &quot;DemoUser&quot; : true,
+    &quot;UserName&quot; : &quot;Keith Winderlich&quot;
+  } ],
+  &quot;InspectType&quot; : [ {
+    &quot;InspectTypeName&quot; : &quot;Business Inspection&quot;,
+    &quot;InspectTypeId&quot; : &quot;0fJHr000000wnZXMAY&quot;
+  }, {
+    &quot;InspectTypeName&quot; : &quot;Business Reopening Inspection&quot;,
+    &quot;InspectTypeId&quot; : &quot;0fJHr000000wnZcMAI&quot;
+  }, {
+    &quot;InspectTypeName&quot; : &quot;Cannabis Dispensary Inspection&quot;,
+    &quot;InspectTypeId&quot; : &quot;0fJHr000000wnZdMAI&quot;
+  }, {
+    &quot;InspectTypeName&quot; : &quot;Deck Inspection&quot;,
+    &quot;InspectTypeId&quot; : &quot;0fJHr000000wnZYMAY&quot;
+  }, {
+    &quot;InspectTypeName&quot; : &quot;Emergency Request Visit&quot;,
+    &quot;InspectTypeId&quot; : &quot;0fJHr000000wnZbMAI&quot;
+  }, {
+    &quot;InspectTypeName&quot; : &quot;Food Safety&quot;,
+    &quot;InspectTypeId&quot; : &quot;0fJHr000000wnZZMAY&quot;
+  }, {
+    &quot;InspectTypeName&quot; : &quot;Foster Care Inspection&quot;,
+    &quot;InspectTypeId&quot; : &quot;0fJHr000000wnZeMAI&quot;
+  }, {
+    &quot;InspectTypeName&quot; : &quot;Health &amp; Safety Inspection&quot;,
+    &quot;InspectTypeId&quot; : &quot;0fJHr000000wnZaMAI&quot;
+  }, {
+    &quot;InspectTypeName&quot; : &quot;Home Health Aide&quot;,
+    &quot;InspectTypeId&quot; : &quot;0fJHr000000wnZVMAY&quot;
+  }, {
+    &quot;InspectTypeName&quot; : &quot;Investigate Property&quot;,
+    &quot;InspectTypeId&quot; : &quot;0fJHr000000wnZgMAI&quot;
+  }, {
+    &quot;InspectTypeName&quot; : &quot;Lottery Inspection&quot;,
+    &quot;InspectTypeId&quot; : &quot;0fJHr000000wnZfMAI&quot;
+  }, {
+    &quot;InspectTypeName&quot; : &quot;Prescription Drug Delivery&quot;,
+    &quot;InspectTypeId&quot; : &quot;0fJHr000000wnZhMAI&quot;
+  }, {
+    &quot;InspectTypeName&quot; : &quot;Safety Complaint Inspection&quot;,
+    &quot;InspectTypeId&quot; : &quot;0fJHr000000wnZWMAY&quot;
+  }, {
+    &quot;InspectTypeName&quot; : &quot;Salon Establishment Inspection&quot;,
+    &quot;InspectTypeId&quot; : &quot;0fJHr000000wnZTMAY&quot;
+  }, {
+    &quot;InspectTypeName&quot; : &quot;Storage Tank Inspection&quot;,
+    &quot;InspectTypeId&quot; : &quot;0fJHr000000wnZUMAY&quot;
+  } ],
+  &quot;VisitDetails&quot; : {
+    &quot;EndDateTimeValidation&quot; : &quot;OK&quot;,
+    &quot;MessagingEndAfterStart&quot; : null,
+    &quot;BlkInspectionType-Block&quot; : {
+      &quot;InspectTypeName&quot; : &quot;Safety Complaint Inspection&quot;,
+      &quot;InspectTypeId&quot; : &quot;0fJHr000000wnZWMAY&quot;,
+      &quot;BlkInspectionType&quot; : &quot;Safety Complaint Inspection&quot;
+    },
+    &quot;InspectionTypeId&quot; : &quot;0fJHr000000wnZWMAY&quot;,
+    &quot;OwnerReviewerName&quot; : &quot;Keith Winderlich&quot;,
+    &quot;OwnerReviewerId&quot; : &quot;005Hr00000FOMbWIAX&quot;,
+    &quot;OtherUser-Block&quot; : null,
+    &quot;VisitorId&quot; : &quot;005Hr00000FOMbWIAX&quot;,
+    &quot;ReviewerType&quot; : &quot;Organization Owner&quot;,
+    &quot;VisitPriority&quot; : &quot;High&quot;,
+    &quot;PlannedVisitStart&quot; : &quot;2023-12-01T16:21:00.000Z&quot;,
+    &quot;PlannedVisitEnd&quot; : &quot;2023-12-01T18:21:00.000Z&quot;,
+    &quot;VisitNotes&quot; : &quot;dfsdfsd&quot;
+  }
+}</expectedInputJson>
+    <fieldLevelSecurityEnabled>false</fieldLevelSecurityEnabled>
+    <inputType>JSON</inputType>
+    <isManagedUsingStdDesigner>false</isManagedUsingStdDesigner>
+    <name>VisitDRCreateLocationAddressFromContextIdandVisit</name>
+    <nullInputsIncludedInOutput>false</nullInputsIncludedInOutput>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>VisitDRCreateLocationAddressFromContextIdandVisit8395864439317127</globalKey>
+        <inputFieldName>VisitDetails:InspectionTypeId</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>VisitDRCreateLocationAddressFromContextIdandVisit</name>
+        <outputCreationSequence>4.0</outputCreationSequence>
+        <outputFieldName>VisitTypeId</outputFieldName>
+        <outputObjectName>Visit</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>true</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>VisitDRCreateLocationAddressFromContextIdandVisit021165609379915074</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>VisitDRCreateLocationAddressFromContextIdandVisit</name>
+        <outputCreationSequence>3.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>Location</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>VisitDRCreateLocationAddressFromContextIdandVisit01228713410730009</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedFieldName>Id</linkedFieldName>
+        <linkedObjectSequence>3.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>VisitDRCreateLocationAddressFromContextIdandVisit</name>
+        <outputCreationSequence>4.0</outputCreationSequence>
+        <outputFieldName>PlaceId</outputFieldName>
+        <outputObjectName>Visit</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>VisitDRCreateLocationAddressFromContextIdandVisit5600826658117046</globalKey>
+        <inputFieldName>VisitDetails:VisitPriority</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>VisitDRCreateLocationAddressFromContextIdandVisit</name>
+        <outputCreationSequence>4.0</outputCreationSequence>
+        <outputFieldName>VisitPriority</outputFieldName>
+        <outputObjectName>Visit</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <defaultValue>Site</defaultValue>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>VisitDRCreateLocationAddressFromContextIdandVisit6180038894282402</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>VisitDRCreateLocationAddressFromContextIdandVisit</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>LocationType</outputFieldName>
+        <outputObjectName>Location</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>true</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>VisitDRCreateLocationAddressFromContextIdandVisit6564282032033832</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>VisitDRCreateLocationAddressFromContextIdandVisit</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>Location</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>true</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>VisitDRCreateLocationAddressFromContextIdandVisit7407731385623337</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>VisitDRCreateLocationAddressFromContextIdandVisit</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>Address</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>VisitDRCreateLocationAddressFromContextIdandVisit10541298089525308</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedFieldName>Id</linkedFieldName>
+        <linkedObjectSequence>1.0</linkedObjectSequence>
+        <name>VisitDRCreateLocationAddressFromContextIdandVisit</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>ParentId</outputFieldName>
+        <outputObjectName>Address</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>true</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>VisitDRCreateLocationAddressFromContextIdandVisit7472961226146064</globalKey>
+        <inputFieldName>SiteCity</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>VisitDRCreateLocationAddressFromContextIdandVisit</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>City</outputFieldName>
+        <outputObjectName>Address</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>VisitDRCreateLocationAddressFromContextIdandVisit28013918893863865</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedFieldName>Id</linkedFieldName>
+        <linkedObjectSequence>1.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>VisitDRCreateLocationAddressFromContextIdandVisit</name>
+        <outputCreationSequence>3.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>Location</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>true</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>VisitDRCreateLocationAddressFromContextIdandVisit584785785881321</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedFieldName>Id</linkedFieldName>
+        <linkedObjectSequence>2.0</linkedObjectSequence>
+        <name>VisitDRCreateLocationAddressFromContextIdandVisit</name>
+        <outputCreationSequence>3.0</outputCreationSequence>
+        <outputFieldName>VisitorAddressId</outputFieldName>
+        <outputObjectName>Location</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <defaultValue>Mailing</defaultValue>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>VisitDRCreateLocationAddressFromContextIdandVisit5180472111560248</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>VisitDRCreateLocationAddressFromContextIdandVisit</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>AddressType</outputFieldName>
+        <outputObjectName>Address</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>VisitDRCreateLocationAddressFromContextIdandVisit25313025743320505</globalKey>
+        <inputFieldName>SiteState</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>VisitDRCreateLocationAddressFromContextIdandVisit</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>Address</outputFieldName>
+        <outputObjectName>Address</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <defaultValue>Site</defaultValue>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>VisitDRCreateLocationAddressFromContextIdandVisit2693656689062647</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>VisitDRCreateLocationAddressFromContextIdandVisit</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>LocationType</outputFieldName>
+        <outputObjectName>Address</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>VisitDRCreateLocationAddressFromContextIdandVisit40937610491492005</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>VisitDRCreateLocationAddressFromContextIdandVisit</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>Location</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>VisitDRCreateLocationAddressFromContextIdandVisit49622831993127225</globalKey>
+        <inputFieldName>SiteStreet</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>VisitDRCreateLocationAddressFromContextIdandVisit</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>Street</outputFieldName>
+        <outputObjectName>Address</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>VisitDRCreateLocationAddressFromContextIdandVisit22929155591671724</globalKey>
+        <inputFieldName>SiteState</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>VisitDRCreateLocationAddressFromContextIdandVisit</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>State</outputFieldName>
+        <outputObjectName>Address</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>VisitDRCreateLocationAddressFromContextIdandVisit127690061221019</globalKey>
+        <inputFieldName>RecordName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>VisitDRCreateLocationAddressFromContextIdandVisit</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Name</outputFieldName>
+        <outputObjectName>Location</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>true</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>VisitDRCreateLocationAddressFromContextIdandVisit49937956089882163</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedFieldName>Id</linkedFieldName>
+        <linkedObjectSequence>3.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>VisitDRCreateLocationAddressFromContextIdandVisit</name>
+        <outputCreationSequence>4.0</outputCreationSequence>
+        <outputFieldName>LocationId</outputFieldName>
+        <outputObjectName>Visit</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>VisitDRCreateLocationAddressFromContextIdandVisit12080635238455306</globalKey>
+        <inputFieldName>ContextId</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>VisitDRCreateLocationAddressFromContextIdandVisit</name>
+        <outputCreationSequence>4.0</outputCreationSequence>
+        <outputFieldName>ContextId</outputFieldName>
+        <outputObjectName>Visit</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>VisitDRCreateLocationAddressFromContextIdandVisit9460664619353429</globalKey>
+        <inputFieldName>AccountId</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>VisitDRCreateLocationAddressFromContextIdandVisit</name>
+        <outputCreationSequence>4.0</outputCreationSequence>
+        <outputFieldName>AccountId</outputFieldName>
+        <outputObjectName>Visit</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>VisitDRCreateLocationAddressFromContextIdandVisit5657432590280229</globalKey>
+        <inputFieldName>SitePostalCode</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>VisitDRCreateLocationAddressFromContextIdandVisit</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>PostalCode</outputFieldName>
+        <outputObjectName>Address</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>VisitDRCreateLocationAddressFromContextIdandVisit8942387819709874</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedFieldName>Id</linkedFieldName>
+        <linkedObjectSequence>2.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>VisitDRCreateLocationAddressFromContextIdandVisit</name>
+        <outputCreationSequence>4.0</outputCreationSequence>
+        <outputFieldName>AddressId</outputFieldName>
+        <outputObjectName>Visit</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>VisitDRCreateLocationAddressFromContextIdandVisit6707060477736209</globalKey>
+        <inputFieldName>VisitDetails:PlannedVisitEnd</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>VisitDRCreateLocationAddressFromContextIdandVisit</name>
+        <outputCreationSequence>4.0</outputCreationSequence>
+        <outputFieldName>PlannedVisitEndTime</outputFieldName>
+        <outputObjectName>Visit</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>true</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>VisitDRCreateLocationAddressFromContextIdandVisit620192072460638</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>VisitDRCreateLocationAddressFromContextIdandVisit</name>
+        <outputCreationSequence>4.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>Visit</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>VisitDRCreateLocationAddressFromContextIdandVisit3284014938725608</globalKey>
+        <inputFieldName>VisitDetails:VisitNotes</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>VisitDRCreateLocationAddressFromContextIdandVisit</name>
+        <outputCreationSequence>4.0</outputCreationSequence>
+        <outputFieldName>InstructionDescription</outputFieldName>
+        <outputObjectName>Visit</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>VisitDRCreateLocationAddressFromContextIdandVisit0003436368343712193</globalKey>
+        <inputFieldName>VisitDetails:PlannedVisitStart</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>VisitDRCreateLocationAddressFromContextIdandVisit</name>
+        <outputCreationSequence>4.0</outputCreationSequence>
+        <outputFieldName>PlannedVisitStartTime</outputFieldName>
+        <outputObjectName>Visit</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>VisitDRCreateLocationAddressFromContextIdandVisit23696445976224956</globalKey>
+        <inputFieldName>VisitDetails:VisitorId</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>VisitDRCreateLocationAddressFromContextIdandVisit</name>
+        <outputCreationSequence>4.0</outputCreationSequence>
+        <outputFieldName>VisitorId</outputFieldName>
+        <outputObjectName>Visit</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <outputType>SObject</outputType>
+    <previewJsonData>{
+  &quot;ContextId&quot; : &quot;0f0Hr000000fyfIIAQ&quot;,
+  &quot;omniscriptId&quot; : &quot;0jNHr0000004owWMAQ&quot;,
+  &quot;language&quot; : &quot;English&quot;,
+  &quot;type&quot; : &quot;LPI&quot;,
+  &quot;runMode&quot; : &quot;preview&quot;,
+  &quot;sId&quot; : &quot;0jNHr0000004owWMAQ&quot;,
+  &quot;theme&quot; : &quot;lightning&quot;,
+  &quot;subType&quot; : &quot;NewVisit&quot;,
+  &quot;timeStamp&quot; : &quot;2023-12-01T21:39:47.476Z&quot;,
+  &quot;userProfile&quot; : &quot;System Administrator&quot;,
+  &quot;userTimeZoneName&quot; : &quot;America/New_York&quot;,
+  &quot;userTimeZone&quot; : &quot;-300&quot;,
+  &quot;userCurrencyCode&quot; : &quot;USD&quot;,
+  &quot;userName&quot; : &quot;kwinderlich@1123winter24.demo&quot;,
+  &quot;userId&quot; : &quot;005Hr00000FOMbWIAX&quot;,
+  &quot;omniProcessId&quot; : &quot;0jNHr0000004owWMAQ&quot;,
+  &quot;localTimeZoneName&quot; : &quot;America/New_York&quot;,
+  &quot;InspectionTypeName&quot; : &quot;BLA&quot;,
+  &quot;AccountName&quot; : &quot;John Adams Hospital&quot;,
+  &quot;SitePostalCode&quot; : &quot;20852&quot;,
+  &quot;InspectorName&quot; : &quot;Keith Winderlich&quot;,
+  &quot;SiteState&quot; : &quot;CA&quot;,
+  &quot;SiteOwner&quot; : &quot;005Hr00000FOMbWIAX&quot;,
+  &quot;SiteCity&quot; : &quot;San Francisco&quot;,
+  &quot;SiteStreet&quot; : &quot;415 Mission Street&quot;,
+  &quot;AccountId&quot; : &quot;001Hr00001s7dnmIAA&quot;,
+  &quot;InspectorUserId&quot; : &quot;005Hr00000FOMbWIAX&quot;,
+  &quot;RecordName&quot; : &quot;John Adams Hospital - BLA-0000000070&quot;,
+  &quot;PlannedVisitStartCalculated&quot; : &quot;12/01/2023, 6:39 pm&quot;,
+  &quot;Inspector&quot; : [ {
+    &quot;UserType&quot; : &quot;Standard&quot;,
+    &quot;UserId&quot; : &quot;005Hr00000FZmykIAD&quot;,
+    &quot;Persona&quot; : &quot;Inspector&quot;,
+    &quot;DemoUser&quot; : false,
+    &quot;UserName&quot; : &quot;Irene Inspector&quot;
+  }, {
+    &quot;UserType&quot; : &quot;Standard&quot;,
+    &quot;UserId&quot; : &quot;005Hr00000FZn0vIAD&quot;,
+    &quot;Persona&quot; : &quot;Inspector&quot;,
+    &quot;DemoUser&quot; : true,
+    &quot;UserName&quot; : &quot;Kaylee Kwan&quot;
+  }, {
+    &quot;UserType&quot; : &quot;Standard&quot;,
+    &quot;UserId&quot; : &quot;005Hr00000FOMbWIAX&quot;,
+    &quot;Persona&quot; : &quot;Inspector&quot;,
+    &quot;DemoUser&quot; : true,
+    &quot;UserName&quot; : &quot;Keith Winderlich&quot;
+  } ],
+  &quot;InspectType&quot; : [ {
+    &quot;InspectTypeName&quot; : &quot;Business Inspection&quot;,
+    &quot;InspectTypeId&quot; : &quot;0fJHr000000wnZXMAY&quot;
+  }, {
+    &quot;InspectTypeName&quot; : &quot;Business Reopening Inspection&quot;,
+    &quot;InspectTypeId&quot; : &quot;0fJHr000000wnZcMAI&quot;
+  }, {
+    &quot;InspectTypeName&quot; : &quot;Cannabis Dispensary Inspection&quot;,
+    &quot;InspectTypeId&quot; : &quot;0fJHr000000wnZdMAI&quot;
+  }, {
+    &quot;InspectTypeName&quot; : &quot;Deck Inspection&quot;,
+    &quot;InspectTypeId&quot; : &quot;0fJHr000000wnZYMAY&quot;
+  }, {
+    &quot;InspectTypeName&quot; : &quot;Emergency Request Visit&quot;,
+    &quot;InspectTypeId&quot; : &quot;0fJHr000000wnZbMAI&quot;
+  }, {
+    &quot;InspectTypeName&quot; : &quot;Food Safety&quot;,
+    &quot;InspectTypeId&quot; : &quot;0fJHr000000wnZZMAY&quot;
+  }, {
+    &quot;InspectTypeName&quot; : &quot;Foster Care Inspection&quot;,
+    &quot;InspectTypeId&quot; : &quot;0fJHr000000wnZeMAI&quot;
+  }, {
+    &quot;InspectTypeName&quot; : &quot;Health &amp; Safety Inspection&quot;,
+    &quot;InspectTypeId&quot; : &quot;0fJHr000000wnZaMAI&quot;
+  }, {
+    &quot;InspectTypeName&quot; : &quot;Home Health Aide&quot;,
+    &quot;InspectTypeId&quot; : &quot;0fJHr000000wnZVMAY&quot;
+  }, {
+    &quot;InspectTypeName&quot; : &quot;Investigate Property&quot;,
+    &quot;InspectTypeId&quot; : &quot;0fJHr000000wnZgMAI&quot;
+  }, {
+    &quot;InspectTypeName&quot; : &quot;Lottery Inspection&quot;,
+    &quot;InspectTypeId&quot; : &quot;0fJHr000000wnZfMAI&quot;
+  }, {
+    &quot;InspectTypeName&quot; : &quot;Prescription Drug Delivery&quot;,
+    &quot;InspectTypeId&quot; : &quot;0fJHr000000wnZhMAI&quot;
+  }, {
+    &quot;InspectTypeName&quot; : &quot;Safety Complaint Inspection&quot;,
+    &quot;InspectTypeId&quot; : &quot;0fJHr000000wnZWMAY&quot;
+  }, {
+    &quot;InspectTypeName&quot; : &quot;Salon Establishment Inspection&quot;,
+    &quot;InspectTypeId&quot; : &quot;0fJHr000000wnZTMAY&quot;
+  }, {
+    &quot;InspectTypeName&quot; : &quot;Storage Tank Inspection&quot;,
+    &quot;InspectTypeId&quot; : &quot;0fJHr000000wnZUMAY&quot;
+  } ],
+  &quot;VisitDetails&quot; : {
+    &quot;EndDateTimeValidation&quot; : &quot;OK&quot;,
+    &quot;MessagingEndAfterStart&quot; : null,
+    &quot;BlkInspectionType-Block&quot; : {
+      &quot;InspectTypeName&quot; : &quot;Salon Establishment Inspection&quot;,
+      &quot;InspectTypeId&quot; : &quot;0fJHr000000wnZTMAY&quot;,
+      &quot;BlkInspectionType&quot; : &quot;Salon Establishment Inspection&quot;
+    },
+    &quot;InspectionTypeId&quot; : &quot;0fJHr000000wnZTMAY&quot;,
+    &quot;OwnerReviewerName&quot; : &quot;Keith Winderlich&quot;,
+    &quot;OwnerReviewerId&quot; : &quot;005Hr00000FOMbWIAX&quot;,
+    &quot;OtherUser-Block&quot; : null,
+    &quot;VisitorId&quot; : &quot;005Hr00000FOMbWIAX&quot;,
+    &quot;ReviewerType&quot; : &quot;Organization Owner&quot;,
+    &quot;VisitPriority&quot; : &quot;High&quot;,
+    &quot;PlannedVisitStart&quot; : &quot;2023-12-01T23:39:00.000Z&quot;,
+    &quot;PlannedVisitEnd&quot; : &quot;2023-12-02T01:39:00.000Z&quot;,
+    &quot;VisitNotes&quot; : &quot;vdfsvvfdg&quot;
+  }
+}</previewJsonData>
+    <processSuperBulk>false</processSuperBulk>
+    <responseCacheTtlMinutes>0.0</responseCacheTtlMinutes>
+    <rollbackOnError>false</rollbackOnError>
+    <sourceObject>json</sourceObject>
+    <sourceObjectDefault>false</sourceObjectDefault>
+    <synchronousProcessThreshold>0.0</synchronousProcessThreshold>
+    <type>Load</type>
+    <uniqueName>VisitDRCreateLocationAddressFromContextIdandVisit_1</uniqueName>
+    <versionNumber>1.0</versionNumber>
+    <xmlDeclarationRemoved>false</xmlDeclarationRemoved>
+</OmniDataTransform>

@@ -1,0 +1,80 @@
+{
+  "status": 0,
+  "result": {
+    "records": [
+      {
+        "attributes": {
+          "type": "AggregateResult"
+        },
+        "Status": "Activated",
+        "c": 23
+      },
+      {
+        "attributes": {
+          "type": "AggregateResult"
+        },
+        "Status": "In Approval Process",
+        "c": 16
+      },
+      {
+        "attributes": {
+          "type": "AggregateResult"
+        },
+        "Status": "Draft",
+        "c": 15
+      },
+      {
+        "attributes": {
+          "type": "AggregateResult"
+        },
+        "Status": "Canceled",
+        "c": 10
+      },
+      {
+        "attributes": {
+          "type": "AggregateResult"
+        },
+        "Status": "Contract Expired",
+        "c": 9
+      },
+      {
+        "attributes": {
+          "type": "AggregateResult"
+        },
+        "Status": "Rejected",
+        "c": 9
+      },
+      {
+        "attributes": {
+          "type": "AggregateResult"
+        },
+        "Status": "Contract Terminated",
+        "c": 8
+      },
+      {
+        "attributes": {
+          "type": "AggregateResult"
+        },
+        "Status": "Signed",
+        "c": 8
+      },
+      {
+        "attributes": {
+          "type": "AggregateResult"
+        },
+        "Status": "Awaiting Signature",
+        "c": 6
+      },
+      {
+        "attributes": {
+          "type": "AggregateResult"
+        },
+        "Status": "Negotiating",
+        "c": 6
+      }
+    ],
+    "totalSize": 10,
+    "done": true
+  },
+  "warnings": []
+}

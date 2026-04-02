@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OmniDataTransform xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <assignmentRulesUsed>false</assignmentRulesUsed>
+    <deletedOnSuccess>false</deletedOnSuccess>
+    <errorIgnored>false</errorIgnored>
+    <expectedInputJson>{
+  &quot;UploadResume&quot; : {
+    &quot;Resume&quot; : [ {
+      &quot;data&quot; : null,
+      &quot;size&quot; : null,
+      &quot;filename&quot; : null
+    } ],
+    &quot;UseExistingResume&quot; : null
+  },
+  &quot;WorkExperienceDetails&quot; : {
+    &quot;WorkExperience&quot; : {
+      &quot;Id&quot; : null,
+      &quot;Description&quot; : null,
+      &quot;AnnualIncome&quot; : null,
+      &quot;EndDate&quot; : null,
+      &quot;StartDate&quot; : null,
+      &quot;WeeklyHourCount&quot; : null,
+      &quot;EmployerPhone&quot; : null,
+      &quot;EmployerCountry&quot; : null,
+      &quot;EmployerPostalCode&quot; : null,
+      &quot;EmployerState&quot; : null,
+      &quot;EmployerCity&quot; : null,
+      &quot;EmployerStreet&quot; : null,
+      &quot;JobTitle&quot; : null,
+      &quot;Employer&quot; : null,
+      &quot;RelatedPersonId&quot; : null
+    }
+  },
+  &quot;UploadCertificates&quot; : {
+    &quot;NewCertificateUpload&quot; : {
+      &quot;Certificate&quot; : [ {
+        &quot;data&quot; : null,
+        &quot;size&quot; : null,
+        &quot;filename&quot; : null
+      } ],
+      &quot;NCUInstitution&quot; : null,
+      &quot;NCUDegree&quot; : null,
+      &quot;NCUPersonEducationId&quot; : null
+    },
+    &quot;UploadedCertificates&quot; : {
+      &quot;CustomLWC1&quot; : null
+    }
+  },
+  &quot;EducationDetails&quot; : {
+    &quot;Education&quot; : {
+      &quot;Id&quot; : null,
+      &quot;EducationLevel&quot; : null,
+      &quot;Institution&quot; : null,
+      &quot;Degree&quot; : null,
+      &quot;InstitutionStreet&quot; : null,
+      &quot;InstitutionCity&quot; : null,
+      &quot;InstitutionState&quot; : null,
+      &quot;InstitutionPostalCode&quot; : null,
+      &quot;InstitutionCountry&quot; : null,
+      &quot;StartDate&quot; : null,
+      &quot;GraduationDate&quot; : null,
+      &quot;AccountId&quot; : null
+    }
+  },
+  &quot;PersonalDetails&quot; : {
+    &quot;Phone&quot; : null,
+    &quot;CurrentAddress&quot; : {
+      &quot;CurrentCity&quot; : null,
+      &quot;CurrentState&quot; : null,
+      &quot;CurrentPostalCode&quot; : null,
+      &quot;CurrentCountry&quot; : null,
+      &quot;CurrentStreet&quot; : null
+    },
+    &quot;IdentificationNumber&quot; : null,
+    &quot;IdentifierType&quot; : null,
+    &quot;Email&quot; : null,
+    &quot;PermanentAddress&quot; : {
+      &quot;PermanentCountry&quot; : null,
+      &quot;PermanentPostalCode&quot; : null,
+      &quot;PermanentState&quot; : null,
+      &quot;PermanentCity&quot; : null,
+      &quot;PermanentStreet&quot; : null
+    },
+    &quot;Gender&quot; : null,
+    &quot;DateOfBirth&quot; : null,
+    &quot;LastName&quot; : null,
+    &quot;FirstName&quot; : null
+  },
+  &quot;vlcTimeTracking&quot; : {
+    &quot;ScoreApplication&quot; : null,
+    &quot;ConfirmApplicationForm&quot; : null,
+    &quot;MarkApplicationSubmitted&quot; : null,
+    &quot;CreateApplicationFormAndRelatedRecords&quot; : null,
+    &quot;UploadResume&quot; : null,
+    &quot;GetLastResume&quot; : null,
+    &quot;WorkExperienceDetails&quot; : null,
+    &quot;GetDataToPrefillWorkExperienceDetails&quot; : null,
+    &quot;UploadCertificates&quot; : null,
+    &quot;GetContentDocumentDetails&quot; : null,
+    &quot;TransformEducationDetailsForCertificateUpload&quot; : null,
+    &quot;EducationDetails&quot; : null,
+    &quot;GetDataToPrefillEducationDetails&quot; : null,
+    &quot;PreliminaryApplicationReferenceExists&quot; : null,
+    &quot;CreatePreliminaryApplicationReference&quot; : null,
+    &quot;UpsertApplicantPersonalDetails&quot; : null,
+    &quot;PersonalDetails&quot; : null,
+    &quot;PrefillPersonalDetails&quot; : null,
+    &quot;GetApplicantAccountID&quot; : null,
+    &quot;JobOpeningDetails&quot; : null,
+    &quot;GetPositionTitleAndRequisitionID&quot; : null,
+    &quot;UseExistingResume&quot; : null
+  },
+  &quot;vlcPersistentComponent&quot; : { },
+  &quot;userTimeZone&quot; : null,
+  &quot;userProfile&quot; : null,
+  &quot;userName&quot; : null,
+  &quot;userId&quot; : null,
+  &quot;timeStamp&quot; : null,
+  &quot;ContextId&quot; : null,
+  &quot;JobOpeningDetails&quot; : {
+    &quot;PositionTitle&quot; : null,
+    &quot;RequisitionID&quot; : null
+  },
+  &quot;ConfirmApplicationForm&quot; : {
+    &quot;RecruitmentConfirmApplicationSubmissionLWC&quot; : null
+  }
+}</expectedInputJson>
+    <fieldLevelSecurityEnabled>false</fieldLevelSecurityEnabled>
+    <inputType>JSON</inputType>
+    <isManagedUsingStdDesigner>false</isManagedUsingStdDesigner>
+    <name>GPSUpdateUseExistingResume</name>
+    <nullInputsIncludedInOutput>false</nullInputsIncludedInOutput>
+    <omniDataTransformItem>
+        <disabled>true</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>GPSUpdateUseExistingResumeCustom9248</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>GPSUpdateUseExistingResume</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>ContentDocumentLink</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>GPSUpdateUseExistingResumeCustom5152</globalKey>
+        <inputFieldName>ExistingResume:data</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>GPSUpdateUseExistingResume</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>ContentDocumentId</outputFieldName>
+        <outputObjectName>ContentDocumentLink</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>GPSUpdateUseExistingResumeCustom7227</globalKey>
+        <inputFieldName>applicationFormDetails:applicationFormId</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>GPSUpdateUseExistingResume</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>LinkedEntityId</outputFieldName>
+        <outputObjectName>ContentDocumentLink</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <outputType>SObject</outputType>
+    <previewJsonData>{
+  &quot;applicationFormDetails&quot; : {
+    &quot;applicationFormId&quot; : &quot;001KX000003PWFOYA4&quot;
+  },
+  &quot;ExistingResume&quot; : [ {
+    &quot;data&quot; : &quot;069KX000000gKeGYAU&quot;,
+    &quot;size&quot; : null,
+    &quot;filename&quot; : &quot;Paul Marshall-Resume.docx&quot;
+  } ],
+  &quot;UseExistingResume&quot; : null,
+  &quot;WorkExperienceDetails&quot; : {
+    &quot;WorkExperience&quot; : {
+      &quot;Id&quot; : null,
+      &quot;Description&quot; : null,
+      &quot;AnnualIncome&quot; : null,
+      &quot;EndDate&quot; : null,
+      &quot;StartDate&quot; : null,
+      &quot;WeeklyHourCount&quot; : null,
+      &quot;EmployerPhone&quot; : null,
+      &quot;EmployerCountry&quot; : null,
+      &quot;EmployerPostalCode&quot; : null,
+      &quot;EmployerState&quot; : null,
+      &quot;EmployerCity&quot; : null,
+      &quot;EmployerStreet&quot; : null,
+      &quot;JobTitle&quot; : null,
+      &quot;Employer&quot; : null,
+      &quot;RelatedPersonId&quot; : null
+    }
+  },
+  &quot;UploadCertificates&quot; : {
+    &quot;NewCertificateUpload&quot; : {
+      &quot;Certificate&quot; : [ {
+        &quot;data&quot; : null,
+        &quot;size&quot; : null,
+        &quot;filename&quot; : null
+      } ],
+      &quot;NCUInstitution&quot; : null,
+      &quot;NCUDegree&quot; : null,
+      &quot;NCUPersonEducationId&quot; : null
+    },
+    &quot;UploadedCertificates&quot; : {
+      &quot;CustomLWC1&quot; : null
+    }
+  },
+  &quot;EducationDetails&quot; : {
+    &quot;Education&quot; : {
+      &quot;Id&quot; : null,
+      &quot;EducationLevel&quot; : null,
+      &quot;Institution&quot; : null,
+      &quot;Degree&quot; : null,
+      &quot;InstitutionStreet&quot; : null,
+      &quot;InstitutionCity&quot; : null,
+      &quot;InstitutionState&quot; : null,
+      &quot;InstitutionPostalCode&quot; : null,
+      &quot;InstitutionCountry&quot; : null,
+      &quot;StartDate&quot; : null,
+      &quot;GraduationDate&quot; : null,
+      &quot;AccountId&quot; : null
+    }
+  },
+  &quot;PersonalDetails&quot; : {
+    &quot;Phone&quot; : null,
+    &quot;CurrentAddress&quot; : {
+      &quot;CurrentCity&quot; : null,
+      &quot;CurrentState&quot; : null,
+      &quot;CurrentPostalCode&quot; : null,
+      &quot;CurrentCountry&quot; : null,
+      &quot;CurrentStreet&quot; : null
+    },
+    &quot;IdentificationNumber&quot; : null,
+    &quot;IdentifierType&quot; : null,
+    &quot;Email&quot; : null,
+    &quot;PermanentAddress&quot; : {
+      &quot;PermanentCountry&quot; : null,
+      &quot;PermanentPostalCode&quot; : null,
+      &quot;PermanentState&quot; : null,
+      &quot;PermanentCity&quot; : null,
+      &quot;PermanentStreet&quot; : null
+    },
+    &quot;Gender&quot; : null,
+    &quot;DateOfBirth&quot; : null,
+    &quot;LastName&quot; : null,
+    &quot;FirstName&quot; : null
+  },
+  &quot;vlcTimeTracking&quot; : {
+    &quot;ScoreApplication&quot; : null,
+    &quot;ConfirmApplicationForm&quot; : null,
+    &quot;MarkApplicationSubmitted&quot; : null,
+    &quot;CreateApplicationFormAndRelatedRecords&quot; : null,
+    &quot;UploadResume&quot; : null,
+    &quot;GetLastResume&quot; : null,
+    &quot;WorkExperienceDetails&quot; : null,
+    &quot;GetDataToPrefillWorkExperienceDetails&quot; : null,
+    &quot;UploadCertificates&quot; : null,
+    &quot;GetContentDocumentDetails&quot; : null,
+    &quot;TransformEducationDetailsForCertificateUpload&quot; : null,
+    &quot;EducationDetails&quot; : null,
+    &quot;GetDataToPrefillEducationDetails&quot; : null,
+    &quot;PreliminaryApplicationReferenceExists&quot; : null,
+    &quot;CreatePreliminaryApplicationReference&quot; : null,
+    &quot;UpsertApplicantPersonalDetails&quot; : null,
+    &quot;PersonalDetails&quot; : null,
+    &quot;PrefillPersonalDetails&quot; : null,
+    &quot;GetApplicantAccountID&quot; : null,
+    &quot;JobOpeningDetails&quot; : null,
+    &quot;GetPositionTitleAndRequisitionID&quot; : null,
+    &quot;UseExistingResume&quot; : null
+  },
+  &quot;vlcPersistentComponent&quot; : { },
+  &quot;userTimeZone&quot; : null,
+  &quot;userProfile&quot; : null,
+  &quot;userName&quot; : null,
+  &quot;userId&quot; : null,
+  &quot;timeStamp&quot; : null,
+  &quot;ContextId&quot; : null,
+  &quot;JobOpeningDetails&quot; : {
+    &quot;PositionTitle&quot; : null,
+    &quot;RequisitionID&quot; : null
+  },
+  &quot;ConfirmApplicationForm&quot; : {
+    &quot;RecruitmentConfirmApplicationSubmissionLWC&quot; : null
+  }
+}</previewJsonData>
+    <processSuperBulk>false</processSuperBulk>
+    <responseCacheTtlMinutes>0.0</responseCacheTtlMinutes>
+    <rollbackOnError>false</rollbackOnError>
+    <sourceObject>json</sourceObject>
+    <sourceObjectDefault>false</sourceObjectDefault>
+    <synchronousProcessThreshold>0.0</synchronousProcessThreshold>
+    <type>Load</type>
+    <uniqueName>GPSUpdateUseExistingResume_1</uniqueName>
+    <versionNumber>1.0</versionNumber>
+    <xmlDeclarationRemoved>false</xmlDeclarationRemoved>
+</OmniDataTransform>

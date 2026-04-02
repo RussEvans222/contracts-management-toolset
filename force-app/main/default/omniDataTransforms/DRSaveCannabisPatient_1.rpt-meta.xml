@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OmniDataTransform xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <assignmentRulesUsed>false</assignmentRulesUsed>
+    <deletedOnSuccess>false</deletedOnSuccess>
+    <errorIgnored>false</errorIgnored>
+    <expectedInputJson>{
+  &quot;vlcTimeTracking&quot; : {
+    &quot;DRSaveCannabisPatient&quot; : null,
+    &quot;DRGetContactForPatient&quot; : null,
+    &quot;DEBUG-SETTOCHARLES&quot; : null,
+    &quot;SetUser&quot; : null,
+    &quot;NavigateAction1&quot; : null,
+    &quot;DRGetApplicationId&quot; : null,
+    &quot;Confirmation&quot; : null,
+    &quot;Attachments&quot; : null,
+    &quot;ProofOfResidency&quot; : null,
+    &quot;FeePayment&quot; : null,
+    &quot;GetPovertyLevel&quot; : null,
+    &quot;Instructions&quot; : null,
+    &quot;Attestation&quot; : null,
+    &quot;PractionerInformation&quot; : null,
+    &quot;PatientInformation&quot; : null
+  },
+  &quot;vlcPersistentComponent&quot; : { },
+  &quot;userTimeZone&quot; : null,
+  &quot;userProfile&quot; : null,
+  &quot;userName&quot; : null,
+  &quot;userId&quot; : null,
+  &quot;timeStamp&quot; : null,
+  &quot;ContextId&quot; : null,
+  &quot;Confirmation&quot; : { },
+  &quot;Attachments&quot; : {
+    &quot;File5&quot; : [ {
+      &quot;data&quot; : null,
+      &quot;size&quot; : null,
+      &quot;filename&quot; : null
+    } ],
+    &quot;File3&quot; : [ {
+      &quot;data&quot; : null,
+      &quot;size&quot; : null,
+      &quot;filename&quot; : null
+    } ],
+    &quot;File2&quot; : [ {
+      &quot;data&quot; : null,
+      &quot;size&quot; : null,
+      &quot;filename&quot; : null
+    } ],
+    &quot;File4&quot; : [ {
+      &quot;data&quot; : null,
+      &quot;size&quot; : null,
+      &quot;filename&quot; : null
+    } ],
+    &quot;File1&quot; : [ {
+      &quot;data&quot; : null,
+      &quot;size&quot; : null,
+      &quot;filename&quot; : null
+    } ]
+  },
+  &quot;ProofOfResidency&quot; : {
+    &quot;SelectProofOfResidency&quot; : null
+  },
+  &quot;FeePayment&quot; : {
+    &quot;FeeAmount&quot; : null,
+    &quot;CustomLWC2&quot; : null,
+    &quot;ReducedPayment&quot; : null
+  },
+  &quot;Instructions&quot; : { },
+  &quot;Attestation&quot; : {
+    &quot;CustomLWC1&quot; : null
+  },
+  &quot;PractionerInformation&quot; : {
+    &quot;PractionerAddress-Block&quot; : {
+      &quot;PractionerAddress&quot; : null,
+      &quot;ProviderZipcode&quot; : null,
+      &quot;ProviderState&quot; : null,
+      &quot;ProviderCity&quot; : null,
+      &quot;ProviderStreetAddress&quot; : null
+    },
+    &quot;ProviderEmail&quot; : null,
+    &quot;ProviderPhone&quot; : null,
+    &quot;ProviderLastName&quot; : null,
+    &quot;ProviderMiddleInitial&quot; : null,
+    &quot;ProviderFirstName&quot; : null,
+    &quot;TypeOfPractitioner&quot; : null
+  },
+  &quot;PatientInformation&quot; : {
+    &quot;CheckAge&quot; : null,
+    &quot;PatientAddress-Block&quot; : {
+      &quot;PatientAddress&quot; : null,
+      &quot;Zipcode&quot; : null,
+      &quot;State&quot; : null,
+      &quot;City&quot; : null,
+      &quot;StreetAddress&quot; : null
+    },
+    &quot;Age&quot; : null,
+    &quot;HouseholdSize&quot; : null,
+    &quot;HouseholdIncome&quot; : null,
+    &quot;ApplicationType&quot; : null,
+    &quot;Phone&quot; : null,
+    &quot;Email&quot; : null,
+    &quot;BirthDate&quot; : null,
+    &quot;SocialSecurityNumber&quot; : null,
+    &quot;MiddleInitial&quot; : null,
+    &quot;FirstName&quot; : null,
+    &quot;LastName&quot; : null
+  }
+}</expectedInputJson>
+    <fieldLevelSecurityEnabled>false</fieldLevelSecurityEnabled>
+    <inputType>JSON</inputType>
+    <isManagedUsingStdDesigner>false</isManagedUsingStdDesigner>
+    <name>DRSaveCannabisPatient</name>
+    <nullInputsIncludedInOutput>false</nullInputsIncludedInOutput>
+    <omniDataTransformItem>
+        <defaultValue>Submitted</defaultValue>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>22ee80e3-29bd-4c9a-bbb9-37f267d136d5</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRSaveCannabisPatient</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>Status</outputFieldName>
+        <outputObjectName>IndividualApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>29ed865b-86ce-43f2-9eab-5e08596e7105</globalKey>
+        <inputFieldName>AccountId</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRSaveCannabisPatient</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>AccountId</outputFieldName>
+        <outputObjectName>IndividualApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>true</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>07958777-1c32-40ab-9052-92b459320572</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>DRSaveCannabisPatient</name>
+        <outputCreationSequence>3.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFee</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <defaultValue>Individual Application</defaultValue>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>DRSaveCannabisPatientCustom8506</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <lookupByFieldName>Name</lookupByFieldName>
+        <lookupObjectName>RecordType</lookupObjectName>
+        <lookupReturnedFieldName>Id</lookupReturnedFieldName>
+        <name>DRSaveCannabisPatient</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>RecordTypeId</outputFieldName>
+        <outputObjectName>IndividualApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>3e4c0422-e143-4036-930b-729fc4d73629</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedFieldName>Id</linkedFieldName>
+        <linkedObjectSequence>3.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>DRSaveCannabisPatient</name>
+        <outputCreationSequence>4.0</outputCreationSequence>
+        <outputFieldName>RegulatoryTrxnFeeId</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFeeItem</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>86618535-854f-42f2-999a-10a79614ffdd</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedFieldName>Id</linkedFieldName>
+        <linkedObjectSequence>1.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>DRSaveCannabisPatient</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>ApplicationCaseId</outputFieldName>
+        <outputObjectName>IndividualApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>eec17976-7000-449e-9060-f6fb06c67f5a</globalKey>
+        <inputFieldName>FeePayment:FeeAmount</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRSaveCannabisPatient</name>
+        <outputCreationSequence>4.0</outputCreationSequence>
+        <outputFieldName>FeeAmount</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFeeItem</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <defaultValue>Paid</defaultValue>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>b046dfc3-9c3c-4528-be4c-83a437ab1000</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRSaveCannabisPatient</name>
+        <outputCreationSequence>3.0</outputCreationSequence>
+        <outputFieldName>Status</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFee</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>true</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>5b455bee-cc03-40ed-b420-1c16455ab93c</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>DRSaveCannabisPatient</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>Case</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>6a321220-5ff3-4a9a-b26c-bf4820ba8e1b</globalKey>
+        <inputFieldName>CaseName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRSaveCannabisPatient</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Description</outputFieldName>
+        <outputObjectName>Case</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>f08f9349-4b50-483e-ba2a-2404b363d89c</globalKey>
+        <inputFieldName>FeePayment:FeeAmount</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRSaveCannabisPatient</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>AmountPaid</outputFieldName>
+        <outputObjectName>IndividualApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <defaultValue>Patient</defaultValue>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>0f4d1367-d26d-41d7-8ea7-a21725170a36</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <lookupByFieldName>Name</lookupByFieldName>
+        <lookupObjectName>RegulatoryAuthorizationType</lookupObjectName>
+        <lookupReturnedFieldName>Id</lookupReturnedFieldName>
+        <name>DRSaveCannabisPatient</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>LicenseTypeId</outputFieldName>
+        <outputObjectName>IndividualApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <defaultValue>Permit</defaultValue>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>06c92601-9545-475e-bf86-a7a5a6ab86ce</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRSaveCannabisPatient</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>Category</outputFieldName>
+        <outputObjectName>IndividualApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>23c3d432-4d65-4db0-beba-85b70c60051f</globalKey>
+        <inputFieldName>AccountId</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRSaveCannabisPatient</name>
+        <outputCreationSequence>3.0</outputCreationSequence>
+        <outputFieldName>AccountId</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFee</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>74061496-3ecc-498c-aecd-a8cfbf5bdcc4</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedFieldName>Id</linkedFieldName>
+        <linkedObjectSequence>2.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>DRSaveCannabisPatient</name>
+        <outputCreationSequence>3.0</outputCreationSequence>
+        <outputFieldName>ParentRecordId</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFee</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>true</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>83ba339f-b665-4807-a0fe-c00a08d710ed</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>DRSaveCannabisPatient</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>IndividualApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <defaultValue>Initial Registration Fee</defaultValue>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>58b2d782-a23e-4c8a-9255-a1a8fc8c0aa6</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRSaveCannabisPatient</name>
+        <outputCreationSequence>4.0</outputCreationSequence>
+        <outputFieldName>Name</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFeeItem</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>2a969a5f-fa03-46b3-86b1-27536c697679</globalKey>
+        <inputFieldName>AccountId</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRSaveCannabisPatient</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>AccountId</outputFieldName>
+        <outputObjectName>Case</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>| &quot;Patient/\/\/Application/\/\/-/\/\/&quot; var:PatientInformation:FirstName &quot;/\/\/&quot; var:PatientInformation:LastName CONCAT</formulaConverted>
+        <formulaExpression>CONCAT(&quot;Patient Application - &quot;,PatientInformation:FirstName,&quot; &quot;,PatientInformation:LastName)</formulaExpression>
+        <formulaResultPath>CaseName</formulaResultPath>
+        <formulaSequence>2.0</formulaSequence>
+        <globalKey>163af792-7d91-451e-979e-14f25dbe4e23</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRSaveCannabisPatient</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>| NOW</formulaConverted>
+        <formulaExpression>NOW()</formulaExpression>
+        <formulaResultPath>AppliedDate</formulaResultPath>
+        <formulaSequence>1.0</formulaSequence>
+        <globalKey>e8353e27-50b0-4bd0-a578-b3e70e44f7cf</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRSaveCannabisPatient</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>31ece3a9-8b64-44e7-8a31-945efa7277ad</globalKey>
+        <inputFieldName>CaseName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRSaveCannabisPatient</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Subject</outputFieldName>
+        <outputObjectName>Case</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>true</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>cc319e1a-cf77-43ae-b6ac-77ac9a7bf31c</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>DRSaveCannabisPatient</name>
+        <outputCreationSequence>4.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFeeItem</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>d75b654b-b73f-4dd3-89ec-e77511eb1d8b</globalKey>
+        <inputFieldName>AppliedDate</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DRSaveCannabisPatient</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>AppliedDate</outputFieldName>
+        <outputObjectName>IndividualApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <outputType>JSON</outputType>
+    <previewJsonData>{
+  &quot;vlcTimeTracking&quot; : {
+    &quot;DRSaveCannabisPatient&quot; : null,
+    &quot;DRGetContactForPatient&quot; : null,
+    &quot;DEBUG-SETTOCHARLES&quot; : null,
+    &quot;SetUser&quot; : null,
+    &quot;NavigateAction1&quot; : null,
+    &quot;DRGetApplicationId&quot; : null,
+    &quot;Confirmation&quot; : null,
+    &quot;Attachments&quot; : null,
+    &quot;ProofOfResidency&quot; : null,
+    &quot;FeePayment&quot; : null,
+    &quot;GetPovertyLevel&quot; : null,
+    &quot;Instructions&quot; : null,
+    &quot;Attestation&quot; : null,
+    &quot;PractionerInformation&quot; : null,
+    &quot;PatientInformation&quot; : null
+  },
+  &quot;vlcPersistentComponent&quot; : { },
+  &quot;userTimeZone&quot; : null,
+  &quot;userProfile&quot; : null,
+  &quot;userName&quot; : null,
+  &quot;userId&quot; : null,
+  &quot;timeStamp&quot; : null,
+  &quot;ContextId&quot; : null,
+  &quot;Confirmation&quot; : { },
+  &quot;Attachments&quot; : {
+    &quot;File5&quot; : [ {
+      &quot;data&quot; : null,
+      &quot;size&quot; : null,
+      &quot;filename&quot; : null
+    } ],
+    &quot;File3&quot; : [ {
+      &quot;data&quot; : null,
+      &quot;size&quot; : null,
+      &quot;filename&quot; : null
+    } ],
+    &quot;File2&quot; : [ {
+      &quot;data&quot; : null,
+      &quot;size&quot; : null,
+      &quot;filename&quot; : null
+    } ],
+    &quot;File4&quot; : [ {
+      &quot;data&quot; : null,
+      &quot;size&quot; : null,
+      &quot;filename&quot; : null
+    } ],
+    &quot;File1&quot; : [ {
+      &quot;data&quot; : null,
+      &quot;size&quot; : null,
+      &quot;filename&quot; : null
+    } ]
+  },
+  &quot;ProofOfResidency&quot; : {
+    &quot;SelectProofOfResidency&quot; : null
+  },
+  &quot;FeePayment&quot; : {
+    &quot;FeeAmount&quot; : null,
+    &quot;CustomLWC2&quot; : null,
+    &quot;ReducedPayment&quot; : null
+  },
+  &quot;Instructions&quot; : { },
+  &quot;Attestation&quot; : {
+    &quot;CustomLWC1&quot; : null
+  },
+  &quot;PractionerInformation&quot; : {
+    &quot;PractionerAddress-Block&quot; : {
+      &quot;PractionerAddress&quot; : null,
+      &quot;ProviderZipcode&quot; : null,
+      &quot;ProviderState&quot; : null,
+      &quot;ProviderCity&quot; : null,
+      &quot;ProviderStreetAddress&quot; : null
+    },
+    &quot;ProviderEmail&quot; : null,
+    &quot;ProviderPhone&quot; : null,
+    &quot;ProviderLastName&quot; : null,
+    &quot;ProviderMiddleInitial&quot; : null,
+    &quot;ProviderFirstName&quot; : null,
+    &quot;TypeOfPractitioner&quot; : null
+  },
+  &quot;PatientInformation&quot; : {
+    &quot;CheckAge&quot; : null,
+    &quot;PatientAddress-Block&quot; : {
+      &quot;PatientAddress&quot; : null,
+      &quot;Zipcode&quot; : null,
+      &quot;State&quot; : null,
+      &quot;City&quot; : null,
+      &quot;StreetAddress&quot; : null
+    },
+    &quot;Age&quot; : null,
+    &quot;HouseholdSize&quot; : null,
+    &quot;HouseholdIncome&quot; : null,
+    &quot;ApplicationType&quot; : null,
+    &quot;Phone&quot; : null,
+    &quot;Email&quot; : null,
+    &quot;BirthDate&quot; : null,
+    &quot;SocialSecurityNumber&quot; : null,
+    &quot;MiddleInitial&quot; : null,
+    &quot;FirstName&quot; : null,
+    &quot;LastName&quot; : null
+  }
+}</previewJsonData>
+    <processSuperBulk>false</processSuperBulk>
+    <responseCacheTtlMinutes>0.0</responseCacheTtlMinutes>
+    <rollbackOnError>false</rollbackOnError>
+    <sourceObject>json</sourceObject>
+    <sourceObjectDefault>false</sourceObjectDefault>
+    <synchronousProcessThreshold>-1.0</synchronousProcessThreshold>
+    <type>Load</type>
+    <uniqueName>DRSaveCannabisPatient_1</uniqueName>
+    <versionNumber>1.0</versionNumber>
+    <xmlDeclarationRemoved>false</xmlDeclarationRemoved>
+</OmniDataTransform>

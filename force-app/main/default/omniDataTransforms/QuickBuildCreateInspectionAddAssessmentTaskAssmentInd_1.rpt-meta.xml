@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OmniDataTransform xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <assignmentRulesUsed>false</assignmentRulesUsed>
+    <deletedOnSuccess>false</deletedOnSuccess>
+    <errorIgnored>false</errorIgnored>
+    <expectedInputJson>{
+  &quot;ContextId&quot; : &quot;&quot;,
+  &quot;timeStamp&quot; : &quot;2021-03-25T17:38:45.784Z&quot;,
+  &quot;userId&quot; : &quot;0054x000003dns8AAA&quot;,
+  &quot;userName&quot; : &quot;jblankenship@rentassistance01292021.demo&quot;,
+  &quot;userProfile&quot; : &quot;System Administrator&quot;,
+  &quot;userTimeZone&quot; : -420,
+  &quot;userCurrencyCode&quot; : &quot;USD&quot;,
+  &quot;sfdcIFrameOrigin&quot; : &quot;https://rentassist-20210129-demo--vlocity-ins.visualforce.com&quot;,
+  &quot;sfdcIFrameHost&quot; : &quot;web&quot;,
+  &quot;layout&quot; : &quot;lightning&quot;,
+  &quot;isdtp&quot; : &quot;p1&quot;,
+  &quot;id&quot; : &quot;a5y4x0000004Pz1AAE&quot;,
+  &quot;vlcPersistentComponent&quot; : { },
+  &quot;Details&quot; : {
+    &quot;Name&quot; : &quot;Test 1 billion&quot;,
+    &quot;Description&quot; : null,
+    &quot;RequireSignatures&quot; : false
+  },
+  &quot;Items&quot; : {
+    &quot;InspectionFile&quot; : [ {
+      &quot;filename&quot; : &quot;Test28Inspection.csv&quot;,
+      &quot;size&quot; : 607,
+      &quot;data&quot; : &quot;e3218ed1-4338-4aa2-9d59-d237704ed322&quot;,
+      &quot;$$hashKey&quot; : &quot;object:155&quot;,
+      &quot;contentDocumentId&quot; : &quot;0694x000000e5x1AAA&quot;,
+      &quot;vId&quot; : &quot;0684x000000eBe1AAE&quot;
+    } ],
+    &quot;FileCount&quot; : 1,
+    &quot;InspectionComponents&quot; : [ {
+      &quot;TaskDefinition&quot; : &quot;AAA&quot;,
+      &quot;AssessmentIndicatorName&quot; : &quot;AAA&quot;,
+      &quot;AssessmentIndicatorType&quot; : &quot;Boolean&quot;,
+      &quot;RegulatoryCodeName&quot; : &quot;AAA&quot;,
+      &quot;RegulatoryCodeSubject&quot; : &quot;AAA&quot;,
+      &quot;RegulatoryCodeAuthority&quot; : &quot;AAA&quot;,
+      &quot;AssessmentIndicatorDefinedValues&quot; : null,
+      &quot;ItemEntity&quot; : &quot;AssessmentTask&quot;
+    }, {
+      &quot;TaskDefinition&quot; : &quot;AAA&quot;,
+      &quot;AssessmentIndicatorName&quot; : &quot;AAA111&quot;,
+      &quot;AssessmentIndicatorType&quot; : &quot;Boolean&quot;,
+      &quot;RegulatoryCodeName&quot; : &quot;AAA&quot;,
+      &quot;RegulatoryCodeSubject&quot; : &quot;AAA&quot;,
+      &quot;RegulatoryCodeAuthority&quot; : &quot;AAA&quot;,
+      &quot;AssessmentIndicatorDefinedValues&quot; : null,
+      &quot;ItemEntity&quot; : &quot;AssessmentTask&quot;
+    }, {
+      &quot;TaskDefinition&quot; : &quot;AAA&quot;,
+      &quot;AssessmentIndicatorName&quot; : &quot;AAA222&quot;,
+      &quot;AssessmentIndicatorType&quot; : &quot;Boolean&quot;,
+      &quot;RegulatoryCodeName&quot; : &quot;AAA&quot;,
+      &quot;RegulatoryCodeSubject&quot; : &quot;AAA&quot;,
+      &quot;RegulatoryCodeAuthority&quot; : &quot;AAA&quot;,
+      &quot;AssessmentIndicatorDefinedValues&quot; : null,
+      &quot;ItemEntity&quot; : &quot;AssessmentTask&quot;
+    }, {
+      &quot;TaskDefinition&quot; : &quot;BBB&quot;,
+      &quot;AssessmentIndicatorName&quot; : &quot;BBB&quot;,
+      &quot;AssessmentIndicatorType&quot; : &quot;Boolean&quot;,
+      &quot;RegulatoryCodeName&quot; : &quot;BBB&quot;,
+      &quot;RegulatoryCodeSubject&quot; : &quot;BBB&quot;,
+      &quot;RegulatoryCodeAuthority&quot; : &quot;BBB&quot;,
+      &quot;AssessmentIndicatorDefinedValues&quot; : null,
+      &quot;ItemEntity&quot; : &quot;AssessmentTask&quot;
+    }, {
+      &quot;TaskDefinition&quot; : &quot;CCC&quot;,
+      &quot;AssessmentIndicatorName&quot; : &quot;CCC&quot;,
+      &quot;AssessmentIndicatorType&quot; : &quot;Boolean&quot;,
+      &quot;RegulatoryCodeName&quot; : &quot;CCC&quot;,
+      &quot;RegulatoryCodeSubject&quot; : &quot;CCC&quot;,
+      &quot;RegulatoryCodeAuthority&quot; : &quot;CCC&quot;,
+      &quot;AssessmentIndicatorDefinedValues&quot; : null,
+      &quot;ItemEntity&quot; : &quot;AssessmentTask&quot;
+    }, {
+      &quot;TaskDefinition&quot; : &quot;DDD&quot;,
+      &quot;AssessmentIndicatorName&quot; : &quot;DDD&quot;,
+      &quot;AssessmentIndicatorType&quot; : &quot;Boolean&quot;,
+      &quot;RegulatoryCodeName&quot; : &quot;DDD&quot;,
+      &quot;RegulatoryCodeSubject&quot; : &quot;DDD&quot;,
+      &quot;RegulatoryCodeAuthority&quot; : &quot;DDD&quot;,
+      &quot;AssessmentIndicatorDefinedValues&quot; : null,
+      &quot;ItemEntity&quot; : &quot;AssessmentTask&quot;
+    }, {
+      &quot;TaskDefinition&quot; : &quot;DDD&quot;,
+      &quot;AssessmentIndicatorName&quot; : &quot;DDD111&quot;,
+      &quot;AssessmentIndicatorType&quot; : &quot;Boolean&quot;,
+      &quot;RegulatoryCodeName&quot; : &quot;DDD&quot;,
+      &quot;RegulatoryCodeSubject&quot; : &quot;DDD&quot;,
+      &quot;RegulatoryCodeAuthority&quot; : &quot;DDD&quot;,
+      &quot;AssessmentIndicatorDefinedValues&quot; : null,
+      &quot;ItemEntity&quot; : &quot;AssessmentTask&quot;
+    }, {
+      &quot;TaskDefinition&quot; : &quot;EEE&quot;,
+      &quot;AssessmentIndicatorName&quot; : &quot;EEE&quot;,
+      &quot;AssessmentIndicatorType&quot; : &quot;Boolean&quot;,
+      &quot;RegulatoryCodeName&quot; : &quot;EEE&quot;,
+      &quot;RegulatoryCodeSubject&quot; : &quot;EEE&quot;,
+      &quot;RegulatoryCodeAuthority&quot; : &quot;EEE&quot;,
+      &quot;AssessmentIndicatorDefinedValues&quot; : null,
+      &quot;ItemEntity&quot; : &quot;AssessmentTask&quot;
+    }, {
+      &quot;TaskDefinition&quot; : &quot;EEE&quot;,
+      &quot;AssessmentIndicatorName&quot; : &quot;EEE111&quot;,
+      &quot;AssessmentIndicatorType&quot; : &quot;Boolean&quot;,
+      &quot;RegulatoryCodeName&quot; : &quot;EEE&quot;,
+      &quot;RegulatoryCodeSubject&quot; : &quot;EEE&quot;,
+      &quot;RegulatoryCodeAuthority&quot; : &quot;EEE&quot;,
+      &quot;AssessmentIndicatorDefinedValues&quot; : null,
+      &quot;ItemEntity&quot; : &quot;AssessmentTask&quot;
+    }, {
+      &quot;TaskDefinition&quot; : &quot;FFF&quot;,
+      &quot;AssessmentIndicatorName&quot; : &quot;FFF&quot;,
+      &quot;AssessmentIndicatorType&quot; : &quot;Boolean&quot;,
+      &quot;RegulatoryCodeName&quot; : &quot;FFF&quot;,
+      &quot;RegulatoryCodeSubject&quot; : &quot;FFF&quot;,
+      &quot;RegulatoryCodeAuthority&quot; : &quot;FFF&quot;,
+      &quot;AssessmentIndicatorDefinedValues&quot; : null,
+      &quot;ItemEntity&quot; : &quot;AssessmentTask&quot;
+    }, {
+      &quot;TaskDefinition&quot; : &quot;FFF&quot;,
+      &quot;AssessmentIndicatorName&quot; : &quot;FFF111&quot;,
+      &quot;AssessmentIndicatorType&quot; : &quot;Boolean&quot;,
+      &quot;RegulatoryCodeName&quot; : &quot;FFF&quot;,
+      &quot;RegulatoryCodeSubject&quot; : &quot;FFF&quot;,
+      &quot;RegulatoryCodeAuthority&quot; : &quot;FFF&quot;,
+      &quot;AssessmentIndicatorDefinedValues&quot; : null,
+      &quot;ItemEntity&quot; : &quot;AssessmentTask&quot;
+    }, {
+      &quot;TaskDefinition&quot; : &quot;AAA&quot;,
+      &quot;AssessmentIndicatorName&quot; : &quot;AAA333&quot;,
+      &quot;AssessmentIndicatorType&quot; : &quot;Boolean&quot;,
+      &quot;RegulatoryCodeName&quot; : &quot;AAA&quot;,
+      &quot;RegulatoryCodeSubject&quot; : &quot;AAA&quot;,
+      &quot;RegulatoryCodeAuthority&quot; : &quot;AAA&quot;,
+      &quot;AssessmentIndicatorDefinedValues&quot; : null,
+      &quot;ItemEntity&quot; : &quot;AssessmentTask&quot;
+    }, {
+      &quot;TaskDefinition&quot; : &quot;GGG&quot;,
+      &quot;AssessmentIndicatorName&quot; : &quot;GGG&quot;,
+      &quot;AssessmentIndicatorType&quot; : &quot;Boolean&quot;,
+      &quot;RegulatoryCodeName&quot; : &quot;GGG&quot;,
+      &quot;RegulatoryCodeSubject&quot; : &quot;GGG&quot;,
+      &quot;RegulatoryCodeAuthority&quot; : &quot;GGG&quot;,
+      &quot;AssessmentIndicatorDefinedValues&quot; : null,
+      &quot;ItemEntity&quot; : &quot;AssessmentTask&quot;
+    }, {
+      &quot;TaskDefinition&quot; : &quot;GGG&quot;,
+      &quot;AssessmentIndicatorName&quot; : &quot;GGG111&quot;,
+      &quot;AssessmentIndicatorType&quot; : &quot;Boolean&quot;,
+      &quot;RegulatoryCodeName&quot; : &quot;GGG&quot;,
+      &quot;RegulatoryCodeSubject&quot; : &quot;GGG&quot;,
+      &quot;RegulatoryCodeAuthority&quot; : &quot;GGG&quot;,
+      &quot;AssessmentIndicatorDefinedValues&quot; : null,
+      &quot;ItemEntity&quot; : &quot;AssessmentTask&quot;
+    }, {
+      &quot;TaskDefinition&quot; : &quot;HHH&quot;,
+      &quot;AssessmentIndicatorName&quot; : &quot;HHH&quot;,
+      &quot;AssessmentIndicatorType&quot; : &quot;Boolean&quot;,
+      &quot;RegulatoryCodeName&quot; : &quot;HHH&quot;,
+      &quot;RegulatoryCodeSubject&quot; : &quot;HHH&quot;,
+      &quot;RegulatoryCodeAuthority&quot; : &quot;HHH&quot;,
+      &quot;AssessmentIndicatorDefinedValues&quot; : null,
+      &quot;ItemEntity&quot; : &quot;AssessmentTask&quot;
+    } ]
+  },
+  &quot;FilteredList2&quot; : {
+    &quot;RegCodeAssementIndToInsert&quot; : [ {
+      &quot;TaskDefinition&quot; : &quot;EEE&quot;,
+      &quot;AssessmentIndicatorName&quot; : &quot;EEE&quot;,
+      &quot;AssessmentIndicatorType&quot; : &quot;Boolean&quot;,
+      &quot;RegulatoryCodeName&quot; : &quot;EEE&quot;,
+      &quot;RegulatoryCodeSubject&quot; : &quot;EEE&quot;,
+      &quot;RegulatoryCodeAuthority&quot; : &quot;EEE&quot;,
+      &quot;AssessmentIndicatorDefinedValues&quot; : null,
+      &quot;ItemEntity&quot; : &quot;AssessmentTask&quot;,
+      &quot;RegCodeAssessmentInd&quot; : &quot;&quot;,
+      &quot;AssessmentTaskIndDefinitionName&quot; : &quot;&quot;
+    }, {
+      &quot;TaskDefinition&quot; : &quot;GGG&quot;,
+      &quot;AssessmentIndicatorName&quot; : &quot;GGG&quot;,
+      &quot;AssessmentIndicatorType&quot; : &quot;Boolean&quot;,
+      &quot;RegulatoryCodeName&quot; : &quot;GGG&quot;,
+      &quot;RegulatoryCodeSubject&quot; : &quot;GGG&quot;,
+      &quot;RegulatoryCodeAuthority&quot; : &quot;GGG&quot;,
+      &quot;AssessmentIndicatorDefinedValues&quot; : null,
+      &quot;ItemEntity&quot; : &quot;AssessmentTask&quot;,
+      &quot;RegCodeAssessmentInd&quot; : &quot;&quot;,
+      &quot;AssessmentTaskIndDefinitionName&quot; : &quot;&quot;
+    }, {
+      &quot;TaskDefinition&quot; : &quot;GGG&quot;,
+      &quot;AssessmentIndicatorName&quot; : &quot;GGG111&quot;,
+      &quot;AssessmentIndicatorType&quot; : &quot;Boolean&quot;,
+      &quot;RegulatoryCodeName&quot; : &quot;GGG&quot;,
+      &quot;RegulatoryCodeSubject&quot; : &quot;GGG&quot;,
+      &quot;RegulatoryCodeAuthority&quot; : &quot;GGG&quot;,
+      &quot;AssessmentIndicatorDefinedValues&quot; : null,
+      &quot;ItemEntity&quot; : &quot;AssessmentTask&quot;,
+      &quot;RegCodeAssessmentInd&quot; : &quot;&quot;,
+      &quot;AssessmentTaskIndDefinitionName&quot; : &quot;&quot;
+    }, {
+      &quot;TaskDefinition&quot; : &quot;HHH&quot;,
+      &quot;AssessmentIndicatorName&quot; : &quot;HHH&quot;,
+      &quot;AssessmentIndicatorType&quot; : &quot;Boolean&quot;,
+      &quot;RegulatoryCodeName&quot; : &quot;HHH&quot;,
+      &quot;RegulatoryCodeSubject&quot; : &quot;HHH&quot;,
+      &quot;RegulatoryCodeAuthority&quot; : &quot;HHH&quot;,
+      &quot;AssessmentIndicatorDefinedValues&quot; : null,
+      &quot;ItemEntity&quot; : &quot;AssessmentTask&quot;,
+      &quot;RegCodeAssessmentInd&quot; : &quot;&quot;,
+      &quot;AssessmentTaskIndDefinitionName&quot; : &quot;&quot;
+    } ]
+  },
+  &quot;FilteredList&quot; : {
+    &quot;AssessmentIndDefinitionsToInsert&quot; : [ {
+      &quot;TaskDefinition&quot; : &quot;EEE&quot;,
+      &quot;AssessmentIndicatorName&quot; : &quot;EEE&quot;,
+      &quot;AssessmentIndicatorType&quot; : &quot;Boolean&quot;,
+      &quot;RegulatoryCodeName&quot; : &quot;EEE&quot;,
+      &quot;RegulatoryCodeSubject&quot; : &quot;EEE&quot;,
+      &quot;RegulatoryCodeAuthority&quot; : &quot;EEE&quot;,
+      &quot;AssessmentIndicatorDefinedValues&quot; : null,
+      &quot;ItemEntity&quot; : &quot;AssessmentTask&quot;,
+      &quot;RegCodeAssessmentInd&quot; : &quot;&quot;,
+      &quot;AssessmentTaskIndDefinitionName&quot; : &quot;&quot;
+    }, {
+      &quot;TaskDefinition&quot; : &quot;GGG&quot;,
+      &quot;AssessmentIndicatorName&quot; : &quot;GGG&quot;,
+      &quot;AssessmentIndicatorType&quot; : &quot;Boolean&quot;,
+      &quot;RegulatoryCodeName&quot; : &quot;GGG&quot;,
+      &quot;RegulatoryCodeSubject&quot; : &quot;GGG&quot;,
+      &quot;RegulatoryCodeAuthority&quot; : &quot;GGG&quot;,
+      &quot;AssessmentIndicatorDefinedValues&quot; : null,
+      &quot;ItemEntity&quot; : &quot;AssessmentTask&quot;,
+      &quot;RegCodeAssessmentInd&quot; : &quot;&quot;,
+      &quot;AssessmentTaskIndDefinitionName&quot; : &quot;&quot;
+    }, {
+      &quot;TaskDefinition&quot; : &quot;GGG&quot;,
+      &quot;AssessmentIndicatorName&quot; : &quot;GGG111&quot;,
+      &quot;AssessmentIndicatorType&quot; : &quot;Boolean&quot;,
+      &quot;RegulatoryCodeName&quot; : &quot;GGG&quot;,
+      &quot;RegulatoryCodeSubject&quot; : &quot;GGG&quot;,
+      &quot;RegulatoryCodeAuthority&quot; : &quot;GGG&quot;,
+      &quot;AssessmentIndicatorDefinedValues&quot; : null,
+      &quot;ItemEntity&quot; : &quot;AssessmentTask&quot;,
+      &quot;RegCodeAssessmentInd&quot; : &quot;&quot;,
+      &quot;AssessmentTaskIndDefinitionName&quot; : &quot;&quot;
+    }, {
+      &quot;TaskDefinition&quot; : &quot;HHH&quot;,
+      &quot;AssessmentIndicatorName&quot; : &quot;HHH&quot;,
+      &quot;AssessmentIndicatorType&quot; : &quot;Boolean&quot;,
+      &quot;RegulatoryCodeName&quot; : &quot;HHH&quot;,
+      &quot;RegulatoryCodeSubject&quot; : &quot;HHH&quot;,
+      &quot;RegulatoryCodeAuthority&quot; : &quot;HHH&quot;,
+      &quot;AssessmentIndicatorDefinedValues&quot; : null,
+      &quot;ItemEntity&quot; : &quot;AssessmentTask&quot;,
+      &quot;RegCodeAssessmentInd&quot; : &quot;&quot;,
+      &quot;AssessmentTaskIndDefinitionName&quot; : &quot;&quot;
+    } ]
+  }
+}</expectedInputJson>
+    <fieldLevelSecurityEnabled>false</fieldLevelSecurityEnabled>
+    <inputType>JSON</inputType>
+    <isManagedUsingStdDesigner>false</isManagedUsingStdDesigner>
+    <name>QuickBuildCreateInspectionAddAssessmentTaskAssmentInd</name>
+    <nullInputsIncludedInOutput>false</nullInputsIncludedInOutput>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>QuickBuildCreateInspectionAddAssessmentTaskAssmentInd8104918904712182</globalKey>
+        <inputFieldName>FilteredList:AssessmentIndDefinitionsToInsert:AssessmentIndicatorName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <lookupByFieldName>Name</lookupByFieldName>
+        <lookupObjectName>AssessmentIndicatorDefinition</lookupObjectName>
+        <lookupReturnedFieldName>Id</lookupReturnedFieldName>
+        <name>QuickBuildCreateInspectionAddAssessmentTaskAssmentInd</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>AssessmentIndDefinitionId</outputFieldName>
+        <outputObjectName>AssessmentTaskIndDefinition</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>true</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>QuickBuildCreateInspectionAddAssessmentTaskAssmentInd2841687328249842</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>QuickBuildCreateInspectionAddAssessmentTaskAssmentInd</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>AssessmentTaskIndDefinition</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>QuickBuildCreateInspectionAddAssessmentTaskAssmentInd17360134967439356</globalKey>
+        <inputFieldName>FilteredList:AssessmentIndDefinitionsToInsert:TaskDefinition</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <lookupByFieldName>Name</lookupByFieldName>
+        <lookupObjectName>AssessmentTaskDefinition</lookupObjectName>
+        <lookupReturnedFieldName>Id</lookupReturnedFieldName>
+        <name>QuickBuildCreateInspectionAddAssessmentTaskAssmentInd</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>AssessmentTaskDefinitionId</outputFieldName>
+        <outputObjectName>AssessmentTaskIndDefinition</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <outputType>SObject</outputType>
+    <previewJsonData>{
+  &quot;ContextId&quot; : &quot;&quot;,
+  &quot;timeStamp&quot; : &quot;2021-03-25T14:02:37.858Z&quot;,
+  &quot;userId&quot; : &quot;0054x000003dns8AAA&quot;,
+  &quot;userName&quot; : &quot;jblankenship@rentassistance01292021.demo&quot;,
+  &quot;userProfile&quot; : &quot;System Administrator&quot;,
+  &quot;userTimeZone&quot; : -420,
+  &quot;userCurrencyCode&quot; : &quot;USD&quot;,
+  &quot;sfdcIFrameOrigin&quot; : &quot;https://rentassist-20210129-demo--vlocity-ins.visualforce.com&quot;,
+  &quot;sfdcIFrameHost&quot; : &quot;web&quot;,
+  &quot;layout&quot; : &quot;lightning&quot;,
+  &quot;isdtp&quot; : &quot;p1&quot;,
+  &quot;id&quot; : &quot;a5y4x0000004PyrAAE&quot;,
+  &quot;vlcPersistentComponent&quot; : { },
+  &quot;Details&quot; : {
+    &quot;Name&quot; : &quot;Test 27b Inspection&quot;,
+    &quot;Description&quot; : &quot;Test 27b Inspection&quot;,
+    &quot;RequireSignatures&quot; : false
+  },
+  &quot;Items&quot; : {
+    &quot;InspectionFile&quot; : [ {
+      &quot;filename&quot; : &quot;Test26Inspection.csv&quot;,
+      &quot;size&quot; : 355,
+      &quot;data&quot; : &quot;a309b2c9-8fb7-4d67-ab86-7abcf83d35f3&quot;,
+      &quot;$$hashKey&quot; : &quot;object:163&quot;,
+      &quot;contentDocumentId&quot; : &quot;0694x000000e5fHAAQ&quot;,
+      &quot;vId&quot; : &quot;0684x000000eBI0AAM&quot;
+    } ],
+    &quot;FileCount&quot; : 1,
+    &quot;InspectionComponents&quot; : [ {
+      &quot;TaskDefinition&quot; : &quot;AAA&quot;,
+      &quot;AssessmentIndicatorName&quot; : &quot;AAA&quot;,
+      &quot;AssessmentIndicatorType&quot; : &quot;Boolean&quot;,
+      &quot;RegulatoryCodeName&quot; : &quot;AAA&quot;,
+      &quot;RegulatoryCodeSubject&quot; : &quot;AAA&quot;,
+      &quot;RegulatoryCodeAuthority&quot; : &quot;AAA&quot;,
+      &quot;AssessmentIndicatorDefinedValues&quot; : null,
+      &quot;ItemEntity&quot; : &quot;AssessmentTask&quot;
+    }, {
+      &quot;TaskDefinition&quot; : &quot;AAA&quot;,
+      &quot;AssessmentIndicatorName&quot; : &quot;AAA111&quot;,
+      &quot;AssessmentIndicatorType&quot; : &quot;Boolean&quot;,
+      &quot;RegulatoryCodeName&quot; : &quot;AAA&quot;,
+      &quot;RegulatoryCodeSubject&quot; : &quot;AAA&quot;,
+      &quot;RegulatoryCodeAuthority&quot; : &quot;AAA&quot;,
+      &quot;AssessmentIndicatorDefinedValues&quot; : null,
+      &quot;ItemEntity&quot; : &quot;AssessmentTask&quot;
+    }, {
+      &quot;TaskDefinition&quot; : &quot;AAA&quot;,
+      &quot;AssessmentIndicatorName&quot; : &quot;AAA222&quot;,
+      &quot;AssessmentIndicatorType&quot; : &quot;Boolean&quot;,
+      &quot;RegulatoryCodeName&quot; : &quot;AAA&quot;,
+      &quot;RegulatoryCodeSubject&quot; : &quot;AAA&quot;,
+      &quot;RegulatoryCodeAuthority&quot; : &quot;AAA&quot;,
+      &quot;AssessmentIndicatorDefinedValues&quot; : null,
+      &quot;ItemEntity&quot; : &quot;AssessmentTask&quot;
+    }, {
+      &quot;TaskDefinition&quot; : &quot;BBB&quot;,
+      &quot;AssessmentIndicatorName&quot; : &quot;BBB&quot;,
+      &quot;AssessmentIndicatorType&quot; : &quot;Boolean&quot;,
+      &quot;RegulatoryCodeName&quot; : &quot;BBB&quot;,
+      &quot;RegulatoryCodeSubject&quot; : &quot;BBB&quot;,
+      &quot;RegulatoryCodeAuthority&quot; : &quot;BBB&quot;,
+      &quot;AssessmentIndicatorDefinedValues&quot; : null,
+      &quot;ItemEntity&quot; : &quot;AssessmentTask&quot;
+    }, {
+      &quot;TaskDefinition&quot; : &quot;CCC&quot;,
+      &quot;AssessmentIndicatorName&quot; : &quot;CCC&quot;,
+      &quot;AssessmentIndicatorType&quot; : &quot;Boolean&quot;,
+      &quot;RegulatoryCodeName&quot; : &quot;CCC&quot;,
+      &quot;RegulatoryCodeSubject&quot; : &quot;CCC&quot;,
+      &quot;RegulatoryCodeAuthority&quot; : &quot;CCC&quot;,
+      &quot;AssessmentIndicatorDefinedValues&quot; : null,
+      &quot;ItemEntity&quot; : &quot;AssessmentTask&quot;
+    }, {
+      &quot;TaskDefinition&quot; : &quot;DDD&quot;,
+      &quot;AssessmentIndicatorName&quot; : &quot;DDD&quot;,
+      &quot;AssessmentIndicatorType&quot; : &quot;Boolean&quot;,
+      &quot;RegulatoryCodeName&quot; : &quot;DDD&quot;,
+      &quot;RegulatoryCodeSubject&quot; : &quot;DDD&quot;,
+      &quot;RegulatoryCodeAuthority&quot; : &quot;DDD&quot;,
+      &quot;AssessmentIndicatorDefinedValues&quot; : null,
+      &quot;ItemEntity&quot; : &quot;AssessmentTask&quot;
+    }, {
+      &quot;TaskDefinition&quot; : &quot;DDD&quot;,
+      &quot;AssessmentIndicatorName&quot; : &quot;DDD111&quot;,
+      &quot;AssessmentIndicatorType&quot; : &quot;Boolean&quot;,
+      &quot;RegulatoryCodeName&quot; : &quot;DDD&quot;,
+      &quot;RegulatoryCodeSubject&quot; : &quot;DDD&quot;,
+      &quot;RegulatoryCodeAuthority&quot; : &quot;DDD&quot;,
+      &quot;AssessmentIndicatorDefinedValues&quot; : null,
+      &quot;ItemEntity&quot; : &quot;AssessmentTask&quot;
+    } ]
+  }
+}</previewJsonData>
+    <processSuperBulk>false</processSuperBulk>
+    <responseCacheTtlMinutes>0.0</responseCacheTtlMinutes>
+    <rollbackOnError>false</rollbackOnError>
+    <sourceObject>json</sourceObject>
+    <sourceObjectDefault>false</sourceObjectDefault>
+    <synchronousProcessThreshold>-1.0</synchronousProcessThreshold>
+    <type>Load</type>
+    <uniqueName>QuickBuildCreateInspectionAddAssessmentTaskAssmentInd_1</uniqueName>
+    <versionNumber>1.0</versionNumber>
+    <xmlDeclarationRemoved>false</xmlDeclarationRemoved>
+</OmniDataTransform>

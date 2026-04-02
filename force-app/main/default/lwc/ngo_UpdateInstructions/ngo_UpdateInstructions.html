@@ -1,0 +1,75 @@
+<template>
+    <lightning-card title="How This Works" icon-name="utility:rules">
+        <div class="slds-p-around_medium">
+            
+            <template if:true={creationDate}>
+                <div class="slds-text-align_center slds-m-bottom_large">
+                    <p class="slds-text-heading_small slds-text-color_weak">
+                        Your IDO was created on:&nbsp;
+                        <strong class="slds-text-color_default">
+                            <lightning-formatted-date-time 
+                                value={creationDate} 
+                                year="numeric" 
+                                month="long" 
+                                day="2-digit"
+                                timezone="UTC">
+                            </lightning-formatted-date-time>
+                        </strong>
+                    </p>
+                </div>
+            </template>
+
+            <template if:true={releaseCycle}>
+                <div class="slds-text-align_center slds-m-bottom_large">
+                    <p class="slds-text-heading_small slds-text-color_weak">
+                        This IDO's release cycle is:&nbsp;
+                        <strong class="slds-text-color_default">{releaseCycle}</strong>
+                    </p>
+                    <p class="slds-text-body_small slds-text-color_weak slds-m-top_x-small" style="font-style: italic;">
+                        In order to guarantee org stability and prevent errors, you will only see Bug Fixes that are compatible with this release cycle. If there has been a major release since this org was created, you will need a new IDO to see newer Bug Fixes.
+                    </p>
+                </div>
+            </template>
+
+            <div class="slds-grid slds-gutters slds-wrap">
+                
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-3">
+                    <div class="instruction-card slds-p-around_medium slds-text-align_center slds-m-bottom_small">
+                        <div class="icon-container slds-m-bottom_small">
+                            <lightning-icon icon-name="utility:magicwand" size="large" variant="warning"></lightning-icon>
+                        </div>
+                        <h3 class="slds-text-heading_small slds-m-bottom_small"><strong>1. AI-Powered Release Notes</strong></h3>
+                        <p class="slds-text-body_regular">
+                            Catch up on everything from recent IDO releases! In a hurry? Click <strong>"Summarize Release Notes"</strong> to trigger Einstein and show you the most recent IDO updates. It analyzes the latest Platform updates vs. Bug Fixes and generates a structured briefing in real-time.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-3">
+                    <div class="instruction-card slds-p-around_medium slds-text-align_center slds-m-bottom_small">
+                        <div class="icon-container slds-m-bottom_small">
+                            <lightning-icon icon-name="utility:video" size="large" variant="action"></lightning-icon>
+                        </div>
+                        <h3 class="slds-text-heading_small slds-m-bottom_small"><strong>2. Feature Deep Dives</strong></h3>
+                        <p class="slds-text-body_regular">
+                            Need more detail? Select <strong>"More Information"</strong> from the row menu on any Release Note or Bug Fix. This opens a modal with full specs and embedded demo videos 🎥.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-3">
+                    <div class="instruction-card slds-p-around_medium slds-text-align_center slds-m-bottom_small">
+                        <div class="icon-container slds-m-bottom_small">
+                            <lightning-icon icon-name="utility:refresh" size="large" variant="success"></lightning-icon>
+                        </div>
+                        <h3 class="slds-text-heading_small slds-m-bottom_small"><strong>3. Brix Fixes in an Instant</strong></h3>
+                        <p class="slds-text-body_regular">
+                            In the Available IDO Updates list, check multiple boxes and hit <strong>"Deploy Selected"</strong>. This will trigger bug fixes to deploy via Brix directly into this environment so you can keep your org up-to-date longer!
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </lightning-card>
+</template>

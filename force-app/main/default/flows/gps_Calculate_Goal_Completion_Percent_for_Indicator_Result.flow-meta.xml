@@ -1,0 +1,979 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <apiVersion>60.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <description>Sets TotalGoalAssignmentCount and GoalAssignmentsCompletedCount to calculate percentage for the new indicator result record.</description>
+        <name>SetCountVariables</name>
+        <label>Set Count Variables</label>
+        <locationX>50</locationX>
+        <locationY>998</locationY>
+        <assignmentItems>
+            <assignToReference>TotalGoalAssignmentCount</assignToReference>
+            <operator>AssignCount</operator>
+            <value>
+                <elementReference>GetGoalAssignments</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GoalAssignmentsCompletedCount</assignToReference>
+            <operator>AssignCount</operator>
+            <value>
+                <elementReference>FilterGoalAssignments</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>ReviewIndicatorResultCalculationScreen</targetReference>
+        </connector>
+    </assignments>
+    <collectionProcessors>
+        <description>Filters goal assignments to only include records that are in Completed status.</description>
+        <name>FilterGoalAssignments</name>
+        <elementSubtype>FilterCollectionProcessor</elementSubtype>
+        <label>Filter Goal Assignments</label>
+        <locationX>50</locationX>
+        <locationY>890</locationY>
+        <assignNextValueToReference>currentItem_FilterGoalAssignments</assignNextValueToReference>
+        <collectionProcessorType>FilterCollectionProcessor</collectionProcessorType>
+        <collectionReference>GetGoalAssignments</collectionReference>
+        <conditionLogic>and</conditionLogic>
+        <conditions>
+            <leftValueReference>currentItem_FilterGoalAssignments.Status</leftValueReference>
+            <operator>EqualTo</operator>
+            <rightValue>
+                <stringValue>Completed</stringValue>
+            </rightValue>
+        </conditions>
+        <connector>
+            <targetReference>SetCountVariables</targetReference>
+        </connector>
+    </collectionProcessors>
+    <decisions>
+        <description>Determines if goal assignments are found.</description>
+        <name>FoundGoalAssignments</name>
+        <label>Found Goal Assignments?</label>
+        <locationX>446</locationX>
+        <locationY>782</locationY>
+        <defaultConnector>
+            <targetReference>NoGoalAssignmentsErrorScreen</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No (Default)</defaultConnectorLabel>
+        <rules>
+            <name>GoalAssignmentsFoundOutcome</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>GetGoalAssignments</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>FilterGoalAssignments</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Determines if the request includes a valid indicator performance period ID and if the indicator definition is active.</description>
+        <name>IndicatorRequestValidOrInvalid</name>
+        <label>Is Indicator Request Valid?</label>
+        <locationX>908</locationX>
+        <locationY>458</locationY>
+        <defaultConnector>
+            <targetReference>IncompleteIndicatorRequestError</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No (Default)</defaultConnectorLabel>
+        <rules>
+            <name>ValidIndicatorRequestOutcome</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>GetIndicatorPerformancePeriod.Id</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue></stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>GetIndicatorPerformancePeriod.IndicatorAssignment.IndicatorDefinition.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Active</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>ScreenSelectGoalDefinitionResultType</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <description>outcome management, button on indicator performance period record page launches this flow</description>
+    <dynamicChoiceSets>
+        <description>Stores the goal definition selected by the flow user.</description>
+        <name>GoalDefinitionChoiceSet</name>
+        <dataType>String</dataType>
+        <displayField>Name</displayField>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Status</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Active</stringValue>
+            </value>
+        </filters>
+        <object>GoalDefinition</object>
+        <outputAssignments>
+            <assignToReference>GoalDefinitionId</assignToReference>
+            <field>Id</field>
+        </outputAssignments>
+        <sortField>Name</sortField>
+        <sortOrder>Asc</sortOrder>
+        <valueField>Id</valueField>
+    </dynamicChoiceSets>
+    <dynamicChoiceSets>
+        <description>Stores the result type selected by the flow user.</description>
+        <name>ResultTypePicklistChoiceSet</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>Type</picklistField>
+        <picklistObject>IndicatorResult</picklistObject>
+    </dynamicChoiceSets>
+    <environments>Default</environments>
+    <formulas>
+        <description>Calculates how long the flow takes to run.</description>
+        <name>CalculateFlowRunTime</name>
+        <dataType>Number</dataType>
+        <expression>{!$Flow.CurrentDateTime} - {!$Flow.InterviewStartTime}</expression>
+        <scale>4</scale>
+    </formulas>
+    <formulas>
+        <description>Calculates the percentage of goal assignments that are completed.</description>
+        <name>CompletionPercentageFormula</name>
+        <dataType>Number</dataType>
+        <expression>{!GoalAssignmentsCompletedCount}/{!TotalGoalAssignmentCount}</expression>
+        <scale>2</scale>
+    </formulas>
+    <formulas>
+        <description>Calculates the time 24 hours ago.</description>
+        <name>TwentyFourHoursAgo</name>
+        <dataType>DateTime</dataType>
+        <expression>NOW() - 1</expression>
+    </formulas>
+    <interviewLabel>Calculate Goal Completion Percent for Indicator Result {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Calculate Goal Completion Percent for Indicator Result</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>IndicatorResultFlow</processType>
+    <recordCreates>
+        <description>Creates an indicator result record using the calculated completion percentage.</description>
+        <name>CreateIndicatorResult</name>
+        <label>Create Indicator Result</label>
+        <locationX>50</locationX>
+        <locationY>1322</locationY>
+        <connector>
+            <targetReference>IndicatorResultConfirmationScreen</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>DisplayIndicatorResultErrorScreen</targetReference>
+        </faultConnector>
+        <inputAssignments>
+            <field>CalculationMethod</field>
+            <value>
+                <stringValue>AutomaticallyCalculated</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Denominator</field>
+            <value>
+                <elementReference>TotalGoalAssignmentCount</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>FlowDefinitionApiName</field>
+            <value>
+                <elementReference>GetIndicatorPerformancePeriod.IndicatorAssignment.IndicatorDefinition.FlowDefinitionApiName</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>FlowVersion</field>
+            <value>
+                <elementReference>GetFlowDefinition.VersionNumber</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>IndicatorPerformancePeriodId</field>
+            <value>
+                <elementReference>indicatorPerformancePeriodId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>MeasurementDate</field>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Numerator</field>
+            <value>
+                <elementReference>GoalAssignmentsCompletedCount</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>ResultValue</field>
+            <value>
+                <elementReference>CompletionPercentageFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Type</field>
+            <value>
+                <elementReference>ResultTypePicklist</elementReference>
+            </value>
+        </inputAssignments>
+        <object>IndicatorResult</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordLookups>
+        <description>Gets the flow definition that’s calculating the indicator result.</description>
+        <name>GetFlowDefinition</name>
+        <label>Get Flow Definition</label>
+        <locationX>50</locationX>
+        <locationY>1214</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>CreateIndicatorResult</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>DisplayGetFlowDefinitionErrorScreen</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>ApiName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>GetIndicatorPerformancePeriod.IndicatorAssignment.IndicatorDefinition.FlowDefinitionApiName</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>FlowDefinitionView</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>Gets the goal assignments that are related to the specified goal definition and must be evaluated within the specified period.</description>
+        <name>GetGoalAssignments</name>
+        <label>Get Goal Assignments</label>
+        <locationX>446</locationX>
+        <locationY>674</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>FoundGoalAssignments</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>GoalAssignmentErrorScreen</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>GoalDefinitionId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>GoalDefinitionId</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>TargetCompletionDate</field>
+            <operator>GreaterThanOrEqualTo</operator>
+            <value>
+                <elementReference>TargetCompletionStartDate</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>TargetCompletionDate</field>
+            <operator>LessThanOrEqualTo</operator>
+            <value>
+                <elementReference>TargetCompletionEndDate</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>GoalAssignment</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>Gets the indicator performance period record for the selected indicator definition.</description>
+        <name>GetIndicatorPerformancePeriod</name>
+        <label>Get Indicator Performance Period</label>
+        <locationX>908</locationX>
+        <locationY>242</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>GetTimePeriod</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>DisplayGetIndicatorPerformancePeriodErrorScreen</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>indicatorPerformancePeriodId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>IndicatorPerformancePeriod</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>Gets the indicator result records created within the last 24 hours.</description>
+        <name>GetRecentIndicatorResult</name>
+        <label>Get Recent Indicator Result</label>
+        <locationX>908</locationX>
+        <locationY>134</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>GetIndicatorPerformancePeriod</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>DisplayGetRecentIndicatorResultErrorScreen</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>CreatedDate</field>
+            <operator>GreaterThanOrEqualTo</operator>
+            <value>
+                <elementReference>TwentyFourHoursAgo</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>IndicatorPerformancePeriodId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>indicatorPerformancePeriodId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>IndicatorResult</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>Gets the time period record with an ID that matches the IndicatorPerformancePeriodId.</description>
+        <name>GetTimePeriod</name>
+        <label>Get Time Period</label>
+        <locationX>908</locationX>
+        <locationY>350</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>IndicatorRequestValidOrInvalid</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>DisplayGetTimePeriodError</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>GetIndicatorPerformancePeriod.TimePeriod.Id</elementReference>
+            </value>
+        </filters>
+        <object>TimePeriod</object>
+        <outputAssignments>
+            <assignToReference>TargetCompletionEndDate</assignToReference>
+            <field>EndDate</field>
+        </outputAssignments>
+        <outputAssignments>
+            <assignToReference>TargetCompletionStartDate</assignToReference>
+            <field>StartDate</field>
+        </outputAssignments>
+    </recordLookups>
+    <screens>
+        <description>Displays an error to the flow user.</description>
+        <name>DisplayGetFlowDefinitionErrorScreen</name>
+        <label>Display Error</label>
+        <locationX>578</locationX>
+        <locationY>1322</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>GetFlowDefinitionErrorDisplayText</name>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;font-size: 14px; color: rgb(186, 5, 23);&quot;&gt;Something went wrong while getting the flow definition. Contact your Salesforce admin for help.&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
+        <description>Displays an error to the flow user.</description>
+        <name>DisplayGetIndicatorPerformancePeriodErrorScreen</name>
+        <label>Display Error</label>
+        <locationX>1898</locationX>
+        <locationY>350</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>GetIndicatorPerformancePeriodErrorDisplayText</name>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;font-size: 14px; color: rgb(186, 5, 23);&quot;&gt;Something went wrong while getting the indicator performance period. Contact your Salesforce admin for help.&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
+        <description>Displays an error to the flow user.</description>
+        <name>DisplayGetRecentIndicatorResultErrorScreen</name>
+        <label>Display Error</label>
+        <locationX>2162</locationX>
+        <locationY>242</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>GetIndicatorResultRecordErrorDisplayText</name>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;font-size: 14px; color: rgb(186, 5, 23);&quot;&gt;Something went wrong while getting the recent indicator result records. Contact your Salesforce admin for help.&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
+        <description>Displays an error to the flow user.</description>
+        <name>DisplayGetTimePeriodError</name>
+        <label>Display Error</label>
+        <locationX>1634</locationX>
+        <locationY>458</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>GetTimePeriodErrorDisplayText</name>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;font-size: 14px; color: rgb(186, 5, 23);&quot;&gt;Add a valid time period to the indicator performance period related to this goal definition.&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
+        <description>Displays an error to the flow user.</description>
+        <name>DisplayIndicatorResultErrorScreen</name>
+        <label>Display Error</label>
+        <locationX>314</locationX>
+        <locationY>1430</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>IndicatorResultWriteErrorDisplayText</name>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;font-size: 14px; color: rgb(186, 5, 23);&quot;&gt;We couldn’t create an indicator result record. Contact your Salesforce admin for help&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
+        <description>Displays an error to the flow user.</description>
+        <name>GoalAssignmentErrorScreen</name>
+        <label>Display Error</label>
+        <locationX>1106</locationX>
+        <locationY>782</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>GoalAssignmentErrorDisplayText</name>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;font-size: 14px; color: rgb(186, 5, 23);&quot;&gt;Something went wrong while getting the goal assignments. Contact your Salesforce admin for help.&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
+        <description>Displays an error to the flow user about a missing indicator performance period ID or an inactive indicator definition.</description>
+        <name>IncompleteIndicatorRequestError</name>
+        <label>Display Error</label>
+        <locationX>1370</locationX>
+        <locationY>566</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>MissingIndicatorPerformancePeriodId</name>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;font-size: 14px; color: rgb(186, 5, 23);&quot;&gt;Enter a valid indicator performance period ID.&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+            <visibilityRule>
+                <conditionLogic>and</conditionLogic>
+                <conditions>
+                    <leftValueReference>indicatorPerformancePeriodId</leftValueReference>
+                    <operator>EqualTo</operator>
+                    <rightValue>
+                        <stringValue></stringValue>
+                    </rightValue>
+                </conditions>
+            </visibilityRule>
+        </fields>
+        <fields>
+            <name>IndicatorDefinitionInactive</name>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;font-size: 14px; color: rgb(186, 5, 23);&quot;&gt;Set the status of the indicator definition to Active.&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+            <visibilityRule>
+                <conditionLogic>and</conditionLogic>
+                <conditions>
+                    <leftValueReference>indicatorPerformancePeriodId</leftValueReference>
+                    <operator>NotEqualTo</operator>
+                    <rightValue>
+                        <stringValue></stringValue>
+                    </rightValue>
+                </conditions>
+                <conditions>
+                    <leftValueReference>GetIndicatorPerformancePeriod.IndicatorAssignment.IndicatorDefinition.Status</leftValueReference>
+                    <operator>NotEqualTo</operator>
+                    <rightValue>
+                        <stringValue>Active</stringValue>
+                    </rightValue>
+                </conditions>
+            </visibilityRule>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
+        <description>Displays a confirmation message to the flow user.</description>
+        <name>IndicatorResultConfirmationScreen</name>
+        <label>Display Confirmation</label>
+        <locationX>50</locationX>
+        <locationY>1430</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>IndicatorResultConfirmationDisplayText</name>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;We calculated the goal completion percentage for the specified goal definition and created an indicator result record.&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
+        <description>Displays an error to the flow user.</description>
+        <name>NoGoalAssignmentsErrorScreen</name>
+        <label>Display Error</label>
+        <locationX>842</locationX>
+        <locationY>890</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>NoGoalAssignmentsErrorDisplayText</name>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;font-size: 14px; color: rgb(186, 5, 23);&quot;&gt;We couldn’t find any goal assignments associated with the specified goal definition. We couldn’t find any goal assignments associated with the specified goal definition. Check if there are goal assignments in the timeframe you’re measuring or make sure you have access to goal assignments.&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
+        <description>Displays the indicator result calculation for the flow user to review before creating the indicator result record.</description>
+        <name>ReviewIndicatorResultCalculationScreen</name>
+        <label>Review Indicator Result Calculation</label>
+        <locationX>50</locationX>
+        <locationY>1106</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>GetFlowDefinition</targetReference>
+        </connector>
+        <fields>
+            <name>ReviewIndicatorResultCalculationHeaderDisplayText</name>
+            <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;Review Indicator Result Calculation&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>ReviewIndicatorResultCalculationContextDisplayTextScreen</name>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;background-color: transparent; color: rgb(0, 0, 0); font-size: 14px;&quot;&gt;{!ResultsCalculatedTextTemplate}&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>IndicatorResultDetailsSection</name>
+            <fieldText>Indicator Result Details</fieldText>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>IndicatorResultDetailsSection_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>ResultValueLabelDisplayText</name>
+                    <fieldText>&lt;p&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;Result Value&lt;/span&gt;&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <fields>
+                    <name>ResultValueDisplayText</name>
+                    <fieldText>&lt;p&gt;&lt;strong style=&quot;background-color: transparent; color: rgb(0, 0, 0); font-size: 12px;&quot;&gt;{!CompletionPercentageFormula}&lt;/strong&gt;&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>IndicatorResultDetailsSection_Column2</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>ResultTypeLabelDisplayText</name>
+                    <fieldText>&lt;p&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;Result Type&lt;/span&gt;&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <fields>
+                    <name>ResultTypeDisplayText</name>
+                    <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 12px; color: rgb(0, 0, 0); background-color: transparent;&quot;&gt;{!ResultTypePicklist}&lt;/strong&gt;&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <regionContainerType>SectionWithHeader</regionContainerType>
+        </fields>
+        <fields>
+            <name>CalculationDetailsSection</name>
+            <fieldText>Calculation Details</fieldText>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>CalculationDetailsSection_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>NumeratorLabelDisplayText</name>
+                    <fieldText>&lt;p&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;Numerator&lt;/span&gt;&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <fields>
+                    <name>NumeratorValueDisplayText</name>
+                    <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 12px; color: rgb(0, 0, 0); background-color: transparent;&quot;&gt;{!GoalAssignmentsCompletedCount}&lt;/strong&gt;&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>CalculationDetailsSection_Column2</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>DenominatorLabelDisplayText</name>
+                    <fieldText>&lt;p&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;Denominator&lt;/span&gt;&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <fields>
+                    <name>DenominatorValueDisplayText</name>
+                    <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 12px; color: rgb(0, 0, 0); background-color: transparent;&quot;&gt;{!TotalGoalAssignmentCount}&lt;/strong&gt;&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <regionContainerType>SectionWithHeader</regionContainerType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
+        <description>Allows flow user to select a goal definition and result type to calculate the goal completion percentage.</description>
+        <name>ScreenSelectGoalDefinitionResultType</name>
+        <label>Select a Goal Definition and Result Type</label>
+        <locationX>446</locationX>
+        <locationY>566</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>GetGoalAssignments</targetReference>
+        </connector>
+        <fields>
+            <name>SelectGoalDefinitionResultTypeHeaderDisplayText</name>
+            <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;Select a Goal Definition and Result Type&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>RecentIndicatorResultWarningDisplayText</name>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;background-color: transparent; color: rgb(0, 0, 0); font-size: 14px;&quot;&gt;{!RecentIndicatorResultWarningTextTemplate}&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+            <visibilityRule>
+                <conditionLogic>and</conditionLogic>
+                <conditions>
+                    <leftValueReference>GetRecentIndicatorResult.CreatedDate</leftValueReference>
+                    <operator>GreaterThanOrEqualTo</operator>
+                    <rightValue>
+                        <elementReference>TwentyFourHoursAgo</elementReference>
+                    </rightValue>
+                </conditions>
+            </visibilityRule>
+        </fields>
+        <fields>
+            <name>GoalDefinitionResultTypeContextDisplayText</name>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;Select a goal definition and an optional result type to calculate the percentage of goal assignments completed during the indicator performance period for the assigned participants.&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>InformationSection</name>
+            <fieldText>Information</fieldText>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>InformationSection_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>IndicatorDefinitionNameHeaderDisplayText</name>
+                    <fieldText>&lt;p&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;Indicator Definition&lt;/span&gt;&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <fields>
+                    <name>IndicatorDefinitionNameDisplayText</name>
+                    <fieldText>&lt;p&gt;&lt;strong style=&quot;background-color: transparent; color: rgb(0, 0, 0); font-size: 12px;&quot;&gt;{!GetIndicatorPerformancePeriod.IndicatorAssignment.IndicatorDefinition.Name}&lt;/strong&gt;&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <fields>
+                    <name>ResultTypePicklist</name>
+                    <choiceReferences>ResultTypePicklistChoiceSet</choiceReferences>
+                    <dataType>String</dataType>
+                    <fieldText>Result Type</fieldText>
+                    <fieldType>DropdownBox</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>false</isRequired>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>InformationSection_Column2</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>FlowDefinitionAPINameHeaderDisplayText</name>
+                    <fieldText>&lt;p&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;Flow Definition API Name&lt;/span&gt;&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <fields>
+                    <name>FlowDefinitionAPINameDisplayText</name>
+                    <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 12px; color: rgb(0, 0, 0); background-color: transparent;&quot;&gt;{!GetIndicatorPerformancePeriod.IndicatorAssignment.IndicatorDefinition.FlowDefinitionApiName}&lt;/strong&gt;&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <regionContainerType>SectionWithHeader</regionContainerType>
+        </fields>
+        <fields>
+            <name>CriteriaSection</name>
+            <fieldText>Criteria</fieldText>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>CriteriaSection_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>GoalDefinitionChoiceLookup</name>
+                    <choiceReferences>GoalDefinitionChoiceSet</choiceReferences>
+                    <extensionName>flowruntime:choiceLookup</extensionName>
+                    <fieldText>Goal Definition</fieldText>
+                    <fieldType>ComponentChoice</fieldType>
+                    <inputParameters>
+                        <name>placeholder</name>
+                        <value>
+                            <stringValue>Search Goal Definition…</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <storeOutputAutomatically>true</storeOutputAutomatically>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>CriteriaSection_Column2</name>
+                <fieldType>Region</fieldType>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <regionContainerType>SectionWithHeader</regionContainerType>
+        </fields>
+        <fields>
+            <name>UserVisbilityNoteDisplayText</name>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;Results are calculated only for the records that are visible to you.&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <sourceTemplate>indicators__CalcGoalCpltPctIndRslt</sourceTemplate>
+    <start>
+        <locationX>782</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>GetRecentIndicatorResult</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <textTemplates>
+        <description>Stores the text template that contains the warning message that’s displayed when the flow user tries to calculate without an Indicator Performance Period ID.</description>
+        <name>GetIndicatorResultRecordErrorTextTemplate</name>
+        <isViewedAsPlainText>false</isViewedAsPlainText>
+        <text>&lt;div class=&quot;slds-scoped-notification slds-media slds-media_center slds-theme_error&quot; role=&quot;status&quot; style=&quot;height: 50px; border-radius: 10px;&quot;&gt;
+&lt;div class=&quot;slds-media__figure&quot;&gt;
+&lt;span class=&quot;slds-icon_container slds-icon-utility-error&quot; title=&quot;error&quot;&gt;
+&lt;svg class=&quot;slds-icon slds-icon_small&quot; aria-hidden=&quot;true&quot;&gt;
+&lt;use xlink:href=&quot;/assets/icons/utility-sprite/svg/symbols.svg#error&quot;&gt;&lt;/use&gt;
+&lt;/svg&gt;
+&lt;span class=&quot;slds-assistive-text&quot;&gt;error&lt;/span&gt;
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;slds-media__body&quot;&gt;
+&lt;p&gt;Error: Missing Indicator Performance Period ID.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <description>Stores the text template that contains the warning message that’s displayed when the flow user tries to calculate another indicator result.</description>
+        <name>RecentIndicatorResultWarningTextTemplate</name>
+        <isViewedAsPlainText>false</isViewedAsPlainText>
+        <text>&lt;div class=&quot;slds-scoped-notification slds-media slds-media_center slds-theme_warning&quot; role=&quot;status&quot; style=&quot;height: 50px; border-radius: 10px;&quot;&gt;
+&lt;div class=&quot;slds-media__figure&quot;&gt;
+&lt;span class=&quot;slds-icon_container slds-icon-utility-warning&quot; title=&quot;warning&quot;&gt;
+&lt;svg class=&quot;slds-icon slds-icon_small&quot; aria-hidden=&quot;true&quot;&gt;
+&lt;use xlink:href=&quot;/assets/icons/utility-sprite/svg/symbols.svg#warning&quot;&gt;&lt;/use&gt;
+&lt;/svg&gt;
+&lt;span class=&quot;slds-assistive-text&quot;&gt;warning&lt;/span&gt;
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;slds-media__body&quot;&gt;
+&lt;p&gt;Warning: An indicator result record was created for this indicator performance period in the last 24 hours. Proceed only if you want to calculate another indicator result.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <description>Stores the text template that contains the message that’s displayed to the flow user before creating the indicator result record.</description>
+        <name>ResultsCalculatedTextTemplate</name>
+        <isViewedAsPlainText>false</isViewedAsPlainText>
+        <text>&lt;div class=&quot;slds-scoped-notification slds-media slds-media_center slds-theme_success&quot; role=&quot;status&quot; style=&quot;height: 50px; border-radius: 10px;&quot;&gt;
+&lt;div class=&quot;slds-media__figure&quot;&gt;
+&lt;span class=&quot;slds-icon_container slds-icon-utility-success&quot; title=&quot;success&quot;&gt;
+&lt;svg class=&quot;slds-icon slds-icon_small&quot; aria-hidden=&quot;true&quot;&gt;
+&lt;use xlink:href=&quot;/assets/icons/utility-sprite/svg/symbols.svg#success&quot;&gt;&lt;/use&gt;
+&lt;/svg&gt;
+&lt;span class=&quot;slds-assistive-text&quot;&gt;success&lt;/span&gt;
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;slds-media__body&quot;&gt;
+&lt;p&gt;Review the calculated indicator result and create the indicator result record.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;</text>
+    </textTemplates>
+    <variables>
+        <name>currentItem_FilterGoalAssignments</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>GoalAssignment</objectType>
+    </variables>
+    <variables>
+        <description>Stores the number of completed goal assignments.</description>
+        <name>GoalAssignmentsCompletedCount</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+    </variables>
+    <variables>
+        <description>Stores the goal definition used to create the indicator result.</description>
+        <name>GoalDefinitionId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Stores the indicator performance period ID associated with the indicator result that&apos;s passed into the flow.</description>
+        <name>indicatorPerformancePeriodId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Stores the end date for the calculation date range.</description>
+        <name>TargetCompletionEndDate</name>
+        <dataType>Date</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Stores the start date for the calculation date range.</description>
+        <name>TargetCompletionStartDate</name>
+        <dataType>Date</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Stores the number of all goal assignments.</description>
+        <name>TotalGoalAssignmentCount</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+    </variables>
+</Flow>

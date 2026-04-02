@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>56.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <name>Credit_Limit_Check</name>
+        <label>Credit Limit Check</label>
+        <locationX>440</locationX>
+        <locationY>276</locationY>
+        <defaultConnector>
+            <targetReference>Credit_Hold_Update</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Credit Hold</defaultConnectorLabel>
+        <rules>
+            <name>No_Limit</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Account.CreditLimit__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Approve_Order_Summary_No_limit</targetReference>
+            </connector>
+            <label>No Limit</label>
+        </rules>
+        <rules>
+            <name>Approved</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>fRemainingCredit</leftValueReference>
+                <operator>GreaterThanOrEqualTo</operator>
+                <rightValue>
+                    <elementReference>fGrandTotalAmount</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Add_to_Credit_Balance</targetReference>
+            </connector>
+            <label>Approved</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <formulas>
+        <name>fGrandTotalAmount</name>
+        <dataType>Currency</dataType>
+        <expression>{!$Record.TotalTaxAmount} + {!$Record.TotalAmount}</expression>
+        <scale>2</scale>
+    </formulas>
+    <formulas>
+        <name>fNewBalance</name>
+        <dataType>Currency</dataType>
+        <expression>{!$Record.Account.Credit_Balance__c} + {!fGrandTotalAmount}</expression>
+        <scale>2</scale>
+    </formulas>
+    <formulas>
+        <name>fRemainingCredit</name>
+        <dataType>Currency</dataType>
+        <expression>{!$Record.Account.CreditLimit__c} - {!$Record.Account.Credit_Balance__c}</expression>
+        <scale>2</scale>
+    </formulas>
+    <interviewLabel>Approve Order Summary {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>[Do Not Use] OMS Approve Order Summary</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Add_to_Credit_Balance</name>
+        <label>Add to Credit Balance</label>
+        <locationX>440</locationX>
+        <locationY>384</locationY>
+        <connector>
+            <targetReference>Approve_Order_Summary</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.AccountId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Credit_Balance__c</field>
+            <value>
+                <elementReference>fNewBalance</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Account</object>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Approve_Order_Summary</name>
+        <label>Approve Order Summary</label>
+        <locationX>440</locationX>
+        <locationY>492</locationY>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>Approved</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Approve_Order_Summary_No_limit</name>
+        <label>Approve Order Summary - No limit</label>
+        <locationX>176</locationX>
+        <locationY>384</locationY>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>Approved</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Credit_Hold_Update</name>
+        <label>Credit Hold</label>
+        <locationX>704</locationX>
+        <locationY>384</locationY>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>Credit Hold</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <object>OrderSummary</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <scheduledPaths>
+            <connector>
+                <targetReference>Credit_Limit_Check</targetReference>
+            </connector>
+            <pathType>AsyncAfterCommit</pathType>
+        </scheduledPaths>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Draft</status>
+</Flow>

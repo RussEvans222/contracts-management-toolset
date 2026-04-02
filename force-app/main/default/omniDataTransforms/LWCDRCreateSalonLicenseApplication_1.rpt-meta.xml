@@ -1,0 +1,809 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OmniDataTransform xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <assignmentRulesUsed>false</assignmentRulesUsed>
+    <deletedOnSuccess>false</deletedOnSuccess>
+    <errorIgnored>false</errorIgnored>
+    <expectedInputJson>{
+  &quot;ContextId&quot; : &quot;&quot;,
+  &quot;timeStamp&quot; : &quot;2020-03-18T18:10:09.137Z&quot;,
+  &quot;userId&quot; : &quot;005B0000005gGB9IAM&quot;,
+  &quot;userName&quot; : &quot;lpi_226stmfa@lpi.org&quot;,
+  &quot;userProfile&quot; : &quot;System Administrator&quot;,
+  &quot;userTimeZone&quot; : -420,
+  &quot;userCurrencyCode&quot; : &quot;USD&quot;,
+  &quot;sfdcIFrameOrigin&quot; : &quot;https://vlocity-ins.na44.visual.stmfa.stm.force.com&quot;,
+  &quot;sfdcIFrameHost&quot; : &quot;web&quot;,
+  &quot;layout&quot; : &quot;lightning&quot;,
+  &quot;isdtp&quot; : &quot;p1&quot;,
+  &quot;id&quot; : &quot;a80RM000000004JYAQ&quot;,
+  &quot;vlcPersistentComponent&quot; : { },
+  &quot;ApplicationInformation&quot; : {
+    &quot;AssociatedAccount&quot; : &quot;Act1&quot;,
+    &quot;Industries&quot; : &quot;Healthcare&quot;,
+    &quot;isIndustriesFilled&quot; : true,
+    &quot;BusinessActivity&quot; : &quot;Act 1 BT&quot;,
+    &quot;isBusinessActivityFilled&quot; : true,
+    &quot;AuthorizationCategory&quot; : &quot;License&quot;,
+    &quot;AuthorizationType&quot; : &quot;RAT 1&quot;,
+    &quot;ApplicationCategory&quot; : &quot;Basic&quot;,
+    &quot;BusinessActivityId&quot; : &quot;2gFRM0000004C9I2AU&quot;,
+    &quot;AuthorizationTypeId&quot; : &quot;0ehRM0000004C9DYAU&quot;,
+    &quot;AssociatedAccountId&quot; : &quot;001RM000004dRr6YAE&quot;,
+    &quot;exprShowMinnesotaSalonLicenceApplication&quot; : true
+  },
+  &quot;EstablishmentInformation&quot; : {
+    &quot;BusinessLegalName&quot; : &quot;Act1&quot;,
+    &quot;BusinessDBAName&quot; : &quot;sdf&quot;,
+    &quot;TaxID&quot; : null,
+    &quot;ContactName&quot; : &quot;Act1 Contact&quot;,
+    &quot;ContactEmail&quot; : null,
+    &quot;Street&quot; : null,
+    &quot;City&quot; : null,
+    &quot;State&quot; : null,
+    &quot;Zipcode&quot; : null,
+    &quot;Neighborhood&quot; : null,
+    &quot;Address&quot; : &quot;Street -:  null City -: null State -: null Zipcode -: undefined&quot;
+  },
+  &quot;SalonInformation&quot; : {
+    &quot;SalonStartDate&quot; : &quot;2020-03-17&quot;,
+    &quot;SalonInAResidence&quot; : &quot;No&quot;,
+    &quot;BusinessLocation&quot; : &quot;No&quot;,
+    &quot;BusinessType&quot; : null
+  },
+  &quot;ReasonForNewLicenseApplication&quot; : {
+    &quot;SelectReasonforNewLicenseApplication&quot; : &quot;new&quot;,
+    &quot;SalonPrevLic&quot; : null,
+    &quot;SalonRelocPrevAddr&quot; : null,
+    &quot;SalonPrevOwner&quot; : null,
+    &quot;PreviousExpirationDate&quot; : null
+  },
+  &quot;Certification&quot; : {
+    &quot;CertificationText&quot; : true,
+    &quot;Signature&quot; : &quot;zcv&quot;
+  },
+  &quot;SampleUser&quot; : &quot;005RM0000024wK9YAI&quot;,
+  &quot;ApplicationStatus&quot; : &quot;Submitted&quot;,
+  &quot;ContactId&quot; : &quot;003RM000006GHdyYAG&quot;,
+  &quot;OwnershipInformation&quot; : {
+    &quot;PurchaseOrTakeOver&quot; : &quot;Purchasing&quot;,
+    &quot;PriorEstablishmentDetails&quot; : null,
+    &quot;OwnershipType&quot; : &quot;Individual&quot;,
+    &quot;IndividualOwnership&quot; : {
+      &quot;IndividualLastName&quot; : &quot;adf&quot;,
+      &quot;IndividualFirstName&quot; : &quot;adf&quot;
+    },
+    &quot;CorporationOrLLCOwnership&quot; : null,
+    &quot;PartnershipOwnership&quot; : null
+  },
+  &quot;sInstanceId&quot; : &quot;a7zRM000000008GYAQ&quot;,
+  &quot;DRId_PreliminaryApplicationRef__c&quot; : &quot;aAmRM000000005M0AQ&quot;,
+  &quot;CreatedPreliminaryApplicationRefId&quot; : &quot;aAmRM000000005M0AQ&quot;,
+  &quot;ApplicationAttachments&quot; : {
+    &quot;IdentificationProof&quot; : [ {
+      &quot;filename&quot; : &quot;2- Creating a DataRaptor Interface to Map an OmniScript to a PDF.pdf&quot;,
+      &quot;size&quot; : 36531,
+      &quot;data&quot; : &quot;0eff9f5b-9894-42cf-8ebe-ec81f99a68cc&quot;,
+      &quot;$$hashKey&quot; : &quot;object:1071&quot;
+    } ],
+    &quot;PropertyProof&quot; : [ {
+      &quot;filename&quot; : &quot;2- Creating a DataRaptor Interface to Map an OmniScript to a PDF.pdf&quot;,
+      &quot;size&quot; : 36531,
+      &quot;data&quot; : &quot;5303c26b-3539-4d95-904a-d53fb469393a&quot;,
+      &quot;$$hashKey&quot; : &quot;object:1076&quot;
+    } ],
+    &quot;EINProof&quot; : null
+  },
+  &quot;DRId_BusinessLicenseApplication&quot; : &quot;0f0RM0000004CAzYAM&quot;,
+  &quot;DRId_Case&quot; : &quot;500RM000002hqBKYAY&quot;,
+  &quot;CreatedApplicationId&quot; : &quot;BLA-0000000023&quot;
+}</expectedInputJson>
+    <fieldLevelSecurityEnabled>false</fieldLevelSecurityEnabled>
+    <inputType>JSON</inputType>
+    <isManagedUsingStdDesigner>false</isManagedUsingStdDesigner>
+    <name>LWCDRCreateSalonLicenseApplication</name>
+    <nullInputsIncludedInOutput>false</nullInputsIncludedInOutput>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRCreateSalonLicenseApplication2506501049996088</globalKey>
+        <inputFieldName>ContactId</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRCreateSalonLicenseApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>PrimaryOwnerId</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRCreateSalonLicenseApplication6825193027515661</globalKey>
+        <inputFieldName>CaseDescription</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRCreateSalonLicenseApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>Description</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <defaultValue>0ehHu000000GxOVIA0</defaultValue>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRCreateSalonLicenseApplication6334724251863739</globalKey>
+        <inputFieldName>SalonAuthorizationTypeId</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRCreateSalonLicenseApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldFormat>String</outputFieldFormat>
+        <outputFieldName>LicenseTypeId</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRCreateSalonLicenseApplication22086201147079798</globalKey>
+        <inputFieldName>SalonBusinessActivityId</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRCreateSalonLicenseApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>BusinessTypeId</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRCreateSalonLicenseApplication14474055611978276</globalKey>
+        <inputFieldName>ApplicationType</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRCreateSalonLicenseApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>ApplicationType</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRCreateSalonLicenseApplication30613360786786914</globalKey>
+        <inputFieldName>ApplicationInformation:AuthorizationCategory</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRCreateSalonLicenseApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>Category</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRCreateSalonLicenseApplication8370660118992046</globalKey>
+        <inputFieldName>ContactId</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRCreateSalonLicenseApplication</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>ContactId</outputFieldName>
+        <outputObjectName>Case</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>&quot;Establishment/\/\/License&quot;</formulaConverted>
+        <formulaExpression>&quot;Establishment License&quot;</formulaExpression>
+        <formulaResultPath>caseType</formulaResultPath>
+        <formulaSequence>6.0</formulaSequence>
+        <globalKey>LWCDRCreateSalonLicenseApplication6819070809739398</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRCreateSalonLicenseApplication</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRCreateSalonLicenseApplication1430594799078726</globalKey>
+        <inputFieldName>CaseDescription</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRCreateSalonLicenseApplication</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Description</outputFieldName>
+        <outputObjectName>Case</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRCreateSalonLicenseApplication3361801470353052</globalKey>
+        <inputFieldName>SalonAccountId</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRCreateSalonLicenseApplication</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>AccountId</outputFieldName>
+        <outputObjectName>Case</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRCreateSalonLicenseApplication5909461881903688</globalKey>
+        <inputFieldName>EstablishmentInformation:Zipcode</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRCreateSalonLicenseApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>SitePostalCode</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRCreateSalonLicenseApplication6422626084609127</globalKey>
+        <inputFieldName>charges:name</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRCreateSalonLicenseApplication</name>
+        <outputCreationSequence>4.0</outputCreationSequence>
+        <outputFieldName>Name</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFeeItem</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>true</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>LWCDRCreateSalonLicenseApplication7402415567239355</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>LWCDRCreateSalonLicenseApplication</name>
+        <outputCreationSequence>4.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFeeItem</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRCreateSalonLicenseApplication15345905077666022</globalKey>
+        <inputFieldName>charges:amount</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRCreateSalonLicenseApplication</name>
+        <outputCreationSequence>4.0</outputCreationSequence>
+        <outputFieldName>FeeAmount</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFeeItem</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRCreateSalonLicenseApplication5511518332894472</globalKey>
+        <inputFieldName>charges:calculationInfo</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRCreateSalonLicenseApplication</name>
+        <outputCreationSequence>4.0</outputCreationSequence>
+        <outputFieldName>CalculationInfo</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFeeItem</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>LWCDRCreateSalonLicenseApplication613613489951409</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedFieldName>Id</linkedFieldName>
+        <linkedObjectSequence>3.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>LWCDRCreateSalonLicenseApplication</name>
+        <outputCreationSequence>4.0</outputCreationSequence>
+        <outputFieldName>RegulatoryTrxnFeeId</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFeeItem</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>&quot;550RM0000004R0NYAU&quot;</formulaConverted>
+        <formulaExpression>&quot;550RM0000004R0NYAU&quot;</formulaExpression>
+        <formulaResultPath>EntitlementId</formulaResultPath>
+        <formulaSequence>5.0</formulaSequence>
+        <globalKey>LWCDRCreateSalonLicenseApplication11503719245577027</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRCreateSalonLicenseApplication</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>var:timeStamp</formulaConverted>
+        <formulaExpression>timeStamp</formulaExpression>
+        <formulaResultPath>AppliedDate</formulaResultPath>
+        <formulaSequence>2.0</formulaSequence>
+        <globalKey>LWCDRCreateSalonLicenseApplication4692492241784678</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRCreateSalonLicenseApplication</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRCreateSalonLicenseApplication6537992639935084</globalKey>
+        <inputFieldName>CreatedApplicationId</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRCreateSalonLicenseApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRCreateSalonLicenseApplication8690217903658659</globalKey>
+        <inputFieldName>Address</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRCreateSalonLicenseApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>SiteAddress</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRCreateSalonLicenseApplication22344429395073306</globalKey>
+        <inputFieldName>EstablishmentInformation:City</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRCreateSalonLicenseApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>SiteCity</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>| var:RenewApplication var:null = &quot;New&quot; &quot;Renewal&quot; IF</formulaConverted>
+        <formulaExpression>IF(%RenewApplication%=null, &quot;New&quot;, &quot;Renewal&quot;)</formulaExpression>
+        <formulaResultPath>ApplicationType</formulaResultPath>
+        <formulaSequence>3.0</formulaSequence>
+        <globalKey>LWCDRCreateSalonLicenseApplication15350142218864304</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRCreateSalonLicenseApplication</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRCreateSalonLicenseApplication8076795977058906</globalKey>
+        <inputFieldName>ReviewFee:PayNow</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRCreateSalonLicenseApplication</name>
+        <outputCreationSequence>3.0</outputCreationSequence>
+        <outputFieldName>Status</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFee</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{
+  &quot;No&quot; : &quot;DUE&quot;,
+  &quot;Yes&quot; : &quot;PAID&quot;
+}</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>true</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>LWCDRCreateSalonLicenseApplication49636995687887</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>LWCDRCreateSalonLicenseApplication</name>
+        <outputCreationSequence>3.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFee</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRCreateSalonLicenseApplication3165900911176891</globalKey>
+        <inputFieldName>SalonAccountId</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRCreateSalonLicenseApplication</name>
+        <outputCreationSequence>3.0</outputCreationSequence>
+        <outputFieldName>AccountId</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFee</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRCreateSalonLicenseApplication7031773355942634</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedFieldName>Id</linkedFieldName>
+        <linkedObjectSequence>2.0</linkedObjectSequence>
+        <name>LWCDRCreateSalonLicenseApplication</name>
+        <outputCreationSequence>3.0</outputCreationSequence>
+        <outputFieldName>ParentRecordId</outputFieldName>
+        <outputObjectName>RegulatoryTrxnFee</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRCreateSalonLicenseApplication4296611468414362</globalKey>
+        <inputFieldName>ApplicationStatus</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRCreateSalonLicenseApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>Status</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>true</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>LWCDRCreateSalonLicenseApplication29841709663375937</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>LWCDRCreateSalonLicenseApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRCreateSalonLicenseApplication24731146273695725</globalKey>
+        <inputFieldName>EstablishmentInformation:State</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRCreateSalonLicenseApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>SiteState</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRCreateSalonLicenseApplication7207209584783965</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedFieldName>Id</linkedFieldName>
+        <linkedObjectSequence>1.0</linkedObjectSequence>
+        <name>LWCDRCreateSalonLicenseApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>ApplicationCaseId</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRCreateSalonLicenseApplication7720866512570235</globalKey>
+        <inputFieldName>EstablishmentInformation:Street</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRCreateSalonLicenseApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>SiteStreet</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRCreateSalonLicenseApplication8590694231908229</globalKey>
+        <inputFieldName>DRId_PreliminaryApplicationRef</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRCreateSalonLicenseApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>SavedApplicationRefId</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>true</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>LWCDRCreateSalonLicenseApplication5379337118653618</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>LWCDRCreateSalonLicenseApplication</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>Case</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRCreateSalonLicenseApplication039460885395600886</globalKey>
+        <inputFieldName>CaseDescription</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRCreateSalonLicenseApplication</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Subject</outputFieldName>
+        <outputObjectName>Case</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRCreateSalonLicenseApplication8071103772983124</globalKey>
+        <inputFieldName>AppliedDate</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRCreateSalonLicenseApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>AppliedDate</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRCreateSalonLicenseApplication08467024518123889</globalKey>
+        <inputFieldName>ApplicationInformation:ApplicationCategory</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRCreateSalonLicenseApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>ApplicationCategory</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>&quot;Street/\/\/-:/\/\/&quot; var:EstablishmentInformation:Street + &quot;,/\/\/City/\/\/-:/\/\/&quot; + var:EstablishmentInformation:City + &quot;,/\/\/State/\/\/-:/\/\/&quot; + var:
+EstablishmentInformation:State + &quot;,/\/\/Zipcode/\/\/-:/\/\/&quot; + var:EstablishmentInformation:Zipcode + &quot;,/\/\/Neighborhood/\/\/-:/\/\/&quot; + var:EstablishmentInformation:Neighborhood +</formulaConverted>
+        <formulaExpression>&quot;Street -: &quot;+EstablishmentInformation:Street+&quot;, City -: &quot;+EstablishmentInformation:City+&quot;, State -: &quot;+
+EstablishmentInformation:State+&quot;, Zipcode -: &quot;+EstablishmentInformation:Zipcode+&quot;, Neighborhood -: &quot;+EstablishmentInformation:Neighborhood</formulaExpression>
+        <formulaResultPath>Address</formulaResultPath>
+        <formulaSequence>4.0</formulaSequence>
+        <globalKey>LWCDRCreateSalonLicenseApplication7941716407177886</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRCreateSalonLicenseApplication</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>&quot;Business/\/\/Name/\/\/-/\/\/&quot; var:ApplicationInformation:AssociatedAccount + &quot;/\/\/,/\/\/Authorization/\/\/Type/\/\/-/\/\/&quot; + var:ApplicationInformation:AuthorizationType +</formulaConverted>
+        <formulaExpression>&quot;Business Name - &quot; + ApplicationInformation:AssociatedAccount + &quot; , Authorization Type - &quot; + ApplicationInformation:AuthorizationType</formulaExpression>
+        <formulaResultPath>CaseDescription</formulaResultPath>
+        <formulaSequence>1.0</formulaSequence>
+        <globalKey>LWCDRCreateSalonLicenseApplication35290470150998465</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRCreateSalonLicenseApplication</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LWCDRCreateSalonLicenseApplication7338945322005526</globalKey>
+        <inputFieldName>SalonAccountId</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LWCDRCreateSalonLicenseApplication</name>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldFormat>String</outputFieldFormat>
+        <outputFieldName>AccountId</outputFieldName>
+        <outputObjectName>BusinessLicenseApplication</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <outputType>SObject</outputType>
+    <previewJsonData>{
+  &quot;timeStamp&quot; : &quot;2021-08-27T17:22:40.187Z&quot;,
+  &quot;userProfile&quot; : &quot;System Administrator&quot;,
+  &quot;userTimeZone&quot; : &quot;-420&quot;,
+  &quot;userCurrencyCode&quot; : &quot;USD&quot;,
+  &quot;userName&quot; : &quot;jblankenship@lpi2.0testing.demo&quot;,
+  &quot;userId&quot; : &quot;0055f000000yem1AAA&quot;,
+  &quot;ReasonForNewLicenseApplication&quot; : null,
+  &quot;Payment&quot; : { },
+  &quot;isEditable&quot; : true,
+  &quot;isBLASubmitted&quot; : false,
+  &quot;ApplicationStatus&quot; : &quot;Submitted&quot;,
+  &quot;SampleUser&quot; : &quot;0055f000001oN4nAAE&quot;,
+  &quot;ContactId&quot; : &quot;0035f000003ABE9AAO&quot;,
+  &quot;ApplicationInformation&quot; : {
+    &quot;isIndustriesFilled&quot; : true,
+    &quot;isBusinessActivityFilled&quot; : true,
+    &quot;exprShowMinnesotaSalonLicenceApplication&quot; : true,
+    &quot;expIsPARCreated&quot; : false,
+    &quot;ApplicationCategory&quot; : &quot;Basic&quot;,
+    &quot;AuthorizationType&quot; : &quot;Salon Establishment License&quot;,
+    &quot;AuthorizationCategory&quot; : &quot;License&quot;,
+    &quot;BusinessActivity&quot; : &quot;Beauty Salon&quot;,
+    &quot;Industries&quot; : &quot;Personal Care Services&quot;,
+    &quot;AssociatedAccount&quot; : &quot;ALICIA RENDON SALON&quot;
+  },
+  &quot;SalonAccountId&quot; : &quot;0015f0000042mmRAAQ&quot;,
+  &quot;SalonAuthorizationTypeId&quot; : &quot;0eh5f000000GmywAAC&quot;,
+  &quot;SalonBusinessActivityId&quot; : &quot;2gF5f000000k9jeEAA&quot;,
+  &quot;DRId_PreliminaryApplicationRef&quot; : &quot;0go5f000000blgDAAQ&quot;,
+  &quot;EstablishmentInformation&quot; : {
+    &quot;Address&quot; : &quot;Street -:  5378 MISSION ST City -: San Francisco State -: CA Zipcode -: null&quot;,
+    &quot;ContactName&quot; : &quot;Geoff Duckwall&quot;,
+    &quot;Street&quot; : &quot;5378 MISSION ST&quot;,
+    &quot;City&quot; : &quot;San Francisco&quot;,
+    &quot;BusinessLegalName&quot; : &quot;ALICIA RENDON SALON&quot;,
+    &quot;BusinessDBAName&quot; : &quot;ALICIA RENDON SALON&quot;,
+    &quot;Zipcode&quot; : &quot;94112&quot;,
+    &quot;State&quot; : &quot;CA&quot;
+  },
+  &quot;SalonInformation&quot; : {
+    &quot;BusinessType&quot; : null,
+    &quot;SalonStartDate&quot; : &quot;2021-08-27&quot;,
+    &quot;SalonInAResidence&quot; : &quot;No&quot;,
+    &quot;BusinessLocation&quot; : &quot;No&quot;,
+    &quot;NumberOfChairs&quot; : 15,
+    &quot;NumberOfEmployees&quot; : 14
+  },
+  &quot;OwnershipInformation&quot; : {
+    &quot;PriorEstablishmentDetails&quot; : null,
+    &quot;IndividualOwnership&quot; : {
+      &quot;IndividualLastName&quot; : &quot;Geoff&quot;,
+      &quot;IndividualFirstName&quot; : &quot;Duckwall&quot;
+    },
+    &quot;CorporationOrLLCOwnership&quot; : null,
+    &quot;PartnershipOwnership&quot; : null,
+    &quot;PurchaseOrTakeOver&quot; : &quot;Purchasing&quot;,
+    &quot;OwnershipType&quot; : &quot;Individual&quot;
+  },
+  &quot;Certification&quot; : {
+    &quot;CertificationText&quot; : true
+  },
+  &quot;inputData&quot; : {
+    &quot;BusinessLocation&quot; : &quot;No&quot;,
+    &quot;NumberOfChairs&quot; : 15,
+    &quot;SalonInAResidence&quot; : &quot;No&quot;,
+    &quot;EmployeeSize&quot; : &quot;&quot;,
+    &quot;ApplicationCategory&quot; : &quot;Basic&quot;,
+    &quot;AuthorizationCategory&quot; : &quot;License&quot;,
+    &quot;AuthorizationType&quot; : &quot;Salon Establishment License&quot;
+  },
+  &quot;charges&quot; : [ {
+    &quot;name&quot; : &quot;Base Fee&quot;,
+    &quot;amount&quot; : 150,
+    &quot;ID&quot; : &quot;inputData&quot;
+  }, {
+    &quot;name&quot; : &quot;Location Fee&quot;,
+    &quot;amount&quot; : 100,
+    &quot;ID&quot; : &quot;inputData&quot;
+  }, {
+    &quot;calculationInfo&quot; : &quot;Fee for Seating Capacity&quot;,
+    &quot;name&quot; : &quot;Additional Fee&quot;,
+    &quot;amount&quot; : 45,
+    &quot;ID&quot; : &quot;inputData&quot;
+  }, {
+    &quot;calculationInfo&quot; : &quot;20%&quot;,
+    &quot;name&quot; : &quot;Business Discount&quot;,
+    &quot;amount&quot; : -30,
+    &quot;ID&quot; : &quot;inputData&quot;
+  } ],
+  &quot;dueDate&quot; : &quot;&quot;,
+  &quot;calculationDate&quot; : &quot;&quot;,
+  &quot;totalFee&quot; : 265,
+  &quot;isPDFDownloaded&quot; : true,
+  &quot;formattedcharges&quot; : [ {
+    &quot;amount&quot; : &quot;$150.00&quot;,
+    &quot;formattedname&quot; : &quot;Base Fee&quot;
+  }, {
+    &quot;amount&quot; : &quot;$100.00&quot;,
+    &quot;formattedname&quot; : &quot;Location Fee&quot;
+  }, {
+    &quot;amount&quot; : &quot;$45.00&quot;,
+    &quot;formattedname&quot; : &quot;Additional Fee(Fee for Seating Capacity)&quot;
+  }, {
+    &quot;amount&quot; : &quot;$-30.00&quot;,
+    &quot;formattedname&quot; : &quot;Business Discount(20%)&quot;
+  } ],
+  &quot;ReviewFee&quot; : {
+    &quot;isExistingApplication&quot; : false,
+    &quot;PayNow&quot; : &quot;Yes&quot;
+  }
+}</previewJsonData>
+    <processSuperBulk>false</processSuperBulk>
+    <responseCacheTtlMinutes>0.0</responseCacheTtlMinutes>
+    <rollbackOnError>true</rollbackOnError>
+    <sourceObject>json</sourceObject>
+    <sourceObjectDefault>false</sourceObjectDefault>
+    <synchronousProcessThreshold>-1.0</synchronousProcessThreshold>
+    <type>Load</type>
+    <uniqueName>LWCDRCreateSalonLicenseApplication_1</uniqueName>
+    <versionNumber>1.0</versionNumber>
+    <xmlDeclarationRemoved>false</xmlDeclarationRemoved>
+</OmniDataTransform>

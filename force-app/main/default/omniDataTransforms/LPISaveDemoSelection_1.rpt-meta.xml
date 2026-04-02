@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OmniDataTransform xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <assignmentRulesUsed>false</assignmentRulesUsed>
+    <deletedOnSuccess>false</deletedOnSuccess>
+    <errorIgnored>false</errorIgnored>
+    <expectedInputJson>{
+  &quot;ScenarioList&quot; : [ {
+    &quot;Personas&quot; : &quot;Geoff Duckwall&quot;,
+    &quot;Type&quot; : &quot;Permit&quot;,
+    &quot;Id&quot; : &quot;a9Y5f000000oaX6EAI&quot;,
+    &quot;ScenarioName&quot; : &quot;Deck Permit&quot;,
+    &quot;Language&quot; : &quot;English&quot;,
+    &quot;SubType&quot; : &quot;Deck&quot;,
+    &quot;OSType&quot; : &quot;LicensingAndPermitting&quot;
+  }, {
+    &quot;Type&quot; : &quot;Permit&quot;,
+    &quot;Id&quot; : &quot;a9Y5f000000oaX7EAI&quot;,
+    &quot;ScenarioName&quot; : &quot;Restaurant&quot;,
+    &quot;Language&quot; : &quot;English&quot;,
+    &quot;SubType&quot; : &quot;FoodEstablishmentPermit&quot;,
+    &quot;OSType&quot; : &quot;LicensingAndPermitting&quot;
+  }, {
+    &quot;DemoScript&quot; : &quot;http://demo.com&quot;,
+    &quot;Personas&quot; : &quot;Geoff Duckwall&quot;,
+    &quot;Type&quot; : &quot;Business&quot;,
+    &quot;Id&quot; : &quot;a9Y5f000000oaX1EAI&quot;,
+    &quot;ScenarioName&quot; : &quot;Salon Business Licensing&quot;,
+    &quot;Language&quot; : &quot;English&quot;,
+    &quot;SubType&quot; : &quot;BusinessSalon&quot;,
+    &quot;OSType&quot; : &quot;LicensingAndPermitting&quot;
+  } ],
+  &quot;omniJsonDef&quot; : null,
+  &quot;timeStamp&quot; : &quot;2021-09-01T13:23:09.715Z&quot;,
+  &quot;userProfile&quot; : &quot;System Administrator&quot;,
+  &quot;userTimeZone&quot; : &quot;-420&quot;,
+  &quot;userCurrencyCode&quot; : &quot;USD&quot;,
+  &quot;userName&quot; : &quot;jblankenship@lpi2.0testing.demo&quot;,
+  &quot;userId&quot; : &quot;0055f000000yem1AAA&quot;,
+  &quot;Selection&quot; : {
+    &quot;FormatLWCName&quot; : &quot;c:licensingandpermittingBusinessSalonEnglish&quot;,
+    &quot;SelectScenario&quot; : {
+      &quot;DemoScript&quot; : &quot;http://demo.com&quot;,
+      &quot;Personas&quot; : &quot;Geoff Duckwall&quot;,
+      &quot;Type&quot; : &quot;Business&quot;,
+      &quot;Id&quot; : &quot;a9Y5f000000oaX1EAI&quot;,
+      &quot;ScenarioName&quot; : &quot;Salon Business Licensing&quot;,
+      &quot;Language&quot; : &quot;English&quot;,
+      &quot;SubType&quot; : &quot;BusinessSalon&quot;,
+      &quot;OSType&quot; : &quot;LicensingAndPermitting&quot;
+    }
+  }
+}</expectedInputJson>
+    <fieldLevelSecurityEnabled>false</fieldLevelSecurityEnabled>
+    <inputType>JSON</inputType>
+    <isManagedUsingStdDesigner>false</isManagedUsingStdDesigner>
+    <name>LPISaveDemoSelection</name>
+    <nullInputsIncludedInOutput>false</nullInputsIncludedInOutput>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPISaveDemoSelection6667149050756238</globalKey>
+        <inputFieldName>DomainName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPISaveDemoSelection</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>DomainName__c</outputFieldName>
+        <outputObjectName>LPI_Demo_Data__c</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>true</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>LPISaveDemoSelection8489217024572746</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>LPISaveDemoSelection</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>LPI_Demo_Data__c</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>| &quot;https://&quot; var:domainname var:&quot;--c.visualforce.com&apos;) ( CONCAT</formulaConverted>
+        <formulaExpression>CONCAT(&quot;https://&quot;,domainname,&quot;--c.visualforce.com&apos;)</formulaExpression>
+        <formulaResultPath>FQDN</formulaResultPath>
+        <formulaSequence>1.0</formulaSequence>
+        <globalKey>LPISaveDemoSelection3042807278775701</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPISaveDemoSelection</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPISaveDemoSelection6572889748819937</globalKey>
+        <inputFieldName>SelectScenario:Id</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPISaveDemoSelection</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Demo_Scenario__c</outputFieldName>
+        <outputObjectName>LPI_Demo_Data__c</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPISaveDemoSelection5604254136851088</globalKey>
+        <inputFieldName>Selection:FormatLWCName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPISaveDemoSelection</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>DemoSelected__c</outputFieldName>
+        <outputObjectName>LPI_Demo_Data__c</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPISaveDemoSelection1342835577846555</globalKey>
+        <inputFieldName>DemoType</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPISaveDemoSelection</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Type__c</outputFieldName>
+        <outputObjectName>LPI_Demo_Data__c</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <outputType>SObject</outputType>
+    <previewJsonData>{
+  &quot;ScenarioList&quot; : [ {
+    &quot;Personas&quot; : &quot;Charles Green&quot;,
+    &quot;Type&quot; : &quot;Permit&quot;,
+    &quot;Id&quot; : &quot;a9Y5f000000oaX6EAI&quot;,
+    &quot;ScenarioName&quot; : &quot;Deck Permit&quot;,
+    &quot;Language&quot; : &quot;English&quot;,
+    &quot;SubType&quot; : &quot;Deck&quot;,
+    &quot;OSType&quot; : &quot;LicensingAndPermitting&quot;
+  }, {
+    &quot;Type&quot; : &quot;Permit&quot;,
+    &quot;Id&quot; : &quot;a9Y5f000000oaX7EAI&quot;,
+    &quot;ScenarioName&quot; : &quot;Restaurant&quot;,
+    &quot;Language&quot; : &quot;English&quot;,
+    &quot;SubType&quot; : &quot;FoodEstablishmentPermit&quot;,
+    &quot;OSType&quot; : &quot;LicensingAndPermitting&quot;
+  }, {
+    &quot;DemoScript&quot; : &quot;https://salesforce.quip.com/hsQnAMCL1Oge&quot;,
+    &quot;Personas&quot; : &quot;Geoff Duckwall&quot;,
+    &quot;Type&quot; : &quot;Business&quot;,
+    &quot;Id&quot; : &quot;a9Y5f000000oaX1EAI&quot;,
+    &quot;ScenarioName&quot; : &quot;Salon Business Licensing&quot;,
+    &quot;Language&quot; : &quot;English&quot;,
+    &quot;SubType&quot; : &quot;BusinessSalon&quot;,
+    &quot;OSType&quot; : &quot;LicensingAndPermitting&quot;
+  }, {
+    &quot;Personas&quot; : &quot;Geoff Duckwall&quot;,
+    &quot;Type&quot; : &quot;Permit&quot;,
+    &quot;Id&quot; : &quot;a9Y5f000000obYYEAY&quot;,
+    &quot;ScenarioName&quot; : &quot;Tank Storage Permit&quot;,
+    &quot;Language&quot; : &quot;English&quot;,
+    &quot;SubType&quot; : &quot;StorageTankRegistration&quot;,
+    &quot;OSType&quot; : &quot;LicensingAndPermitting&quot;
+  }, {
+    &quot;Type&quot; : &quot;Permit&quot;,
+    &quot;Id&quot; : &quot;a9Y5f000000ogq7EAA&quot;,
+    &quot;ScenarioName&quot; : &quot;Mapping with ESRI&quot;,
+    &quot;Language&quot; : &quot;English&quot;,
+    &quot;SubType&quot; : &quot;PermitDemo&quot;,
+    &quot;OSType&quot; : &quot;ESRI&quot;
+  } ],
+  &quot;omniJsonDef&quot; : null,
+  &quot;timeStamp&quot; : &quot;2021-09-08T10:48:19.229Z&quot;,
+  &quot;userProfile&quot; : &quot;System Administrator&quot;,
+  &quot;userTimeZone&quot; : &quot;-420&quot;,
+  &quot;userCurrencyCode&quot; : &quot;USD&quot;,
+  &quot;userName&quot; : &quot;jblankenship@lpi2.0testing.demo&quot;,
+  &quot;userId&quot; : &quot;0055f000000yem1AAA&quot;,
+  &quot;Selection&quot; : {
+    &quot;FormatLWCName&quot; : &quot;c:licensingandpermittingDeckEnglish&quot;,
+    &quot;SelectScenario&quot; : {
+      &quot;Personas&quot; : &quot;Charles Green&quot;,
+      &quot;Type&quot; : &quot;Permit&quot;,
+      &quot;Id&quot; : &quot;a9Y5f000000oaX6EAI&quot;,
+      &quot;ScenarioName&quot; : &quot;Deck Permit&quot;,
+      &quot;Language&quot; : &quot;English&quot;,
+      &quot;SubType&quot; : &quot;Deck&quot;,
+      &quot;OSType&quot; : &quot;LicensingAndPermitting&quot;
+    }
+  },
+  &quot;DomainName&quot; : &quot;lpi20-08262021--vlocity-ins&quot;
+}</previewJsonData>
+    <processSuperBulk>false</processSuperBulk>
+    <responseCacheTtlMinutes>0.0</responseCacheTtlMinutes>
+    <rollbackOnError>false</rollbackOnError>
+    <sourceObject>json</sourceObject>
+    <sourceObjectDefault>false</sourceObjectDefault>
+    <synchronousProcessThreshold>-1.0</synchronousProcessThreshold>
+    <type>Load</type>
+    <uniqueName>LPISaveDemoSelection_1</uniqueName>
+    <versionNumber>1.0</versionNumber>
+    <xmlDeclarationRemoved>false</xmlDeclarationRemoved>
+</OmniDataTransform>

@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+	<apiVersion>57.0</apiVersion>
+	<isExposed>true</isExposed>
+	<masterLabel>Balance Over Time</masterLabel>
+	<targets>
+		<target>lightning__AppPage</target>
+		<target>lightning__HomePage</target>
+		<target>lightning__RecordPage</target>
+	</targets>
+
+	<targetConfigs>
+		<targetConfig targets="lightning__AppPage,lightning__HomePage,lightning__RecordPage">
+			<property name="bolChartHover" type="Boolean" default="true" label="set Hover on/off" />
+			<property name="setlegend" type="Boolean" default="false" label="Enable Legend" />
+			<property name="headerTitle " type="String" default="Payment Over Time"
+				label="Enter Header Title " />
+			<property name="paymentOvertime" type="String" label="Enter Balance Over Time"
+				default="€875" />
+			<property name="strDatasetLabel2" type="String" label="Enter the Dataset 2 Label" />
+			<property name="strDatasetBorderColor2" type="String"
+				label="Enter the Dataset 2 border color" default="rgba(54, 162, 235)" />
+			<property name="strDatasetBackgroundColor2" type="String"
+				label="Enter the Dataset 2 background color" default="rgba(54, 162, 235)" />
+			<property name="strxAxesLabel" type="String" label="Enter the x-axis label"
+				default="Usage" />
+			<property name="stryAxesLabel" type="String" label="Enter the y-axis label"
+				default="Day week" />
+			<property name="xlabel" type="String" label="Enter x-axis values"
+				default="Aug,Oct,Dec,Feb,Apr,Jun,Aug" required="true" />
+			<property name="yvalue" type="String" label="Enter y-axis values"
+				default="20,27,25,30,33,36,45" required="true" />
+			<property name="yCurrency" type="String" label="Enter y-axis values"
+				default="USD" required="true" />
+		</targetConfig>
+	</targetConfigs>
+
+</LightningComponentBundle>

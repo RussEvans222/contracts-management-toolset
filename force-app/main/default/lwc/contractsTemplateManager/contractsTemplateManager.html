@@ -1,0 +1,484 @@
+<template>
+    <article class="template-manager-shell">
+        <header class="hero">
+            <div>
+                <p class="eyebrow">Salesforce Contracts</p>
+                <h1>Contract Template Manager</h1>
+                <p class="subtitle">Read-first workspace for CLM document templates, mappings, and contract usage.</p>
+            </div>
+            <div class="hero-meta">
+                <span class="scope-chip">{scopedLabel}</span>
+                <lightning-button label="Refresh" icon-name="utility:refresh" onclick={handleRefresh}></lightning-button>
+            </div>
+        </header>
+
+        <section class="kpi-grid">
+            <template for:each={kpiCards} for:item="card">
+                <div key={card.key} class={card.className}>
+                    <div class="kpi-label">{card.label}</div>
+                    <div class="kpi-value">{card.value}</div>
+                </div>
+            </template>
+        </section>
+
+        <section class="content-grid">
+            <div class="panel">
+                <div class="panel-header">
+                    <h2>Templates</h2>
+                    <template if:true={lastRefreshed}>
+                        <span class="meta">Refreshed <lightning-formatted-date-time value={lastRefreshed} year="numeric" month="short" day="2-digit" hour="2-digit" minute="2-digit"></lightning-formatted-date-time></span>
+                    </template>
+                </div>
+
+                <template if:true={summaryLoading}>
+                    <div class="empty">Loading templates…</div>
+                </template>
+
+                <template if:true={hasTemplates}>
+                    <div class="template-cards">
+                        <template for:each={templates} for:item="templateRow">
+                            <article key={templateRow.templateId} class={templateRow.selectedClass}>
+                                <button
+                                    class="template-card-main"
+                                    type="button"
+                                    data-template-id={templateRow.templateId}
+                                    onclick={handleSelectTemplate}
+                                >
+                                    <template if:true={templateRow.hasThumbnail}>
+                                        <img
+                                            src={templateRow.thumbnailUrlActive}
+                                            alt="Template thumbnail"
+                                            class="template-card-thumb"
+                                            data-template-id={templateRow.templateId}
+                                            onerror={handlePreviewImageError}
+                                        />
+                                    </template>
+                                    <template if:false={templateRow.hasThumbnail}>
+                                        <div class="template-card-thumb-fallback">No preview</div>
+                                    </template>
+
+                                    <span class="template-card-title-row">
+                                        <span class="template-card-name">{templateRow.name}</span>
+                                        <span class={templateRow.statusClass}>{templateRow.status}</span>
+                                    </span>
+                                    <span class="meta">{templateRow.type} · v{templateRow.versionNumber}</span>
+                                    <span class="meta">{templateRow.timesUsed} version rows</span>
+                                    <span class="meta">{templateRow.distinctContracts} contracts · {templateRow.generatedFiles} files</span>
+                                </button>
+                                <span class="template-card-actions">
+                                    <lightning-button-icon
+                                        icon-name="utility:preview"
+                                        variant="border-filled"
+                                        alternative-text="Open template"
+                                        title="Open template"
+                                        data-template-id={templateRow.templateId}
+                                        onclick={handleOpenTemplate}
+                                    ></lightning-button-icon>
+                                    <lightning-button-icon
+                                        icon-name="utility:download"
+                                        variant="border-filled"
+                                        alternative-text="Download template file"
+                                        title="Download template file"
+                                        data-download-url={templateRow.downloadUrl}
+                                        onclick={handleDownloadTemplate}
+                                        disabled={templateRow.downloadDisabled}
+                                    ></lightning-button-icon>
+                                    <template if:true={templateRow.canDelete}>
+                                        <lightning-button-icon
+                                            icon-name="utility:delete"
+                                            variant="border-filled"
+                                            alternative-text="Delete template"
+                                            title="Delete template"
+                                            data-template-id={templateRow.templateId}
+                                            onclick={handleDeleteTemplate}
+                                            disabled={templateDeleteLoading}
+                                        ></lightning-button-icon>
+                                    </template>
+                                </span>
+                            </article>
+                        </template>
+                    </div>
+                </template>
+
+                <template if:false={hasTemplates}>
+                    <template if:false={summaryLoading}>
+                        <div class="empty">No CLM templates were found.</div>
+                    </template>
+                </template>
+
+                <template if:true={summaryError}>
+                    <div class="error-box">{summaryError}</div>
+                </template>
+            </div>
+
+            <div class="panel detail-panel">
+                <div class="panel-header">
+                    <h2>Template Usage</h2>
+                    <span class="meta">{usageHeader}</span>
+                </div>
+
+                <template if:true={selectedTemplate}>
+                    <div class="selected-template-card">
+                        <div class="selected-template-layout">
+                            <div>
+                                <div class="selected-template-head">
+                                    <h3>{selectedTemplate.name}</h3>
+                                    <span class={selectedTemplate.statusClass}>{selectedTemplate.status}</span>
+                                </div>
+                                <div class="selected-template-meta">
+                                    <span><strong>Type:</strong> {selectedTemplate.type}</span>
+                                    <span><strong>Usage:</strong> {selectedTemplate.usageType}</span>
+                                    <span><strong>File:</strong> {selectedTemplateFileType}</span>
+                                </div>
+                                <div class="selected-template-links">
+                                    <span class="meta-line"><strong>Mapper:</strong> {mapperName}</span>
+                                    <template if:true={mapperTransformId}>
+                                        <lightning-button
+                                            variant="base"
+                                            label="Open Mapper"
+                                            data-transform-id={mapperTransformId}
+                                            onclick={handleOpenDataTransform}
+                                        ></lightning-button>
+                                    </template>
+                                    <span class="meta-line"><strong>Extract:</strong> {extractName}</span>
+                                    <template if:true={extractTransformId}>
+                                        <lightning-button
+                                            variant="base"
+                                            label="Open Extract"
+                                            data-transform-id={extractTransformId}
+                                            onclick={handleOpenDataTransform}
+                                        ></lightning-button>
+                                    </template>
+                                </div>
+                                <div class="selected-template-actions">
+                                    <lightning-button label="Open Document Template App" onclick={handleOpenTemplateApp}></lightning-button>
+                                    <lightning-button variant="brand-outline" label="Download DOCX" data-download-url={selectedTemplate.downloadUrl} onclick={handleDownloadTemplate} disabled={selectedTemplate.downloadDisabled}></lightning-button>
+                                    <template if:true={canDeleteSelectedTemplate}>
+                                        <lightning-button
+                                            variant="destructive-text"
+                                            label="Delete Template"
+                                            data-template-id={selectedTemplate.templateId}
+                                            onclick={handleDeleteTemplate}
+                                            disabled={isDeleteSelectedTemplateDisabled}
+                                        ></lightning-button>
+                                    </template>
+                                </div>
+                            </div>
+                            <div class="template-preview-panel">
+                                <p class="template-preview-label">Front Page Preview</p>
+                                <template if:true={selectedTemplate.hasThumbnail}>
+                                    <button
+                                        class="template-preview-button"
+                                        type="button"
+                                        title="Open file preview"
+                                        data-content-document-id={selectedTemplate.contentDocumentId}
+                                        onclick={handleOpenFilePreview}
+                                    >
+                                        <img
+                                            src={selectedTemplate.thumbnailUrlActive}
+                                            alt="Template front page preview"
+                                            class="template-preview-image"
+                                            data-template-id={selectedTemplate.templateId}
+                                            onerror={handlePreviewImageError}
+                                        />
+                                    </button>
+                                </template>
+                                <template if:false={selectedTemplate.hasThumbnail}>
+                                    <div class="template-preview-fallback">No thumbnail preview available for this template file.</div>
+                                </template>
+                            </div>
+                        </div>
+                    </div>
+
+                    <section class="merge-builder-section">
+                        <lightning-accordion
+                            allow-multiple-sections-open
+                            active-section-name={activeMergeSections}
+                            class="merge-builder-accordion"
+                            onsectiontoggle={handleMergeBuilderAccordionToggle}
+                        >
+                            <lightning-accordion-section name="addMergeField" label="Add Merge Field">
+                                <div class="merge-builder-header">
+                                    <h3>Add Merge Field</h3>
+                                    <span class="meta">3 steps · preview first · additive only</span>
+                                </div>
+
+                                <template if:true={mergeBuilderLoading}>
+                                    <div class="empty">Loading merge field builder context…</div>
+                                </template>
+
+                                <template if:true={mergeBuilderError}>
+                                    <div class="error-box">{mergeBuilderError}</div>
+                                </template>
+
+                                <template if:true={hasMergeBuilderBlockingIssues}>
+                                    <div class="merge-builder-notes merge-builder-notes-error">
+                                        <p>Blocking issues</p>
+                                        <ul>
+                                            <template for:each={mergeBuilderBlockingIssues} for:item="issue">
+                                                <li key={issue}>{issue}</li>
+                                            </template>
+                                        </ul>
+                                    </div>
+                                </template>
+
+                                <template if:true={hasMergeBuilderContext}>
+                                    <div class="merge-wizard">
+                                        <div class="merge-step">
+                                            <span class="merge-step-label">1. Source Object</span>
+                                            <lightning-combobox
+                                                value={mergeSourceObject}
+                                                options={sourceObjectOptions}
+                                                onchange={handleMergeSourceObjectChange}
+                                                placeholder="Select source object"
+                                                disabled={isSourceObjectDisabled}
+                                            ></lightning-combobox>
+                                        </div>
+                                        <div class="merge-step">
+                                            <span class="merge-step-label">2. Source Field</span>
+                                            <lightning-combobox
+                                                value={mergeSourceField}
+                                                options={sourceFieldOptions}
+                                                onchange={handleMergeSourceFieldChange}
+                                                placeholder="Select source field"
+                                                disabled={isSourceFieldDisabled}
+                                            ></lightning-combobox>
+                                        </div>
+                                        <div class="merge-step">
+                                            <span class="merge-step-label">3. Friendly Merge Field Name</span>
+                                            <lightning-input
+                                                value={mergeFriendlyName}
+                                                onchange={handleMergeFriendlyNameChange}
+                                                placeholder="Example: VendorAddress"
+                                                disabled={isFriendlyNameDisabled}
+                                            ></lightning-input>
+                                        </div>
+                                    </div>
+
+                                    <template if:true={hasSuggestedMergeName}>
+                                        <div class="merge-suggestion-row">
+                                            <span class="merge-token-label">Suggested:</span>
+                                            <span class="merge-suggestion-example">{suggestedMergeDisplay}</span>
+                                            <lightning-button
+                                                variant="base"
+                                                label="Use Suggested Name"
+                                                onclick={handleUseSuggestedMergeName}
+                                                disabled={isUseSuggestedNameDisabled}
+                                            ></lightning-button>
+                                        </div>
+                                    </template>
+
+                                    <div class="merge-token-row">
+                                        <span class="merge-token-label">Generated token:</span>
+                                        <span class="merge-token">{liveMergeToken}</span>
+                                    </div>
+
+                                    <div class="merge-actions">
+                                        <lightning-button
+                                            label="Preview Change"
+                                            variant="brand"
+                                            onclick={handlePreviewMergeChange}
+                                            disabled={isPreviewDisabled}
+                                        ></lightning-button>
+                                        <lightning-button
+                                            label="Apply"
+                                            variant="success"
+                                            onclick={handleApplyMergeChange}
+                                            disabled={isApplyDisabled}
+                                        ></lightning-button>
+                                        <lightning-button
+                                            label="Reset"
+                                            variant="neutral"
+                                            onclick={handleResetMergeBuilder}
+                                            disabled={mergeApplyLoading}
+                                        ></lightning-button>
+                                    </div>
+
+                                    <template if:true={mergePreviewLoading}>
+                                        <lightning-spinner size="small" alternative-text="Previewing merge field change"></lightning-spinner>
+                                    </template>
+
+                                    <template if:true={hasMergeApplyMessage}>
+                                        <div class="merge-builder-notes merge-builder-notes-success">
+                                            {mergeApplyMessage}
+                                        </div>
+                                    </template>
+                                    <template if:true={hasMergeApplyError}>
+                                        <div class="merge-builder-notes merge-builder-notes-error">
+                                            {mergeApplyError}
+                                        </div>
+                                    </template>
+
+                                    <template if:true={hasMergePreview}>
+                                        <div class="merge-preview-panel">
+                                            <div class="merge-preview-head">
+                                                <span class="merge-preview-title">Preview Payload</span>
+                                                <span class="meta">{mergePreview.mergeToken}</span>
+                                            </div>
+
+                                            <template if:true={hasMergePreviewBlockingIssues}>
+                                                <div class="merge-builder-notes merge-builder-notes-error">
+                                                    <p>Cannot apply yet</p>
+                                                    <ul>
+                                                        <template for:each={mergePreviewBlockingIssues} for:item="issue">
+                                                            <li key={issue}>{issue}</li>
+                                                        </template>
+                                                    </ul>
+                                                </div>
+                                            </template>
+
+                                            <template if:true={hasMergePreviewWarnings}>
+                                                <div class="merge-builder-notes merge-builder-notes-warning">
+                                                    <p>Warnings</p>
+                                                    <ul>
+                                                        <template for:each={mergePreviewWarnings} for:item="warning">
+                                                            <li key={warning}>{warning}</li>
+                                                        </template>
+                                                    </ul>
+                                                </div>
+                                            </template>
+
+                                            <template if:true={hasMergePreviewSuggestions}>
+                                                <div class="merge-builder-notes merge-builder-notes-info">
+                                                    <p>Name suggestions</p>
+                                                    <ul>
+                                                        <template for:each={mergePreviewSuggestions} for:item="suggestion">
+                                                            <li key={suggestion}>{suggestion}</li>
+                                                        </template>
+                                                    </ul>
+                                                </div>
+                                            </template>
+
+                                            <div class="merge-candidate-grid">
+                                                <template if:true={mergePreview.extractCandidate}>
+                                                    <article class="merge-candidate-card">
+                                                        <h4>Extract Candidate</h4>
+                                                        <p class="meta">Already exists: {mergePreview.alreadyExistsExtract}</p>
+                                                        <dl>
+                                                            <dt>Transform</dt>
+                                                            <dd>{mergePreview.extractCandidate.name}</dd>
+                                                            <dt>Input</dt>
+                                                            <dd>{mergePreview.extractCandidate.inputFieldName}</dd>
+                                                            <dt>Output</dt>
+                                                            <dd>{mergePreview.extractCandidate.outputObjectName}.{mergePreview.extractCandidate.outputFieldName}</dd>
+                                                        </dl>
+                                                    </article>
+                                                </template>
+                                                <template if:true={mergePreview.mapperCandidate}>
+                                                    <article class="merge-candidate-card">
+                                                        <h4>Mapper Candidate</h4>
+                                                        <p class="meta">Already exists: {mergePreview.alreadyExistsMapper}</p>
+                                                        <dl>
+                                                            <dt>Transform</dt>
+                                                            <dd>{mergePreview.mapperCandidate.name}</dd>
+                                                            <dt>Input</dt>
+                                                            <dd>{mergePreview.mapperCandidate.inputFieldName}</dd>
+                                                            <dt>Output</dt>
+                                                            <dd>{mergePreview.mapperCandidate.outputObjectName}.{mergePreview.mapperCandidate.outputFieldName}</dd>
+                                                        </dl>
+                                                    </article>
+                                                </template>
+                                            </div>
+                                        </div>
+                                    </template>
+                                </template>
+                            </lightning-accordion-section>
+                        </lightning-accordion>
+                    </section>
+                </template>
+
+                <template if:true={usageLoading}>
+                    <div class="empty">Loading template usage…</div>
+                </template>
+
+                <template if:true={usage}>
+                    <section class={mappedSectionClass}>
+                        <lightning-accordion
+                            allow-multiple-sections-open
+                            active-section-name={activeMappedSections}
+                            class="mapping-accordion"
+                            onsectiontoggle={handleMappedAccordionToggle}
+                        >
+                            <lightning-accordion-section
+                                name="mappedFields"
+                                label={mappedFieldAccordionLabel}
+                            >
+                                <p class="meta mapping-summary">{mappedFieldSummary}</p>
+                                <template if:true={hasMapperList}>
+                                    <div class="mapper-list">
+                                        <span class="mapper-list-label">Mappers:</span>
+                                        <template for:each={mapperList} for:item="mapperItem">
+                                            <span key={mapperItem.key} class="mapper-chip">{mapperItem.label}</span>
+                                        </template>
+                                    </div>
+                                </template>
+                                <template if:true={hasMappedFields}>
+                                    <div class="mapping-table">
+                                        <div class="table-head mapping-head">
+                                            <span>Type</span>
+                                            <span>Source</span>
+                                            <span>Target</span>
+                                            <span>Merge Field</span>
+                                        </div>
+                                        <template for:each={mapperFields} for:item="fieldRow">
+                                            <div key={fieldRow.itemId} class={fieldRow.rowClass}>
+                                                <span><span class={fieldRow.sourceTypeClass}>{fieldRow.sourceTypeLabel}</span></span>
+                                                <span>{fieldRow.inputDisplay}</span>
+                                                <span>{fieldRow.outputDisplay}</span>
+                                                <span class="merge-token">{fieldRow.mergeFieldToken}</span>
+                                            </div>
+                                        </template>
+                                    </div>
+                                </template>
+                                <template if:false={hasMappedFields}>
+                                    <div class="empty">No Data Mapper fields found for this template.</div>
+                                </template>
+                            </lightning-accordion-section>
+                        </lightning-accordion>
+                    </section>
+                </template>
+
+                <template if:true={hasUsageContracts}>
+                    <div class="usage-table">
+                        <div class="table-head usage-head">
+                            <span>Contract</span>
+                            <span>Status</span>
+                            <span>Latest Version</span>
+                            <span>Counts</span>
+                            <span>Action</span>
+                        </div>
+                        <template for:each={usageContracts} for:item="contractRow">
+                            <div key={contractRow.contractId} class="usage-row">
+                                <span>
+                                    <strong>{contractRow.contractLabel}</strong>
+                                    <span class="meta"> · {contractRow.contractName}</span>
+                                </span>
+                                <span><span class={contractRow.statusClass}>{contractRow.contractStatus}</span></span>
+                                <span>
+                                    <span>v{contractRow.latestVersionNumber} · {contractRow.latestVersionStatus}</span>
+                                    <span class="meta">
+                                        <lightning-formatted-date-time value={contractRow.latestVersionDate} year="numeric" month="short" day="2-digit" hour="2-digit" minute="2-digit"></lightning-formatted-date-time>
+                                    </span>
+                                </span>
+                                <span>{contractRow.totalVersions} versions · {contractRow.generatedFiles} files</span>
+                                <span>
+                                    <lightning-button variant="base" label="Open" data-contract-id={contractRow.contractId} onclick={handleOpenContract}></lightning-button>
+                                </span>
+                            </div>
+                        </template>
+                    </div>
+                </template>
+
+                <template if:false={hasUsageContracts}>
+                    <template if:false={usageLoading}>
+                        <div class="empty">No contracts have used this template yet.</div>
+                    </template>
+                </template>
+
+                <template if:true={usageError}>
+                    <div class="error-box">{usageError}</div>
+                </template>
+            </div>
+        </section>
+    </article>
+</template>

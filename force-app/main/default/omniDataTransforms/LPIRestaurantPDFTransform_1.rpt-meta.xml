@@ -1,0 +1,1249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OmniDataTransform xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <assignmentRulesUsed>false</assignmentRulesUsed>
+    <deletedOnSuccess>false</deletedOnSuccess>
+    <errorIgnored>false</errorIgnored>
+    <expectedInputJson>{
+  &quot;Permit&quot; : null,
+  &quot;omniJsonDef&quot; : null,
+  &quot;timeStamp&quot; : &quot;2021-08-04T11:37:55.013Z&quot;,
+  &quot;userProfile&quot; : &quot;System Administrator&quot;,
+  &quot;userTimeZone&quot; : &quot;-420&quot;,
+  &quot;userCurrencyCode&quot; : &quot;USD&quot;,
+  &quot;userName&quot; : &quot;jblankenship@mclpi.demo&quot;,
+  &quot;userId&quot; : &quot;0055e000005GyyLAAS&quot;,
+  &quot;AddressInformation&quot; : {
+    &quot;BusinessOwnershipInformation&quot; : {
+      &quot;ResponsibleOther&quot; : null,
+      &quot;EntityType&quot; : &quot;SoleProprietor&quot;,
+      &quot;ResponsibleName&quot; : &quot;Geoff Duckwall&quot;,
+      &quot;ResponsiblePhone&quot; : &quot;6235554343&quot;,
+      &quot;ResponsibleFax&quot; : &quot;6235558080&quot;,
+      &quot;ResponsibleEmail&quot; : &quot;HikingMan@mailinator.com&quot;,
+      &quot;ResponsibleAddress-Block&quot; : {
+        &quot;ResponsibleAddress&quot; : &quot;19802 MC 85, Buckeye, AZ, USA&quot;,
+        &quot;ResponsibleStreet&quot; : &quot;19802 MC 85&quot;,
+        &quot;ResponsibleCity&quot; : &quot;Buckeye&quot;,
+        &quot;ResponsibleState&quot; : &quot;AZ&quot;,
+        &quot;ResponsibleZip&quot; : &quot;85326&quot;
+      }
+    },
+    &quot;EstablishmentInfo&quot; : {
+      &quot;EstablishmentAddress-Block&quot; : {
+        &quot;EstablishmentState&quot; : &quot;AZ&quot;,
+        &quot;EstablishmentAddress&quot; : &quot;1111 MC 85, Buckeye, AZ, United States&quot;,
+        &quot;EstablishmentStreet&quot; : &quot;1111 MC 85&quot;,
+        &quot;EstablishmentZip&quot; : &quot;85326&quot;,
+        &quot;EstablishmentCity&quot; : &quot;Buckeye&quot;
+      },
+      &quot;EstablishmentPhone&quot; : &quot;6235551212&quot;,
+      &quot;EstablishmentEmail&quot; : &quot;AstrosDiner@mailinator.com&quot;,
+      &quot;EstablishmentFax&quot; : &quot;6235557676&quot;,
+      &quot;EstablishmentName&quot; : &quot;Astro&apos;s Diner&quot;
+    },
+    &quot;MailingBilling&quot; : {
+      &quot;BillingAddress-Block&quot; : {
+        &quot;BillingStreet&quot; : &quot;19802 MC 85&quot;,
+        &quot;BillingZip&quot; : &quot;85326&quot;,
+        &quot;BillingState&quot; : &quot;AZ&quot;,
+        &quot;BillingCity&quot; : &quot;Buckeye&quot;,
+        &quot;BillingAddress&quot; : &quot;19802 MC 85, Buckeye, AZ, USA&quot;
+      },
+      &quot;BillingEmail&quot; : &quot;HikingMan@mailinator.com&quot;,
+      &quot;BillingFax&quot; : &quot;6235558080&quot;,
+      &quot;BillingPhone&quot; : &quot;6235554343&quot;,
+      &quot;BillingName&quot; : &quot;Geoff Duckwall&quot;
+    },
+    &quot;Block2&quot; : {
+      &quot;InspectionAddress-Block&quot; : {
+        &quot;InspectionStreet&quot; : &quot;1111 MC 85&quot;,
+        &quot;InspectionZip&quot; : &quot;85326&quot;,
+        &quot;InspectionCity&quot; : &quot;Buckeye&quot;,
+        &quot;InspectionAddress&quot; : &quot;1111 MC 85, Buckeye, AZ, United States&quot;
+      },
+      &quot;InspectionEmail&quot; : &quot;AstrosDiner@mailinator.com&quot;,
+      &quot;InspectionFax&quot; : &quot;6235557676&quot;,
+      &quot;InspectionPhone&quot; : &quot;6235551212&quot;,
+      &quot;InspectionName&quot; : &quot;Inspector Gadget&quot;
+    }
+  },
+  &quot;ContractorArchitectInfo&quot; : {
+    &quot;Checkbox1&quot; : true,
+    &quot;ArchitectNA&quot; : true,
+    &quot;ContractorName&quot; : &quot;Joe Schmoe&quot;,
+    &quot;ContractorPhone&quot; : &quot;3939393939&quot;,
+    &quot;ContractorFax&quot; : &quot;3939393939&quot;,
+    &quot;ContractorEmail&quot; : &quot;j@j.com&quot;,
+    &quot;ArchitectName&quot; : &quot;Jane Architect&quot;,
+    &quot;Telephone2&quot; : &quot;3939393939&quot;,
+    &quot;ArchitectFax&quot; : &quot;9393939393&quot;,
+    &quot;ArchitectEmail&quot; : &quot;j@j.com&quot;
+  },
+  &quot;PermitQuestionnaire&quot; : {
+    &quot;Floors&quot; : 1,
+    &quot;SquareFeet&quot; : 4500,
+    &quot;ExteriorOpenings&quot; : &quot;ExteriorOpeningsNo&quot;,
+    &quot;DriveThru&quot; : &quot;DriveThruNo&quot;,
+    &quot;OutdoorOperations&quot; : &quot;OutdoorYes&quot;,
+    &quot;DogPatio&quot; : &quot;DogYes&quot;,
+    &quot;BriefDescription&quot; : &quot;Taking over the existing diner.  Changing the name to Astro&apos;s Diner.  Replacing the existing (broken) ice maker in the existing dog friendly patio with the same model.&quot;
+  },
+  &quot;DogApplication&quot; : {
+    &quot;DogDisclosure&quot; : true,
+    &quot;DogDate&quot; : &quot;2021-08-04&quot;,
+    &quot;DogBusiness&quot; : &quot;Astro&apos;s Diner&quot;,
+    &quot;DogAddress-Block&quot; : {
+      &quot;DogStreet&quot; : &quot;1111 MC 85&quot;,
+      &quot;DogCity&quot; : &quot;Buckeye&quot;,
+      &quot;DogState&quot; : &quot;AZ&quot;,
+      &quot;DogZip&quot; : &quot;85326&quot;,
+      &quot;DogAddress&quot; : &quot;1111 MC 85, Buckeye, AZ, USA&quot;
+    },
+    &quot;DogPhone&quot; : &quot;6235551212&quot;,
+    &quot;DogFax&quot; : &quot;6235557676&quot;,
+    &quot;DogEmail&quot; : &quot;AstrosDiner@mailinator.com&quot;,
+    &quot;DogChemicals&quot; : &quot;Astro&apos;s Diner uses commercially available, animal safe and human safe, organic cleaning products, including \&quot;Clean Doggie Organic Disinfectant\&quot;, Commercial Strength, non-toxic, safe for all dog patio restaurant surfaces (floors, tables, chairs, walls).&quot;,
+    &quot;DogCleaning&quot; : &quot;The dog patio is a separate area of the patio that has separate drains and stringent cleaning procedures.&quot;,
+    &quot;DogPrep&quot; : &quot;Cross contamination prevention areas contain county required signage on preventing contamination in a dog friendly patio.  Additionally, upon hire, all employees must complete a mandatory contamination prevention training and retrain every six months.&quot;,
+    &quot;DogSignage&quot; : &quot;Signs are posted at all entrances stating \&quot;Customers with dogs, please use the designated dog entrance in the outdoor patio\&quot;.&quot;,
+    &quot;DogEntrance&quot; : &quot;The patio contains a separate outdoor entrance for dogs that put them in the designated dog friendly area of the patio, with a divider from the non-dog friendly area of the patio.&quot;
+  },
+  &quot;Menu&quot; : {
+    &quot;SeatingCapacity&quot; : 55,
+    &quot;HoursOfOperation&quot; : {
+      &quot;EndTime&quot; : &quot;22:00:00.000Z&quot;,
+      &quot;StartTime&quot; : &quot;06:00:00.000Z&quot;,
+      &quot;DayOfWeek&quot; : &quot;Weekdays&quot;
+    },
+    &quot;MenuDesc&quot; : &quot;Astro’s Diner, a full-service, casual dining restaurant, will provide a static menu that is separated into groups (e.g., breakfast, lunch, dinner, brunch, drinks).  Each group will be broken down by categories like appetizers, pastas, sandwiches, sides, etc.  The type of food will be casual dining with traditional Mexican and American dishes.&quot;
+  },
+  &quot;PlumbingFinish&quot; : {
+    &quot;WaterProvider&quot; : null,
+    &quot;SewerProvider&quot; : null,
+    &quot;DrainFinish&quot; : null
+  },
+  &quot;Disclaimer&quot; : {
+    &quot;Disclosure1&quot; : true,
+    &quot;DisclaimerDate1&quot; : &quot;2021-08-04&quot;,
+    &quot;Disclosure2&quot; : true,
+    &quot;DisclaimerDate2&quot; : &quot;2021-08-04&quot;
+  },
+  &quot;UploadDocs&quot; : { },
+  &quot;PermitRenewal&quot; : null,
+  &quot;RenewalThanks&quot; : null,
+  &quot;PermitChoice&quot; : {
+    &quot;BusinessType&quot; : &quot;NewBusiness;MinorReview&quot;,
+    &quot;OwnerChangeDate&quot; : &quot;2021-10-01&quot;,
+    &quot;ConstInstallDate&quot; : &quot;2021-10-11&quot;,
+    &quot;ConstInstallEndDate&quot; : &quot;2021-10-15&quot;,
+    &quot;ExpeditedReview&quot; : &quot;ExpediteReviewNo&quot;,
+    &quot;NewBusiness&quot; : true,
+    &quot;MinorOrNew&quot; : true,
+    &quot;MinorAndNew&quot; : true,
+    &quot;PermitActivity&quot; : &quot;New&quot;
+  },
+  &quot;InspectionState&quot; : &quot;AZ&quot;,
+  &quot;MinorReviewFeeName&quot; : &quot;Minor Review&quot;,
+  &quot;NewBusinessFeeName&quot; : &quot;New Business Permit&quot;,
+  &quot;Fee&quot; : 245,
+  &quot;FeePreviewStep&quot; : {
+    &quot;EnvFee&quot; : {
+      &quot;TotalFees&quot; : 560,
+      &quot;NewBusinessFee&quot; : 315,
+      &quot;MinorReviewFee&quot; : 245
+    },
+    &quot;Block1&quot; : null
+  },
+  &quot;PaymentStep&quot; : {
+    &quot;ShowTestCreditCard&quot; : false
+  },
+  &quot;GeneratePDF&quot; : &quot;00P5e00000XisNQEAZ&quot;
+}</expectedInputJson>
+    <expectedOutputJson>{
+  &quot;OwnershipChangeDate&quot; : &quot;&quot;,
+  &quot;ConstructionStartDate&quot; : &quot;&quot;,
+  &quot;ConstructionEndDate&quot; : &quot;&quot;,
+  &quot;ExpeditedPlanReview&quot; : &quot;&quot;,
+  &quot;BusinessName&quot; : &quot;&quot;,
+  &quot;BusinessStreetAddress&quot; : &quot;&quot;,
+  &quot;BusinessCity&quot; : &quot;&quot;,
+  &quot;BusinessState&quot; : &quot;&quot;,
+  &quot;BusinessZip&quot; : &quot;&quot;,
+  &quot;BusinessPhone&quot; : &quot;&quot;,
+  &quot;SoleProprietor&quot; : &quot;&quot;,
+  &quot;Association&quot; : &quot;&quot;,
+  &quot;Corporation&quot; : &quot;&quot;,
+  &quot;OtherEntityType&quot; : &quot;&quot;,
+  &quot;OtherEntityTypeDescription&quot; : &quot;&quot;,
+  &quot;OwnerCorporation&quot; : &quot;&quot;,
+  &quot;BusinessOwnerStreetAddress&quot; : &quot;&quot;,
+  &quot;BusinessOwnerCity&quot; : &quot;&quot;,
+  &quot;BusinessOwnerState&quot; : &quot;&quot;,
+  &quot;Text24&quot; : &quot;&quot;,
+  &quot;BusienssOwnerZip&quot; : &quot;&quot;,
+  &quot;BusinessOwnerPhone&quot; : &quot;&quot;,
+  &quot;BusinessOwnerEmail&quot; : &quot;&quot;,
+  &quot;BusinessOwnerFax&quot; : &quot;&quot;,
+  &quot;Text25&quot; : &quot;&quot;,
+  &quot;Check Box23&quot; : &quot;&quot;,
+  &quot;Text26&quot; : &quot;&quot;,
+  &quot;Text27&quot; : &quot;&quot;,
+  &quot;Text28&quot; : &quot;&quot;,
+  &quot;Text29&quot; : &quot;&quot;,
+  &quot;Text30&quot; : &quot;&quot;,
+  &quot;Text31&quot; : &quot;&quot;,
+  &quot;InspectionName&quot; : &quot;&quot;,
+  &quot;InspectionStreetAddress&quot; : &quot;&quot;,
+  &quot;InspectionCity&quot; : &quot;&quot;,
+  &quot;InspectionState&quot; : &quot;&quot;,
+  &quot;InspectionZip&quot; : &quot;&quot;,
+  &quot;InspectionPhone&quot; : &quot;&quot;,
+  &quot;InspectionEmail&quot; : &quot;&quot;,
+  &quot;ArchitectName&quot; : &quot;&quot;,
+  &quot;ArchitectPhone&quot; : &quot;&quot;,
+  &quot;ArchitectEmail&quot; : &quot;&quot;,
+  &quot;DescriptionofProject&quot; : &quot;&quot;,
+  &quot;ContractorNotApplicable&quot; : &quot;&quot;,
+  &quot;ContractorName&quot; : &quot;&quot;,
+  &quot;ContractorPhone&quot; : &quot;&quot;,
+  &quot;ContractorEmail&quot; : &quot;&quot;,
+  &quot;ArchitectNotApplicable&quot; : &quot;&quot;,
+  &quot;NewConstruction&quot; : &quot;&quot;,
+  &quot;MinorReview&quot; : &quot;&quot;,
+  &quot;NewBusiness&quot; : &quot;&quot;
+}</expectedOutputJson>
+    <fieldLevelSecurityEnabled>false</fieldLevelSecurityEnabled>
+    <inputType>JSON</inputType>
+    <isManagedUsingStdDesigner>false</isManagedUsingStdDesigner>
+    <name>LPIRestaurantPDFTransform</name>
+    <nullInputsIncludedInOutput>false</nullInputsIncludedInOutput>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPIRestaurantPDFTransformCustom0jI8b0000010xoVEAQItem20</globalKey>
+        <inputFieldName>SoleProprietor</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPIRestaurantPDFTransform</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldFormat>Boolean</outputFieldFormat>
+        <outputFieldName>SoleProprietor</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPIRestaurantPDFTransformCustom0jI8b0000010xoVEAQItem33</globalKey>
+        <inputFieldName>SaveResponsibleCity</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPIRestaurantPDFTransform</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>BusinessOwnerCity</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPIRestaurantPDFTransformCustom0jI8b0000010xoVEAQItem21</globalKey>
+        <inputFieldName>NewConstruction</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPIRestaurantPDFTransform</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldFormat>Boolean</outputFieldFormat>
+        <outputFieldName>NewConstruction</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPIRestaurantPDFTransformCustom0jI8b0000010xoVEAQItem8</globalKey>
+        <inputFieldName>PermitChoice:ConstInstallEndDate</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPIRestaurantPDFTransform</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>ConstructionEndDate</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPIRestaurantPDFTransformCustom0jI8b0000010xoVEAQItem23</globalKey>
+        <inputFieldName>PermitChoice:ConstInstallDate</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPIRestaurantPDFTransform</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>ConstructionStartDate</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPIRestaurantPDFTransformCustom0jI8b0000010xoVEAQItem13</globalKey>
+        <inputFieldName>AddressInformation:BusinessOwnershipInformation:ResponsibleName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPIRestaurantPDFTransform</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Text24</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPIRestaurantPDFTransformCustom0jI8b0000010xoVEAQItem26</globalKey>
+        <inputFieldName>SaveEstablishmentStreet</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPIRestaurantPDFTransform</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>BusinessStreetAddress</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPIRestaurantPDFTransformCustom0jI8b0000010xoVEAQItem14</globalKey>
+        <inputFieldName>AddressInformation:BusinessOwnershipInformation:ResponsibleFax</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPIRestaurantPDFTransform</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Text30</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPIRestaurantPDFTransformCustom0jI8b0000010xoVEAQItem36</globalKey>
+        <inputFieldName>SaveEstablishmentPostalCode</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPIRestaurantPDFTransform</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>BusinessZip</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>| | var:PermitChoice:BusinessType &quot;NewBusiness&quot; STRINGINDEXOF -1 &gt; true false IF</formulaConverted>
+        <formulaExpression>IF(STRINGINDEXOF(PermitChoice:BusinessType,&quot;NewBusiness&quot;)&gt;-1,true,false)</formulaExpression>
+        <formulaResultPath>NewBusiness</formulaResultPath>
+        <formulaSequence>1.0</formulaSequence>
+        <globalKey>LPIRestaurantPDFTransformCustom0jI8b0000010xoVEAQItem0</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPIRestaurantPDFTransform</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPIRestaurantPDFTransformCustom0jI8b0000010xoVEAQItem15</globalKey>
+        <inputFieldName>AddressInformation:BusinessOwnershipInformation:ResponsibleEmail</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPIRestaurantPDFTransform</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Text31</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPIRestaurantPDFTransformCustom0jI8b0000010xoVEAQItem25</globalKey>
+        <inputFieldName>SaveEstablishmentState</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPIRestaurantPDFTransform</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>BusinessState</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>| | var:AddressInformation:BusinessOwnershipInformation:EntityType &quot;Corporation&quot; STRINGINDEXOF -1 &gt; true false IF</formulaConverted>
+        <formulaExpression>IF(STRINGINDEXOF(AddressInformation:BusinessOwnershipInformation:EntityType,&quot;Corporation&quot;)&gt;-1,true,false)</formulaExpression>
+        <formulaResultPath>Corporation</formulaResultPath>
+        <formulaSequence>5.0</formulaSequence>
+        <globalKey>LPIRestaurantPDFTransformCustom0jI8b0000010xoVEAQItem2</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPIRestaurantPDFTransform</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPIRestaurantPDFTransformCustom0jI8b0000010xoVEAQItem29</globalKey>
+        <inputFieldName>Corporation</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPIRestaurantPDFTransform</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldFormat>Boolean</outputFieldFormat>
+        <outputFieldName>Corporation</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPIRestaurantPDFTransformCustom0jI8b0000010xoVEAQItem30</globalKey>
+        <inputFieldName>AddressInformation:BusinessOwnershipInformation:ResponsibleOther</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPIRestaurantPDFTransform</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>OtherEntityTypeDescription</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPIRestaurantPDFTransformCustom0jI8b0000010xoVEAQItem27</globalKey>
+        <inputFieldName>SaveEstablishmentCity</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPIRestaurantPDFTransform</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>BusinessCity</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPIRestaurantPDFTransformCustom0jI8b0000010xoVEAQItem31</globalKey>
+        <inputFieldName>AddressInformation:BusinessOwnershipInformation:ResponsibleName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPIRestaurantPDFTransform</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>BusinessName</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPIRestaurantPDFTransformCustom0jI8b0000010xoVEAQItem32</globalKey>
+        <inputFieldName>SaveResponsibleStreet</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPIRestaurantPDFTransform</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>BusinessOwnerStreetAddress</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <defaultValue>true</defaultValue>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPIRestaurantPDFTransformCustom0jI8b0000010xoVEAQItem35</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPIRestaurantPDFTransform</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Check Box23</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPIRestaurantPDFTransformCustom0jI8b0000010xoVEAQItem37</globalKey>
+        <inputFieldName>AddressInformation:Block2:InspectionName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPIRestaurantPDFTransform</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>InspectionName</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>| var:PermitChoice:ExpeditedReview &quot;ExpediteReviewYes&quot; == &quot;Yes&quot; &quot;No&quot; IF</formulaConverted>
+        <formulaExpression>IF(PermitChoice:ExpeditedReview==&quot;ExpediteReviewYes&quot;,&quot;Yes&quot;,&quot;No&quot;)</formulaExpression>
+        <formulaResultPath>FormulaExpeditedPlanReview</formulaResultPath>
+        <formulaSequence>8.0</formulaSequence>
+        <globalKey>LPIRestaurantPDFTransformCustom0jI8b0000010xoVEAQItem3</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPIRestaurantPDFTransform</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPIRestaurantPDFTransformCustom0jI8b0000010xoVEAQItem42</globalKey>
+        <inputFieldName>ContractorArchitectInfo:Checkbox1</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPIRestaurantPDFTransform</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>ContractorNotApplicable</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPIRestaurantPDFTransformCustom0jI8b0000010xoVEAQItem39</globalKey>
+        <inputFieldName>AddressInformation:Block2:InspectionPhone</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPIRestaurantPDFTransform</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>InspectionPhone</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPIRestaurantPDFTransformCustom0jI8b0000010xoVEAQItem40</globalKey>
+        <inputFieldName>PermitQuestionnaire:BriefDescription</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPIRestaurantPDFTransform</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>DescriptionofProject</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPIRestaurantPDFTransformCustom0jI8b0000010xoVEAQItem28</globalKey>
+        <inputFieldName>Association</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPIRestaurantPDFTransform</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldFormat>Boolean</outputFieldFormat>
+        <outputFieldName>Association</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPIRestaurantPDFTransformCustom0jI8b0000010xoVEAQItem45</globalKey>
+        <inputFieldName>ContractorArchitectInfo:ArchitectName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPIRestaurantPDFTransform</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>ArchitectName</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPIRestaurantPDFTransformCustom0jI8b0000010xoVEAQItem53</globalKey>
+        <inputFieldName>AddressInformation:BusinessOwnershipInformation:ResponsiblePhone</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPIRestaurantPDFTransform</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Text29</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPIRestaurantPDFTransformCustom0jI8b0000010xoVEAQItem46</globalKey>
+        <inputFieldName>AddressInformation:EstablishmentInfo:EstablishmentPhone</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPIRestaurantPDFTransform</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>BusinessPhone</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPIRestaurantPDFTransformCustom0jI8b0000010xoVEAQItem54</globalKey>
+        <inputFieldName>SaveInspectionStreet</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPIRestaurantPDFTransform</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>InspectionStreetAddress</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPIRestaurantPDFTransformCustom0jI8b0000010xoVEAQItem48</globalKey>
+        <inputFieldName>SaveResponsibleCity</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPIRestaurantPDFTransform</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Text26</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPIRestaurantPDFTransformCustom0jI8b0000010xoVEAQItem58</globalKey>
+        <inputFieldName>SaveResponsiblePostalCode</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPIRestaurantPDFTransform</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>BusienssOwnerZip</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPIRestaurantPDFTransformCustom0jI8b0000010xoVEAQItem16</globalKey>
+        <inputFieldName>SaveInspectionPostalCode</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPIRestaurantPDFTransform</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>InspectionZip</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPIRestaurantPDFTransformCustom0jI8b0000010xoVEAQItem55</globalKey>
+        <inputFieldName>SaveInspectionCity</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPIRestaurantPDFTransform</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>InspectionCity</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPIRestaurantPDFTransformCustom0jI8b0000010xoVEAQItem47</globalKey>
+        <inputFieldName>AddressInformation:BusinessOwnershipInformation:ResponsiblePhone</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPIRestaurantPDFTransform</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>BusinessOwnerPhone</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPIRestaurantPDFTransformCustom0jI8b0000010xoVEAQItem10</globalKey>
+        <inputFieldName>ContractorArchitectInfo:ArchitectEmail</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPIRestaurantPDFTransform</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>ArchitectEmail</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPIRestaurantPDFTransformCustom0jI8b0000010xoVEAQItem34</globalKey>
+        <inputFieldName>SaveResponsibleState</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPIRestaurantPDFTransform</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>BusinessOwnerState</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPIRestaurantPDFTransformCustom0jI8b0000010xoVEAQItem38</globalKey>
+        <inputFieldName>AddressInformation:Block2:InspectionEmail</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPIRestaurantPDFTransform</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>InspectionEmail</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPIRestaurantPDFTransformCustom0jI8b0000010xoVEAQItem17</globalKey>
+        <inputFieldName>AddressInformation:EstablishmentInfo:EstablishmentName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPIRestaurantPDFTransform</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>BusinessName</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>| | var:PermitChoice:BusinessType &quot;NewContruction&quot; STRINGINDEXOF -1 &gt; true false IF</formulaConverted>
+        <formulaExpression>IF(STRINGINDEXOF(PermitChoice:BusinessType,&quot;NewContruction&quot;)&gt;-1,true,false)</formulaExpression>
+        <formulaResultPath>NewConstruction</formulaResultPath>
+        <formulaSequence>3.0</formulaSequence>
+        <globalKey>LPIRestaurantPDFTransformCustom0jI8b0000010xoVEAQItem6</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPIRestaurantPDFTransform</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>| | var:AddressInformation:BusinessOwnershipInformation:EntityType &quot;Other&quot; STRINGINDEXOF -1 &gt; true false IF</formulaConverted>
+        <formulaExpression>IF(STRINGINDEXOF(AddressInformation:BusinessOwnershipInformation:EntityType,&quot;Other&quot;)&gt;-1,true,false)</formulaExpression>
+        <formulaResultPath>Other</formulaResultPath>
+        <formulaSequence>7.0</formulaSequence>
+        <globalKey>LPIRestaurantPDFTransformCustom0jI8b0000010xoVEAQItem1</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPIRestaurantPDFTransform</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>| | var:PermitChoice:BusinessType &quot;MinorReview&quot; STRINGINDEXOF -1 &gt; true false IF</formulaConverted>
+        <formulaExpression>IF(STRINGINDEXOF(PermitChoice:BusinessType,&quot;MinorReview&quot;)&gt;-1,true,false)</formulaExpression>
+        <formulaResultPath>MinorReview</formulaResultPath>
+        <formulaSequence>2.0</formulaSequence>
+        <globalKey>LPIRestaurantPDFTransformCustom0jI8b0000010xoVEAQItem7</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPIRestaurantPDFTransform</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPIRestaurantPDFTransformCustom0jI8b0000010xoVEAQItem18</globalKey>
+        <inputFieldName>NewBusiness</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPIRestaurantPDFTransform</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldFormat>Boolean</outputFieldFormat>
+        <outputFieldName>NewBusiness</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPIRestaurantPDFTransformCustom0jI8b0000010xoVEAQItem12</globalKey>
+        <inputFieldName>AddressInformation:BusinessOwnershipInformation:ResponsibleEmail</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPIRestaurantPDFTransform</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>BusinessOwnerEmail</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>| | var:AddressInformation:BusinessOwnershipInformation:EntityType &quot;SoleProprietor&quot; STRINGINDEXOF -1 &gt; true false IF</formulaConverted>
+        <formulaExpression>IF(STRINGINDEXOF(AddressInformation:BusinessOwnershipInformation:EntityType,&quot;SoleProprietor&quot;)&gt;-1,true,false)</formulaExpression>
+        <formulaResultPath>SoleProprietor</formulaResultPath>
+        <formulaSequence>4.0</formulaSequence>
+        <globalKey>LPIRestaurantPDFTransformCustom0jI8b0000010xoVEAQItem4</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPIRestaurantPDFTransform</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPIRestaurantPDFTransformCustom0jI8b0000010xoVEAQItem22</globalKey>
+        <inputFieldName>PermitChoice:OwnerChangeDate</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPIRestaurantPDFTransform</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>OwnershipChangeDate</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPIRestaurantPDFTransformCustom0jI8b0000010xoVEAQItem41</globalKey>
+        <inputFieldName>ContractorArchitectInfo:Telephone2</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPIRestaurantPDFTransform</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>ArchitectPhone</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPIRestaurantPDFTransformCustom0jI8b0000010xoVEAQItem50</globalKey>
+        <inputFieldName>SaveResponsibleStreet</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPIRestaurantPDFTransform</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Text25</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPIRestaurantPDFTransformCustom0jI8b0000010xoVEAQItem43</globalKey>
+        <inputFieldName>ContractorArchitectInfo:ContractorEmail</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPIRestaurantPDFTransform</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>ContractorEmail</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPIRestaurantPDFTransformCustom0jI8b0000010xoVEAQItem51</globalKey>
+        <inputFieldName>AddressInformation:BusinessOwnershipInformation:ResponsibleAddress-Block:ResponsibleState</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPIRestaurantPDFTransform</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Text27</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPIRestaurantPDFTransformCustom0jI8b0000010xoVEAQItem9</globalKey>
+        <inputFieldName>ContractorArchitectInfo:ContractorPhone</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPIRestaurantPDFTransform</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>ContractorPhone</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPIRestaurantPDFTransformCustom0jI8b0000010xoVEAQItem52</globalKey>
+        <inputFieldName>SaveResponsibleStreet</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPIRestaurantPDFTransform</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Text28</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPIRestaurantPDFTransformCustom0jI8b0000010xoVEAQItem44</globalKey>
+        <inputFieldName>ContractorArchitectInfo:ArchitectNA</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPIRestaurantPDFTransform</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>ArchitectNotApplicable</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPIRestaurantPDFTransformCustom0jI8b0000010xoVEAQItem11</globalKey>
+        <inputFieldName>AddressInformation:BusinessOwnershipInformation:ResponsibleName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPIRestaurantPDFTransform</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>OwnerCorporation</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPIRestaurantPDFTransformCustom0jI8b0000010xoVEAQItem24</globalKey>
+        <inputFieldName>FormulaExpeditedPlanReview</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPIRestaurantPDFTransform</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>ExpeditedPlanReview</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPIRestaurantPDFTransformCustom0jI8b0000010xoVEAQItem56</globalKey>
+        <inputFieldName>SaveInspectionState</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPIRestaurantPDFTransform</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>InspectionState</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPIRestaurantPDFTransformCustom0jI8b0000010xoVEAQItem57</globalKey>
+        <inputFieldName>Other</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPIRestaurantPDFTransform</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldFormat>Boolean</outputFieldFormat>
+        <outputFieldName>OtherEntityType</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPIRestaurantPDFTransformCustom0jI8b0000010xoVEAQItem49</globalKey>
+        <inputFieldName>AddressInformation:BusinessOwnershipInformation:ResponsibleFax</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPIRestaurantPDFTransform</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>BusinessOwnerFax</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>| | var:AddressInformation:BusinessOwnershipInformation:EntityType &quot;Association&quot; STRINGINDEXOF -1 &gt; true false IF</formulaConverted>
+        <formulaExpression>IF(STRINGINDEXOF(AddressInformation:BusinessOwnershipInformation:EntityType,&quot;Association&quot;)&gt;-1,true,false)</formulaExpression>
+        <formulaResultPath>Association</formulaResultPath>
+        <formulaSequence>6.0</formulaSequence>
+        <globalKey>LPIRestaurantPDFTransformCustom0jI8b0000010xoVEAQItem5</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPIRestaurantPDFTransform</name>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPIRestaurantPDFTransformCustom0jI8b0000010xoVEAQItem19</globalKey>
+        <inputFieldName>MinorReview</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPIRestaurantPDFTransform</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldFormat>Boolean</outputFieldFormat>
+        <outputFieldName>MinorReview</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>LPIRestaurantPDFTransformCustom0jI8b0000010xoVEAQItem59</globalKey>
+        <inputFieldName>ContractorArchitectInfo:ContractorName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>LPIRestaurantPDFTransform</name>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>ContractorName</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <outputType>PDF</outputType>
+    <previewJsonData>{
+  &quot;Permit&quot; : null,
+  &quot;omniJsonDef&quot; : null,
+  &quot;timeStamp&quot; : &quot;2021-08-04T11:48:28.703Z&quot;,
+  &quot;userProfile&quot; : &quot;System Administrator&quot;,
+  &quot;userTimeZone&quot; : &quot;-420&quot;,
+  &quot;userCurrencyCode&quot; : &quot;USD&quot;,
+  &quot;userName&quot; : &quot;jblankenship@mclpi.demo&quot;,
+  &quot;userId&quot; : &quot;0055e000005GyyLAAS&quot;,
+  &quot;AddressInformation&quot; : {
+    &quot;BusinessOwnershipInformation&quot; : {
+      &quot;ResponsibleOther&quot; : null,
+      &quot;EntityType&quot; : &quot;SoleProprietor&quot;,
+      &quot;ResponsibleName&quot; : &quot;Geoff Duckwall&quot;,
+      &quot;ResponsiblePhone&quot; : &quot;6235554343&quot;,
+      &quot;ResponsibleFax&quot; : &quot;6235558080&quot;,
+      &quot;ResponsibleEmail&quot; : &quot;HikingMan@mailinator.com&quot;,
+      &quot;ResponsibleAddress-Block&quot; : {
+        &quot;ResponsibleAddress&quot; : &quot;19802 MC 85, Buckeye, AZ, USA&quot;,
+        &quot;ResponsibleStreet&quot; : &quot;19802 MC 85&quot;,
+        &quot;ResponsibleCity&quot; : &quot;Buckeye&quot;,
+        &quot;ResponsibleState&quot; : &quot;AZ&quot;,
+        &quot;ResponsibleZip&quot; : &quot;85326&quot;
+      }
+    },
+    &quot;EstablishmentInfo&quot; : {
+      &quot;EstablishmentAddress-Block&quot; : {
+        &quot;EstablishmentState&quot; : &quot;AZ&quot;,
+        &quot;EstablishmentAddress&quot; : &quot;1111 MC 85, Buckeye, AZ, USA&quot;,
+        &quot;EstablishmentStreet&quot; : &quot;1111 MC 85&quot;,
+        &quot;EstablishmentZip&quot; : &quot;85326&quot;,
+        &quot;EstablishmentCity&quot; : &quot;Buckeye&quot;
+      },
+      &quot;EstablishmentPhone&quot; : &quot;6235551212&quot;,
+      &quot;EstablishmentEmail&quot; : &quot;AstrosDiner@mailinator.com&quot;,
+      &quot;EstablishmentFax&quot; : &quot;6235557676&quot;,
+      &quot;EstablishmentName&quot; : &quot;Astro&apos;s Diner&quot;
+    },
+    &quot;MailingBilling&quot; : {
+      &quot;BillingName&quot; : &quot;Astro&apos;s Diner&quot;,
+      &quot;BillingAddress-Block&quot; : {
+        &quot;BillingAddress&quot; : &quot;1111 MC 85, Buckeye, AZ, USA&quot;,
+        &quot;BillingCity&quot; : &quot;Buckeye&quot;,
+        &quot;BillingState&quot; : &quot;AZ&quot;,
+        &quot;BillingZip&quot; : &quot;85326&quot;,
+        &quot;BillingStreet&quot; : &quot;1111 MC 85&quot;
+      },
+      &quot;BillingPhone&quot; : &quot;6235551212&quot;,
+      &quot;BillingFax&quot; : &quot;6235557676&quot;,
+      &quot;BillingEmail&quot; : &quot;AstrosDiner@mailinator.com&quot;
+    },
+    &quot;Block2&quot; : {
+      &quot;InspectionAddress-Block&quot; : {
+        &quot;InspectionStreet&quot; : &quot;1111 MC 85&quot;,
+        &quot;InspectionZip&quot; : &quot;85326&quot;,
+        &quot;InspectionCity&quot; : &quot;Buckeye&quot;,
+        &quot;InspectionAddress&quot; : &quot;1111 MC 85, Buckeye, AZ, USA&quot;,
+        &quot;Text3&quot; : &quot;AZ&quot;
+      },
+      &quot;InspectionEmail&quot; : &quot;AstrosDiner@mailinator.com&quot;,
+      &quot;InspectionFax&quot; : &quot;6235557676&quot;,
+      &quot;InspectionPhone&quot; : &quot;6235551212&quot;,
+      &quot;InspectionName&quot; : &quot;Joe Inspector&quot;
+    }
+  },
+  &quot;ContractorArchitectInfo&quot; : {
+    &quot;Checkbox1&quot; : true,
+    &quot;ArchitectNA&quot; : true,
+    &quot;ContractorName&quot; : &quot;Contractor A&quot;,
+    &quot;ContractorPhone&quot; : &quot;3939393939&quot;,
+    &quot;ContractorFax&quot; : &quot;9393939393&quot;,
+    &quot;ContractorEmail&quot; : &quot;j@j.com&quot;,
+    &quot;ArchitectName&quot; : &quot;Contractor  B&quot;,
+    &quot;Telephone2&quot; : &quot;3949393939&quot;,
+    &quot;ArchitectFax&quot; : &quot;9393939393&quot;,
+    &quot;ArchitectEmail&quot; : &quot;b@b.com&quot;
+  },
+  &quot;PermitQuestionnaire&quot; : {
+    &quot;Floors&quot; : 1,
+    &quot;SquareFeet&quot; : 4500,
+    &quot;ExteriorOpenings&quot; : &quot;ExteriorOpeningsNo&quot;,
+    &quot;DriveThru&quot; : &quot;DriveThruNo&quot;,
+    &quot;OutdoorOperations&quot; : &quot;OutdoorYes&quot;,
+    &quot;DogPatio&quot; : &quot;DogYes&quot;,
+    &quot;BriefDescription&quot; : &quot;Taking over the existing diner.  Changing the name to Astro&apos;s Diner.  Replacing the existing (broken) ice maker in the existing dog friendly patio with the same model.&quot;
+  },
+  &quot;DogApplication&quot; : {
+    &quot;DogDisclosure&quot; : true,
+    &quot;DogDate&quot; : &quot;2021-08-04&quot;,
+    &quot;DogBusiness&quot; : &quot;Astro&apos;s Diner&quot;,
+    &quot;DogAddress-Block&quot; : {
+      &quot;DogStreet&quot; : &quot;1111 MC 85&quot;,
+      &quot;DogCity&quot; : &quot;Buckeye&quot;,
+      &quot;DogState&quot; : &quot;AZ&quot;,
+      &quot;DogZip&quot; : &quot;85326&quot;
+    },
+    &quot;DogPhone&quot; : &quot;6235551212&quot;,
+    &quot;DogFax&quot; : &quot;6235557676&quot;,
+    &quot;DogEmail&quot; : &quot;AstrosDiner@mailinator.com&quot;
+  },
+  &quot;Menu&quot; : {
+    &quot;SeatingCapacity&quot; : 1
+  },
+  &quot;PlumbingFinish&quot; : {
+    &quot;WaterProvider&quot; : null,
+    &quot;SewerProvider&quot; : null,
+    &quot;DrainFinish&quot; : null
+  },
+  &quot;Disclaimer&quot; : {
+    &quot;Disclosure1&quot; : true,
+    &quot;DisclaimerDate1&quot; : &quot;2021-08-04&quot;,
+    &quot;Disclosure2&quot; : true,
+    &quot;DisclaimerDate2&quot; : &quot;2021-08-04&quot;
+  },
+  &quot;UploadDocs&quot; : { },
+  &quot;PermitRenewal&quot; : null,
+  &quot;RenewalThanks&quot; : null,
+  &quot;PermitChoice&quot; : {
+    &quot;BusinessType&quot; : &quot;NewBusiness;MinorReview&quot;,
+    &quot;OwnerChangeDate&quot; : &quot;2021-10-01&quot;,
+    &quot;ConstInstallDate&quot; : &quot;2021-10-11&quot;,
+    &quot;ConstInstallEndDate&quot; : &quot;2021-10-15&quot;,
+    &quot;ExpeditedReview&quot; : &quot;ExpediteReviewNo&quot;,
+    &quot;NewBusiness&quot; : true,
+    &quot;MinorOrNew&quot; : true,
+    &quot;MinorAndNew&quot; : true,
+    &quot;PermitActivity&quot; : &quot;New&quot;
+  },
+  &quot;InspectionState&quot; : &quot;AZ&quot;,
+  &quot;MinorReviewFeeName&quot; : &quot;Minor Review&quot;,
+  &quot;NewBusinessFeeName&quot; : &quot;New Business Permit&quot;,
+  &quot;Fee&quot; : 245,
+  &quot;FeePreviewStep&quot; : {
+    &quot;EnvFee&quot; : {
+      &quot;TotalFees&quot; : 560,
+      &quot;NewBusinessFee&quot; : 315,
+      &quot;MinorReviewFee&quot; : 245
+    },
+    &quot;Block1&quot; : null
+  },
+  &quot;PaymentStep&quot; : {
+    &quot;ShowTestCreditCard&quot; : false
+  },
+  &quot;GeneratePDF&quot; : &quot;00P5e00000XisNuEAJ&quot;
+}</previewJsonData>
+    <processSuperBulk>false</processSuperBulk>
+    <responseCacheTtlMinutes>0.0</responseCacheTtlMinutes>
+    <rollbackOnError>false</rollbackOnError>
+    <sourceObject>json</sourceObject>
+    <sourceObjectDefault>false</sourceObjectDefault>
+    <synchronousProcessThreshold>-1.0</synchronousProcessThreshold>
+    <targetOutputFileName>MaricopaRestaurantApplication</targetOutputFileName>
+    <type>Transform</type>
+    <uniqueName>LPIRestaurantPDFTransform_1</uniqueName>
+    <versionNumber>1.0</versionNumber>
+    <xmlDeclarationRemoved>false</xmlDeclarationRemoved>
+</OmniDataTransform>

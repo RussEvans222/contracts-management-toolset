@@ -1,0 +1,50 @@
+<template>
+	<lightning-card icon-name={titleIcon} title={headerTitle}>
+        <div slot="actions">
+            <div class="slds-no-flex">
+                <lightning-button-icon icon-name="utility:down"  variant="border-filled" alternative-text="More" title="More"></lightning-button-icon>
+            </div>
+        </div>
+        <lightning-layout multiple-rows="false">
+            <lightning-layout-item padding="horizontal-small" size="4">
+                <lightning-layout multiple-rows="true">
+                    <lightning-layout-item size="12">
+                        <div class="slds-text-title_bold">{title1}
+                        </div>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="12">
+                        <div class="slds-text-heading_large">
+                            {Subtitle1}
+                        </div>
+                    </lightning-layout-item>
+                </lightning-layout>
+            </lightning-layout-item>
+            <lightning-layout-item padding="horizontal-small" size="4">
+                <lightning-layout multiple-rows="true">
+                    <lightning-layout-item size="12">
+                        <div class="slds-text-title_bold">{title2}
+                        </div>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="12">
+                        <div class="slds-text-heading_large">
+                            {Subtitle2}
+                        </div>
+                    </lightning-layout-item>
+                </lightning-layout>
+            </lightning-layout-item>
+            <lightning-layout-item padding="horizontal-small" size="4">
+                <lightning-layout multiple-rows="true">
+                    <lightning-layout-item size="12">
+                        <div class="slds-text-title_bold">{title3}
+                        </div>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="12">
+                        <div class="slds-text-heading_large">
+                            {Subtitle3}
+                        </div>
+                    </lightning-layout-item>
+                </lightning-layout>
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+</template>

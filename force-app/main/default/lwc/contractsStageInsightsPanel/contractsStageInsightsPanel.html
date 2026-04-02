@@ -1,0 +1,67 @@
+<template>
+    <article class="insights-shell">
+        <header class="insights-header">
+            <div>
+                <p class="eyebrow">All Time Analytics</p>
+                <h2>Contract Stage Insights</h2>
+                <p class="subtitle">Completion speed and stage dwell time across all available contracts.</p>
+            </div>
+            <lightning-button label="Refresh" onclick={handleRefresh}></lightning-button>
+        </header>
+
+        <section class="kpi-grid">
+            <div class="kpi">
+                <span class="kpi-label">Contracts Analyzed</span>
+                <span class="kpi-value">{insights.contractsAnalyzed}</span>
+            </div>
+            <div class="kpi">
+                <span class="kpi-label">Completed Contracts</span>
+                <span class="kpi-value">{insights.completedContracts}</span>
+            </div>
+            <div class="kpi">
+                <span class="kpi-label">Avg Completion Days</span>
+                <span class="kpi-value">{insights.avgCompletionDays}</span>
+            </div>
+        </section>
+
+        <section class="content-grid">
+            <div class="panel">
+                <h3>Contract Completion Time</h3>
+                <template if:true={hasBuckets}>
+                    <template for:each={insights.completionBuckets} for:item="bucket">
+                        <div key={bucket.label} class="metric-row">
+                            <div class="metric-head">
+                                <span>{bucket.label}</span>
+                                <span>{bucket.count} ({bucket.percentage}%)</span>
+                            </div>
+                            <div class="bar-track">
+                                <div class="bar-fill" style={bucket.barStyle}></div>
+                            </div>
+                        </div>
+                    </template>
+                </template>
+            </div>
+
+            <div class="panel">
+                <h3>Average Time by Stage (Days)</h3>
+                <template if:true={hasDurations}>
+                    <template for:each={insights.avgStageDurations} for:item="row">
+                        <div key={row.status} class="metric-row">
+                            <div class="metric-head">
+                                <span>{row.status}</span>
+                                <span>{row.avgDays}d avg • {row.occurrences} samples</span>
+                            </div>
+                            <div class="bar-track">
+                                <div class="bar-fill" style={row.barStyle}></div>
+                            </div>
+                        </div>
+                    </template>
+                </template>
+            </div>
+        </section>
+
+        <template if:true={errorMessage}>
+            <div class="error-box">{errorMessage}</div>
+        </template>
+    </article>
+</template>
