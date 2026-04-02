@@ -27,13 +27,13 @@ export default class ContractsCommandCenter extends NavigationMixin(LightningEle
 
         if (data) {
             const colorByStatus = {
-                Draft: '#6f5b34',
-                'In Approval Process': '#5b4a78',
-                Negotiating: '#5a6f82',
-                'Awaiting Signature': '#78623a',
-                Activated: '#2f6a4d',
-                Signed: '#375a80',
-                Other: '#5e6f84'
+                Draft: '#94a3b8',
+                'In Approval Process': '#8b5cf6',
+                Negotiating: '#14b8a6',
+                'Awaiting Signature': '#f59e0b',
+                Activated: '#22c55e',
+                Signed: '#0ea5e9',
+                Other: '#64748b'
             };
 
             const stageMetrics = (data.stageMetrics || []).map((metric) => {
@@ -61,6 +61,7 @@ export default class ContractsCommandCenter extends NavigationMixin(LightningEle
     }
 
     get metricTiles() {
+        const attentionCount = (this.snapshot.attentionContracts || []).length;
         return [
             {
                 key: 'total',
@@ -91,8 +92,37 @@ export default class ContractsCommandCenter extends NavigationMixin(LightningEle
                 label: 'Signed',
                 value: this.snapshot.signedCount || 0,
                 className: 'metric-card metric-signed'
+            },
+            {
+                key: 'negotiating',
+                label: 'Negotiating',
+                value: this.negotiatingCount,
+                className: 'metric-card metric-negotiating'
+            },
+            {
+                key: 'awaitingSignature',
+                label: 'Awaiting Signature',
+                value: this.snapshot.awaitingSignatureCount || 0,
+                className: 'metric-card metric-awaiting-signature'
+            },
+            {
+                key: 'expiring30',
+                label: 'Expiring 30 Days',
+                value: this.snapshot.expiring30Count || 0,
+                className: 'metric-card metric-expiring'
+            },
+            {
+                key: 'attention',
+                label: 'Needs Attention',
+                value: attentionCount,
+                className: 'metric-card metric-attention'
             }
         ];
+    }
+
+    get negotiatingCount() {
+        const negotiatingMetric = (this.snapshot.stageMetrics || []).find((metric) => metric.status === 'Negotiating');
+        return negotiatingMetric ? Number(negotiatingMetric.count || 0) : 0;
     }
 
     get hasStageMetrics() {

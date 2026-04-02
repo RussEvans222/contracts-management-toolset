@@ -61,7 +61,7 @@
 .metrics-grid {
     display: grid;
     gap: 0.75rem;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(135px, 1fr));
     margin-top: 0.9rem;
 }
 
@@ -79,6 +79,10 @@
 .metric-approval { border-left: 4px solid #6b5a88; }
 .metric-activated { border-left: 4px solid #2f6a4d; }
 .metric-signed { border-left: 4px solid #375a80; }
+.metric-negotiating { border-left: 4px solid #2a7a72; }
+.metric-awaiting-signature { border-left: 4px solid #bd7a1f; }
+.metric-expiring { border-left: 4px solid #a14545; }
+.metric-attention { border-left: 4px solid #5a3f8f; }
 
 .metric-label {
     font-size: 0.74rem;
