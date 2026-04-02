@@ -1,6 +1,12 @@
 # Salesforce Contracts Management Toolset
 
-Custom Salesforce contracts accelerator with command center, viewer, timeline, template manager, and demo data seeding.
+Custom Salesforce contracts accelerator with command center, viewer, timeline, and template manager.
+
+## Easy Deploy
+<a href="https://githubsfdeploy.herokuapp.com?owner=thedges&repo=PS2MapComponents&ref=main">
+  <img alt="Deploy to Salesforce"
+    src="https://raw.githubusercontent.com/afawcett/githubsfdeploy/master/deploy.png">
+</a>
 
 ## Included Features
 
@@ -42,23 +48,6 @@ Custom Salesforce contracts accelerator with command center, viewer, timeline, t
 - `SalesforceContracts_Viewer`
 - `SalesforceContracts_Template_Manager`
 - `SalesforceContracts_Analytics`
-
-## Demo Data Seeding
-
-### 1. Seed lifecycle contract records
-```bash
-./scripts/seed-contracts-sample-data.sh --alias cm-prod-demo --accounts 12 --contracts-per-account 5
-```
-
-### 2. Seed contract document files/versions
-```bash
-./scripts/seed-contract-documents.sh --alias cm-prod-demo --contracts 12
-```
-
-### 3. Seed contract activities for timeline demos
-```bash
-./scripts/seed-contract-activities.sh --alias cm-prod-demo --contracts 20 --per-contract 8
-```
 
 ## Deploy Custom UI
 ```bash
