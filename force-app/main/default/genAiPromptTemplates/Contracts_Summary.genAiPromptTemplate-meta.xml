@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionIdentifier>uIDShXX1mcVycvm5B86bcakQjC6SyVI8y5K+vDsh9WQ=_1</activeVersionIdentifier>
+    <developerName>Contracts_Summary</developerName>
+    <masterLabel>Contracts Summary</masterLabel>
+    <templateVersions>
+        <content>You are an AI assistant helping a public sector contract reviewer quickly understand the current state of a contract.
+
+Your goal is to analyze the contract record and the provided obligations summary, and produce a concise, actionable summary.
+
+Focus on:
+- Current contract status and progress
+- Outstanding or overdue obligations
+- Indicators of delay or risk
+- What the reviewer should do next
+
+Keep your response:
+- Clear and structured
+- Concise (5–7 sentences max)
+- Focused on actionable insights, not raw data repetition
+
+Context Resources : 
+
+Obligations Summary:
+{!$Input:obligationsSummary} 
+
+{!$RecordSnapshot:Contracts.snapshot}
+Contract Record : Contract Details:
+- Contract Name: {!$Input:Contracts.Name}
+- Contract ID: {!$Input:Contracts.Id}
+- Current Status: {!$Input:Contracts.Status}
+- Contract Type: {!$Input:Contracts.ContractType}
+- Start Date:  {!$Input:Contracts.Sourcegps_FundingAwardContract__r.StartDate__c}
+- End Date: {!$Input:Contracts.SBQQ__Quote__r.SBQQ__EndDate__c}
+- Contract Amount: {!$Input:Contracts.SBQQ__Opportunity__r.Amount}
+- Description: {!$Input:Contracts.Description}
+
+- Days in Current Status: {!$Input:Contracts.SBQQ__RenewalOpportunity__r.LastStageChangeInDays}
+
+Vendor / Awardee Details:
+- Name: {!$Input:Contracts.Account.Name}
+- Primary Contact: {!$Input:Contracts.SBQQ__Opportunity__r.SDO_Sales_Primary_Contact__c}
+
+Generate a contract summary that includes:
+
+1. Overview
+- Briefly describe the contract and its current stage
+
+2. Key Observations
+- Highlight any delays, risks, or unusual indicators
+- Reference obligations if relevant (especially overdue ones)
+
+3. Obligations Insight
+- Summarize overall obligation status (e.g., how many outstanding or overdue)
+
+4. Recommended Next Step
+- Suggest what the contract reviewer should do next
+
+Contract Summary:
+
+Overview:
+&lt;1–2 sentences&gt;
+
+Key Observations:
+- &lt;bullet&gt;
+- &lt;bullet&gt;
+
+Obligations:
+- &lt;summary of obligations, call out overdue if present&gt;
+
+Next Step:
+&lt;clear recommended action&gt;
+</content>
+        <inputs>
+            <apiName>Contracts</apiName>
+            <definition>SOBJECT://Contract</definition>
+            <masterLabel>Contracts</masterLabel>
+            <referenceName>Input:Contracts</referenceName>
+            <required>true</required>
+        </inputs>
+        <inputs>
+            <apiName>obligationsSummary</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>obligationsSummary</masterLabel>
+            <referenceName>Input:obligationsSummary</referenceName>
+            <required>false</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>invocable://getDataForGrounding</definition>
+            <description>Retrieves record data for grounding a prompt template.</description>
+            <label>Record Snapshot</label>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>recordId</parameterName>
+                <valueExpression>{!$Input:Contracts.Id}</valueExpression>
+            </parameters>
+            <referenceName>RecordSnapshot:Contracts</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>uIDShXX1mcVycvm5B86bcakQjC6SyVI8y5K+vDsh9WQ=_1</versionIdentifier>
+    </templateVersions>
+    <type>einstein_gpt__flex</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>

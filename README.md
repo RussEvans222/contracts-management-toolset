@@ -66,6 +66,13 @@ Custom Salesforce contracts accelerator with command center, viewer, timeline, a
 ![Add Merge Field Workflow](docs/images/readme/merge-field-add-form.png)
 ![Data Mapper Merge Fields](docs/images/readme/merge-field-mapped-fields.png)
 
+### Agentforce Contract Summary Action (`Contract_Obligations_Summary_For_Agentforce`)
+- Autolaunched flow that compiles obligation status for a selected Contract.
+- Calls Prompt Template `Contracts_Summary` from Flow and returns AI output.
+- Output variables include `agentResponse` (primary) and `obligationsSummary` (debug/supporting context).
+- Why teams use it: gives reviewers an instant, AI-written contract risk summary without manually scanning obligation records.
+- Why teams use it: standardizes contract-review narratives for agents and staff with consistent overdue/risk context.
+
 ## App Pages / Tabs
 - `SalesforceContracts_Command_Center`
 - `SalesforceContracts_Viewer`
@@ -96,3 +103,11 @@ Custom Salesforce contracts accelerator with command center, viewer, timeline, a
 - `SDO_ContractViewerController`
 - `SDO_ContractHistoryTimelineController`
 - `SDO_ContractTemplateManagerController`
+- `SDO_ContractPromptTemplateInvocable`
+
+## Agentforce / Prompt Assets
+- `Contract_Obligations_Summary_For_Agentforce` (Autolaunched Flow)
+- `Contracts_Summary` (GenAI Prompt Template)
+
+## Developer Change Log
+- See [docs/developer-change-log.md](docs/developer-change-log.md)
