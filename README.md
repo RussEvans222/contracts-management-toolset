@@ -97,7 +97,7 @@ Unified timeline history across record changes, approvals, and activities provid
 
 # 🖼 6. VISUALS (PLACEHOLDERS ONLY)
 
-![Contracts Command Center](docs/images/command-center.png)
+![Contracts Command Center](docs/images/readme/contracts-command-center.png)
 ![AI Compare](docs/images/ai-compare.png)
 ![Contract Viewer](docs/images/contract-viewer.png)
 ![Contract Documents Snapshot](docs/images/contract-documents-snapshot.png)
