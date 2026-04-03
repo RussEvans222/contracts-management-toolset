@@ -99,10 +99,10 @@ Unified timeline history across record changes, approvals, and activities provid
 
 ![Contracts Command Center](docs/images/readme/contracts-command-center.png)
 ![AI Compare](docs/images/ai-compare.png)
-![Contract Viewer](docs/images/contract-viewer.png)
-![Contract Documents Snapshot](docs/images/contract-documents-snapshot.png)
-![Contract Timeline](docs/images/timeline.png)
-![Template Manager](docs/images/template-manager.png)
+![Contract Viewer](docs/images/readme/contracts-viewer.png)
+![Contract Documents Snapshot](docs/images/readme/contracts-documents-snapshot.png)
+![Contract Timeline](docs/images/readme/contract-history-timeline.png)
+![Template Manager](docs/images/readme/contract-template-manager.png)
 
 ---
 
